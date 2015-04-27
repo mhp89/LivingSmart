@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic
 {
-    public class Class1
+    public class Class
     {
+
     }
 }
