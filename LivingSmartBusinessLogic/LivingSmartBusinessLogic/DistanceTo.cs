@@ -7,19 +7,19 @@ namespace LivingSmartBusinessLogic
 {
     public class DistanceTo
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Type;
-        private int _Distance;
+        private string _type;
+        private int _distance;
 
         #endregion
 
         #region Properties
 
-        public int Type { get { return _Type; } set { _Type = value; } }
-        public int Distance { get { return _Distance; } set { _Distance = value; } }
+        public string Type { get { return _type; } set { _type = value; } }
+        public int Distance { get { return _distance; } set { _distance = value; } }
 
         #endregion
     }

@@ -7,27 +7,27 @@ namespace LivingSmartBusinessLogic
 {
     public class Appointment
     {
-        private int Id;
+        private int id;
         
         #region Private Fields
 
-        private Case _Case;
-        private int _Timestamp;
-        private int _Duration;
-        private int _Description;
-        private int _Place;
-        private Customer _Customer;
+        private Case _case;
+        private DateTime _timestamp;
+        private int _duration;
+        private string _description;
+        private string _place;
+        private Customer _customer;
 
         #endregion
 
         #region Properties
 
-        public Case Case { get { return _Case; } set { _Case = value; } }
-        public int Timestamp { get { return _Timestamp; } set { _Timestamp = value; } }
-        public int Duration { get { return _Duration; } set { _Duration = value; } }
-        public int Description { get { return _Description; } set { _Description = value; } }
-        public int Place { get { return _Place; } set { _Place = value; } }
-        public Customer Customer { get { return _Customer; } set { _Customer = value; } }
+        public Case Case { get { return _case; } set { _case = value; } }
+        public DateTime Timestamp { get { return _timestamp; } set { _timestamp = value; } }
+        public int Duration { get { return _duration; } set { _duration = value; } }
+        public string Description { get { return _description; } set { _description = value; } }
+        public string Place { get { return _place; } set { _place = value; } }
+        public Customer Customer { get { return _customer; } set { _customer = value; } }
 
 
         #endregion

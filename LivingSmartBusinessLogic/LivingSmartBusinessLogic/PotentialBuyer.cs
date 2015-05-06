@@ -11,13 +11,13 @@ namespace LivingSmartBusinessLogic
 
         #region Private Fields
 
-        private int _Date;
+        private DateTime _date;
 
         #endregion
 
         #region Properties
 
-        public int Date { get { return _Date; } set { _Date = value; } }
+        public DateTime Date { get { return _date; } set { _date = value; } }
 
         #endregion
     }

@@ -7,74 +7,74 @@ namespace LivingSmartBusinessLogic
 {
     public class Case
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
-        private Customer _Seller;
-        private Customer _Buyer;
-        private EstateAgent _EstateAgent;
-        private int _CreationDate;
-        private string _Status;
-        private int _DateOfSale;
-        private int _TransferDate;
-        private int _DateOfCompletion;
-        private int _SellingPrice;
-        private int _Description;
-        private int _LandRegistryNumber;
-        private int _Address;
-        private City _City;
-        private PropertyType _PropertyType;
-        private int _PublicRating;
-        private int _LandValue;
-        private int _GroundArea;
-        private int _BuiltArea;
-        private int _LivingArea;
-        private int _BasementArea;
-        private int _BuiltYear;
-        private int _EnergyClassification;
-        private int _Floors;
-        private int _Rooms;
-        private int _Bedrooms;
-        private int _Bathrooms;
-        private int _Toilets;
-        private int _GarageArea;
-        private int _View;
-        private Neighborhood _Neighborhood;
+        private Customer _seller;
+        private Customer _buyer;
+        private EstateAgent _estateAgent;
+        private DateTime _creationDate;
+        private string _status;
+        private DateTime _dateOfSale;
+        private DateTime _transferDate;
+        private DateTime _dateOfCompletion;
+        private long _sellingPrice;
+        private string _description;
+        private string _landRegistryNumber;
+        private string _address;
+        private City _city;
+        private PropertyType _propertyType;
+        private long _publicRating;
+        private long _landValue;
+        private int _groundArea;
+        private int _builtArea;
+        private int _livingArea;
+        private int _basementArea;
+        private int _builtYear;
+        private string _energyClassification;
+        private int _floors;
+        private int _rooms;
+        private int _bedrooms;
+        private int _bathrooms;
+        private int _toilets;
+        private int _garageArea;
+        private int _view;
+        private Neighborhood _neighborhood;
 
         #endregion
 
         #region Properties
 
-        public Customer Seller { get { return _Seller; } set { _Seller = value; } }
-        public Customer Buyer { get { return _Buyer; } set { _Buyer = value; } }
-        public EstateAgent EstateAgent { get { return _EstateAgent; } set { _EstateAgent = value; } }
-        public int CreationDate { get { return _CreationDate; } set { _CreationDate = value; } }
-        public string Status { get { return _Status; } set { _Status = value; } }
-        public int DateOfSale { get { return _DateOfSale; } set { _DateOfSale = value; } }
-        public int TransferDate { get { return _TransferDate; } set { _TransferDate = value; } }
-        public int DateOfCompletion { get { return _DateOfCompletion; } set { _DateOfCompletion = value; } }
-        public int SellingPrice { get { return _SellingPrice; } set { _SellingPrice = value; } }
-        public int Description { get { return _Description; } set { _Description = value; } }
-        public int LandRegistryNumber { get { return _LandRegistryNumber; } set { _LandRegistryNumber = value; } }
-        public int Address { get { return _Address; } set { _Address = value; } }
-        public City City { get { return _City; } set { _City = value; } }
-        public PropertyType PropertyType { get { return _PropertyType; } set { _PropertyType = value; } }
-        public int PublicRating { get { return _PublicRating; } set { _PublicRating = value; } }
-        public int LandValue { get { return _LandValue; } set { _LandValue = value; } }
-        public int GroundArea { get { return _GroundArea; } set { _GroundArea = value; } }
-        public int BuiltArea { get { return _BuiltArea; } set { _BuiltArea = value; } }
-        public int LivingArea { get { return _LivingArea; } set { _LivingArea = value; } }
-        public int BasementArea { get { return _BasementArea; } set { _BasementArea = value; } }
-        public int BuiltYear { get { return _BuiltYear; } set { _BuiltYear = value; } }
-        public int EnergyClassification { get { return _EnergyClassification; } set { _EnergyClassification = value; } }
-        public int Floors { get { return _Floors; } set { _Floors = value; } }
-        public int Rooms { get { return _Rooms; } set { _Rooms = value; } }
-        public int Bedrooms { get { return _Bedrooms; } set { _Bedrooms = value; } }
-        public int Bathrooms { get { return _Bathrooms; } set { _Bathrooms = value; } }
-        public int Toilets { get { return _Toilets; } set { _Toilets = value; } }
-        public int GarageArea { get { return _GarageArea; } set { _GarageArea = value; } }
-        public int View { get { return _View; } set { _View = value; } }
-        public Neighborhood Neighborhood { get { return _Neighborhood; } set { _Neighborhood = value; } }
+        public Customer Seller { get { return _seller; } set { _seller = value; } }
+        public Customer Buyer { get { return _buyer; } set { _buyer = value; } }
+        public EstateAgent EstateAgent { get { return _estateAgent; } set { _estateAgent = value; } }
+        public DateTime CreationDate { get { return _creationDate; } set { _creationDate = value; } }
+        public string Status { get { return _status; } set { _status = value; } }
+        public DateTime DateOfSale { get { return _dateOfSale; } set { _dateOfSale = value; } }
+        public DateTime TransferDate { get { return _transferDate; } set { _transferDate = value; } }
+        public DateTime DateOfCompletion { get { return _dateOfCompletion; } set { _dateOfCompletion = value; } }
+        public long SellingPrice { get { return _sellingPrice; } set { _sellingPrice = value; } }
+        public string Description { get { return _description; } set { _description = value; } }
+        public string LandRegistryNumber { get { return _landRegistryNumber; } set { _landRegistryNumber = value; } }
+        public string Address { get { return _address; } set { _address = value; } }
+        public City City { get { return _city; } set { _city = value; } }
+        public PropertyType PropertyType { get { return _propertyType; } set { _propertyType = value; } }
+        public long PublicRating { get { return _publicRating; } set { _publicRating = value; } }
+        public long LandValue { get { return _landValue; } set { _landValue = value; } }
+        public int GroundArea { get { return _groundArea; } set { _groundArea = value; } }
+        public int BuiltArea { get { return _builtArea; } set { _builtArea = value; } }
+        public int LivingArea { get { return _livingArea; } set { _livingArea = value; } }
+        public int BasementArea { get { return _basementArea; } set { _basementArea = value; } }
+        public int BuiltYear { get { return _builtYear; } set { _builtYear = value; } }
+        public string EnergyClassification { get { return _energyClassification; } set { _energyClassification = value; } }
+        public int Floors { get { return _floors; } set { _floors = value; } }
+        public int Rooms { get { return _rooms; } set { _rooms = value; } }
+        public int Bedrooms { get { return _bedrooms; } set { _bedrooms = value; } }
+        public int Bathrooms { get { return _bathrooms; } set { _bathrooms = value; } }
+        public int Toilets { get { return _toilets; } set { _toilets = value; } }
+        public int GarageArea { get { return _garageArea; } set { _garageArea = value; } }
+        public int View { get { return _view; } set { _view = value; } }
+        public Neighborhood Neighborhood { get { return _neighborhood; } set { _neighborhood = value; } }
 
         #endregion
 

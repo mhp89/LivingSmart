@@ -3,14 +3,14 @@
   <Class Name="LivingSmartBusinessLogic.Case">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>xAZCYIBEBBIkEg0aQiCQQEAOAQgdQYAGDQALAhACTQA=</HashCode>
+      <HashCode>wEbAQADEABIkAAgeBgAYKgQOHUgNQwQSCSBjAFRGzgA=</HashCode>
       <FileName>Case.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="_EstateAgent" />
-      <Field Name="_Neighborhood" />
-      <Field Name="_PropertyType" />
-      <Field Name="_City" />
+      <Field Name="_estateAgent" />
+      <Field Name="_neighborhood" />
+      <Field Name="_propertyType" />
+      <Field Name="_city" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
       <Field Name="Ads" />
@@ -25,42 +25,42 @@
   <Class Name="LivingSmartBusinessLogic.Appointment">
     <Position X="11.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABGCAAAAAAAiAAAAEAICAAAAAAAAAAAEAEEAAAAAgAA=</HashCode>
+      <HashCode>EAOAAAAAAAAiAIAEABACAAAAAAAAAAAAAEAAAQAAAgA=</HashCode>
       <FileName>Appointment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Rating">
-    <Position X="9.75" Y="6" Width="1.5" />
+    <Position X="9.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACgAAAAAAAAAAAICAAAAAAAAAAQAABBAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAJAAAAAAAAAAAQAABAAAAAAAAAoA=</HashCode>
       <FileName>Rating.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Picture">
     <Position X="3.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAICAAAgAAAIAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAIAAAAAAAAAAAAAACAAAAgAAgA=</HashCode>
       <FileName>Picture.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.AskingPrice">
     <Position X="6.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAABAAAAAAAAAAAAAAAAABBAAgAAAAAAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAAAAABAAAAAAAAAAAAAABAAAgAAAAAgA=</HashCode>
       <FileName>AskingPrice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Document">
     <Position X="3.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAkAQAAAAQAAgIAAAAAAAAAAAAAAQAAAAAABAA=</HashCode>
+      <HashCode>AkAAAAAEAQAAAAQAAAIAAAAAAAAAAAAAASAAAAAAAgA=</HashCode>
       <FileName>Document.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.PotentialBuyer">
     <Position X="2.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAACAAAAAABBAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAACAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>PotentialBuyer.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -70,49 +70,49 @@
   <Class Name="LivingSmartBusinessLogic.DistanceTo">
     <Position X="5.75" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAAAAAgAAAAAAAAAAABAAQAAAAAABAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAAAABAAQAAAAAAIgA=</HashCode>
       <FileName>DistanceTo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Ad">
-    <Position X="8" Y="3" Width="1.5" />
+    <Position X="8" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIACAAAAAQAAAAAAAgAAAAAgAAAAIAAAAQAAAEAABAA=</HashCode>
+      <HashCode>AgAAAAAAAQAAIAYAAAAAAAAgAAAAAAAAAQAAAEAAAgA=</HashCode>
       <FileName>Ad.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Partner">
-    <Position X="7.75" Y="7" Width="1.5" />
+    <Position X="7.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACBAAAACAAAgAIgAAAIAQAAAEAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAACAAAAAIgAAABAQAAAAAAAAAAIAAAAQCAgE=</HashCode>
       <FileName>Partner.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.PropertyType">
     <Position X="9.25" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>PropertyType.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Neighborhood">
     <Position X="12" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAABAIAAAAIAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>ABAAIAAAAAAAAAAAAAAACAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Neighborhood.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Customer">
     <Position X="4.5" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAACAAACAAAAAAIEQAAAEQAAADAJAAAAAAAAA=</HashCode>
+      <HashCode>AAAAIAAAACAAAAAAAAAAAAQAAAAQAAADAIgAAEQQAgE=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.EstateAgent">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAACAAAAAAAAAAIAQAQAEAAAAAAKQAAIAEAAA=</HashCode>
+      <HashCode>AAAAIAAAACAAAAAAAAQAAAQAQAAAAAAAAIAIAIQEAgE=</HashCode>
       <FileName>EstateAgent.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
@@ -120,9 +120,9 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="LivingSmartBusinessLogic.City">
-    <Position X="10" Y="3" Width="1.5" />
+    <Position X="10" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>City.cs</FileName>
     </TypeIdentifier>
   </Class>

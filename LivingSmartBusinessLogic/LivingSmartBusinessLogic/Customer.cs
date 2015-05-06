@@ -7,27 +7,27 @@ namespace LivingSmartBusinessLogic
 {
     public class Customer
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Name;
-        private int _DateOfBirth;
-        private int _Address;
-        private int _ZipCode;
-        private int _Email;
-        private int _Telephone;
+        private string _name;
+        private DateTime _dateOfBirth;
+        private string _address;
+        private int _zipCode;
+        private string _email;
+        private string _telephone;
 
         #endregion
 
         #region Properties
 
-        public int Name { get { return _Name; } set { _Name = value; } }
-        public int DateOfBirth { get { return _DateOfBirth; } set { _DateOfBirth = value; } }
-        public int Address { get { return _Address; } set { _Address = value; } }
-        public int ZipCode { get { return _ZipCode; } set { _ZipCode = value; } }
-        public int Email { get { return _Email; } set { _Email = value; } }
-        public int Telephone { get { return _Telephone; } set { _Telephone = value; } }
+        public string Name { get { return _name; } set { _name = value; } }
+        public DateTime DateOfBirth { get { return _dateOfBirth; } set { _dateOfBirth = value; } }
+        public string Address { get { return _address; } set { _address = value; } }
+        public int ZipCode { get { return _zipCode; } set { _zipCode = value; } }
+        public string Email { get { return _email; } set { _email = value; } }
+        public string Telephone { get { return _telephone; } set { _telephone = value; } }
 
 
         #endregion

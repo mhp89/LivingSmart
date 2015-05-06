@@ -7,19 +7,19 @@ namespace LivingSmartBusinessLogic
 {
     public class Picture
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Location;
-        private string _Desription;
+        private string _location;
+        private string _desription;
 
         #endregion
 
         #region Properties
 
-        public int Location { get { return _Location; } set { _Location = value; } }
-        public string Desription { get { return _Desription; } set { _Desription = value; } }
+        public string Location { get { return _location; } set { _location = value; } }
+        public string Desription { get { return _desription; } set { _desription = value; } }
 
         #endregion
     }

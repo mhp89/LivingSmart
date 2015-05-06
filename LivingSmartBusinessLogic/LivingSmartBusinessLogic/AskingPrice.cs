@@ -7,19 +7,19 @@ namespace LivingSmartBusinessLogic
 {
     public class AskingPrice
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Value;
-        private int _Date;
+        private long _value;
+        private DateTime _date;
 
         #endregion
 
         #region Properties
 
-        public int Value { get { return _Value; } set { _Value = value; } }
-        public int Date { get { return _Date; } set { _Date = value; } }
+        public long Value { get { return _value; } set { _value = value; } }
+        public DateTime Date { get { return _date; } set { _date = value; } }
 
         #endregion
     }

@@ -7,19 +7,19 @@ namespace LivingSmartBusinessLogic
 {
     public class Neighborhood
     {
-        private City City;
+        private City city;
 
         #region Private Fields
 
-        private string _Name;
-        private int _Value;
+        private string _name;
+        private int _value;
 
         #endregion
 
         #region Properties
 
-        public string Name { get { return _Name; } set { _Name = value; } }
-        public int Value { get { return _Value; } set { _Value = value; } }
+        public string Name { get { return _name; } set { _name = value; } }
+        public int Value { get { return _value; } set { _value = value; } }
 
         #endregion
     }

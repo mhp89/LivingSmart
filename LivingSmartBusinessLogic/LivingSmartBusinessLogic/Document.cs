@@ -7,23 +7,23 @@ namespace LivingSmartBusinessLogic
 {
     public class Document
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Type;
-        private int _Price;
-        private int _Location;
-        private int _Status;
+        private string _type;
+        private int _price;
+        private string _location;
+        private string _status;
 
         #endregion
 
         #region Properties
 
-        public int Type { get { return _Type; } set { _Type = value; } }
-        public int Price { get { return _Price; } set { _Price = value; } }
-        public int Location { get { return _Location; } set { _Location = value; } }
-        public int Status { get { return _Status; } set { _Status = value; } }
+        public string Type { get { return _type; } set { _type = value; } }
+        public int Price { get { return _price; } set { _price = value; } }
+        public string Location { get { return _location; } set { _location = value; } }
+        public string Status { get { return _status; } set { _status = value; } }
 
         #endregion
     }

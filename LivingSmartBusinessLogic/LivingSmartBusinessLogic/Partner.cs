@@ -7,25 +7,25 @@ namespace LivingSmartBusinessLogic
 {
     public class Partner
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Name;
-        private int _Telephone;
-        private int _Email;
-        private int _City;
-        private int _Timezone;
+        private string _name;
+        private string _telephone;
+        private string _email;
+        private string _city;
+        private string _timezone;
 
         #endregion
 
         #region Properties
 
-        public int Name { get { return _Name; } set { _Name = value; } }
-        public int Telephone { get { return _Telephone; } set { _Telephone = value; } }
-        public int Email { get { return _Email; } set { _Email = value; } }
-        public int City { get { return _City; } set { _City = value; } }
-        public int Timezone { get { return _Timezone; } set { _Timezone = value; } }
+        public string Name { get { return _name; } set { _name = value; } }
+        public string Telephone { get { return _telephone; } set { _telephone = value; } }
+        public string Email { get { return _email; } set { _email = value; } }
+        public string City { get { return _city; } set { _city = value; } }
+        public string Timezone { get { return _timezone; } set { _timezone = value; } }
 
         #endregion
     }

@@ -7,17 +7,17 @@ namespace LivingSmartBusinessLogic
 {
     public class PropertyType
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Description;
+        private string _description;
 
         #endregion
 
         #region Properties
 
-        public int Description { get { return _Description; } set { _Description = value; } }
+        public string Description { get { return _description; } set { _description = value; } }
 
         #endregion
     }

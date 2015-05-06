@@ -7,23 +7,23 @@ namespace LivingSmartBusinessLogic
 {
     public class Ad
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
-        
-        private int _Type;
-        private int _StartDate;
-        private int _EndDate;
-        private int _Price;
+
+        private string _type;
+        private DateTime _startDate;
+        private DateTime _endDate;
+        private int _price;
 
         #endregion
 
         #region Properties
 
-        public int Type { get { return _Type; } set { _Type = value; } }
-        public int StartDate { get { return _StartDate; } set { _StartDate = value; } }
-        public int EndDate { get { return _EndDate; } set { _EndDate = value; } }
-        public int Price { get { return _Price; } set { _Price = value; } }
+        public string Type { get { return _type; } set { _type = value; } }
+        public DateTime StartDate { get { return _startDate; } set { _startDate = value; } }
+        public DateTime EndDate { get { return _endDate; } set { _endDate = value; } }
+        public int Price { get { return _price; } set { _price = value; } }
 
         #endregion
 

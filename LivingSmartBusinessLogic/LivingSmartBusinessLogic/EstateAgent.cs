@@ -7,25 +7,25 @@ namespace LivingSmartBusinessLogic
 {
     public class EstateAgent
     {
-        private int Id;
+        private int id;
 
         #region Private Fields
 
-        private int _Name;
-        private int _Telephone;
-        private int _Email;
-        private int _StartingDate;
-        private int _TerminationDate;
+        private string _name;
+        private string _telephone;
+        private string _email;
+        private DateTime _startingDate;
+        private DateTime _terminationDate;
 
         #endregion
 
         #region Properties
 
-        public int Name { get { return _Name; } set { _Name = value; } }
-        public int Telephone { get { return _Telephone; } set { _Telephone = value; } }
-        public int Email { get { return _Email; } set { _Email = value; } }
-        public int StartingDate { get { return _StartingDate; } set { _StartingDate = value; } }
-        public int TerminationDate { get { return _TerminationDate; } set { _TerminationDate = value; } }
+        public string Name { get { return _name; } set { _name = value; } }
+        public string Telephone { get { return _telephone; } set { _telephone = value; } }
+        public string Email { get { return _email; } set { _email = value; } }
+        public DateTime StartingDate { get { return _startingDate; } set { _startingDate = value; } }
+        public DateTime TerminationDate { get { return _terminationDate; } set { _terminationDate = value; } }
 
         #endregion
 
