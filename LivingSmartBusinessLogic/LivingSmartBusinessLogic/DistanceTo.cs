@@ -2,12 +2,13 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic
 {
-    public class Class
+    public class DistanceTo
     {
-
+        private int Id;
+        private int Type;
+        private int Distance;
     }
 }

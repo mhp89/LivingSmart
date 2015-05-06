@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="file:///C:/PROGRAM FILES (X86)/MICROSOFT VISUAL STUDIO 12.0/COMMON7/IDE/EXTENSIONS/MICROSOFT/ARCHITECTURE TOOLS/EXTENSIBILITY/Logging/CodeGenLog.xslt"?>
+<Log xmlns="http://schemas.microsoft.com/VisualStudio/2010/CodeGen.RE.Log" Label="Code Generation/Text Transformation Log">
+  <MessageClass Name="Message" Label="Message" Option="Show informational messages" />
+  <MessageClass Name="Warning" Label="Warning" Option="Show warnings" />
+  <MessageClass Name="Error" Label="Error" Option="Show errors" />
+  <MessageClass Name="Property" Label="Property" Option="Show metadata" />
+  <MessageClass Name="Diagnostic" Label="Message" Option="Show diagnostic messages" />
+  <Message Timestamp="2015-05-06T07:34:16" Importance="High" Text="Code generation or text transformation started." />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="Name = ClassTemplate" />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="ProjectPath = ..\LivingSmartLib\LivingSmartLib.csproj" />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-05-06T07:34:18" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\ClassTemplate.t4" />
+  <Message Timestamp="2015-05-06T07:34:19" Importance="Medium" Text="LivingSmart's Text Template Binding: 'ClassTemplate' will apply ClassTemplate.t4 to: 'LivingSmart::Case' -  (Class) " />
+  <Message Timestamp="2015-05-06T07:35:42" Importance="Medium" Text="Project Added: C:\Users\Bruger\OneDrive\Git\SmartLiving\LivingSmartBusinessLogic\LivingSmartLib\LivingSmartLib.csproj" />
+  <Message Timestamp="2015-05-06T07:35:43" Importance="Medium" Text="'LivingSmart::Case' -  (Class) : success (file created) - C:\Users\Bruger\OneDrive\Git\SmartLiving\LivingSmartBusinessLogic\LivingSmartLib\GeneratedCode\Case.cs" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="Name = StructTemplate" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="Overwrite = True" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="ProjectPath = ..\LivingSmartLib\LivingSmartLib.csproj" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="TargetDirectory = GeneratedCode\{PackageStructure}" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="TargetName = {Name}" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="TemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Diagnostic" Text="ResolvedTemplateFilePath = C:\PROGRAM FILES (X86)\MICROSOFT VISUAL STUDIO 12.0\COMMON7\IDE\EXTENSIONS\MICROSOFT\ARCHITECTURE TOOLS\EXTENSIBILITY\Templates\Text\StructTemplate.t4" />
+  <Message Timestamp="2015-05-06T07:35:50" Importance="Medium" Text="LivingSmart's Text Template Binding: 'StructTemplate' will apply StructTemplate.t4 to: 'LivingSmart::Case' -  (Class) " />
+  <Message Timestamp="2015-05-06T07:35:51" Importance="Diagnostic" Text="'LivingSmart::Case' -  (Class): no file generated because the 'AppliesToElement' method of the template 'StructTemplate.t4' evaluated to false." />
+  <Message Timestamp="2015-05-06T07:35:51" Importance="High" Text="Code generation complete. Errors: 0. Warnings: 0." />
+</Log>

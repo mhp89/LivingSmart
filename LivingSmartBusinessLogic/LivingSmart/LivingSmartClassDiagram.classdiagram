@@ -1,0 +1,1042 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="82f1401c-4a78-4896-a267-57e7a76d6408" name="LivingSmartClassDiagram" linkedPackageId="85629453-142d-4147-a6b5-ae878cfa3c86" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="12099d2d-bf77-424d-bb65-204167c4c562">
+      <profileInstance Id="abfb3828-5778-46d4-8393-6271f7a91ef9" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="f0ac7f85-a9f7-44e8-8607-cc920e66a2d7">
+      <profileInstance Id="89e1cea9-9986-4746-93bb-a2d2bda5847f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="db630766-c716-455c-bf6f-f6c5aa310df4" name="Appointment" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="18f6cb11-2283-47c7-9bcb-00aa99d84eba" />
+        <ownedAttributesInternal>
+          <property Id="566943f7-0a7d-4d50-9cc7-f1e5a41bbf5b" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b400e411-3de1-4140-ab93-f49260ca56d2" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="040db8e3-0061-4712-b80d-dff3e90787f8" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="dcd5a84f-8542-49d7-b5e4-892db6a36ca4" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b54c2efe-f198-4ff5-b855-e81dd7cdeb64" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e3c9b411-f64a-4bb1-919d-371b79ea7742" LastKnownName="Costumer" />
+            </type_NamedElement>
+          </property>
+          <property Id="605b00f7-94a9-4c4a-ad90-9af06c8ce062" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="94247cac-73bd-434c-80a9-67f75f3e2611" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e04c63bc-60ba-45d8-abdc-c8ccc0f22f4d" LastKnownName="Case" />
+            </type_NamedElement>
+          </property>
+          <property Id="7738d51e-e558-4789-8960-64648e27db2e" name="Duration" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="77804888-2afb-44c2-99a7-2ef87d31f416" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9b16d9fa-b1ad-4794-bfb7-092e20c9fa3f" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="d21fbdb1-d0a1-4024-95e2-1fcde123043f" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="facba46a-9305-47de-b80d-bbd7825744db" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="cdffea22-2037-46d1-bd3c-7e850147c7ec" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="e078b85c-c734-42ae-a459-7ea753fee9cb" name="Place" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="227b7a55-d33a-4870-9285-7dd17705d82c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="2fe30d83-c883-4d6f-862b-b0da04f93f58" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="1446ce7b-f467-4633-b62c-4f291839b7a8" name="EstateAgent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8e30ec17-0702-4c5f-862a-9ac1c083cd6f" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="39296ea4-98a0-4bca-9278-4c44574acad3" LastKnownName="EsateAgent" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="75d14312-9aa8-42ee-9e73-2775d158bb22" name="Costumer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a0e97e45-c1a0-485a-bc3b-e93f20b23455" />
+        <ownedAttributesInternal>
+          <property Id="4c404423-7d90-45e4-ac8a-fd5a689caea8" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fdc83bd0-8c2b-413b-a997-2255d234ab94" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c10c5d76-013e-4b45-97ee-e32807d40799" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="b277918c-d833-41ce-9303-6ef1445ca144" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e25f185d-8496-4672-bfc0-72d43f46d0d3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ea8c8740-f8e5-40f4-a775-0e5a33363d9c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="51539cf7-7554-41f0-a63d-0e5827947ed0" name="DateOfBirth" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="716d613b-f6ba-49ed-90d0-8222b1bb000d" />
+          </property>
+          <property Id="b4ed0678-7303-4b48-826c-722a00a87930" name="Address" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eb5413eb-e039-441c-bca5-be217c0a47a0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6b30c1c8-d5e2-4fa1-8607-0986d425e11e" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="2521cf4b-3f71-4d7e-8463-986e98e24dec" name="ZipCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06ff3c8c-0b32-423b-8e2d-ea59959e60eb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="349ed525-5095-4f16-b41d-508212fc1f19" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="fa2a40eb-6439-428f-a64e-06385af9287f" name="Telephone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dec2be94-0970-4efd-838a-cacb3677b638" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c44c65f1-0daf-4bb1-ba98-0932aa20a9b7" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="249593f2-1552-4c7a-9b18-3c5566ca6e97" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="991686a5-14de-44fa-ab67-d5b4492c6753" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c12a8a44-a1e2-4416-aca7-063b07fa453c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="7b38f2f4-2a31-4b2c-bb27-a3123fac0fba" name="EsateAgent" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0e22e007-da95-4c76-b741-1e8d82f1feaf" />
+        <ownedAttributesInternal>
+          <property Id="0ddbc06d-f5cf-4d10-a5f3-7eaebbc6df12" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c3e13c35-a794-4585-88f1-b7b7f8a7901b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e88b8045-df40-472a-9a04-95991bbfee51" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="7bc72827-292d-4124-a71b-868cad6acd67" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e78c03fe-9ef3-46c6-a52d-a925c8541ec3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9205e368-4ca9-4110-b68f-130e554f4246" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="37a7d0bc-81a1-472f-ab00-f0a16633a5c4" name="Telephone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c9926960-f5ae-4d2b-8211-be82c1f1a771" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b64f7e14-26e8-4379-b177-2c8c0a7c14c5" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="0fd4498b-fc7a-4cb2-bff5-5bbf89d730c4" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="918e0325-e589-4726-9709-2c6bd8347a1d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="03e4b02f-0374-44fe-9db0-a753e9d00e4b" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="3b6ec8fd-0752-4afd-9552-73c3e6ecf205" name="StartingDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8b221219-183c-4977-a7ec-b96da669904e" />
+          </property>
+          <property Id="491393eb-9afc-4675-8261-53f3998a3a10" name="TerminationDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f0fccb00-ed06-4c3f-8841-06a9442ad149" />
+          </property>
+          <property Id="90bad1eb-0a2a-498e-8fd1-52df4c87c4cf" name="Appointments" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="96f009b5-08e3-4a4d-9971-574817fe31ff" name="Lower" value="*">
+                <elementDefinition Id="069bbf8d-35f3-4754-bd9d-58f7cf9312b8" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="b1eddf2f-dfde-44d3-8a60-636c52ca909e" name="Upper" value="*">
+                <elementDefinition Id="c7b8b92f-ae5d-4b15-9696-42545c27c593" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="ed9a7ff5-9412-4592-ab82-b4b7ae7332e3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a7a15dcb-8543-4669-8444-8bb372da5ea7" LastKnownName="Appointment" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="eb8ba326-7dff-4429-851f-9a466f7ee713" name="Case" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b758dd3d-08af-4bb2-9d24-616087e4c379" />
+        <ownedAttributesInternal>
+          <property Id="040849f3-acfc-4822-babf-55a9d89844eb" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fb41f172-419e-4939-b937-9956cc471a4e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8c3c3065-9308-4494-b873-f7f2400b35ed" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="714faf06-6a33-42de-bfc9-eb988bb2ee7e" name="Seller" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6d2d1569-2441-415b-b441-a40d41d310d1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1eabcb53-2ae6-4af1-b7ed-89f8e4c74ab3" LastKnownName="Costumer" />
+            </type_NamedElement>
+          </property>
+          <property Id="ee3130b8-1d56-470d-b79c-23f65bfa222b" name="Buyer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0876e172-71b8-4832-8f4b-e79abc130615" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f7afc094-e08d-4fe4-a909-a09c8a1e56a9" LastKnownName="Costumer" />
+            </type_NamedElement>
+          </property>
+          <property Id="bf592ee7-56ab-4137-9047-1727501b2266" name="EstateAgent" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1cd6f067-0880-42a0-a33b-0bdd43f6ebad" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="068c15e4-b5b5-493b-930a-2bbc79b0548f" LastKnownName="EsateAgent" />
+            </type_NamedElement>
+          </property>
+          <property Id="e6a08476-f413-44c4-b2eb-67875c840bcf" name="CreationDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ba15477a-1ad6-4385-8885-a0706397f802" />
+          </property>
+          <property Id="f9db3c84-6039-4952-a8ad-90d332649710" name="Status" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7c4d3a31-d957-4aa7-be52-1e4e9da3aa55" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="5a1bac06-aeba-452f-b508-92d7e85e9a25" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="a5783ce8-29f2-42d9-ba82-35a2fa93b8b1" name="DateOfSale" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="de696b15-f9cf-46ed-8c32-e2b8e7d9c29e" />
+          </property>
+          <property Id="3294e1bc-2358-4049-a674-9ef6682efa47" name="TransferDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6cc1b9c9-20f9-4eeb-967d-8b82196fd01f" />
+          </property>
+          <property Id="2eef742a-0988-479c-a27a-14c751bcd496" name="DateOfCompletion" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c22df441-551c-4834-bb1a-bff240120916" />
+          </property>
+          <property Id="8e54d855-7877-4cfa-acc8-7a78d7d6fade" name="SellingPrice" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b4dc2580-4551-476f-8564-f12dfcfec250" />
+          </property>
+          <property Id="882d2d9e-90f8-40ec-ab2c-5b7ee0bdd757" name="Description" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="09dd0d1f-a24b-477f-8595-f2c5289d6d94" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d3c19366-a30b-4b0c-a39b-499e5bf43baf" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="539e67a0-843e-4ef7-9d22-74eb1000ae26" name="LandRegistryNumber" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7ad5dfe2-4e2b-4ed2-a2d0-5836aa419ecc" />
+          </property>
+          <property Id="304241b2-d835-4ec3-bb16-94b9eb1717ee" name="Address" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="498b6722-1558-4f2b-90b4-a45e7695a290" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="8c723d9b-611c-462b-9576-546a12dd27aa" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="3d4c3cbc-52ee-4c1b-9b4c-fabf6c5e38d9" name="ZipCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="f4ddcf02-3459-45ed-a4dc-816fd7194639" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e7c1b565-cbd6-4da3-aefb-52541426ea64" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="94bcb130-5a3f-4d41-8477-81a759074eca" name="AreaValue" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="5656a751-e1cf-4c5e-90d4-f4cc2dcd08a6" />
+          </property>
+          <property Id="7ee260ee-c4b4-45db-91e3-33b6b2cad558" name="PropertyType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="dc1db3a4-a665-4579-a185-05cb46f9f6a1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="70e37b03-4517-4dd8-87d7-5a1b8b625905" LastKnownName="PropertyType" />
+            </type_NamedElement>
+          </property>
+          <property Id="6de0f94a-2862-4497-bf32-80d038e217a4" name="PublicRating" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bc5a3a58-7384-40c7-818a-04dcf0c3d110" />
+          </property>
+          <property Id="ea10c1ef-6486-448e-8927-bcffaf6f2478" name="LandValue" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1c5f961b-c927-4878-acf2-4a098e45caf3" />
+          </property>
+          <property Id="48964fd4-abc7-4a1e-b9e8-6860826ca8e1" name="GroundArea" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1697593b-46f1-4f21-b546-a89b74684f92" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b33bf4ad-5828-47c8-a45a-e926b3263e6a" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="82cb1dec-3e57-4de9-aa71-be1ed1853a21" name="BuiltArea" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c27f83f4-f4c5-4fcc-9234-4793f9cf9966" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="dfa170e2-1290-4c39-9b39-930fc322cfac" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="0465daae-5d49-4f43-8883-d7cc47d99917" name="LivingArea" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0cc42fc9-249e-4cb4-9250-cf9f733bb587" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4a60e2b2-2680-4f94-ae2b-6fe2194e8081" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="638b1b05-e000-4c2f-a767-209b7ed770d2" name="BasementArea" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="25193aad-d730-4b3b-bb04-5fc1dc256cd5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0b831fdc-4bd3-4dad-ba8c-ddffd785173a" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="234116d9-7f08-425d-b46d-ccc657112d36" name="EnergyClassification" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8a1c1f3e-268a-4176-940b-53fce9edb451" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d9aa2d07-6163-4f5b-8d51-b1917727c54c" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="64df9070-7c3f-4590-afd1-0ca8dcd81297" name="Floors" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0b7fa44c-a4f9-413a-b122-f11a4d618d8c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="88461ea0-e441-47cd-b03c-de1d553ab910" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="611cb739-e063-497d-b155-55798a1adcfc" name="Rooms" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d511b64d-1b6c-453c-aec8-f5a6d451548b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="4273c900-2d0f-45bf-98e8-ce0f5a96be90" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="b94042bc-b18e-48bd-ad29-bf4da6ec72e0" name="Bedrooms" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="efe29516-9ba8-463e-a919-d89bb1dcbd52" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6a19106f-d2b3-4c92-bfc9-267eff0aec93" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="f131fc28-85cc-41f5-9569-21a07b629de7" name="Bathrooms" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a859b403-2082-4183-9136-e4887414c19b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="691a1601-5c39-446a-a6bd-33d48cabc5f2" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="48ed689b-8710-4460-aec8-066bb1073ddd" name="Toilets" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2775a7bc-1e30-4290-8f07-ffdb600c85e3" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c38fd308-057b-4142-8066-e9aef6d89923" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="48eff65f-b5dc-4590-ac09-c1b8a9c15c94" name="GarageArea" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="167a26a2-4c5e-44d3-8656-033e5dd8523b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6af0a03c-35a7-413d-bcf5-b465900d8295" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="eae4306c-5564-4953-89f1-6e6907b4b336" name="View" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0bd8e3cf-95ba-431e-be0e-7716e73a1397" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="46563a43-2852-4024-83b8-bd5783b5142d" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="0ae7b199-08e7-4aa2-b11c-1ba239912287" name="Ads" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="b02b781c-2d3e-4f81-9d4a-81d5aa17f187" name="Lower" value="*">
+                <elementDefinition Id="d2c96d61-c150-4edf-a770-571735e4a4cc" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="40771495-16f7-44b1-a50d-0229884c3266" name="Upper" value="*">
+                <elementDefinition Id="f11c4e47-1f45-4a87-a818-867588b5fcb5" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="209589c7-dfc1-4716-ba58-ea23f85e89c8" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3bc4c3ea-17de-4386-b7b7-97b9e1c581d9" LastKnownName="Ad" />
+            </type_NamedElement>
+          </property>
+          <property Id="60331ae0-f799-48bb-8d00-7015050b0094" name="PotentialBuyers" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="4499661b-57f5-439b-aafa-6ae4167f3805" name="Lower" value="*">
+                <elementDefinition Id="425774c2-a2b8-48f7-b45a-2862e0e61fc2" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="30ab1bb6-ade1-4dc0-a397-4292cce9d2c7" name="Upper" value="*">
+                <elementDefinition Id="9d158f08-1cba-4298-b1e9-dba74e88f65f" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="ba0920fe-3b95-470b-a4e0-05c8ed9018c6" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="7503a682-dad4-460e-afd8-cb0461f03ace" LastKnownName="PotentialBuyer" />
+            </type_NamedElement>
+          </property>
+          <property Id="433d4192-4b28-4b83-b0a0-ce9a6490804b" name="Documents" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="8df6f0c2-8a18-4960-97b2-f4d861bed264" name="Lower" value="*">
+                <elementDefinition Id="5d4e00bd-265b-4c58-8e72-5dd92902005c" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="cc516689-cbc7-49e5-aa4f-2097aaaa48be" name="Upper" value="*">
+                <elementDefinition Id="7a1fad45-f9c6-42fc-84bb-7ce992c1455c" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="34e84dc0-d54b-47f8-ab4a-6d1ec7221aac" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9849d10c-fd78-418c-8931-663ca80a2baf" LastKnownName="Document" />
+            </type_NamedElement>
+          </property>
+          <property Id="e1519139-65a5-4073-be49-2c679c3f8bfe" name="Ratings" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="d89a1d3b-c48b-40c0-bcc5-4bcbb62419c5" name="Lower" value="*">
+                <elementDefinition Id="6ea95588-42a9-4161-98c8-37b9b89a3b21" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="f9b3d094-1bc1-4fc2-a3e2-9651256c31f7" name="Upper" value="*">
+                <elementDefinition Id="72b7895e-ed9d-48bc-93f9-f651c2964e4b" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="dde210f8-dd2b-43d8-ba5f-731ad1681036" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d1bbd0b9-6045-4e70-81b5-618f759e065d" LastKnownName="Rating" />
+            </type_NamedElement>
+          </property>
+          <property Id="464062ad-5295-4165-90d6-7b8c0378dadc" name="DistanceTos" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="04f753b9-3c6b-4379-87ef-8974368e7218" name="Lower" value="*">
+                <elementDefinition Id="8e826ee3-d848-4b04-a42e-aa7e0ea25711" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="4025744a-265b-4ace-8bc5-e86d635490b5" name="Upper" value="*">
+                <elementDefinition Id="3b19e468-2449-4d4c-b863-0ef368ef331e" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="390d85d7-208a-4868-b66f-6ab288ff1d9b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f7acdf52-529b-4e66-8abe-e6929f8d07bf" LastKnownName="DistanceTo" />
+            </type_NamedElement>
+          </property>
+          <property Id="66ab6f15-83d2-4ede-a59d-0c454273b06a" name="Pictures" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <lowerValueInternal>
+              <literalString Id="c60a80d6-38f2-48e3-9248-94947ebebec5" name="Lower" value="*">
+                <elementDefinition Id="f1813b82-e60d-4015-bbcb-8646f1cd7413" />
+              </literalString>
+            </lowerValueInternal>
+            <upperValueInternal>
+              <literalString Id="7ea438bd-2180-4056-a078-3d47d7bc6822" name="Upper" value="*">
+                <elementDefinition Id="47ed6a8a-4940-42f6-b0d7-6d569114105e" />
+              </literalString>
+            </upperValueInternal>
+            <elementDefinition Id="084dec5f-55e6-4cc7-a872-ca307694d3cd" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a536d5b7-eacc-4d69-ad0b-065dac6f16db" LastKnownName="Picture" />
+            </type_NamedElement>
+          </property>
+          <property Id="64550661-8398-4d7e-bbfc-9daf98f82c49" name="PropertyType" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="67d3b3b8-f01d-48eb-89c6-1ca6f752e990" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9c0ae43a-127a-4e70-85dc-a4f298c3809d" LastKnownName="PropertyType" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="d40db8cc-2757-447b-aafb-60cf2c9a136e" name="Picture" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f69d2b10-6e4c-4c5f-aada-44cf0e2dce87" />
+        <ownedAttributesInternal>
+          <property Id="87d456d1-b9b6-4742-a6db-1df4d5f512c1" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="3b9e60a6-ac31-46df-90c7-31b9812cde7c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6de097e2-1b37-4712-a4d0-acf3056f2e3c" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="37638b40-ffb5-4ab0-96bd-385ad13d285f" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d44d3457-303c-461a-a428-6479fb2dc1b8" />
+          </property>
+          <property Id="baa79eca-e41b-452a-81da-cea8bf6054ec" name="Location" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="405cce7c-03aa-40bf-bab8-8e2acf8fb1aa" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="fdcba645-0973-475d-a740-0c0b1f54d5ff" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="17f4f14e-78f9-4bc5-a336-82390037be60" name="Document" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cd145d2f-70b4-4cb8-953a-8375c0d9d0a2" />
+        <ownedAttributesInternal>
+          <property Id="ad0265c6-9f4a-44b8-9a2f-b6cef56e7452" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="36ad20e9-9d1a-4b21-acab-cfe0ff16859b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9c9f79aa-f27c-44ac-a6f1-ce866d9c36c7" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="8854ffc6-2349-4a1b-a2cd-38416391f0b9" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="33c3ad6d-657a-4dcc-83b4-bfbabfcca031" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d5fbca2c-a6f2-4eac-b648-837cd235fea0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="0f8eeec1-aaa3-459c-9a08-eb37d3e66712" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2bcef2f3-49d9-44ef-a930-4d0989087f31" />
+          </property>
+          <property Id="49f6534c-1757-4eeb-9459-8522cdd823c6" name="Price" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="39601c05-121a-4562-a16d-f1c905274d39" />
+          </property>
+          <property Id="a0298e81-c4a1-4017-a71c-60f4ed33f678" name="Location" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8073f95f-5139-4acc-8351-b7b7ca465f45" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="f2af932a-ff3f-4f0f-81aa-8d5e48810737" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="db09b5c8-9704-451e-9189-c4848a6dfe1f" name="Status" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7d3414e4-5bdb-47af-9aac-5404599f1e73" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="21217dd5-e1c6-426b-80b9-e22c477a6255" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c008134d-71c2-4a93-bff8-14516b2731f3" name="Ad" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ac27b013-d518-4a66-95f5-c8ffbbe44de5" />
+        <ownedAttributesInternal>
+          <property Id="fbc18b4e-9a73-4bc1-8d97-22bec0a25b0c" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="48ff4622-d66d-4619-ac5d-a53c0d5cd093" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="59508ead-43ee-4b26-bce5-56029705e08c" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="ee3bb7bc-67f9-4c3c-bcd7-380c5c802ca1" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c0790ed-d1ea-411b-8eb6-fc848ca752c5" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3ac74d5e-1485-4044-b09c-d3b0354838c0" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="f8463163-3af3-4e15-8257-f2adbd21f2e3" name="StartDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="324a0d50-ec4e-4e94-b978-ed7942c91ed0" />
+          </property>
+          <property Id="443bac7c-671f-42f4-be39-4b8c15120bdf" name="EndDate" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aec72d9d-738f-4402-9f92-d3a31f23abe3" />
+          </property>
+          <property Id="7bcc5b92-d057-4ec6-a2c1-bcffeafd875b" name="Price" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="a07363c2-5862-42fc-83ba-fc7d48c304b9" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="be312e42-ef4a-4c61-979a-ede8f2c7b744" name="Partner" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="62bc5d01-b1ee-4d92-9076-30046f9ce684" />
+        <ownedAttributesInternal>
+          <property Id="e5ec1312-9e47-4137-853b-452b42b91dd3" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="516d0519-9cde-464d-b9fe-77e02e872725" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="85ca5226-61bf-458f-ba9c-bafcbe01c6f8" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="a1b485bd-581b-4006-a85d-e3a2c6499b98" name="Name" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18ae67c4-4637-4333-81be-08485d4587d7" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="39dcbde4-1c18-4a38-9bd1-823bcf942c32" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="371c4301-a822-4c2d-993d-fbb9f9f6ebdd" name="Telephone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="68429eed-2c53-423f-8133-f8ca796acf86" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="d2eee7ba-5a80-4923-b881-98887fadf7f9" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="4505504b-7803-4c47-8eb4-b1a827c1860f" name="Email" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c08fa80-b793-40e4-be56-185f2f82ef04" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="6418ae9e-6227-4935-8aaf-c08b27d0a6d9" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="6369c0cd-3986-44a7-b991-17743c302f7c" name="Country" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="73a352b1-0f14-4081-894f-032b572af607" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="a3a93277-7d5f-478d-9f04-b5e7bdcfb4c4" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="ce497b03-4e5e-4204-b513-df5bb2d03a26" name="City" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="06dbc699-e1df-4d54-8617-1f6e80159fa9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b09a34d8-d510-4f0e-a75f-9ffadd50dad5" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="6e60276c-5651-43fa-8315-7f2ce85f3d65" name="TimeZone" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="bbce4591-cce3-41f6-ba78-e5399a897f10" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="68fdcfab-52a4-40df-a334-8c4802e6d09e" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b964e29-ce1f-4577-a476-365e90123bd4" name="PropertyType" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="166aa29f-1e6c-4988-bf47-52cfd712b304" />
+        <ownedAttributesInternal>
+          <property Id="3fb8641a-8db2-4316-85ed-8e5d2ed193e9" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2680e15f-b8e5-4175-81b4-a1a38ffb4197" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="0830c431-c76a-49d3-bdff-bf948dfcc0e2" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="6d207e30-9b9e-41e4-ab86-c4f1e0d443a8" name="Discription" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="07e0f9be-483d-405b-a9e8-7d1698fe9b1a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3d649bae-2279-444e-8ecb-c9057da74267" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="44ed4e2d-49d5-4a83-8160-a19cf4d43064" name="Deleted" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1ba5b27b-3779-48dd-917f-e5b17a4eb4eb" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="3aefce8e-8832-49bd-bb3f-072575c24b21" LastKnownName="Boolean" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="aeadd839-70f6-4d66-92bc-519754880540" name="Neighborhood" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="8becf60e-c74d-4876-9006-ee9baca55f3e" />
+        <ownedAttributesInternal>
+          <property Id="190d46d3-350d-454d-910a-2d8bb9b4fb58" name="ZipCode" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="46ffe46f-8521-428f-86c1-b487fe0fdc08" />
+          </property>
+          <property Id="e840835e-7d69-4315-93d9-07f9c40bb4cf" name="Neighborhood" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6c248995-0cdd-42d3-8370-c62bf5d6556f" />
+          </property>
+          <property Id="08bda5e8-e84c-4af3-a3f6-0e103ea20c5a" name="Value" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c196f26b-81de-4ce2-94a7-cc84a92aa31d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="145a9ca0-6434-41ba-8cf6-0870496b4130" name="Rating" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2ea9562f-3d2b-4e5f-8107-f993b01cf79d" />
+        <ownedAttributesInternal>
+          <property Id="c1dad0dc-a67c-4bb8-8cac-63bb2507ed7d" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9da516b2-af4d-48c1-8313-796594db70ea" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9c72c3d1-8b08-4f75-b745-e7af57530744" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="406d90d2-2570-4987-a68d-10b1ed6c8384" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="23b5c5a5-bf1d-4558-adfb-968e20b2da84" />
+          </property>
+          <property Id="953b67e3-c2d9-4779-b95a-404bf4299c5e" name="EstateAgentValue" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="780f0a88-f307-4e07-806c-1656c717ef4d" />
+          </property>
+          <property Id="9d3b2373-6165-437e-adb3-5cc44619ad3e" name="SystemValue" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b072e2a9-e6a1-4202-9f26-22291f442ccb" />
+          </property>
+          <property Id="c118c52c-28fb-4eaf-83ce-1343a2e794fc" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1edd108f-dbe2-4dd0-b492-904b5507645d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b0c850ad-0fdc-4c5f-8900-162dc492a5f8" name="PotentialBuyer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6e70fc87-65ea-4153-a524-ffe9fb53d594" />
+        <ownedAttributesInternal>
+          <property Id="6c5e5232-4382-4d87-8f40-10da4614ccb4" name="Customer" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4fa7c821-acc9-4095-91d9-50c8d2adde05" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ea360c36-a463-4a67-9997-e53723c20fe5" LastKnownName="Costumer" />
+            </type_NamedElement>
+          </property>
+          <property Id="e907527e-6505-491f-b6a5-90ddd7e16346" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2f96f65e-3299-4fa9-acbd-a33f05718838" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="34015e5c-7be1-4fbd-8a96-f2ee5b768ac7" name="AskingPrice" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5a02229a-d2d4-474e-822f-622e4da8b75c" />
+        <ownedAttributesInternal>
+          <property Id="9a247525-6b17-4b5d-9cca-69a7cd53bf43" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="e0ffa799-2d49-49d4-a62b-56cbcbd91d9a" />
+          </property>
+          <property Id="3559ce35-483d-4e3b-8ccb-89a594976090" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b4f5ac25-9cea-41c9-a75a-9627a7e64e05" />
+          </property>
+          <property Id="94d177da-80f7-4988-900f-b27f9196b426" name="Value" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="95ac6be7-ee5d-4cfd-89d8-1191551f860b" />
+          </property>
+          <property Id="cb611a22-11b8-45ee-ad4a-09577258f020" name="Date" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="aad78873-3cdf-499a-9c22-4303d5ee1f5d" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c3dc0c9c-469b-4941-8668-103b3ce65568" name="DistanceTo" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c17909b4-c865-42c5-938c-2b5b39e485b6" />
+        <ownedAttributesInternal>
+          <property Id="24de9cd7-eac2-4b02-9fcc-e4bf163ea3a7" name="Id" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0c19cade-95b3-440e-85d8-77965ff53d85" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="02971a33-29fa-4228-9c29-9ef5ab77073e" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+          <property Id="9a0e4def-f899-47a2-8c96-15e6c681ab86" name="Case" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="df792339-4ee4-411e-af0e-7b8d8fce732a" />
+          </property>
+          <property Id="86f43918-ab99-4d3a-a2fe-53d52e340ac4" name="Type" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="019bd675-86fd-4575-a7d0-ad04a0ba4fef" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="933293d8-34a8-4d10-b9e2-7f19026d35c4" LastKnownName="String" />
+            </type_NamedElement>
+          </property>
+          <property Id="dfc81cc7-62f7-4d0b-afae-c65fb95f6ce9" name="Distance" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="19114ad7-2b03-4658-9e95-e7f9c01d5c6b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="9335a13a-915f-4771-9656-d3c54907a63e" LastKnownName="Integer" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="8c723d9b-611c-462b-9576-546a12dd27aa" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0b831fdc-4bd3-4dad-ba8c-ddffd785173a" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="691a1601-5c39-446a-a6bd-33d48cabc5f2" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6a19106f-d2b3-4c92-bfc9-267eff0aec93" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="dfa170e2-1290-4c39-9b39-930fc322cfac" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f7afc094-e08d-4fe4-a909-a09c8a1e56a9" name="Costumer" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Costumer">
+        <elementDefinition Id="a0e97e45-c1a0-485a-bc3b-e93f20b23455" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d3c19366-a30b-4b0c-a39b-499e5bf43baf" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d9aa2d07-6163-4f5b-8d51-b1917727c54c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="068c15e4-b5b5-493b-930a-2bbc79b0548f" name="EsateAgent" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::EsateAgent">
+        <elementDefinition Id="0e22e007-da95-4c76-b741-1e8d82f1feaf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="88461ea0-e441-47cd-b03c-de1d553ab910" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6af0a03c-35a7-413d-bcf5-b465900d8295" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b33bf4ad-5828-47c8-a45a-e926b3263e6a" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="8c3c3065-9308-4494-b873-f7f2400b35ed" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4a60e2b2-2680-4f94-ae2b-6fe2194e8081" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="70e37b03-4517-4dd8-87d7-5a1b8b625905" name="PropertyType" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::PropertyType">
+        <elementDefinition Id="166aa29f-1e6c-4988-bf47-52cfd712b304" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="4273c900-2d0f-45bf-98e8-ce0f5a96be90" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1eabcb53-2ae6-4af1-b7ed-89f8e4c74ab3" name="Costumer" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Costumer">
+        <elementDefinition Id="a0e97e45-c1a0-485a-bc3b-e93f20b23455" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5a1bac06-aeba-452f-b508-92d7e85e9a25" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c38fd308-057b-4142-8066-e9aef6d89923" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="46563a43-2852-4024-83b8-bd5783b5142d" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e7c1b565-cbd6-4da3-aefb-52541426ea64" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="03e4b02f-0374-44fe-9db0-a753e9d00e4b" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e88b8045-df40-472a-9a04-95991bbfee51" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9205e368-4ca9-4110-b68f-130e554f4246" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b64f7e14-26e8-4379-b177-2c8c0a7c14c5" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b09a34d8-d510-4f0e-a75f-9ffadd50dad5" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a3a93277-7d5f-478d-9f04-b5e7bdcfb4c4" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6418ae9e-6227-4935-8aaf-c08b27d0a6d9" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="85ca5226-61bf-458f-ba9c-bafcbe01c6f8" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="39dcbde4-1c18-4a38-9bd1-823bcf942c32" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d2eee7ba-5a80-4923-b881-98887fadf7f9" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="68fdcfab-52a4-40df-a334-8c4802e6d09e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3bc4c3ea-17de-4386-b7b7-97b9e1c581d9" name="Ad" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Ad">
+        <elementDefinition Id="ac27b013-d518-4a66-95f5-c8ffbbe44de5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="59508ead-43ee-4b26-bce5-56029705e08c" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3ac74d5e-1485-4044-b09c-d3b0354838c0" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6b30c1c8-d5e2-4fa1-8607-0986d425e11e" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c12a8a44-a1e2-4416-aca7-063b07fa453c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c10c5d76-013e-4b45-97ee-e32807d40799" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ea8c8740-f8e5-40f4-a775-0e5a33363d9c" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c44c65f1-0daf-4bb1-ba98-0932aa20a9b7" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="349ed525-5095-4f16-b41d-508212fc1f19" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ea360c36-a463-4a67-9997-e53723c20fe5" name="Costumer" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Costumer">
+        <elementDefinition Id="a0e97e45-c1a0-485a-bc3b-e93f20b23455" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="7503a682-dad4-460e-afd8-cb0461f03ace" name="PotentialBuyer" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::PotentialBuyer">
+        <elementDefinition Id="6e70fc87-65ea-4153-a524-ffe9fb53d594" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e04c63bc-60ba-45d8-abdc-c8ccc0f22f4d" name="Case" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Case">
+        <elementDefinition Id="b758dd3d-08af-4bb2-9d24-616087e4c379" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="cdffea22-2037-46d1-bd3c-7e850147c7ec" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9b16d9fa-b1ad-4794-bfb7-092e20c9fa3f" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="040db8e3-0061-4712-b80d-dff3e90787f8" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="2fe30d83-c883-4d6f-862b-b0da04f93f58" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e3c9b411-f64a-4bb1-919d-371b79ea7742" name="Costumer" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Costumer">
+        <elementDefinition Id="a0e97e45-c1a0-485a-bc3b-e93f20b23455" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a7a15dcb-8543-4669-8444-8bb372da5ea7" name="Appointment" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Appointment">
+        <elementDefinition Id="18f6cb11-2283-47c7-9bcb-00aa99d84eba" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="39296ea4-98a0-4bca-9278-4c44574acad3" name="EsateAgent" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::EsateAgent">
+        <elementDefinition Id="0e22e007-da95-4c76-b741-1e8d82f1feaf" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9849d10c-fd78-418c-8931-663ca80a2baf" name="Document" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Document">
+        <elementDefinition Id="cd145d2f-70b4-4cb8-953a-8375c0d9d0a2" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9c9f79aa-f27c-44ac-a6f1-ce866d9c36c7" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f2af932a-ff3f-4f0f-81aa-8d5e48810737" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="21217dd5-e1c6-426b-80b9-e22c477a6255" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d5fbca2c-a6f2-4eac-b648-837cd235fea0" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9c72c3d1-8b08-4f75-b745-e7af57530744" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d1bbd0b9-6045-4e70-81b5-618f759e065d" name="Rating" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Rating">
+        <elementDefinition Id="2ea9562f-3d2b-4e5f-8107-f993b01cf79d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9335a13a-915f-4771-9656-d3c54907a63e" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="02971a33-29fa-4228-9c29-9ef5ab77073e" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="933293d8-34a8-4d10-b9e2-7f19026d35c4" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f7acdf52-529b-4e66-8abe-e6929f8d07bf" name="DistanceTo" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::DistanceTo">
+        <elementDefinition Id="c17909b4-c865-42c5-938c-2b5b39e485b6" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6de097e2-1b37-4712-a4d0-acf3056f2e3c" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="fdcba645-0973-475d-a740-0c0b1f54d5ff" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a536d5b7-eacc-4d69-ad0b-065dac6f16db" name="Picture" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::Picture">
+        <elementDefinition Id="f69d2b10-6e4c-4c5f-aada-44cf0e2dce87" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3d649bae-2279-444e-8ecb-c9057da74267" name="String" isAbstract="false" isLeaf="false" cachedFullName="String">
+        <elementDefinition Id="59259974-6d55-42c6-b7bd-763d77ac8ef9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="0830c431-c76a-49d3-bdff-bf948dfcc0e2" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="3aefce8e-8832-49bd-bb3f-072575c24b21" name="Boolean" isAbstract="false" isLeaf="false" cachedFullName="Boolean">
+        <elementDefinition Id="8943dc84-709e-4f62-b15a-a3273aa6f165" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="9c0ae43a-127a-4e70-85dc-a4f298c3809d" name="PropertyType" isAbstract="false" isLeaf="false" cachedFullName="LivingSmart::PropertyType">
+        <elementDefinition Id="166aa29f-1e6c-4988-bf47-52cfd712b304" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="85629453-142d-4147-a6b5-ae878cfa3c86" name="LivingSmart">
+    <elementDefinition Id="0fbfbeea-a900-45eb-b0e3-a1353bbe4b85" />
+  </package>
+</logicalClassDesignerModel>
