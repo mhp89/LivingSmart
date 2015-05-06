@@ -47,7 +47,6 @@
     <Compile Include="Customer.cs" />
     <Compile Include="DistanceTo.cs" />
     <Compile Include="Document.cs" />
-    <Compile Include="EsateAgent.cs" />
     <Compile Include="EstateAgent.cs" />
     <Compile Include="Neighborhood.cs" />
     <Compile Include="Partner.cs" />
@@ -56,7 +55,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyType.cs" />
     <Compile Include="Rating.cs" />
-    <Compile Include="ZipCode.cs" />
+    <Compile Include="City.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />

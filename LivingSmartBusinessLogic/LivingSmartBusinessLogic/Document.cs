@@ -8,9 +8,23 @@ namespace LivingSmartBusinessLogic
     public class Document
     {
         private int Id;
-        private int Type;
-        private int Price;
-        private int Location;
-        private int Status;
+
+        #region Private Fields
+
+        private int _Type;
+        private int _Price;
+        private int _Location;
+        private int _Status;
+
+        #endregion
+
+        #region Properties
+
+        public int Type { get { return _Type; } set { _Type = value; } }
+        public int Price { get { return _Price; } set { _Price = value; } }
+        public int Location { get { return _Location; } set { _Location = value; } }
+        public int Status { get { return _Status; } set { _Status = value; } }
+
+        #endregion
     }
 }

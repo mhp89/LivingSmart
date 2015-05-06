@@ -7,8 +7,20 @@ namespace LivingSmartBusinessLogic
 {
     public class Neighborhood
     {
-        private ZipCode ZipCode;
-        private string Neighborhood;
-        private int Value;
+        private City City;
+
+        #region Private Fields
+
+        private string _Name;
+        private int _Value;
+
+        #endregion
+
+        #region Properties
+
+        public string Name { get { return _Name; } set { _Name = value; } }
+        public int Value { get { return _Value; } set { _Value = value; } }
+
+        #endregion
     }
 }

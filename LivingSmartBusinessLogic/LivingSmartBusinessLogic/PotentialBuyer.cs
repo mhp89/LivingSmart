@@ -7,7 +7,18 @@ namespace LivingSmartBusinessLogic
 {
     public class PotentialBuyer
     {
-        private Customer PotentialBuyer;
-        private int Date;
+        private Customer PotBuyer;
+
+        #region Private Fields
+
+        private int _Date;
+
+        #endregion
+
+        #region Properties
+
+        public int Date { get { return _Date; } set { _Date = value; } }
+
+        #endregion
     }
 }

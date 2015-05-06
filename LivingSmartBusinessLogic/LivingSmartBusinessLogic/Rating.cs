@@ -8,8 +8,21 @@ namespace LivingSmartBusinessLogic
     public class Rating
     {
         private int Id;
-        private int EstateAgentValue;
-        private int SystemValue;
-        private int Date;
+
+        #region Private Fields
+
+        private int _EstateAgentValue;
+        private int _SystemValue;
+        private int _Date;
+
+        #endregion
+
+        #region Properties
+
+        public int EstateAgentValue { get { return _EstateAgentValue; } set { _EstateAgentValue = value; } }
+        public int SystemValue { get { return _SystemValue; } set { _SystemValue = value; } }
+        public int Date { get { return _Date; } set { _Date = value; } }
+
+        #endregion
     }
 }

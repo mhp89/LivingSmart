@@ -8,7 +8,19 @@ namespace LivingSmartBusinessLogic
     public class AskingPrice
     {
         private int Id;
-        private int Value;
-        private int Date;
+
+        #region Private Fields
+
+        private int _Value;
+        private int _Date;
+
+        #endregion
+
+        #region Properties
+
+        public int Value { get { return _Value; } set { _Value = value; } }
+        public int Date { get { return _Date; } set { _Date = value; } }
+
+        #endregion
     }
 }

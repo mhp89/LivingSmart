@@ -5,9 +5,21 @@ using System.Text;
 
 namespace LivingSmartBusinessLogic
 {
-    public class ZipCode
+    public class City
     {
         private int ZipCode;
         private int District;
+
+        #region Private Fields
+
+
+
+        #endregion
+
+        #region Properties
+
+
+
+        #endregion
     }
 }
