@@ -44,8 +44,6 @@
     <Compile Include="Appointment.cs" />
     <Compile Include="AskingPrice.cs" />
     <Compile Include="Case.cs" />
-    <Compile Include="CaseCatalog.cs" />
-    <Compile Include="CaseController.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="DistanceTo.cs" />
     <Compile Include="Document.cs" />
@@ -61,11 +59,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="UC7.sequencediagram" />
+    <None Include="Customer.sequencediagram" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="UC7.sequencediagram.layout">
-      <DependentUpon>UC7.sequencediagram</DependentUpon>
+    <EmbeddedResource Include="Customer.sequencediagram.layout">
+      <DependentUpon>Customer.sequencediagram</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
