@@ -22,5 +22,9 @@ namespace LivingSmartBusinessLogic
         public int Distance { get { return _distance; } set { _distance = value; } }
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

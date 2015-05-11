@@ -26,5 +26,9 @@ namespace LivingSmartBusinessLogic
         public string Status { get { return _status; } set { _status = value; } }
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

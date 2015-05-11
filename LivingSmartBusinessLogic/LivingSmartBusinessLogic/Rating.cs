@@ -24,5 +24,9 @@ namespace LivingSmartBusinessLogic
         public DateTime Date { get { return _date; } set { _date = value; } }
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

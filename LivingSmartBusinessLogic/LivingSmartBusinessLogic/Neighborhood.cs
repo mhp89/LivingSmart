@@ -22,5 +22,9 @@ namespace LivingSmartBusinessLogic
         public int Value { get { return _value; } set { _value = value; } }
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

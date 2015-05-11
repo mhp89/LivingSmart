@@ -22,5 +22,9 @@ namespace LivingSmartBusinessLogic
         public string Desription { get { return _desription; } set { _desription = value; } }
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

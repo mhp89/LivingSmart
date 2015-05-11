@@ -34,5 +34,9 @@ namespace LivingSmartBusinessLogic
         private List<Appointment> Appointments;
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

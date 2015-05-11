@@ -21,5 +21,9 @@ namespace LivingSmartBusinessLogic
 
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

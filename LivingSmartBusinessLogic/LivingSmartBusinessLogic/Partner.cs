@@ -32,5 +32,9 @@ namespace LivingSmartBusinessLogic
         public string Timezone { get { return _timezone; } set { _timezone = value; } }
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

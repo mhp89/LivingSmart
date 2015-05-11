@@ -10,6 +10,7 @@ namespace LivingSmartBusinessLogic
         private int id;
 
         #region Private Fields
+
         private Customer _seller;
         private Customer _buyer;
         private EstateAgent _estateAgent;
@@ -90,6 +91,8 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        #region Methods
+
         public void CloseCase()
         {
             throw new System.NotImplementedException();
@@ -124,6 +127,8 @@ namespace LivingSmartBusinessLogic
         {
             throw new System.NotImplementedException();
         }
+
+        #endregion
 
     }
 }
