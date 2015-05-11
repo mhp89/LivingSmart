@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="0fbfbeea-a900-45eb-b0e3-a1353bbe4b85"
   name="LivingSmart" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1843,6 +1843,2962 @@
       <undefinedType
         Id="78212bec-f3f9-40d3-b53a-19bf57c39f7c"
         name="int" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="f1fc6c04-d504-41d9-97dc-2522f77eea24"
+        name="Sequence1"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="070d5413-78d9-432f-9bde-d9af0da517ed"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2a2abb36-e26d-44ee-b440-6db586d5e259"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="40cc3995-95c6-49eb-a9b0-bed971765e4e"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e3e123c2-f438-4470-ba54-5963c759b9ee"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="982eee7d-588e-45e6-9b20-06926e6dcee8"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b63091f6-cc35-4ca0-a824-e8b760e2fc7f"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="73cc0a43-86a6-4924-87c2-1769177b64fb"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e6df460c-4f6e-4620-999b-2040c964af03"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="40cc3995-95c6-49eb-a9b0-bed971765e4e"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="87b77eec-1dde-4d2a-8410-4497de836de3"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget
+            Id="8bad6327-0ab8-4b63-99da-a6603663628b"
+            name="LostFoundTarget" />
+          <messageOccurrenceSpecification
+            Id="e3e123c2-f438-4470-ba54-5963c759b9ee"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="1e532e18-f7db-4c9f-ae80-85ab044fb6ce"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="20d3f8b2-2e11-49f6-927b-984c199480e3"
+                LastKnownName="Customer"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="24ba3786-54d4-4bee-8ef6-ced08739f278"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="789f32f8-6b77-46ee-8656-7aa95f970a9e"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d00fa2a0-18e8-4b33-b05d-ed2a3376d80a"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="62b85906-0046-4fe4-970c-0e39ae450a9d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="789f32f8-6b77-46ee-8656-7aa95f970a9e"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="026aea89-7e1d-4628-8fc8-65353b2ce3a6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="20d3f8b2-2e11-49f6-927b-984c199480e3"
+                LastKnownName="Customer"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d00fa2a0-18e8-4b33-b05d-ed2a3376d80a"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="20d3f8b2-2e11-49f6-927b-984c199480e3"
+                LastKnownName="Customer"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="982eee7d-588e-45e6-9b20-06926e6dcee8"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b63091f6-cc35-4ca0-a824-e8b760e2fc7f"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="62b85906-0046-4fe4-970c-0e39ae450a9d"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="20d3f8b2-2e11-49f6-927b-984c199480e3"
+                LastKnownName="Customer"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="24ba3786-54d4-4bee-8ef6-ced08739f278"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="90131b19-0764-4cf3-b0d1-71d535ccdc31"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="20d3f8b2-2e11-49f6-927b-984c199480e3"
+                LastKnownName="Customer"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="08794a9b-5ce0-4138-9932-355e541b4702"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="58115cef-6323-4a3f-822b-355291a2edcd"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="01770510-8d59-44e0-8d67-46d4a7012649"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="86ab687f-da82-42a9-a013-1ed1cb45a25d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="62f9fa7c-8247-45f2-bba3-6e70cac8e24e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="94b9190f-d954-46be-bf3c-b60963624b31"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="1e12240f-5748-48a4-b1f2-2884daf0155c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ce0bbfe3-7838-4388-b88e-d85f1aff600e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="01770510-8d59-44e0-8d67-46d4a7012649"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e3b41a8d-1d4f-4a28-bcaa-909d03d7a451"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="86ab687f-da82-42a9-a013-1ed1cb45a25d"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="73cc0a43-86a6-4924-87c2-1769177b64fb"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="62f9fa7c-8247-45f2-bba3-6e70cac8e24e"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="b9021538-a9bc-45d3-b670-3c7eaf951eac"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="1e12240f-5748-48a4-b1f2-2884daf0155c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="94b9190f-d954-46be-bf3c-b60963624b31"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d42feaf-29eb-49ea-8916-19d99a3c41ae"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="29fe8751-7aa8-4981-8496-55f0826115dc"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ff7fda24-06e4-4d96-80bb-3766999b415f"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ff6baec5-ca17-4904-a661-da5e9019ea48"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="534d7353-13a7-48f2-8ca9-226840dd5dc5"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="94b9190f-d954-46be-bf3c-b60963624b31"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d4aec1ba-207e-4037-ae2c-a954308635f5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8d42feaf-29eb-49ea-8916-19d99a3c41ae"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment
+            Id="99d1507b-57bb-49cd-809a-483e630cef09"
+            name="CombinedFragment1"
+            interactionOperator="Alt"
+            customInteractionOperator="if new customer">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="c51725b5-f3cd-4554-927e-fb43fa9d397e"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                    LastKnownName="CustomerCatalog"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <lifelineMoniker
+                    Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                    LastKnownName="DatabaseConnector"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <lifelineMoniker
+                    Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                    LastKnownName="Database"
+                    LastKnownLocation="LivingSmart.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="916f430e-0e4f-46d6-96ba-de50a0a4d9f9" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="29fe8751-7aa8-4981-8496-55f0826115dc"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="534d7353-13a7-48f2-8ca9-226840dd5dc5"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="3a2edf87-31ce-4e3d-9d00-936a1197f2d1"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="65b41918-8116-4d9e-8a48-5d72beddcdd2"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="3021fe5b-b3cc-4805-aba6-80c358213f9e"
+                    LastKnownName="OperandOccurrenceSpecification5"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="064072a9-7ffe-43a7-a786-a70c911b7139"
+                    LastKnownName="OperandOccurrenceSpecification6"
+                    LastKnownLocation="LivingSmart.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="3a2edf87-31ce-4e3d-9d00-936a1197f2d1"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="29fe8751-7aa8-4981-8496-55f0826115dc"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3021fe5b-b3cc-4805-aba6-80c358213f9e"
+            name="OperandOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="c5755152-b477-4712-9740-7b8b0aa7096a"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="935e3c88-df46-4586-bdea-a60ae3ef3e65"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a2078a22-231c-4cd9-8506-514c5ff1e64c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="3589111e-7e6f-4e56-b473-90afb30da46d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="12a8bd49-ba35-425a-a5af-8256cb867a9d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="a337941f-adf5-4ddd-800f-a7397b5e0c59"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8273ae0f-01df-48eb-a398-30cf0319cd72"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a2078a22-231c-4cd9-8506-514c5ff1e64c"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="9d35836e-bd39-4f3e-842f-dfa6932d238f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ff7fda24-06e4-4d96-80bb-3766999b415f"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3589111e-7e6f-4e56-b473-90afb30da46d"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="9bdffedd-b465-4386-a24e-f4d999e28679"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="40b4d77f-b7bb-490b-b266-92fa8ab7e09f"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e26bcd44-5fa1-45e8-a2ab-2bbe827b91e9"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="abc09efb-015a-451f-a829-89db6c3a0d7c"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7857f9c0-7237-45d2-8c7b-e58000bbf96b"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e26bcd44-5fa1-45e8-a2ab-2bbe827b91e9"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3efa7e85-9f00-45aa-b2ee-1e5f16ce4d9d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="abc09efb-015a-451f-a829-89db6c3a0d7c"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="12a8bd49-ba35-425a-a5af-8256cb867a9d"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a337941f-adf5-4ddd-800f-a7397b5e0c59"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7857f9c0-7237-45d2-8c7b-e58000bbf96b"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="40b4d77f-b7bb-490b-b266-92fa8ab7e09f"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1f9e0881-097d-4127-b15e-939aeb735d8e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8273ae0f-01df-48eb-a398-30cf0319cd72"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ff6baec5-ca17-4904-a661-da5e9019ea48"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="935e3c88-df46-4586-bdea-a60ae3ef3e65"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="796162a8-813d-4b3f-af61-239251f6cabf"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="534d7353-13a7-48f2-8ca9-226840dd5dc5"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="65b41918-8116-4d9e-8a48-5d72beddcdd2"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="064072a9-7ffe-43a7-a786-a70c911b7139"
+            name="OperandOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="1e12240f-5748-48a4-b1f2-2884daf0155c"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="451d7fc5-4a01-410f-8bad-092ac326d94f"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ce0bbfe3-7838-4388-b88e-d85f1aff600e"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e6df460c-4f6e-4620-999b-2040c964af03"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="58115cef-6323-4a3f-822b-355291a2edcd"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e7189505-2113-4dac-863e-f0452582ebda"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2a2abb36-e26d-44ee-b440-6db586d5e259"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d77eb94b-ae0d-4fea-b336-48365a2fa4aa"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="53abab3f-87b6-45da-8a50-8a59c1c01e20"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="07acc7b6-b7c8-40a7-9b93-a93cc8c819c4"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="19fb5c5f-05de-44db-9008-105a1788a37c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="32a93bba-f9ba-45bf-9d8e-fb15be158a5a"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="2535769c-069e-47c3-bd51-8460ad357acb"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="77867019-30f4-4d3e-93c7-aeb34b55e4ae"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="19fb5c5f-05de-44db-9008-105a1788a37c"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1a497db1-0689-4dc3-ae58-e55cb565e627"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="32a93bba-f9ba-45bf-9d8e-fb15be158a5a"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <lostFoundTarget
+            Id="6f77cdc0-295f-4783-a91e-b87d6f35e616"
+            name="LostFoundTarget" />
+          <behaviorExecutionSpecification
+            Id="0f819d03-8cdc-4160-8abf-4df63175fa6b"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f123cdb7-bfba-4e91-959f-bfdb78d274a7"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8aacb0f5-0447-4d78-abf0-56580093b0b8"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="1a929174-b83c-434e-be97-a37e36fbce58"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7fc31a23-23a8-4d48-92f0-1e70f0111c0c"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="eca17dd1-22cf-4c1f-befa-08b6c5d2dcb1"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="c4ee1d98-8fc3-4db1-9b7f-39b648ec64ce"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="8d902d8f-c47d-4302-b4f4-b72aac4bc36d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8aacb0f5-0447-4d78-abf0-56580093b0b8"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fdbcddb0-c0fd-4777-923d-c7662c26e0bc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2535769c-069e-47c3-bd51-8460ad357acb"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1a929174-b83c-434e-be97-a37e36fbce58"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7fc31a23-23a8-4d48-92f0-1e70f0111c0c"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f3266fc3-00a4-4029-b488-e9fb9f7a774e"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="c4ee1d98-8fc3-4db1-9b7f-39b648ec64ce"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="eca17dd1-22cf-4c1f-befa-08b6c5d2dcb1"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d7003178-bf11-4190-b4d5-df0db58b1c24"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="67eb670b-65d9-4763-875f-00a4c1975e02"
+                LastKnownName="OperandOccurrenceSpecification7"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="52a91dbf-9bc2-4fab-a46a-17eadb1da972"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="09985d95-1557-4519-9ab3-fa30575e8266"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="012ec98b-ef8a-4567-8244-e419b2284732"
+                LastKnownName="OperandOccurrenceSpecification8"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="eca17dd1-22cf-4c1f-befa-08b6c5d2dcb1"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="699e5eb6-cc28-4ad4-b3d7-18b6237a4f63"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d7003178-bf11-4190-b4d5-df0db58b1c24"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment
+            Id="8c0e2189-0b8d-4244-b434-bf709b4d345c"
+            name="CombinedFragment2"
+            interactionOperator="Alt"
+            customInteractionOperator="if existing customer">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="44a708ec-1dac-492a-bace-011efc32fdf1"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                    LastKnownName="CustomerCatalog"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <lifelineMoniker
+                    Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                    LastKnownName="DatabaseConnector"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <lifelineMoniker
+                    Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                    LastKnownName="Database"
+                    LastKnownLocation="LivingSmart.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="f172a646-8a49-4842-8b89-069dd0dd34d5" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="67eb670b-65d9-4763-875f-00a4c1975e02"
+                    LastKnownName="OperandOccurrenceSpecification7"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="012ec98b-ef8a-4567-8244-e419b2284732"
+                    LastKnownName="OperandOccurrenceSpecification8"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="a3c55daf-32a3-4fc8-bf3e-e1749746a396"
+                    LastKnownName="OperandOccurrenceSpecification9"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="8e53e3b3-2cbd-483b-9f3b-7fba5a9501dd"
+                    LastKnownName="OperandOccurrenceSpecification10"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="7b1dc1b5-b985-4713-ac42-94dc02bf04da"
+                    LastKnownName="OperandOccurrenceSpecification11"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="333211ff-5e3d-4a38-977f-e7f61d3f8a63"
+                    LastKnownName="OperandOccurrenceSpecification12"
+                    LastKnownLocation="LivingSmart.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="7b1dc1b5-b985-4713-ac42-94dc02bf04da"
+            name="OperandOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="a3c55daf-32a3-4fc8-bf3e-e1749746a396"
+            name="OperandOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="67eb670b-65d9-4763-875f-00a4c1975e02"
+            name="OperandOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="58922f9b-cdea-4097-82bd-02e95fc03226"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="d0722673-ab5c-41bc-89c1-edf1b9c25a57"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="f5dddfd8-e8c8-41a8-a1f8-b825c3f5a5dd"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b78a3b03-b9bf-45fb-bb00-5651a7cea285"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="099d832a-4178-4fba-9e7c-a3c3e074011d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="b241170c-cbbe-47ad-9f37-6f8e4ae3c9aa"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c03aee57-43d1-414f-bf94-d2d6c5ce1c0a"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="f5dddfd8-e8c8-41a8-a1f8-b825c3f5a5dd"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="43a75201-8b20-4040-9c6a-c0fab56c7125"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b78a3b03-b9bf-45fb-bb00-5651a7cea285"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="52a91dbf-9bc2-4fab-a46a-17eadb1da972"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="322d8060-5fcd-4727-8d3f-ef73568ec6d4"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="0f524f2c-b032-4ceb-9459-f57be99b9e1c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="95e73979-e652-4359-9e86-7eb684509b11"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e0e9d194-4619-4683-927a-50eb3f327416"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c5ef1191-ab23-465f-9d1c-654425eca356"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="95e73979-e652-4359-9e86-7eb684509b11"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="dfcf65f9-b161-4356-b2e4-6db818b545dc"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="099d832a-4178-4fba-9e7c-a3c3e074011d"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e0e9d194-4619-4683-927a-50eb3f327416"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c5ef1191-ab23-465f-9d1c-654425eca356"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b241170c-cbbe-47ad-9f37-6f8e4ae3c9aa"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="0f524f2c-b032-4ceb-9459-f57be99b9e1c"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6bb41c3e-e07e-49d6-b103-1c3147d5efd5"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c03aee57-43d1-414f-bf94-d2d6c5ce1c0a"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="09985d95-1557-4519-9ab3-fa30575e8266"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="d0722673-ab5c-41bc-89c1-edf1b9c25a57"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="6943fae8-c163-4458-a7fa-06d8736a48c2"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="012ec98b-ef8a-4567-8244-e419b2284732"
+            name="OperandOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="333211ff-5e3d-4a38-977f-e7f61d3f8a63"
+            name="OperandOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8e53e3b3-2cbd-483b-9f3b-7fba5a9501dd"
+            name="OperandOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="c4ee1d98-8fc3-4db1-9b7f-39b648ec64ce"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="addf17bf-ec45-4be6-8f9b-5545f9d8e598"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="77867019-30f4-4d3e-93c7-aeb34b55e4ae"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8d902d8f-c47d-4302-b4f4-b72aac4bc36d"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f123cdb7-bfba-4e91-959f-bfdb78d274a7"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2419c5b5-f62e-4228-a971-5416988c4f98"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="07acc7b6-b7c8-40a7-9b93-a93cc8c819c4"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="76b9e1a7-7dfe-4b73-92dd-c98330251bbb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="76873984-880c-4393-ba25-5ba11fa31474"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="55f72c87-3ce5-4c01-a830-de68d7c093e2"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="e41a56a8-fff6-40a2-846e-5fe64bfd092f"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f34ee133-b51b-4fd1-8e7e-d5af78bb5c3e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="f4570499-79d0-455b-b6b9-0b4045c00d91"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7c387637-3a81-4865-ab7d-cea119a2a790"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="e41a56a8-fff6-40a2-846e-5fe64bfd092f"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1499ee2d-0127-4356-9f09-6f2b7a02b157"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <lostFoundTarget
+            Id="f2d1b2b2-5d32-4b12-b35e-e1066c2fa4b7"
+            name="LostFoundTarget" />
+          <messageOccurrenceSpecification
+            Id="f34ee133-b51b-4fd1-8e7e-d5af78bb5c3e"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ce66fe3d-2427-4f6e-a4ed-48d4fb38f8db"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="fcf198c6-e769-42bf-9e28-41ae1905bd12"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a8116b90-99d0-4053-abf5-750b61b05ea9"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6e73586-001b-4f00-adb8-01008add4b6c"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9f7c81ca-2942-453b-8df3-b3c1d438002e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9c961d66-5580-4d9b-b0dc-6206e4d03017"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fea9e179-578c-462f-81ca-e6ee19a60f16"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dc09018f-e40d-4a91-a79f-80dac96db757"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a8116b90-99d0-4053-abf5-750b61b05ea9"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fab91c17-a410-4b73-b14c-a13fc15682d6"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e6e73586-001b-4f00-adb8-01008add4b6c"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f4570499-79d0-455b-b6b9-0b4045c00d91"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9f7c81ca-2942-453b-8df3-b3c1d438002e"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="a54987cd-b89f-4f91-926e-dc25df9934e0"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="fea9e179-578c-462f-81ca-e6ee19a60f16"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="9c961d66-5580-4d9b-b0dc-6206e4d03017"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f744c988-f634-4793-b60b-2dcbc270b2be"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="5fdd666d-0713-45d0-a1a2-41f6691c9fbb"
+                LastKnownName="OperandOccurrenceSpecification13"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="591f67e5-3215-44eb-99a4-438ec15523c3"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9c019f37-d263-4d0c-9a9c-a531f98628fe"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="912cc64a-4ca9-462e-9a88-f2564d5f09af"
+                LastKnownName="OperandOccurrenceSpecification14"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="9c961d66-5580-4d9b-b0dc-6206e4d03017"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c4e088ba-201d-4bd4-919d-4efd43479216"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f744c988-f634-4793-b60b-2dcbc270b2be"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <combinedFragment
+            Id="021e91a2-db92-4b32-99ce-6b4c628c57c8"
+            name="CombinedFragment3"
+            interactionOperator="Alt"
+            customInteractionOperator="if customer not in catalog">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="56c9d282-8c52-4bb9-9088-6378accf32f3"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                    LastKnownName="CustomerCatalog"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <lifelineMoniker
+                    Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                    LastKnownName="DatabaseConnector"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <lifelineMoniker
+                    Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                    LastKnownName="Database"
+                    LastKnownLocation="LivingSmart.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="4353c422-faa5-447a-b902-3b4eee00dea8" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="5fdd666d-0713-45d0-a1a2-41f6691c9fbb"
+                    LastKnownName="OperandOccurrenceSpecification13"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="912cc64a-4ca9-462e-9a88-f2564d5f09af"
+                    LastKnownName="OperandOccurrenceSpecification14"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="3a869bc1-c431-4c1f-91e8-bc3a4b29c98a"
+                    LastKnownName="OperandOccurrenceSpecification15"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="d708e57a-e006-4f92-8ceb-96f151559bf2"
+                    LastKnownName="OperandOccurrenceSpecification16"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="26487d54-e63d-40f2-a708-691c0ee7015e"
+                    LastKnownName="OperandOccurrenceSpecification17"
+                    LastKnownLocation="LivingSmart.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="6ac982d5-0a75-47ea-8f4e-c1260c617ba0"
+                    LastKnownName="OperandOccurrenceSpecification18"
+                    LastKnownLocation="LivingSmart.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="26487d54-e63d-40f2-a708-691c0ee7015e"
+            name="OperandOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="3a869bc1-c431-4c1f-91e8-bc3a4b29c98a"
+            name="OperandOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="5fdd666d-0713-45d0-a1a2-41f6691c9fbb"
+            name="OperandOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="ae95c8b2-02ce-4204-b2dc-c5930d6ed862"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="764cc25b-517f-4198-964b-6730f55b0fe9"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="047e1daf-282f-4e35-aa28-baea99282e8b"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="c6727710-e3aa-4f48-a940-22e9eecc15e2"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e1a4a6b4-a58f-4582-bfad-4a2fb2a48ee1"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d52e2a8b-03fb-4c05-8ddf-ff5f6e84e337"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="5ecaddaa-2a73-437a-b6e3-c09187e72d47"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="047e1daf-282f-4e35-aa28-baea99282e8b"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fba76d75-31a9-4473-a2a0-9c9c7a542a3e"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="591f67e5-3215-44eb-99a4-438ec15523c3"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c6727710-e3aa-4f48-a940-22e9eecc15e2"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="0959d3f9-3d4a-4edf-8c6c-847c20b5536a"
+            name="BehaviorExecutionSpecification">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ff119af6-7b3f-4324-9ba5-9a673314b51f"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="cfb31ce1-9b2e-40ff-ad2e-7c0b637b7d27"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d999bbb-f356-4e2a-821c-63b5a4cfef91"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="27646120-35bd-45c6-8725-ea99ab513bb1"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="cfb31ce1-9b2e-40ff-ad2e-7c0b637b7d27"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="16f8ca8a-d133-432a-a00f-5e2360162ab8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="8d999bbb-f356-4e2a-821c-63b5a4cfef91"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e1a4a6b4-a58f-4582-bfad-4a2fb2a48ee1"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d52e2a8b-03fb-4c05-8ddf-ff5f6e84e337"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="27646120-35bd-45c6-8725-ea99ab513bb1"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ff119af6-7b3f-4324-9ba5-9a673314b51f"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="840fe66c-70c1-4d9a-ab35-6deca79dbf39"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9c019f37-d263-4d0c-9a9c-a531f98628fe"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="5ecaddaa-2a73-437a-b6e3-c09187e72d47"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="764cc25b-517f-4198-964b-6730f55b0fe9"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d7547b85-ce38-4969-bce0-4157bcae406b"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6ac982d5-0a75-47ea-8f4e-c1260c617ba0"
+            name="OperandOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+                LastKnownName="Database"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="d708e57a-e006-4f92-8ceb-96f151559bf2"
+            name="OperandOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+                LastKnownName="DatabaseConnector"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="912cc64a-4ca9-462e-9a88-f2564d5f09af"
+            name="OperandOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="fea9e179-578c-462f-81ca-e6ee19a60f16"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="29e509a8-2c8b-48ea-ab48-7670a4978f9d"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7c387637-3a81-4865-ab7d-cea119a2a790"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dc09018f-e40d-4a91-a79f-80dac96db757"
+            name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="fcf198c6-e769-42bf-9e28-41ae1905bd12"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5fcfac8a-661f-4a92-a2a6-3ea36325c9a0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+                LastKnownName="CustomerCatalog"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="55f72c87-3ce5-4c01-a830-de68d7c093e2"
+            name="ExecutionOccurrenceSpecification">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="456d8e3b-996c-4071-8f71-1a88bc291b94"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="LivingSmart.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="bc0584e8-2132-4a50-930b-b200638dd653"
+                LastKnownName="CustomerController"
+                LastKnownLocation="LivingSmart.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="bc0584e8-2132-4a50-930b-b200638dd653"
+            name="CustomerController"
+            isActor="false"
+            lifelineDisplayName="CustomerController">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="40cc3995-95c6-49eb-a9b0-bed971765e4e"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2a2abb36-e26d-44ee-b440-6db586d5e259"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="19fb5c5f-05de-44db-9008-105a1788a37c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="07acc7b6-b7c8-40a7-9b93-a93cc8c819c4"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e41a56a8-fff6-40a2-846e-5fe64bfd092f"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="55f72c87-3ce5-4c01-a830-de68d7c093e2"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="20d3f8b2-2e11-49f6-927b-984c199480e3"
+            name="Customer"
+            isActor="false"
+            lifelineDisplayName="Customer">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="789f32f8-6b77-46ee-8656-7aa95f970a9e"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="24ba3786-54d4-4bee-8ef6-ced08739f278"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="d8f8b8a7-4be7-4568-bf73-aa9fcd3ca2a8"
+            name="CustomerCatalog"
+            isActor="false"
+            lifelineDisplayName="CustomerCatalog">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="01770510-8d59-44e0-8d67-46d4a7012649"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="58115cef-6323-4a3f-822b-355291a2edcd"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8aacb0f5-0447-4d78-abf0-56580093b0b8"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f123cdb7-bfba-4e91-959f-bfdb78d274a7"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a8116b90-99d0-4053-abf5-750b61b05ea9"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fcf198c6-e769-42bf-9e28-41ae1905bd12"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="b34fd99d-f592-46d4-b773-a13a065f9419"
+            name="DatabaseConnector"
+            isActor="false"
+            lifelineDisplayName="DatabaseConnector">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="3a2edf87-31ce-4e3d-9d00-936a1197f2d1"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="a2078a22-231c-4cd9-8506-514c5ff1e64c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="935e3c88-df46-4586-bdea-a60ae3ef3e65"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="65b41918-8116-4d9e-8a48-5d72beddcdd2"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="a3c55daf-32a3-4fc8-bf3e-e1749746a396"
+                LastKnownName="OperandOccurrenceSpecification9"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f5dddfd8-e8c8-41a8-a1f8-b825c3f5a5dd"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="d0722673-ab5c-41bc-89c1-edf1b9c25a57"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="8e53e3b3-2cbd-483b-9f3b-7fba5a9501dd"
+                LastKnownName="OperandOccurrenceSpecification10"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="3a869bc1-c431-4c1f-91e8-bc3a4b29c98a"
+                LastKnownName="OperandOccurrenceSpecification15"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="047e1daf-282f-4e35-aa28-baea99282e8b"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="764cc25b-517f-4198-964b-6730f55b0fe9"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="d708e57a-e006-4f92-8ceb-96f151559bf2"
+                LastKnownName="OperandOccurrenceSpecification16"
+                LastKnownLocation="LivingSmart.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1b5e06b2-3d7b-46e4-81b4-ea71ba264898"
+            name="Database"
+            isActor="false"
+            lifelineDisplayName="Database">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="3021fe5b-b3cc-4805-aba6-80c358213f9e"
+                LastKnownName="OperandOccurrenceSpecification5"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="e26bcd44-5fa1-45e8-a2ab-2bbe827b91e9"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="40b4d77f-b7bb-490b-b266-92fa8ab7e09f"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="064072a9-7ffe-43a7-a786-a70c911b7139"
+                LastKnownName="OperandOccurrenceSpecification6"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="7b1dc1b5-b985-4713-ac42-94dc02bf04da"
+                LastKnownName="OperandOccurrenceSpecification11"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="95e73979-e652-4359-9e86-7eb684509b11"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="0f524f2c-b032-4ceb-9459-f57be99b9e1c"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="333211ff-5e3d-4a38-977f-e7f61d3f8a63"
+                LastKnownName="OperandOccurrenceSpecification12"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="26487d54-e63d-40f2-a708-691c0ee7015e"
+                LastKnownName="OperandOccurrenceSpecification17"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="cfb31ce1-9b2e-40ff-ad2e-7c0b637b7d27"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ff119af6-7b3f-4324-9ba5-9a673314b51f"
+                LastKnownName="ExecutionOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="6ac982d5-0a75-47ea-8f4e-c1260c617ba0"
+                LastKnownName="OperandOccurrenceSpecification18"
+                LastKnownLocation="LivingSmart.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="53db84ff-c1d6-4d36-84ad-b0866321bc2d"
+            name="MakeNewCustomer"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="8bad6327-0ab8-4b63-99da-a6603663628b"
+                LastKnownName="LostFoundTarget"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e3e123c2-f438-4470-ba54-5963c759b9ee"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="1e6bd0c9-0556-446d-8400-fe74a32b36a6"
+            name="&lt;&lt;create Customer&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="982eee7d-588e-45e6-9b20-06926e6dcee8"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d00fa2a0-18e8-4b33-b05d-ed2a3376d80a"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="494a13ce-f02c-4ea8-ae0d-166b7847cca9"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="62b85906-0046-4fe4-970c-0e39ae450a9d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b63091f6-cc35-4ca0-a824-e8b760e2fc7f"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5201e96c-d05f-499e-a4b0-4a8ecd1c0998"
+            name="AddCustomer"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="73cc0a43-86a6-4924-87c2-1769177b64fb"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="86ab687f-da82-42a9-a013-1ed1cb45a25d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="270eea4d-0e74-49c8-ac0b-f9c557472888"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="62f9fa7c-8247-45f2-bba3-6e70cac8e24e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d42feaf-29eb-49ea-8916-19d99a3c41ae"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="1464a5c8-a86e-49f0-bd0d-52a38b693b47"
+            name="Insert"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ff7fda24-06e4-4d96-80bb-3766999b415f"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3589111e-7e6f-4e56-b473-90afb30da46d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="31aa873c-e083-4287-889c-c490978e23b9"
+            name="Data"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="12a8bd49-ba35-425a-a5af-8256cb867a9d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="abc09efb-015a-451f-a829-89db6c3a0d7c"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="be1e746a-a32d-46d2-be7c-2e8d2465b94e"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7857f9c0-7237-45d2-8c7b-e58000bbf96b"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="a337941f-adf5-4ddd-800f-a7397b5e0c59"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="88944ce4-412b-460c-bfaf-b58d92c77364"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8273ae0f-01df-48eb-a398-30cf0319cd72"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ff6baec5-ca17-4904-a661-da5e9019ea48"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7fd97f80-effe-4157-8ef8-e31d68b895a1"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ce0bbfe3-7838-4388-b88e-d85f1aff600e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6df460c-4f6e-4620-999b-2040c964af03"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="c491d65e-ee0d-459a-a9e2-1f77877155d0"
+            name="UpdateCustomer"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="6f77cdc0-295f-4783-a91e-b87d6f35e616"
+                LastKnownName="LostFoundTarget"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="32a93bba-f9ba-45bf-9d8e-fb15be158a5a"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="bb7e01e8-31c4-4e97-bcb3-e069ec9b09b4"
+            name="UpdateCustomer"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2535769c-069e-47c3-bd51-8460ad357acb"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="1a929174-b83c-434e-be97-a37e36fbce58"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="38850d10-7d7b-40f0-95b6-e1ff190052b7"
+            name="Save"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7fc31a23-23a8-4d48-92f0-1e70f0111c0c"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d7003178-bf11-4190-b4d5-df0db58b1c24"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="a3b823ca-de92-464b-be03-fb685300d3cc"
+            name="Update"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="52a91dbf-9bc2-4fab-a46a-17eadb1da972"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b78a3b03-b9bf-45fb-bb00-5651a7cea285"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="e925cd5e-df23-42c3-abe3-51c29e0c7cb1"
+            name="Data"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="099d832a-4178-4fba-9e7c-a3c3e074011d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e0e9d194-4619-4683-927a-50eb3f327416"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="023443e9-be0b-461d-aed4-c0dbac6b9408"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c5ef1191-ab23-465f-9d1c-654425eca356"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b241170c-cbbe-47ad-9f37-6f8e4ae3c9aa"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8837a8ee-18fa-42cb-bf45-81c4349ba030"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c03aee57-43d1-414f-bf94-d2d6c5ce1c0a"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="09985d95-1557-4519-9ab3-fa30575e8266"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2d12ee30-ef5d-4012-835a-8ee0d0db6ceb"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d902d8f-c47d-4302-b4f4-b72aac4bc36d"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="77867019-30f4-4d3e-93c7-aeb34b55e4ae"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="af06de3d-5a4d-495d-9b8f-fb58b457c844"
+            name="ReadCustomer"
+            messageKind="Found"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <lostFoundTargetMoniker
+                Id="f2d1b2b2-5d32-4b12-b35e-e1066c2fa4b7"
+                LastKnownName="LostFoundTarget"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f34ee133-b51b-4fd1-8e7e-d5af78bb5c3e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fdcbfd87-f76f-4bba-960a-e479442f62c9"
+            name="ReadCustomer"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f4570499-79d0-455b-b6b9-0b4045c00d91"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e6e73586-001b-4f00-adb8-01008add4b6c"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="87be6e06-b6cc-4bd5-a9eb-f739065b79fc"
+            name="Check"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9f7c81ca-2942-453b-8df3-b3c1d438002e"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f744c988-f634-4793-b60b-2dcbc270b2be"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="fdd07184-c180-41d0-b941-7833f2f60a77"
+            name="Read"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="591f67e5-3215-44eb-99a4-438ec15523c3"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c6727710-e3aa-4f48-a940-22e9eecc15e2"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="984cfcfd-c397-4777-93a4-a582691aca9f"
+            name="Læse læse"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e1a4a6b4-a58f-4582-bfad-4a2fb2a48ee1"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8d999bbb-f356-4e2a-821c-63b5a4cfef91"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="837a9ca8-b8e2-418d-b968-054d7c583e87"
+            name="&lt;&lt;Data&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="27646120-35bd-45c6-8725-ea99ab513bb1"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d52e2a8b-03fb-4c05-8ddf-ff5f6e84e337"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="53a03837-4765-49cf-8716-b42d6000d755"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="5ecaddaa-2a73-437a-b6e3-c09187e72d47"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9c019f37-d263-4d0c-9a9c-a531f98628fe"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="23c7a56e-5509-408e-80e9-6b853c1ca492"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dc09018f-e40d-4a91-a79f-80dac96db757"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7c387637-3a81-4865-ab7d-cea119a2a790"
+                LastKnownName="MessageOccurrenceSpecification"
+                LastKnownLocation="LivingSmart.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="87b77eec-1dde-4d2a-8410-4497de836de3"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d77eb94b-ae0d-4fea-b336-48365a2fa4aa"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="026aea89-7e1d-4628-8fc8-65353b2ce3a6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="90131b19-0764-4cf3-b0d1-71d535ccdc31"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e3b41a8d-1d4f-4a28-bcaa-909d03d7a451"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e7189505-2113-4dac-863e-f0452582ebda"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1a497db1-0689-4dc3-ae58-e55cb565e627"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="76b9e1a7-7dfe-4b73-92dd-c98330251bbb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fdbcddb0-c0fd-4777-923d-c7662c26e0bc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2419c5b5-f62e-4228-a971-5416988c4f98"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1499ee2d-0127-4356-9f09-6f2b7a02b157"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="456d8e3b-996c-4071-8f71-1a88bc291b94"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fab91c17-a410-4b73-b14c-a13fc15682d6"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5fcfac8a-661f-4a92-a2a6-3ea36325c9a0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="699e5eb6-cc28-4ad4-b3d7-18b6237a4f63"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="addf17bf-ec45-4be6-8f9b-5545f9d8e598"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d4aec1ba-207e-4037-ae2c-a954308635f5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="451d7fc5-4a01-410f-8bad-092ac326d94f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c4e088ba-201d-4bd4-919d-4efd43479216"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="29e509a8-2c8b-48ea-ab48-7670a4978f9d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="9d35836e-bd39-4f3e-842f-dfa6932d238f"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="796162a8-813d-4b3f-af61-239251f6cabf"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3efa7e85-9f00-45aa-b2ee-1e5f16ce4d9d"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1f9e0881-097d-4127-b15e-939aeb735d8e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="43a75201-8b20-4040-9c6a-c0fab56c7125"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6943fae8-c163-4458-a7fa-06d8736a48c2"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="dfcf65f9-b161-4356-b2e4-6db818b545dc"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="6bb41c3e-e07e-49d6-b103-1c3147d5efd5"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fba76d75-31a9-4473-a2a0-9c9c7a542a3e"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d7547b85-ce38-4969-bce0-4157bcae406b"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="16f8ca8a-d133-432a-a00f-5e2360162ab8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="840fe66c-70c1-4d9a-ab35-6deca79dbf39"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
