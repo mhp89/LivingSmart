@@ -29,7 +29,21 @@
       <SubType>Content</SubType>
       <DependentUpon>Customer.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Partner.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Partner.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Partner.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
+    <Content Include="EstateAgent.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="EstateAgent.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EstateAgent.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="LivingSmartClassDiagram.classdiagram">
       <SubType>Content</SubType>
     </Content>
