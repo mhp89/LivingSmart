@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15.5" name="UMLSequenceDiagram1">
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 15.75" name="UMLSequenceDiagram1">
   <SequenceDesignerModelMoniker Id="87145bd4-cea7-42e6-807c-6d4b029f1e3e" />
   <nestedChildShapes>
     <lifelineShape Id="4b70ba46-0861-4092-a8d3-6854b6d84d9e" absoluteBounds="1.025, 1, 0.15, 14.259999998658907" visible="true" visualStyleMode="Custom">
@@ -32,10 +32,10 @@
         </lostFoundTargetShape>
       </relativeChildShapes>
     </lifelineShape>
-    <lifelineShape Id="03f01253-c551-4d01-8d31-69d29dcb4cb5" absoluteBounds="2.3, 1, 0.15, 7" visible="true" visualStyleMode="Custom">
+    <lifelineShape Id="03f01253-c551-4d01-8d31-69d29dcb4cb5" absoluteBounds="2.3, 1, 0.15, 14.489583333333334" visible="true" visualStyleMode="Custom">
       <lifelineMoniker Id="b00eca5e-0321-4236-85c0-deb641922faf" LastKnownName="Customer" />
       <relativeChildShapes>
-        <lifelineHoverShape Id="3b78c187-46ea-4fb3-9983-843217115c41" absoluteBounds="2.3, 1, 0, 7">
+        <lifelineHoverShape Id="3b78c187-46ea-4fb3-9983-843217115c41" absoluteBounds="2.3, 1, 0, 14.5">
           <lifelineMoniker Id="b00eca5e-0321-4236-85c0-deb641922faf" LastKnownName="Customer" />
         </lifelineHoverShape>
         <umlLifelineHeadShape Id="0de44a8a-eca9-4a18-b7ca-aceb83f16cf1" absoluteBounds="1.8749999999999998, 0.6, 1, 0.4" customColor="184, 204, 215" visualStyleMode="Custom">

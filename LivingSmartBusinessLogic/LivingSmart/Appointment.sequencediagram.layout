@@ -32,10 +32,10 @@
         </umlLifelineHeadShape>
       </relativeChildShapes>
     </lifelineShape>
-    <lifelineShape Id="34a284d8-7df0-4ec8-88e6-6af7c7f644fa" absoluteBounds="2.7895833333333333, 1, 0.15, 7" visible="true" visualStyleMode="Custom">
+    <lifelineShape Id="34a284d8-7df0-4ec8-88e6-6af7c7f644fa" absoluteBounds="2.7895833333333333, 1, 0.15, 14.268229166666666" visible="true" visualStyleMode="Custom">
       <lifelineMoniker Id="ad897fc4-f70c-4b6f-913a-c8458f7c0119" LastKnownName="Appointment" />
       <relativeChildShapes>
-        <lifelineHoverShape Id="0f52cc96-e9ac-4489-83be-5e5f349c0740" absoluteBounds="2.7895833333333333, 1, 0, 7">
+        <lifelineHoverShape Id="0f52cc96-e9ac-4489-83be-5e5f349c0740" absoluteBounds="2.7895833333333333, 1, 0, 14.25">
           <lifelineMoniker Id="ad897fc4-f70c-4b6f-913a-c8458f7c0119" LastKnownName="Appointment" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="c88fce26-775b-454d-ade3-fc0a80e068ee" absoluteBounds="2.7895833333333333, 1.6, 0.15, 0.55000000000000027" customColor="184, 204, 215" visualStyleMode="Modified">
