@@ -30,5 +30,9 @@ namespace LivingSmartBusinessLogic
         #region Collections
 
         #endregion
+
+        #region Methods
+
+        #endregion
     }
 }

@@ -1,22 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="87145bd4-cea7-42e6-807c-6d4b029f1e3e" name="Sequence1" linkedPackageId="8ecf7c9c-6c0c-422f-9b13-41b5f542a1ac" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="8f2ba031-4c10-44de-bf17-61d6f3e1357c">
-      <profileInstance Id="1be07251-6ee7-439c-8f48-36034ab1d5f4" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="2b469ff4-1097-43e3-a92d-1493f84c72c1">
-      <profileInstance Id="e11ff863-d470-49ca-a9b5-6ead1a3fca74" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="87145bd4-cea7-42e6-807c-6d4b029f1e3e" name="Customer" linkedPackageId="8ecf7c9c-6c0c-422f-9b13-41b5f542a1ac" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
-      <interaction Id="c3571af1-6e17-4e65-b43f-e6c1abf46114" name="Sequence1" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+      <interaction Id="c3571af1-6e17-4e65-b43f-e6c1abf46114" name="Customer" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
         <elementDefinition Id="f1fc6c04-d504-41d9-97dc-2522f77eea24" />
         <fragments>
           <behaviorExecutionSpecification Id="a0abbf0c-85eb-4934-88ca-354c6fb5e1c9" name="BehaviorExecutionSpecification">
@@ -150,16 +136,16 @@
               <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="8f150145-c8b8-4b2a-810e-9cad7da4fcde" name="MessageOccurrenceSpecification">
-            <elementDefinition Id="86ab687f-da82-42a9-a013-1ed1cb45a25d" />
-            <covered>
-              <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="23e601df-1b71-4e12-a913-835bce7fb20b" name="MessageOccurrenceSpecification">
             <elementDefinition Id="73cc0a43-86a6-4924-87c2-1769177b64fb" />
             <covered>
               <lifelineMoniker Id="1ff42834-911d-4b30-a5f5-d981577148e8" LastKnownName="CustomerController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8f150145-c8b8-4b2a-810e-9cad7da4fcde" name="MessageOccurrenceSpecification">
+            <elementDefinition Id="86ab687f-da82-42a9-a013-1ed1cb45a25d" />
+            <covered>
+              <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="de4f9a3e-741a-4474-8ec9-c28ff261ae75" name="MessageOccurrenceSpecification">
@@ -321,16 +307,16 @@
               <lifelineMoniker Id="c9b19834-e1bd-4dab-a8df-038730012c2f" LastKnownName="Database" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="428149a2-1c70-4589-9ad6-e8ab96dd5c6d" name="MessageOccurrenceSpecification">
-            <elementDefinition Id="abc09efb-015a-451f-a829-89db6c3a0d7c" />
-            <covered>
-              <lifelineMoniker Id="c9b19834-e1bd-4dab-a8df-038730012c2f" LastKnownName="Database" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="18016ecd-f454-421a-a413-175d332cb15d" name="MessageOccurrenceSpecification">
             <elementDefinition Id="12a8bd49-ba35-425a-a5af-8256cb867a9d" />
             <covered>
               <lifelineMoniker Id="3573b342-77b1-41ac-927e-1a34707b2379" LastKnownName="DatabaseConnector" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="428149a2-1c70-4589-9ad6-e8ab96dd5c6d" name="MessageOccurrenceSpecification">
+            <elementDefinition Id="abc09efb-015a-451f-a829-89db6c3a0d7c" />
+            <covered>
+              <lifelineMoniker Id="c9b19834-e1bd-4dab-a8df-038730012c2f" LastKnownName="Database" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4a67e407-e487-4667-bb06-83a16ffd9655" name="MessageOccurrenceSpecification">
@@ -594,12 +580,6 @@
               </interactionOperand>
             </operands>
           </combinedFragment>
-          <operandOccurrenceSpecification Id="0f0f8152-beb2-4c37-bf0d-9a12b5796221" name="OperandOccurrenceSpecification11">
-            <elementDefinition Id="7b1dc1b5-b985-4713-ac42-94dc02bf04da" />
-            <covered>
-              <lifelineMoniker Id="c9b19834-e1bd-4dab-a8df-038730012c2f" LastKnownName="Database" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="6fb213df-615f-4c2f-aa91-219dd72670c1" name="OperandOccurrenceSpecification9">
             <elementDefinition Id="a3c55daf-32a3-4fc8-bf3e-e1749746a396" />
             <covered>
@@ -610,6 +590,12 @@
             <elementDefinition Id="67eb670b-65d9-4763-875f-00a4c1975e02" />
             <covered>
               <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="0f0f8152-beb2-4c37-bf0d-9a12b5796221" name="OperandOccurrenceSpecification11">
+            <elementDefinition Id="7b1dc1b5-b985-4713-ac42-94dc02bf04da" />
+            <covered>
+              <lifelineMoniker Id="c9b19834-e1bd-4dab-a8df-038730012c2f" LastKnownName="Database" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="4114c216-4e6d-4a71-9af1-8c6a90050e21" name="BehaviorExecutionSpecification">
@@ -868,16 +854,16 @@
               <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="2fe55c9b-9325-423b-a87f-5568332e8153" name="MessageOccurrenceSpecification">
-            <elementDefinition Id="e6e73586-001b-4f00-adb8-01008add4b6c" />
-            <covered>
-              <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="d38711b1-d8b1-42a1-87db-ae4dab1f2a1a" name="MessageOccurrenceSpecification">
             <elementDefinition Id="f4570499-79d0-455b-b6b9-0b4045c00d91" />
             <covered>
               <lifelineMoniker Id="1ff42834-911d-4b30-a5f5-d981577148e8" LastKnownName="CustomerController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2fe55c9b-9325-423b-a87f-5568332e8153" name="MessageOccurrenceSpecification">
+            <elementDefinition Id="e6e73586-001b-4f00-adb8-01008add4b6c" />
+            <covered>
+              <lifelineMoniker Id="7181d073-fd38-48b7-82a0-052e894c749d" LastKnownName="CustomerCatalog" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4fd57cbf-7cb2-45c9-8858-994b09f4d265" name="MessageOccurrenceSpecification">
@@ -1627,5 +1613,19 @@
   </packagedElements>
   <package Id="8ecf7c9c-6c0c-422f-9b13-41b5f542a1ac" name="LivingSmart">
     <elementDefinition Id="0fbfbeea-a900-45eb-b0e3-a1353bbe4b85" />
+    <profileInstances>
+      <packageHasProfileInstances Id="8f2ba031-4c10-44de-bf17-61d6f3e1357c">
+        <profileInstance Id="1be07251-6ee7-439c-8f48-36034ab1d5f4" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2b469ff4-1097-43e3-a92d-1493f84c72c1">
+        <profileInstance Id="e11ff863-d470-49ca-a9b5-6ead1a3fca74" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>
