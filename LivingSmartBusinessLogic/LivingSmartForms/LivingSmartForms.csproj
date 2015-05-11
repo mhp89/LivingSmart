@@ -44,14 +44,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Classes\SmartColor.cs" />
+    <Compile Include="BaseWindow.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="BaseWindow.Designer.cs">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cases.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Cases.Designer.cs">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Overview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Overview.Designer.cs">
+      <DependentUpon>Overview.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BaseWindow.resx">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Cases.resx">
+      <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Overview.resx">
+      <DependentUpon>Overview.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +95,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SmartControls\SmartControls.csproj">
+      <Project>{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}</Project>
+      <Name>SmartControls</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="DropIns\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
