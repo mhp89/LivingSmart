@@ -43,6 +43,20 @@
       <SubType>Content</SubType>
       <DependentUpon>Partner.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Case.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Case.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Case.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="SellProperty.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SellProperty.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SellProperty.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="EstateAgent.sequencediagram">
       <SubType>Content</SubType>

@@ -56,6 +56,8 @@
     <Compile Include="EstateAgent.cs" />
     <Compile Include="EstateAgentCatalog.cs" />
     <Compile Include="EstateAgentController.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceCatalog.cs" />
     <Compile Include="Neighborhood.cs" />
     <Compile Include="Partner.cs" />
     <Compile Include="PartnerCatalog.cs" />
@@ -66,6 +68,7 @@
     <Compile Include="PropertyType.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="City.cs" />
+    <Compile Include="SellPropertyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
