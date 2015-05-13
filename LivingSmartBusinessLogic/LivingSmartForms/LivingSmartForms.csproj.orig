@@ -107,6 +107,22 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\BaseDropIn.resx">
+      <DependentUpon>BaseDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\BasePage.resx">
+      <DependentUpon>BasePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
+      <DependentUpon>NewCaseDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
+      <DependentUpon>PartnersDropIn.cs</DependentUpon>
+=======
     <Compile Include="Views\CaseLineSimple.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -119,11 +135,9 @@
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
-      <DependentUpon>PartnersDropIn.cs</DependentUpon>
+    <EmbeddedResource Include="BaseWindow.resx">
+      <DependentUpon>BaseWindow.cs</DependentUpon>
+>>>>>>> 49ef1dfae4ba4b073e50306b45ee48e5057eb3a1
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Cases.resx">
       <DependentUpon>Cases.cs</DependentUpon>
@@ -166,8 +180,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Folder Include="Views\" />
+=======
     <Folder Include="Controllers\" />
+    <Folder Include="DropIns\" />
     <Folder Include="Models\" />
+>>>>>>> 49ef1dfae4ba4b073e50306b45ee48e5057eb3a1
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">

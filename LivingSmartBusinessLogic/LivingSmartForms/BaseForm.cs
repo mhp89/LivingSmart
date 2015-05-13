@@ -59,9 +59,7 @@ namespace LivingSmartForms
 				page.PageView = Activator.CreateInstance(page.PageType, this) as BasePage;//Opretter en instance af en klasse udfra en Type
 
 				if (page.PageView == null) continue;
-
-				Console.WriteLine(page.PageView.Width);
-
+				
 				pnlInnerContent.Controls.Add(page.PageView);
 				page.PageView.Dock = DockStyle.Fill;
 
@@ -177,7 +175,6 @@ namespace LivingSmartForms
 			Text = "LivingSmart - " + page.Title;
 			page.Button.Selected = true;
 			page.PageView.BringToFront();
-		    Console.WriteLine(page.PageView.Width);
 			page.PageView.Visible = true;
 			page.PageView.OnShow();
 			activePage = page;
