@@ -107,18 +107,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Classes\BaseDropIn.resx">
-      <DependentUpon>BaseDropIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Classes\BasePage.resx">
-      <DependentUpon>BasePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
-      <DependentUpon>NewCaseDropIn.cs</DependentUpon>
-    </EmbeddedResource>
+    <Compile Include="Views\CaseLineSimple.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CaseLineSimple.Designer.cs">
+      <DependentUpon>CaseLineSimple.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerLine.Designer.cs">
+      <DependentUpon>CustomerLine.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
       <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -137,6 +137,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\CaseLineSimple.resx">
+      <DependentUpon>CaseLineSimple.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerLine.resx">
+      <DependentUpon>CustomerLine.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -157,6 +163,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="DropIns\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
