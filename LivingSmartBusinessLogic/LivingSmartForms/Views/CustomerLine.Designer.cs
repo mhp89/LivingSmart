@@ -35,9 +35,9 @@
             this.slbCustomerNo = new SmartControls.SmartLabel();
             this.slbCustomerBirthday = new SmartControls.SmartLabel();
             this.slbCustomerAddress = new SmartControls.SmartLabel();
-            this.slbZipcode = new SmartControls.SmartLabel();
-            this.slbPhone = new SmartControls.SmartLabel();
-            this.slbEmail = new SmartControls.SmartLabel();
+            this.slbCustomerZipcode = new SmartControls.SmartLabel();
+            this.slbCustomerPhone = new SmartControls.SmartLabel();
+            this.slbCustomerEmail = new SmartControls.SmartLabel();
             this.tlpCustomer.SuspendLayout();
             this.pnlEditCustomer.SuspendLayout();
             this.SuspendLayout();
@@ -55,9 +55,9 @@
             this.tlpCustomer.Controls.Add(this.slbCustomerNo, 0, 0);
             this.tlpCustomer.Controls.Add(this.slbCustomerBirthday, 1, 1);
             this.tlpCustomer.Controls.Add(this.slbCustomerAddress, 2, 0);
-            this.tlpCustomer.Controls.Add(this.slbZipcode, 2, 1);
-            this.tlpCustomer.Controls.Add(this.slbPhone, 3, 0);
-            this.tlpCustomer.Controls.Add(this.slbEmail, 3, 1);
+            this.tlpCustomer.Controls.Add(this.slbCustomerZipcode, 2, 1);
+            this.tlpCustomer.Controls.Add(this.slbCustomerPhone, 3, 0);
+            this.tlpCustomer.Controls.Add(this.slbCustomerEmail, 3, 1);
             this.tlpCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tlpCustomer.Location = new System.Drawing.Point(0, 0);
             this.tlpCustomer.Name = "tlpCustomer";
@@ -139,44 +139,44 @@
             this.slbCustomerAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.slbCustomerAddress.Title = "Adresse:";
             // 
-            // slbZipcode
+            // slbCustomerZipcode
             // 
-            this.slbZipcode.AutoSize = true;
-            this.slbZipcode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbZipcode.Location = new System.Drawing.Point(321, 30);
-            this.slbZipcode.Margin = new System.Windows.Forms.Padding(0);
-            this.slbZipcode.Name = "slbZipcode";
-            this.slbZipcode.Size = new System.Drawing.Size(223, 30);
-            this.slbZipcode.TabIndex = 6;
-            this.slbZipcode.Text = "xxxx by";
-            this.slbZipcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbZipcode.Title = "Postnr og by:";
+            this.slbCustomerZipcode.AutoSize = true;
+            this.slbCustomerZipcode.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slbCustomerZipcode.Location = new System.Drawing.Point(321, 30);
+            this.slbCustomerZipcode.Margin = new System.Windows.Forms.Padding(0);
+            this.slbCustomerZipcode.Name = "slbCustomerZipcode";
+            this.slbCustomerZipcode.Size = new System.Drawing.Size(223, 30);
+            this.slbCustomerZipcode.TabIndex = 6;
+            this.slbCustomerZipcode.Text = "xxxx by";
+            this.slbCustomerZipcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slbCustomerZipcode.Title = "Postnr og by:";
             // 
-            // slbPhone
+            // slbCustomerPhone
             // 
-            this.slbPhone.AutoSize = true;
-            this.slbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPhone.Location = new System.Drawing.Point(544, 0);
-            this.slbPhone.Margin = new System.Windows.Forms.Padding(0);
-            this.slbPhone.Name = "slbPhone";
-            this.slbPhone.Size = new System.Drawing.Size(167, 30);
-            this.slbPhone.TabIndex = 7;
-            this.slbPhone.Text = "xxxx xxxx";
-            this.slbPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbPhone.Title = "Telefon:";
+            this.slbCustomerPhone.AutoSize = true;
+            this.slbCustomerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slbCustomerPhone.Location = new System.Drawing.Point(544, 0);
+            this.slbCustomerPhone.Margin = new System.Windows.Forms.Padding(0);
+            this.slbCustomerPhone.Name = "slbCustomerPhone";
+            this.slbCustomerPhone.Size = new System.Drawing.Size(167, 30);
+            this.slbCustomerPhone.TabIndex = 7;
+            this.slbCustomerPhone.Text = "xxxx xxxx";
+            this.slbCustomerPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slbCustomerPhone.Title = "Telefon:";
             // 
-            // slbEmail
+            // slbCustomerEmail
             // 
-            this.slbEmail.AutoSize = true;
-            this.slbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbEmail.Location = new System.Drawing.Point(544, 30);
-            this.slbEmail.Margin = new System.Windows.Forms.Padding(0);
-            this.slbEmail.Name = "slbEmail";
-            this.slbEmail.Size = new System.Drawing.Size(167, 30);
-            this.slbEmail.TabIndex = 8;
-            this.slbEmail.Text = "xx@xxx.xx";
-            this.slbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbEmail.Title = "Email:";
+            this.slbCustomerEmail.AutoSize = true;
+            this.slbCustomerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slbCustomerEmail.Location = new System.Drawing.Point(544, 30);
+            this.slbCustomerEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.slbCustomerEmail.Name = "slbCustomerEmail";
+            this.slbCustomerEmail.Size = new System.Drawing.Size(167, 30);
+            this.slbCustomerEmail.TabIndex = 8;
+            this.slbCustomerEmail.Text = "xx@xxx.xx";
+            this.slbCustomerEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slbCustomerEmail.Title = "Email:";
             // 
             // CustomerLine
             // 
@@ -201,8 +201,8 @@
         private SmartControls.SmartLabel slbCustomerNo;
         private SmartControls.SmartLabel slbCustomerBirthday;
         private SmartControls.SmartLabel slbCustomerAddress;
-        private SmartControls.SmartLabel slbZipcode;
-        private SmartControls.SmartLabel slbPhone;
-        private SmartControls.SmartLabel slbEmail;
+        private SmartControls.SmartLabel slbCustomerZipcode;
+        private SmartControls.SmartLabel slbCustomerPhone;
+        private SmartControls.SmartLabel slbCustomerEmail;
     }
 }
