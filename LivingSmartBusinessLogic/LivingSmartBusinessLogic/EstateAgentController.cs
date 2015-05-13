@@ -7,5 +7,25 @@ namespace LivingSmartBusinessLogic
 {
     public class EstateAgentController
     {
+        private EstateAgentCatalog estateAgentCatalog;
+        public void AddEstateAgent(EstateAgent estateAgent)
+        {
+            estateAgentCatalog.AddToCatalog(estateAgent);
+        }
+
+        public EstateAgent MakeNewEstateAgent()
+        {
+            return new EstateAgent();
+        }
+
+        public EstateAgent ReadEstateAgent(int id)
+        {
+            return estateAgentCatalog.Check(id);
+        }
+
+        public void UpdateEstateAgent(EstateAgent estateAgent)
+        {
+            estateAgentCatalog.Save(estateAgent);
+        }
     }
 }

@@ -111,7 +111,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Partner">
-    <Position X="11.5" Y="9.25" Width="1.5" />
+    <Position X="11" Y="10" Width="1.5" />
     <Compartments>
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
@@ -171,72 +171,72 @@
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.CaseCatalog">
-    <Position X="11.25" Y="3.25" Width="1.5" />
+    <Position X="11.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIgAAAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>CaseCatalog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.PartnerCatalog">
-    <Position X="11.75" Y="4.75" Width="1.5" />
+    <Position X="12.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA=</HashCode>
+      <HashCode>AAAAAIgAAAAAAAAAQAAAAAAAAAAAAAAAAAABAAAACAA=</HashCode>
       <FileName>PartnerCatalog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.EstateAgentCatalog">
-    <Position X="13.25" Y="6" Width="1.5" />
+    <Position X="13.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>EstateAgentCatalog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.CustomerCatalog">
-    <Position X="11" Y="6.25" Width="1.5" />
+    <Position X="11.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIgBAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>CustomerCatalog.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.AppointmentCatalog">
-    <Position X="13.25" Y="3.5" Width="1.5" />
+    <Position X="13.75" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAIgAAAAAAAAAQABAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>AppointmentCatalog.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.CaseController">
-    <Position X="16.75" Y="5" Width="1.5" />
+  <Class Name="LivingSmartBusinessLogic.CaseController" Collapsed="true">
+    <Position X="16.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAIAAAgAAAAAAABAAAACAAAAA=</HashCode>
       <FileName>CaseController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.AppointmentController">
+  <Class Name="LivingSmartBusinessLogic.AppointmentController" Collapsed="true">
     <Position X="18" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIEAAAAAAAAAAAAAAAAAAAAAAAAAFAAAAgAAAAAAAA=</HashCode>
       <FileName>AppointmentController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.EstateAgentController">
+  <Class Name="LivingSmartBusinessLogic.EstateAgentController" Collapsed="true">
     <Position X="17.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAQAAAAAAACAAACAAAAgAAAA=</HashCode>
       <FileName>EstateAgentController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.PartnerController">
-    <Position X="16.25" Y="6.5" Width="1.5" />
+  <Class Name="LivingSmartBusinessLogic.PartnerController" Collapsed="true">
+    <Position X="16" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>ACAAAgAAAAAAAAAAAAAIAAAABAEAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PartnerController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.CustomerController">
+  <Class Name="LivingSmartBusinessLogic.CustomerController" Collapsed="true">
     <Position X="15.75" Y="8" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAACAQAAAAAAAAAgAAAAE=</HashCode>
       <FileName>CustomerController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -250,14 +250,14 @@
   <Class Name="LivingSmartBusinessLogic.Invoice">
     <Position X="14.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAAAACAAIAA=</HashCode>
       <FileName>Invoice.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.InvoiceCatalog">
-    <Position X="18.25" Y="9.75" Width="1.5" />
+    <Position X="18.5" Y="10.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAIgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
       <FileName>InvoiceCatalog.cs</FileName>
     </TypeIdentifier>
   </Class>

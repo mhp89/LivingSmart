@@ -56,9 +56,12 @@
     <Compile Include="EstateAgent.cs" />
     <Compile Include="EstateAgentCatalog.cs" />
     <Compile Include="EstateAgentController.cs" />
+    <Compile Include="IModel.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="InvoiceCatalog.cs" />
+    <Compile Include="ISubject.cs" />
     <Compile Include="Neighborhood.cs" />
+    <Compile Include="IObserver.cs" />
     <Compile Include="Partner.cs" />
     <Compile Include="PartnerCatalog.cs" />
     <Compile Include="PartnerController.cs" />

@@ -121,14 +121,14 @@
               <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="e748604b-343c-4ca6-8e1a-c584af4d18a6" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="51a91aec-ed50-4888-ae6a-bd2324a79278" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="c98b1698-9335-444a-9667-c424e9f2e135" LastKnownName="CustomerController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="e748604b-343c-4ca6-8e1a-c584af4d18a6" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="17742368-64dd-4caa-a970-2892e40aeed5" name="MessageOccurrenceSpecification">
@@ -273,14 +273,14 @@
               <lifelineMoniker Id="5b22c2a7-4af8-4f04-8b2e-c8919a6aae89" LastKnownName="Database" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="5229301e-d233-4d5a-a8c5-05700160d03e" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="5b22c2a7-4af8-4f04-8b2e-c8919a6aae89" LastKnownName="Database" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="418f3f51-c55c-4cc4-90da-ef09f06c10bc" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5229301e-d233-4d5a-a8c5-05700160d03e" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="5b22c2a7-4af8-4f04-8b2e-c8919a6aae89" LastKnownName="Database" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="33af6606-1df6-476f-a753-e56f803c49fb" name="MessageOccurrenceSpecification">
@@ -513,11 +513,6 @@
               </interactionOperand>
             </operands>
           </combinedFragment>
-          <operandOccurrenceSpecification Id="22ca7e24-37a0-4541-a222-ffc5237567a2" name="OperandOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="b8b6a2c1-25e2-440f-ba01-b52f76e14533" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="5b22c2a7-4af8-4f04-8b2e-c8919a6aae89" LastKnownName="Database" />
@@ -526,6 +521,11 @@
           <operandOccurrenceSpecification Id="e1cd9e97-71be-4170-be50-3a2d0c5ed0ee" name="OperandOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="22ca7e24-37a0-4541-a222-ffc5237567a2" name="OperandOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="4178f37e-3ebd-4f63-9f9f-69ee7e446b2e" name="BehaviorExecutionSpecification">
@@ -755,14 +755,14 @@
               <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="6d70b7e1-496d-4ff0-b9fc-ff85df1b1f49" name="MessageOccurrenceSpecification">
-            <covered>
-              <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="00df6510-d993-44f8-95da-9319f69fdad4" name="MessageOccurrenceSpecification">
             <covered>
               <lifelineMoniker Id="c98b1698-9335-444a-9667-c424e9f2e135" LastKnownName="CustomerController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="6d70b7e1-496d-4ff0-b9fc-ff85df1b1f49" name="MessageOccurrenceSpecification">
+            <covered>
+              <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="de4d08ac-0a92-4181-9437-a7db7f1a65de" name="MessageOccurrenceSpecification">
@@ -805,15 +805,15 @@
           </messageOccurrenceSpecification>
           <combinedFragment Id="6faefc83-c880-4f8c-b8d9-cb5ca7342485" name="CombinedFragment3" interactionOperator="Alt" customInteractionOperator="if customer not in catalog">
             <coveredLifelines>
-              <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
               <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
+              <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
               <lifelineMoniker Id="5b22c2a7-4af8-4f04-8b2e-c8919a6aae89" LastKnownName="Database" />
             </coveredLifelines>
             <operands>
               <interactionOperand Id="29cfdbc0-d4c7-4a04-af67-1b9c85c9cb88" name="InteractionOperand1">
                 <coveredLifelines>
-                  <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
                   <lifelineMoniker Id="648ea996-a81b-452f-bcea-781984c4f4b7" LastKnownName="CustomerCatalog" />
+                  <lifelineMoniker Id="f50ebb45-34fe-4f48-b980-6ee08c5ca743" LastKnownName="DatabaseConnector" />
                   <lifelineMoniker Id="5b22c2a7-4af8-4f04-8b2e-c8919a6aae89" LastKnownName="Database" />
                 </coveredLifelines>
                 <guard>
