@@ -34,10 +34,11 @@ namespace LivingSmartForms.Pages
 			// 
 			// meter2
 			// 
+			this.meter2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.meter2.CircleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.meter2.CirclePoints = 3;
 			this.meter2.CircleSize = 175;
-			this.meter2.Location = new System.Drawing.Point(260, 20);
+			this.meter2.Location = new System.Drawing.Point(915, 20);
 			this.meter2.Margin = new System.Windows.Forms.Padding(20);
 			this.meter2.MaxValue = 60;
 			this.meter2.MinValue = 0;
@@ -46,7 +47,7 @@ namespace LivingSmartForms.Pages
 			this.meter2.Size = new System.Drawing.Size(200, 100);
 			this.meter2.TabIndex = 1;
 			this.meter2.Text = "meter2";
-			this.meter2.Value = 33;
+			this.meter2.Value = 16;
 			// 
 			// meter1
 			// 
@@ -62,12 +63,11 @@ namespace LivingSmartForms.Pages
 			this.meter1.Size = new System.Drawing.Size(200, 100);
 			this.meter1.TabIndex = 0;
 			this.meter1.Text = "meter1";
-			this.meter1.Value = 33;
+			this.meter1.Value = 16;
 			// 
 			// Overview
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.meter2);
 			this.Controls.Add(this.meter1);
 			this.Name = "Overview";

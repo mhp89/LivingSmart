@@ -1,20 +1,22 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartControls
 {
+	/// <summary>
+	/// En udvidet version af Label, der også indeholder en titel
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class SmartLabel : Label
 	{
 		#region Title
 
-		private string _title;
+		private string _title = "Title";
+		/// <summary>
+		/// Titlen for SmartLabel
+		/// </summary>
 		[Category("Appearance")]
 		public string Title
 		{
@@ -22,78 +24,201 @@ namespace SmartControls
 			set
 			{
 				_title = value;
-				Size = GetPreferredSize(new Size(0, 0));
-				Invalidate();
+				UpdateAutosize();
+			}
+		}
+
+		private Font _titleFont = new Font(new FontFamily("Segoe UI"), 9.75f, FontStyle.Bold);
+		/// <summary>
+		/// Font'en der bruges til titlen
+		/// </summary>
+		[Category("Appearance")]
+		public Font TitleFont
+		{
+			get { return _titleFont; }
+			set
+			{
+				_titleFont = value;
+				UpdateAutosize();
 			}
 		}
 
 		#endregion
 
 		#region Text
-		//Keyword new gør at denne variabler overskrive en eksisterende variabel 
-		//af samme navn fra Control klassen 
+		/// <summary>
+		/// Teksten for SmartLabel
+		/// </summary>
 		public new String Text
 		{
 			get { return base.Text; }
 			set
 			{
 				base.Text = value;
-				Size = GetPreferredSize(new Size(0, 0));
-				Invalidate();
+				UpdateAutosize();
 			}
 		}
+
+		private Font _font = new Font(new FontFamily("Segoe UI"), 9.75f);
+		public override Font Font
+		{
+			get { return _font; }
+			set
+			{
+				_font = value;
+				UpdateAutosize();
+			}
+		}
+
+		#endregion
+
+		#region Defaults
+		
+		/// <summary>
+		/// Den default margin for SmartLabel
+		/// </summary>
+		protected override Padding DefaultMargin { get { return Padding.Empty; } }
+
 		#endregion
 
 		public SmartLabel()
 		{
 			InitializeComponent();
+			
+			UpdateAutosize();
+		}
 
-			Size = GetPreferredSize(new Size(0, 0));
-
-			Invalidate();
+		private void UpdateAutosize()
+		{
+			//Tilpasser automatisk SmartLabel'ens størrelse efter hvor meget teksterne fylder
+			if (AutoSize)
+			{
+				Size = GetPreferredSize(Size.Empty);
+				Invalidate();
+			}
 		}
 
 		public override Size GetPreferredSize(Size proposedSize)
 		{
-			//Beregner først tekstens størrelse, og retunere derefter den 
-			//endelig størrelse på knappen
+			Graphics gr = CreateGraphics();
 
-			var titleFont = new Font(Font, FontStyle.Bold);
-			var textFont = Font;
+			//Finder relevante flag
+			TextFormatFlags flags = CreateTextFormatFlags(TextAlign);
+
+			//Beregner størrelsen til teksterne
+			var titleSize = TextRenderer.MeasureText(gr, Title, TitleFont, Size.Empty, flags);
+			var textSize = TextRenderer.MeasureText(gr, Text, Font, Size.Empty, flags);
+			//Console.WriteLine("Title ("+Title+"): " + titleSize);
+			//Console.WriteLine("Text: (" + Text + ")" + textSize);
+
+			var height = titleSize.Height;
+			if (textSize.Height > height)
+				height = textSize.Height;
+
+			//Beregner den ønskede størrelsen til hele SmartLabel'en
+			Size preferredSize = new Size(titleSize.Width + textSize.Width, height);
 			
-			var titleSize = TextRenderer.MeasureText(Title, titleFont);
-			var textSize = TextRenderer.MeasureText(Text, textFont);
-
-			Size preferredSize = new Size(titleSize.Width + textSize.Width, titleSize.Height);
-
-			preferredSize.Width += 2;
-
+			//Justere størrelsen i forhold til padding
 			Size requiredSize = preferredSize + Padding.Size;
+
+			//Console.WriteLine("Required Height: " + requiredSize.Height);
+			
 			return requiredSize;
 		}
 
+		/// <summary>
+		/// Tegner SmartLabel'en
+		/// </summary>
+		/// <param name="e"></param>
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			//base.OnPaint(e);
+			//Finder relevante flag
+			TextFormatFlags flags = CreateTextFormatFlags(TextAlign);
 
-			StringFormat style = new StringFormat();
-			style.Alignment = StringAlignment.Near;
-			style.LineAlignment = StringAlignment.Far;
+			//Beregner størrelsen til teksterne
+			var titleSize = TextRenderer.MeasureText(e.Graphics, Title, TitleFont,
+				Size.Empty, flags);
+			var textSize = TextRenderer.MeasureText(e.Graphics, Text, Font,
+				Size.Empty, flags);
+			
+			//Berenger firkanten teksterne skal tegnes i
+			Rectangle titleRectangle = AdjustedRect(
+				new Rectangle(e.ClipRectangle.X, e.ClipRectangle.Y, titleSize.Width,
+					e.ClipRectangle.Height),
+				Padding
+			);
+			Rectangle textRectangle = AdjustedRect(
+				new Rectangle(e.ClipRectangle.X + titleSize.Width, e.ClipRectangle.Y,
+					textSize.Width, e.ClipRectangle.Height),
+				Padding
+			);
 
-			var titleFont = new Font(Font, FontStyle.Bold);
-			var textFont = Font;
+			//Console.WriteLine("Actual Height: "+e.ClipRectangle.Height);
 
-			var titleSize = TextRenderer.MeasureText(Title, titleFont);
-			var textSize = TextRenderer.MeasureText(Text, textFont);
+			//DrawDebug(titleRectangle, textRectangle, e);
 
-			Console.WriteLine(titleSize);
-			Console.WriteLine(textSize);
-			Console.WriteLine(ClientRectangle);
+			//Tegner teksterne
+			TextRenderer.DrawText(e.Graphics, Title, TitleFont, titleRectangle, ForeColor, flags);
+			TextRenderer.DrawText(e.Graphics, Text, Font, textRectangle, ForeColor, flags);
+		}
 
+		private void DrawDebug(Rectangle titleRectangle, Rectangle textRectangle, PaintEventArgs e)
+		{
+			e.Graphics.FillRectangles(Brushes.DeepPink, new[]
+			{
+				new Rectangle(titleRectangle.X, titleRectangle.Y, 3, 3),
+				new Rectangle(titleRectangle.X+titleRectangle.Width-3, titleRectangle.Y, 3, 3),
+				new Rectangle(titleRectangle.X, titleRectangle.Y+titleRectangle.Height-3, 3, 3),
+				new Rectangle(titleRectangle.X+titleRectangle.Width-3, titleRectangle.Y+titleRectangle.Height-3, 3, 3)
+			});
 
-			e.Graphics.DrawString(Title, titleFont, new SolidBrush(ForeColor), new Rectangle(ClientRectangle.X, ClientRectangle.Y, titleSize.Width, titleSize.Height), style);
+			e.Graphics.FillRectangles(Brushes.DeepSkyBlue, new[]
+			{
+				new Rectangle(textRectangle.X, textRectangle.Y, 3, 3),
+				new Rectangle(textRectangle.X+textRectangle.Width-3, textRectangle.Y, 3, 3),
+				new Rectangle(textRectangle.X, textRectangle.Y+textRectangle.Height-3, 3, 3),
+				new Rectangle(textRectangle.X+textRectangle.Width-3, textRectangle.Y+textRectangle.Height-3, 3, 3)
+			});
+		}
 
-			e.Graphics.DrawString(Text, textFont, new SolidBrush(ForeColor), new Rectangle(ClientRectangle.X + titleSize.Width, ClientRectangle.Y, ClientRectangle.Width-titleSize.Width, titleSize.Height), style);
+		/// <summary>
+		/// Justere rectangle i forhold til padding
+		/// </summary>
+		/// <param name="rect">Oprindelig rectangle</param>
+		/// <param name="padding">Padding for hele SmartLabel'en</param>
+		/// <returns>Justeret rectangle</returns>
+		private static Rectangle AdjustedRect(Rectangle rect, Padding padding)
+		{
+			rect.X += padding.Left;
+			rect.Y += padding.Top;
+			rect.Width += padding.Horizontal;
+			rect.Height += padding.Vertical;
+			return rect;
+		}
+
+		/// <summary>
+		/// Finder de rigtige flags ud fra parameterne
+		/// </summary>
+		/// <param name="textAlign">Tekstens placering i SmartLabel'en</param>
+		/// <returns>Relevante flags</returns>
+		private static TextFormatFlags CreateTextFormatFlags(ContentAlignment textAlign)
+		{
+			TextFormatFlags flags = TextFormatFlags.Left;// | TextFormatFlags.NoPadding;
+
+			if (textAlign == ContentAlignment.TopLeft ||
+				textAlign == ContentAlignment.TopCenter ||
+				textAlign == ContentAlignment.TopRight)
+				flags = flags | TextFormatFlags.Top;
+			else if (textAlign == ContentAlignment.MiddleLeft ||
+				textAlign == ContentAlignment.MiddleCenter ||
+				textAlign == ContentAlignment.MiddleRight)
+				flags = flags | TextFormatFlags.VerticalCenter;
+			else if (textAlign == ContentAlignment.BottomLeft ||
+				textAlign == ContentAlignment.BottomCenter ||
+				textAlign == ContentAlignment.BottomRight)
+				flags = flags | TextFormatFlags.Bottom;
+			
+			return flags;
 		}
 	}
 }

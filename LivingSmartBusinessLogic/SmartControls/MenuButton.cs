@@ -26,7 +26,7 @@ namespace SmartControls
 
 		#region Defaults
 		
-		protected override Padding DefaultMargin { get {return new Padding(0);} }
+		protected override Padding DefaultMargin { get {return Padding.Empty;} }
 
 		protected override Size DefaultSize { get {return new Size(125, 30);} }
 
@@ -56,8 +56,7 @@ namespace SmartControls
 			set
 			{
 				base.Text = value;
-				Size = GetPreferredSize(new Size(0, 0));
-				Invalidate();
+				UpdateAutosize();
 			}
 		}
 		#endregion
@@ -71,8 +70,7 @@ namespace SmartControls
 			set
 			{
 				base.Padding = value;
-				base.Size = GetPreferredSize(new Size(0, 0));
-				Invalidate();
+				UpdateAutosize();
 			}
 		}
 		#endregion
@@ -88,21 +86,40 @@ namespace SmartControls
 		{
 			InitializeComponent();
 
+			Cursor = Cursors.Hand;
+
 			MouseEnter += OnMouseEnter;
 			MouseLeave += OnMouseLeave;
-			
-			Size = GetPreferredSize(new Size(0, 0));
+
+			UpdateAutosize();
+		}
+
+		private void UpdateAutosize()
+		{
+			//Tilpasser automatisk knappens størrelse efter hvor meget teksten fylder
+			if (AutoSize)
+			{
+				Size = GetPreferredSize(Size.Empty);
+				Invalidate();
+			}
 		}
 
 		public override Size GetPreferredSize(Size proposedSize)
 		{
-			//Beregner først tekstens størrelse, og retunere derefter den 
-			//endelig størrelse på knappen
-			Graphics g = CreateGraphics();
-			Size preferredSize = g.MeasureString(Text, Font).ToSize();
-			preferredSize.Height = 30;
-			preferredSize.Width++;
+			Graphics gr = CreateGraphics();
+
+			//Finder relevante flag
+			TextFormatFlags flags = CreateTextFormatFlags();
+
+			//Beregner størrelsen til teksten
+			var textMeasured = TextRenderer.MeasureText(gr, Text, Font, Size.Empty, flags);
+
+			//Beregner den ønskede størrelsen til hele knappen
+			Size preferredSize = new Size(textMeasured.Width, 30);
+
+			//Justere størrelsen i forhold til padding
 			Size requiredSize = preferredSize + Padding.Size;
+
 			return requiredSize;
 		}
 
@@ -111,26 +128,51 @@ namespace SmartControls
 
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			base.OnPaint(e);
-
-			StringFormat style = new StringFormat();
-			style.Alignment = StringAlignment.Center;
-			style.LineAlignment = StringAlignment.Center;
-
-
-
-			//Draw background
+			//Tegner baggrunden
 			Color bgColor = (_hovering || Selected) ? SmartColor.Dark : SmartColor.Light;
-			e.Graphics.FillRectangle(new SolidBrush(bgColor), new Rectangle(ClientRectangle.Left, ClientRectangle.Top, ClientRectangle.Width, ClientRectangle.Height));
+			e.Graphics.FillRectangle(new SolidBrush(bgColor), new Rectangle(e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width, e.ClipRectangle.Height));
 
-			//Draw text
-			Rectangle paddedRectangle = new Rectangle(Padding.Left, Padding.Top, ClientRectangle.Width - Padding.Size.Width, ClientRectangle.Height - Padding.Size.Height);
 
+			//Finder relevante flag for teksten
+			TextFormatFlags flags = CreateTextFormatFlags();
 			Color textColor = (_hovering || Selected) ? SmartColor.Light : SmartColor.Dark;
-			e.Graphics.DrawString(Text, Font, new SolidBrush(textColor), paddedRectangle, style);
+			
+			//Berenger firkanten teksten skal tegnes i
+			Rectangle textRectangle = AdjustedRect(new Rectangle(e.ClipRectangle.X, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), Padding);
+			
+			//Tegner teksten
+			TextRenderer.DrawText(e.Graphics, Text, Font, textRectangle, textColor, flags);
 		}
 
 		#endregion
+
+
+		/// <summary>
+		/// Justere rectangle i forhold til padding
+		/// </summary>
+		/// <param name="rect">Oprindelig rectangle</param>
+		/// <param name="padding">Padding for teksten</param>
+		/// <returns>Justeret rectangle</returns>
+		private static Rectangle AdjustedRect(Rectangle rect, Padding padding)
+		{
+			rect.X += padding.Left;
+			rect.Y += padding.Top;
+			rect.Width -= padding.Horizontal;
+			rect.Height -= padding.Vertical;
+			return rect;
+		}
+
+		/// <summary>
+		/// Finder de rigtige flags ud fra parameterne
+		/// </summary>
+		/// <returns>Relevante flags</returns>
+		private static TextFormatFlags CreateTextFormatFlags()
+		{
+			TextFormatFlags flags = TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter;
+
+
+			return flags;
+		}
 
 		#region Event Handler Methods
 	

@@ -7,16 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using LivingSmartForms.Classes;
 
-namespace LivingSmartForms.Pages
+namespace LivingSmartForms.Classes
 {
-	public partial class Overview : BasePage
+	public partial class BaseDropIn : UserControl
 	{
-		public Overview(BaseForm baseForm) : base(baseForm)
+		protected BaseForm baseForm;
+		public BaseDropIn(BaseForm baseForm)
 		{
+			this.baseForm = baseForm;
+			AutoScaleMode = AutoScaleMode.None;
+
 			InitializeComponent();
 		}
-
 	}
 }

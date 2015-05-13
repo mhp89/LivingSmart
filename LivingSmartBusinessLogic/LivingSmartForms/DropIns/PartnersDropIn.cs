@@ -8,20 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartForms.Classes;
-using LivingSmartForms.DropIns;
 
-namespace LivingSmartForms.Pages
+namespace LivingSmartForms.DropIns
 {
-	public partial class Cases : BasePage
+	public partial class PartnersDropIn : BaseDropIn
 	{
-		public Cases(BaseForm baseForm) : base(baseForm)
+		public PartnersDropIn(BaseForm baseForm) : base(baseForm)
 		{
 			InitializeComponent();
-		}
-
-		private void smartButton1_Click(object sender, EventArgs e)
-		{
-			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
 		}
 	}
 }

@@ -16,7 +16,7 @@ namespace LivingSmartForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaseWindow());
+            Application.Run(new BaseForm());
         }
     }
 }
