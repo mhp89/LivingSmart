@@ -23,9 +23,41 @@ namespace LivingSmartBusinessLogic
             return caseCatalog.Check(id);
         }
 
-        public void UpdateCase()
+        public void UpdateCase(Case cCase)
         {
-            throw new System.NotImplementedException();
+            caseCatalog.Save(cCase);
         }
+
+        public void RateProperty()
+        {
+            
+        }
+
+        public void ConnectDocumentToCase(Case cCase, Document document)
+        {
+            cCase.AddDocument(document);
+        }
+
+        public void ConnectPictureToCase(Case cCase, Picture picture)
+        {
+            cCase.AddPicture(picture);
+        }
+
+        public void ConnectAdToCase(Case cCase, Ad ad)
+        {
+            cCase.AddAd(ad);
+        }
+
+        public void ConnectRatingToCase(Case cCase, Rating rating)
+        {
+            cCase.AddRating(rating);
+        }
+
+        public void ConnectAskingPriceToCase(Case cCase, AskingPrice askingPrice)
+        {
+            cCase.AddAskingPrice(askingPrice);
+        }
+
+        public void
     }
 }

@@ -9,6 +9,7 @@ namespace LivingSmartBusinessLogic
     {
         private int id;
 
+
         #region Private Fields
 
         private Customer _seller;
@@ -98,36 +99,41 @@ namespace LivingSmartBusinessLogic
             throw new System.NotImplementedException();
         }
 
-        public void AddDocument()
+        public void AddDocument(Document document)
         {
-            throw new System.NotImplementedException();
+            Documents.Add(document);
         }
 
-        public void AddPicture()
+        public void AddPicture(Picture picture)
         {
-            throw new System.NotImplementedException();
+            Pictures.Add(picture);
         }
 
-        public void AddAd()
+        public void AddAd(Ad ad)
         {
-            throw new System.NotImplementedException();
+            Ads.Add(ad);
         }
 
-        public void AddRating()
+        public void AddRating(Rating rating)
         {
-            throw new System.NotImplementedException();
+            Ratings.Add(rating);
         }
 
-        public void AddAskingPrice()
+        public void AddAskingPrice(AskingPrice askingPrice)
         {
-            throw new System.NotImplementedException();
+            AskingPrices.Add(askingPrice);
         }
 
-        public void Rate()
+        public void AddPotentialBuyer(PotentialBuyer potentialBuyer)
         {
-            throw new System.NotImplementedException();
+            PotentialBuyers.Add(potentialBuyer);
         }
 
+        public void AddDistanceTo(DistanceTo distanceTo)
+        {
+            DistanceTos.Add(distanceTo);
+        }
+        
         #endregion
 
     }
