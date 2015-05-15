@@ -8,8 +8,7 @@ namespace LivingSmartBusinessLogic
     public class Case
     {
         private int id;
-
-
+        
         #region Private Fields
 
         private Customer _seller;

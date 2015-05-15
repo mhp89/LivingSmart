@@ -15,6 +15,11 @@ namespace LivingSmartBusinessLogic
         private long _eystemValue;
         private DateTime _date;
 
+        public Rating(Case cCase)
+        {
+            throw new NotImplementedException();
+        }
+
         #endregion
 
         #region Properties

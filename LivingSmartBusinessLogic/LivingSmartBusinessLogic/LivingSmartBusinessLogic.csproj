@@ -67,6 +67,7 @@
     <Compile Include="PartnerController.cs" />
     <Compile Include="Picture.cs" />
     <Compile Include="PotentialBuyer.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyType.cs" />
     <Compile Include="Rating.cs" />
