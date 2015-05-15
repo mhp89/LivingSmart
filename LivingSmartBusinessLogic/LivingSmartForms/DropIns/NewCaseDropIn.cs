@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartForms.Classes;
+using SmartControls;
 
 namespace LivingSmartForms.DropIns
 {
@@ -20,7 +21,17 @@ namespace LivingSmartForms.DropIns
 
 		private void smartButton1_Click(object sender, EventArgs e)
 		{
-			Console.WriteLine(baseForm.pnlDropInHolder.Location);
+			stepIndicator.CurrentStep++;
+		}
+
+		private void smartButton2_Click(object sender, EventArgs e)
+		{
+			stepIndicator.CurrentStep--;
+		}
+
+		private void smartButton3_Click(object sender, EventArgs e)
+		{
+			stepIndicator.CurrentStep++;
 		}
 	}
 }

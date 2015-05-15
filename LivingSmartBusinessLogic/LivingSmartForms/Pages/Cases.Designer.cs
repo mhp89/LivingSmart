@@ -52,7 +52,7 @@ namespace LivingSmartForms.Pages
 			// 
 			this.smartButton1.AutoSize = true;
 			this.smartButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.smartButton1.Color = SmartControls.MenuButton.ColorStyle.Light;
+			this.smartButton1.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.smartButton1.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.smartButton1.FlatAppearance.BorderSize = 0;
 			this.smartButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));

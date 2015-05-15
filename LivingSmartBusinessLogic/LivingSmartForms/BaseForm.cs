@@ -136,14 +136,14 @@ namespace LivingSmartForms
 			{
 				btn.Text = ">";
 				var view = new PartnersDropIn(this);
+				//F�r view'et til at fylde hele holderen
+				view.Dock = DockStyle.Fill;
 				pnlPartnersHolder.Controls.Add(view);
 				//pnlPartnersHolder.BringToFront();
 
 				/*//Flytter holderen s� den sidder i h�jre side
 				pnlPartnersHolder.Location = new Point(Width - pnlPartnersHolder.Width, pnlPartnersHolder.Top);*/
 
-				//F�r view'et til at fylde hele holderen
-				view.Dock = DockStyle.Fill;
 			}
 			else
 			{
@@ -235,7 +235,7 @@ namespace LivingSmartForms
 
 		private void BaseForm_Load(object sender, EventArgs e)
 		{
-			SetSelectedPage(PagesIndex.Overview);
+			SetSelectedPage(PagesIndex.Cases);
 
 			pnlDropInHolder.BringToFront();
 		}

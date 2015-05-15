@@ -141,7 +141,7 @@ namespace SmartControls
 			var textSize = TextRenderer.MeasureText(e.Graphics, Text, Font,
 				Size.Empty, flags);
 			
-			//Berenger firkanten teksterne skal tegnes i
+			//Beregner firkanten teksterne skal tegnes i
 			Rectangle titleRectangle = AdjustedRect(
 				new Rectangle(e.ClipRectangle.X, e.ClipRectangle.Y, titleSize.Width,
 					e.ClipRectangle.Height),

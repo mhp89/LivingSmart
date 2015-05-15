@@ -11,9 +11,9 @@ namespace SmartControls
 {
 	public class SmartButton : Button
 	{
-		private MenuButton.ColorStyle _color;
+		private SmartColor.ColorStyle _color;
 		[Category("Appearance")]
-		public MenuButton.ColorStyle Color
+		public SmartColor.ColorStyle Color
 		{
 			get { return _color; }
 			set
@@ -49,23 +49,30 @@ namespace SmartControls
 			MouseLeave += OnMouseLeave;
 		}
 
+		public override Size GetPreferredSize(Size proposedSize)
+		{
+			var baseSize = base.GetPreferredSize(proposedSize);
+			baseSize.Height = 30;
+			return baseSize;
+		}
+
 		private void UpdateColor()
 		{
-			ForeColor = (Color == MenuButton.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
-			BackColor = (Color == MenuButton.ColorStyle.Light) ? SmartColor.Light : SmartColor.Dark;
-			FlatAppearance.MouseOverBackColor = FlatAppearance.MouseDownBackColor = (Color == MenuButton.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
+			ForeColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
+			BackColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Light : SmartColor.Dark;
+			FlatAppearance.MouseOverBackColor = FlatAppearance.MouseDownBackColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
 		}
 
 		#region Event Handler Methods
 
 		private void OnMouseEnter(object sender, EventArgs eventArgs)
 		{
-			ForeColor = (Color == MenuButton.ColorStyle.Light) ? SmartColor.Light : SmartColor.Dark;
+			ForeColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Light : SmartColor.Dark;
 			Invalidate();//Gør at knappen bliver tegnet på ny
 		}
 		private void OnMouseLeave(object sender, EventArgs eventArgs)
 		{
-			ForeColor = (Color == MenuButton.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
+			ForeColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
 			Invalidate();//Gør at knappen bliver tegnet på ny
 		}
 

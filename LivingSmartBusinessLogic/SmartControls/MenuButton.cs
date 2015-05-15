@@ -75,13 +75,7 @@ namespace SmartControls
 		}
 		#endregion
 
-
-		public enum ColorStyle
-		{
-			Light,
-			Dark
-		}
-
+		
 		public MenuButton()
 		{
 			InitializeComponent();

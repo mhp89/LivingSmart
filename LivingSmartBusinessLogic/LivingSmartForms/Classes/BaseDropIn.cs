@@ -20,5 +20,7 @@ namespace LivingSmartForms.Classes
 
 			InitializeComponent();
 		}
+
+		private BaseDropIn() { }
 	}
 }

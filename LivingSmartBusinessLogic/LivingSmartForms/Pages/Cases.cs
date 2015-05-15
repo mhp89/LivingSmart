@@ -23,5 +23,10 @@ namespace LivingSmartForms.Pages
 		{
 			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
 		}
+
+		public override void OnShow()
+		{
+			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
+		}
 	}
 }
