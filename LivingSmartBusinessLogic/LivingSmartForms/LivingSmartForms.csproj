@@ -107,6 +107,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Views\EmployeeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeLine.Designer.cs">
+      <DependentUpon>EmployeeLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CaseLineSimple.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -118,6 +124,12 @@
     </Compile>
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerLine.Designer.cs">
+      <DependentUpon>PartnerLine.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
@@ -140,11 +152,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\EmployeeLine.resx">
+      <DependentUpon>EmployeeLine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CaseLineSimple.resx">
       <DependentUpon>CaseLineSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerLine.resx">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartnerLine.resx">
+      <DependentUpon>PartnerLine.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
