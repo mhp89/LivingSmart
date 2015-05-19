@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LivingSmartForms.Views
+namespace LivingSmartForms.UserControls
 {
-    public partial class NewCaseStepLot : UserControl
-    {
-        public NewCaseStepLot()
-        {
-            InitializeComponent();
-        }
-    }
+	public partial class DistanceField : UserControl
+	{
+		public DistanceField()
+		{
+			InitializeComponent();
+		}
+	}
 }
