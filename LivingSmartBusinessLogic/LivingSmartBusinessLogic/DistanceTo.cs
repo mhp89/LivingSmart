@@ -23,6 +23,13 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        public DistanceTo(int id, string type, int distance)
+        {
+            this.id = id;
+            _type = type;
+            _distance = distance;
+        }
+
         #region Methods
 
         #endregion

@@ -8,7 +8,12 @@ namespace LivingSmartBusinessLogic
     public class CaseCatalog
     {
         private List<Case> cases;
-        
+
+        public CaseCatalog()
+        {
+            cases = new List<Case>();
+        }
+
         public Case Check(int id)
         {
             throw new System.NotImplementedException();

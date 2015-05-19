@@ -8,6 +8,12 @@ namespace LivingSmartBusinessLogic
     public class PartnerController
     {
         private PartnerCatalog partnerCatalog;
+
+        public PartnerController()
+        {
+            partnerCatalog = new PartnerCatalog();
+        }
+
         public void AddPartner(Partner partner)
         {
             partnerCatalog.AddToCatalog(partner);

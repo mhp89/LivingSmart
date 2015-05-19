@@ -32,6 +32,22 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        public Customer()
+        {
+            
+        }
+
+        public Customer(int id, string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
+        {
+            this.id = id;
+            _name = name;
+            _dateOfBirth = dateOfBirth;
+            _address = address;
+            _zipCode = zipCode;
+            _email = email;
+            _telephone = telephone;
+        }
+
         #region Methods
 
         #endregion

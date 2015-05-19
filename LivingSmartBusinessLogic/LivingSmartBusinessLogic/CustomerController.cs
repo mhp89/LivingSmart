@@ -8,6 +8,12 @@ namespace LivingSmartBusinessLogic
     public class CustomerController
     {
         private CustomerCatalog customerCatalog;
+
+        public CustomerController()
+        {
+            customerCatalog = new CustomerCatalog();
+        }
+
         public void AddCustomer(Customer customer)
         {
             customerCatalog.AddToCatalog(customer);

@@ -33,6 +33,22 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        public Partner()
+        {
+            
+        }
+        public Partner(int id, string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
+        {
+            this.id = id;
+            _name = name;
+            _telephone = telephone;
+            _email = email;
+            _city = city;
+            _region = region;
+            _regionShort = regionShort;
+            _timezone = timeZone;
+        }
+
         #region Methods
 
         #endregion

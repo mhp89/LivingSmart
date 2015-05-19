@@ -9,6 +9,11 @@ namespace LivingSmartBusinessLogic
     {
         private System.Collections.Generic.List<LivingSmartBusinessLogic.Customer> customers;
 
+        public CustomerCatalog()
+        {
+            customers = new List<Customer>();
+        }
+
         public Customer Check(int id)
         {
             throw new System.NotImplementedException();

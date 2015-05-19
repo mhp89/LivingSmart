@@ -12,16 +12,23 @@ namespace LivingSmartBusinessLogic
         #region Private Fields
 
         private string _location;
-        private string _desription;
+        private string _description;
 
         #endregion
 
         #region Properties
 
         public string Location { get { return _location; } set { _location = value; } }
-        public string Desription { get { return _desription; } set { _desription = value; } }
+        public string Desription { get { return _description; } set { _description = value; } }
 
         #endregion
+
+        public Picture(int id, string location, string description)
+        {
+            this.id = id;
+            _location = location;
+            _description = description;
+        }
 
         #region Methods
 

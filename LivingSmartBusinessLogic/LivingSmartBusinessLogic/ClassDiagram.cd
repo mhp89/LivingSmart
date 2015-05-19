@@ -6,7 +6,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>wEbAQADEABIkAAgeBgAYKgQOHUgNQwQSCSBjAFRGzgA=</HashCode>
+      <HashCode>wEbAQADEADIkAAgeBgAYKgQOHUgNQwQSCSBjAFRGzgA=</HashCode>
       <FileName>Case.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -33,7 +33,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EAOAAAAAAAAiAIAEABACAAAAAAAAAAAAAEAAAQAAAgA=</HashCode>
+      <HashCode>EAOAAAAAAAAiAAAEABACAACAAAAAAAAAAEAAAQAAAgA=</HashCode>
       <FileName>Appointment.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -156,11 +156,11 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAIAAAACAAAAAAAAQAAAQAQAAAAAAAAIAIAIQEAgE=</HashCode>
+      <HashCode>AAAAIAAAACAAAAAAAARAAAQAAAAAAAAAAIAIAIQEAgE=</HashCode>
       <FileName>EstateAgent.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Field Name="Appointments" />
+      <Field Name="appointments" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="LivingSmartBusinessLogic.City">
@@ -208,7 +208,7 @@
   <Class Name="LivingSmartBusinessLogic.CaseController" Collapsed="true">
     <Position X="16.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAAAAAAAAAAAAIAAAgAAAAAAABAAAACAAAAA=</HashCode>
+      <HashCode>AAAAUIAAAAAQGAAAAAAAIBAAgICIgAAABAAAIKAAQBE=</HashCode>
       <FileName>CaseController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -247,11 +247,11 @@
       <FileName>SellPropertyController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.Invoice">
+  <Class Name="LivingSmartBusinessLogic.InvoiceController">
     <Position X="14.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAABAAEAAAAAACAAIAA=</HashCode>
-      <FileName>Invoice.cs</FileName>
+      <FileName>InvoiceController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.InvoiceCatalog">

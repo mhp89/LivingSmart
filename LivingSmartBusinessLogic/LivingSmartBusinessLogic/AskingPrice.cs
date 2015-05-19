@@ -23,6 +23,18 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        public AskingPrice()
+        {
+            
+        }
+
+        public AskingPrice(int id, long value, DateTime date)
+        {
+            this.id = id;
+            _value = value;
+            _date = date;
+        }
+
         #region Methods
 
         #endregion

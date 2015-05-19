@@ -9,6 +9,11 @@ namespace LivingSmartBusinessLogic
     {
         private System.Collections.Generic.List<LivingSmartBusinessLogic.EstateAgent> estateAgents;
 
+        public EstateAgentCatalog()
+        {
+            estateAgents = new List<EstateAgent>();
+        }
+
         public EstateAgent Check(int id)
         {
             throw new System.NotImplementedException();

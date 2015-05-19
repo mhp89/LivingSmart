@@ -31,9 +31,25 @@ namespace LivingSmartBusinessLogic
 
         #region Collections
 
-        private List<Appointment> Appointments;
+        private List<Appointment> appointments;
 
         #endregion
+
+        public EstateAgent()
+        {
+            
+        }
+        public EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        {
+            appointments = new List<Appointment>();
+            this.id = id;
+            _name = name;
+            _telephone = telephone;
+            _email = email;
+            _startingDate = startingDate;
+            _terminationDate = terminationDate;
+
+        }
 
         #region Methods
 

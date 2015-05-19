@@ -8,6 +8,12 @@ namespace LivingSmartBusinessLogic
     public class AppointmentController
     {
         private AppointmentCatalog appointmentCatalog;
+
+        public AppointmentController()
+        {
+            appointmentCatalog = new AppointmentCatalog();
+        }
+
         public Appointment MakeNewAppointment()
         {
             return new Appointment();

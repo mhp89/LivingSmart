@@ -8,6 +8,11 @@ namespace LivingSmartBusinessLogic
     public class CaseController
     {
         private CaseCatalog caseCatalog;
+
+        public CaseController()
+        {
+            caseCatalog = new CaseCatalog();
+        }
         /// <summary>
         /// Tilføjer en case til casecatalog
         /// </summary>

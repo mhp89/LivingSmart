@@ -31,6 +31,20 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        public Ad()
+        {
+            
+        }
+
+        public Ad(int id, string type, DateTime startDate, DateTime endDate, int price)
+        {
+            this.id = id;
+            _type = type;
+            _startDate = startDate;
+            _endDate = endDate;
+            _price = price;
+        }
+
         #region Methods
 
         #endregion

@@ -16,7 +16,7 @@ namespace LivingSmartBusinessLogic
         private int _duration;
         private string _description;
         private string _place;
-        private Customer _customer;
+        private Customer _potBuyer;
 
         #endregion
 
@@ -27,10 +27,26 @@ namespace LivingSmartBusinessLogic
         public int Duration { get { return _duration; } set { _duration = value; } }
         public string Description { get { return _description; } set { _description = value; } }
         public string Place { get { return _place; } set { _place = value; } }
-        public Customer Customer { get { return _customer; } set { _customer = value; } }
+        public Customer Customer { get { return _potBuyer; } set { _potBuyer = value; } }
 
 
         #endregion
+
+        public Appointment()
+        {
+            
+        }
+
+        public Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer potBuyer)
+        {
+            this.id = id;
+            _case = cCase;
+            _timestamp = timeStamp;
+            _duration = duration;
+            _description = description;
+            _place = place;
+            _potBuyer = potBuyer;
+        }
 
         #region Methods
 

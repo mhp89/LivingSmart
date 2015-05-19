@@ -9,6 +9,11 @@ namespace LivingSmartBusinessLogic
     {
         private System.Collections.Generic.List<LivingSmartBusinessLogic.Partner> partners;
 
+        public PartnerCatalog()
+        {
+            partners = new List<Partner>();
+        }
+
         public Partner Check(int id)
         {
             throw new System.NotImplementedException();

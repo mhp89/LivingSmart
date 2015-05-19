@@ -12,7 +12,7 @@ namespace LivingSmartBusinessLogic
         #region Private Fields
 
         private long _estateAgentValue;
-        private long _eystemValue;
+        private long _systemValue;
         private DateTime _date;
 
         public Rating(Case cCase)
@@ -25,10 +25,18 @@ namespace LivingSmartBusinessLogic
         #region Properties
 
         public long EstateAgentValue { get { return _estateAgentValue; } set { _estateAgentValue = value; } }
-        public long SystemValue { get { return _eystemValue; } set { _eystemValue = value; } }
+        public long SystemValue { get { return _systemValue; } set { _systemValue = value; } }
         public DateTime Date { get { return _date; } set { _date = value; } }
 
         #endregion
+
+        public Rating(int id, long estateAgentValue, long systemValue, DateTime date)
+        {
+            this.id = id;
+            _estateAgentValue = estateAgentValue;
+            _systemValue = systemValue;
+            _date = date;
+        }
 
         #region Methods
 

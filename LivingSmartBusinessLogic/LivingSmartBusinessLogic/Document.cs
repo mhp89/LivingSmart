@@ -27,6 +27,15 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        public Document(int id, string type, int price, string location, string status)
+        {
+            this.id = id;
+            _type = type;
+            _price = price;
+            _location = location;
+            _status = status;
+        }
+
         #region Methods
 
         #endregion

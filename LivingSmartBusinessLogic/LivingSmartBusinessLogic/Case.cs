@@ -8,7 +8,7 @@ namespace LivingSmartBusinessLogic
     public class Case
     {
         private int id;
-        
+
         #region Private Fields
 
         private Customer _seller;
@@ -91,6 +91,17 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        internal Case()
+        {
+            Ads = new List<Ad>();
+            PotentialBuyers = new List<PotentialBuyer>();
+            Documents = new List<Document>();
+            Ratings = new List<Rating>();
+            AskingPrices = new List<AskingPrice>();
+            DistanceTos = new List<DistanceTo>();
+            Pictures = new List<Picture>();
+        }
+
         #region Methods
 
         public void CloseCase()
@@ -131,6 +142,14 @@ namespace LivingSmartBusinessLogic
         public void AddDistanceTo(DistanceTo distanceTo)
         {
             DistanceTos.Add(distanceTo);
+        }
+
+        public void PrintAd()
+        {
+            foreach (var ad in Ads)
+            {
+                Console.WriteLine(ad);
+            }
         }
         
         #endregion
