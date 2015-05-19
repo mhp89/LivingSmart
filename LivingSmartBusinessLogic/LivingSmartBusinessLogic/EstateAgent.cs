@@ -21,11 +21,11 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public string Name { get { return _name; } set { _name = value; } }
-        public string Telephone { get { return _telephone; } set { _telephone = value; } }
-        public string Email { get { return _email; } set { _email = value; } }
-        public DateTime StartingDate { get { return _startingDate; } set { _startingDate = value; } }
-        public DateTime TerminationDate { get { return _terminationDate; } set { _terminationDate = value; } }
+        public string Name { get { return _name; } internal set { _name = value; } }
+        public string Telephone { get { return _telephone; } internal set { _telephone = value; } }
+        public string Email { get { return _email; } internal set { _email = value; } }
+        public DateTime StartingDate { get { return _startingDate; } internal set { _startingDate = value; } }
+        public DateTime TerminationDate { get { return _terminationDate; } internal set { _terminationDate = value; } }
 
         #endregion
 

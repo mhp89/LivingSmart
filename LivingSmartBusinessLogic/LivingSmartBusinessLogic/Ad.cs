@@ -20,10 +20,10 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public string Type { get { return _type; } set { _type = value; } }
-        public DateTime StartDate { get { return _startDate; } set { _startDate = value; } }
-        public DateTime EndDate { get { return _endDate; } set { _endDate = value; } }
-        public int Price { get { return _price; } set { _price = value; } }
+        public string Type { get { return _type; } internal set { _type = value; } }
+        public DateTime StartDate { get { return _startDate; } internal set { _startDate = value; } }
+        public DateTime EndDate { get { return _endDate; } internal set { _endDate = value; } }
+        public int Price { get { return _price; } internal set { _price = value; } }
 
         #endregion
 

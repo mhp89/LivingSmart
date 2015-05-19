@@ -22,12 +22,12 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public Case Case { get { return _case; } set { _case = value; } }
-        public DateTime Timestamp { get { return _timestamp; } set { _timestamp = value; } }
-        public int Duration { get { return _duration; } set { _duration = value; } }
-        public string Description { get { return _description; } set { _description = value; } }
-        public string Place { get { return _place; } set { _place = value; } }
-        public Customer Customer { get { return _potBuyer; } set { _potBuyer = value; } }
+        public Case Case { get { return _case; } internal set { _case = value; } }
+        public DateTime Timestamp { get { return _timestamp; } internal set { _timestamp = value; } }
+        public int Duration { get { return _duration; } internal set { _duration = value; } }
+        public string Description { get { return _description; } internal set { _description = value; } }
+        public string Place { get { return _place; } internal set { _place = value; } }
+        public Customer Customer { get { return _potBuyer; } internal set { _potBuyer = value; } }
 
 
         #endregion

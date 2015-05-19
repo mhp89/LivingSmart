@@ -22,12 +22,12 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public string Name { get { return _name; } set { _name = value; } }
-        public DateTime DateOfBirth { get { return _dateOfBirth; } set { _dateOfBirth = value; } }
-        public string Address { get { return _address; } set { _address = value; } }
-        public int ZipCode { get { return _zipCode; } set { _zipCode = value; } }
-        public string Email { get { return _email; } set { _email = value; } }
-        public string Telephone { get { return _telephone; } set { _telephone = value; } }
+        public string Name { get { return _name; } internal set { _name = value; } }
+        public DateTime DateOfBirth { get { return _dateOfBirth; } internal set { _dateOfBirth = value; } }
+        public string Address { get { return _address; } internal set { _address = value; } }
+        public int ZipCode { get { return _zipCode; } internal set { _zipCode = value; } }
+        public string Email { get { return _email; } internal set { _email = value; } }
+        public string Telephone { get { return _telephone; } internal set { _telephone = value; } }
 
 
         #endregion

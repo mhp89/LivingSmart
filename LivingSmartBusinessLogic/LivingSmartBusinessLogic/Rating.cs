@@ -24,9 +24,9 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public long EstateAgentValue { get { return _estateAgentValue; } set { _estateAgentValue = value; } }
-        public long SystemValue { get { return _systemValue; } set { _systemValue = value; } }
-        public DateTime Date { get { return _date; } set { _date = value; } }
+        public long EstateAgentValue { get { return _estateAgentValue; } internal set { _estateAgentValue = value; } }
+        public long SystemValue { get { return _systemValue; } internal set { _systemValue = value; } }
+        public DateTime Date { get { return _date; } internal set { _date = value; } }
 
         #endregion
 

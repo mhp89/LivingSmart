@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,17 @@ namespace TestTest
             {
                 caseController.AddAdToCase(newCase, new Ad());
             }
+
+            ReadOnlyCollection<Ad> ads = newCase.GetAds();
             
 
-            newCase.PrintAd();
+            ads = newCase.GetAds();
+
+            foreach (var ad in ads)
+            {
+                Console.WriteLine(ad.Type);
+            }
+
 
             /*
             #region MyRegion

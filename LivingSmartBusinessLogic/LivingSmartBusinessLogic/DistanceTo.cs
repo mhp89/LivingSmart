@@ -18,8 +18,8 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public string Type { get { return _type; } set { _type = value; } }
-        public int Distance { get { return _distance; } set { _distance = value; } }
+        public string Type { get { return _type; } internal set { _type = value; } }
+        public int Distance { get { return _distance; } internal set { _distance = value; } }
 
         #endregion
 
