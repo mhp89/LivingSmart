@@ -1,0 +1,30 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace LivingSmartBusinessLogic
+{
+    public class AskingPrice
+    {
+        private int id;
+
+        #region Private Fields
+
+        private long _value;
+        private DateTime _date;
+
+        #endregion
+
+        #region Properties
+
+        public long Value { get { return _value; } set { _value = value; } }
+        public DateTime Date { get { return _date; } set { _date = value; } }
+
+        #endregion
+
+        #region Methods
+
+        #endregion
+    }
+}
