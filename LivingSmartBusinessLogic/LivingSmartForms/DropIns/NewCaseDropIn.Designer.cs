@@ -1,4 +1,4 @@
-namespace LivingSmartForms.DropIns
+﻿namespace LivingSmartForms.DropIns
 {
 	partial class NewCaseDropIn
 	{
@@ -215,8 +215,6 @@ namespace LivingSmartForms.DropIns
 		private SmartControls.SmartButton btnPrev;
 		private SmartControls.SmartButton btnNext;
 		private System.Windows.Forms.Panel pnlStepHolder;
-
-
 
 	}
 }
