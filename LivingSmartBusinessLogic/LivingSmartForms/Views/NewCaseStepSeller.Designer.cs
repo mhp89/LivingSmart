@@ -1,4 +1,4 @@
-﻿namespace LivingSmartForms.Views
+namespace LivingSmartForms.Views
 {
     partial class NewCaseStepSeller
     {
@@ -91,7 +91,6 @@
             this.stbEstateAgentName.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbEstateAgentName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbEstateAgentName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbEstateAgentName.ErrorMsg = SmartControls.SmartTextBox.ErrorType.ToShort;
             this.stbEstateAgentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.stbEstateAgentName.Location = new System.Drawing.Point(118, 0);
             this.stbEstateAgentName.Margin = new System.Windows.Forms.Padding(0);
@@ -223,7 +222,6 @@
             this.stbSellerName.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbSellerName.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbSellerName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbSellerName.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
             this.stbSellerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.stbSellerName.Location = new System.Drawing.Point(118, 40);
             this.stbSellerName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -241,7 +239,6 @@
             this.smartTextBox2.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.smartTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.smartTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.smartTextBox2.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
             this.smartTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.smartTextBox2.Location = new System.Drawing.Point(118, 200);
             this.smartTextBox2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -303,7 +300,6 @@
             this.stbSellerAdress.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbSellerAdress.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbSellerAdress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbSellerAdress.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
             this.stbSellerAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.stbSellerAdress.Location = new System.Drawing.Point(118, 80);
             this.stbSellerAdress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -321,7 +317,6 @@
             this.stbSellerPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbSellerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbSellerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbSellerPhone.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
             this.stbSellerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.stbSellerPhone.Location = new System.Drawing.Point(118, 160);
             this.stbSellerPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
@@ -350,7 +345,6 @@
             this.stbSellerZipCode.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbSellerZipCode.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbSellerZipCode.Dock = System.Windows.Forms.DockStyle.Left;
-            this.stbSellerZipCode.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
             this.stbSellerZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.stbSellerZipCode.Location = new System.Drawing.Point(0, 0);
             this.stbSellerZipCode.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
