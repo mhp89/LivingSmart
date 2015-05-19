@@ -41,6 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControlList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlList.Designer.cs">
+      <DependentUpon>ControlList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Header.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MenuButton.cs">
       <SubType>Component</SubType>
     </Compile>

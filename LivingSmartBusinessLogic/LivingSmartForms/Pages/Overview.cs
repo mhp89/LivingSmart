@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartForms.Classes;
+using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
@@ -16,7 +17,18 @@ namespace LivingSmartForms.Pages
 		public Overview(BaseForm baseForm) : base(baseForm)
 		{
 			InitializeComponent();
+
+			for (int i = 0; i < 10; i++)
+			{
+				var control = new CaseLineSimple();
+				control.Margin = Padding.Empty;
+				controlList1.AddControl(control);
+			}
 		}
 
+		public override void OnShow()
+		{
+			base.OnShow();
+		}
 	}
 }

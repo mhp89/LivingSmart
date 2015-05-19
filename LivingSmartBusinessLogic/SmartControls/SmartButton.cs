@@ -40,6 +40,8 @@ namespace SmartControls
 		public SmartButton()
 		{
 			FlatStyle = FlatStyle.Flat;
+			AutoSize = true;
+			AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
 			UpdateColor();
 			FlatAppearance.BorderSize = 0;
@@ -62,7 +64,7 @@ namespace SmartControls
 			BackColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Light : SmartColor.Dark;
 			FlatAppearance.MouseOverBackColor = FlatAppearance.MouseDownBackColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
 		}
-
+		
 		#region Event Handler Methods
 
 		private void OnMouseEnter(object sender, EventArgs eventArgs)

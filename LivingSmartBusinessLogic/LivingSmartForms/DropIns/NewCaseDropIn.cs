@@ -21,7 +21,6 @@ namespace LivingSmartForms.DropIns
 
 		private void smartButton1_Click(object sender, EventArgs e)
 		{
-			stepIndicator.CurrentStep++;
 		}
 
 		private void smartButton2_Click(object sender, EventArgs e)
