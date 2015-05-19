@@ -125,6 +125,18 @@
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewCaseStepLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCaseStepLot.Designer.cs">
+      <DependentUpon>NewCaseStepLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCaseStepProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCaseStepProperty.Designer.cs">
+      <DependentUpon>NewCaseStepProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewCaseStepSeller.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -170,6 +182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerLine.resx">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCaseStepLot.resx">
+      <DependentUpon>NewCaseStepLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCaseStepProperty.resx">
+      <DependentUpon>NewCaseStepProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepSeller.resx">
       <DependentUpon>NewCaseStepSeller.cs</DependentUpon>

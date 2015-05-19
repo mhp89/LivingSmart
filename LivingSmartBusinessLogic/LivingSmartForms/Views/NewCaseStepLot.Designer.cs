@@ -206,7 +206,7 @@
             this.stbLotNumber.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbLotNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbLotNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotNumber.ErrorMsg = SmartControls.SmartTextBox.ErrorType.ToShort;
+            this.stbLotNumber.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
             this.stbLotNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.stbLotNumber.Location = new System.Drawing.Point(153, 0);
             this.stbLotNumber.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
