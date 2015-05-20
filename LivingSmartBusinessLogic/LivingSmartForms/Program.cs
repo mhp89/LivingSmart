@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic;
 
 namespace LivingSmartForms
 {
@@ -14,9 +15,11 @@ namespace LivingSmartForms
         [STAThread]
         static void Main()
         {
+            CaseController caseController = new CaseController();
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaseForm());
+            Application.Run(new BaseForm(caseController));
         }
     }
 }

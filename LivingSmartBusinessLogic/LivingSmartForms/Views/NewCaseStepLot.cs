@@ -14,14 +14,32 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepLot : CaseStep
     {
-        public NewCaseStepLot(Case cCase)
+        private CaseController caseController;
+        public NewCaseStepLot(CaseController caseController)
         {
+            this.caseController = caseController;
             InitializeComponent();
         }
 
-		public override bool Save(Case cCase)
+		public override bool Save()
 		{
-			return true;
+		    bool fielddataOk = VerifyFields();
+		    if (fielddataOk)
+		    {
+                caseController.SetlandRegistryNumber(stbLotNumber.Text);
+                caseController.Setaddress(stbLotAddress.Text);
+                caseController.SetlandValue(Convert.ToInt32(stbLotValue.Text));
+                caseController.SetgroundArea(Convert.ToInt32(stbLotArea.Text));
+                caseController.SetbuiltArea(Convert.ToInt32(stbLotBuildArea.Text));
+                caseController.SetgarageArea(Convert.ToInt32(stbLotGarageArea.Text));
+                caseController.Setview(Convert.ToInt32(stbLotView.Text));
+            }
+		    return fielddataOk;
 		}
+
+        private bool VerifyFields()
+        {
+            return true;
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Pages;
@@ -17,7 +18,9 @@ using Menu = LivingSmartForms.Classes.Menu;
 namespace LivingSmartForms
 {
     public partial class BaseForm : Form
-	{
+    {
+        internal CaseController caseController;
+
 		#region Menu
 		
 	    private Page[] pages;
@@ -32,9 +35,10 @@ namespace LivingSmartForms
 
 		#endregion
 
-		public BaseForm()
+		public BaseForm(CaseController caseController)
         {
 			AutoScaleMode = AutoScaleMode.None;
+		    this.caseController = caseController;
 
             InitializeComponent();
 			

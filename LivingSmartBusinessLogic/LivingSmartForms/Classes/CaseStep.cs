@@ -21,9 +21,8 @@ namespace LivingSmartForms.Classes
 		/// <summary>
 		/// Saving step to case.
 		/// </summary>
-		/// <param name="cCase">Case to save to</param>
 		/// <returns>Success of save</returns>
-		public virtual bool Save(Case cCase)
+		public virtual bool Save()
 		{
 			return false;
 		}
