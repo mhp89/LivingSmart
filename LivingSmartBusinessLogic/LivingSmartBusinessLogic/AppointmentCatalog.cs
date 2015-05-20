@@ -7,6 +7,31 @@ namespace LivingSmartBusinessLogic
 {
     public class AppointmentCatalog
     {
-        private System.Collections.Generic.List<LivingSmartBusinessLogic.Appointment> appointments;
+        private List<Appointment> appointments;
+
+        public AppointmentCatalog()
+        {
+            appointments = new List<Appointment>();
+        }
+
+        public Appointment Check(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Save(Appointment appointment)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void AddToCatalog(Appointment appointment)
+        {
+            appointments.Add(appointment);
+        }
+
+        public void RemoveFromCatalog(Appointment appointment)
+        {
+            appointments.Remove(appointment);
+        }
     }
 }

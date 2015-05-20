@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic
 {
-    public class Invoice
+    interface IModel
     {
+        void RegisterObserver(IObserver observer);
+        void RemoveObserver(IObserver observer);
     }
 }

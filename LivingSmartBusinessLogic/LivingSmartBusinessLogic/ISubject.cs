@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic
 {
-    public class Invoice
+    interface ISubject
     {
+        void Attach(IObserver observer);
+        void Detach(IObserver observer);
+        void Notify(IObserver observer);
     }
 }

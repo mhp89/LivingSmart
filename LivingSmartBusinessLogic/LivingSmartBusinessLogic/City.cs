@@ -22,6 +22,12 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        internal City(int zipCode, string district)
+        {
+            this.zipCode = zipCode;
+            this.district = district;
+        }
+
         #region Methods
 
         #endregion

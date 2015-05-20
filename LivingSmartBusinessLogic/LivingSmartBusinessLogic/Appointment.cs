@@ -16,21 +16,37 @@ namespace LivingSmartBusinessLogic
         private int _duration;
         private string _description;
         private string _place;
-        private Customer _customer;
+        private Customer _potBuyer;
 
         #endregion
 
         #region Properties
 
-        public Case Case { get { return _case; } set { _case = value; } }
-        public DateTime Timestamp { get { return _timestamp; } set { _timestamp = value; } }
-        public int Duration { get { return _duration; } set { _duration = value; } }
-        public string Description { get { return _description; } set { _description = value; } }
-        public string Place { get { return _place; } set { _place = value; } }
-        public Customer Customer { get { return _customer; } set { _customer = value; } }
+        public Case Case { get { return _case; } internal set { _case = value; } }
+        public DateTime Timestamp { get { return _timestamp; } internal set { _timestamp = value; } }
+        public int Duration { get { return _duration; } internal set { _duration = value; } }
+        public string Description { get { return _description; } internal set { _description = value; } }
+        public string Place { get { return _place; } internal set { _place = value; } }
+        public Customer Customer { get { return _potBuyer; } internal set { _potBuyer = value; } }
 
 
         #endregion
+
+        internal Appointment()
+        {
+            
+        }
+
+        internal Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer potBuyer)
+        {
+            this.id = id;
+            _case = cCase;
+            _timestamp = timeStamp;
+            _duration = duration;
+            _description = description;
+            _place = place;
+            _potBuyer = potBuyer;
+        }
 
         #region Methods
 

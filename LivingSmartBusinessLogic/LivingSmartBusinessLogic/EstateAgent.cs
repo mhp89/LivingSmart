@@ -21,19 +21,35 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public string Name { get { return _name; } set { _name = value; } }
-        public string Telephone { get { return _telephone; } set { _telephone = value; } }
-        public string Email { get { return _email; } set { _email = value; } }
-        public DateTime StartingDate { get { return _startingDate; } set { _startingDate = value; } }
-        public DateTime TerminationDate { get { return _terminationDate; } set { _terminationDate = value; } }
+        public string Name { get { return _name; } internal set { _name = value; } }
+        public string Telephone { get { return _telephone; } internal set { _telephone = value; } }
+        public string Email { get { return _email; } internal set { _email = value; } }
+        public DateTime StartingDate { get { return _startingDate; } internal set { _startingDate = value; } }
+        public DateTime TerminationDate { get { return _terminationDate; } internal set { _terminationDate = value; } }
 
         #endregion
 
         #region Collections
 
-        private List<Appointment> Appointments;
+        private List<Appointment> appointments;
 
         #endregion
+
+        internal EstateAgent()
+        {
+            
+        }
+        internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        {
+            appointments = new List<Appointment>();
+            this.id = id;
+            _name = name;
+            _telephone = telephone;
+            _email = email;
+            _startingDate = startingDate;
+            _terminationDate = terminationDate;
+
+        }
 
         #region Methods
 

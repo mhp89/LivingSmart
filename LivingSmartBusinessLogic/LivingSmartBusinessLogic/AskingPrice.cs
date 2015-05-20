@@ -18,10 +18,22 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public long Value { get { return _value; } set { _value = value; } }
-        public DateTime Date { get { return _date; } set { _date = value; } }
+        public long Value { get { return _value; } internal set { _value = value; } }
+        public DateTime Date { get { return _date; } internal set { _date = value; } }
 
         #endregion
+
+        internal AskingPrice()
+        {
+            
+        }
+
+        internal AskingPrice(int id, long value, DateTime date)
+        {
+            this.id = id;
+            _value = value;
+            _date = date;
+        }
 
         #region Methods
 
