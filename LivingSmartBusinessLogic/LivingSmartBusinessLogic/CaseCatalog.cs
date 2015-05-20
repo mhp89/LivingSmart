@@ -8,11 +8,18 @@ namespace LivingSmartBusinessLogic
 {
     public class CaseCatalog
     {
-        private List<Case> cases;
+
+        private Dictionary<int,Case> cases;
+        //private List<Case> cases;
 
         public CaseCatalog()
         {
-            cases = new List<Case>();
+            cases = new Dictionary<int, Case>();
+        }
+
+        public void Load()
+        {
+            
         }
 
         public Case Check(int id)
@@ -27,17 +34,13 @@ namespace LivingSmartBusinessLogic
 
         public void AddToCatalog(Case cCase)
         {
-            cases.Add(cCase);
+            cases.Add(cCase.Id, cCase);
         }
 
-        public void RemoveFromCatalog(Case cCase)
+        public void RemoveFromCatalog(int caseId)
         {
-            cases.Remove(cCase);
+            cases.Remove(caseId);
         }
 
-        public ReadOnlyCollection<Ad> GetAds(Case cCase)
-        {
-            return cCase.GetAds();
-        }
     }
 }

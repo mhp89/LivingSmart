@@ -8,7 +8,7 @@ namespace LivingSmartBusinessLogic
 {
     public class Case
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -46,6 +46,7 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         #region Properties
+
 
         public Customer Seller { get { return _seller; } internal set { _seller = value; } }
         public Customer Buyer { get { return _buyer; } internal set { _buyer = value; } }
@@ -170,7 +171,7 @@ namespace LivingSmartBusinessLogic
             return askingPrices.AsReadOnly();
         }
 
-        internal ReadOnlyCollection<DistanceTo> GetsDistanceTos()
+        internal ReadOnlyCollection<DistanceTo> GetDistanceTos()
         {
             return distanceTos.AsReadOnly();
         }
