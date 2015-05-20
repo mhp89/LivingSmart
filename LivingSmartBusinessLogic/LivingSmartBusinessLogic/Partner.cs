@@ -33,11 +33,11 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Partner()
+        internal Partner()
         {
             
         }
-        public Partner(int id, string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
+        internal Partner(int id, string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
         {
             this.id = id;
             _name = name;

@@ -32,12 +32,12 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Appointment()
+        internal Appointment()
         {
             
         }
 
-        public Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer potBuyer)
+        internal Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer potBuyer)
         {
             this.id = id;
             _case = cCase;

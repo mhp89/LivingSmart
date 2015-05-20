@@ -22,7 +22,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public PropertyType(int id, string description)
+        internal PropertyType(int id, string description)
         {
             this.id = id;
             _description = description;

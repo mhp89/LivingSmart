@@ -32,12 +32,12 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Customer()
+        internal Customer()
         {
             
         }
 
-        public Customer(int id, string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
+        internal Customer(int id, string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
         {
             this.id = id;
             _name = name;

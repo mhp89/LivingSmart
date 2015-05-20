@@ -23,12 +23,12 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public AskingPrice()
+        internal AskingPrice()
         {
             
         }
 
-        public AskingPrice(int id, long value, DateTime date)
+        internal AskingPrice(int id, long value, DateTime date)
         {
             this.id = id;
             _value = value;

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -32,6 +33,11 @@ namespace LivingSmartBusinessLogic
         public void RemoveFromCatalog(Case cCase)
         {
             cases.Remove(cCase);
+        }
+
+        public ReadOnlyCollection<Ad> GetAds(Case cCase)
+        {
+            return cCase.GetAds();
         }
     }
 }

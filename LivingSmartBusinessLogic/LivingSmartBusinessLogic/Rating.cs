@@ -30,7 +30,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Rating(int id, long estateAgentValue, long systemValue, DateTime date)
+        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
         {
             this.id = id;
             _estateAgentValue = estateAgentValue;

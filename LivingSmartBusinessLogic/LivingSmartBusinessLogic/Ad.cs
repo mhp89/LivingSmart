@@ -31,12 +31,12 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Ad()
+        internal Ad()
         {
             
         }
 
-        public Ad(int id, string type, DateTime startDate, DateTime endDate, int price)
+        internal Ad(int id, string type, DateTime startDate, DateTime endDate, int price)
         {
             this.id = id;
             _type = type;

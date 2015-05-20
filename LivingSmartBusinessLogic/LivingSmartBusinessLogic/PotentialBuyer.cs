@@ -21,7 +21,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public PotentialBuyer(Customer potBuyer)
+        internal PotentialBuyer(Customer potBuyer)
         {
             this.potBuyer = potBuyer;
         }

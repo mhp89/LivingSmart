@@ -22,7 +22,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public City(int zipCode, string district)
+        internal City(int zipCode, string district)
         {
             this.zipCode = zipCode;
             this.district = district;

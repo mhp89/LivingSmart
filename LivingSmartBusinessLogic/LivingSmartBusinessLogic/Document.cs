@@ -27,7 +27,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Document(int id, string type, int price, string location, string status)
+        internal Document(int id, string type, int price, string location, string status)
         {
             this.id = id;
             _type = type;

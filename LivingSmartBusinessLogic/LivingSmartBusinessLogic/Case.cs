@@ -83,73 +83,102 @@ namespace LivingSmartBusinessLogic
         #region Collections
 
         private List<Ad> ads;
-        private List<PotentialBuyer> PotentialBuyers;
-        private List<Document> Documents;
-        private List<Rating> Ratings;
-        private List<AskingPrice> AskingPrices;
-        private List<DistanceTo> DistanceTos;
-        private List<Picture> Pictures;
+        private List<PotentialBuyer> potentialBuyers;
+        private List<Document> documents;
+        private List<Rating> ratings;
+        private List<AskingPrice> askingPrices;
+        private List<DistanceTo> distanceTos;
+        private List<Picture> pictures;
 
         #endregion
 
         internal Case()
         {
             ads = new List<Ad>();
-            PotentialBuyers = new List<PotentialBuyer>();
-            Documents = new List<Document>();
-            Ratings = new List<Rating>();
-            AskingPrices = new List<AskingPrice>();
-            DistanceTos = new List<DistanceTo>();
-            Pictures = new List<Picture>();
+            potentialBuyers = new List<PotentialBuyer>();
+            documents = new List<Document>();
+            ratings = new List<Rating>();
+            askingPrices = new List<AskingPrice>();
+            distanceTos = new List<DistanceTo>();
+            pictures = new List<Picture>();
         }
 
         #region Methods
 
-        public void CloseCase()
+        internal void CloseCase()
         {
             throw new System.NotImplementedException();
         }
 
-        public void AddDocument(Document document)
+        internal void AddDocument(Document document)
         {
-            Documents.Add(document);
+            documents.Add(document);
         }
 
-        public void AddPicture(Picture picture)
+        internal void AddPicture(Picture picture)
         {
-            Pictures.Add(picture);
+            pictures.Add(picture);
         }
 
-        public void AddAd(Ad ad)
+        internal void AddAd(Ad ad)
         {
             ads.Add(ad);
         }
 
-        public void AddRating(Rating rating)
+        internal void AddRating(Rating rating)
         {
-            Ratings.Add(rating);
+            ratings.Add(rating);
         }
 
-        public void AddAskingPrice(AskingPrice askingPrice)
+        internal void AddAskingPrice(AskingPrice askingPrice)
         {
-            AskingPrices.Add(askingPrice);
+            askingPrices.Add(askingPrice);
         }
 
-        public void AddPotentialBuyer(PotentialBuyer potentialBuyer)
+        internal void AddPotentialBuyer(PotentialBuyer potentialBuyer)
         {
-            PotentialBuyers.Add(potentialBuyer);
+            potentialBuyers.Add(potentialBuyer);
         }
 
-        public void AddDistanceTo(DistanceTo distanceTo)
+        internal void AddDistanceTo(DistanceTo distanceTo)
         {
-            DistanceTos.Add(distanceTo);
+            distanceTos.Add(distanceTo);
         }
 
-        public ReadOnlyCollection<Ad> GetAds()
+        internal ReadOnlyCollection<Ad> GetAds()
         {
             return ads.AsReadOnly();
         }
 
+        internal ReadOnlyCollection<PotentialBuyer> GetPotentialBuyers()
+        {
+            return potentialBuyers.AsReadOnly();
+        }
+
+        internal ReadOnlyCollection<Document> GetDocuments()
+        {
+            return documents.AsReadOnly();
+        }
+
+        internal ReadOnlyCollection<Rating> GetRatings()
+        {
+            return ratings.AsReadOnly();
+        }
+
+        internal ReadOnlyCollection<AskingPrice> GetAskingPrices()
+        {
+            return askingPrices.AsReadOnly();
+        }
+
+        internal ReadOnlyCollection<DistanceTo> GetsDistanceTos()
+        {
+            return distanceTos.AsReadOnly();
+        }
+
+        internal ReadOnlyCollection<Picture> GetPictures()
+        {
+            return pictures.AsReadOnly();
+        }
         
         #endregion
 

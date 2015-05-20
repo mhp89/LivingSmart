@@ -35,11 +35,11 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public EstateAgent()
+        internal EstateAgent()
         {
             
         }
-        public EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
         {
             appointments = new List<Appointment>();
             this.id = id;

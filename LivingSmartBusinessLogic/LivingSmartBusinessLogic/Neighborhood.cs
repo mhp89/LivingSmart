@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Neighborhood(City city, string name, int value)
+        internal Neighborhood(City city, string name, int value)
         {
             this.city = city;
             _name = name;

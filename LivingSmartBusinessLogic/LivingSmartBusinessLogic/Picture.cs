@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        public Picture(int id, string location, string description)
+        internal Picture(int id, string location, string description)
         {
             this.id = id;
             _location = location;
