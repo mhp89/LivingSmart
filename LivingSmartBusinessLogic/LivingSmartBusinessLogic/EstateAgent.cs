@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class EstateAgent
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 

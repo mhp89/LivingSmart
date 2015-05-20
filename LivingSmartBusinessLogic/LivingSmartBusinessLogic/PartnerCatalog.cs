@@ -7,11 +7,11 @@ namespace LivingSmartBusinessLogic
 {
     public class PartnerCatalog
     {
-        private System.Collections.Generic.List<LivingSmartBusinessLogic.Partner> partners;
+        private Dictionary<int,Partner> partners;
 
         public PartnerCatalog()
         {
-            partners = new List<Partner>();
+            partners = new Dictionary<int, Partner>();
         }
 
         public Partner Check(int id)
@@ -26,12 +26,12 @@ namespace LivingSmartBusinessLogic
 
         public void AddToCatalog(Partner partner)
         {
-            partners.Add(partner);
+            partners.Add(partner.Id, partner);
         }
 
         public void RemoveFromCatalog(Partner partner)
         {
-            partners.Add(partner);
+            partners.Add(partner.Id, partner);
         }
     }
 }
