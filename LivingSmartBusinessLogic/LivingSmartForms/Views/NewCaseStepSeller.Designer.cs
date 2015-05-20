@@ -48,6 +48,8 @@ namespace LivingSmartForms.Views
 			this.pnlSellerCity = new System.Windows.Forms.Panel();
 			this.lblSellerCityCountry = new System.Windows.Forms.Label();
 			this.stbSellerZipCode = new SmartControls.SmartTextBox();
+			this.header1 = new SmartControls.Header();
+			this.header2 = new SmartControls.Header();
 			this.tlpEstateAgent.SuspendLayout();
 			this.tlpSeller.SuspendLayout();
 			this.pnlSellerId.SuspendLayout();
@@ -56,13 +58,15 @@ namespace LivingSmartForms.Views
 			// 
 			// tlpEstateAgent
 			// 
+			this.tlpEstateAgent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tlpEstateAgent.ColumnCount = 2;
 			this.tlpEstateAgent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpEstateAgent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
 			this.tlpEstateAgent.Controls.Add(this.lblEstateAgentName, 0, 0);
 			this.tlpEstateAgent.Controls.Add(this.stbEstateAgentName, 1, 0);
-			this.tlpEstateAgent.Location = new System.Drawing.Point(0, 60);
-			this.tlpEstateAgent.Margin = new System.Windows.Forms.Padding(0);
+			this.tlpEstateAgent.Location = new System.Drawing.Point(0, 45);
+			this.tlpEstateAgent.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpEstateAgent.Name = "tlpEstateAgent";
 			this.tlpEstateAgent.RowCount = 1;
 			this.tlpEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -85,24 +89,30 @@ namespace LivingSmartForms.Views
 			// 
 			// stbEstateAgentName
 			// 
+			this.stbEstateAgentName.AllowComma = false;
 			this.stbEstateAgentName.AutomaticValidation = true;
 			this.stbEstateAgentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbEstateAgentName.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbEstateAgentName.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbEstateAgentName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentName.ErrorMsg = SmartControls.SmartTextBox.ErrorType.ToShort;
 			this.stbEstateAgentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbEstateAgentName.Location = new System.Drawing.Point(120, 0);
 			this.stbEstateAgentName.Margin = new System.Windows.Forms.Padding(0);
+			this.stbEstateAgentName.MaxLength = 32767;
 			this.stbEstateAgentName.MinLength = 5;
 			this.stbEstateAgentName.Name = "stbEstateAgentName";
+			this.stbEstateAgentName.NumericOnly = false;
 			this.stbEstateAgentName.RegularExpression = null;
 			this.stbEstateAgentName.Size = new System.Drawing.Size(360, 30);
+			this.stbEstateAgentName.Suffix = null;
 			this.stbEstateAgentName.TabIndex = 1;
 			this.stbEstateAgentName.Text = null;
+			this.stbEstateAgentName.UseSystemPasswordChar = false;
 			// 
 			// tlpSeller
 			// 
+			this.tlpSeller.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tlpSeller.ColumnCount = 2;
 			this.tlpSeller.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpSeller.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
@@ -118,8 +128,8 @@ namespace LivingSmartForms.Views
 			this.tlpSeller.Controls.Add(this.pnlSellerId, 1, 0);
 			this.tlpSeller.Controls.Add(this.stbSellerPhone, 1, 4);
 			this.tlpSeller.Controls.Add(this.pnlSellerCity, 1, 3);
-			this.tlpSeller.Location = new System.Drawing.Point(0, 178);
-			this.tlpSeller.Margin = new System.Windows.Forms.Padding(0);
+			this.tlpSeller.Location = new System.Drawing.Point(0, 130);
+			this.tlpSeller.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpSeller.Name = "tlpSeller";
 			this.tlpSeller.RowCount = 6;
 			this.tlpSeller.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -133,39 +143,47 @@ namespace LivingSmartForms.Views
 			// 
 			// smartTextBox2
 			// 
+			this.smartTextBox2.AllowComma = false;
 			this.smartTextBox2.AutomaticValidation = true;
 			this.smartTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.smartTextBox2.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.smartTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.smartTextBox2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.smartTextBox2.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.smartTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.smartTextBox2.Location = new System.Drawing.Point(120, 200);
 			this.smartTextBox2.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.smartTextBox2.MaxLength = 32767;
 			this.smartTextBox2.MinLength = 10;
 			this.smartTextBox2.Name = "smartTextBox2";
+			this.smartTextBox2.NumericOnly = false;
 			this.smartTextBox2.RegularExpression = null;
 			this.smartTextBox2.Size = new System.Drawing.Size(360, 30);
+			this.smartTextBox2.Suffix = null;
 			this.smartTextBox2.TabIndex = 2;
 			this.smartTextBox2.Text = "jens-hansen@bondegaard.dk";
+			this.smartTextBox2.UseSystemPasswordChar = false;
 			// 
 			// stbSellerAdress
 			// 
+			this.stbSellerAdress.AllowComma = false;
 			this.stbSellerAdress.AutomaticValidation = true;
 			this.stbSellerAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbSellerAdress.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbSellerAdress.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbSellerAdress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbSellerAdress.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.stbSellerAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbSellerAdress.Location = new System.Drawing.Point(120, 80);
 			this.stbSellerAdress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbSellerAdress.MaxLength = 32767;
 			this.stbSellerAdress.MinLength = 5;
 			this.stbSellerAdress.Name = "stbSellerAdress";
+			this.stbSellerAdress.NumericOnly = false;
 			this.stbSellerAdress.RegularExpression = null;
 			this.stbSellerAdress.Size = new System.Drawing.Size(360, 30);
+			this.stbSellerAdress.Suffix = null;
 			this.stbSellerAdress.TabIndex = 3;
 			this.stbSellerAdress.Text = "Bondegård 1";
+			this.stbSellerAdress.UseSystemPasswordChar = false;
 			// 
 			// lblSellerEmail
 			// 
@@ -253,22 +271,26 @@ namespace LivingSmartForms.Views
 			// 
 			// stbSellerName
 			// 
+			this.stbSellerName.AllowComma = false;
 			this.stbSellerName.AllowDrop = true;
 			this.stbSellerName.AutomaticValidation = true;
 			this.stbSellerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbSellerName.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbSellerName.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbSellerName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbSellerName.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.stbSellerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbSellerName.Location = new System.Drawing.Point(120, 40);
 			this.stbSellerName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbSellerName.MaxLength = 32767;
 			this.stbSellerName.MinLength = -1;
 			this.stbSellerName.Name = "stbSellerName";
+			this.stbSellerName.NumericOnly = false;
 			this.stbSellerName.RegularExpression = null;
 			this.stbSellerName.Size = new System.Drawing.Size(360, 30);
+			this.stbSellerName.Suffix = null;
 			this.stbSellerName.TabIndex = 4;
 			this.stbSellerName.Text = "Jens Hansen";
+			this.stbSellerName.UseSystemPasswordChar = false;
 			// 
 			// pnlSellerId
 			// 
@@ -316,21 +338,25 @@ namespace LivingSmartForms.Views
 			// 
 			// stbSellerPhone
 			// 
+			this.stbSellerPhone.AllowComma = false;
 			this.stbSellerPhone.AutomaticValidation = true;
 			this.stbSellerPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbSellerPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbSellerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbSellerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbSellerPhone.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.stbSellerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbSellerPhone.Location = new System.Drawing.Point(120, 160);
 			this.stbSellerPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbSellerPhone.MaxLength = 8;
 			this.stbSellerPhone.MinLength = 8;
 			this.stbSellerPhone.Name = "stbSellerPhone";
+			this.stbSellerPhone.NumericOnly = true;
 			this.stbSellerPhone.RegularExpression = null;
 			this.stbSellerPhone.Size = new System.Drawing.Size(360, 30);
+			this.stbSellerPhone.Suffix = null;
 			this.stbSellerPhone.TabIndex = 3;
 			this.stbSellerPhone.Text = "987654321";
+			this.stbSellerPhone.UseSystemPasswordChar = false;
 			// 
 			// pnlSellerCity
 			// 
@@ -345,40 +371,74 @@ namespace LivingSmartForms.Views
 			// 
 			// lblSellerCityCountry
 			// 
-			this.lblSellerCityCountry.Dock = System.Windows.Forms.DockStyle.Right;
+			this.lblSellerCityCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblSellerCityCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblSellerCityCountry.Location = new System.Drawing.Point(79, 0);
+			this.lblSellerCityCountry.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.lblSellerCityCountry.Name = "lblSellerCityCountry";
-			this.lblSellerCityCountry.Size = new System.Drawing.Size(281, 30);
+			this.lblSellerCityCountry.Size = new System.Drawing.Size(282, 30);
 			this.lblSellerCityCountry.TabIndex = 4;
 			this.lblSellerCityCountry.Text = "Vejle, Danmark";
 			this.lblSellerCityCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// stbSellerZipCode
 			// 
+			this.stbSellerZipCode.AllowComma = false;
 			this.stbSellerZipCode.AutomaticValidation = true;
 			this.stbSellerZipCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbSellerZipCode.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbSellerZipCode.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbSellerZipCode.Dock = System.Windows.Forms.DockStyle.Left;
-			this.stbSellerZipCode.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.stbSellerZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbSellerZipCode.Location = new System.Drawing.Point(0, 0);
 			this.stbSellerZipCode.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbSellerZipCode.MaxLength = 4;
 			this.stbSellerZipCode.MinLength = 4;
 			this.stbSellerZipCode.Name = "stbSellerZipCode";
+			this.stbSellerZipCode.NumericOnly = true;
 			this.stbSellerZipCode.RegularExpression = null;
 			this.stbSellerZipCode.Size = new System.Drawing.Size(68, 30);
+			this.stbSellerZipCode.Suffix = null;
 			this.stbSellerZipCode.TabIndex = 3;
 			this.stbSellerZipCode.Text = "7100";
+			this.stbSellerZipCode.UseSystemPasswordChar = false;
+			// 
+			// header1
+			// 
+			this.header1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.header1.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.header1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.header1.Location = new System.Drawing.Point(0, 10);
+			this.header1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.header1.Name = "header1";
+			this.header1.Size = new System.Drawing.Size(480, 25);
+			this.header1.TabIndex = 2;
+			this.header1.Text = "Mægler";
+			// 
+			// header2
+			// 
+			this.header2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.header2.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.header2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.header2.Location = new System.Drawing.Point(0, 95);
+			this.header2.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
+			this.header2.Name = "header2";
+			this.header2.Size = new System.Drawing.Size(480, 25);
+			this.header2.TabIndex = 3;
+			this.header2.Text = "Sælger";
 			// 
 			// NewCaseStepSeller
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.Controls.Add(this.header2);
+			this.Controls.Add(this.header1);
 			this.Controls.Add(this.tlpSeller);
 			this.Controls.Add(this.tlpEstateAgent);
 			this.Name = "NewCaseStepSeller";
-			this.Size = new System.Drawing.Size(480, 440);
+			this.Size = new System.Drawing.Size(480, 370);
 			this.tlpEstateAgent.ResumeLayout(false);
 			this.tlpEstateAgent.PerformLayout();
 			this.tlpSeller.ResumeLayout(false);
@@ -412,5 +472,7 @@ namespace LivingSmartForms.Views
         private System.Windows.Forms.Panel pnlSellerCity;
         private System.Windows.Forms.Label lblSellerCityCountry;
         private SmartControls.SmartTextBox stbSellerZipCode;
+		private SmartControls.Header header1;
+		private SmartControls.Header header2;
     }
 }

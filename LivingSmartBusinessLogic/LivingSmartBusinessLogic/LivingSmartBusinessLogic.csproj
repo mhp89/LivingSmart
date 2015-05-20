@@ -40,8 +40,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class.cs" />
+    <Compile Include="Ad.cs" />
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentCatalog.cs" />
+    <Compile Include="AppointmentController.cs" />
+    <Compile Include="AskingPrice.cs" />
+    <Compile Include="Case.cs" />
+    <Compile Include="CaseCatalog.cs" />
+    <Compile Include="CaseController.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerCatalog.cs" />
+    <Compile Include="CustomerController.cs" />
+    <Compile Include="DistanceTo.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="EstateAgent.cs" />
+    <Compile Include="EstateAgentCatalog.cs" />
+    <Compile Include="EstateAgentController.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="InvoiceCatalog.cs" />
+    <Compile Include="Neighborhood.cs" />
+    <Compile Include="Partner.cs" />
+    <Compile Include="PartnerCatalog.cs" />
+    <Compile Include="PartnerController.cs" />
+    <Compile Include="Picture.cs" />
+    <Compile Include="PotentialBuyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyType.cs" />
+    <Compile Include="Rating.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="SellPropertyController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="Customer.sequencediagram" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Customer.sequencediagram.layout">
+      <DependentUpon>Customer.sequencediagram</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

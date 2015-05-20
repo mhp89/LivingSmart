@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Pages;
+using LivingSmartForms.Views;
 using SmartControls;
 using Menu = LivingSmartForms.Classes.Menu;
 
@@ -37,13 +38,13 @@ namespace LivingSmartForms
 
             InitializeComponent();
 			
-			pages = new Page[4];
+			pages = new Page[Enum.GetNames(typeof(PagesIndex)).Length];
 
 			pages[GetPageIndex(PagesIndex.Overview)]	= new Page(typeof(Overview),	"Oversigt",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Cases)]		= new Page(typeof(Cases),		"Sager",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Customers)]	= new Page(typeof(Overview),	"Kunder",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Settings)]	= new Page(typeof(Cases),		"Indstillinger",	Classes.Menu.MenuAnchor.Right);
-
+			
 			InitializePages();
 
 			InitializeMenu();
@@ -235,7 +236,7 @@ namespace LivingSmartForms
 
 		private void BaseForm_Load(object sender, EventArgs e)
 		{
-			SetSelectedPage(PagesIndex.Cases);
+			SetSelectedPage(PagesIndex.Overview);
 
 			pnlDropInHolder.BringToFront();
 		}

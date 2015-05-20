@@ -40,6 +40,8 @@ namespace SmartControls
 		public SmartButton()
 		{
 			FlatStyle = FlatStyle.Flat;
+			AutoSize = true;
+			AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
 			UpdateColor();
 			FlatAppearance.BorderSize = 0;
@@ -61,6 +63,21 @@ namespace SmartControls
 			ForeColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
 			BackColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Light : SmartColor.Dark;
 			FlatAppearance.MouseOverBackColor = FlatAppearance.MouseDownBackColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
+		}
+
+		protected override void OnPaint(PaintEventArgs e)
+		{
+			if (Enabled)
+			{
+				base.OnPaint(e);
+			}
+			else
+			{
+				//TODO: Fix forecolor
+				e.Graphics.FillRectangle(new SolidBrush(BackColor), new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height));
+				TextRenderer.DrawText(e.Graphics, Text, Font, new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height),
+					System.Drawing.Color.Aquamarine);// (Color == SmartColor.ColorStyle.Light) ? SmartColor.DarkA25 : SmartColor.LightA25);
+			}
 		}
 
 		#region Event Handler Methods

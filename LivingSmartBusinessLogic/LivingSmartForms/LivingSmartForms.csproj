@@ -71,6 +71,12 @@
     <Compile Include="Classes\BasePage.Designer.cs">
       <DependentUpon>BasePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\CaseStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\CaseStep.Designer.cs">
+      <DependentUpon>CaseStep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DrawUtils.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Classes\Page.cs" />
@@ -107,6 +113,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\DistanceField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DistanceField.Designer.cs">
+      <DependentUpon>DistanceField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmployeeLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -152,6 +164,9 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\CaseStep.resx">
+      <DependentUpon>CaseStep.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
       <DependentUpon>NewCaseDropIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +189,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\DistanceField.resx">
+      <DependentUpon>DistanceField.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeLine.resx">
       <DependentUpon>EmployeeLine.cs</DependentUpon>
     </EmbeddedResource>
@@ -209,6 +227,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LivingSmartBusinessLogic\LivingSmartBusinessLogic.csproj">
+      <Project>{652743fa-2264-41ef-a011-8cb4a994864e}</Project>
+      <Name>LivingSmartBusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartControls\SmartControls.csproj">
       <Project>{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}</Project>
       <Name>SmartControls</Name>

@@ -7,14 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic;
+using LivingSmartForms.Classes;
 
 namespace LivingSmartForms.Views
 {
-    public partial class NewCaseStepSeller : UserControl
+    public partial class NewCaseStepSeller : CaseStep
     {
-        public NewCaseStepSeller()
+        public NewCaseStepSeller(Case cCase)
         {
             InitializeComponent();
         }
+
+	    public override bool Save(Case cCase)
+	    {
+		    return true;
+	    }
     }
 }

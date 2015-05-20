@@ -37,39 +37,47 @@ namespace LivingSmartForms.UserControls
 			// 
 			// stbType
 			// 
+			this.stbType.AllowComma = false;
 			this.stbType.AutomaticValidation = false;
 			this.stbType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbType.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbType.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbType.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbType.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.stbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbType.Location = new System.Drawing.Point(0, 0);
 			this.stbType.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
+			this.stbType.MaxLength = 32767;
 			this.stbType.MinLength = -1;
 			this.stbType.Name = "stbType";
+			this.stbType.NumericOnly = false;
 			this.stbType.RegularExpression = null;
 			this.stbType.Size = new System.Drawing.Size(183, 30);
+			this.stbType.Suffix = null;
 			this.stbType.TabIndex = 0;
 			this.stbType.Text = "smartTextBox1";
+			this.stbType.UseSystemPasswordChar = false;
 			// 
 			// stpDistance
 			// 
-			this.stpDistance.AutomaticValidation = false;
+			this.stpDistance.AllowComma = false;
+			this.stpDistance.AutomaticValidation = true;
 			this.stpDistance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stpDistance.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stpDistance.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stpDistance.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stpDistance.ErrorMsg = SmartControls.SmartTextBox.ErrorType.None;
 			this.stpDistance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stpDistance.Location = new System.Drawing.Point(193, 0);
 			this.stpDistance.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
-			this.stpDistance.MinLength = -1;
+			this.stpDistance.MaxLength = 32767;
+			this.stpDistance.MinLength = 1;
 			this.stpDistance.Name = "stpDistance";
+			this.stpDistance.NumericOnly = true;
 			this.stpDistance.RegularExpression = null;
 			this.stpDistance.Size = new System.Drawing.Size(93, 30);
+			this.stpDistance.Suffix = null;
 			this.stpDistance.TabIndex = 1;
 			this.stpDistance.Text = "smartTextBox2";
+			this.stpDistance.UseSystemPasswordChar = false;
 			// 
 			// btnRemove
 			// 
@@ -111,8 +119,7 @@ namespace LivingSmartForms.UserControls
 			// 
 			// DistanceField
 			// 
-			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.tlpHolder);
 			this.Name = "DistanceField";
 			this.Size = new System.Drawing.Size(350, 30);

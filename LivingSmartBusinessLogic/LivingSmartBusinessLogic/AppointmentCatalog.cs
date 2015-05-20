@@ -2,12 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic
 {
-    public class Class
+    public class AppointmentCatalog
     {
-
+        private System.Collections.Generic.List<LivingSmartBusinessLogic.Appointment> appointments;
     }
 }
