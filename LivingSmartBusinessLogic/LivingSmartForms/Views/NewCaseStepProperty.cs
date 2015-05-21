@@ -20,18 +20,6 @@ namespace LivingSmartForms.Views
         {
             this.caseController = caseController;
             InitializeComponent();
-
-            //stbPropertyType.Text = cCase.PropertyType.Description;
-            //stbPropertyArea.Text = cCase.LivingArea.ToString();
-            //stbPropertyBasement.Text = cCase.BasementArea.ToString();
-            //stbPropertyBuildYear.Text = cCase.BuiltYear.ToString();
-            //stbPropertyEnergyMark.Text = cCase.EnergyClassification;
-            //stbPropertyFloors.Text = cCase.Floors.ToString();
-            //stbPropertyRooms.Text = cCase.Rooms.ToString();
-            //stbPropertyBedrooms.Text = cCase.Bedrooms.ToString();
-            //stbPropertyBathrooms.Text = cCase.Bathrooms.ToString();
-            //stbPropertyToilets.Text = cCase.Toilets.ToString();
-
             NewDistanceInput();
         }
 
@@ -50,18 +38,17 @@ namespace LivingSmartForms.Views
             bool fielddataOk = VerifyFields();
             if (fielddataOk)
             {
-                //stbPropertyType.Text = cCase.PropertyType.Description;
-                //caseController.SetpropertyType();
-                //stbPropertyArea.Text = cCase.LivingArea.ToString();
-                caseController.SetlivingArea(Convert.ToInt32(stbPropertyArea.Text));
-                caseController.SetbasementArea(Convert.ToInt32(stbPropertyBasement.Text));
-                caseController.SetbuiltYear(Convert.ToInt32(stbPropertyBuildYear.Text));
-                caseController.SetenergyClassification(stbPropertyEnergyMark.Text);
-                caseController.Setfloors(Convert.ToInt32(stbPropertyFloors.Text));
-                caseController.Setrooms(Convert.ToInt32(stbPropertyRooms.Text));
-                caseController.Setbedrooms(Convert.ToInt32(stbPropertyBedrooms.Text));
-                caseController.Setbathrooms(Convert.ToInt32(stbPropertyBathrooms.Text));
-                caseController.Settoilets(Convert.ToInt32(stbPropertyToilets.Text));
+                // stbPropertyType.Text = cCase.PropertyType.Description;
+                // caseController.SetPropertyType();
+                caseController.SetLivingArea(Convert.ToInt32(stbPropertyArea.Text));
+                caseController.SetBasementArea(Convert.ToInt32(stbPropertyBasement.Text));
+                caseController.SetBuiltYear(Convert.ToInt32(stbPropertyBuildYear.Text));
+                caseController.SetEnergyClassification(stbPropertyEnergyMark.Text);
+                caseController.SetFloors(Convert.ToInt32(stbPropertyFloors.Text));
+                caseController.SetRooms(Convert.ToInt32(stbPropertyRooms.Text));
+                caseController.SetBedrooms(Convert.ToInt32(stbPropertyBedrooms.Text));
+                caseController.SetBathrooms(Convert.ToInt32(stbPropertyBathrooms.Text));
+                caseController.SetToilets(Convert.ToInt32(stbPropertyToilets.Text));
             }
             return fielddataOk;
         }

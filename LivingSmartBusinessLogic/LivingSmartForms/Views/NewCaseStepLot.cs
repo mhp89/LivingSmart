@@ -26,13 +26,13 @@ namespace LivingSmartForms.Views
             bool fielddataOk = ValidateFields();
             if (fielddataOk)
             {
-                caseController.SetlandRegistryNumber(stbLotNumber.Text);
-                caseController.Setaddress(stbLotAddress.Text);
-                caseController.SetlandValue(Convert.ToInt32(stbLotValue.Text));
-                caseController.SetgroundArea(Convert.ToInt32(stbLotArea.Text));
-                caseController.SetbuiltArea(Convert.ToInt32(stbLotBuildArea.Text));
-                caseController.SetgarageArea(Convert.ToInt32(stbLotGarageArea.Text));
-                caseController.Setview(Convert.ToInt32(stbLotView.Text));
+                caseController.SetLandRegistryNumber(stbLotNumber.Text);
+                caseController.SetAddress(stbLotAddress.Text);
+                caseController.SetLandValue(Convert.ToInt32(stbLotValue.Text));
+                caseController.SetGroundArea(Convert.ToInt32(stbLotArea.Text));
+                caseController.SetBuiltArea(Convert.ToInt32(stbLotBuildArea.Text));
+                caseController.SetGarageArea(Convert.ToInt32(stbLotGarageArea.Text));
+                caseController.SetView(Convert.ToInt32(stbLotView.Text));
             }
             return fielddataOk;
         }
