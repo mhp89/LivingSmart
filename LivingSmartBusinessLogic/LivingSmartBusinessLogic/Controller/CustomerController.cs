@@ -59,10 +59,10 @@ namespace LivingSmartBusinessLogic.Controller
                 customer.Address = address;
         }
 
-        public void SetZipCode(Customer customer, int zipcode)
+        public void SetZipCode(Customer customer, City city)
         {
-            if (customer.ZipCode != zipcode)
-                customer.ZipCode = zipcode;
+            if (customer.City != city)
+                customer.City = city;
         }
 
         public void SetEmail(Customer customer, string email)
