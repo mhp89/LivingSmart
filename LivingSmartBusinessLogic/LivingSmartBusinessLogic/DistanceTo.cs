@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class DistanceTo
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -25,7 +25,7 @@ namespace LivingSmartBusinessLogic
 
         internal DistanceTo(int id, string type, int distance)
         {
-            this.id = id;
+            Id = id;
             _type = type;
             _distance = distance;
         }

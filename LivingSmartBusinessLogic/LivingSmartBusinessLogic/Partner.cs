@@ -15,6 +15,7 @@ namespace LivingSmartBusinessLogic
         private string _telephone;
         private string _email;
         private string _city;
+        private string _country;
         private string _region;
         private string _regionShort;
         private string _timezone;
@@ -27,6 +28,7 @@ namespace LivingSmartBusinessLogic
         public string Telephone { get { return _telephone; } internal set { _telephone = value; } }
         public string Email { get { return _email; } internal set { _email = value; } }
         public string City { get { return _city; } internal set { _city = value; } }
+        public string Country { get { return _country; } internal set { _country = value; } }
         public string Region { get { return _region; } internal set { _region = value; } }
         public string RegionShort { get { return _regionShort; } internal set { _regionShort = value; } }
         public string Timezone { get { return _timezone; } internal set { _timezone = value; } }
@@ -39,7 +41,7 @@ namespace LivingSmartBusinessLogic
         }
         internal Partner(int id, string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
         {
-            this.id = id;
+            Id = id;
             _name = name;
             _telephone = telephone;
             _email = email;

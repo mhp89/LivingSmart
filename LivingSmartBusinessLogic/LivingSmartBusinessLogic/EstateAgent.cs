@@ -42,7 +42,7 @@ namespace LivingSmartBusinessLogic
         internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
         {
             appointments = new List<Appointment>();
-            this.id = id;
+            Id = id;
             _name = name;
             _telephone = telephone;
             _email = email;

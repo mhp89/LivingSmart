@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Controller
 {
     public class CaseController
     {
@@ -12,6 +9,7 @@ namespace LivingSmartBusinessLogic
 
         private Case activeCase;
 
+        
         public CaseController()
         {
             caseCatalog = new CaseCatalog();
@@ -28,14 +26,19 @@ namespace LivingSmartBusinessLogic
         {
             activeCase = null;
         }
+
+        public void SaveActiveCase()
+        {
+            AddCase();
+        }
         
         /// <summary>
         /// Tilføjer en case til casecatalog
         /// </summary>
-        /// <param name="newCase"></param>
-        public void AddCase(Case newCase)
+        public void AddCase()
         {
-            caseCatalog.AddToCatalog(newCase);
+            caseCatalog.AddToCatalog(activeCase);
+            UpdateCase();
         }
 
         /// <summary>
@@ -50,46 +53,42 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Læser en given fil fra casecatalog
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
-        public Case ReadCase(int id)
+        public Case ReadCase()
         {
-            return caseCatalog.Check(id);
+            return caseCatalog.Check(activeCase.Id);
         }
 
         /// <summary>
         /// Opdaterer en case på casecataloget
         /// </summary>
-        /// <param name="cCase"></param>
-        public void UpdateCase(Case cCase)
+        public void UpdateCase()
         {
-            caseCatalog.Save(cCase);
+            caseCatalog.Save(activeCase);
         }
 
         /// <summary>
         /// Laver en ny vurdering ud fra en given case
         /// </summary>
-        /// <param name="cCase"></param>
         /// <returns></returns>
-        public Rating RateProperty(Case cCase)
+        public Rating RateProperty()
         {
-            return new Rating(cCase);
+            return new Rating(activeCase);
         }
         
         /// <summary>
         /// Tilføjer et dokument til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="document"></param>
-        public void AddDocumentToCase(Case cCase, Document document)
+        public void AddDocumentToCase(Document document)
         {
-            cCase.AddDocument(document);
+            activeCase.AddDocument(document);
         }
 
         /// <summary>
         /// Fjerner et dokument fra casen
         /// </summary>
-        public void RemoveDocumentFromCase(Case cCase, Document document)
+        public void RemoveDocumentFromCase(Document document)
         {
             
         }
@@ -97,17 +96,16 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer et billede til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="picture"></param>
-        public void AddPictureToCase(Case cCase, Picture picture)
+        public void AddPictureToCase(Picture picture)
         {
-            cCase.AddPicture(picture);
+            activeCase.AddPicture(picture);
         }
 
         /// <summary>
         /// Fjerner et billede fra casen
         /// </summary>
-        public void RemovePictureFromCase(Case cCase, Picture picture)
+        public void RemovePictureFromCase(Picture picture)
         {
             
         }
@@ -115,17 +113,16 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer en annonce til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="ad"></param>
-        public void AddAdToCase(Case cCase, Ad ad)
+        public void AddAdToCase(Ad ad)
         {
-            cCase.AddAd(ad);
+            activeCase.AddAd(ad);
         }
 
         /// <summary>
         /// Fjerner en annonce fra casen
         /// </summary>
-        public void RemoveAdFromCase(Case cCase, Ad ad)
+        public void RemoveAdFromCase(Ad ad)
         {
             
         }
@@ -133,17 +130,16 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer en vurdering til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="rating"></param>
-        public void AddRatingToCase(Case cCase, Rating rating)
+        public void AddRatingToCase(Rating rating)
         {
-            cCase.AddRating(rating);
+            activeCase.AddRating(rating);
         }
 
         /// <summary>
         /// Fjerner en vurdering fra casen
         /// </summary>
-        public void RemoveRatingFromCase(Case cCase, Rating rating)
+        public void RemoveRatingFromCase(Rating rating)
         {
             
         }
@@ -151,17 +147,16 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer en udbudspris til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="askingPrice"></param>
-        public void AddAskingPriceToCase(Case cCase, AskingPrice askingPrice)
+        public void AddAskingPriceToCase(AskingPrice askingPrice)
         {
-            cCase.AddAskingPrice(askingPrice);
+            activeCase.AddAskingPrice(askingPrice);
         }
 
         /// <summary>
         /// Fjerner en udbudspris fra casen
         /// </summary>
-        public void RemoveAskingPriceFromCase(Case cCase, AskingPrice askingPrice)
+        public void RemoveAskingPriceFromCase(AskingPrice askingPrice)
         {
             
         }
@@ -169,19 +164,17 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer en potentiel køber til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="potentialBuyer"></param>
-        public void AddPotentialBuyerToCase(Case cCase, PotentialBuyer potentialBuyer)
+        public void AddPotentialBuyerToCase(PotentialBuyer potentialBuyer)
         {
-            cCase.AddPotentialBuyer(potentialBuyer);
+            activeCase.AddPotentialBuyer(potentialBuyer);
         }
 
         /// <summary>
         /// Fjerner en potentiel køber fra casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="potentialBuyer"></param>
-        public void RemoveProtentialBuyerFromCase(Case cCase, PotentialBuyer potentialBuyer)
+        public void RemoveProtentialBuyerFromCase(PotentialBuyer potentialBuyer)
         {
             
         }
@@ -189,17 +182,16 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
-        /// <param name="cCase"></param>
         /// <param name="distanceTo"></param>
-        public void AddDistanceToCase(Case cCase, DistanceTo distanceTo)
+        public void AddDistanceToCase(DistanceTo distanceTo)
         {
-            cCase.AddDistanceTo(distanceTo);
+            activeCase.AddDistanceTo(distanceTo);
         }
 
         /// <summary>
         /// Fjerner en "Afstand til" fra casen
         /// </summary>
-        public void RemoveDistanceToFromCase(Case cCase, DistanceTo distanceTo)
+        public void RemoveDistanceToFromCase(DistanceTo distanceTo)
         {
             
         }
@@ -207,192 +199,192 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Tilføjer salgsprisen til casen
         /// </summary>
-        public void AddSellingPriceToCase(Case cCase, long sellingPrice)
+        public void AddSellingPriceToCase(long sellingPrice)
         {
-            cCase.SellingPrice = sellingPrice;
+            activeCase.SellingPrice = sellingPrice;
         }
 
-        public ReadOnlyCollection<Ad> GetAds(Case cCase)
+        public ReadOnlyCollection<Ad> GetAds()
         {
-            return cCase.GetAds();
+            return activeCase.GetAds();
         }
 
-        public ReadOnlyCollection<PotentialBuyer> GetPotentialBuyers(Case cCase)
+        public ReadOnlyCollection<PotentialBuyer> GetPotentialBuyers()
         {
-            return cCase.GetPotentialBuyers();
+            return activeCase.GetPotentialBuyers();
         }
 
-        public ReadOnlyCollection<Document> GetDocuments(Case cCase)
+        public ReadOnlyCollection<Document> GetDocuments()
         {
-            return cCase.GetDocuments();
+            return activeCase.GetDocuments();
         }
 
-        public ReadOnlyCollection<Rating> GetRatings(Case cCase)
+        public ReadOnlyCollection<Rating> GetRatings()
         {
-            return cCase.GetRatings();
+            return activeCase.GetRatings();
         }
 
-        public ReadOnlyCollection<AskingPrice> GetAskingPrices(Case cCase)
+        public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
-            return cCase.GetAskingPrices();
+            return activeCase.GetAskingPrices();
         }
 
-        public ReadOnlyCollection<DistanceTo> GetDistanceTos(Case cCase)
+        public ReadOnlyCollection<DistanceTo> GetDistanceTos()
         {
-            return cCase.GetDistanceTos();
+            return activeCase.GetDistanceTos();
         }
 
-        public ReadOnlyCollection<Picture> GetPictures(Case cCase)
+        public ReadOnlyCollection<Picture> GetPictures()
         {
-            return cCase.GetPictures();
+            return activeCase.GetPictures();
         }
 
-        public void Setseller(Customer seller)
+        public void SetSeller(Customer seller)
         {
             if (activeCase.Seller != seller)
                 activeCase.Seller = seller;
         }
-        public void Setbuyer(Customer buyer)
+        public void SetBuyer(Customer buyer)
         {
             if (activeCase.Buyer != buyer)
                 activeCase.Buyer = buyer;
         }
-        public void SetestateAgent(EstateAgent estateAgent)
+        public void SetEstateAgent(EstateAgent estateAgent)
         {
             if (activeCase.EstateAgent != estateAgent)
                 activeCase.EstateAgent = estateAgent;
         }
-        public void SetcreationDate(DateTime creationDate)
+        public void SetCreationDate(DateTime creationDate)
         {
             if (activeCase.CreationDate != creationDate)
                 activeCase.CreationDate = creationDate;
         }
-        public void Setstatus(string status)
+        public void SetStatus(string status)
         {
             if (activeCase.Status != status)
                 activeCase.Status = status;
         }
-        public void SetdateOfSale(DateTime dateOfSale)
+        public void SetDateOfSale(DateTime dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
                 activeCase.DateOfSale = dateOfSale;
         }
-        public void SettransferDate(DateTime transferDate)
+        public void SetTransferDate(DateTime transferDate)
         {
             if (activeCase.TransferDate != transferDate)
                 activeCase.TransferDate = transferDate;
         }
-        public void SetdateOfCompletion(DateTime dateOfCompletion)
+        public void SetDateOfCompletion(DateTime dateOfCompletion)
         {
             if (activeCase.DateOfCompletion != dateOfCompletion)
                 activeCase.DateOfCompletion = dateOfCompletion;
         }
-        public void SetsellingPrice(long sellingPrice)
+        public void SetSellingPrice(long sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
                 activeCase.SellingPrice = sellingPrice;
         }
-        public void Setdescription(string description)
+        public void SetDescription(string description)
         {
             if (activeCase.Description != description)
                 activeCase.Description = description;
         }
-        public void SetlandRegistryNumber(string landRegistryNumber)
+        public void SetLandRegistryNumber(string landRegistryNumber)
         {
             if (activeCase.LandRegistryNumber != landRegistryNumber)
                 activeCase.LandRegistryNumber = landRegistryNumber;
         }
-        public void Setaddress(string address)
+        public void SetAddress(string address)
         {
             if (activeCase.Address != address)
                 activeCase.Address = address;
         }
-        public void Setcity(City city)
+        public void SetCity(City city)
         {
             if (activeCase.City != city)
                 activeCase.City = city;
         }
-        public void SetpropertyType(PropertyType propertyType)
+        public void SetPropertyType(PropertyType propertyType)
         {
             if (activeCase.PropertyType != propertyType)
                 activeCase.PropertyType = propertyType;
         }
-        public void SetpublicRating(long publicRating)
+        public void SetPublicRating(long publicRating)
         {
             if (activeCase.PublicRating != publicRating)
                 activeCase.PublicRating = publicRating;
         }
-        public void SetlandValue(long landValue)
+        public void SetLandValue(long landValue)
         {
             if (activeCase.LandValue != landValue)
                 activeCase.LandValue = landValue;
         }
-        public void SetgroundArea(int groundArea)
+        public void SetGroundArea(int groundArea)
         {
             if (activeCase.GroundArea != groundArea)
                 activeCase.GroundArea = groundArea;
         }
-        public void SetbuiltArea(int builtArea)
+        public void SetBuiltArea(int builtArea)
         {
             if (activeCase.BuiltArea != builtArea)
                 activeCase.BuiltArea = builtArea;
         }
-        public void SetlivingArea(int livingArea)
+        public void SetLivingArea(int livingArea)
         {
             if (activeCase.LivingArea != livingArea)
                 activeCase.LivingArea = livingArea;
         }
-        public void SetbasementArea(int basementArea)
+        public void SetBasementArea(int basementArea)
         {
             if (activeCase.BasementArea != basementArea)
                 activeCase.BasementArea = basementArea;
         }
-        public void SetbuiltYear(int builtYear)
+        public void SetBuiltYear(int builtYear)
         {
             if (activeCase.BuiltYear != builtYear)
                 activeCase.BuiltYear = builtYear;
         }
-        public void SetenergyClassification(string energyClassification)
+        public void SetEnergyClassification(string energyClassification)
         {
             if (activeCase.EnergyClassification != energyClassification)
                 activeCase.EnergyClassification = energyClassification;
         }
-        public void Setfloors(int floors)
+        public void SetFloors(int floors)
         {
             if (activeCase.Floors != floors)
                 activeCase.Floors = floors;
         }
-        public void Setrooms(int rooms)
+        public void SetRooms(int rooms)
         {
             if (activeCase.Rooms != rooms)
                 activeCase.Rooms = rooms;
         }
-        public void Setbedrooms(int bedrooms)
+        public void SetBedrooms(int bedrooms)
         {
             if (activeCase.Bedrooms != bedrooms)
                 activeCase.Bedrooms = bedrooms;
         }
-        public void Setbathrooms(int bathrooms)
+        public void SetBathrooms(int bathrooms)
         {
             if (activeCase.Bathrooms != bathrooms)
                 activeCase.Bathrooms = bathrooms;
         }
-        public void Settoilets(int toilets)
+        public void SetToilets(int toilets)
         {
             if (activeCase.Toilets != toilets)
                 activeCase.Toilets = toilets;
         }
-        public void SetgarageArea(int garageArea)
+        public void SetGarageArea(int garageArea)
         {
             if (activeCase.GarageArea != garageArea)
                 activeCase.GarageArea = garageArea;
         }
-        public void Setview(int view)
+        public void SetView(int view)
         {
             if (activeCase.View != view)
                 activeCase.View = view;
         }
-        public void Setneighborhood(Neighborhood neighborhood)
+        public void SetNeighborhood(Neighborhood neighborhood)
         {
             if (activeCase.Neighborhood != neighborhood)
                 activeCase.Neighborhood = neighborhood;
