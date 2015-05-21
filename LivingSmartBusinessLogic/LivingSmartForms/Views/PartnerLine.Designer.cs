@@ -67,25 +67,26 @@
             this.tlpPartner.RowCount = 2;
             this.tlpPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tlpPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpPartner.Size = new System.Drawing.Size(800, 60);
+            this.tlpPartner.Size = new System.Drawing.Size(600, 49);
             this.tlpPartner.TabIndex = 0;
             // 
             // pnlEditPartner
             // 
             this.pnlEditPartner.Controls.Add(this.btnEditPartner);
             this.pnlEditPartner.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlEditPartner.Location = new System.Drawing.Point(711, 0);
+            this.pnlEditPartner.Location = new System.Drawing.Point(533, 0);
             this.pnlEditPartner.Margin = new System.Windows.Forms.Padding(0);
             this.pnlEditPartner.Name = "pnlEditPartner";
             this.tlpPartner.SetRowSpan(this.pnlEditPartner, 2);
-            this.pnlEditPartner.Size = new System.Drawing.Size(89, 60);
+            this.pnlEditPartner.Size = new System.Drawing.Size(67, 49);
             this.pnlEditPartner.TabIndex = 0;
             // 
             // btnEditPartner
             // 
-            this.btnEditPartner.Location = new System.Drawing.Point(8, 10);
+            this.btnEditPartner.Location = new System.Drawing.Point(6, 8);
+            this.btnEditPartner.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditPartner.Name = "btnEditPartner";
-            this.btnEditPartner.Size = new System.Drawing.Size(75, 39);
+            this.btnEditPartner.Size = new System.Drawing.Size(56, 32);
             this.btnEditPartner.TabIndex = 0;
             this.btnEditPartner.Text = "Rediger";
             this.btnEditPartner.UseVisualStyleBackColor = true;
@@ -94,61 +95,66 @@
             // 
             this.slbParterName.AutoSize = true;
             this.slbParterName.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slbParterName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.slbParterName.Location = new System.Drawing.Point(0, 0);
-            this.slbParterName.Margin = new System.Windows.Forms.Padding(0);
             this.slbParterName.Name = "slbParterName";
-            this.slbParterName.Size = new System.Drawing.Size(356, 30);
+            this.slbParterName.Size = new System.Drawing.Size(267, 24);
             this.slbParterName.TabIndex = 1;
             this.slbParterName.Text = "Partner company name";
             this.slbParterName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.slbParterName.Title = "Company:";
+            this.slbParterName.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             // 
             // slbPartnerAddress
             // 
             this.slbPartnerAddress.AutoSize = true;
             this.slbPartnerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPartnerAddress.Location = new System.Drawing.Point(0, 30);
-            this.slbPartnerAddress.Margin = new System.Windows.Forms.Padding(0);
+            this.slbPartnerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbPartnerAddress.Location = new System.Drawing.Point(0, 24);
             this.slbPartnerAddress.Name = "slbPartnerAddress";
-            this.slbPartnerAddress.Size = new System.Drawing.Size(356, 30);
+            this.slbPartnerAddress.Size = new System.Drawing.Size(267, 25);
             this.slbPartnerAddress.TabIndex = 2;
             this.slbPartnerAddress.Text = "Partner company address";
             this.slbPartnerAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.slbPartnerAddress.Title = "Address:";
+            this.slbPartnerAddress.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             // 
             // slbPartnerPhone
             // 
             this.slbPartnerPhone.AutoSize = true;
             this.slbPartnerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPartnerPhone.Location = new System.Drawing.Point(356, 0);
-            this.slbPartnerPhone.Margin = new System.Windows.Forms.Padding(0);
+            this.slbPartnerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbPartnerPhone.Location = new System.Drawing.Point(267, 0);
             this.slbPartnerPhone.Name = "slbPartnerPhone";
-            this.slbPartnerPhone.Size = new System.Drawing.Size(355, 30);
+            this.slbPartnerPhone.Size = new System.Drawing.Size(266, 24);
             this.slbPartnerPhone.TabIndex = 3;
             this.slbPartnerPhone.Text = "+1 xxx-xxx-xxx";
             this.slbPartnerPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.slbPartnerPhone.Title = "Phone number:";
+            this.slbPartnerPhone.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             // 
             // slbPartnerEmail
             // 
             this.slbPartnerEmail.AutoSize = true;
             this.slbPartnerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPartnerEmail.Location = new System.Drawing.Point(356, 30);
-            this.slbPartnerEmail.Margin = new System.Windows.Forms.Padding(0);
+            this.slbPartnerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbPartnerEmail.Location = new System.Drawing.Point(267, 24);
             this.slbPartnerEmail.Name = "slbPartnerEmail";
-            this.slbPartnerEmail.Size = new System.Drawing.Size(355, 30);
+            this.slbPartnerEmail.Size = new System.Drawing.Size(266, 25);
             this.slbPartnerEmail.TabIndex = 4;
             this.slbPartnerEmail.Text = "contact@xxxxxxx.com";
             this.slbPartnerEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.slbPartnerEmail.Title = "Email:";
+            this.slbPartnerEmail.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             // 
             // PartnerLine
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tlpPartner);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "PartnerLine";
-            this.Size = new System.Drawing.Size(800, 60);
+            this.Size = new System.Drawing.Size(600, 49);
             this.tlpPartner.ResumeLayout(false);
             this.tlpPartner.PerformLayout();
             this.pnlEditPartner.ResumeLayout(false);
