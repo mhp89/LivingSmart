@@ -164,8 +164,9 @@ namespace SmartControls
 		{
 			UpdateColor();
 			Cursor = Cursors.IBeam;
+		    _text = String.Empty;
 
-			Controls.Add(textBox = new TextBox());
+		    Controls.Add(textBox = new TextBox());
 			
 			textBox.BorderStyle = BorderStyle.None;
 			textBox.BackColor = BackColor;
@@ -332,7 +333,7 @@ namespace SmartControls
 				SetError(ErrorType.NumericOnly);
 			}
 
-			return HasError;
+			return !HasError;
 		}
 
 		/// <summary>
@@ -382,7 +383,7 @@ namespace SmartControls
 			string text = "";
 
 			if (CurrentErrorType == ErrorType.ToShort)
-				text = "Feltet skal mindst være "+MinLength+" langt";
+				text = "Feltet skal mindst være " + MinLength + " langt";
 			else if (CurrentErrorType == ErrorType.InvalidInput)
 				text = "Ugyldigt input";
 			else if (CurrentErrorType == ErrorType.NumericOnly)

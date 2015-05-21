@@ -33,14 +33,13 @@ namespace LivingSmartForms.DropIns
 
 		public NewCaseDropIn(BaseForm baseForm) : base(baseForm)
 		{
-			activeCase = new Case();
-			InitializeComponent();
+            InitializeComponent();
 
 			steps = new CaseStep[Enum.GetNames(typeof(StepsIndex)).Length];
 
-			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(activeCase);
-			steps[(int)StepsIndex.Lot] = new NewCaseStepLot(activeCase);
-			steps[(int)StepsIndex.Property] = new NewCaseStepProperty(activeCase);
+			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(baseForm.caseController);
+            steps[(int)StepsIndex.Lot] = new NewCaseStepLot(baseForm.caseController);
+            steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm.caseController);
 
 			InitializeSteps();
 
@@ -72,12 +71,13 @@ namespace LivingSmartForms.DropIns
 
 		private void NextStep()
 		{
-			if (activeStep.Save(activeCase))
+			if (activeStep.Save())
 			{
 				if (currentStepIndex == steps.Length - 1)
 				{
 					//Finish
-					baseForm.CloseDropIn();
+
+                    baseForm.CloseDropIn();
 				}
 				else
 				{
@@ -98,7 +98,7 @@ namespace LivingSmartForms.DropIns
 		{
 			btnPrev.Enabled = currentStepIndex != 0;
 
-			btnNext.Text = (currentStepIndex == steps.Length - 1) ? "F�rdig" : "N�ste";
+			btnNext.Text = (currentStepIndex == steps.Length - 1) ? "Færdig" : "Næste";
 		}
 
 

@@ -247,17 +247,17 @@ namespace LivingSmartBusinessLogic
             return cCase.GetPictures();
         }
 
-        public void Setseller(Customer seller)
+        public void SetSeller(Customer seller)
         {
             if (activeCase.Seller != seller)
                 activeCase.Seller = seller;
         }
-        public void Setbuyer(Customer buyer)
+        public void SetBuyer(Customer buyer)
         {
             if (activeCase.Buyer != buyer)
                 activeCase.Buyer = buyer;
         }
-        public void SetestateAgent(EstateAgent estateAgent)
+        public void SetEstateAgent(EstateAgent estateAgent)
         {
             if (activeCase.EstateAgent != estateAgent)
                 activeCase.EstateAgent = estateAgent;
@@ -267,42 +267,42 @@ namespace LivingSmartBusinessLogic
             if (activeCase.CreationDate != creationDate)
                 activeCase.CreationDate = creationDate;
         }
-        public void Setstatus(string status)
+        public void SetStatus(string status)
         {
             if (activeCase.Status != status)
                 activeCase.Status = status;
         }
-        public void SetdateOfSale(DateTime dateOfSale)
+        public void SetDateOfSale(DateTime dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
                 activeCase.DateOfSale = dateOfSale;
         }
-        public void SettransferDate(DateTime transferDate)
+        public void SetTransferDate(DateTime transferDate)
         {
             if (activeCase.TransferDate != transferDate)
                 activeCase.TransferDate = transferDate;
         }
-        public void SetdateOfCompletion(DateTime dateOfCompletion)
+        public void SetDateOfCompletion(DateTime dateOfCompletion)
         {
             if (activeCase.DateOfCompletion != dateOfCompletion)
                 activeCase.DateOfCompletion = dateOfCompletion;
         }
-        public void SetsellingPrice(long sellingPrice)
+        public void SetSellingPrice(long sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
                 activeCase.SellingPrice = sellingPrice;
         }
-        public void Setdescription(string description)
+        public void SetDescription(string description)
         {
             if (activeCase.Description != description)
                 activeCase.Description = description;
         }
-        public void SetlandRegistryNumber(string landRegistryNumber)
+        public void SetLandRegistryNumber(string landRegistryNumber)
         {
             if (activeCase.LandRegistryNumber != landRegistryNumber)
                 activeCase.LandRegistryNumber = landRegistryNumber;
         }
-        public void Setaddress(string address)
+        public void SetAddress(string address)
         {
             if (activeCase.Address != address)
                 activeCase.Address = address;
@@ -312,82 +312,82 @@ namespace LivingSmartBusinessLogic
             if (activeCase.City != city)
                 activeCase.City = city;
         }
-        public void SetpropertyType(PropertyType propertyType)
+        public void SetPropertyType(PropertyType propertyType)
         {
             if (activeCase.PropertyType != propertyType)
                 activeCase.PropertyType = propertyType;
         }
-        public void SetpublicRating(long publicRating)
+        public void SetPublicRating(long publicRating)
         {
             if (activeCase.PublicRating != publicRating)
                 activeCase.PublicRating = publicRating;
         }
-        public void SetlandValue(long landValue)
+        public void SetLandValue(long landValue)
         {
             if (activeCase.LandValue != landValue)
                 activeCase.LandValue = landValue;
         }
-        public void SetgroundArea(int groundArea)
+        public void SetGroundArea(int groundArea)
         {
             if (activeCase.GroundArea != groundArea)
                 activeCase.GroundArea = groundArea;
         }
-        public void SetbuiltArea(int builtArea)
+        public void SetBuiltArea(int builtArea)
         {
             if (activeCase.BuiltArea != builtArea)
                 activeCase.BuiltArea = builtArea;
         }
-        public void SetlivingArea(int livingArea)
+        public void SetLivingArea(int livingArea)
         {
             if (activeCase.LivingArea != livingArea)
                 activeCase.LivingArea = livingArea;
         }
-        public void SetbasementArea(int basementArea)
+        public void SetBasementArea(int basementArea)
         {
             if (activeCase.BasementArea != basementArea)
                 activeCase.BasementArea = basementArea;
         }
-        public void SetbuiltYear(int builtYear)
+        public void SetBuiltYear(int builtYear)
         {
             if (activeCase.BuiltYear != builtYear)
                 activeCase.BuiltYear = builtYear;
         }
-        public void SetenergyClassification(string energyClassification)
+        public void SetEnergyClassification(string energyClassification)
         {
             if (activeCase.EnergyClassification != energyClassification)
                 activeCase.EnergyClassification = energyClassification;
         }
-        public void Setfloors(int floors)
+        public void SetFloors(int floors)
         {
             if (activeCase.Floors != floors)
                 activeCase.Floors = floors;
         }
-        public void Setrooms(int rooms)
+        public void SetRooms(int rooms)
         {
             if (activeCase.Rooms != rooms)
                 activeCase.Rooms = rooms;
         }
-        public void Setbedrooms(int bedrooms)
+        public void SetBedrooms(int bedrooms)
         {
             if (activeCase.Bedrooms != bedrooms)
                 activeCase.Bedrooms = bedrooms;
         }
-        public void Setbathrooms(int bathrooms)
+        public void SetBathrooms(int bathrooms)
         {
             if (activeCase.Bathrooms != bathrooms)
                 activeCase.Bathrooms = bathrooms;
         }
-        public void Settoilets(int toilets)
+        public void SetToilets(int toilets)
         {
             if (activeCase.Toilets != toilets)
                 activeCase.Toilets = toilets;
         }
-        public void SetgarageArea(int garageArea)
+        public void SetGarageArea(int garageArea)
         {
             if (activeCase.GarageArea != garageArea)
                 activeCase.GarageArea = garageArea;
         }
-        public void Setview(int view)
+        public void SetView(int view)
         {
             if (activeCase.View != view)
                 activeCase.View = view;

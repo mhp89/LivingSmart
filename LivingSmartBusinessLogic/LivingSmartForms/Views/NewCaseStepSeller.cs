@@ -14,14 +14,23 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepSeller : CaseStep
     {
-        public NewCaseStepSeller(Case cCase)
+        private CaseController caseController;
+        public NewCaseStepSeller(CaseController caseController)
         {
+            this.caseController = caseController;
+            caseController.MakeNewCase();
+
             InitializeComponent();
         }
 
-	    public override bool Save(Case cCase)
+	    public override bool Save()
 	    {
-		    return true;
+	        return true;
 	    }
+
+        private bool ValidateFields()
+        {
+            return true;
+        }
     }
 }

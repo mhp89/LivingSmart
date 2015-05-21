@@ -14,14 +14,40 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepLot : CaseStep
     {
-        public NewCaseStepLot(Case cCase)
+        private CaseController caseController;
+        public NewCaseStepLot(CaseController caseController)
         {
+            this.caseController = caseController;
             InitializeComponent();
         }
 
-		public override bool Save(Case cCase)
-		{
-			return true;
-		}
+        public override bool Save()
+        {
+            bool fielddataOk = ValidateFields();
+            if (fielddataOk)
+            {
+                caseController.SetLandRegistryNumber(stbLotNumber.Text);
+                caseController.SetAddress(stbLotAddress.Text);
+                caseController.SetLandValue(Convert.ToInt32(stbLotValue.Text));
+                caseController.SetGroundArea(Convert.ToInt32(stbLotArea.Text));
+                caseController.SetBuiltArea(Convert.ToInt32(stbLotBuildArea.Text));
+                caseController.SetGarageArea(Convert.ToInt32(stbLotGarageArea.Text));
+                caseController.SetView(Convert.ToInt32(stbLotView.Text));
+            }
+            return fielddataOk;
+        }
+
+        private bool ValidateFields()
+        {
+            bool fielddataOk = true;
+            fielddataOk &= stbLotNumber.Validate();
+            fielddataOk &= stbLotAddress.Validate();
+            fielddataOk &= stbLotValue.Validate();
+            fielddataOk &= stbLotArea.Validate();
+            fielddataOk &= stbLotBuildArea.Validate();
+            fielddataOk &= stbLotGarageArea.Validate();
+            fielddataOk &= stbLotView.Validate();
+            return fielddataOk;
+        }
     }
 }

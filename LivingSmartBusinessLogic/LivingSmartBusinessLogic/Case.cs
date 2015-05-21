@@ -182,6 +182,5 @@ namespace LivingSmartBusinessLogic
         }
         
         #endregion
-
     }
 }
