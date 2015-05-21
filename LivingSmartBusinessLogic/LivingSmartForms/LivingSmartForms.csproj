@@ -161,6 +161,12 @@
     <Compile Include="Views\PartnerLine.Designer.cs">
       <DependentUpon>PartnerLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PartnerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerView.Designer.cs">
+      <DependentUpon>PartnerView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartnerView.resx">
+      <DependentUpon>PartnerView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

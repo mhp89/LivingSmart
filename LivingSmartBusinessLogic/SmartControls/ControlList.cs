@@ -32,7 +32,6 @@ namespace SmartControls
 
 		void ControlList_MouseEnter(object sender, EventArgs e)
 		{
-			Console.WriteLine("MouseEnter");
 			Focus();
 		}
 

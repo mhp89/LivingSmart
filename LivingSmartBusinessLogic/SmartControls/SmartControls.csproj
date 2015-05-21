@@ -41,6 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalogClock.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ControlList.cs">
       <SubType>Component</SubType>
     </Compile>
