@@ -76,7 +76,8 @@ namespace LivingSmartForms.DropIns
 				if (currentStepIndex == steps.Length - 1)
 				{
 					//Finish
-					baseForm.CloseDropIn();
+
+                    baseForm.CloseDropIn();
 				}
 				else
 				{
@@ -97,7 +98,7 @@ namespace LivingSmartForms.DropIns
 		{
 			btnPrev.Enabled = currentStepIndex != 0;
 
-			btnNext.Text = (currentStepIndex == steps.Length - 1) ? "F�rdig" : "N�ste";
+			btnNext.Text = (currentStepIndex == steps.Length - 1) ? "Færdig" : "Næste";
 		}
 
 

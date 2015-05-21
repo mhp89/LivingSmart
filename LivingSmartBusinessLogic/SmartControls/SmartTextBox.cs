@@ -164,8 +164,9 @@ namespace SmartControls
 		{
 			UpdateColor();
 			Cursor = Cursors.IBeam;
+		    _text = String.Empty;
 
-			Controls.Add(textBox = new TextBox());
+		    Controls.Add(textBox = new TextBox());
 			
 			textBox.BorderStyle = BorderStyle.None;
 			textBox.BackColor = BackColor;
@@ -332,7 +333,7 @@ namespace SmartControls
 				SetError(ErrorType.NumericOnly);
 			}
 
-			return HasError;
+			return !HasError;
 		}
 
 		/// <summary>

@@ -21,11 +21,11 @@ namespace LivingSmartForms.Views
             InitializeComponent();
         }
 
-		public override bool Save()
-		{
-		    bool fielddataOk = VerifyFields();
-		    if (fielddataOk)
-		    {
+        public override bool Save()
+        {
+            bool fielddataOk = ValidateFields();
+            if (fielddataOk)
+            {
                 caseController.SetlandRegistryNumber(stbLotNumber.Text);
                 caseController.Setaddress(stbLotAddress.Text);
                 caseController.SetlandValue(Convert.ToInt32(stbLotValue.Text));
@@ -34,12 +34,20 @@ namespace LivingSmartForms.Views
                 caseController.SetgarageArea(Convert.ToInt32(stbLotGarageArea.Text));
                 caseController.Setview(Convert.ToInt32(stbLotView.Text));
             }
-		    return fielddataOk;
-		}
+            return fielddataOk;
+        }
 
-        private bool VerifyFields()
+        private bool ValidateFields()
         {
-            return true;
+            bool fielddataOk = true;
+            fielddataOk &= stbLotNumber.Validate();
+            fielddataOk &= stbLotAddress.Validate();
+            fielddataOk &= stbLotValue.Validate();
+            fielddataOk &= stbLotArea.Validate();
+            fielddataOk &= stbLotBuildArea.Validate();
+            fielddataOk &= stbLotGarageArea.Validate();
+            fielddataOk &= stbLotView.Validate();
+            return fielddataOk;
         }
     }
 }

@@ -18,6 +18,8 @@ namespace LivingSmartForms.Views
         public NewCaseStepSeller(CaseController caseController)
         {
             this.caseController = caseController;
+            caseController.MakeNewCase();
+
             InitializeComponent();
         }
 
@@ -26,7 +28,7 @@ namespace LivingSmartForms.Views
 	        return true;
 	    }
 
-        private bool VerifyFields()
+        private bool ValidateFields()
         {
             return true;
         }
