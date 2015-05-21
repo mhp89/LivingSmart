@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Pages;
@@ -35,13 +36,9 @@ namespace LivingSmartForms
 
 		#endregion
 
-<<<<<<< HEAD
 	    private Control partnerView;
 
-		public BaseForm()
-=======
 		public BaseForm(CaseController caseController)
->>>>>>> c073863aacfbf456b7e0c70f46fe16995ccea215
         {
 			AutoScaleMode = AutoScaleMode.None;
 		    this.caseController = caseController;

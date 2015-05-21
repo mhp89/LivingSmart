@@ -11,9 +11,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivingSmartWpf", "LivingSma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LivingSmartBusinessLogicTests", "LivingSmartBusinessLogicTests\LivingSmartBusinessLogicTests.csproj", "{C87C058F-92C9-4D7E-92AD-075BC718FEDD}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartControls", "SmartControls\SmartControls.csproj", "{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}"
 EndProject
 EndProject
+=======
+>>>>>>> eae990c6cc177d78ef2422b05da134a45251c9b4
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +39,7 @@ Global
 		{C87C058F-92C9-4D7E-92AD-075BC718FEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87C058F-92C9-4D7E-92AD-075BC718FEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87C058F-92C9-4D7E-92AD-075BC718FEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -44,6 +48,8 @@ Global
 		{ED032045-A582-4539-9809-AFF0C0E35267}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED032045-A582-4539-9809-AFF0C0E35267}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED032045-A582-4539-9809-AFF0C0E35267}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+>>>>>>> eae990c6cc177d78ef2422b05da134a45251c9b4
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

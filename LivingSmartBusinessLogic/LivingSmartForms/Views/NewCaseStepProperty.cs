@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.UserControls;
 

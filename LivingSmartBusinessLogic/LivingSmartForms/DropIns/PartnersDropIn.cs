@@ -1,4 +1,5 @@
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
 
@@ -10,27 +11,24 @@ namespace LivingSmartForms.DropIns
 		{
 			InitializeComponent();
 
-			var partner = new Partner
-			{
-				Name = "Newyorker Houses",
-				City = "New York City",
-				RegionShort = "NY",
-				Telephone = "+1 917-710-045",
-				Email = "contact@NYHouses.com",
-				Timezone = "Eastern Standard Time"
-			};
+			PartnerController controller = new PartnerController();
+			var partner = controller.MakeNewPartner();
+			controller.SetName(partner, "Newyorker Houses");
+			controller.SetCity(partner, "New York City");
+			controller.SetRegionShort(partner, "NY");
+			controller.SetTelephone(partner, "+1 917-710-045");
+			controller.SetEmail(partner, "contact@NYHouses.com");
+			controller.SetTimeZone(partner, "Eastern Standard Time");
 
 			clsPartners.AddControl(new PartnerView(partner));
 
-			partner = new Partner
-			{
-				Name = "Hawao Houses",
-				City = "Hawaii",
-				RegionShort = "NY",
-				Telephone = "+1 917-710-045",
-				Email = "contact@NYHouses.com",
-				Timezone = "Hawaiian Standard Time"
-			};
+			partner = controller.MakeNewPartner();
+			controller.SetName(partner, "Hawaoo Houses");
+			controller.SetCity(partner, "Hawaii");
+			controller.SetRegionShort(partner, "NY");
+			controller.SetTelephone(partner, "+1 917-710-045");
+			controller.SetEmail(partner, "contact@Hawaoo.com");
+			controller.SetTimeZone(partner, "Hawaiian Standard Time");
 
 			clsPartners.AddControl(new PartnerView(partner));
 		}
