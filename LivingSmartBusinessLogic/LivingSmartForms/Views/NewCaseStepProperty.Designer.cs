@@ -241,7 +241,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyEnergyMark.MinLength = 1;
 			this.stbPropertyEnergyMark.Name = "stbPropertyEnergyMark";
 			this.stbPropertyEnergyMark.NumericOnly = false;
-			this.stbPropertyEnergyMark.RegularExpression = "[a-e+-]";
+			this.stbPropertyEnergyMark.RegularExpression = "^[A-Ea-e](\\+*|\\-*)$";
 			this.stbPropertyEnergyMark.Size = new System.Drawing.Size(288, 30);
 			this.stbPropertyEnergyMark.Suffix = null;
 			this.stbPropertyEnergyMark.TabIndex = 15;
