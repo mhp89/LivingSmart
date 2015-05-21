@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class Partner
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 

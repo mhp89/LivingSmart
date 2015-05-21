@@ -7,11 +7,11 @@ namespace LivingSmartBusinessLogic
 {
     public class EstateAgentCatalog
     {
-        private System.Collections.Generic.List<LivingSmartBusinessLogic.EstateAgent> estateAgents;
+        private Dictionary<int,EstateAgent> estateAgents;
 
         public EstateAgentCatalog()
         {
-            estateAgents = new List<EstateAgent>();
+            estateAgents = new Dictionary<int, EstateAgent>();
         }
 
         public EstateAgent Check(int id)
@@ -26,12 +26,12 @@ namespace LivingSmartBusinessLogic
 
         public void AddToCatalog(EstateAgent estateAgent)
         {
-            estateAgents.Add(estateAgent);
+            estateAgents.Add(estateAgent.Id, estateAgent);
         }
 
         public void RemoveFromCatalog(EstateAgent estateAgent)
         {
-            estateAgents.Remove(estateAgent);
+            estateAgents.Remove(estateAgent.Id);
         }
     }
 }

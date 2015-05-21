@@ -7,11 +7,18 @@ namespace LivingSmartBusinessLogic
 {
     public class CustomerCatalog
     {
-        private System.Collections.Generic.List<LivingSmartBusinessLogic.Customer> customers;
+        private Dictionary<int, Customer> customers;
+        //private List<Customer> customers;
 
         public CustomerCatalog()
         {
-            customers = new List<Customer>();
+            //customers = new List<Customer>();
+            customers = new Dictionary<int, Customer>();
+        }
+
+        public void LoadCatalog()
+        {
+            throw new System.NotImplementedException();
         }
 
         public Customer Check(int id)
@@ -26,12 +33,12 @@ namespace LivingSmartBusinessLogic
 
         public void AddToCatalog(Customer customer)
         {
-            customers.Add(customer);
+            customers.Add(customer.Id, customer);
         }
 
         public void RemoveFromCatalog(Customer customer)
         {
-            customers.Remove(customer);
+            customers.Remove(customer.Id);
         }
     }
 }
