@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class AskingPrice
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -30,7 +30,7 @@ namespace LivingSmartBusinessLogic
 
         internal AskingPrice(int id, long value, DateTime date)
         {
-            this.id = id;
+            Id = id;
             _value = value;
             _date = date;
         }

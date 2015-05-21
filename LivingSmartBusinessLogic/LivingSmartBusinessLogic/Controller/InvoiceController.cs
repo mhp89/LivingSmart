@@ -9,6 +9,8 @@
             invoiceCatalog = new InvoiceCatalog();
         }
 
+        #region Methods
+
         public void AddInvoice(Invoice invoice)
         {
             invoiceCatalog.AddToCatalog(invoice);
@@ -28,5 +30,7 @@
         {
             invoiceCatalog.Save(invoice);
         }
+
+        #endregion
     }
 }

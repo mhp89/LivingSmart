@@ -78,12 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
-    <None Include="Customer.sequencediagram" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Customer.sequencediagram.layout">
-      <DependentUpon>Customer.sequencediagram</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="DB\" />

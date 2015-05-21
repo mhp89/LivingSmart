@@ -7,7 +7,9 @@ namespace LivingSmartBusinessLogic
 {
     public class Neighborhood
     {
-        private City city;
+
+        public int Id { get; private set; }
+        public City city { get; private set; }
 
         #region Private Fields
 

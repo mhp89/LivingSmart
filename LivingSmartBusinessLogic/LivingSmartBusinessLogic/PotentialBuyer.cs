@@ -7,7 +7,8 @@ namespace LivingSmartBusinessLogic
 {
     public class PotentialBuyer
     {
-        private Customer potBuyer;
+        public Customer PotBuyer { get; private set; }
+        public Case NewCase { get; private set; }
 
         #region Private Fields
 
@@ -17,13 +18,13 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public DateTime Date { get { return _date; } set { _date = value; } }
+        public DateTime Date { get { return _date; } internal set { _date = value; } }
 
         #endregion
 
         internal PotentialBuyer(Customer potBuyer)
         {
-            this.potBuyer = potBuyer;
+            PotBuyer = potBuyer;
         }
 
         #region Methods
