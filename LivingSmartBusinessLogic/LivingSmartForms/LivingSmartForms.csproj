@@ -137,6 +137,12 @@
     <Compile Include="Views\PartnerLine.Designer.cs">
       <DependentUpon>PartnerLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PartnerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerView.Designer.cs">
+      <DependentUpon>PartnerView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,6 +183,9 @@
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartnerView.resx">
+      <DependentUpon>PartnerView.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -191,6 +200,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LivingSmartBusinessLogic\LivingSmartBusinessLogic.csproj">
+      <Project>{652743fa-2264-41ef-a011-8cb4a994864e}</Project>
+      <Name>LivingSmartBusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartControls\SmartControls.csproj">
       <Project>{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}</Project>
       <Name>SmartControls</Name>

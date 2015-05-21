@@ -32,6 +32,8 @@ namespace LivingSmartForms
 
 		#endregion
 
+	    private Control partnerView;
+
 		public BaseForm()
         {
 			AutoScaleMode = AutoScaleMode.None;
@@ -136,22 +138,16 @@ namespace LivingSmartForms
 			if (btn.Selected)
 			{
 				btn.Text = ">";
-				var view = new PartnersDropIn(this);
+				if(partnerView == null)
+					partnerView = new PartnersDropIn(this);
 				//F�r view'et til at fylde hele holderen
-				view.Dock = DockStyle.Fill;
-				pnlPartnersHolder.Controls.Add(view);
-				//pnlPartnersHolder.BringToFront();
-
-				/*//Flytter holderen s� den sidder i h�jre side
-				pnlPartnersHolder.Location = new Point(Width - pnlPartnersHolder.Width, pnlPartnersHolder.Top);*/
-
+				partnerView.Dock = DockStyle.Fill;
+				pnlPartnersHolder.Controls.Add(partnerView);
 			}
 			else
 			{
 				btn.Text = "<";
 				pnlPartnersHolder.Controls.Clear();
-				//Nustiller st�rrelsen
-				//pnlPartnersHolder.Size = new Size(0, pnlPartnersHolder.Height);
 			}
 
 			//Gentegner hele formen for at sikre korrekt design
