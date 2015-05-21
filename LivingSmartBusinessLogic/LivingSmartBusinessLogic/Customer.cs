@@ -39,7 +39,7 @@ namespace LivingSmartBusinessLogic
 
         internal Customer(int id, string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
         {
-            this.id = id;
+            Id = id;
             _name = name;
             _dateOfBirth = dateOfBirth;
             _address = address;

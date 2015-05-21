@@ -10,33 +10,33 @@ namespace LivingSmartBusinessLogic
         private Dictionary<int, Customer> customers;
         //private List<Customer> customers;
 
-        public CustomerCatalog()
+        internal CustomerCatalog()
         {
             //customers = new List<Customer>();
             customers = new Dictionary<int, Customer>();
         }
 
-        public void LoadCatalog()
+        internal void LoadCatalog()
         {
             throw new System.NotImplementedException();
         }
 
-        public Customer Check(int id)
+        internal Customer Check(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public void Save(Customer customer)
+        internal void Save(Customer customer)
         {
             throw new System.NotImplementedException();
         }
 
-        public void AddToCatalog(Customer customer)
+        internal void AddToCatalog(Customer customer)
         {
             customers.Add(customer.Id, customer);
         }
 
-        public void RemoveFromCatalog(Customer customer)
+        internal void RemoveFromCatalog(Customer customer)
         {
             customers.Remove(customer.Id);
         }

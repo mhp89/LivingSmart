@@ -9,27 +9,27 @@ namespace LivingSmartBusinessLogic
     {
         private List<Appointment> appointments;
 
-        public AppointmentCatalog()
+        internal AppointmentCatalog()
         {
             appointments = new List<Appointment>();
         }
 
-        public Appointment Check(int id)
+        internal Appointment Check(int id)
         {
             throw new NotImplementedException();
         }
 
-        public void Save(Appointment appointment)
+        internal void Save(Appointment appointment)
         {
             throw new NotImplementedException();
         }
 
-        public void AddToCatalog(Appointment appointment)
+        internal void AddToCatalog(Appointment appointment)
         {
             appointments.Add(appointment);
         }
 
-        public void RemoveFromCatalog(Appointment appointment)
+        internal void RemoveFromCatalog(Appointment appointment)
         {
             appointments.Remove(appointment);
         }

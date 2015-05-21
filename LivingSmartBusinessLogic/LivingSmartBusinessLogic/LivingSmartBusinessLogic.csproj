@@ -43,38 +43,38 @@
     <Compile Include="Ad.cs" />
     <Compile Include="Appointment.cs" />
     <Compile Include="AppointmentCatalog.cs" />
-    <Compile Include="AppointmentController.cs" />
+    <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="AskingPrice.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="CaseCatalog.cs" />
-    <Compile Include="CaseController.cs" />
+    <Compile Include="Controller\CaseController.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerCatalog.cs" />
-    <Compile Include="CustomerController.cs" />
+    <Compile Include="Controller\CustomerController.cs" />
     <Compile Include="DistanceTo.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="EstateAgent.cs" />
     <Compile Include="EstateAgentCatalog.cs" />
-    <Compile Include="EstateAgentController.cs" />
+    <Compile Include="Controller\EstateAgentController.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="Invoice.cs" />
-    <Compile Include="InvoiceController.cs" />
+    <Compile Include="Controller\InvoiceController.cs" />
     <Compile Include="InvoiceCatalog.cs" />
     <Compile Include="ISubject.cs" />
     <Compile Include="Neighborhood.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="NeighborhoodCatalog.cs" />
-    <Compile Include="NeighborhoodController.cs" />
+    <Compile Include="Controller\NeighborhoodController.cs" />
     <Compile Include="Partner.cs" />
     <Compile Include="PartnerCatalog.cs" />
-    <Compile Include="PartnerController.cs" />
+    <Compile Include="Controller\PartnerController.cs" />
     <Compile Include="Picture.cs" />
     <Compile Include="PotentialBuyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyType.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="City.cs" />
-    <Compile Include="SellPropertyController.cs" />
+    <Compile Include="Controller\SellPropertyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
@@ -84,6 +84,10 @@
     <EmbeddedResource Include="Customer.sequencediagram.layout">
       <DependentUpon>Customer.sequencediagram</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DB\" />
+    <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

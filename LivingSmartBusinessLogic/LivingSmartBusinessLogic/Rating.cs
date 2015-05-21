@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class Rating
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -32,7 +32,7 @@ namespace LivingSmartBusinessLogic
 
         internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
         {
-            this.id = id;
+            Id = id;
             _estateAgentValue = estateAgentValue;
             _systemValue = systemValue;
             _date = date;

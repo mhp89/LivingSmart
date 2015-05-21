@@ -12,32 +12,32 @@ namespace LivingSmartBusinessLogic
         private Dictionary<int,Case> cases;
         //private List<Case> cases;
 
-        public CaseCatalog()
+        internal CaseCatalog()
         {
             cases = new Dictionary<int, Case>();
         }
 
-        public void Load()
+        internal void Load()
         {
             
         }
 
-        public Case Check(int id)
+        internal Case Check(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public void Save(Case cCase)
+        internal void Save(Case cCase)
         {
             throw new System.NotImplementedException();
         }
 
-        public void AddToCatalog(Case cCase)
+        internal void AddToCatalog(Case cCase)
         {
             cases.Add(cCase.Id, cCase);
         }
 
-        public void RemoveFromCatalog(int caseId)
+        internal void RemoveFromCatalog(int caseId)
         {
             cases.Remove(caseId);
         }

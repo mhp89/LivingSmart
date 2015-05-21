@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class Appointment
     {
-        private int id;
+        public int Id { get; private set; }
         
         #region Private Fields
 
@@ -16,7 +16,7 @@ namespace LivingSmartBusinessLogic
         private int _duration;
         private string _description;
         private string _place;
-        private Customer _potBuyer;
+        private Customer _customer;
 
         #endregion
 
@@ -27,7 +27,7 @@ namespace LivingSmartBusinessLogic
         public int Duration { get { return _duration; } internal set { _duration = value; } }
         public string Description { get { return _description; } internal set { _description = value; } }
         public string Place { get { return _place; } internal set { _place = value; } }
-        public Customer Customer { get { return _potBuyer; } internal set { _potBuyer = value; } }
+        public Customer Customer { get { return _customer; } internal set { _customer = value; } }
 
 
         #endregion
@@ -39,13 +39,13 @@ namespace LivingSmartBusinessLogic
 
         internal Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer potBuyer)
         {
-            this.id = id;
+            Id = id;
             _case = cCase;
             _timestamp = timeStamp;
             _duration = duration;
             _description = description;
             _place = place;
-            _potBuyer = potBuyer;
+            _customer = potBuyer;
         }
 
         #region Methods

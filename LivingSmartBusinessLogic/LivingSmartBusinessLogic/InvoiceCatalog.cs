@@ -9,22 +9,22 @@ namespace LivingSmartBusinessLogic
     {
         private List<Invoice> invoices;
 
-        public Invoice Check(int id)
+        internal Invoice Check(int id)
         {
             throw new System.NotImplementedException();
         }
 
-        public void Save(Invoice invoice)
+        internal void Save(Invoice invoice)
         {
             throw new System.NotImplementedException();
         }
 
-        public void AddToCatalog(Invoice invoice)
+        internal void AddToCatalog(Invoice invoice)
         {
             invoices.Add(invoice);
         }
 
-        public void RemoveFromCatalog(Invoice invoice)
+        internal void RemoveFromCatalog(Invoice invoice)
         {
             invoices.Remove(invoice);
         }

@@ -8,7 +8,7 @@ namespace LivingSmartBusinessLogic
 {
     public class PropertyType
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -24,7 +24,7 @@ namespace LivingSmartBusinessLogic
 
         internal PropertyType(int id, string description)
         {
-            this.id = id;
+            Id = id;
             _description = description;
         }
 

@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class Document
     {
-        private int id;
+        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -29,7 +29,7 @@ namespace LivingSmartBusinessLogic
 
         internal Document(int id, string type, int price, string location, string status)
         {
-            this.id = id;
+            Id = id;
             _type = type;
             _price = price;
             _location = location;
