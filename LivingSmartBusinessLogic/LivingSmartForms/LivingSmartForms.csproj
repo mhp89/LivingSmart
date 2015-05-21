@@ -105,6 +105,12 @@
     <Compile Include="Pages\Cases.Designer.cs">
       <DependentUpon>Cases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Customers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Overview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -181,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Cases.resx">
       <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
