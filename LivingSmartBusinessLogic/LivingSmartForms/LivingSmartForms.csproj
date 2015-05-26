@@ -113,6 +113,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\DateField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DateField.Designer.cs">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DistanceField.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -161,6 +167,12 @@
     <Compile Include="Views\NewCustomer.Designer.cs">
       <DependentUpon>NewCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewEstateAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewEstateAgent.Designer.cs">
+      <DependentUpon>NewEstateAgent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PartnerLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +219,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\DateField.resx">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DistanceField.resx">
       <DependentUpon>DistanceField.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCustomer.resx">
       <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewEstateAgent.resx">
+      <DependentUpon>NewEstateAgent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
