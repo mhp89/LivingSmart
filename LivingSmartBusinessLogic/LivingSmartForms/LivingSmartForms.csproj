@@ -143,6 +143,12 @@
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewAppointment.Designer.cs">
+      <DependentUpon>NewAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewCaseStepLot.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -239,6 +245,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerLine.resx">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewAppointment.resx">
+      <DependentUpon>NewAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepLot.resx">
       <DependentUpon>NewCaseStepLot.cs</DependentUpon>

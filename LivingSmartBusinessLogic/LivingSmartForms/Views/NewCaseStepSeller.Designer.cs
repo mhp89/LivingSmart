@@ -42,7 +42,7 @@ namespace LivingSmartForms.Views
             this.lblSellerCity = new System.Windows.Forms.Label();
             this.stbSellerName = new SmartControls.SmartTextBox();
             this.pnlSellerId = new System.Windows.Forms.Panel();
-            this.btnExistingCustomer = new SmartControls.SmartButton();
+            this.btnFindCustomer = new SmartControls.SmartButton();
             this.lblSellerIdNo = new System.Windows.Forms.Label();
             this.stbSellerPhone = new SmartControls.SmartTextBox();
             this.pnlSellerCity = new System.Windows.Forms.Panel();
@@ -102,6 +102,7 @@ namespace LivingSmartForms.Views
             this.stbEstateAgentName.MinLength = 5;
             this.stbEstateAgentName.Name = "stbEstateAgentName";
             this.stbEstateAgentName.NumericOnly = false;
+            this.stbEstateAgentName.Placeholder = null;
             this.stbEstateAgentName.RegularExpression = null;
             this.stbEstateAgentName.Size = new System.Drawing.Size(360, 30);
             this.stbEstateAgentName.Suffix = null;
@@ -156,6 +157,7 @@ namespace LivingSmartForms.Views
             this.stbSellerEmail.MinLength = 10;
             this.stbSellerEmail.Name = "stbSellerEmail";
             this.stbSellerEmail.NumericOnly = false;
+            this.stbSellerEmail.Placeholder = null;
             this.stbSellerEmail.RegularExpression = null;
             this.stbSellerEmail.Size = new System.Drawing.Size(360, 30);
             this.stbSellerEmail.Suffix = null;
@@ -177,6 +179,7 @@ namespace LivingSmartForms.Views
             this.stbSellerAdress.MinLength = 5;
             this.stbSellerAdress.Name = "stbSellerAdress";
             this.stbSellerAdress.NumericOnly = false;
+            this.stbSellerAdress.Placeholder = null;
             this.stbSellerAdress.RegularExpression = null;
             this.stbSellerAdress.Size = new System.Drawing.Size(360, 30);
             this.stbSellerAdress.Suffix = null;
@@ -283,6 +286,7 @@ namespace LivingSmartForms.Views
             this.stbSellerName.MinLength = -1;
             this.stbSellerName.Name = "stbSellerName";
             this.stbSellerName.NumericOnly = false;
+            this.stbSellerName.Placeholder = null;
             this.stbSellerName.RegularExpression = null;
             this.stbSellerName.Size = new System.Drawing.Size(360, 30);
             this.stbSellerName.Suffix = null;
@@ -291,7 +295,7 @@ namespace LivingSmartForms.Views
             // 
             // pnlSellerId
             // 
-            this.pnlSellerId.Controls.Add(this.btnExistingCustomer);
+            this.pnlSellerId.Controls.Add(this.btnFindCustomer);
             this.pnlSellerId.Controls.Add(this.lblSellerIdNo);
             this.pnlSellerId.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlSellerId.Location = new System.Drawing.Point(120, 0);
@@ -300,35 +304,37 @@ namespace LivingSmartForms.Views
             this.pnlSellerId.Size = new System.Drawing.Size(360, 30);
             this.pnlSellerId.TabIndex = 5;
             // 
-            // btnExistingCustomer
+            // btnFindCustomer
             // 
-            this.btnExistingCustomer.AutoSize = true;
-            this.btnExistingCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnExistingCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnExistingCustomer.Color = SmartControls.SmartColor.ColorStyle.Dark;
-            this.btnExistingCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExistingCustomer.Dock = System.Windows.Forms.DockStyle.Right;
-            this.btnExistingCustomer.FlatAppearance.BorderSize = 0;
-            this.btnExistingCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnExistingCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnExistingCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExistingCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnExistingCustomer.Location = new System.Drawing.Point(127, 0);
-            this.btnExistingCustomer.Name = "btnExistingCustomer";
-            this.btnExistingCustomer.Size = new System.Drawing.Size(233, 30);
-            this.btnExistingCustomer.TabIndex = 1;
-            this.btnExistingCustomer.Text = "Find eksisterende kunde";
-            this.btnExistingCustomer.UseVisualStyleBackColor = false;
+            this.btnFindCustomer.AutoSize = true;
+            this.btnFindCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnFindCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnFindCustomer.Color = SmartControls.SmartColor.ColorStyle.Dark;
+            this.btnFindCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFindCustomer.Dock = System.Windows.Forms.DockStyle.Right;
+            this.btnFindCustomer.FlatAppearance.BorderSize = 0;
+            this.btnFindCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.btnFindCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.btnFindCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFindCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.btnFindCustomer.Location = new System.Drawing.Point(226, 0);
+            this.btnFindCustomer.Name = "btnFindCustomer";
+            this.btnFindCustomer.Size = new System.Drawing.Size(134, 30);
+            this.btnFindCustomer.TabIndex = 1;
+            this.btnFindCustomer.Text = "Find kunde";
+            this.btnFindCustomer.UseVisualStyleBackColor = false;
             // 
             // lblSellerIdNo
             // 
-            this.lblSellerIdNo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblSellerIdNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblSellerIdNo.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSellerIdNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.lblSellerIdNo.Location = new System.Drawing.Point(0, 0);
-            this.lblSellerIdNo.Margin = new System.Windows.Forms.Padding(0);
+            this.lblSellerIdNo.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.lblSellerIdNo.Name = "lblSellerIdNo";
-            this.lblSellerIdNo.Size = new System.Drawing.Size(68, 30);
+            this.lblSellerIdNo.Padding = new System.Windows.Forms.Padding(5, 0, 0, 0);
+            this.lblSellerIdNo.Size = new System.Drawing.Size(216, 30);
             this.lblSellerIdNo.TabIndex = 0;
             this.lblSellerIdNo.Text = "1";
             this.lblSellerIdNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -348,6 +354,7 @@ namespace LivingSmartForms.Views
             this.stbSellerPhone.MinLength = 8;
             this.stbSellerPhone.Name = "stbSellerPhone";
             this.stbSellerPhone.NumericOnly = true;
+            this.stbSellerPhone.Placeholder = null;
             this.stbSellerPhone.RegularExpression = null;
             this.stbSellerPhone.Size = new System.Drawing.Size(360, 30);
             this.stbSellerPhone.Suffix = null;
@@ -393,6 +400,7 @@ namespace LivingSmartForms.Views
             this.stbSellerZipCode.MinLength = 4;
             this.stbSellerZipCode.Name = "stbSellerZipCode";
             this.stbSellerZipCode.NumericOnly = true;
+            this.stbSellerZipCode.Placeholder = null;
             this.stbSellerZipCode.RegularExpression = null;
             this.stbSellerZipCode.Size = new System.Drawing.Size(68, 30);
             this.stbSellerZipCode.Suffix = null;
@@ -462,7 +470,7 @@ namespace LivingSmartForms.Views
         private System.Windows.Forms.Label lblSellerIdNo;
         private SmartControls.SmartTextBox stbSellerEmail;
         private SmartControls.SmartTextBox stbSellerAdress;
-        private SmartControls.SmartButton btnExistingCustomer;
+        private SmartControls.SmartButton btnFindCustomer;
         private SmartControls.SmartTextBox stbSellerPhone;
         private System.Windows.Forms.Panel pnlSellerCity;
         private System.Windows.Forms.Label lblSellerCityCountry;
