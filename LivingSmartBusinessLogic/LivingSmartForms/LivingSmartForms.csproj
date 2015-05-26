@@ -173,6 +173,12 @@
     <Compile Include="Views\NewEstateAgent.Designer.cs">
       <DependentUpon>NewEstateAgent.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewPartner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewPartner.Designer.cs">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PartnerLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -248,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewEstateAgent.resx">
       <DependentUpon>NewEstateAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewPartner.resx">
+      <DependentUpon>NewPartner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
