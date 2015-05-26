@@ -155,6 +155,12 @@
     <Compile Include="Views\NewCaseStepSeller.Designer.cs">
       <DependentUpon>NewCaseStepSeller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PartnerLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepSeller.resx">
       <DependentUpon>NewCaseStepSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
