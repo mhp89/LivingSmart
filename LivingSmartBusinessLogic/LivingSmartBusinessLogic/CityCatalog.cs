@@ -20,26 +20,11 @@ namespace LivingSmartBusinessLogic
 
         }
 
-        internal Case Check(int zipCode)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        internal void Save(City city)
-        {
-            throw new System.NotImplementedException();
-        }
-
         internal void AddToCatalog(City city)
         {
             cities.Add(city.ZipCode, city);
         }
-
-        internal void RemoveFromCatalog(int zipCode)
-        {
-            cities.Remove(zipCode);
-        }
-
+        
         internal City GetCity(int zipCode)
         {
             if (cities.ContainsKey(zipCode))
