@@ -48,6 +48,7 @@
     <Compile Include="Case.cs" />
     <Compile Include="CaseCatalog.cs" />
     <Compile Include="Controller\CaseController.cs" />
+    <Compile Include="Controller\CityController.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerCatalog.cs" />
     <Compile Include="Controller\CustomerController.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Controller\InvoiceController.cs" />
     <Compile Include="InvoiceCatalog.cs" />
     <Compile Include="ISubject.cs" />
+    <Compile Include="CityCatalog.cs" />
     <Compile Include="Neighborhood.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="NeighborhoodCatalog.cs" />
