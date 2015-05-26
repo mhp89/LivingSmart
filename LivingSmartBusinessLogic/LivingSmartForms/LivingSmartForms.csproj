@@ -173,6 +173,12 @@
     <Compile Include="Views\PartnerView.Designer.cs">
       <DependentUpon>PartnerView.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PropertyDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PropertyDetails.Designer.cs">
+      <DependentUpon>PropertyDetails.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -230,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerView.resx">
       <DependentUpon>PartnerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PropertyDetails.resx">
+      <DependentUpon>PropertyDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
