@@ -27,7 +27,7 @@ namespace LivingSmartBusinessLogic
         {
             this.city = city;
             _name = name;
-            _value = value;
+            _value = value; //gennemsnitlig m2 pris af boligen for det område
         }
 
         #region Methods
