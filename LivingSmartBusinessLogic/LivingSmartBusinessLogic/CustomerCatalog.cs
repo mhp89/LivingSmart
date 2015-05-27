@@ -8,13 +8,11 @@ namespace LivingSmartBusinessLogic
     public class CustomerCatalog
     {
         private Dictionary<int, Customer> customers;
-        //private List<Customer> customers;
 
 	    private int lastID = 0;
 
         internal CustomerCatalog()
         {
-            //customers = new List<Customer>();
             customers = new Dictionary<int, Customer>();
         }
 

@@ -18,7 +18,7 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public string Description { get { return _description; } set { _description = value; } }
+        public string Description { get { return _description; } internal set { _description = value; } }
 
         #endregion
 

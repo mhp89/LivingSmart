@@ -10,7 +10,6 @@ namespace LivingSmartBusinessLogic
     {
 
         private Dictionary<int,Case> cases;
-        //private List<Case> cases;
 
         internal CaseCatalog()
         {

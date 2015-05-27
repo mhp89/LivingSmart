@@ -262,12 +262,12 @@ namespace LivingSmartForms
 			Environment.Exit(Environment.ExitCode);
 		}
 		
-		private void BaseForm_ResizeEnd(object sender, EventArgs e)
-		{
-			//Gentegner hele formen for at sikre korrekt design
-			Refresh();
-		}
-		
 		#endregion
+        
+        private void BaseForm_SizeChanged(object sender, EventArgs e)
+        {
+            //Gentegner hele formen for at sikre korrekt design
+            Refresh();
+        }
 	}
 }
