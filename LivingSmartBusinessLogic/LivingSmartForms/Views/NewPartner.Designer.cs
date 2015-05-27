@@ -30,13 +30,13 @@
         {
             this.hdrNewPartner = new SmartControls.Header();
             this.tlpNewPartner = new System.Windows.Forms.TableLayoutPanel();
+            this.lblPartnerTimeZone = new System.Windows.Forms.Label();
             this.lblPartnerName = new System.Windows.Forms.Label();
             this.lblPartnerCity = new System.Windows.Forms.Label();
             this.lblPartnerRegionShort = new System.Windows.Forms.Label();
             this.lblPartnerCountry = new System.Windows.Forms.Label();
             this.lblPartnerPhone = new System.Windows.Forms.Label();
             this.lblPartnerEmail = new System.Windows.Forms.Label();
-            this.lblPartnerTimeZone = new System.Windows.Forms.Label();
             this.stbPartnerName = new SmartControls.SmartTextBox();
             this.stbPartnerCity = new SmartControls.SmartTextBox();
             this.stbPartnerCountry = new SmartControls.SmartTextBox();
@@ -44,8 +44,8 @@
             this.stbPartnerEmail = new SmartControls.SmartTextBox();
             this.stbPartnerTimeZone = new SmartControls.SmartTextBox();
             this.pnlPartnerRegionShort = new System.Windows.Forms.Panel();
-            this.stbPartnerRegionShort = new SmartControls.SmartTextBox();
             this.lblPartnerRegionFormat = new System.Windows.Forms.Label();
+            this.stbPartnerRegionShort = new SmartControls.SmartTextBox();
             this.tlpNewPartner.SuspendLayout();
             this.pnlPartnerRegionShort.SuspendLayout();
             this.SuspendLayout();
@@ -96,6 +96,20 @@
             this.tlpNewPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tlpNewPartner.Size = new System.Drawing.Size(480, 280);
             this.tlpNewPartner.TabIndex = 5;
+            // 
+            // lblPartnerTimeZone
+            // 
+            this.lblPartnerTimeZone.AutoSize = true;
+            this.lblPartnerTimeZone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblPartnerTimeZone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPartnerTimeZone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.lblPartnerTimeZone.Location = new System.Drawing.Point(0, 240);
+            this.lblPartnerTimeZone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblPartnerTimeZone.Name = "lblPartnerTimeZone";
+            this.lblPartnerTimeZone.Size = new System.Drawing.Size(120, 30);
+            this.lblPartnerTimeZone.TabIndex = 11;
+            this.lblPartnerTimeZone.Text = "Tidszone";
+            this.lblPartnerTimeZone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // lblPartnerName
             // 
@@ -180,20 +194,6 @@
             this.lblPartnerEmail.TabIndex = 10;
             this.lblPartnerEmail.Text = "Email";
             this.lblPartnerEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lblPartnerTimeZone
-            // 
-            this.lblPartnerTimeZone.AutoSize = true;
-            this.lblPartnerTimeZone.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblPartnerTimeZone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPartnerTimeZone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.lblPartnerTimeZone.Location = new System.Drawing.Point(0, 240);
-            this.lblPartnerTimeZone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblPartnerTimeZone.Name = "lblPartnerTimeZone";
-            this.lblPartnerTimeZone.Size = new System.Drawing.Size(120, 30);
-            this.lblPartnerTimeZone.TabIndex = 11;
-            this.lblPartnerTimeZone.Text = "Tidszone";
-            this.lblPartnerTimeZone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // stbPartnerName
             // 
@@ -344,6 +344,16 @@
             this.pnlPartnerRegionShort.Size = new System.Drawing.Size(360, 30);
             this.pnlPartnerRegionShort.TabIndex = 19;
             // 
+            // lblPartnerRegionFormat
+            // 
+            this.lblPartnerRegionFormat.Location = new System.Drawing.Point(89, 0);
+            this.lblPartnerRegionFormat.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.lblPartnerRegionFormat.Name = "lblPartnerRegionFormat";
+            this.lblPartnerRegionFormat.Size = new System.Drawing.Size(267, 30);
+            this.lblPartnerRegionFormat.TabIndex = 21;
+            this.lblPartnerRegionFormat.Text = "Brug forkortet regionsbetegnelse";
+            this.lblPartnerRegionFormat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // stbPartnerRegionShort
             // 
             this.stbPartnerRegionShort.AllowComma = false;
@@ -366,20 +376,9 @@
             this.stbPartnerRegionShort.TabIndex = 20;
             this.stbPartnerRegionShort.UseSystemPasswordChar = false;
             // 
-            // lblPartnerRegionFormat
-            // 
-            this.lblPartnerRegionFormat.Location = new System.Drawing.Point(89, 0);
-            this.lblPartnerRegionFormat.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.lblPartnerRegionFormat.Name = "lblPartnerRegionFormat";
-            this.lblPartnerRegionFormat.Size = new System.Drawing.Size(267, 30);
-            this.lblPartnerRegionFormat.TabIndex = 21;
-            this.lblPartnerRegionFormat.Text = "Brug forkortet regionsbetegnelse";
-            this.lblPartnerRegionFormat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // NewPartner
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tlpNewPartner);
             this.Controls.Add(this.hdrNewPartner);
             this.Name = "NewPartner";
