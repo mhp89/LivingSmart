@@ -52,6 +52,21 @@
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerCatalog.cs" />
     <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="DB\AdDBFactory.cs" />
+    <Compile Include="DB\AdDBMSSQL.cs" />
+    <Compile Include="DB\CustomerDBFactory.cs" />
+    <Compile Include="DB\CustomerDBMSSQL.cs" />
+    <Compile Include="DB\CustomerDBXML.cs" />
+    <Compile Include="DB\DBConnectionMSSQL.cs" />
+    <Compile Include="DB\IAppointmentDB.cs" />
+    <Compile Include="DB\IPotentialBuyerDB.cs" />
+    <Compile Include="DB\ICaseDB.cs" />
+    <Compile Include="DB\IAdDB.cs" />
+    <Compile Include="DB\IInvoiceDB.cs" />
+    <Compile Include="DB\IEstateAgentDB.cs" />
+    <Compile Include="DB\IDocumentDB.cs" />
+    <Compile Include="DB\IPartnerDB.cs" />
+    <Compile Include="DB\ICustomerDB.cs" />
     <Compile Include="DistanceTo.cs" />
     <Compile Include="Document.cs" />
     <Compile Include="EstateAgent.cs" />
@@ -73,16 +88,25 @@
     <Compile Include="Picture.cs" />
     <Compile Include="PotentialBuyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="PropertyType.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Controller\SellPropertyController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DB\" />
     <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
