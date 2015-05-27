@@ -25,7 +25,25 @@ namespace LivingSmartBusinessLogic.Controller
         }
 
         #region Methods
-        
+
+        #region AdminActiveCustomer
+        public void SetActiveCustomer(Customer activeCustomer)
+        {
+            this.activeCustomer = activeCustomer;
+        }
+
+        public void CancelActiveCustomer()
+        {
+            activeCustomer = null;
+        }
+
+        public void SaveActiveCustomer()
+        {
+
+            AddCustomer(activeCustomer);
+        }
+        #endregion
+
         public void AddCustomer(Customer customer)
         {
 			//TODO: Check for valid ID
@@ -40,11 +58,6 @@ namespace LivingSmartBusinessLogic.Controller
         public Customer ReadCustomer(int id)
         {
             return customerCatalog.Check(id);        
-        }
-
-        public void UpdateCustomer(Customer customer)
-        {
-            customerCatalog.Save(customer);
         }
 
         public void SetName(Customer customer, string name)
@@ -74,7 +87,7 @@ namespace LivingSmartBusinessLogic.Controller
         public void SetCity(Customer customer, int zipCode)
         {
 	        var city = CityController.Instance.GetCity(zipCode);
-            if (customer.City != city)
+			if (customer.City != city)
                 customer.City = city;
         }
 
