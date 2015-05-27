@@ -111,6 +111,7 @@
             this.stbDetailsDescription.MinLength = 1;
             this.stbDetailsDescription.Name = "stbDetailsDescription";
             this.stbDetailsDescription.NumericOnly = false;
+            this.stbDetailsDescription.Placeholder = null;
             this.stbDetailsDescription.RegularExpression = null;
             this.stbDetailsDescription.Size = new System.Drawing.Size(350, 90);
             this.stbDetailsDescription.Suffix = null;
@@ -132,6 +133,7 @@
             this.stbDetailsPrice.MinLength = 1;
             this.stbDetailsPrice.Name = "stbDetailsPrice";
             this.stbDetailsPrice.NumericOnly = true;
+            this.stbDetailsPrice.Placeholder = null;
             this.stbDetailsPrice.RegularExpression = null;
             this.stbDetailsPrice.Size = new System.Drawing.Size(350, 30);
             this.stbDetailsPrice.Suffix = null;
@@ -207,6 +209,7 @@
             this.stbDetailsPublicEvaluation.MinLength = 1;
             this.stbDetailsPublicEvaluation.Name = "stbDetailsPublicEvaluation";
             this.stbDetailsPublicEvaluation.NumericOnly = true;
+            this.stbDetailsPublicEvaluation.Placeholder = null;
             this.stbDetailsPublicEvaluation.RegularExpression = null;
             this.stbDetailsPublicEvaluation.Size = new System.Drawing.Size(350, 30);
             this.stbDetailsPublicEvaluation.Suffix = null;
@@ -228,6 +231,7 @@
             this.stbDetailsEvaluation.MinLength = 1;
             this.stbDetailsEvaluation.Name = "stbDetailsEvaluation";
             this.stbDetailsEvaluation.NumericOnly = true;
+            this.stbDetailsEvaluation.Placeholder = null;
             this.stbDetailsEvaluation.RegularExpression = null;
             this.stbDetailsEvaluation.Size = new System.Drawing.Size(350, 30);
             this.stbDetailsEvaluation.Suffix = null;
@@ -245,8 +249,7 @@
             // 
             // PropertyDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tlpPropertyDetails);
             this.Controls.Add(this.hdrPropertyDetails);
             this.Name = "PropertyDetails";
