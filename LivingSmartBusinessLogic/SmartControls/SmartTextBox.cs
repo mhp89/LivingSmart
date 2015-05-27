@@ -76,6 +76,12 @@ namespace SmartControls
 			set { _useSystemPasswordChar = textBox.UseSystemPasswordChar = value; }
 		}
 		private bool _useSystemPasswordChar;
+        public string Placeholder
+        {
+            get { return _placeholder; }
+            set { _placeholder = value; }
+        }
+        private string _placeholder;
 
 
 		private AutoCompleteMode _autoCompleteMode;
@@ -265,7 +271,7 @@ namespace SmartControls
 
 		protected override void OnPaint(PaintEventArgs e)
 		{
-			//FIX: Sikre korrekt størrelse 
+			//FIX: Sikrer korrekt størrelse 
 			if (firstDraw)
 			{
 				UpdateSize();
@@ -285,6 +291,11 @@ namespace SmartControls
 				e.Graphics.FillRectangle(new SolidBrush(SmartColor.DarkA25), new Rectangle(Width - suffixSizeBuffer.Width, 0, suffixSizeBuffer.Width, Height));
 				TextRenderer.DrawText(e.Graphics, Suffix, Font, new Rectangle(Width - suffixSize.Width - 5, 0, suffixSize.Width, Height), ForeColor);
 			}
+
+            if (string.IsNullOrEmpty(Text))
+            {
+                TextRenderer.DrawText(e.Graphics, Placeholder, Font, new Rectangle(0, 0, Width, Height), ForeColor);
+            }
 
 			if (HasError)
 			{

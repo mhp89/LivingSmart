@@ -71,6 +71,12 @@
     <Compile Include="Classes\BasePage.Designer.cs">
       <DependentUpon>BasePage.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\CaseStep.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Classes\CaseStep.Designer.cs">
+      <DependentUpon>CaseStep.cs</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DrawUtils.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Classes\Page.cs" />
@@ -80,6 +86,18 @@
     </Compile>
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIns\CustomerSearchDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\CustomerSearchDropIn.Designer.cs">
+      <DependentUpon>CustomerSearchDropIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIns\EstateAgentSearchDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\EstateAgentSearchDropIn.Designer.cs">
+      <DependentUpon>EstateAgentSearchDropIn.cs</DependentUpon>
     </Compile>
     <Compile Include="DropIns\NewCaseDropIn.cs">
       <SubType>UserControl</SubType>
@@ -99,6 +117,12 @@
     <Compile Include="Pages\Cases.Designer.cs">
       <DependentUpon>Cases.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Customers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Customers.Designer.cs">
+      <DependentUpon>Customers.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Overview.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -107,22 +131,30 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
-    <EmbeddedResource Include="BaseForm.resx">
-      <DependentUpon>BaseForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Classes\BaseDropIn.resx">
-      <DependentUpon>BaseDropIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Classes\BasePage.resx">
-      <DependentUpon>BasePage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
-      <DependentUpon>NewCaseDropIn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
-      <DependentUpon>PartnersDropIn.cs</DependentUpon>
-=======
+    <Compile Include="UserControls\DateField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DateField.Designer.cs">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DistanceField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DistanceField.Designer.cs">
+      <DependentUpon>DistanceField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CustomerLineSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerLineSearch.Designer.cs">
+      <DependentUpon>CustomerLineSearch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EmployeeLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EmployeeLine.Designer.cs">
+      <DependentUpon>EmployeeLine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\CaseLineSimple.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -135,12 +167,100 @@
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="BaseWindow.resx">
-      <DependentUpon>BaseWindow.cs</DependentUpon>
->>>>>>> 49ef1dfae4ba4b073e50306b45ee48e5057eb3a1
+<<<<<<< HEAD
+    <Compile Include="Views\EstateAgentSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EstateAgentSearch.Designer.cs">
+      <DependentUpon>EstateAgentSearch.cs</DependentUpon>
+=======
+    <Compile Include="Views\NewAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewAppointment.Designer.cs">
+      <DependentUpon>NewAppointment.cs</DependentUpon>
+>>>>>>> 48647f8d1c2a55abb8542b1ec434df2dd143c6e8
+    </Compile>
+    <Compile Include="Views\NewCaseStepLot.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCaseStepLot.Designer.cs">
+      <DependentUpon>NewCaseStepLot.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCaseStepProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCaseStepProperty.Designer.cs">
+      <DependentUpon>NewCaseStepProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCaseStepSeller.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCaseStepSeller.Designer.cs">
+      <DependentUpon>NewCaseStepSeller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewEstateAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewEstateAgent.Designer.cs">
+      <DependentUpon>NewEstateAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewPartner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewPartner.Designer.cs">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerLine.Designer.cs">
+      <DependentUpon>PartnerLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartnerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PartnerView.Designer.cs">
+      <DependentUpon>PartnerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PropertyDetails.Designer.cs">
+      <DependentUpon>PropertyDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\BaseDropIn.resx">
+      <DependentUpon>BaseDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Classes\CaseStep.resx">
+      <DependentUpon>CaseStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\CustomerSearchDropIn.resx">
+      <DependentUpon>CustomerSearchDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\EstateAgentSearchDropIn.resx">
+      <DependentUpon>EstateAgentSearchDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
+      <DependentUpon>NewCaseDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
+      <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Cases.resx">
       <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Customers.resx">
+      <DependentUpon>Customers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Overview.resx">
       <DependentUpon>Overview.cs</DependentUpon>
@@ -153,12 +273,60 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\DateField.resx">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DistanceField.resx">
+      <DependentUpon>DistanceField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerLineSearch.resx">
+      <DependentUpon>CustomerLineSearch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EmployeeLine.resx">
+      <DependentUpon>EmployeeLine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\CaseLineSimple.resx">
       <DependentUpon>CaseLineSimple.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerLine.resx">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="Views\EstateAgentSearch.resx">
+      <DependentUpon>EstateAgentSearch.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Views\NewAppointment.resx">
+      <DependentUpon>NewAppointment.cs</DependentUpon>
+>>>>>>> 48647f8d1c2a55abb8542b1ec434df2dd143c6e8
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCaseStepLot.resx">
+      <DependentUpon>NewCaseStepLot.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCaseStepProperty.resx">
+      <DependentUpon>NewCaseStepProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCaseStepSeller.resx">
+      <DependentUpon>NewCaseStepSeller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewEstateAgent.resx">
+      <DependentUpon>NewEstateAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewPartner.resx">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartnerLine.resx">
+      <DependentUpon>PartnerLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PartnerView.resx">
+      <DependentUpon>PartnerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PropertyDetails.resx">
+      <DependentUpon>PropertyDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -174,19 +342,18 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LivingSmartBusinessLogic\LivingSmartBusinessLogic.csproj">
+      <Project>{652743fa-2264-41ef-a011-8cb4a994864e}</Project>
+      <Name>LivingSmartBusinessLogic</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartControls\SmartControls.csproj">
       <Project>{B1DDC8E3-2FA9-43E6-B9AF-654F39F4467E}</Project>
       <Name>SmartControls</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Folder Include="Views\" />
-=======
     <Folder Include="Controllers\" />
-    <Folder Include="DropIns\" />
     <Folder Include="Models\" />
->>>>>>> 49ef1dfae4ba4b073e50306b45ee48e5057eb3a1
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
@@ -204,6 +371,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Error.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

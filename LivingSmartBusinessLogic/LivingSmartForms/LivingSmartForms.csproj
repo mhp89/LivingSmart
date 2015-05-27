@@ -131,6 +131,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\DateField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DateField.Designer.cs">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DistanceField.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -167,6 +173,12 @@
     <Compile Include="Views\EstateAgentSearch.Designer.cs">
       <DependentUpon>EstateAgentSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewAppointment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewAppointment.Designer.cs">
+      <DependentUpon>NewAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewCaseStepLot.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +197,24 @@
     <Compile Include="Views\NewCaseStepSeller.Designer.cs">
       <DependentUpon>NewCaseStepSeller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewCustomer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCustomer.Designer.cs">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewEstateAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewEstateAgent.Designer.cs">
+      <DependentUpon>NewEstateAgent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\NewPartner.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewPartner.Designer.cs">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PartnerLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -196,6 +226,12 @@
     </Compile>
     <Compile Include="Views\PartnerView.Designer.cs">
       <DependentUpon>PartnerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PropertyDetails.Designer.cs">
+      <DependentUpon>PropertyDetails.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
@@ -237,6 +273,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\DateField.resx">
+      <DependentUpon>DateField.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DistanceField.resx">
       <DependentUpon>DistanceField.cs</DependentUpon>
     </EmbeddedResource>
@@ -255,6 +294,9 @@
     <EmbeddedResource Include="Views\EstateAgentSearch.resx">
       <DependentUpon>EstateAgentSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewAppointment.resx">
+      <DependentUpon>NewAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepLot.resx">
       <DependentUpon>NewCaseStepLot.cs</DependentUpon>
     </EmbeddedResource>
@@ -264,11 +306,23 @@
     <EmbeddedResource Include="Views\NewCaseStepSeller.resx">
       <DependentUpon>NewCaseStepSeller.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCustomer.resx">
+      <DependentUpon>NewCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewEstateAgent.resx">
+      <DependentUpon>NewEstateAgent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewPartner.resx">
+      <DependentUpon>NewPartner.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerView.resx">
       <DependentUpon>PartnerView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PropertyDetails.resx">
+      <DependentUpon>PropertyDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -29,6 +29,13 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
             this.tlpLot = new System.Windows.Forms.TableLayoutPanel();
+            this.stbLotView = new SmartControls.SmartTextBox();
+            this.stbLotGarageArea = new SmartControls.SmartTextBox();
+            this.stbLotBuildArea = new SmartControls.SmartTextBox();
+            this.stbLotArea = new SmartControls.SmartTextBox();
+            this.stbLotValue = new SmartControls.SmartTextBox();
+            this.stbLotAddress = new SmartControls.SmartTextBox();
+            this.stbLotNumber = new SmartControls.SmartTextBox();
             this.lblLotView = new System.Windows.Forms.Label();
             this.lblLotCity = new System.Windows.Forms.Label();
             this.lblLotAddress = new System.Windows.Forms.Label();
@@ -39,15 +46,8 @@ namespace LivingSmartForms.Views
             this.lblLotGarageArea = new System.Windows.Forms.Label();
             this.pnlLotCity = new System.Windows.Forms.Panel();
             this.lblLotCityCountry = new System.Windows.Forms.Label();
-            this.header1 = new SmartControls.Header();
-            this.stbLotView = new SmartControls.SmartTextBox();
-            this.stbLotGarageArea = new SmartControls.SmartTextBox();
-            this.stbLotBuildArea = new SmartControls.SmartTextBox();
-            this.stbLotArea = new SmartControls.SmartTextBox();
-            this.stbLotValue = new SmartControls.SmartTextBox();
-            this.stbLotAddress = new SmartControls.SmartTextBox();
-            this.stbLotNumber = new SmartControls.SmartTextBox();
             this.stbLotZipCode = new SmartControls.SmartTextBox();
+            this.hdrLot = new SmartControls.Header();
             this.tlpLot.SuspendLayout();
             this.pnlLotCity.SuspendLayout();
             this.SuspendLayout();
@@ -89,6 +89,153 @@ namespace LivingSmartForms.Views
             this.tlpLot.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tlpLot.Size = new System.Drawing.Size(480, 320);
             this.tlpLot.TabIndex = 0;
+            // 
+            // stbLotView
+            // 
+            this.stbLotView.AllowComma = false;
+            this.stbLotView.AutomaticValidation = true;
+            this.stbLotView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotView.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotView.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotView.Location = new System.Drawing.Point(153, 280);
+            this.stbLotView.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotView.MaxLength = 50;
+            this.stbLotView.MinLength = 1;
+            this.stbLotView.Name = "stbLotView";
+            this.stbLotView.NumericOnly = true;
+            this.stbLotView.RegularExpression = null;
+            this.stbLotView.Size = new System.Drawing.Size(327, 30);
+            this.stbLotView.Suffix = null;
+            this.stbLotView.TabIndex = 13;
+            this.stbLotView.UseSystemPasswordChar = false;
+            // 
+            // stbLotGarageArea
+            // 
+            this.stbLotGarageArea.AllowComma = false;
+            this.stbLotGarageArea.AutomaticValidation = true;
+            this.stbLotGarageArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotGarageArea.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotGarageArea.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotGarageArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotGarageArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotGarageArea.Location = new System.Drawing.Point(153, 240);
+            this.stbLotGarageArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotGarageArea.MaxLength = 50;
+            this.stbLotGarageArea.MinLength = -1;
+            this.stbLotGarageArea.Name = "stbLotGarageArea";
+            this.stbLotGarageArea.NumericOnly = true;
+            this.stbLotGarageArea.RegularExpression = null;
+            this.stbLotGarageArea.Size = new System.Drawing.Size(327, 30);
+            this.stbLotGarageArea.Suffix = null;
+            this.stbLotGarageArea.TabIndex = 12;
+            this.stbLotGarageArea.UseSystemPasswordChar = false;
+            // 
+            // stbLotBuildArea
+            // 
+            this.stbLotBuildArea.AllowComma = false;
+            this.stbLotBuildArea.AutomaticValidation = true;
+            this.stbLotBuildArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotBuildArea.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotBuildArea.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotBuildArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotBuildArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotBuildArea.Location = new System.Drawing.Point(153, 200);
+            this.stbLotBuildArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotBuildArea.MaxLength = 50;
+            this.stbLotBuildArea.MinLength = 1;
+            this.stbLotBuildArea.Name = "stbLotBuildArea";
+            this.stbLotBuildArea.NumericOnly = true;
+            this.stbLotBuildArea.RegularExpression = null;
+            this.stbLotBuildArea.Size = new System.Drawing.Size(327, 30);
+            this.stbLotBuildArea.Suffix = null;
+            this.stbLotBuildArea.TabIndex = 11;
+            this.stbLotBuildArea.UseSystemPasswordChar = false;
+            // 
+            // stbLotArea
+            // 
+            this.stbLotArea.AllowComma = false;
+            this.stbLotArea.AutomaticValidation = true;
+            this.stbLotArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotArea.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotArea.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotArea.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotArea.Location = new System.Drawing.Point(153, 160);
+            this.stbLotArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotArea.MaxLength = 50;
+            this.stbLotArea.MinLength = 1;
+            this.stbLotArea.Name = "stbLotArea";
+            this.stbLotArea.NumericOnly = true;
+            this.stbLotArea.RegularExpression = null;
+            this.stbLotArea.Size = new System.Drawing.Size(327, 30);
+            this.stbLotArea.Suffix = null;
+            this.stbLotArea.TabIndex = 10;
+            this.stbLotArea.UseSystemPasswordChar = false;
+            // 
+            // stbLotValue
+            // 
+            this.stbLotValue.AllowComma = false;
+            this.stbLotValue.AutomaticValidation = true;
+            this.stbLotValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotValue.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotValue.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotValue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotValue.Location = new System.Drawing.Point(153, 120);
+            this.stbLotValue.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotValue.MaxLength = 50;
+            this.stbLotValue.MinLength = 1;
+            this.stbLotValue.Name = "stbLotValue";
+            this.stbLotValue.NumericOnly = true;
+            this.stbLotValue.RegularExpression = null;
+            this.stbLotValue.Size = new System.Drawing.Size(327, 30);
+            this.stbLotValue.Suffix = null;
+            this.stbLotValue.TabIndex = 9;
+            this.stbLotValue.UseSystemPasswordChar = false;
+            // 
+            // stbLotAddress
+            // 
+            this.stbLotAddress.AllowComma = false;
+            this.stbLotAddress.AutomaticValidation = true;
+            this.stbLotAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotAddress.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotAddress.Location = new System.Drawing.Point(153, 40);
+            this.stbLotAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotAddress.MaxLength = 32767;
+            this.stbLotAddress.MinLength = 5;
+            this.stbLotAddress.Name = "stbLotAddress";
+            this.stbLotAddress.NumericOnly = false;
+            this.stbLotAddress.RegularExpression = null;
+            this.stbLotAddress.Size = new System.Drawing.Size(327, 30);
+            this.stbLotAddress.Suffix = null;
+            this.stbLotAddress.TabIndex = 3;
+            this.stbLotAddress.UseSystemPasswordChar = false;
+            // 
+            // stbLotNumber
+            // 
+            this.stbLotNumber.AllowComma = false;
+            this.stbLotNumber.AutomaticValidation = true;
+            this.stbLotNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbLotNumber.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.stbLotNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.stbLotNumber.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.stbLotNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbLotNumber.Location = new System.Drawing.Point(153, 0);
+            this.stbLotNumber.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+            this.stbLotNumber.MaxLength = 10;
+            this.stbLotNumber.MinLength = 1;
+            this.stbLotNumber.Name = "stbLotNumber";
+            this.stbLotNumber.NumericOnly = true;
+            this.stbLotNumber.RegularExpression = null;
+            this.stbLotNumber.Size = new System.Drawing.Size(327, 30);
+            this.stbLotNumber.Suffix = null;
+            this.stbLotNumber.TabIndex = 2;
+            this.stbLotNumber.UseSystemPasswordChar = false;
             // 
             // lblLotView
             // 
@@ -223,174 +370,8 @@ namespace LivingSmartForms.Views
             this.lblLotCityCountry.Name = "lblLotCityCountry";
             this.lblLotCityCountry.Size = new System.Drawing.Size(257, 30);
             this.lblLotCityCountry.TabIndex = 5;
-            this.lblLotCityCountry.Text = "Vejle, Danmark";
+            this.lblLotCityCountry.Text = "BY";
             this.lblLotCityCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // header1
-            // 
-            this.header1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.header1.Color = SmartControls.SmartColor.ColorStyle.Dark;
-            this.header1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.header1.Location = new System.Drawing.Point(0, 10);
-            this.header1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-            this.header1.Name = "header1";
-            this.header1.Size = new System.Drawing.Size(480, 25);
-            this.header1.TabIndex = 3;
-            this.header1.Text = "Mægler";
-            // 
-            // stbLotView
-            // 
-            this.stbLotView.AllowComma = false;
-            this.stbLotView.AutomaticValidation = true;
-            this.stbLotView.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotView.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotView.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotView.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotView.Location = new System.Drawing.Point(153, 280);
-            this.stbLotView.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotView.MaxLength = 32767;
-            this.stbLotView.MinLength = 1;
-            this.stbLotView.Name = "stbLotView";
-            this.stbLotView.NumericOnly = true;
-            this.stbLotView.RegularExpression = null;
-            this.stbLotView.Size = new System.Drawing.Size(327, 30);
-            this.stbLotView.Suffix = null;
-            this.stbLotView.TabIndex = 13;
-            this.stbLotView.Text = "10";
-            this.stbLotView.UseSystemPasswordChar = false;
-            // 
-            // stbLotGarageArea
-            // 
-            this.stbLotGarageArea.AllowComma = false;
-            this.stbLotGarageArea.AutomaticValidation = true;
-            this.stbLotGarageArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotGarageArea.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotGarageArea.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotGarageArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotGarageArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotGarageArea.Location = new System.Drawing.Point(153, 240);
-            this.stbLotGarageArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotGarageArea.MaxLength = 32767;
-            this.stbLotGarageArea.MinLength = -1;
-            this.stbLotGarageArea.Name = "stbLotGarageArea";
-            this.stbLotGarageArea.NumericOnly = true;
-            this.stbLotGarageArea.RegularExpression = null;
-            this.stbLotGarageArea.Size = new System.Drawing.Size(327, 30);
-            this.stbLotGarageArea.Suffix = null;
-            this.stbLotGarageArea.TabIndex = 12;
-            this.stbLotGarageArea.Text = "20";
-            this.stbLotGarageArea.UseSystemPasswordChar = false;
-            // 
-            // stbLotBuildArea
-            // 
-            this.stbLotBuildArea.AllowComma = false;
-            this.stbLotBuildArea.AutomaticValidation = true;
-            this.stbLotBuildArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotBuildArea.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotBuildArea.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotBuildArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotBuildArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotBuildArea.Location = new System.Drawing.Point(153, 200);
-            this.stbLotBuildArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotBuildArea.MaxLength = 32767;
-            this.stbLotBuildArea.MinLength = 1;
-            this.stbLotBuildArea.Name = "stbLotBuildArea";
-            this.stbLotBuildArea.NumericOnly = true;
-            this.stbLotBuildArea.RegularExpression = null;
-            this.stbLotBuildArea.Size = new System.Drawing.Size(327, 30);
-            this.stbLotBuildArea.Suffix = null;
-            this.stbLotBuildArea.TabIndex = 11;
-            this.stbLotBuildArea.Text = "242";
-            this.stbLotBuildArea.UseSystemPasswordChar = false;
-            // 
-            // stbLotArea
-            // 
-            this.stbLotArea.AllowComma = false;
-            this.stbLotArea.AutomaticValidation = true;
-            this.stbLotArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotArea.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotArea.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotArea.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotArea.Location = new System.Drawing.Point(153, 160);
-            this.stbLotArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotArea.MaxLength = 32767;
-            this.stbLotArea.MinLength = 1;
-            this.stbLotArea.Name = "stbLotArea";
-            this.stbLotArea.NumericOnly = true;
-            this.stbLotArea.RegularExpression = null;
-            this.stbLotArea.Size = new System.Drawing.Size(327, 30);
-            this.stbLotArea.Suffix = null;
-            this.stbLotArea.TabIndex = 10;
-            this.stbLotArea.Text = "785";
-            this.stbLotArea.UseSystemPasswordChar = false;
-            // 
-            // stbLotValue
-            // 
-            this.stbLotValue.AllowComma = false;
-            this.stbLotValue.AutomaticValidation = true;
-            this.stbLotValue.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotValue.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotValue.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotValue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotValue.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotValue.Location = new System.Drawing.Point(153, 120);
-            this.stbLotValue.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotValue.MaxLength = 32767;
-            this.stbLotValue.MinLength = 1;
-            this.stbLotValue.Name = "stbLotValue";
-            this.stbLotValue.NumericOnly = true;
-            this.stbLotValue.RegularExpression = null;
-            this.stbLotValue.Size = new System.Drawing.Size(327, 30);
-            this.stbLotValue.Suffix = null;
-            this.stbLotValue.TabIndex = 9;
-            this.stbLotValue.Text = "125430";
-            this.stbLotValue.UseSystemPasswordChar = false;
-            // 
-            // stbLotAddress
-            // 
-            this.stbLotAddress.AllowComma = false;
-            this.stbLotAddress.AutomaticValidation = true;
-            this.stbLotAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotAddress.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotAddress.Location = new System.Drawing.Point(153, 40);
-            this.stbLotAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotAddress.MaxLength = 32767;
-            this.stbLotAddress.MinLength = 5;
-            this.stbLotAddress.Name = "stbLotAddress";
-            this.stbLotAddress.NumericOnly = false;
-            this.stbLotAddress.RegularExpression = null;
-            this.stbLotAddress.Size = new System.Drawing.Size(327, 30);
-            this.stbLotAddress.Suffix = null;
-            this.stbLotAddress.TabIndex = 3;
-            this.stbLotAddress.Text = "Bondegård 1";
-            this.stbLotAddress.UseSystemPasswordChar = false;
-            // 
-            // stbLotNumber
-            // 
-            this.stbLotNumber.AllowComma = false;
-            this.stbLotNumber.AutomaticValidation = true;
-            this.stbLotNumber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.stbLotNumber.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.stbLotNumber.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.stbLotNumber.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbLotNumber.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.stbLotNumber.Location = new System.Drawing.Point(153, 0);
-            this.stbLotNumber.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-            this.stbLotNumber.MaxLength = 32767;
-            this.stbLotNumber.MinLength = 5;
-            this.stbLotNumber.Name = "stbLotNumber";
-            this.stbLotNumber.NumericOnly = false;
-            this.stbLotNumber.RegularExpression = null;
-            this.stbLotNumber.Size = new System.Drawing.Size(327, 30);
-            this.stbLotNumber.Suffix = null;
-            this.stbLotNumber.TabIndex = 2;
-            this.stbLotNumber.UseSystemPasswordChar = false;
             // 
             // stbLotZipCode
             // 
@@ -411,13 +392,25 @@ namespace LivingSmartForms.Views
             this.stbLotZipCode.Size = new System.Drawing.Size(60, 30);
             this.stbLotZipCode.Suffix = null;
             this.stbLotZipCode.TabIndex = 8;
-            this.stbLotZipCode.Text = "7100";
             this.stbLotZipCode.UseSystemPasswordChar = false;
+            // 
+            // hdrLot
+            // 
+            this.hdrLot.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.hdrLot.Color = SmartControls.SmartColor.ColorStyle.Dark;
+            this.hdrLot.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.hdrLot.Location = new System.Drawing.Point(0, 10);
+            this.hdrLot.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+            this.hdrLot.Name = "hdrLot";
+            this.hdrLot.Size = new System.Drawing.Size(480, 25);
+            this.hdrLot.TabIndex = 3;
+            this.hdrLot.Text = "Grund";
             // 
             // NewCaseStepLot
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.header1);
+            this.Controls.Add(this.hdrLot);
             this.Controls.Add(this.tlpLot);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "NewCaseStepLot";
@@ -450,6 +443,6 @@ namespace LivingSmartForms.Views
         private SmartControls.SmartTextBox stbLotZipCode;
         private System.Windows.Forms.Panel pnlLotCity;
         private System.Windows.Forms.Label lblLotCityCountry;
-		private SmartControls.Header header1;
+		private SmartControls.Header hdrLot;
     }
 }
