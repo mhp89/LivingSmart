@@ -16,10 +16,8 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepProperty : CaseStep
     {
-        private CaseController caseController;
         public NewCaseStepProperty(BaseForm baseForm)
         {
-            caseController = baseForm.CaseController;
             InitializeComponent();
             NewDistanceInput();
         }
@@ -41,15 +39,15 @@ namespace LivingSmartForms.Views
             {
                 // stbPropertyType.Text = cCase.PropertyType.Description;
                 // caseController.SetPropertyType();
-                caseController.SetLivingArea(Convert.ToInt32(stbPropertyArea.Text));
-                caseController.SetBasementArea(Convert.ToInt32(stbPropertyBasement.Text));
-                caseController.SetBuiltYear(Convert.ToInt32(stbPropertyBuildYear.Text));
-                caseController.SetEnergyClassification(stbPropertyEnergyMark.Text);
-                caseController.SetFloors(Convert.ToInt32(stbPropertyFloors.Text));
-                caseController.SetRooms(Convert.ToInt32(stbPropertyRooms.Text));
-                caseController.SetBedrooms(Convert.ToInt32(stbPropertyBedrooms.Text));
-                caseController.SetBathrooms(Convert.ToInt32(stbPropertyBathrooms.Text));
-                caseController.SetToilets(Convert.ToInt32(stbPropertyToilets.Text));
+				CaseController.Instance.SetLivingArea(Convert.ToInt32(stbPropertyArea.Text));
+				CaseController.Instance.SetBasementArea(Convert.ToInt32(stbPropertyBasement.Text));
+				CaseController.Instance.SetBuiltYear(Convert.ToInt32(stbPropertyBuildYear.Text));
+				CaseController.Instance.SetEnergyClassification(stbPropertyEnergyMark.Text);
+				CaseController.Instance.SetFloors(Convert.ToInt32(stbPropertyFloors.Text));
+				CaseController.Instance.SetRooms(Convert.ToInt32(stbPropertyRooms.Text));
+				CaseController.Instance.SetBedrooms(Convert.ToInt32(stbPropertyBedrooms.Text));
+				CaseController.Instance.SetBathrooms(Convert.ToInt32(stbPropertyBathrooms.Text));
+				CaseController.Instance.SetToilets(Convert.ToInt32(stbPropertyToilets.Text));
             }
             return fielddataOk;
         }

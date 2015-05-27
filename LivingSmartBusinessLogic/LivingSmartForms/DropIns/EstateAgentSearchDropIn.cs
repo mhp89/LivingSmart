@@ -18,7 +18,6 @@ namespace LivingSmartForms.DropIns
 	{
 		public EstateAgentSearchDropIn() : base(null) { }
 
-		private EstateAgentController controller;
 		private EstateAgentSearchCallback callback;
 
 		private EstateAgentSearch selectedEstateAgent;
@@ -37,38 +36,6 @@ namespace LivingSmartForms.DropIns
 			this.callback = callback;
 			InitializeComponent();
 			baseForm.ShowDropIn(this);
-
-			controller = baseForm.EstateAgentController;
-
-			var estateAgent = controller.MakeNewEstateAgent();
-			controller.SetName(estateAgent, "Anders And");
-			controller.SetTelephone(estateAgent, "19560606");
-			controller.SetEmail(estateAgent, "Anders@andeby.dk");
-			controller.AddEstateAgent(estateAgent);
-
-			estateAgent = controller.MakeNewEstateAgent();
-			controller.SetName(estateAgent, "Rip");
-			controller.SetTelephone(estateAgent, "19920428");
-			controller.SetEmail(estateAgent, "Rip@andeby.dk");
-			controller.AddEstateAgent(estateAgent);
-
-			estateAgent = controller.MakeNewEstateAgent();
-			controller.SetName(estateAgent, "Rap");
-			controller.SetTelephone(estateAgent, "19921428");
-			controller.SetEmail(estateAgent, "Rap@andeby.dk");
-			controller.AddEstateAgent(estateAgent);
-
-			estateAgent = controller.MakeNewEstateAgent();
-			controller.SetName(estateAgent, "Rup");
-			controller.SetTelephone(estateAgent, "19922428");
-			controller.SetEmail(estateAgent, "Rup@andeby.dk");
-			controller.AddEstateAgent(estateAgent);
-
-			estateAgent = controller.MakeNewEstateAgent();
-			controller.SetName(estateAgent, "Fedtmule");
-			controller.SetTelephone(estateAgent, "19321112");
-			controller.SetEmail(estateAgent, "Fedtmule@Mouseton.dk");
-			controller.AddEstateAgent(estateAgent);
 		}
 
 		public static void Show(BaseForm baseForm, EstateAgentSearchCallback callback)
@@ -122,7 +89,7 @@ namespace LivingSmartForms.DropIns
 			if(id == -1 && name == null && phone == null && email == null)
 				return;
 
-			var result = controller.SearchEstateAgents(id, name, phone, email);
+			var result = EstateAgentController.Instance.SearchEstateAgents(id, name, phone, email);
 
 			clsResult.SuspendLayout();
 

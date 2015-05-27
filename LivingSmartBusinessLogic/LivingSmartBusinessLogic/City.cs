@@ -7,8 +7,6 @@ namespace LivingSmartBusinessLogic
 {
     public class City
     {
-        public int ZipCode { get; private set; }
-        public string District { get; private set; }
 
         #region Private Fields
 
@@ -20,6 +18,7 @@ namespace LivingSmartBusinessLogic
 
 		public int ZipCode { get; private set; }
 
+		public string District { get; private set; }
 
         #endregion
 

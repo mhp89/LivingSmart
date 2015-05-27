@@ -39,6 +39,8 @@ namespace LivingSmartForms
 
 	    private Control partnerView;
 
+		public EstateAgent DefaultEstateAgent { get; private set; }
+
 		public BaseForm()
         {
 			AutoScaleMode = AutoScaleMode.None;
@@ -57,7 +59,9 @@ namespace LivingSmartForms
 			InitializeMenu();
 
 			InitTestData();
-		}
+
+			DefaultEstateAgent = EstateAgentController.Instance.ReadEstateAgent(1);
+        }
 
 
 		#region Menu
@@ -277,7 +281,7 @@ namespace LivingSmartForms
 			customerController.SetTelephone(customer, "19560606");
 			customerController.SetAddress(customer, "Andeby");
 			customerController.SetDateOfBirth(customer, new DateTime(1956, 6, 6));
-			customerController.SetCity(customer, 7100);
+			customerController.SetCity(customer, 2412);
 			customerController.SetEmail(customer, "Anders@andeby.dk");
 			customerController.AddCustomer(customer);
 

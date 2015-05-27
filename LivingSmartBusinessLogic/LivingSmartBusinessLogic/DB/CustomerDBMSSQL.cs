@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -65,7 +65,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = customer.Name;
             cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date, 50, "Name").Value = customer.DateOfBirth;
             cmd.Parameters.Add("@Address", SqlDbType.Char, 50, "Name").Value = customer.Address;
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 20, "Name").Value = customer.ZipCode;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 20, "Name").Value = customer.City.ZipCode;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Name").Value = customer.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Name").Value = customer.Email;
 
@@ -98,7 +98,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = customer.Name;
             cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date, 50, "Name").Value = customer.DateOfBirth;
             cmd.Parameters.Add("@Address", SqlDbType.Char, 50, "Name").Value = customer.Address;
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 20, "Name").Value = customer.ZipCode;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 20, "Name").Value = customer.City.ZipCode;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Name").Value = customer.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Name").Value = customer.Email;
 

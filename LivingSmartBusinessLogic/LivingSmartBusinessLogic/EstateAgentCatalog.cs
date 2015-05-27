@@ -18,6 +18,7 @@ namespace LivingSmartBusinessLogic
 
         internal EstateAgent Check(int id)
         {
+	        return estateAgents.FirstOrDefault(a => a.Key == id).Value;
             throw new System.NotImplementedException();
         }
 

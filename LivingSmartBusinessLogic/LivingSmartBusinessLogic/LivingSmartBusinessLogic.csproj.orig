@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{652743FA-2264-41EF-A011-8CB4A994864E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LivingSmartBusinessLogic</RootNamespace>
+    <AssemblyName>LivingSmartBusinessLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\LivingSmartBusinessLogic.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ad.cs" />
+    <Compile Include="Appointment.cs" />
+    <Compile Include="AppointmentCatalog.cs" />
+    <Compile Include="Controller\AppointmentController.cs" />
+    <Compile Include="AskingPrice.cs" />
+    <Compile Include="Case.cs" />
+    <Compile Include="CaseCatalog.cs" />
+    <Compile Include="Controller\CaseController.cs" />
+    <Compile Include="Controller\CityController.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="CustomerCatalog.cs" />
+    <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="DB\AdDBFactory.cs" />
+    <Compile Include="DB\AdDBMSSQL.cs" />
+    <Compile Include="DB\CustomerDBFactory.cs" />
+    <Compile Include="DB\CustomerDBMSSQL.cs" />
+    <Compile Include="DB\CustomerDBXML.cs" />
+    <Compile Include="DB\DBConnectionMSSQL.cs" />
+    <Compile Include="DB\IAppointmentDB.cs" />
+    <Compile Include="DB\IPotentialBuyerDB.cs" />
+    <Compile Include="DB\ICaseDB.cs" />
+    <Compile Include="DB\IAdDB.cs" />
+    <Compile Include="DB\IInvoiceDB.cs" />
+    <Compile Include="DB\IEstateAgentDB.cs" />
+    <Compile Include="DB\IDocumentDB.cs" />
+    <Compile Include="DB\IPartnerDB.cs" />
+    <Compile Include="DB\ICustomerDB.cs" />
+    <Compile Include="DistanceTo.cs" />
+    <Compile Include="Document.cs" />
+    <Compile Include="EstateAgent.cs" />
+    <Compile Include="EstateAgentCatalog.cs" />
+    <Compile Include="Controller\EstateAgentController.cs" />
+    <Compile Include="IModel.cs" />
+    <Compile Include="Invoice.cs" />
+    <Compile Include="Controller\InvoiceController.cs" />
+    <Compile Include="InvoiceCatalog.cs" />
+    <Compile Include="ISubject.cs" />
+    <Compile Include="CityCatalog.cs" />
+    <Compile Include="Neighborhood.cs" />
+    <Compile Include="IObserver.cs" />
+    <Compile Include="NeighborhoodCatalog.cs" />
+    <Compile Include="Controller\NeighborhoodController.cs" />
+    <Compile Include="Partner.cs" />
+    <Compile Include="PartnerCatalog.cs" />
+    <Compile Include="Controller\PartnerController.cs" />
+    <Compile Include="Picture.cs" />
+    <Compile Include="PotentialBuyer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PropertyType.cs" />
+    <Compile Include="Rating.cs" />
+    <Compile Include="City.cs" />
+    <Compile Include="Controller\SellPropertyController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="ClassDiagram.cd" />
+<<<<<<< HEAD
+=======
+    <None Include="Customer.sequencediagram" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Customer.sequencediagram.layout">
+      <DependentUpon>Customer.sequencediagram</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> origin/DBAccess#51
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Model\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

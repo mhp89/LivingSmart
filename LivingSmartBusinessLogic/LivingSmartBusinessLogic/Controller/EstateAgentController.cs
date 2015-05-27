@@ -39,7 +39,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         public EstateAgent ReadEstateAgent(int id)
         {
-            return estateAgentCatalog.Check(id);
+			return estateAgentCatalog.Check(id);
         }
 
         public void UpdateEstateAgent(EstateAgent estateAgent)

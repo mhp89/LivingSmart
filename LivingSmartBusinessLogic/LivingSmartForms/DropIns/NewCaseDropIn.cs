@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Pages;
 using LivingSmartForms.Views;
@@ -27,7 +28,8 @@ namespace LivingSmartForms.DropIns
 		{
 			Seller,
 			Lot,
-			Property
+			Property,
+			//Details
 		}
 
 
@@ -39,7 +41,8 @@ namespace LivingSmartForms.DropIns
 
 			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(baseForm);
             steps[(int)StepsIndex.Lot] = new NewCaseStepLot(baseForm);
-            steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm);
+			steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm);
+			//steps[(int)StepsIndex.Details] = new PropertyDetails(baseForm);
 
 			InitializeSteps();
 
@@ -76,6 +79,7 @@ namespace LivingSmartForms.DropIns
 				if (currentStepIndex == steps.Length - 1)
 				{
 					//Finish
+					CaseController.Instance.SaveActiveCase();
 
                     baseForm.CloseDropIn();
 				}

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic
 {
@@ -37,15 +38,15 @@ namespace LivingSmartBusinessLogic
             
         }
 
-        internal Customer(int id, string name, DateTime dateOfBirth, string address, City city, string email, string telephone)
+        internal Customer(int id, string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
         {
             Id = id;
-            _name = name;
-            _dateOfBirth = dateOfBirth;
-            _address = address;
-            _city = city;
-            _email = email;
-            _telephone = telephone;
+            Name = name;
+            DateOfBirth = dateOfBirth;
+            Address = address;
+            City = CityController.Instance.GetCity(zipCode);
+            Email = email;
+            Telephone = telephone;
         }
 
         #region Methods

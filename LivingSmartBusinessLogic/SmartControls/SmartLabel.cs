@@ -137,7 +137,7 @@ namespace SmartControls
 					titleSizeCache = TextRenderer.MeasureText(Title, TitleFont, Size.Empty, flags);
 
 				if (textSizeCache == Size.Empty)
-					textSizeCache = TextRenderer.MeasureText(Title, TitleFont, Size.Empty, flags);
+					textSizeCache = TextRenderer.MeasureText(Text, Font, Size.Empty, flags);
 			}
 		}
 

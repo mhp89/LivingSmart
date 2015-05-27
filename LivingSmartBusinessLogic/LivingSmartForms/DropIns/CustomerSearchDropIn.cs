@@ -18,7 +18,6 @@ namespace LivingSmartForms.DropIns
 {
 	public partial class CustomerSearchDropIn : BaseDropIn
 	{
-		private CustomerController controller;
 		private CustomerSearchCallback callback;
 
 		private CustomerLineSearch selectedCustomer;
@@ -41,48 +40,6 @@ namespace LivingSmartForms.DropIns
 			this.callback = callback;
 			InitializeComponent();
 			baseForm.ShowDropIn(this);
-
-			controller = baseForm.CustomerController;
-
-			var customer = controller.MakeNewCustomer();
-			controller.SetName(customer, "Anders And");
-			controller.SetTelephone(customer, "19560606");
-			controller.SetAddress(customer, "Andeby");
-			controller.SetDateOfBirth(customer, new DateTime(1956, 6, 6));
-			controller.SetEmail(customer, "Anders@andeby.dk");
-			controller.AddCustomer(customer);
-
-			customer = controller.MakeNewCustomer();
-			controller.SetName(customer, "Rip");
-			controller.SetTelephone(customer, "19920428");
-			controller.SetAddress(customer, "Andeby");
-			controller.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
-			controller.SetEmail(customer, "Rip@andeby.dk");
-			controller.AddCustomer(customer);
-
-			customer = controller.MakeNewCustomer();
-			controller.SetName(customer, "Rap");
-			controller.SetTelephone(customer, "19921428");
-			controller.SetAddress(customer, "Andeby");
-			controller.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
-			controller.SetEmail(customer, "Rap@andeby.dk");
-			controller.AddCustomer(customer);
-
-			customer = controller.MakeNewCustomer();
-			controller.SetName(customer, "Rup");
-			controller.SetTelephone(customer, "19922428");
-			controller.SetAddress(customer, "Andeby");
-			controller.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
-			controller.SetEmail(customer, "Rup@andeby.dk");
-			controller.AddCustomer(customer);
-
-			customer = controller.MakeNewCustomer();
-			controller.SetName(customer, "Fedtmule");
-			controller.SetTelephone(customer, "19321112");
-			controller.SetAddress(customer, "Mouseton");
-			controller.SetDateOfBirth(customer, new DateTime(1932, 11, 12));
-			controller.SetEmail(customer, "Fedtmule@Mouseton.dk");
-			controller.AddCustomer(customer);
 		}
 
 		public static void Show(BaseForm baseForm, CustomerSearchCallback callback)
@@ -136,7 +93,7 @@ namespace LivingSmartForms.DropIns
 			if(name == null && address == null && phone == null && email == null && zipcode == -1)
 				return;
 
-			var result = controller.SearchCustomers(id, name, address, zipcode, phone, email);
+			var result = CustomerController.Instance.SearchCustomers(id, name, address, zipcode, phone, email);
 
 			clsResult.SuspendLayout();
 

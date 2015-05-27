@@ -26,6 +26,7 @@ namespace LivingSmartBusinessLogic.Controller
 			//TODO: Remove test data
 			cityCatalog.AddToCatalog(new City(7100, "Vejle"));
 			cityCatalog.AddToCatalog(new City(5500, "Middelfart"));
+			cityCatalog.AddToCatalog(new City(2412, "Julemanden"));
         }
 
         public City GetCity(int zipCode)
