@@ -7,8 +7,8 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private EstateAgentController _instance;
-		public EstateAgentController Instance
+		private static EstateAgentController _instance;
+		public static EstateAgentController Instance
 		{
 			get { return _instance ?? (_instance = new EstateAgentController()); }
 		}

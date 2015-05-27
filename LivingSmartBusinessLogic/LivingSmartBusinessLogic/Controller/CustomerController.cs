@@ -6,15 +6,14 @@ namespace LivingSmartBusinessLogic.Controller
     public class CustomerController
 	{
 		#region Singleton
-		
-		private CustomerController _instance;
-	    public CustomerController Instance
+
+		private static CustomerController _instance;
+		public static CustomerController Instance
 	    {
 			get { return _instance ?? (_instance = new CustomerController()); }
 	    }
 
 		#endregion
-
 
 		private CustomerCatalog customerCatalog;
 
@@ -74,7 +73,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SetCity(Customer customer, int zipCode)
         {
-			var city = Citycon
+	        var city = CityController.Instance.GetCity(zipCode);
             if (customer.City != city)
                 customer.City = city;
         }

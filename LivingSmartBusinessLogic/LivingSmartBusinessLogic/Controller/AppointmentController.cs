@@ -4,14 +4,13 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private AppointmentController _instance;
-		public AppointmentController Instance
+		private static AppointmentController _instance;
+		public static AppointmentController Instance
 		{
 			get { return _instance ?? (_instance = new AppointmentController()); }
 		}
 
 		#endregion
-
 
         private AppointmentCatalog appointmentCatalog;
 

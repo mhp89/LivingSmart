@@ -7,8 +7,8 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private CaseController _instance;
-		public CaseController Instance
+		private static CaseController _instance;
+		public static CaseController Instance
 		{
 			get { return _instance ?? (_instance = new CaseController()); }
 		}
