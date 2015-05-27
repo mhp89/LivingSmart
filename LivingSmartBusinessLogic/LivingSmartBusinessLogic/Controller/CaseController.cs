@@ -28,6 +28,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region Methods
 
+        #region AdminActiveCase
         public void SetActiveCase(Case activeCase)
         {
             this.activeCase = activeCase;
@@ -42,6 +43,8 @@ namespace LivingSmartBusinessLogic.Controller
         {
             AddCase();
         }
+        #endregion
+        
         
         /// <summary>
         /// Tilføjer en case til casecatalog
@@ -104,6 +107,12 @@ namespace LivingSmartBusinessLogic.Controller
             
         }
 
+        #region Picture
+        public Picture MakeNewPicture()
+        {
+            return new Picture();
+        }
+
         /// <summary>
         /// Tilføjer et billede til casen
         /// </summary>
@@ -118,9 +127,15 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void RemovePictureFromCase(Picture picture)
         {
-            
-        }
 
+        }
+        public ReadOnlyCollection<Picture> GetPictures()
+        {
+            return activeCase.GetPictures();
+        }
+        #endregion
+
+        #region Ad
         /// <summary>
         /// Tilføjer en annonce til casen
         /// </summary>
@@ -135,9 +150,11 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void RemoveAdFromCase(Ad ad)
         {
-            
-        }
 
+        }
+        #endregion
+
+        #region Rating
         /// <summary>
         /// Tilføjer en vurdering til casen
         /// </summary>
@@ -152,9 +169,11 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void RemoveRatingFromCase(Rating rating)
         {
-            
-        }
 
+        }
+        #endregion
+
+        #region AskingPrice
         /// <summary>
         /// Tilføjer en udbudspris til casen
         /// </summary>
@@ -169,9 +188,11 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void RemoveAskingPriceFromCase(AskingPrice askingPrice)
         {
-            
-        }
 
+        }
+        #endregion
+
+        #region PotentialBuyer
         /// <summary>
         /// Tilføjer en potentiel køber til casen
         /// </summary>
@@ -187,9 +208,11 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="potentialBuyer"></param>
         public void RemoveProtentialBuyerFromCase(PotentialBuyer potentialBuyer)
         {
-            
-        }
 
+        }
+        #endregion
+
+        #region DistanceTo
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
@@ -204,8 +227,14 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void RemoveDistanceToFromCase(DistanceTo distanceTo)
         {
-            
+
         }
+        public ReadOnlyCollection<DistanceTo> GetDistanceTos()
+        {
+            return activeCase.GetDistanceTos();
+        }
+        #endregion
+
 
         /// <summary>
         /// Tilføjer salgsprisen til casen
@@ -238,16 +267,6 @@ namespace LivingSmartBusinessLogic.Controller
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
             return activeCase.GetAskingPrices();
-        }
-
-        public ReadOnlyCollection<DistanceTo> GetDistanceTos()
-        {
-            return activeCase.GetDistanceTos();
-        }
-
-        public ReadOnlyCollection<Picture> GetPictures()
-        {
-            return activeCase.GetPictures();
         }
 
         public void SetSeller(Customer seller)
