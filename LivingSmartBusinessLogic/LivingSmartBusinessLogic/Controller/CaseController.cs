@@ -20,7 +20,6 @@ namespace LivingSmartBusinessLogic.Controller
 
         private Case activeCase;
 
-        
         public CaseController()
         {
             caseCatalog = new CaseCatalog();
@@ -44,7 +43,6 @@ namespace LivingSmartBusinessLogic.Controller
             AddCase();
         }
         #endregion
-        
         
         /// <summary>
         /// Tilføjer en case til casecatalog
@@ -408,6 +406,6 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
         
-        #endregion
+        #endregion  
     }
 }
