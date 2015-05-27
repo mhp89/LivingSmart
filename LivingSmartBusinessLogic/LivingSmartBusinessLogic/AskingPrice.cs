@@ -31,8 +31,8 @@ namespace LivingSmartBusinessLogic
         internal AskingPrice(int id, long value, DateTime date)
         {
             Id = id;
-            _value = value;
-            _date = date;
+            Value = value;
+            Date = date;
         }
 
         #region Methods

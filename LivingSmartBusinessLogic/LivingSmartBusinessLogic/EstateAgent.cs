@@ -43,8 +43,8 @@ namespace LivingSmartBusinessLogic
         {
             appointments = new List<Appointment>();
             Id = id;
-            _name = name;
-            _telephone = telephone;
+            Name = name;
+            Telephone = telephone;
             _email = email;
             _startingDate = startingDate;
             _terminationDate = terminationDate;

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -59,6 +60,11 @@ namespace LivingSmartBusinessLogic.Controller
         public Customer ReadCustomer(int id)
         {
             return customerCatalog.Check(id);        
+        }
+
+        public ReadOnlyCollection<Customer> GetCustomers()
+        {
+            return customerCatalog.GetCustomers();
         }
 
         public void SetName(Customer customer, string name)

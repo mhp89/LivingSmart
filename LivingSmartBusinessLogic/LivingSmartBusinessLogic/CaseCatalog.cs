@@ -40,6 +40,6 @@ namespace LivingSmartBusinessLogic
         {
             cases.Remove(caseId);
         }
-
+        
     }
 }

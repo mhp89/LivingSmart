@@ -33,9 +33,9 @@ namespace LivingSmartBusinessLogic
         internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
         {
             Id = id;
-            _estateAgentValue = estateAgentValue;
-            _systemValue = systemValue;
-            _date = date;
+            EstateAgentValue = estateAgentValue;
+            SystemValue = systemValue;
+            Date = date;
         }
 
         #region Methods

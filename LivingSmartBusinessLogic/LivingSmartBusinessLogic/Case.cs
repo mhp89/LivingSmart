@@ -84,7 +84,6 @@ namespace LivingSmartBusinessLogic
         #region Collections
 
         private List<Ad> ads;
-        private List<PotentialBuyer> potentialBuyers;
         private List<Document> documents;
         private List<Rating> ratings;
         private List<AskingPrice> askingPrices;
@@ -96,7 +95,6 @@ namespace LivingSmartBusinessLogic
         internal Case()
         {
             ads = new List<Ad>();
-            potentialBuyers = new List<PotentialBuyer>();
             documents = new List<Document>();
             ratings = new List<Rating>();
             askingPrices = new List<AskingPrice>();
@@ -136,11 +134,6 @@ namespace LivingSmartBusinessLogic
             askingPrices.Add(askingPrice);
         }
 
-        internal void AddPotentialBuyer(PotentialBuyer potentialBuyer)
-        {
-            potentialBuyers.Add(potentialBuyer);
-        }
-
         internal void AddDistanceTo(DistanceTo distanceTo)
         {
             distanceTos.Add(distanceTo);
@@ -149,11 +142,6 @@ namespace LivingSmartBusinessLogic
         internal ReadOnlyCollection<Ad> GetAds()
         {
             return ads.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<PotentialBuyer> GetPotentialBuyers()
-        {
-            return potentialBuyers.AsReadOnly();
         }
 
         internal ReadOnlyCollection<Document> GetDocuments()

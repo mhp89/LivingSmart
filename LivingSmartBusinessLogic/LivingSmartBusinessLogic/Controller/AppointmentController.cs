@@ -59,10 +59,10 @@ namespace LivingSmartBusinessLogic.Controller
             if (appointment.Place != place)
                 appointment.Place = place;
         }
-        public void SetCustomer(Appointment appointment, Customer customer)
+        public void SetCustomer(Appointment appointment, Customer PotBuyer)
         {
-            if (appointment.Customer != customer)
-                appointment.Customer = customer;
+            if (appointment.Customer != PotBuyer)
+                appointment.Customer = PotBuyer;
         }
         public void SetDuration(Appointment appointment, int duration)
         {

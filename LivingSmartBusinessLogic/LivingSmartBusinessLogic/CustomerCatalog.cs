@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace LivingSmartBusinessLogic
@@ -42,38 +44,46 @@ namespace LivingSmartBusinessLogic
         {
             customers.Remove(customer.Id);
         }
-		
-		internal List<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
-		{
-			List<Customer> result = new List<Customer>();
 
-			foreach (var customer in customers)
-			{
-				bool success = true;
+        internal List<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone,
+            string email)
+        {
+            List<Customer> result = new List<Customer>();
 
-				if (id != -1 && !customer.Value.Id.ToString().ToLower().Contains(id.ToString().ToLower()))
-					success = false;
+            foreach (var customer in customers)
+            {
+                bool success = true;
 
-				if (name != null && !customer.Value.Name.ToLower().Contains(name.ToLower()))
-					success = false;
+                if (id != -1 && !customer.Value.Id.ToString().ToLower().Contains(id.ToString().ToLower()))
+                    success = false;
 
-				if (address != null && !customer.Value.Address.ToLower().Contains(address.ToLower()))
-					success = false;
+                if (name != null && !customer.Value.Name.ToLower().Contains(name.ToLower()))
+                    success = false;
 
-				if (zipcode != -1 && customer.Value.City.ZipCode.ToString().ToLower().Contains(zipcode.ToString().ToLower()))
-					success = false;
+                if (address != null && !customer.Value.Address.ToLower().Contains(address.ToLower()))
+                    success = false;
 
-				if (telephone != null && !customer.Value.Telephone.ToLower().Contains(telephone.ToLower()))
-					success = false;
+                if (zipcode != -1 &&
+                    customer.Value.City.ZipCode.ToString().ToLower().Contains(zipcode.ToString().ToLower()))
+                    success = false;
 
-				if (email != null && !customer.Value.Email.ToLower().Contains(email.ToLower()))
-					success = false;
+                if (telephone != null && !customer.Value.Telephone.ToLower().Contains(telephone.ToLower()))
+                    success = false;
 
-				if (success)
-					result.Add(customer.Value);
-			}
+                if (email != null && !customer.Value.Email.ToLower().Contains(email.ToLower()))
+                    success = false;
 
-			return result;
-		}
+                if (success)
+                    result.Add(customer.Value);
+            }
+
+            return result;
+        }
+
+        internal ReadOnlyCollection<Customer> GetCustomers()
+        {
+            var customerList = customers.Values.ToList();
+            return customerList.AsReadOnly();
+        }
     }
 }

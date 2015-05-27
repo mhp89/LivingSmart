@@ -25,7 +25,7 @@ namespace LivingSmartBusinessLogic
         internal PropertyType(int id, string description)
         {
             Id = id;
-            _description = description;
+            Description = description;
         }
 
         #region Methods

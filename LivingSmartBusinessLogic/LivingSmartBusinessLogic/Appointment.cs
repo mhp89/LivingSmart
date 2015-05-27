@@ -37,15 +37,15 @@ namespace LivingSmartBusinessLogic
             
         }
 
-        internal Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer potBuyer)
+        internal Appointment(int id, Case cCase, DateTime timeStamp, int duration, string description, string place, Customer customer)
         {
             Id = id;
-            _case = cCase;
-            _timestamp = timeStamp;
-            _duration = duration;
-            _description = description;
-            _place = place;
-            _customer = potBuyer;
+            Case = cCase;
+            Timestamp = timeStamp;
+            Duration = duration;
+            Description = description;
+            Place = place;
+            Customer = customer;
         }
 
         #region Methods

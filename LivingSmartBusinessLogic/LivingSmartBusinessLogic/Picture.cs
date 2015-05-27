@@ -30,8 +30,8 @@ namespace LivingSmartBusinessLogic
         internal Picture(int id, string location, string description)
         {
             Id = id;
-            _location = location;
-            _description = description;
+            Location = location;
+            Desription = description;
         }
 
         #region Methods
