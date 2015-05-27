@@ -21,10 +21,6 @@ namespace LivingSmartForms
 {
     public partial class BaseForm : Form
     {
-		internal readonly CaseController CaseController;
-		internal readonly CustomerController CustomerController;
-	    internal readonly EstateAgentController EstateAgentController;
-
 	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
 
 		#region Menu
@@ -59,6 +55,8 @@ namespace LivingSmartForms
 			InitializePages();
 
 			InitializeMenu();
+
+			InitTestData();
 		}
 
 
@@ -269,5 +267,89 @@ namespace LivingSmartForms
             //Gentegner hele formen for at sikre korrekt design
             Refresh();
         }
+
+	    private void InitTestData()
+	    {
+			var customerController = CustomerController.Instance;
+
+			var customer = customerController.MakeNewCustomer();
+			customerController.SetName(customer, "Anders And");
+			customerController.SetTelephone(customer, "19560606");
+			customerController.SetAddress(customer, "Andeby");
+			customerController.SetDateOfBirth(customer, new DateTime(1956, 6, 6));
+			customerController.SetCity(customer, 7100);
+			customerController.SetEmail(customer, "Anders@andeby.dk");
+			customerController.AddCustomer(customer);
+
+			customer = customerController.MakeNewCustomer();
+			customerController.SetName(customer, "Rip");
+			customerController.SetTelephone(customer, "19920428");
+			customerController.SetAddress(customer, "Andeby");
+			customerController.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
+			customerController.SetCity(customer, 7100);
+			customerController.SetEmail(customer, "Rip@andeby.dk");
+			customerController.AddCustomer(customer);
+
+			customer = customerController.MakeNewCustomer();
+			customerController.SetName(customer, "Rap");
+			customerController.SetTelephone(customer, "19921428");
+			customerController.SetAddress(customer, "Andeby");
+			customerController.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
+			customerController.SetCity(customer, 7100);
+			customerController.SetEmail(customer, "Rap@andeby.dk");
+			customerController.AddCustomer(customer);
+
+			customer = customerController.MakeNewCustomer();
+			customerController.SetName(customer, "Rup");
+			customerController.SetTelephone(customer, "19922428");
+			customerController.SetAddress(customer, "Andeby");
+			customerController.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
+			customerController.SetCity(customer, 7100);
+			customerController.SetEmail(customer, "Rup@andeby.dk");
+			customerController.AddCustomer(customer);
+
+			customer = customerController.MakeNewCustomer();
+			customerController.SetName(customer, "Fedtmule");
+			customerController.SetTelephone(customer, "19321112");
+			customerController.SetAddress(customer, "Mouseton");
+			customerController.SetDateOfBirth(customer, new DateTime(1932, 11, 12));
+			customerController.SetCity(customer, 5500);
+			customerController.SetEmail(customer, "Fedtmule@Mouseton.dk");
+			customerController.AddCustomer(customer);
+
+
+
+			var estateAgentController = EstateAgentController.Instance;
+
+			var estateAgent = estateAgentController.MakeNewEstateAgent();
+			estateAgentController.SetName(estateAgent, "Anders And");
+			estateAgentController.SetTelephone(estateAgent, "19560606");
+			estateAgentController.SetEmail(estateAgent, "Anders@andeby.dk");
+			estateAgentController.AddEstateAgent(estateAgent);
+
+			estateAgent = estateAgentController.MakeNewEstateAgent();
+			estateAgentController.SetName(estateAgent, "Rip");
+			estateAgentController.SetTelephone(estateAgent, "19920428");
+			estateAgentController.SetEmail(estateAgent, "Rip@andeby.dk");
+			estateAgentController.AddEstateAgent(estateAgent);
+
+			estateAgent = estateAgentController.MakeNewEstateAgent();
+			estateAgentController.SetName(estateAgent, "Rap");
+			estateAgentController.SetTelephone(estateAgent, "19921428");
+			estateAgentController.SetEmail(estateAgent, "Rap@andeby.dk");
+			estateAgentController.AddEstateAgent(estateAgent);
+
+			estateAgent = estateAgentController.MakeNewEstateAgent();
+			estateAgentController.SetName(estateAgent, "Rup");
+			estateAgentController.SetTelephone(estateAgent, "19922428");
+			estateAgentController.SetEmail(estateAgent, "Rup@andeby.dk");
+			estateAgentController.AddEstateAgent(estateAgent);
+
+			estateAgent = estateAgentController.MakeNewEstateAgent();
+			estateAgentController.SetName(estateAgent, "Fedtmule");
+			estateAgentController.SetTelephone(estateAgent, "19321112");
+			estateAgentController.SetEmail(estateAgent, "Fedtmule@Mouseton.dk");
+			estateAgentController.AddEstateAgent(estateAgent);
+	    }
 	}
 }

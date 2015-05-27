@@ -4,8 +4,8 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private InvoiceController _instance;
-		public InvoiceController Instance
+		private static InvoiceController _instance;
+		public static InvoiceController Instance
 		{
 			get { return _instance ?? (_instance = new InvoiceController()); }
 		}

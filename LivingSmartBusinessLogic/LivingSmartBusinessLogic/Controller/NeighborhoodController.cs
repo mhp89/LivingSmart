@@ -4,8 +4,8 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private NeighborhoodController _instance;
-		public NeighborhoodController Instance
+		private static NeighborhoodController _instance;
+		public static NeighborhoodController Instance
 		{
 			get { return _instance ?? (_instance = new NeighborhoodController()); }
 		}

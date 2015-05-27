@@ -4,8 +4,8 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private SellPropertyController _instance;
-		public SellPropertyController Instance
+		private static SellPropertyController _instance;
+		public static SellPropertyController Instance
 		{
 			get { return _instance ?? (_instance = new SellPropertyController()); }
 		}
