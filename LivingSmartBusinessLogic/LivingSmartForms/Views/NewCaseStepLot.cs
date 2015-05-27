@@ -16,9 +16,9 @@ namespace LivingSmartForms.Views
     public partial class NewCaseStepLot : CaseStep
     {
         private CaseController caseController;
-        public NewCaseStepLot(CaseController caseController)
+        public NewCaseStepLot(BaseForm baseForm)
         {
-            this.caseController = caseController;
+            caseController = baseForm.CaseController;
             InitializeComponent();
         }
 

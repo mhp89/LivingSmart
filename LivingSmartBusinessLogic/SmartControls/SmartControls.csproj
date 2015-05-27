@@ -44,6 +44,13 @@
     <Compile Include="AnalogClock.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ISelectable.cs" />
+    <Compile Include="SelectableControlList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SelectableControlList.Designer.cs">
+      <DependentUpon>SelectableControlList.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlList.cs">
       <SubType>Component</SubType>
     </Compile>

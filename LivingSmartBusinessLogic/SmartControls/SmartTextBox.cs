@@ -37,8 +37,15 @@ namespace SmartControls
 
 		public override string Text
 		{
-			get { return _text; }
-			set { _text = textBox.Text = value; }
+			get { return _text??String.Empty; }
+			set
+			{
+				if (value != Text)
+				{
+					_text = textBox.Text = value;
+					OnTextChanged(EventArgs.Empty);
+				}
+			}
 		}
 		private string _text;
 
@@ -69,6 +76,28 @@ namespace SmartControls
 			set { _useSystemPasswordChar = textBox.UseSystemPasswordChar = value; }
 		}
 		private bool _useSystemPasswordChar;
+
+
+		private AutoCompleteMode _autoCompleteMode;
+		public AutoCompleteMode AutoCompleteMode
+		{
+			get { return textBox.AutoCompleteMode; }
+			set { _autoCompleteMode = textBox.AutoCompleteMode = value; }
+		}
+
+		private AutoCompleteSource _autoCompleteSource;
+		public AutoCompleteSource AutoCompleteSource
+		{
+			get { return textBox.AutoCompleteSource; }
+			set { _autoCompleteSource = textBox.AutoCompleteSource = value; }
+		}
+
+		private AutoCompleteStringCollection _autoCompleteCustomSource;
+		public AutoCompleteStringCollection AutoCompleteCustomSource
+		{
+			get { return textBox.AutoCompleteCustomSource; }
+			set { _autoCompleteCustomSource = textBox.AutoCompleteCustomSource = value; }
+		}
 
 		#endregion
 
@@ -158,8 +187,7 @@ namespace SmartControls
 		}
 		
 		#endregion
-
-
+		
 		public SmartTextBox()
 		{
 			UpdateColor();
@@ -172,14 +200,12 @@ namespace SmartControls
 			textBox.BackColor = BackColor;
 			textBox.BorderStyle = BorderStyle.None;
 			textBox.ForeColor = ForeColor;
-
-			textBox.Text = Text;
 			
 			Click += OnClick;
 			SizeChanged += SmartTextBox_SizeChanged;
 			textBox.TextChanged += textBox_TextChanged;
 			textBox.KeyPress += textBox_KeyPress;
-
+		
 
 			toolTip = new ToolTip();
 			toolTip.InitialDelay = 1000;
@@ -233,7 +259,7 @@ namespace SmartControls
 		{
 			base.OnPaintBackground(e);
 
-			e.Graphics.FillRectangle(new SolidBrush(BackColor), new Rectangle(1, 1, e.ClipRectangle.Width-2, e.ClipRectangle.Height-2));
+			e.Graphics.FillRectangle(new SolidBrush(BackColor), new Rectangle(1, 1, ClientRectangle.Width-2, ClientRectangle.Height-2));
 			e.Graphics.DrawRectangle(new Pen(BorderColor), new Rectangle(0, 0, Width-1, Height-1));
 		}
 
@@ -320,7 +346,7 @@ namespace SmartControls
 			if (DesignMode)
 				return false;
 
-			if (MinLength != -1 && Text.Length < MinLength)
+			if (MinLength > 0 && Text.Length < MinLength)
 			{
 				SetError(ErrorType.ToShort);
 			}

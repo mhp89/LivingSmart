@@ -1,4 +1,4 @@
-﻿namespace LivingSmartForms
+namespace LivingSmartForms
 {
     partial class EmployeeLine
     {
@@ -178,7 +178,7 @@
             // EmployeeLine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.tlpEmployee);
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "EmployeeLine";

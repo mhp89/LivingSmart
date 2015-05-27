@@ -110,8 +110,9 @@ namespace LivingSmartForms.DropIns
 			// 
 			// pnlBottomControlsBorder
 			// 
+			this.pnlBottomControlsBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlBottomControlsBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.pnlBottomControlsBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlBottomControlsBorder.Location = new System.Drawing.Point(0, 0);
 			this.pnlBottomControlsBorder.Name = "pnlBottomControlsBorder";
 			this.pnlBottomControlsBorder.Size = new System.Drawing.Size(498, 2);
@@ -131,6 +132,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// btnPrev
 			// 
+			this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnPrev.AutoSize = true;
 			this.btnPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.btnPrev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -152,6 +154,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// btnNext
 			// 
+			this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnNext.AutoSize = true;
 			this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));

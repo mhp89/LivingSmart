@@ -37,9 +37,9 @@ namespace LivingSmartForms.DropIns
 
 			steps = new CaseStep[Enum.GetNames(typeof(StepsIndex)).Length];
 
-			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(baseForm.caseController);
-            steps[(int)StepsIndex.Lot] = new NewCaseStepLot(baseForm.caseController);
-            steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm.caseController);
+			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(baseForm);
+            steps[(int)StepsIndex.Lot] = new NewCaseStepLot(baseForm);
+            steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm);
 
 			InitializeSteps();
 

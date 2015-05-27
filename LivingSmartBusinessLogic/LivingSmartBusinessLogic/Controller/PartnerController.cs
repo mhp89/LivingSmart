@@ -1,7 +1,18 @@
-﻿namespace LivingSmartBusinessLogic.Controller
+namespace LivingSmartBusinessLogic.Controller
 {
     public class PartnerController
-    {
+	{
+		#region Singleton
+
+		private PartnerController _instance;
+		public PartnerController Instance
+		{
+			get { return _instance ?? (_instance = new PartnerController()); }
+		}
+
+		#endregion
+
+
         private PartnerCatalog partnerCatalog;
 
         private Partner activePartner;

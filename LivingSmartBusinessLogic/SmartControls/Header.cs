@@ -60,8 +60,8 @@ namespace SmartControls
 
 			//Beregner firkanten teksterne skal tegnes i
 			Rectangle textRectangle = AdjustedRect(
-				new Rectangle(e.ClipRectangle.X, e.ClipRectangle.Y,
-					textSize.Width, e.ClipRectangle.Height),
+				new Rectangle(ClientRectangle.X, ClientRectangle.Y,
+					textSize.Width, ClientRectangle.Height),
 				Padding
 			);
 

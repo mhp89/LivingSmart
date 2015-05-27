@@ -87,6 +87,18 @@
     <Compile Include="BaseForm.Designer.cs">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DropIns\CustomerSearchDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\CustomerSearchDropIn.Designer.cs">
+      <DependentUpon>CustomerSearchDropIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIns\EstateAgentSearchDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\EstateAgentSearchDropIn.Designer.cs">
+      <DependentUpon>EstateAgentSearchDropIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="DropIns\NewCaseDropIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -125,6 +137,12 @@
     <Compile Include="UserControls\DistanceField.Designer.cs">
       <DependentUpon>DistanceField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\CustomerLineSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\CustomerLineSearch.Designer.cs">
+      <DependentUpon>CustomerLineSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\EmployeeLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -142,6 +160,12 @@
     </Compile>
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EstateAgentSearch.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EstateAgentSearch.Designer.cs">
+      <DependentUpon>EstateAgentSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\NewCaseStepLot.cs">
       <SubType>UserControl</SubType>
@@ -176,8 +200,17 @@
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Classes\BaseDropIn.resx">
+      <DependentUpon>BaseDropIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Classes\CaseStep.resx">
       <DependentUpon>CaseStep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\CustomerSearchDropIn.resx">
+      <DependentUpon>CustomerSearchDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\EstateAgentSearchDropIn.resx">
+      <DependentUpon>EstateAgentSearchDropIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
       <DependentUpon>NewCaseDropIn.cs</DependentUpon>
@@ -207,6 +240,9 @@
     <EmbeddedResource Include="UserControls\DistanceField.resx">
       <DependentUpon>DistanceField.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\CustomerLineSearch.resx">
+      <DependentUpon>CustomerLineSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\EmployeeLine.resx">
       <DependentUpon>EmployeeLine.cs</DependentUpon>
     </EmbeddedResource>
@@ -215,6 +251,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CustomerLine.resx">
       <DependentUpon>CustomerLine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\EstateAgentSearch.resx">
+      <DependentUpon>EstateAgentSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepLot.resx">
       <DependentUpon>NewCaseStepLot.cs</DependentUpon>

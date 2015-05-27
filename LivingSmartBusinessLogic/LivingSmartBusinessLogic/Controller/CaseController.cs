@@ -1,10 +1,21 @@
-﻿using System;
+using System;
 using System.Collections.ObjectModel;
 
 namespace LivingSmartBusinessLogic.Controller
 {
     public class CaseController
-    {
+	{
+		#region Singleton
+
+		private CaseController _instance;
+		public CaseController Instance
+		{
+			get { return _instance ?? (_instance = new CaseController()); }
+		}
+
+		#endregion
+
+
         private CaseCatalog caseCatalog;
 
         private Case activeCase;

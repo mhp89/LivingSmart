@@ -15,12 +15,17 @@ using LivingSmartForms.Pages;
 using LivingSmartForms.Views;
 using SmartControls;
 using Menu = LivingSmartForms.Classes.Menu;
+using SmartColor = LivingSmartForms.Classes.SmartColor;
 
 namespace LivingSmartForms
 {
     public partial class BaseForm : Form
     {
-        internal CaseController caseController;
+		internal readonly CaseController CaseController;
+		internal readonly CustomerController CustomerController;
+	    internal readonly EstateAgentController EstateAgentController;
+
+	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
 
 		#region Menu
 		
@@ -38,10 +43,9 @@ namespace LivingSmartForms
 
 	    private Control partnerView;
 
-		public BaseForm(CaseController caseController)
+		public BaseForm()
         {
 			AutoScaleMode = AutoScaleMode.None;
-		    this.caseController = caseController;
 
             InitializeComponent();
 			
@@ -197,35 +201,46 @@ namespace LivingSmartForms
 
 		#region DropIn
 
-	    public void ShowDropIn(UserControl view)
-	    {
-		    if (pnlDropInHolder.Controls.Count == 0)
-		    {
-				CloseDropIn();
+	    public void ShowDropIn(BaseDropIn view)
+		{
+			var viewWidth = view.Width;
 
-			    var viewWidth = view.Width;
+			/*foreach (var dropIn in DropIns)
+				dropIn.Parent.Location = new Point(dropIn.Parent.Location.X - 50, dropIn.Parent.Location.Y);*/
 
-				//Tilf�jet view'et til holderen
-				pnlDropInHolder.Controls.Add(view);
-				//F�r view'et til at fylde hele holderen
-				view.Dock = DockStyle.Fill;
+			var dropInHolder = new Panel
+			{
+				BackColor = SmartColor.Light,
+				Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right,
+				Size = new Size(viewWidth, pnlMasterContent.Height)
+			};
 
-				pnlDropInHolder.Width = viewWidth;
+			pnlMasterContent.Controls.Add(dropInHolder);
 
-				//Flytter holderen s� den sidder i h�jre side
-				pnlDropInHolder.Location = new Point(pnlMasterContent.Width - pnlDropInHolder.Width, pnlDropInHolder.Top);
-		    }
-		    else
-		    {
-				CloseDropIn();			    
-		    }
+			//Tilføjer dropin'et til stack'en
+			DropIns.Push(view);
+
+			//Tilføjet view'et til holderen
+			dropInHolder.Controls.Add(view);
+			//Før view'et til at fylde hele holderen
+			view.Dock = DockStyle.Fill;
+
+			//pnlDropInHolder.Width = viewWidth;
+
+			//Flytter holderen så den sidder i højre side
+			dropInHolder.Location = new Point(pnlMasterContent.Width - dropInHolder.Width, dropInHolder.Top);
+			dropInHolder.BringToFront();
 	    }
 
 	    public void CloseDropIn()
-		{
-			pnlDropInHolder.Controls.Clear();
-			//Nustiller st�rrelsen
-			pnlDropInHolder.Size = new Size(0, pnlDropInHolder.Height);
+	    {
+			pnlMasterContent.Controls.Remove(DropIns.Pop().Parent);
+
+		    /*foreach (var dropIn in DropIns)
+			    dropIn.Parent.Location = new Point(dropIn.Parent.Location.X + 50, dropIn.Parent.Location.Y);*/
+
+		    //Nustiller st�rrelsen
+			//pnlDropInHolder.Size = new Size(0, pnlDropInHolder.Height);
 
 			Refresh();
 	    }

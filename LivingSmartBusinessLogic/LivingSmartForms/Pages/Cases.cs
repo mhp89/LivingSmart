@@ -26,7 +26,12 @@ namespace LivingSmartForms.Pages
 
 		public override void OnShow()
 		{
-			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
+			//baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
+		}
+
+		private void smartTextBox1_TextChanged(object sender, EventArgs e)
+		{
+			Console.WriteLine("Test");
 		}
 	}
 }

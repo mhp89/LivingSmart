@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class EstateAgent
     {
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
 
         #region Private Fields
 

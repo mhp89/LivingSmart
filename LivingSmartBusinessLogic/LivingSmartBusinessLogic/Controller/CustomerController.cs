@@ -1,10 +1,22 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace LivingSmartBusinessLogic.Controller
 {
     public class CustomerController
-    {
-        private CustomerCatalog customerCatalog;
+	{
+		#region Singleton
+		
+		private CustomerController _instance;
+	    public CustomerController Instance
+	    {
+			get { return _instance ?? (_instance = new CustomerController()); }
+	    }
+
+		#endregion
+
+
+		private CustomerCatalog customerCatalog;
 
         private Customer activeCustomer;
 
@@ -17,6 +29,7 @@ namespace LivingSmartBusinessLogic.Controller
         
         public void AddCustomer(Customer customer)
         {
+			//TODO: Check for valid ID
             customerCatalog.AddToCatalog(customer);
         }
 
@@ -59,8 +72,9 @@ namespace LivingSmartBusinessLogic.Controller
                 customer.Address = address;
         }
 
-        public void SetZipCode(Customer customer, City city)
+        public void SetCity(Customer customer, int zipCode)
         {
+			var city = Citycon
             if (customer.City != city)
                 customer.City = city;
         }
@@ -70,6 +84,11 @@ namespace LivingSmartBusinessLogic.Controller
             if (customer.Email != email)
                 customer.Email = email;
         }
+
+		public List<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
+		{
+			return customerCatalog.SearchCustomers(id, name, address, zipcode, telephone, email);
+		}
 
         #endregion
     }

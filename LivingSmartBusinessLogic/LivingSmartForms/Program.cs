@@ -16,11 +16,13 @@ namespace LivingSmartForms
         [STAThread]
         static void Main()
         {
-            CaseController caseController = new CaseController();
+            /*CaseController caseController = new CaseController();
+			CustomerController customerController = new CustomerController();
+			EstateAgentController estateAgentController = new EstateAgentController();*/
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new BaseForm(caseController));
+			Application.Run(new BaseForm());
         }
     }
 }

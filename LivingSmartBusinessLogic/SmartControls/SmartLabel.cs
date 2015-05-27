@@ -24,6 +24,7 @@ namespace SmartControls
 			set
 			{
 				_title = value;
+				InvalidateTextSizeCache();
 				UpdateAutosize();
 			}
 		}
@@ -39,6 +40,7 @@ namespace SmartControls
 			set
 			{
 				_titleFont = value;
+				InvalidateTextSizeCache();
 				UpdateAutosize();
 			}
 		}
@@ -55,6 +57,7 @@ namespace SmartControls
 			set
 			{
 				base.Text = value;
+				InvalidateTextSizeCache();
 				UpdateAutosize();
 			}
 		}
@@ -66,6 +69,7 @@ namespace SmartControls
 			set
 			{
 				_font = value;
+				InvalidateTextSizeCache();
 				UpdateAutosize();
 			}
 		}
@@ -80,6 +84,9 @@ namespace SmartControls
 		protected override Padding DefaultMargin { get { return Padding.Empty; } }
 
 		#endregion
+
+		private Size titleSizeCache = Size.Empty;
+		private Size textSizeCache = Size.Empty;
 
 		public SmartLabel()
 		{
@@ -96,34 +103,48 @@ namespace SmartControls
 				Size = GetPreferredSize(Size.Empty);
 				Invalidate();
 			}
+			else
+			{
+				Invalidate();
+			}
 		}
+
 
 		public override Size GetPreferredSize(Size proposedSize)
 		{
-			Graphics gr = CreateGraphics();
+			SetTextSizes();
 
-			//Finder relevante flag
-			TextFormatFlags flags = CreateTextFormatFlags(TextAlign);
-
-			//Beregner størrelsen til teksterne
-			var titleSize = TextRenderer.MeasureText(gr, Title, TitleFont, Size.Empty, flags);
-			var textSize = TextRenderer.MeasureText(gr, Text, Font, Size.Empty, flags);
-			//Console.WriteLine("Title ("+Title+"): " + titleSize);
-			//Console.WriteLine("Text: (" + Text + ")" + textSize);
-
-			var height = titleSize.Height;
-			if (textSize.Height > height)
-				height = textSize.Height;
+			var height = textSizeCache.Height > titleSizeCache.Height ? textSizeCache.Height : titleSizeCache.Height;
 
 			//Beregner den ønskede størrelsen til hele SmartLabel'en
-			Size preferredSize = new Size(titleSize.Width + textSize.Width, height);
+			Size preferredSize = new Size(titleSizeCache.Width + textSizeCache.Width, height);
 			
 			//Justere størrelsen i forhold til padding
 			Size requiredSize = preferredSize + Padding.Size;
-
-			//Console.WriteLine("Required Height: " + requiredSize.Height);
 			
 			return requiredSize;
+		}
+
+		private void SetTextSizes()
+		{
+			if (titleSizeCache == Size.Empty || textSizeCache == Size.Empty)
+			{
+				//Finder relevante flag
+				TextFormatFlags flags = CreateTextFormatFlags(TextAlign);
+
+				//Beregner størrelsen til teksterne
+				if (titleSizeCache == Size.Empty)
+					titleSizeCache = TextRenderer.MeasureText(Title, TitleFont, Size.Empty, flags);
+
+				if (textSizeCache == Size.Empty)
+					textSizeCache = TextRenderer.MeasureText(Title, TitleFont, Size.Empty, flags);
+			}
+		}
+
+		private void InvalidateTextSizeCache()
+		{
+			titleSizeCache = Size.Empty;
+			textSizeCache = Size.Empty;
 		}
 
 		/// <summary>
@@ -132,31 +153,23 @@ namespace SmartControls
 		/// <param name="e"></param>
 		protected override void OnPaint(PaintEventArgs e)
 		{
+			SetTextSizes();
+
 			//Finder relevante flag
 			TextFormatFlags flags = CreateTextFormatFlags(TextAlign);
 
-			//Beregner størrelsen til teksterne
-			var titleSize = TextRenderer.MeasureText(e.Graphics, Title, TitleFont,
-				Size.Empty, flags);
-			var textSize = TextRenderer.MeasureText(e.Graphics, Text, Font,
-				Size.Empty, flags);
-			
 			//Beregner firkanten teksterne skal tegnes i
 			Rectangle titleRectangle = AdjustedRect(
-				new Rectangle(e.ClipRectangle.X, e.ClipRectangle.Y, titleSize.Width,
-					e.ClipRectangle.Height),
+				new Rectangle(ClientRectangle.X, ClientRectangle.Y, titleSizeCache.Width,
+					ClientRectangle.Height),
 				Padding
 			);
 			Rectangle textRectangle = AdjustedRect(
-				new Rectangle(e.ClipRectangle.X + titleSize.Width, e.ClipRectangle.Y,
-					textSize.Width, e.ClipRectangle.Height),
+				new Rectangle(ClientRectangle.X + titleSizeCache.Width, ClientRectangle.Y,
+					textSizeCache.Width, ClientRectangle.Height),
 				Padding
 			);
-
-			//Console.WriteLine("Actual Height: "+e.ClipRectangle.Height);
-
-			//DrawDebug(titleRectangle, textRectangle, e);
-
+			
 			//Tegner teksterne
 			TextRenderer.DrawText(e.Graphics, Title, TitleFont, titleRectangle, ForeColor, flags);
 			TextRenderer.DrawText(e.Graphics, Text, Font, textRectangle, ForeColor, flags);

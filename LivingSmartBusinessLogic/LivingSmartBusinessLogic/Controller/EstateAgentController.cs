@@ -1,9 +1,21 @@
-﻿using System;
+using System;
+using System.Collections.Generic;
 
 namespace LivingSmartBusinessLogic.Controller
 {
     public class EstateAgentController
-    {
+	{
+		#region Singleton
+
+		private EstateAgentController _instance;
+		public EstateAgentController Instance
+		{
+			get { return _instance ?? (_instance = new EstateAgentController()); }
+		}
+
+		#endregion
+
+
         private EstateAgentCatalog estateAgentCatalog;
 
         private EstateAgent activeEstateAgent;
@@ -65,6 +77,10 @@ namespace LivingSmartBusinessLogic.Controller
                 estateAgent.TerminationDate = startingDate;
         }
 
+		public List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
+		{
+			return estateAgentCatalog.SearchEstateAgents(id, name, telephone, email);
+		}
         #endregion
     }
 }

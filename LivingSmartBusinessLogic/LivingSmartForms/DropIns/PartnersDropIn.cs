@@ -31,6 +31,8 @@ namespace LivingSmartForms.DropIns
 			controller.SetTimeZone(partner, "Hawaiian Standard Time");
 
 			clsPartners.AddControl(new PartnerView(partner));
+
+			HideCloseButton();
 		}
 	}
 }

@@ -32,6 +32,7 @@ namespace LivingSmartForms.Classes
 		{
 			this.pnlTopBorder = new System.Windows.Forms.Panel();
 			this.pnlLeftBorder = new System.Windows.Forms.Panel();
+			this.btnClose = new SmartControls.SmartButton();
 			this.SuspendLayout();
 			// 
 			// pnlTopBorder
@@ -54,10 +55,32 @@ namespace LivingSmartForms.Classes
 			this.pnlLeftBorder.Size = new System.Drawing.Size(2, 498);
 			this.pnlLeftBorder.TabIndex = 1;
 			// 
+			// btnClose
+			// 
+			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnClose.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnClose.FlatAppearance.BorderSize = 0;
+			this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnClose.Location = new System.Drawing.Point(360, 10);
+			this.btnClose.Name = "btnClose";
+			this.btnClose.Padding = new System.Windows.Forms.Padding(0);
+			this.btnClose.Size = new System.Drawing.Size(30, 30);
+			this.btnClose.TabIndex = 2;
+			this.btnClose.Text = "X";
+			this.btnClose.UseVisualStyleBackColor = false;
+			this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+			// 
 			// BaseDropIn
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.AutoSize = true;
+			this.Controls.Add(this.btnClose);
 			this.Controls.Add(this.pnlLeftBorder);
 			this.Controls.Add(this.pnlTopBorder);
 			this.Margin = new System.Windows.Forms.Padding(0);
@@ -71,5 +94,6 @@ namespace LivingSmartForms.Classes
 
 		private System.Windows.Forms.Panel pnlTopBorder;
 		private Panel pnlLeftBorder;
+		private SmartControls.SmartButton btnClose;
 	}
 }

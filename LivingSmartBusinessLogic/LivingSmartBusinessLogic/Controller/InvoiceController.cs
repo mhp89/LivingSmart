@@ -1,7 +1,18 @@
-﻿namespace LivingSmartBusinessLogic.Controller
+namespace LivingSmartBusinessLogic.Controller
 {
     public class InvoiceController
-    {
+	{
+		#region Singleton
+
+		private InvoiceController _instance;
+		public InvoiceController Instance
+		{
+			get { return _instance ?? (_instance = new InvoiceController()); }
+		}
+
+		#endregion
+
+
         private InvoiceCatalog invoiceCatalog;
 
         public InvoiceController()

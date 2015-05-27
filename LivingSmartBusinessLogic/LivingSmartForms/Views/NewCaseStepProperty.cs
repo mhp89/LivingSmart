@@ -17,9 +17,9 @@ namespace LivingSmartForms.Views
     public partial class NewCaseStepProperty : CaseStep
     {
         private CaseController caseController;
-        public NewCaseStepProperty(CaseController caseController)
+        public NewCaseStepProperty(BaseForm baseForm)
         {
-            this.caseController = caseController;
+            caseController = baseForm.CaseController;
             InitializeComponent();
             NewDistanceInput();
         }

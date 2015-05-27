@@ -124,7 +124,7 @@ namespace SmartControls
 		{
 			//Tegner baggrunden
 			Color bgColor = (_hovering || Selected) ? SmartColor.Dark : SmartColor.Light;
-			e.Graphics.FillRectangle(new SolidBrush(bgColor), new Rectangle(e.ClipRectangle.Left, e.ClipRectangle.Top, e.ClipRectangle.Width, e.ClipRectangle.Height));
+			e.Graphics.FillRectangle(new SolidBrush(bgColor), new Rectangle(ClientRectangle.Left, ClientRectangle.Top, ClientRectangle.Width, ClientRectangle.Height));
 
 
 			//Finder relevante flag for teksten
@@ -132,7 +132,7 @@ namespace SmartControls
 			Color textColor = (_hovering || Selected) ? SmartColor.Light : SmartColor.Dark;
 			
 			//Berenger firkanten teksten skal tegnes i
-			Rectangle textRectangle = AdjustedRect(new Rectangle(e.ClipRectangle.X, e.ClipRectangle.Y, e.ClipRectangle.Width, e.ClipRectangle.Height), Padding);
+			Rectangle textRectangle = AdjustedRect(new Rectangle(ClientRectangle.X, ClientRectangle.Y, ClientRectangle.Width, ClientRectangle.Height), Padding);
 			
 			//Tegner teksten
 			TextRenderer.DrawText(e.Graphics, Text, Font, textRectangle, textColor, flags);
