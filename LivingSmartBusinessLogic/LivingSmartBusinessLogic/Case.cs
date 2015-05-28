@@ -92,66 +92,6 @@ namespace LivingSmartBusinessLogic
         {
             throw new System.NotImplementedException();
         }
-
-        internal void AddDocument(Document document)
-        {
-            documents.Add(document);
-        }
-
-        internal void AddPicture(Picture picture)
-        {
-            pictures.Add(picture);
-        }
-
-        internal void AddAd(Ad ad)
-        {
-            ads.Add(ad);
-        }
-
-        internal void AddRating(Rating rating)
-        {
-            ratings.Add(rating);
-        }
-
-        internal void AddAskingPrice(AskingPrice askingPrice)
-        {
-            askingPrices.Add(askingPrice);
-        }
-
-        internal void AddDistanceTo(DistanceTo distanceTo)
-        {
-            distanceTos.Add(distanceTo);
-        }
-
-        internal ReadOnlyCollection<Ad> GetAds()
-        {
-            return ads.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<Document> GetDocuments()
-        {
-            return documents.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<Rating> GetRatings()
-        {
-            return ratings.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<AskingPrice> GetAskingPrices()
-        {
-            return askingPrices.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<DistanceTo> GetDistanceTos()
-        {
-            return distanceTos.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<Picture> GetPictures()
-        {
-            return pictures.AsReadOnly();
-        }
         
         #endregion
     }
