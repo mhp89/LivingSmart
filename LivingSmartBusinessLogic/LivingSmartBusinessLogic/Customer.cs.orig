@@ -42,13 +42,22 @@ namespace LivingSmartBusinessLogic
             Email = email;
             Telephone = telephone;
         }
+<<<<<<< HEAD
+
+        internal Customer(int id, string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
+=======
         internal Customer(int id, string name, DateTime dateOfBirth, string address, City city, string email, string telephone)
+>>>>>>> 0b7f0f4bbfc7c2d0c6d22ed494edc34972f81eca
         {
             Id = id;
             Name = name;
             DateOfBirth = dateOfBirth;
             Address = address;
+<<<<<<< HEAD
+            City = CityController.Instance.GetCity(zipCode);
+=======
             City = city;
+>>>>>>> 0b7f0f4bbfc7c2d0c6d22ed494edc34972f81eca
             Email = email;
             Telephone = telephone;
         }

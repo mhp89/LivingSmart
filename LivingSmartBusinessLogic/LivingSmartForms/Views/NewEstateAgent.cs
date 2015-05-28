@@ -24,10 +24,7 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				var estateAgent = EstateAgentController.Instance.MakeNewEstateAgent();
-				EstateAgentController.Instance.SetName(estateAgent, stbEstateAgentName.Text);
-				EstateAgentController.Instance.SetTelephone(estateAgent, stbEstateAgentPhone.Text);
-				EstateAgentController.Instance.SetEmail(estateAgent, stbEstateAgentEmail.Text);
+				var estateAgent = EstateAgentController.Instance.MakeNewEstateAgent(stbEstateAgentName.Text, stbEstateAgentPhone.Text, stbEstateAgentEmail.Text, DateTime.Today);
 				EstateAgentController.Instance.AddEstateAgent(estateAgent);
 			}
 			return fielddataOk;

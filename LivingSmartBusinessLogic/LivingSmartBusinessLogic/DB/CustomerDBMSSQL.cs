@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.DBLayer;
 
 namespace LivingSmartBusinessLogic.DB
@@ -35,7 +36,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string) reader["Telephone"];
                     string email = (string) reader["Email"];
 
-                    Customer c = new Customer(id, name, dateOfBirth, address, zipCode, email, telephone);
+                    Customer c = new Customer(id, name, dateOfBirth, address, CityController.Instance.GetCity(zipCode), email, telephone);
                     customerList.Add(c);
                 }
             }

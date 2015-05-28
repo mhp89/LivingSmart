@@ -27,13 +27,20 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        internal Document(string type, int price, string location, string status)
+        {
+            Type = type;
+            Price = price;
+            Location = location;
+            Status = status;
+        }
         internal Document(int id, string type, int price, string location, string status)
         {
             Id = id;
-            _type = type;
-            _price = price;
-            _location = location;
-            _status = status;
+            Type = type;
+            Price = price;
+            Location = location;
+            Status = status;
         }
 
         #region Methods

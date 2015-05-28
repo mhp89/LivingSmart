@@ -26,8 +26,8 @@ namespace LivingSmartBusinessLogic
         internal DistanceTo(int id, string type, int distance)
         {
             Id = id;
-            _type = type;
-            _distance = distance;
+            Type = type;
+            Distance = distance;
         }
 
         #region Methods

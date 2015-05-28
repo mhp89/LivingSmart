@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ad.cs" />
+    <Compile Include="AdCatalog.cs" />
     <Compile Include="Appointment.cs" />
     <Compile Include="AppointmentCatalog.cs" />
+    <Compile Include="AskingPriceCatalog.cs" />
     <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="AskingPrice.cs" />
     <Compile Include="Case.cs" />
@@ -68,25 +70,24 @@
     <Compile Include="DB\IPartnerDB.cs" />
     <Compile Include="DB\ICustomerDB.cs" />
     <Compile Include="DistanceTo.cs" />
+    <Compile Include="DistanceToCatalog.cs" />
     <Compile Include="Document.cs" />
+    <Compile Include="DocumentCatalog.cs" />
     <Compile Include="EstateAgent.cs" />
     <Compile Include="EstateAgentCatalog.cs" />
     <Compile Include="Controller\EstateAgentController.cs" />
-    <Compile Include="IModel.cs" />
     <Compile Include="Invoice.cs" />
     <Compile Include="Controller\InvoiceController.cs" />
     <Compile Include="InvoiceCatalog.cs" />
-    <Compile Include="ISubject.cs" />
     <Compile Include="CityCatalog.cs" />
     <Compile Include="Neighborhood.cs" />
-    <Compile Include="IObserver.cs" />
     <Compile Include="NeighborhoodCatalog.cs" />
     <Compile Include="Controller\NeighborhoodController.cs" />
     <Compile Include="Partner.cs" />
     <Compile Include="PartnerCatalog.cs" />
     <Compile Include="Controller\PartnerController.cs" />
     <Compile Include="Picture.cs" />
-    <Compile Include="PotentialBuyer.cs" />
+    <Compile Include="PictureCatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -94,28 +95,26 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="PropertyType.cs" />
+    <Compile Include="PropertyTypeCatalog.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Controller\SellPropertyController.cs" />
+    <Compile Include="RatingCatalog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
-<<<<<<< HEAD
-=======
-    <None Include="Customer.sequencediagram" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Customer.sequencediagram.layout">
-      <DependentUpon>Customer.sequencediagram</DependentUpon>
-    </EmbeddedResource>
->>>>>>> origin/DBAccess#51
-  </ItemGroup>
-  <ItemGroup>
+<<<<<<< HEAD
+=======
+    <Folder Include="Catalogs\" />
+    <Folder Include="DB\" />
+>>>>>>> 0b7f0f4bbfc7c2d0c6d22ed494edc34972f81eca
     <Folder Include="Model\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

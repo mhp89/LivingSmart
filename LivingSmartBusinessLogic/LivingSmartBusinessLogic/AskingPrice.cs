@@ -23,16 +23,16 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal AskingPrice()
+        internal AskingPrice(long value, DateTime date)
         {
-            
+            Value = value;
+            Date = date;
         }
-
         internal AskingPrice(int id, long value, DateTime date)
         {
             Id = id;
-            _value = value;
-            _date = date;
+            Value = value;
+            Date = date;
         }
 
         #region Methods

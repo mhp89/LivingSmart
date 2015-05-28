@@ -23,15 +23,16 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Picture()
+        internal Picture(string location, string description)
         {
-            
+            Location = location;
+            Desription = description;
         }
         internal Picture(int id, string location, string description)
         {
             Id = id;
-            _location = location;
-            _description = description;
+            Location = location;
+            Desription = description;
         }
 
         #region Methods

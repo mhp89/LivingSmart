@@ -6,7 +6,7 @@
       <Compartment Name="Fields" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>wEDCQADEADIkABgeBAIYKgYOHUoNSwQSCCljAFVGzAA=</HashCode>
+      <HashCode>wEDCQADEABIkABgeBAIYKgYOHUoNSwQSCChjAFVGzAA=</HashCode>
       <FileName>Case.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -67,19 +67,6 @@
       <HashCode>AkACAAAEAQAAAAQAAAIAAAAAAAAAAAAAASAAAAAAAAA=</HashCode>
       <FileName>Document.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.PotentialBuyer" Collapsed="true">
-    <Position X="8.75" Y="7.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAAAAAABAAAAAAACAAAAAABAAAAAAAAAAA=</HashCode>
-      <FileName>PotentialBuyer.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="PotBuyer" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="LivingSmartBusinessLogic.DistanceTo">
     <Position X="4.25" Y="7.25" Width="1.5" />

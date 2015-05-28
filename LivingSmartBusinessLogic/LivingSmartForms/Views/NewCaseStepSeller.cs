@@ -39,12 +39,12 @@ namespace LivingSmartForms.Views
 				Customer customer;
 				if (newCustomer)
 				{
-					customer = CustomerController.Instance.MakeNewCustomer();
-					CustomerController.Instance.SetName(customer, stbSellerName.Text);
-					CustomerController.Instance.SetAddress(customer, stbSellerAdress.Text);
-					CustomerController.Instance.SetCity(customer, Convert.ToInt32(stbSellerZipCode.Text));
-					CustomerController.Instance.SetTelephone(customer, stbSellerPhone.Text);
-					CustomerController.Instance.SetEmail(customer, stbSellerEmail.Text);
+					customer = CustomerController.Instance.MakeNewCustomer(stbSellerName.Text,
+						(DateTime) dafBirthday.GetDateTime(),
+						stbSellerAdress.Text,
+						Convert.ToInt32(stbSellerZipCode.Text),
+						stbSellerEmail.Text,
+						stbSellerPhone.Text);
 					CustomerController.Instance.SaveActiveCustomer();
 				}
 				else

@@ -31,18 +31,20 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Ad()
+        internal Ad(string type, DateTime startDate, DateTime endDate, int price)
         {
-            
+            Type = type;
+            StartDate = startDate;
+            EndDate = endDate;
+            Price = price;
         }
-
         internal Ad(int id, string type, DateTime startDate, DateTime endDate, int price)
         {
             Id = id;
-            _type = type;
-            _startDate = startDate;
-            _endDate = endDate;
-            _price = price;
+            Type = type;
+            StartDate = startDate;
+            EndDate = endDate;
+            Price = price;
         }
 
         #region Methods

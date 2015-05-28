@@ -15,9 +15,17 @@ namespace LivingSmartBusinessLogic
         private long _systemValue;
         private DateTime _date;
 
-        public Rating(Case cCase)
+        internal Rating(Case cCase)
         {
             throw new NotImplementedException();
+        }
+
+        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
+        {
+            Id = id;
+            EstateAgentValue = estateAgentValue;
+            SystemValue = systemValue;
+            Date = date;
         }
 
         #endregion
@@ -30,13 +38,7 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
-        {
-            Id = id;
-            _estateAgentValue = estateAgentValue;
-            _systemValue = systemValue;
-            _date = date;
-        }
+
 
         #region Methods
 

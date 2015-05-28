@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -35,7 +35,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string) reader["Telephone"];
                     string email = (string) reader["Email"];
 
-                    Ad ad = new Ad();
+                    Ad ad = new Ad("", DateTime.Today, DateTime.Now, 100);//TODO: FIX!!!!!
                     adList.Add(ad);
                 }
             }

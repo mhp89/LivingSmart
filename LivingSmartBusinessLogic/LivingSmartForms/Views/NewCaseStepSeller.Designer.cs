@@ -51,9 +51,9 @@ namespace LivingSmartForms.Views
 			this.pnlSellerCity = new System.Windows.Forms.Panel();
 			this.lblSellerCityCountry = new System.Windows.Forms.Label();
 			this.stbSellerZipCode = new SmartControls.SmartTextBox();
+			this.dafBirthday = new LivingSmartForms.UserControls.DateField();
 			this.hdrEstateAgent = new SmartControls.Header();
 			this.hdrSeller = new SmartControls.Header();
-			this.dateField1 = new LivingSmartForms.UserControls.DateField();
 			lblEstateAgentNameTitle = new System.Windows.Forms.Label();
 			this.tlpEstateAgent.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -160,7 +160,7 @@ namespace LivingSmartForms.Views
 			this.tlpSeller.Controls.Add(this.pnlSellerId, 1, 0);
 			this.tlpSeller.Controls.Add(this.stbSellerPhone, 1, 4);
 			this.tlpSeller.Controls.Add(this.pnlSellerCity, 1, 3);
-			this.tlpSeller.Controls.Add(this.dateField1, 1, 6);
+			this.tlpSeller.Controls.Add(this.dafBirthday, 1, 6);
 			this.tlpSeller.Location = new System.Drawing.Point(0, 130);
 			this.tlpSeller.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpSeller.Name = "tlpSeller";
@@ -471,6 +471,15 @@ namespace LivingSmartForms.Views
 			this.stbSellerZipCode.UseSystemPasswordChar = false;
 			this.stbSellerZipCode.TextChanged += new System.EventHandler(this.stbSellerZipCode_TextChanged);
 			// 
+			// dafBirthday
+			// 
+			this.dafBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dafBirthday.Location = new System.Drawing.Point(120, 240);
+			this.dafBirthday.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.dafBirthday.Name = "dafBirthday";
+			this.dafBirthday.Size = new System.Drawing.Size(360, 30);
+			this.dafBirthday.TabIndex = 8;
+			// 
 			// hdrEstateAgent
 			// 
 			this.hdrEstateAgent.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -496,15 +505,6 @@ namespace LivingSmartForms.Views
 			this.hdrSeller.Size = new System.Drawing.Size(480, 25);
 			this.hdrSeller.TabIndex = 3;
 			this.hdrSeller.Text = "Sælger";
-			// 
-			// dateField1
-			// 
-			this.dateField1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dateField1.Location = new System.Drawing.Point(120, 240);
-			this.dateField1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.dateField1.Name = "dateField1";
-			this.dateField1.Size = new System.Drawing.Size(360, 30);
-			this.dateField1.TabIndex = 8;
 			// 
 			// NewCaseStepSeller
 			// 
@@ -554,6 +554,6 @@ namespace LivingSmartForms.Views
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label lblEstateAgentName;
 		private SmartControls.SmartButton stbFindEstateAgent;
-		private UserControls.DateField dateField1;
+		private UserControls.DateField dafBirthday;
     }
 }

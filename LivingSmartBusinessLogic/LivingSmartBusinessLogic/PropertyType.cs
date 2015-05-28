@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace LivingSmartBusinessLogic
@@ -25,7 +24,7 @@ namespace LivingSmartBusinessLogic
         internal PropertyType(int id, string description)
         {
             Id = id;
-            _description = description;
+            Description = description;
         }
 
         #region Methods

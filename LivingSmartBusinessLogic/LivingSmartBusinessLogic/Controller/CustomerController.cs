@@ -51,9 +51,9 @@ namespace LivingSmartBusinessLogic.Controller
             customerCatalog.AddToCatalog(customer);
         }
 
-        public Customer MakeNewCustomer()
+        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
         {
-            return new Customer();
+            return new Customer(name, dateOfBirth, address, CityController.Instance.GetCity(zipCode), email, telephone);
         }
 
         public Customer ReadCustomer(int id)
@@ -61,41 +61,46 @@ namespace LivingSmartBusinessLogic.Controller
             return customerCatalog.Check(id);        
         }
 
-        public void SetName(Customer customer, string name)
+        public ReadOnlyCollection<Customer> GetCustomers()
         {
-            if (customer.Name != name)
-                customer.Name = name;
+            return customerCatalog.GetCustomers();
         }
 
-        public void SetDateOfBirth(Customer customer, DateTime dateOfBirth)
+        public void SetName(string name)
         {
-            if (customer.DateOfBirth != dateOfBirth)
-                customer.DateOfBirth = dateOfBirth;
+            if (activeCustomer.Name != name)
+                activeCustomer.Name = name;
         }
 
-        public void SetTelephone(Customer customer, string telephone)
+        public void SetDateOfBirth(DateTime dateOfBirth)
         {
-            if (customer.Telephone != telephone)
-                customer.Telephone = telephone;
+            if (activeCustomer.DateOfBirth != dateOfBirth)
+                activeCustomer.DateOfBirth = dateOfBirth;
         }
 
-        public void SetAddress(Customer customer, string address)
+        public void SetTelephone(string telephone)
         {
-            if (customer.Address != address)
-                customer.Address = address;
+            if (activeCustomer.Telephone != telephone)
+                activeCustomer.Telephone = telephone;
         }
 
-        public void SetCity(Customer customer, int zipCode)
+        public void SetAddress(string address)
+        {
+            if (activeCustomer.Address != address)
+                activeCustomer.Address = address;
+        }
+
+        public void SetCity(int zipCode)
         {
 	        var city = CityController.Instance.GetCity(zipCode);
-			if (customer.City != city)
-                customer.City = city;
+			if (activeCustomer.City != city)
+                activeCustomer.City = city;
         }
 
-        public void SetEmail(Customer customer, string email)
+        public void SetEmail(string email)
         {
-            if (customer.Email != email)
-                customer.Email = email;
+            if (activeCustomer.Email != email)
+                activeCustomer.Email = email;
         }
 
 		public ReadOnlyCollection<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)

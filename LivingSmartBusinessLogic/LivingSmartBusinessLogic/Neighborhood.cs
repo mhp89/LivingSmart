@@ -28,8 +28,8 @@ namespace LivingSmartBusinessLogic
         internal Neighborhood(City city, string name, int value)
         {
             this.city = city;
-            _name = name;
-            _value = value;
+            Name = name;
+            Value = value;
         }
 
         #region Methods
