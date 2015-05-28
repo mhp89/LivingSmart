@@ -45,7 +45,6 @@
     <Compile Include="Appointment.cs" />
     <Compile Include="AppointmentCatalog.cs" />
     <Compile Include="AskingPriceCatalog.cs" />
-    <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="AskingPrice.cs" />
     <Compile Include="Case.cs" />
     <Compile Include="CaseCatalog.cs" />
