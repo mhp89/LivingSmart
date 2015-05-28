@@ -53,8 +53,8 @@ namespace LivingSmartBusinessLogic.Controller
 
         public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate)
         {
-            
-            return new EstateAgent(name, telephone, email, startingDate);
+            SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate));
+            return activeEstateAgent;
         }
 
         public EstateAgent ReadEstateAgent(int id)
