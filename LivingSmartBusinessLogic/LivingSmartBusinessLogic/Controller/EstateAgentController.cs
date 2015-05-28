@@ -27,15 +27,34 @@ namespace LivingSmartBusinessLogic.Controller
         }
 
         #region Methods
-        
+
+        #region AdminActiveEstateAgent
+        public void SetActiveEstateAgent(EstateAgent activEstateAgent)
+        {
+            this.activeEstateAgent = activEstateAgent;
+        }
+
+        public void CancelActiveEstateAgent()
+        {
+            estateAgentCatalog = null;
+        }
+
+        public void SaveActiveCustomer()
+        {
+
+            AddEstateAgent(activeEstateAgent);
+        }
+        #endregion
+
         public void AddEstateAgent(EstateAgent estateAgent)
         {
             estateAgentCatalog.AddToCatalog(estateAgent);
         }
 
-        public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate)
         {
-            return new EstateAgent(name, telephone, email, startingDate, terminationDate);
+            
+            return new EstateAgent(name, telephone, email, startingDate);
         }
 
         public EstateAgent ReadEstateAgent(int id)
