@@ -9,7 +9,7 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IPropertyTypeDB
     {
-        List<Partner> ReadPropertyType();
+        List<Partner> ReadPropertyTypes();
         void UpdatePropertyType(PropertyType propertyType);
         int CreatePropertyType(PropertyType propertyType);
     }

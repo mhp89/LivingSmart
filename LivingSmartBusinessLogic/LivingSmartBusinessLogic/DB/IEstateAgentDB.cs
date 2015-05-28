@@ -9,8 +9,8 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IEstateAgentDB
     {
-        List<Customer> ReadEstateAgents();
-        void UpdateEstateAgent(Customer customer);
-        int CreateEstateAgent(Customer customer);
+        List<EstateAgent> ReadEstateAgents();
+        void UpdateEstateAgent(EstateAgent estateAgent);
+        int CreateEstateAgent(EstateAgent estateAgent);
     }
 }

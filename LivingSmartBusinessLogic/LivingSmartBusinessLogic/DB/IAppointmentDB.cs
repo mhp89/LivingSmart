@@ -9,7 +9,7 @@ namespace LivingSmartBusinessLogic.DB
     internal interface IAppointmentDB
     {
         List<Appointment> ReadAppointments();
-        void UpdateAd(Appointment appointment);
-        int CreateAd(Appointment appointment);
+        void UpdateAppointment(Appointment appointment);
+        int CreateAppointment(Appointment appointment);
     }
 }

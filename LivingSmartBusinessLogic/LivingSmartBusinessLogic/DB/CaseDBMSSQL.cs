@@ -16,12 +16,12 @@ namespace LivingSmartBusinessLogic.DB
             throw new NotImplementedException();
         }
 
-        public void UpdateAd(Case ca)
+        public void UpdateCase(Case ca)
         {
             throw new NotImplementedException();
         }
 
-        public int CreateAd(Case ca)
+        public int CreateCase(Case ca)
         {
             throw new NotImplementedException();
         }

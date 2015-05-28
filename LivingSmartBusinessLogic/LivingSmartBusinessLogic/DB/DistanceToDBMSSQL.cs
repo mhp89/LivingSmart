@@ -11,17 +11,17 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class DistanceToDBMSSQL : IDistanceToDB
     {
-        public List<Customer> ReadCustomers()
+        public List<DistanceTo> ReadDistanceTos()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateDistanceTo(DistanceTo distanceTo)
         {
             throw new NotImplementedException();
         }
 
-        public int CreateCustomer(Customer customer)
+        public int CreateDistanceTo(DistanceTo distanceTo)
         {
             throw new NotImplementedException();
         }

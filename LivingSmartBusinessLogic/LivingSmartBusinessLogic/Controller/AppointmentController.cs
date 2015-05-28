@@ -33,10 +33,10 @@
             return appointmentCatalog.Check(id);
         }
 
-        public void SetCase(Appointment appointment, Case newCase)
+        public void SetCaseId(Appointment appointment, int caseId)
         {
-            if (appointment.Case != newCase)
-                appointment.Case = newCase;
+            if (appointment.CaseId != caseId)
+                appointment.CaseId = caseId;
         }
         public void SetDescription(Appointment appointment, string description)
         {
@@ -48,10 +48,10 @@
             if (appointment.Place != place)
                 appointment.Place = place;
         }
-        public void SetCustomer(Appointment appointment, Customer customer)
+        public void SetCustomer(Appointment appointment, int customerId)
         {
-            if (appointment.Customer != customer)
-                appointment.Customer = customer;
+            if (appointment.CustomerId != customerId)
+                appointment.CustomerId = customerId;
         }
         public void SetDuration(Appointment appointment, int duration)
         {

@@ -9,7 +9,7 @@ namespace LivingSmartBusinessLogic.DB
     internal interface ICaseDB
     {
         List<Case> ReadCases();
-        void UpdateAd(Case ca);
-        int CreateAd(Case ca);
+        void UpdateCase(Case ca);
+        int CreateCase(Case ca);
     }
 }

@@ -11,17 +11,17 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class NeighborhoodDBMSSQL : INeighborhoodDB
     {
-        public List<Document> ReadNeighborhoods()
+        public List<Neighborhood> ReadNeighborhoods()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateDocument(Neighborhood neighborhood)
+        public void UpdateNeighborhood(Neighborhood neighborhood)
         {
             throw new NotImplementedException();
         }
 
-        public int CreateDocument(Neighborhood neighborhood)
+        public int CreateNeighborhood(Neighborhood neighborhood)
         {
             throw new NotImplementedException();
         }

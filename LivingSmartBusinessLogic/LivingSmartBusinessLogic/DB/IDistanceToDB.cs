@@ -9,8 +9,8 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IDistanceToDB
     {
-        List<Customer> ReadCustomers();
-        void UpdateCustomer(Customer customer);
-        int CreateCustomer(Customer customer);
+        List<DistanceTo> ReadDistanceTos();
+        void UpdateDistanceTo(DistanceTo distanceTo);
+        int CreateDistanceTo(DistanceTo distanceTo);
     }
 }

@@ -12,6 +12,7 @@ namespace LivingSmartBusinessLogic.DBLayer
         private static volatile DBConnectionMSSQL _instance;
         private static readonly object objectLock = new Object();
         private readonly SqlConnection conn = new SqlConnection(Properties.Settings.Default.ConnectionString);
+
         private DBConnectionMSSQL() { }
 
         public static DBConnectionMSSQL Instance

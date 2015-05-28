@@ -48,6 +48,7 @@ namespace LivingSmartBusinessLogic.DB
 
             return adList;
         }
+
         public List<Ad> ReadAds()
         {
             List<Ad> adList = new List<Ad>();

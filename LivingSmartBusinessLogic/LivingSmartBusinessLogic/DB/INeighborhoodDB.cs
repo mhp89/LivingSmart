@@ -9,8 +9,8 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface INeighborhoodDB
     {
-        List<Document> ReadNeighborhoods();
-        void UpdateDocument(Neighborhood neighborhood);
-        int CreateDocument(Neighborhood neighborhood);
+        List<Neighborhood> ReadNeighborhoods();
+        void UpdateNeighborhood(Neighborhood neighborhood);
+        int CreateNeighborhood(Neighborhood neighborhood);
     }
 }

@@ -11,17 +11,17 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class EstateAgentDBMSSQL : IEstateAgentDB
     {
-        public List<Customer> ReadEstateAgents()
+        public List<EstateAgent> ReadEstateAgents()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateEstateAgent(Customer customer)
+        public void UpdateEstateAgent(EstateAgent estateAgent)
         {
             throw new NotImplementedException();
         }
 
-        public int CreateEstateAgent(Customer customer)
+        public int CreateEstateAgent(EstateAgent estateAgent)
         {
             throw new NotImplementedException();
         }

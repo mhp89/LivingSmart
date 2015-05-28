@@ -11,7 +11,7 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class PropertyTypeDBMSSQL : IPropertyTypeDB
     {
-        public List<Partner> ReadPropertyType()
+        public List<Partner> ReadPropertyTypes()
         {
             throw new NotImplementedException();
         }
