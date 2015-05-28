@@ -7,10 +7,10 @@ using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal interface ICustomerDB
+    internal interface IPropertyTypeDB
     {
-        List<Customer> ReadCustomers();
-        void UpdateCustomer(Customer customer);
-        int CreateCustomer(Customer customer);
+        List<Partner> ReadPropertyType();
+        void UpdatePropertyType(PropertyType propertyType);
+        int CreatePropertyType(PropertyType propertyType);
     }
 }

@@ -7,7 +7,7 @@ using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IInvoiceDB
+    internal interface IInvoiceDB
     {
         List<Invoice> ReadInvoices();
         void UpdateInvoice(Invoice invoice);

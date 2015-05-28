@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LivingSmartBusinessLogic.DBLayer;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal class CustomerDBXML : ICustomerDB
+    internal class NeighborhoodDBMSSQL : INeighborhoodDB
     {
-        public List<Customer> ReadCustomers()
+        public List<Document> ReadNeighborhoods()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateDocument(Neighborhood neighborhood)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int CreateCustomer(Customer customer)
+        public int CreateDocument(Neighborhood neighborhood)
         {
             throw new NotImplementedException();
         }

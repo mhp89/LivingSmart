@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IAppointmentDB
+    internal interface IAppointmentDB
     {
         List<Appointment> ReadAppointments();
         void UpdateAd(Appointment appointment);

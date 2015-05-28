@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IPotentialBuyerDB
+    internal interface IPotentialBuyerDB
     {
         List<PotentialBuyer> ReadPotentialBuyers();
         void UpdatePotentialBuyer(PotentialBuyer ca);

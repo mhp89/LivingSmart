@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal static class CustomerDBFactory
+    internal static class PictureDBFactory
     {
-        public static ICustomerDB GetDBL()
+        public static IPictureDB GetDBL()
         {
             if (Properties.Settings.Default.Database == "MSSQL")
-                return new CustomerDBMSSQL();
+                return new PictureDBMSSQL();
 //            if (Properties.Settings.Default.Database == "XML")
-//                return new AdDBXML();
+//                return new CustomerDBXML();
 //            if (Properties.Settings.Default.Database == "MYSQL")
 //                return new CustomerDBMYSQL();
             return null;

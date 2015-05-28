@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DBLayer
 {
-    public sealed class DBConnectionMSSQL
+    internal sealed class DBConnectionMSSQL
     {
         private static volatile DBConnectionMSSQL _instance;
         private static readonly object objectLock = new Object();

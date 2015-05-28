@@ -9,7 +9,7 @@ using LivingSmartBusinessLogic.DBLayer;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    class CustomerDBMSSQL : ICustomerDB
+    internal class CustomerDBMSSQL : ICustomerDB
     {
         public List<Customer> ReadCustomers()
         {

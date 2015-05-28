@@ -7,7 +7,7 @@ using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal interface ICustomerDB
+    internal interface IDistanceToDB
     {
         List<Customer> ReadCustomers();
         void UpdateCustomer(Customer customer);

@@ -7,10 +7,11 @@ using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IDocumentDB
+    internal interface IDocumentDB
     {
         List<Document> ReadDocuments();
-        void UpdateDocument(Document document);
-        int CreateDocument(Document document);
+        List<Document> ReadDocuments(int caseId);
+        void UpdateDocument(Document document, int caseId);
+        int CreateDocument(Document document, int caseId);
     }
 }

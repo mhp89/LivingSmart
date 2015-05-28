@@ -50,8 +50,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LivingSmartBusinessLogic\LivingSmartBusinessLogic.csproj">
+      <Project>{652743fa-2264-41ef-a011-8cb4a994864e}</Project>
+      <Name>LivingSmartBusinessLogic</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

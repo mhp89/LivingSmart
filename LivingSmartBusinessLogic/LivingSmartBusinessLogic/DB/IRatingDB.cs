@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal interface ICaseDB
+    internal interface IRatingDB
     {
-        List<Case> ReadCases();
-        void UpdateAd(Case ca);
-        int CreateAd(Case ca);
+        List<PotentialBuyer> ReadRatings();
+        void UpdateRating(Rating rating);
+        int CreateRating(Rating rating);
     }
 }

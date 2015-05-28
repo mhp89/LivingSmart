@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    static class CustomerDBFactory
+    internal static class AdDBFactory
     {
-        public static ICustomerDB GetDBL()
+        public static IAdDB GetDBL()
         {
-//            if (Properties.Settings.Default.Database == "MSSQL")
-//                return new EstateAgentDBMSSQL();
+            if (Properties.Settings.Default.Database == "MSSQL")
+                return new AdDBMSSQL();
 //            if (Properties.Settings.Default.Database == "XML")
 //                return new CustomerDBXML();
 //            if (Properties.Settings.Default.Database == "MYSQL")

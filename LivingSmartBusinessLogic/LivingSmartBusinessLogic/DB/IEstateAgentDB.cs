@@ -7,9 +7,9 @@ using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IEstageAgentDB
+    internal interface IEstateAgentDB
     {
-        List<Customer> ReadEstateAgent();
+        List<Customer> ReadEstateAgents();
         void UpdateEstateAgent(Customer customer);
         int CreateEstateAgent(Customer customer);
     }

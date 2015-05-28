@@ -40,15 +40,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Ad.cs" />
-    <Compile Include="Appointment.cs" />
+    <Compile Include="DB\RatingDBFactory.cs" />
+    <Compile Include="DB\RatingDBMSSQL.cs" />
+    <Compile Include="DB\PropertyTypeDBFactory.cs" />
+    <Compile Include="DB\PropertyTypeDBMSSQL.cs" />
+    <Compile Include="DB\PotentialBuyerDBFactory.cs" />
+    <Compile Include="DB\PotentialBuyerDBMSSQL.cs" />
+    <Compile Include="DB\PictureDBFactory.cs" />
+    <Compile Include="DB\PictureDBMSSQL.cs" />
+    <Compile Include="DB\PartnerDBFactory.cs" />
+    <Compile Include="DB\PartnerDBMSSQL.cs" />
+    <Compile Include="DB\NeighborhoodDBFactory.cs" />
+    <Compile Include="DB\NeighborhoodDBMSSQL.cs" />
+    <Compile Include="DB\InvoiceDBFactory.cs" />
+    <Compile Include="DB\InvoiceDBMSSQL.cs" />
+    <Compile Include="DB\EstateAgentDBFactory.cs" />
+    <Compile Include="DB\EstateAgentDBMSSQL.cs" />
+    <Compile Include="DB\DocumentDBFactory.cs" />
+    <Compile Include="DB\DocumentDBMSSQL.cs" />
+    <Compile Include="DB\DistanceToDBFactory.cs" />
+    <Compile Include="DB\DistanceToDBMSSQL.cs" />
+    <Compile Include="DB\CaseDBFactory.cs" />
+    <Compile Include="DB\CaseDBMSSQL.cs" />
+    <Compile Include="DB\AskingPriceDBMSSQL.cs" />
+    <Compile Include="DB\AskingPriceDBFactory.cs" />
+    <Compile Include="DB\AppointmentDBMSSQL.cs" />
+    <Compile Include="DB\AppointmentDBFactory.cs" />
+    <Compile Include="DB\IAskingPriceDB.cs" />
+    <Compile Include="DB\IDistanceToDB.cs" />
+    <Compile Include="DB\INeighborhoodDB.cs" />
+    <Compile Include="DB\IRatingDB.cs" />
+    <Compile Include="DB\IPropertyTypeDB.cs" />
+    <Compile Include="DB\IPictureDB.cs" />
+    <Compile Include="Model\Ad.cs" />
+    <Compile Include="Model\Appointment.cs" />
     <Compile Include="AppointmentCatalog.cs" />
     <Compile Include="Controller\AppointmentController.cs" />
-    <Compile Include="AskingPrice.cs" />
-    <Compile Include="Case.cs" />
-    <Compile Include="CaseCatalog.cs" />
+    <Compile Include="Model\AskingPrice.cs" />
+    <Compile Include="Model\Case.cs" />
+    <Compile Include="Model\CaseCatalog.cs" />
     <Compile Include="Controller\CaseController.cs" />
-    <Compile Include="Customer.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="CustomerCatalog.cs" />
     <Compile Include="Controller\CustomerController.cs" />
     <Compile Include="DB\AdDBFactory.cs" />
@@ -66,34 +98,34 @@
     <Compile Include="DB\IDocumentDB.cs" />
     <Compile Include="DB\IPartnerDB.cs" />
     <Compile Include="DB\ICustomerDB.cs" />
-    <Compile Include="DistanceTo.cs" />
-    <Compile Include="Document.cs" />
-    <Compile Include="EstateAgent.cs" />
+    <Compile Include="Model\DistanceTo.cs" />
+    <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\EstateAgent.cs" />
     <Compile Include="EstateAgentCatalog.cs" />
     <Compile Include="Controller\EstateAgentController.cs" />
     <Compile Include="IModel.cs" />
-    <Compile Include="Invoice.cs" />
+    <Compile Include="Model\Invoice.cs" />
     <Compile Include="Controller\InvoiceController.cs" />
     <Compile Include="InvoiceCatalog.cs" />
     <Compile Include="ISubject.cs" />
-    <Compile Include="Neighborhood.cs" />
+    <Compile Include="Model\Neighborhood.cs" />
     <Compile Include="IObserver.cs" />
     <Compile Include="NeighborhoodCatalog.cs" />
     <Compile Include="Controller\NeighborhoodController.cs" />
-    <Compile Include="Partner.cs" />
+    <Compile Include="Model\Partner.cs" />
     <Compile Include="PartnerCatalog.cs" />
     <Compile Include="Controller\PartnerController.cs" />
-    <Compile Include="Picture.cs" />
-    <Compile Include="PotentialBuyer.cs" />
+    <Compile Include="Model\Picture.cs" />
+    <Compile Include="Model\PotentialBuyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="PropertyType.cs" />
-    <Compile Include="Rating.cs" />
-    <Compile Include="City.cs" />
+    <Compile Include="Model\PropertyType.cs" />
+    <Compile Include="Model\Rating.cs" />
+    <Compile Include="Model\City.cs" />
     <Compile Include="Controller\SellPropertyController.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,9 +142,7 @@
       <DependentUpon>Customer.sequencediagram</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

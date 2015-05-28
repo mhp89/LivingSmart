@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IAdDB
+    internal interface IAdDB
     {
+        List<Ad> ReadAds(int caseId);
         List<Ad> ReadAds();
-        void UpdateAd(Ad ad);
-        int CreateAd(Ad ad);
+        void UpdateAd(Ad ad, int caseId);
+        int CreateAd(Ad ad, int caseId);
     }
 }

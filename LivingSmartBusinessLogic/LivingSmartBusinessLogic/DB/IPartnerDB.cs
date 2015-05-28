@@ -7,9 +7,9 @@ using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    interface IPartnerDB
+    internal interface IPartnerDB
     {
-        List<Partner> ReadPartner();
+        List<Partner> ReadPartners();
         void UpdatePartner(Partner partner);
         int CreatePartner(Partner partner);
     }

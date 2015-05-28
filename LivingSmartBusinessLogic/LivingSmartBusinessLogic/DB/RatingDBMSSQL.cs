@@ -1,29 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LivingSmartBusinessLogic.DBLayer;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal class CustomerDBXML : ICustomerDB
+    internal class RatingDBMSSQL : IRatingDB
     {
-        public List<Customer> ReadCustomers()
+        public List<PotentialBuyer> ReadRatings()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer(Customer customer)
+        public void UpdateRating(Rating rating)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int CreateCustomer(Customer customer)
+        public int CreateRating(Rating rating)
         {
             throw new NotImplementedException();
         }
