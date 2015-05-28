@@ -11,17 +11,17 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class PictureDBMSSQL : IPictureDB
     {
-        public List<Partner> ReadPictures()
+        public List<Picture> ReadPictures()
         {
             throw new NotImplementedException();
         }
 
-        public void UpdatePictures(Picture picture)
+        public void UpdatePicture(Picture picture)
         {
             throw new NotImplementedException();
         }
 
-        public int CreatePartner(Picture picture)
+        public int CreatePicture(Picture picture)
         {
             throw new NotImplementedException();
         }

@@ -8,7 +8,7 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IRatingDB
     {
-        List<PotentialBuyer> ReadRatings();
+        List<Rating> ReadRatings();
         void UpdateRating(Rating rating);
         int CreateRating(Rating rating);
     }

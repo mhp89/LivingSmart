@@ -27,7 +27,7 @@ namespace LivingSmartBusinessLogic.DB
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    int id = (int) reader["CustomerID"];
+                    int id = (int) reader["CustomerId"];
                     string name = (string) reader["Name"];
                     DateTime dateOfBirth = (DateTime) reader["DateOfBirth"];
                     string address = (string) reader["Address"];
@@ -92,7 +92,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO CUSTOMER VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Customer VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email); " + "SELECT CAST(scope_identity() AS int);"
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = customer.Name;

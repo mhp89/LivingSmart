@@ -11,7 +11,7 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class RatingDBMSSQL : IRatingDB
     {
-        public List<PotentialBuyer> ReadRatings()
+        public List<Rating> ReadRatings()
         {
             throw new NotImplementedException();
         }

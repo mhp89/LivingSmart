@@ -12,8 +12,8 @@ namespace LivingSmartBusinessLogic
         #region Private Fields
 
         private int _caseId;
-        private DateTime _timestamp;
-        private int _duration;
+        private DateTime _startTimeStamp;
+        private DateTime _endTimeStamp;
         private string _description;
         private string _place;
         private int _customerId;
@@ -23,8 +23,8 @@ namespace LivingSmartBusinessLogic
         #region Properties
 
         public int CaseId { get { return _caseId; } internal set { _caseId = value; } }
-        public DateTime Timestamp { get { return _timestamp; } internal set { _timestamp = value; } }
-        public int Duration { get { return _duration; } internal set { _duration = value; } }
+        public DateTime StartTimestamp { get { return _startTimeStamp; } internal set { _startTimeStamp = value; } }
+        public DateTime EndTimeStamp { get { return _endTimeStamp; } internal set { _startTimeStamp = value; } }
         public string Description { get { return _description; } internal set { _description = value; } }
         public string Place { get { return _place; } internal set { _place = value; } }
         public int CustomerId { get { return _customerId; } internal set { _customerId = value; } }
@@ -37,12 +37,12 @@ namespace LivingSmartBusinessLogic
             
         }
 
-        internal Appointment(int id, int caseId, DateTime timeStamp, int duration, string description, string place, int customerId)
+        internal Appointment(int id, int caseId, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, int customerId)
         {
             Id = id;
             _caseId = caseId;
-            _timestamp = timeStamp;
-            _duration = duration;
+            _startTimeStamp = startTimeStamp;
+            _endTimeStamp = endTimeStamp;
             _description = description;
             _place = place;
             _customerId = customerId;

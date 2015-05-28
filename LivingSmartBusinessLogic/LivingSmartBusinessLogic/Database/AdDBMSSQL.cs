@@ -33,7 +33,7 @@ namespace LivingSmartBusinessLogic.DB
                     DateTime endDate = (DateTime)reader["EndDate"];
                     int price = (int)reader["Price"];
 
-                    Ad ad = new Ad();
+                    Ad ad = new Ad(id, type, startDate, endDate, price);
                     adList.Add(ad);
                 }
             }
@@ -49,9 +49,9 @@ namespace LivingSmartBusinessLogic.DB
             return adList;
         }
 
-        public List<Ad> ReadAds()
+        public Dictionary<int, List<Ad>> ReadAds()
         {
-            List<Ad> adList = new List<Ad>();
+            Dictionary<int, List<Ad>> adDictionary = new Dictionary<int, List<Ad>>();
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
@@ -72,8 +72,12 @@ namespace LivingSmartBusinessLogic.DB
                     DateTime endDate = (DateTime)reader["EndDate"];
                     int price = (int)reader["Price"];
 
-                    Ad ad = new Ad();
-                    adList.Add(ad);
+                    Ad ad = new Ad(id, type, startDate, endDate, price);
+                    if (!adDictionary.ContainsKey(caseId))
+                    {
+                        adDictionary.Add(caseId, new List<Ad>());
+                    }
+                    adDictionary[caseId].Add(ad);
                 }
             }
             catch (SqlException e)
@@ -85,7 +89,7 @@ namespace LivingSmartBusinessLogic.DB
                 connection.Close();
             }
 
-            return adList;
+            return adDictionary;
         }
 
         public void UpdateAd(Ad ad, int caseId)
@@ -128,19 +132,19 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO CUSTOMER VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Ad VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); " + "SELECT CAST(scope_identity() AS int);"
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "Name").Value = ad.Id;
-            cmd.Parameters.Add("@Type", SqlDbType.Date, 50, "Name").Value = ad.Type;
-            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 50, "Name").Value = ad.StartDate;
-            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 50, "Name").Value = ad.EndDate;
-            cmd.Parameters.Add("@Price", SqlDbType.Int, 50, "Name").Value = ad.Price;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "Name").Value = ad.Type;
+            cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Name").Value = ad.StartDate;
+            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 50, "Name").Value = ad.EndDate;
+            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 50, "Name").Value = ad.Price;
+            cmd.Parameters.Add("@Price", SqlDbType.Int, 50, "Name").Value = ad.Id;
 
             try
             {
                 connection.Open();
-                adId = (int) cmd.ExecuteScalar();
+                adId = (int)cmd.ExecuteScalar();
             }
             catch (SqlException e)
             {

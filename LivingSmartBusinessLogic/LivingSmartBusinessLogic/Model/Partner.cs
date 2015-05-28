@@ -39,12 +39,13 @@ namespace LivingSmartBusinessLogic
         {
             
         }
-        internal Partner(int id, string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
+        internal Partner(int id, string name, string telephone, string email, string country, string city, string region, string regionShort, string timeZone)
         {
             Id = id;
             _name = name;
             _telephone = telephone;
             _email = email;
+            _country = country;
             _city = city;
             _region = region;
             _regionShort = regionShort;

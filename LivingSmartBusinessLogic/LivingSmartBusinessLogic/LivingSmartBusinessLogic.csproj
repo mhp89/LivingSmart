@@ -40,83 +40,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\RatingDBFactory.cs" />
-    <Compile Include="DB\RatingDBMSSQL.cs" />
-    <Compile Include="DB\PropertyTypeDBFactory.cs" />
-    <Compile Include="DB\PropertyTypeDBMSSQL.cs" />
-    <Compile Include="DB\PotentialBuyerDBFactory.cs" />
-    <Compile Include="DB\PotentialBuyerDBMSSQL.cs" />
-    <Compile Include="DB\PictureDBFactory.cs" />
-    <Compile Include="DB\PictureDBMSSQL.cs" />
-    <Compile Include="DB\PartnerDBFactory.cs" />
-    <Compile Include="DB\PartnerDBMSSQL.cs" />
-    <Compile Include="DB\NeighborhoodDBFactory.cs" />
-    <Compile Include="DB\NeighborhoodDBMSSQL.cs" />
-    <Compile Include="DB\InvoiceDBFactory.cs" />
-    <Compile Include="DB\InvoiceDBMSSQL.cs" />
-    <Compile Include="DB\EstateAgentDBFactory.cs" />
-    <Compile Include="DB\EstateAgentDBMSSQL.cs" />
-    <Compile Include="DB\DocumentDBFactory.cs" />
-    <Compile Include="DB\DocumentDBMSSQL.cs" />
-    <Compile Include="DB\DistanceToDBFactory.cs" />
-    <Compile Include="DB\DistanceToDBMSSQL.cs" />
-    <Compile Include="DB\CaseDBFactory.cs" />
-    <Compile Include="DB\CaseDBMSSQL.cs" />
-    <Compile Include="DB\AskingPriceDBMSSQL.cs" />
-    <Compile Include="DB\AskingPriceDBFactory.cs" />
-    <Compile Include="DB\AppointmentDBMSSQL.cs" />
-    <Compile Include="DB\AppointmentDBFactory.cs" />
-    <Compile Include="DB\IAskingPriceDB.cs" />
-    <Compile Include="DB\IDistanceToDB.cs" />
-    <Compile Include="DB\INeighborhoodDB.cs" />
-    <Compile Include="DB\IRatingDB.cs" />
-    <Compile Include="DB\IPropertyTypeDB.cs" />
-    <Compile Include="DB\IPictureDB.cs" />
+    <Compile Include="Database\RatingDBFactory.cs" />
+    <Compile Include="Database\RatingDBMSSQL.cs" />
+    <Compile Include="Database\PropertyTypeDBFactory.cs" />
+    <Compile Include="Database\PropertyTypeDBMSSQL.cs" />
+    <Compile Include="Database\PictureDBFactory.cs" />
+    <Compile Include="Database\PictureDBMSSQL.cs" />
+    <Compile Include="Database\PartnerDBFactory.cs" />
+    <Compile Include="Database\PartnerDBMSSQL.cs" />
+    <Compile Include="Database\NeighborhoodDBFactory.cs" />
+    <Compile Include="Database\NeighborhoodDBMSSQL.cs" />
+    <Compile Include="Database\InvoiceDBFactory.cs" />
+    <Compile Include="Database\InvoiceDBMSSQL.cs" />
+    <Compile Include="Database\EstateAgentDBFactory.cs" />
+    <Compile Include="Database\EstateAgentDBMSSQL.cs" />
+    <Compile Include="Database\DocumentDBFactory.cs" />
+    <Compile Include="Database\DocumentDBMSSQL.cs" />
+    <Compile Include="Database\DistanceToDBFactory.cs" />
+    <Compile Include="Database\DistanceToDBMSSQL.cs" />
+    <Compile Include="Database\CaseDBFactory.cs" />
+    <Compile Include="Database\CaseDBMSSQL.cs" />
+    <Compile Include="Database\AskingPriceDBMSSQL.cs" />
+    <Compile Include="Database\AskingPriceDBFactory.cs" />
+    <Compile Include="Database\AppointmentDBMSSQL.cs" />
+    <Compile Include="Database\AppointmentDBFactory.cs" />
+    <Compile Include="Database\IAskingPriceDB.cs" />
+    <Compile Include="Database\IDistanceToDB.cs" />
+    <Compile Include="Database\INeighborhoodDB.cs" />
+    <Compile Include="Database\IRatingDB.cs" />
+    <Compile Include="Database\IPropertyTypeDB.cs" />
+    <Compile Include="Database\IPictureDB.cs" />
     <Compile Include="Model\Ad.cs" />
     <Compile Include="Model\Appointment.cs" />
-    <Compile Include="AppointmentCatalog.cs" />
+    <Compile Include="Catalog\AppointmentCatalog.cs" />
     <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="Model\AskingPrice.cs" />
     <Compile Include="Model\Case.cs" />
     <Compile Include="Model\CaseCatalog.cs" />
     <Compile Include="Controller\CaseController.cs" />
     <Compile Include="Model\Customer.cs" />
-    <Compile Include="CustomerCatalog.cs" />
+    <Compile Include="Catalog\CustomerCatalog.cs" />
     <Compile Include="Controller\CustomerController.cs" />
-    <Compile Include="DB\AdDBFactory.cs" />
-    <Compile Include="DB\AdDBMSSQL.cs" />
-    <Compile Include="DB\CustomerDBFactory.cs" />
-    <Compile Include="DB\CustomerDBMSSQL.cs" />
-    <Compile Include="DB\CustomerDBXML.cs" />
-    <Compile Include="DB\DBConnectionMSSQL.cs" />
-    <Compile Include="DB\IAppointmentDB.cs" />
-    <Compile Include="DB\IPotentialBuyerDB.cs" />
-    <Compile Include="DB\ICaseDB.cs" />
-    <Compile Include="DB\IAdDB.cs" />
-    <Compile Include="DB\IInvoiceDB.cs" />
-    <Compile Include="DB\IEstateAgentDB.cs" />
-    <Compile Include="DB\IDocumentDB.cs" />
-    <Compile Include="DB\IPartnerDB.cs" />
-    <Compile Include="DB\ICustomerDB.cs" />
+    <Compile Include="Database\AdDBFactory.cs" />
+    <Compile Include="Database\AdDBMSSQL.cs" />
+    <Compile Include="Database\CustomerDBFactory.cs" />
+    <Compile Include="Database\CustomerDBMSSQL.cs" />
+    <Compile Include="Database\CustomerDBXML.cs" />
+    <Compile Include="Database\DBConnectionMSSQL.cs" />
+    <Compile Include="Database\IAppointmentDB.cs" />
+    <Compile Include="Database\ICaseDB.cs" />
+    <Compile Include="Database\IAdDB.cs" />
+    <Compile Include="Database\IInvoiceDB.cs" />
+    <Compile Include="Database\IEstateAgentDB.cs" />
+    <Compile Include="Database\IDocumentDB.cs" />
+    <Compile Include="Database\IPartnerDB.cs" />
+    <Compile Include="Database\ICustomerDB.cs" />
     <Compile Include="Model\DistanceTo.cs" />
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\EstateAgent.cs" />
-    <Compile Include="EstateAgentCatalog.cs" />
+    <Compile Include="Catalog\EstateAgentCatalog.cs" />
     <Compile Include="Controller\EstateAgentController.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Controller\InvoiceController.cs" />
-    <Compile Include="InvoiceCatalog.cs" />
+    <Compile Include="Catalog\InvoiceCatalog.cs" />
     <Compile Include="ISubject.cs" />
     <Compile Include="Model\Neighborhood.cs" />
     <Compile Include="IObserver.cs" />
-    <Compile Include="NeighborhoodCatalog.cs" />
+    <Compile Include="Catalog\NeighborhoodCatalog.cs" />
     <Compile Include="Controller\NeighborhoodController.cs" />
     <Compile Include="Model\Partner.cs" />
-    <Compile Include="PartnerCatalog.cs" />
+    <Compile Include="Catalog\PartnerCatalog.cs" />
     <Compile Include="Controller\PartnerController.cs" />
     <Compile Include="Model\Picture.cs" />
-    <Compile Include="Model\PotentialBuyer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -130,17 +126,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ClassDiagram.cd" />
-    <None Include="Customer.sequencediagram" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Customer.sequencediagram.layout">
-      <DependentUpon>Customer.sequencediagram</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

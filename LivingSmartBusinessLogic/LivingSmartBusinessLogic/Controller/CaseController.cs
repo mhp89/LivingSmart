@@ -165,7 +165,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer en potentiel køber til casen
         /// </summary>
         /// <param name="potentialBuyer"></param>
-        public void AddPotentialBuyerToCase(PotentialBuyer potentialBuyer)
+        public void AddPotentialBuyerToCase(Customer potentialBuyer)
         {
             activeCase.AddPotentialBuyer(potentialBuyer);
         }
@@ -174,7 +174,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Fjerner en potentiel køber fra casen
         /// </summary>
         /// <param name="potentialBuyer"></param>
-        public void RemoveProtentialBuyerFromCase(PotentialBuyer potentialBuyer)
+        public void RemoveProtentialBuyerFromCase(Customer potentialBuyer)
         {
             
         }
@@ -209,7 +209,7 @@ namespace LivingSmartBusinessLogic.Controller
             return activeCase.GetAds();
         }
 
-        public ReadOnlyCollection<PotentialBuyer> GetPotentialBuyers()
+        public ReadOnlyCollection<Customer> GetPotentialBuyers()
         {
             return activeCase.GetPotentialBuyers();
         }

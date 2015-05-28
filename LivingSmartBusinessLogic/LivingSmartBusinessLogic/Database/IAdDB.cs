@@ -9,7 +9,7 @@ namespace LivingSmartBusinessLogic.DB
     internal interface IAdDB
     {
         List<Ad> ReadAds(int caseId);
-        List<Ad> ReadAds();
+        Dictionary<int, List<Ad>> ReadAds();
         void UpdateAd(Ad ad, int caseId);
         int CreateAd(Ad ad, int caseId);
     }
