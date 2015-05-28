@@ -84,9 +84,9 @@ namespace LivingSmartBusinessLogic.Controller
        
         #region Document
 
-        public Document MakeNewDocument(int id, string type, int price, string location, string status)
+        public Document MakeNewDocument(string type, int price, string location, string status)
         {
-            return new Document(id,  type, price, location, status);
+            return new Document(type, price, location, status);
         }
         /// <summary>
         /// Tilføjer et dokument til casen
@@ -111,9 +111,9 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #region Picture
-        public Picture MakeNewPicture(int id, string location, string description)
+        public Picture MakeNewPicture(string location, string description)
         {
-            return new Picture(id, location, description);
+            return new Picture(location, description);
         }
 
         /// <summary>
@@ -140,9 +140,9 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region Ad
 
-        public Ad MakeNewAd(int id, string type, DateTime startDate, DateTime endDate, int price)
+        public Ad MakeNewAd(string type, DateTime startDate, DateTime endDate, int price)
         {
-            return new Ad(id, type, startDate, endDate, price);
+            return new Ad(type, startDate, endDate, price);
         }
         /// <summary>
         /// Tilføjer en annonce til casen
@@ -204,9 +204,9 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region AskingPrice
 
-        public AskingPrice MakeNewAskingPrice(int id, long value, DateTime date)
+        public AskingPrice MakeNewAskingPrice(long value, DateTime date)
         {
-            return new AskingPrice(id, value, date);
+            return new AskingPrice(value, date);
         }
         /// <summary>
         /// Tilføjer en udbudspris til casen
@@ -319,8 +319,9 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCase.Address != address)
                 activeCase.Address = address;
         }
-        public void SetCity(City city)
+        public void SetCity(int zipCode)
         {
+            var city = CityController.Instance.GetCity(zipCode);
             if (activeCase.City != city)
                 activeCase.City = city;
         }

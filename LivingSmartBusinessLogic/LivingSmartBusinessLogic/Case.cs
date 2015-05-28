@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic
 {
     public class Case
     {
-        public int Id { get; private set; }
-
         #region Private Fields
 
         private Customer _seller;
@@ -20,7 +19,7 @@ namespace LivingSmartBusinessLogic
         private DateTime _dateOfSale;
         private DateTime _transferDate;
         private DateTime _dateOfCompletion;
-        private long _sellingPrice;
+        private long? _sellingPrice;
         private string _description;
         private string _landRegistryNumber;
         private string _address;
@@ -47,7 +46,7 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-
+        public int Id { get; private set; }
         public Customer Seller { get { return _seller; } internal set { _seller = value; } }
         public Customer Buyer { get { return _buyer; } internal set { _buyer = value; } }
         public EstateAgent EstateAgent { get { return _estateAgent; } internal set { _estateAgent = value; } }
@@ -56,7 +55,7 @@ namespace LivingSmartBusinessLogic
         public DateTime DateOfSale { get { return _dateOfSale; } internal set { _dateOfSale = value; } }
         public DateTime TransferDate { get { return _transferDate; } internal set { _transferDate = value; } }
         public DateTime DateOfCompletion { get { return _dateOfCompletion; } internal set { _dateOfCompletion = value; } }
-        public long SellingPrice { get { return _sellingPrice; } internal set { _sellingPrice = value; } }
+        public long? SellingPrice { get { return _sellingPrice; } internal set { _sellingPrice = value; } }
         public string Description { get { return _description; } internal set { _description = value; } }
         public string LandRegistryNumber { get { return _landRegistryNumber; } internal set { _landRegistryNumber = value; } }
         public string Address { get { return _address; } internal set { _address = value; } }
@@ -83,7 +82,48 @@ namespace LivingSmartBusinessLogic
 
         internal Case()
         {
-
+            CreationDate = new DateTime().Date;
+        }
+        internal Case(Customer seller, Customer buyer, EstateAgent estateAgent, 
+            DateTime creationDate, string status, DateTime dateOfSale, 
+            DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
+            string description, string landRegistryNumber, string address, City city, 
+            PropertyType propertyType, long publicRating, long landValue, 
+            int groundArea, int builtArea, int livingArea, int basementArea, 
+            int builtYear, string energyClassification, int floors, int rooms, 
+            int bedrooms, int bathrooms, int toilets, int garageArea, 
+            int view, Neighborhood neighborhood)
+        {
+            Seller = seller;
+            Buyer = buyer;
+            EstateAgent = estateAgent;
+            CreationDate = creationDate;
+            Status = status;
+            DateOfSale = dateOfSale;
+            TransferDate = transferDate;
+            DateOfCompletion = dateOfCompletion;
+            SellingPrice = sellingPrice;
+            Description = description;
+            LandRegistryNumber = landRegistryNumber;
+            Address = address;
+            City = city;
+            PropertyType = propertyType;
+            PublicRating = publicRating;
+            LandValue = landValue;
+            GroundArea = groundArea;
+            BuiltArea = builtArea;
+            LivingArea = livingArea;
+            BasementArea = basementArea;
+            BuiltYear = builtYear;
+            EnergyClassification = energyClassification;
+            Floors = floors;
+            Rooms = rooms;
+            Bedrooms = bedrooms;
+            Bathrooms = bathrooms;
+            Toilets = toilets;
+            GarageArea = garageArea;
+            View = view;
+            Neighborhood = neighborhood;
         }
 
         #region Methods

@@ -32,6 +32,15 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        internal Appointment(Case cCase, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, Customer customer)
+        {
+            Case = cCase;
+            StartTimeStamp = startTimeStamp;
+            EndTimeStamp = endTimeStamp;
+            Description = description;
+            Place = place;
+            Customer = customer;
+        }
         internal Appointment(int id, Case cCase, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, Customer customer)
         {
             Id = id;

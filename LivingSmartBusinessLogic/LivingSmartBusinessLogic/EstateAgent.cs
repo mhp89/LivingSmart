@@ -29,6 +29,14 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
+        internal EstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        {
+            Name = name;
+            Telephone = telephone;
+            Email = email;
+            StartingDate = startingDate;
+            TerminationDate = terminationDate;
+        }
         internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
         {
             Id = id;
@@ -37,7 +45,6 @@ namespace LivingSmartBusinessLogic
             Email = email;
             StartingDate = startingDate;
             TerminationDate = terminationDate;
-
         }
 
         #region Methods
