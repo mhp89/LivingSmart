@@ -70,7 +70,8 @@ namespace LivingSmartBusinessLogic.Controller
         /// <returns></returns>
         public Case MakeNewCase()
         {
-            return activeCase = new Case();
+            SetActiveCase(new Case());
+            return activeCase;
         }
 
         /// <summary>
