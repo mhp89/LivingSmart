@@ -209,6 +209,12 @@
     <Compile Include="Views\EstateAgentLineSearch.Designer.cs">
       <DependentUpon>EstateAgentLineSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EstateAgentLineSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EstateAgentLineSelect.Designer.cs">
+      <DependentUpon>EstateAgentLineSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewAppointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -268,6 +274,12 @@
     </Compile>
     <Compile Include="Views\NewCaseStepDetails.Designer.cs">
       <DependentUpon>NewCaseStepDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PropertyLineSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PropertyLineSelect.Designer.cs">
+      <DependentUpon>PropertyLineSelect.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
@@ -348,6 +360,9 @@
     <EmbeddedResource Include="Views\EstateAgentLineSearch.resx">
       <DependentUpon>EstateAgentLineSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\EstateAgentLineSelect.resx">
+      <DependentUpon>EstateAgentLineSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NewAppointment.resx">
       <DependentUpon>NewAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepDetails.resx">
       <DependentUpon>NewCaseStepDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PropertyLineSelect.resx">
+      <DependentUpon>PropertyLineSelect.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
