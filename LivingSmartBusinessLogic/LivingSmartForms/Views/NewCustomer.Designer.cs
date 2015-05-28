@@ -30,8 +30,8 @@ namespace LivingSmartForms.Views
         {
 			this.tlpNewCustomer = new System.Windows.Forms.TableLayoutPanel();
 			this.stbCustomerPhone = new SmartControls.SmartTextBox();
-			this.smartTextBox1 = new SmartControls.SmartTextBox();
-			this.stbCustomerAdress = new SmartControls.SmartTextBox();
+			this.stbCustomerEmail = new SmartControls.SmartTextBox();
+			this.stbCustomerAddress = new SmartControls.SmartTextBox();
 			this.stbCustomerName = new SmartControls.SmartTextBox();
 			this.lblCustomerName = new System.Windows.Forms.Label();
 			this.lblCustomerAddress = new System.Windows.Forms.Label();
@@ -43,19 +43,20 @@ namespace LivingSmartForms.Views
 			this.lblCustomerPhone = new System.Windows.Forms.Label();
 			this.lblCustomerDateOfBirth = new System.Windows.Forms.Label();
 			this.dafCustomerBirthday = new LivingSmartForms.UserControls.DateField();
-			this.hdrNewCustomer = new SmartControls.Header();
 			this.tlpNewCustomer.SuspendLayout();
 			this.pnlCustomerCity.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tlpNewCustomer
 			// 
+			this.tlpNewCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.tlpNewCustomer.ColumnCount = 2;
 			this.tlpNewCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpNewCustomer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
 			this.tlpNewCustomer.Controls.Add(this.stbCustomerPhone, 1, 3);
-			this.tlpNewCustomer.Controls.Add(this.smartTextBox1, 1, 4);
-			this.tlpNewCustomer.Controls.Add(this.stbCustomerAdress, 1, 1);
+			this.tlpNewCustomer.Controls.Add(this.stbCustomerEmail, 1, 4);
+			this.tlpNewCustomer.Controls.Add(this.stbCustomerAddress, 1, 1);
 			this.tlpNewCustomer.Controls.Add(this.stbCustomerName, 1, 0);
 			this.tlpNewCustomer.Controls.Add(this.lblCustomerName, 0, 0);
 			this.tlpNewCustomer.Controls.Add(this.lblCustomerAddress, 0, 1);
@@ -65,8 +66,8 @@ namespace LivingSmartForms.Views
 			this.tlpNewCustomer.Controls.Add(this.lblCustomerPhone, 0, 3);
 			this.tlpNewCustomer.Controls.Add(this.lblCustomerDateOfBirth, 0, 5);
 			this.tlpNewCustomer.Controls.Add(this.dafCustomerBirthday, 1, 5);
-			this.tlpNewCustomer.Location = new System.Drawing.Point(0, 45);
-			this.tlpNewCustomer.Margin = new System.Windows.Forms.Padding(0);
+			this.tlpNewCustomer.Location = new System.Drawing.Point(0, 10);
+			this.tlpNewCustomer.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpNewCustomer.Name = "tlpNewCustomer";
 			this.tlpNewCustomer.RowCount = 6;
 			this.tlpNewCustomer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -98,58 +99,61 @@ namespace LivingSmartForms.Views
 			this.stbCustomerPhone.NumericOnly = true;
 			this.stbCustomerPhone.Placeholder = null;
 			this.stbCustomerPhone.RegularExpression = null;
+			this.stbCustomerPhone.Required = true;
 			this.stbCustomerPhone.Size = new System.Drawing.Size(360, 30);
 			this.stbCustomerPhone.Suffix = null;
 			this.stbCustomerPhone.TabIndex = 16;
 			this.stbCustomerPhone.UseSystemPasswordChar = false;
 			// 
-			// smartTextBox1
+			// stbCustomerEmail
 			// 
-			this.smartTextBox1.AllowComma = false;
-			this.smartTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.smartTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.smartTextBox1.AutomaticValidation = true;
-			this.smartTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.smartTextBox1.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.smartTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.smartTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.smartTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.smartTextBox1.Location = new System.Drawing.Point(120, 160);
-			this.smartTextBox1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.smartTextBox1.MaxLength = 50;
-			this.smartTextBox1.MinLength = 10;
-			this.smartTextBox1.Name = "smartTextBox1";
-			this.smartTextBox1.NumericOnly = false;
-			this.smartTextBox1.Placeholder = null;
-			this.smartTextBox1.RegularExpression = null;
-			this.smartTextBox1.Size = new System.Drawing.Size(360, 30);
-			this.smartTextBox1.Suffix = null;
-			this.smartTextBox1.TabIndex = 14;
-			this.smartTextBox1.UseSystemPasswordChar = false;
+			this.stbCustomerEmail.AllowComma = false;
+			this.stbCustomerEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbCustomerEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbCustomerEmail.AutomaticValidation = true;
+			this.stbCustomerEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbCustomerEmail.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbCustomerEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbCustomerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbCustomerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbCustomerEmail.Location = new System.Drawing.Point(120, 160);
+			this.stbCustomerEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbCustomerEmail.MaxLength = 50;
+			this.stbCustomerEmail.MinLength = -1;
+			this.stbCustomerEmail.Name = "stbCustomerEmail";
+			this.stbCustomerEmail.NumericOnly = false;
+			this.stbCustomerEmail.Placeholder = null;
+			this.stbCustomerEmail.RegularExpression = null;
+			this.stbCustomerEmail.Required = true;
+			this.stbCustomerEmail.Size = new System.Drawing.Size(360, 30);
+			this.stbCustomerEmail.Suffix = null;
+			this.stbCustomerEmail.TabIndex = 14;
+			this.stbCustomerEmail.UseSystemPasswordChar = false;
 			// 
-			// stbCustomerAdress
+			// stbCustomerAddress
 			// 
-			this.stbCustomerAdress.AllowComma = false;
-			this.stbCustomerAdress.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbCustomerAdress.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbCustomerAdress.AutomaticValidation = true;
-			this.stbCustomerAdress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbCustomerAdress.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbCustomerAdress.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbCustomerAdress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbCustomerAdress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbCustomerAdress.Location = new System.Drawing.Point(120, 40);
-			this.stbCustomerAdress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbCustomerAdress.MaxLength = 50;
-			this.stbCustomerAdress.MinLength = 5;
-			this.stbCustomerAdress.Name = "stbCustomerAdress";
-			this.stbCustomerAdress.NumericOnly = false;
-			this.stbCustomerAdress.Placeholder = null;
-			this.stbCustomerAdress.RegularExpression = null;
-			this.stbCustomerAdress.Size = new System.Drawing.Size(360, 30);
-			this.stbCustomerAdress.Suffix = null;
-			this.stbCustomerAdress.TabIndex = 12;
-			this.stbCustomerAdress.UseSystemPasswordChar = false;
+			this.stbCustomerAddress.AllowComma = false;
+			this.stbCustomerAddress.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbCustomerAddress.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbCustomerAddress.AutomaticValidation = true;
+			this.stbCustomerAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbCustomerAddress.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbCustomerAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbCustomerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbCustomerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbCustomerAddress.Location = new System.Drawing.Point(120, 40);
+			this.stbCustomerAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbCustomerAddress.MaxLength = 50;
+			this.stbCustomerAddress.MinLength = -1;
+			this.stbCustomerAddress.Name = "stbCustomerAddress";
+			this.stbCustomerAddress.NumericOnly = false;
+			this.stbCustomerAddress.Placeholder = null;
+			this.stbCustomerAddress.RegularExpression = null;
+			this.stbCustomerAddress.Required = true;
+			this.stbCustomerAddress.Size = new System.Drawing.Size(360, 30);
+			this.stbCustomerAddress.Suffix = null;
+			this.stbCustomerAddress.TabIndex = 12;
+			this.stbCustomerAddress.UseSystemPasswordChar = false;
 			// 
 			// stbCustomerName
 			// 
@@ -171,6 +175,7 @@ namespace LivingSmartForms.Views
 			this.stbCustomerName.NumericOnly = false;
 			this.stbCustomerName.Placeholder = null;
 			this.stbCustomerName.RegularExpression = null;
+			this.stbCustomerName.Required = true;
 			this.stbCustomerName.Size = new System.Drawing.Size(360, 30);
 			this.stbCustomerName.Suffix = null;
 			this.stbCustomerName.TabIndex = 11;
@@ -262,10 +267,12 @@ namespace LivingSmartForms.Views
 			this.stbCustomerZipCode.NumericOnly = true;
 			this.stbCustomerZipCode.Placeholder = null;
 			this.stbCustomerZipCode.RegularExpression = null;
+			this.stbCustomerZipCode.Required = true;
 			this.stbCustomerZipCode.Size = new System.Drawing.Size(68, 30);
 			this.stbCustomerZipCode.Suffix = null;
 			this.stbCustomerZipCode.TabIndex = 4;
 			this.stbCustomerZipCode.UseSystemPasswordChar = false;
+			this.stbCustomerZipCode.TextChanged += new System.EventHandler(this.stbCustomerZipCode_TextChanged);
 			// 
 			// lblCustomerEmail
 			// 
@@ -311,32 +318,19 @@ namespace LivingSmartForms.Views
 			// 
 			// dafCustomerBirthday
 			// 
+			this.dafCustomerBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dafCustomerBirthday.Location = new System.Drawing.Point(120, 200);
-			this.dafCustomerBirthday.Margin = new System.Windows.Forms.Padding(0);
+			this.dafCustomerBirthday.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.dafCustomerBirthday.Name = "dafCustomerBirthday";
 			this.dafCustomerBirthday.Size = new System.Drawing.Size(360, 30);
 			this.dafCustomerBirthday.TabIndex = 17;
 			// 
-			// hdrNewCustomer
-			// 
-			this.hdrNewCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.hdrNewCustomer.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.hdrNewCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.hdrNewCustomer.Location = new System.Drawing.Point(0, 10);
-			this.hdrNewCustomer.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.hdrNewCustomer.Name = "hdrNewCustomer";
-			this.hdrNewCustomer.Size = new System.Drawing.Size(480, 25);
-			this.hdrNewCustomer.TabIndex = 3;
-			this.hdrNewCustomer.Text = "Kunde";
-			// 
 			// NewCustomer
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-			this.Controls.Add(this.hdrNewCustomer);
 			this.Controls.Add(this.tlpNewCustomer);
 			this.Name = "NewCustomer";
-			this.Size = new System.Drawing.Size(480, 287);
+			this.Size = new System.Drawing.Size(480, 250);
 			this.tlpNewCustomer.ResumeLayout(false);
 			this.tlpNewCustomer.PerformLayout();
 			this.pnlCustomerCity.ResumeLayout(false);
@@ -357,10 +351,9 @@ namespace LivingSmartForms.Views
         private System.Windows.Forms.Label lblCustomerPhone;
         private System.Windows.Forms.Label lblCustomerDateOfBirth;
         private SmartControls.SmartTextBox stbCustomerName;
-        private SmartControls.SmartTextBox stbCustomerAdress;
-        private SmartControls.SmartTextBox smartTextBox1;
-        private SmartControls.SmartTextBox stbCustomerPhone;
-        private SmartControls.Header hdrNewCustomer;
+        private SmartControls.SmartTextBox stbCustomerAddress;
+        private SmartControls.SmartTextBox stbCustomerEmail;
+		private SmartControls.SmartTextBox stbCustomerPhone;
         private UserControls.DateField dafCustomerBirthday;
     }
 }

@@ -14,9 +14,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
-	public partial class Customers : BasePage
+	public partial class EstateAgents : BasePage
 	{
-        public Customers(BaseForm baseForm) : base(baseForm)
+		public EstateAgents(BaseForm baseForm)
+			: base(baseForm)
 		{
 			InitializeComponent();
 
@@ -24,15 +25,15 @@ namespace LivingSmartForms.Pages
 			//CustomerController.Instance.
 			for (int i = 0; i < 10; i++)
 			{
-				var control = new CustomerLine();
+				var control = new EstateAgentLine();
 				control.Margin = Padding.Empty;
-				clsCustomers.AddControl(control);
+				clsEstateAgents.AddControl(control);
 			}
 		}
 
-		private void btnNewCustomer_Click(object sender, EventArgs e)
+		private void btnNewEstateAgents_Click(object sender, EventArgs e)
 		{
-			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm));
+			baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm));
 		}
 	}
 }

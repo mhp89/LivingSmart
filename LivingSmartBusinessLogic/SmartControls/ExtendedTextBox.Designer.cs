@@ -1,6 +1,6 @@
-namespace SmartControls
+﻿namespace SmartControls
 {
-	partial class SelectableControlList
+	partial class ExtendedTextBox
 	{
 		/// <summary>
 		/// Required designer variable.

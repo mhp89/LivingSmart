@@ -1,6 +1,6 @@
 namespace LivingSmartForms.Views
 {
-	partial class EstateAgentSearch
+	partial class EstateAgentLineSearch
 	{
 		/// <summary> 
 		/// Required designer variable.

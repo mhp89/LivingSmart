@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -97,9 +98,9 @@ namespace LivingSmartBusinessLogic.Controller
                 customer.Email = email;
         }
 
-		public List<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
+		public ReadOnlyCollection<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
 		{
-			return customerCatalog.SearchCustomers(id, name, address, zipcode, telephone, email);
+			return customerCatalog.SearchCustomers(id, name, address, zipcode, telephone, email).AsReadOnly();
 		}
 
         #endregion

@@ -19,19 +19,10 @@ namespace LivingSmartForms.Pages
 			InitializeComponent();
 		}
 
-		private void smartButton1_Click(object sender, EventArgs e)
+
+		private void btnNewCase_Click(object sender, EventArgs e)
 		{
 			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
-		}
-
-		public override void OnShow()
-		{
-			//baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
-		}
-
-		private void smartTextBox1_TextChanged(object sender, EventArgs e)
-		{
-			Console.WriteLine("Test");
 		}
 	}
 }

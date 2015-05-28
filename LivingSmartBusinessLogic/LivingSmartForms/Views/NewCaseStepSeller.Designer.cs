@@ -53,6 +53,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerZipCode = new SmartControls.SmartTextBox();
 			this.hdrEstateAgent = new SmartControls.Header();
 			this.hdrSeller = new SmartControls.Header();
+			this.dateField1 = new LivingSmartForms.UserControls.DateField();
 			lblEstateAgentNameTitle = new System.Windows.Forms.Label();
 			this.tlpEstateAgent.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -159,6 +160,7 @@ namespace LivingSmartForms.Views
 			this.tlpSeller.Controls.Add(this.pnlSellerId, 1, 0);
 			this.tlpSeller.Controls.Add(this.stbSellerPhone, 1, 4);
 			this.tlpSeller.Controls.Add(this.pnlSellerCity, 1, 3);
+			this.tlpSeller.Controls.Add(this.dateField1, 1, 6);
 			this.tlpSeller.Location = new System.Drawing.Point(0, 130);
 			this.tlpSeller.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpSeller.Name = "tlpSeller";
@@ -201,11 +203,12 @@ namespace LivingSmartForms.Views
 			this.stbSellerEmail.Location = new System.Drawing.Point(120, 200);
 			this.stbSellerEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerEmail.MaxLength = 32767;
-			this.stbSellerEmail.MinLength = 10;
+			this.stbSellerEmail.MinLength = -1;
 			this.stbSellerEmail.Name = "stbSellerEmail";
 			this.stbSellerEmail.NumericOnly = false;
 			this.stbSellerEmail.Placeholder = null;
 			this.stbSellerEmail.RegularExpression = null;
+			this.stbSellerEmail.Required = true;
 			this.stbSellerEmail.Size = new System.Drawing.Size(360, 30);
 			this.stbSellerEmail.Suffix = null;
 			this.stbSellerEmail.TabIndex = 2;
@@ -225,11 +228,12 @@ namespace LivingSmartForms.Views
 			this.stbSellerAdress.Location = new System.Drawing.Point(120, 80);
 			this.stbSellerAdress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerAdress.MaxLength = 50;
-			this.stbSellerAdress.MinLength = 5;
+			this.stbSellerAdress.MinLength = -1;
 			this.stbSellerAdress.Name = "stbSellerAdress";
 			this.stbSellerAdress.NumericOnly = false;
 			this.stbSellerAdress.Placeholder = null;
 			this.stbSellerAdress.RegularExpression = null;
+			this.stbSellerAdress.Required = true;
 			this.stbSellerAdress.Size = new System.Drawing.Size(360, 30);
 			this.stbSellerAdress.Suffix = null;
 			this.stbSellerAdress.TabIndex = 3;
@@ -339,6 +343,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerName.NumericOnly = false;
 			this.stbSellerName.Placeholder = null;
 			this.stbSellerName.RegularExpression = null;
+			this.stbSellerName.Required = true;
 			this.stbSellerName.Size = new System.Drawing.Size(360, 30);
 			this.stbSellerName.Suffix = null;
 			this.stbSellerName.TabIndex = 4;
@@ -409,6 +414,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerPhone.NumericOnly = true;
 			this.stbSellerPhone.Placeholder = null;
 			this.stbSellerPhone.RegularExpression = null;
+			this.stbSellerPhone.Required = true;
 			this.stbSellerPhone.Size = new System.Drawing.Size(360, 30);
 			this.stbSellerPhone.Suffix = null;
 			this.stbSellerPhone.TabIndex = 3;
@@ -458,6 +464,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerZipCode.NumericOnly = true;
 			this.stbSellerZipCode.Placeholder = null;
 			this.stbSellerZipCode.RegularExpression = null;
+			this.stbSellerZipCode.Required = true;
 			this.stbSellerZipCode.Size = new System.Drawing.Size(68, 30);
 			this.stbSellerZipCode.Suffix = null;
 			this.stbSellerZipCode.TabIndex = 3;
@@ -489,6 +496,15 @@ namespace LivingSmartForms.Views
 			this.hdrSeller.Size = new System.Drawing.Size(480, 25);
 			this.hdrSeller.TabIndex = 3;
 			this.hdrSeller.Text = "Sælger";
+			// 
+			// dateField1
+			// 
+			this.dateField1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dateField1.Location = new System.Drawing.Point(120, 240);
+			this.dateField1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.dateField1.Name = "dateField1";
+			this.dateField1.Size = new System.Drawing.Size(360, 30);
+			this.dateField1.TabIndex = 8;
 			// 
 			// NewCaseStepSeller
 			// 
@@ -538,5 +554,6 @@ namespace LivingSmartForms.Views
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.Label lblEstateAgentName;
 		private SmartControls.SmartButton stbFindEstateAgent;
+		private UserControls.DateField dateField1;
     }
 }

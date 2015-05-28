@@ -1,18 +1,12 @@
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Pages;
-using LivingSmartForms.Views;
 using SmartControls;
 using Menu = LivingSmartForms.Classes.Menu;
 using SmartColor = LivingSmartForms.Classes.SmartColor;
@@ -22,24 +16,27 @@ namespace LivingSmartForms
     public partial class BaseForm : Form
     {
 	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
-
-		#region Menu
 		
-	    private Page[] pages;
-	    private Page activePage;
-	    enum PagesIndex
-	    {
-		    Overview,
-			Cases,
-			Customers,
-			Settings
-	    }
-
-		#endregion
-
 	    private Control partnerView;
 
 		public EstateAgent DefaultEstateAgent { get; private set; }
+
+		#region Menu
+
+		private Page[] pages;
+		private Page activePage;
+		enum PagesIndex
+		{
+			Overview,
+			Cases,
+			Customers,
+			EstateAgents,
+			Partners,
+			Settings
+		}
+
+		#endregion
+
 
 		public BaseForm()
         {
@@ -49,10 +46,12 @@ namespace LivingSmartForms
 			
 			pages = new Page[Enum.GetNames(typeof(PagesIndex)).Length];
 
-			pages[GetPageIndex(PagesIndex.Overview)]	= new Page(typeof(Overview),	"Oversigt",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Cases)]		= new Page(typeof(Cases),		"Sager",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Customers)]	= new Page(typeof(Customers),	"Kunder",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Settings)]	= new Page(typeof(Cases),		"Indstillinger",	Classes.Menu.MenuAnchor.Right);
+			pages[GetPageIndex(PagesIndex.Overview)]		= new Page(typeof(Overview),		"Oversigt",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.Cases)]			= new Page(typeof(Cases),			"Sager",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.Customers)]		= new Page(typeof(Customers),		"Kunder",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mægler",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partner",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.Settings)]		= new Page(typeof(Cases),			"Indstillinger",	Classes.Menu.MenuAnchor.Right);
 			
 			InitializePages();
 
@@ -207,8 +206,14 @@ namespace LivingSmartForms
 		{
 			var viewWidth = view.Width;
 
-			/*foreach (var dropIn in DropIns)
-				dropIn.Parent.Location = new Point(dropIn.Parent.Location.X - 50, dropIn.Parent.Location.Y);*/
+		    foreach (var dropIn in DropIns)
+		    {
+			    if(dropIn.GetDropInId() == view.GetDropInId())
+					return;
+		    }
+
+			foreach (var dropIn in DropIns)
+				dropIn.Parent.Location = new Point(dropIn.Parent.Location.X - 50, dropIn.Parent.Location.Y);
 
 			var dropInHolder = new Panel
 			{
@@ -238,8 +243,8 @@ namespace LivingSmartForms
 	    {
 			pnlMasterContent.Controls.Remove(DropIns.Pop().Parent);
 
-		    /*foreach (var dropIn in DropIns)
-			    dropIn.Parent.Location = new Point(dropIn.Parent.Location.X + 50, dropIn.Parent.Location.Y);*/
+		    foreach (var dropIn in DropIns)
+			    dropIn.Parent.Location = new Point(dropIn.Parent.Location.X + 50, dropIn.Parent.Location.Y);
 
 		    //Nustiller st�rrelsen
 			//pnlDropInHolder.Size = new Size(0, pnlDropInHolder.Height);
@@ -263,14 +268,14 @@ namespace LivingSmartForms
 		{
 			Environment.Exit(Environment.ExitCode);
 		}
+		private void BaseForm_SizeChanged(object sender, EventArgs e)
+		{
+			//Gentegner hele formen for at sikre korrekt design
+			Refresh();
+		}
 		
 		#endregion
         
-        private void BaseForm_SizeChanged(object sender, EventArgs e)
-        {
-            //Gentegner hele formen for at sikre korrekt design
-            Refresh();
-        }
 
 	    private void InitTestData()
 	    {
@@ -283,7 +288,7 @@ namespace LivingSmartForms
 			customerController.SetDateOfBirth(customer, new DateTime(1956, 6, 6));
 			customerController.SetCity(customer, 2412);
 			customerController.SetEmail(customer, "Anders@andeby.dk");
-			customerController.AddCustomer(customer);
+			customerController.SaveActiveCustomer();
 
 			customer = customerController.MakeNewCustomer();
 			customerController.SetName(customer, "Rip");
@@ -292,7 +297,7 @@ namespace LivingSmartForms
 			customerController.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
 			customerController.SetCity(customer, 7100);
 			customerController.SetEmail(customer, "Rip@andeby.dk");
-			customerController.AddCustomer(customer);
+			customerController.SaveActiveCustomer();
 
 			customer = customerController.MakeNewCustomer();
 			customerController.SetName(customer, "Rap");
@@ -301,7 +306,7 @@ namespace LivingSmartForms
 			customerController.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
 			customerController.SetCity(customer, 7100);
 			customerController.SetEmail(customer, "Rap@andeby.dk");
-			customerController.AddCustomer(customer);
+			customerController.SaveActiveCustomer();
 
 			customer = customerController.MakeNewCustomer();
 			customerController.SetName(customer, "Rup");
@@ -310,7 +315,7 @@ namespace LivingSmartForms
 			customerController.SetDateOfBirth(customer, new DateTime(1992, 4, 28));
 			customerController.SetCity(customer, 7100);
 			customerController.SetEmail(customer, "Rup@andeby.dk");
-			customerController.AddCustomer(customer);
+			customerController.SaveActiveCustomer();
 
 			customer = customerController.MakeNewCustomer();
 			customerController.SetName(customer, "Fedtmule");
@@ -319,7 +324,7 @@ namespace LivingSmartForms
 			customerController.SetDateOfBirth(customer, new DateTime(1932, 11, 12));
 			customerController.SetCity(customer, 5500);
 			customerController.SetEmail(customer, "Fedtmule@Mouseton.dk");
-			customerController.AddCustomer(customer);
+			customerController.SaveActiveCustomer();
 
 
 

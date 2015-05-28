@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
@@ -20,7 +21,7 @@ namespace LivingSmartForms.DropIns
 			controller.SetEmail(partner, "contact@NYHouses.com");
 			controller.SetTimeZone(partner, "Eastern Standard Time");
 
-			clsPartners.AddControl(new PartnerView(partner));
+			clsPartners.AddControl(new PartnerView(partner){Margin = new Padding(0)});
 
 			partner = controller.MakeNewPartner();
 			controller.SetName(partner, "Hawaoo Houses");
@@ -30,7 +31,7 @@ namespace LivingSmartForms.DropIns
 			controller.SetEmail(partner, "contact@Hawaoo.com");
 			controller.SetTimeZone(partner, "Hawaiian Standard Time");
 
-			clsPartners.AddControl(new PartnerView(partner));
+			clsPartners.AddControl(new PartnerView(partner) { Margin = new Padding(0) });
 
 			HideCloseButton();
 		}

@@ -45,5 +45,10 @@ namespace LivingSmartForms.Classes
 		{
 			baseForm.CloseDropIn();
 		}
+
+		public virtual string GetDropInId()
+		{
+			return "Base";
+		}
 	}
 }

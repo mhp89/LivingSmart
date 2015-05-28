@@ -83,7 +83,7 @@ namespace SmartControls
 			get { return _currentStepFillColor; }
 			set { _currentStepFillColor = value; Invalidate(); }
 		}
-		private Color _currentStepFillColor = SmartColor.DarkA25;
+		private Color _currentStepFillColor = SmartColor.DarkA75;
 		[Category("Step Appearance")]
 		public Color CurrentStepBorderColor
 		{
@@ -100,7 +100,7 @@ namespace SmartControls
 			get { return _lineUncompletedColor; }
 			set { _lineUncompletedColor = value; Invalidate(); }
 		}
-		private Color _lineUncompletedColor = SmartColor.DarkA25;
+		private Color _lineUncompletedColor = SmartColor.DarkA75;
 
 		[Category("Step Appearance")]
 		public Color LineCompletedColor

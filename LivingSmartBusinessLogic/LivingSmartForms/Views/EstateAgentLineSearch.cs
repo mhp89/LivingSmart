@@ -12,12 +12,12 @@ using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms.Views
 {
-	public partial class EstateAgentSearch : UserControl
+	public partial class EstateAgentLineSearch : UserControl
 	{
 	    private EstateAgentSearchDropIn dropIn { get; set; }
 	    public EstateAgent EstateAgent { get; private set; }
 
-		public EstateAgentSearch(EstateAgentSearchDropIn dropIn, EstateAgent estateAgent)
+		public EstateAgentLineSearch(EstateAgentSearchDropIn dropIn, EstateAgent estateAgent)
         {
 	        this.dropIn = dropIn;
 	        EstateAgent = estateAgent;
@@ -26,17 +26,16 @@ namespace LivingSmartForms.Views
 
 			UpdateFields();
 
-			Click += Select;
 			BindEvent(this);
         }
 
-	    private void BindEvent(Control parent)
+		private void BindEvent(Control parent)
 		{
-		    foreach (Control control in parent.Controls)
-		    {
-				control.Click += Select;
+			parent.Click += Select;
+			parent.DoubleClick += FastSelect;
+
+			foreach (Control control in parent.Controls)
 				BindEvent(control);
-		    }
 		}
 
 	    private void UpdateFields()
@@ -50,5 +49,9 @@ namespace LivingSmartForms.Views
 	    {
 		    dropIn.SelectEstateAgent(this);
 	    }
+		private void FastSelect(object sender, EventArgs e)
+		{
+			dropIn.FastSelectEstateAgent(this);
+		}
 	}
 }

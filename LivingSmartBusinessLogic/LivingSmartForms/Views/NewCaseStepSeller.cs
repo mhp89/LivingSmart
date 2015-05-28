@@ -25,7 +25,6 @@ namespace LivingSmartForms.Views
         public NewCaseStepSeller(BaseForm baseForm)
         {
 	        this.baseForm = baseForm;
-            CaseController.Instance.MakeNewCase();
 			
             InitializeComponent();
 
@@ -46,7 +45,7 @@ namespace LivingSmartForms.Views
 					CustomerController.Instance.SetCity(customer, Convert.ToInt32(stbSellerZipCode.Text));
 					CustomerController.Instance.SetTelephone(customer, stbSellerPhone.Text);
 					CustomerController.Instance.SetEmail(customer, stbSellerEmail.Text);
-					CustomerController.Instance.AddCustomer(customer);
+					CustomerController.Instance.SaveActiveCustomer();
 				}
 				else
 				{

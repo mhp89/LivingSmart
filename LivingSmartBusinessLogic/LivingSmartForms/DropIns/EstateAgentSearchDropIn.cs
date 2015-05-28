@@ -20,7 +20,7 @@ namespace LivingSmartForms.DropIns
 
 		private EstateAgentSearchCallback callback;
 
-		private EstateAgentSearch selectedEstateAgent;
+		private EstateAgentLineSearch selectedEstateAgent;
 
 		
 		public delegate void EstateAgentSearchCallback(EstateAgent estateAgent);
@@ -30,11 +30,20 @@ namespace LivingSmartForms.DropIns
 			FinishSearch(null);
 		}
 
+		public override string GetDropInId()
+		{
+			return "EstateAgentSearch";
+		}
+
 		private void Initialize(BaseForm baseForm, EstateAgentSearchCallback callback)
 		{
 			this.baseForm = baseForm;
 			this.callback = callback;
+			
 			InitializeComponent();
+
+			btnSelect.Enabled = false;
+
 			baseForm.ShowDropIn(this);
 		}
 
@@ -63,13 +72,18 @@ namespace LivingSmartForms.DropIns
 
 		#region Search
 
-		public void SelectEstateAgent(EstateAgentSearch estateAgent)
+		public void SelectEstateAgent(EstateAgentLineSearch estateAgent)
 		{
 			if (selectedEstateAgent != null)
 				selectedEstateAgent.BackColor = default(Color);
 			estateAgent.BackColor = SmartColor.DarkA10;
 			selectedEstateAgent = estateAgent;
 			btnSelect.Enabled = true;
+		}
+
+		public void FastSelectEstateAgent(EstateAgentLineSearch estateAgent)
+		{
+			FinishSearch(estateAgent.EstateAgent);
 		}
 
 		private void Search(object sender, EventArgs e)
@@ -81,6 +95,8 @@ namespace LivingSmartForms.DropIns
 
 		private void UpdateResult()
 		{
+			clsResult.ClearList();
+
 			var id = (string.IsNullOrEmpty(stbId.Text)) ? -1 : Convert.ToInt32(stbId.Text);
 			var name = (string.IsNullOrEmpty(stbName.Text)) ? null : stbName.Text;
 			var phone = (string.IsNullOrEmpty(stbPhone.Text)) ? null : stbPhone.Text;
@@ -92,11 +108,9 @@ namespace LivingSmartForms.DropIns
 			var result = EstateAgentController.Instance.SearchEstateAgents(id, name, phone, email);
 
 			clsResult.SuspendLayout();
-
-			clsResult.ClearList();
 			
 			foreach (var estateAgent in result)
-				clsResult.AddControl(new EstateAgentSearch(this, estateAgent));
+				clsResult.AddControl(new EstateAgentLineSearch(this, estateAgent));
 
 			clsResult.ResumeLayout();
 		}

@@ -26,17 +26,16 @@ namespace LivingSmartForms.Views
 
 			UpdateFields();
 
-			Click += Select;
 			BindEvent(this);
         }
 
 	    private void BindEvent(Control parent)
 		{
-		    foreach (Control control in parent.Controls)
-		    {
-				control.Click += Select;
-				BindEvent(control);
-		    }
+			parent.Click += Select;
+			parent.DoubleClick += FastSelect;
+		    
+			foreach (Control control in parent.Controls)
+			    BindEvent(control);
 		}
 
 	    private void UpdateFields()
@@ -49,6 +48,12 @@ namespace LivingSmartForms.Views
 	    private void Select(object sender, EventArgs e)
 	    {
 		    dropIn.SelectCustomer(this);
+	    }
+
+
+	    private void FastSelect(object sender, EventArgs e)
+		{
+			dropIn.FastSelectCustomer(this);
 	    }
     }
 }

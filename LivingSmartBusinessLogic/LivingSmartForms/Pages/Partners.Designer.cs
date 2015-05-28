@@ -1,6 +1,6 @@
 namespace LivingSmartForms.Pages
 {
-    partial class Customers
+	partial class Partners
 	{
 		/// <summary> 
 		/// Required designer variable.
@@ -31,10 +31,10 @@ namespace LivingSmartForms.Pages
 			this.pnlSubmenuHolder = new System.Windows.Forms.Panel();
 			this.pnlSubmenuBorder = new System.Windows.Forms.Panel();
 			this.pnlSubmenu = new System.Windows.Forms.Panel();
-			this.btnNewCustomer = new SmartControls.SmartButton();
+			this.btnNewPartner = new SmartControls.SmartButton();
 			this.sblActiveCases = new SmartControls.SmartLabel();
-			this.clsCustomers = new SmartControls.ControlList();
-			this.hdrCustomers = new SmartControls.Header();
+			this.clsPartners = new SmartControls.ControlList();
+			this.hdrPartners = new SmartControls.Header();
 			this.pnlSubmenuHolder.SuspendLayout();
 			this.pnlSubmenu.SuspendLayout();
 			this.SuspendLayout();
@@ -60,7 +60,7 @@ namespace LivingSmartForms.Pages
 			// 
 			// pnlSubmenu
 			// 
-			this.pnlSubmenu.Controls.Add(this.btnNewCustomer);
+			this.pnlSubmenu.Controls.Add(this.btnNewPartner);
 			this.pnlSubmenu.Controls.Add(this.sblActiveCases);
 			this.pnlSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenu.Location = new System.Drawing.Point(0, 0);
@@ -69,73 +69,73 @@ namespace LivingSmartForms.Pages
 			this.pnlSubmenu.Size = new System.Drawing.Size(1135, 40);
 			this.pnlSubmenu.TabIndex = 0;
 			// 
-			// btnNewCustomer
+			// btnNewPartner
 			// 
-			this.btnNewCustomer.AutoSize = true;
-			this.btnNewCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNewCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnNewCustomer.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.btnNewCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnNewCustomer.FlatAppearance.BorderSize = 0;
-			this.btnNewCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewCustomer.Location = new System.Drawing.Point(0, 0);
-			this.btnNewCustomer.Name = "btnNewCustomer";
-			this.btnNewCustomer.Size = new System.Drawing.Size(103, 30);
-			this.btnNewCustomer.TabIndex = 2;
-			this.btnNewCustomer.Text = "Ny kunde";
-			this.btnNewCustomer.UseVisualStyleBackColor = false;
-			this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
+			this.btnNewPartner.AutoSize = true;
+			this.btnNewPartner.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnNewPartner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewPartner.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.btnNewPartner.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnNewPartner.FlatAppearance.BorderSize = 0;
+			this.btnNewPartner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNewPartner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewPartner.Location = new System.Drawing.Point(0, 0);
+			this.btnNewPartner.Name = "btnNewPartner";
+			this.btnNewPartner.Size = new System.Drawing.Size(111, 30);
+			this.btnNewPartner.TabIndex = 2;
+			this.btnNewPartner.Text = "Ny partner";
+			this.btnNewPartner.UseVisualStyleBackColor = false;
+			this.btnNewPartner.Click += new System.EventHandler(this.btnNewEstateAgents_Click);
 			// 
 			// sblActiveCases
 			// 
 			this.sblActiveCases.AutoSize = true;
 			this.sblActiveCases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.sblActiveCases.Location = new System.Drawing.Point(113, 7);
+			this.sblActiveCases.Location = new System.Drawing.Point(121, 7);
 			this.sblActiveCases.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.sblActiveCases.Name = "sblActiveCases";
-			this.sblActiveCases.Size = new System.Drawing.Size(79, 17);
+			this.sblActiveCases.Size = new System.Drawing.Size(80, 17);
 			this.sblActiveCases.TabIndex = 1;
 			this.sblActiveCases.Text = "20";
-			this.sblActiveCases.Title = "Kunder:";
+			this.sblActiveCases.Title = "Partner:";
 			this.sblActiveCases.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			// 
-			// clsCustomers
+			// clsPartners
 			// 
-			this.clsCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+			this.clsPartners.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.clsCustomers.AutoScroll = true;
-			this.clsCustomers.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.clsCustomers.Location = new System.Drawing.Point(20, 90);
-			this.clsCustomers.Margin = new System.Windows.Forms.Padding(20, 10, 20, 20);
-			this.clsCustomers.Name = "clsCustomers";
-			this.clsCustomers.Size = new System.Drawing.Size(1095, 450);
-			this.clsCustomers.TabIndex = 6;
-			this.clsCustomers.WrapContents = false;
+			this.clsPartners.AutoScroll = true;
+			this.clsPartners.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+			this.clsPartners.Location = new System.Drawing.Point(20, 90);
+			this.clsPartners.Margin = new System.Windows.Forms.Padding(20, 10, 20, 20);
+			this.clsPartners.Name = "clsPartners";
+			this.clsPartners.Size = new System.Drawing.Size(1095, 450);
+			this.clsPartners.TabIndex = 6;
+			this.clsPartners.WrapContents = false;
 			// 
-			// hdrCustomers
+			// hdrPartners
 			// 
-			this.hdrCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+			this.hdrPartners.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.hdrCustomers.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.hdrCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.hdrCustomers.Location = new System.Drawing.Point(10, 55);
-			this.hdrCustomers.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-			this.hdrCustomers.Name = "hdrCustomers";
-			this.hdrCustomers.Size = new System.Drawing.Size(1115, 25);
-			this.hdrCustomers.TabIndex = 5;
-			this.hdrCustomers.Text = "Kunder";
+			this.hdrPartners.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.hdrPartners.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.hdrPartners.Location = new System.Drawing.Point(10, 55);
+			this.hdrPartners.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+			this.hdrPartners.Name = "hdrPartners";
+			this.hdrPartners.Size = new System.Drawing.Size(1115, 25);
+			this.hdrPartners.TabIndex = 5;
+			this.hdrPartners.Text = "Partner";
 			// 
-			// Customers
+			// Partners
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.pnlSubmenuHolder);
-			this.Controls.Add(this.clsCustomers);
-			this.Controls.Add(this.hdrCustomers);
-			this.Name = "Customers";
+			this.Controls.Add(this.clsPartners);
+			this.Controls.Add(this.hdrPartners);
+			this.Name = "Partners";
 			this.Size = new System.Drawing.Size(1135, 560);
 			this.pnlSubmenuHolder.ResumeLayout(false);
 			this.pnlSubmenu.ResumeLayout(false);
@@ -146,12 +146,12 @@ namespace LivingSmartForms.Pages
 
 		#endregion
 
-		private SmartControls.Header hdrCustomers;
-		private SmartControls.ControlList clsCustomers;
+		private SmartControls.Header hdrPartners;
+		private SmartControls.ControlList clsPartners;
 		private System.Windows.Forms.Panel pnlSubmenuHolder;
 		private System.Windows.Forms.Panel pnlSubmenuBorder;
 		private System.Windows.Forms.Panel pnlSubmenu;
-		private SmartControls.SmartButton btnNewCustomer;
+		private SmartControls.SmartButton btnNewPartner;
 		private SmartControls.SmartLabel sblActiveCases;
 	}
 }

@@ -1,6 +1,6 @@
 namespace LivingSmartForms.UserControls
 {
-    partial class DateField
+	partial class DateTimeField
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,12 +28,57 @@ namespace LivingSmartForms.UserControls
         /// </summary>
         private void InitializeComponent()
         {
-			this.stbDateYear = new SmartControls.SmartTextBox();
+			this.stbTime = new SmartControls.SmartTextBox();
 			this.lblHyphenDateMonthYear = new System.Windows.Forms.Label();
-			this.stbDateDay = new SmartControls.SmartTextBox();
 			this.lblHyphenDateDayMonth = new System.Windows.Forms.Label();
+			this.stbDateYear = new SmartControls.SmartTextBox();
+			this.stbDateDay = new SmartControls.SmartTextBox();
 			this.stbDateMonth = new SmartControls.SmartTextBox();
 			this.SuspendLayout();
+			// 
+			// stbTime
+			// 
+			this.stbTime.AllowComma = false;
+			this.stbTime.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbTime.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbTime.AutomaticValidation = true;
+			this.stbTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbTime.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbTime.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbTime.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbTime.Location = new System.Drawing.Point(225, 0);
+			this.stbTime.Margin = new System.Windows.Forms.Padding(20, 0, 0, 10);
+			this.stbTime.MaxLength = 4;
+			this.stbTime.MinLength = 4;
+			this.stbTime.Name = "stbTime";
+			this.stbTime.NumericOnly = true;
+			this.stbTime.Placeholder = "TT:MM";
+			this.stbTime.RegularExpression = null;
+			this.stbTime.Required = true;
+			this.stbTime.Size = new System.Drawing.Size(65, 30);
+			this.stbTime.Suffix = null;
+			this.stbTime.TabIndex = 20;
+			this.stbTime.UseSystemPasswordChar = false;
+			// 
+			// lblHyphenDateMonthYear
+			// 
+			this.lblHyphenDateMonthYear.AutoSize = true;
+			this.lblHyphenDateMonthYear.Location = new System.Drawing.Point(125, 7);
+			this.lblHyphenDateMonthYear.Margin = new System.Windows.Forms.Padding(5);
+			this.lblHyphenDateMonthYear.Name = "lblHyphenDateMonthYear";
+			this.lblHyphenDateMonthYear.Size = new System.Drawing.Size(10, 13);
+			this.lblHyphenDateMonthYear.TabIndex = 19;
+			this.lblHyphenDateMonthYear.Text = "-";
+			// 
+			// lblHyphenDateDayMonth
+			// 
+			this.lblHyphenDateDayMonth.AutoSize = true;
+			this.lblHyphenDateDayMonth.Location = new System.Drawing.Point(55, 7);
+			this.lblHyphenDateDayMonth.Margin = new System.Windows.Forms.Padding(5);
+			this.lblHyphenDateDayMonth.Name = "lblHyphenDateDayMonth";
+			this.lblHyphenDateDayMonth.Size = new System.Drawing.Size(10, 13);
+			this.lblHyphenDateDayMonth.TabIndex = 18;
+			this.lblHyphenDateDayMonth.Text = "-";
 			// 
 			// stbDateYear
 			// 
@@ -56,18 +101,8 @@ namespace LivingSmartForms.UserControls
 			this.stbDateYear.Required = true;
 			this.stbDateYear.Size = new System.Drawing.Size(65, 30);
 			this.stbDateYear.Suffix = null;
-			this.stbDateYear.TabIndex = 2;
+			this.stbDateYear.TabIndex = 17;
 			this.stbDateYear.UseSystemPasswordChar = false;
-			// 
-			// lblHyphenDateMonthYear
-			// 
-			this.lblHyphenDateMonthYear.AutoSize = true;
-			this.lblHyphenDateMonthYear.Location = new System.Drawing.Point(125, 7);
-			this.lblHyphenDateMonthYear.Margin = new System.Windows.Forms.Padding(5);
-			this.lblHyphenDateMonthYear.Name = "lblHyphenDateMonthYear";
-			this.lblHyphenDateMonthYear.Size = new System.Drawing.Size(10, 13);
-			this.lblHyphenDateMonthYear.TabIndex = 24;
-			this.lblHyphenDateMonthYear.Text = "-";
 			// 
 			// stbDateDay
 			// 
@@ -90,18 +125,8 @@ namespace LivingSmartForms.UserControls
 			this.stbDateDay.Required = true;
 			this.stbDateDay.Size = new System.Drawing.Size(50, 30);
 			this.stbDateDay.Suffix = null;
-			this.stbDateDay.TabIndex = 0;
+			this.stbDateDay.TabIndex = 15;
 			this.stbDateDay.UseSystemPasswordChar = false;
-			// 
-			// lblHyphenDateDayMonth
-			// 
-			this.lblHyphenDateDayMonth.AutoSize = true;
-			this.lblHyphenDateDayMonth.Location = new System.Drawing.Point(55, 7);
-			this.lblHyphenDateDayMonth.Margin = new System.Windows.Forms.Padding(5);
-			this.lblHyphenDateDayMonth.Name = "lblHyphenDateDayMonth";
-			this.lblHyphenDateDayMonth.Size = new System.Drawing.Size(10, 13);
-			this.lblHyphenDateDayMonth.TabIndex = 23;
-			this.lblHyphenDateDayMonth.Text = "-";
 			// 
 			// stbDateMonth
 			// 
@@ -124,20 +149,21 @@ namespace LivingSmartForms.UserControls
 			this.stbDateMonth.Required = true;
 			this.stbDateMonth.Size = new System.Drawing.Size(50, 30);
 			this.stbDateMonth.Suffix = null;
-			this.stbDateMonth.TabIndex = 1;
+			this.stbDateMonth.TabIndex = 16;
 			this.stbDateMonth.UseSystemPasswordChar = false;
 			// 
-			// DateField
+			// DateTimeField
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.Controls.Add(this.stbTime);
 			this.Controls.Add(this.stbDateYear);
 			this.Controls.Add(this.lblHyphenDateMonthYear);
 			this.Controls.Add(this.stbDateDay);
 			this.Controls.Add(this.lblHyphenDateDayMonth);
 			this.Controls.Add(this.stbDateMonth);
 			this.Margin = new System.Windows.Forms.Padding(0);
-			this.Name = "DateField";
-			this.Size = new System.Drawing.Size(205, 30);
+			this.Name = "DateTimeField";
+			this.Size = new System.Drawing.Size(290, 30);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -145,12 +171,11 @@ namespace LivingSmartForms.UserControls
 
         #endregion
 
-		private SmartControls.SmartTextBox stbDateYear;
 		private System.Windows.Forms.Label lblHyphenDateMonthYear;
-		private SmartControls.SmartTextBox stbDateDay;
-		private System.Windows.Forms.Label lblHyphenDateDayMonth;
-		private SmartControls.SmartTextBox stbDateMonth;
-
-
-	}
+        private System.Windows.Forms.Label lblHyphenDateDayMonth;
+        private SmartControls.SmartTextBox stbDateYear;
+        private SmartControls.SmartTextBox stbDateDay;
+        private SmartControls.SmartTextBox stbDateMonth;
+		private SmartControls.SmartTextBox stbTime;
+    }
 }

@@ -34,11 +34,20 @@ namespace LivingSmartForms.DropIns
 			FinishSearch(null);
 		}
 
+		public override string GetDropInId()
+		{
+			return "CustomerSearch";
+		}
+
 		private void Initialize(BaseForm baseForm, CustomerSearchCallback callback)
 		{
 			this.baseForm = baseForm;
 			this.callback = callback;
+
 			InitializeComponent();
+
+			btnSelect.Enabled = false;
+
 			baseForm.ShowDropIn(this);
 		}
 
@@ -74,6 +83,11 @@ namespace LivingSmartForms.DropIns
 			btnSelect.Enabled = true;
 		}
 
+		public void FastSelectCustomer(CustomerLineSearch customerLine)
+		{
+			FinishSearch(customerLine.Customer);
+		}
+
 		private void Search(object sender, EventArgs e)
 		{
 			selectedCustomer = null;
@@ -83,6 +97,8 @@ namespace LivingSmartForms.DropIns
 
 		private void UpdateResult()
 		{
+			clsResult.ClearList();
+
 			var id = (string.IsNullOrEmpty(stbId.Text)) ? -1 : Convert.ToInt32(stbId.Text);
 			var name = (string.IsNullOrEmpty(stbName.Text)) ? null : stbName.Text;
 			var address = (string.IsNullOrEmpty(stbAddress.Text)) ? null : stbAddress.Text;
@@ -96,8 +112,6 @@ namespace LivingSmartForms.DropIns
 			var result = CustomerController.Instance.SearchCustomers(id, name, address, zipcode, phone, email);
 
 			clsResult.SuspendLayout();
-
-			clsResult.ClearList();
 
 			foreach (var customerLine in result)
 				clsResult.AddControl(new CustomerLineSearch(this, customerLine), true);

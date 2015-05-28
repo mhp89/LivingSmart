@@ -105,6 +105,24 @@
     <Compile Include="DropIns\NewCaseDropIn.Designer.cs">
       <DependentUpon>NewCaseDropIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="DropIns\NewCustomerDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\NewCustomerDropIn.Designer.cs">
+      <DependentUpon>NewCustomerDropIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIns\NewPartnerDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\NewPartnerDropIn.Designer.cs">
+      <DependentUpon>NewPartnerDropIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIns\NewEstateAgentDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\NewEstateAgentDropIn.Designer.cs">
+      <DependentUpon>NewEstateAgentDropIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="DropIns\PartnersDropIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -116,6 +134,18 @@
     </Compile>
     <Compile Include="Pages\Cases.Designer.cs">
       <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Partners.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\Partners.Designer.cs">
+      <DependentUpon>Partners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\EstateAgents.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\EstateAgents.Designer.cs">
+      <DependentUpon>EstateAgents.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Customers.cs">
       <SubType>UserControl</SubType>
@@ -131,6 +161,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserControls\DateTimeField.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DateTimeField.Designer.cs">
+      <DependentUpon>DateTimeField.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DateField.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,11 +185,11 @@
     <Compile Include="Views\CustomerLineSearch.Designer.cs">
       <DependentUpon>CustomerLineSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\EmployeeLine.cs">
+    <Compile Include="Views\EstateAgentLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\EmployeeLine.Designer.cs">
-      <DependentUpon>EmployeeLine.cs</DependentUpon>
+    <Compile Include="Views\EstateAgentLine.Designer.cs">
+      <DependentUpon>EstateAgentLine.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\CaseLineSimple.cs">
       <SubType>UserControl</SubType>
@@ -167,11 +203,11 @@
     <Compile Include="Views\CustomerLine.Designer.cs">
       <DependentUpon>CustomerLine.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\EstateAgentSearch.cs">
+    <Compile Include="Views\EstateAgentLineSearch.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\EstateAgentSearch.Designer.cs">
-      <DependentUpon>EstateAgentSearch.cs</DependentUpon>
+    <Compile Include="Views\EstateAgentLineSearch.Designer.cs">
+      <DependentUpon>EstateAgentLineSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\NewAppointment.cs">
       <SubType>UserControl</SubType>
@@ -227,11 +263,11 @@
     <Compile Include="Views\PartnerView.Designer.cs">
       <DependentUpon>PartnerView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\PropertyDetails.cs">
+    <Compile Include="Views\NewCaseStepDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Views\PropertyDetails.Designer.cs">
-      <DependentUpon>PropertyDetails.cs</DependentUpon>
+    <Compile Include="Views\NewCaseStepDetails.Designer.cs">
+      <DependentUpon>NewCaseStepDetails.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
@@ -251,11 +287,26 @@
     <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
       <DependentUpon>NewCaseDropIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\NewCustomerDropIn.resx">
+      <DependentUpon>NewCustomerDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\NewPartnerDropIn.resx">
+      <DependentUpon>NewPartnerDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\NewEstateAgentDropIn.resx">
+      <DependentUpon>NewEstateAgentDropIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
       <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Cases.resx">
       <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\Partners.resx">
+      <DependentUpon>Partners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\EstateAgents.resx">
+      <DependentUpon>EstateAgents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Customers.resx">
       <DependentUpon>Customers.cs</DependentUpon>
@@ -273,6 +324,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserControls\DateTimeField.resx">
+      <DependentUpon>DateTimeField.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DateField.resx">
       <DependentUpon>DateField.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,8 +336,8 @@
     <EmbeddedResource Include="Views\CustomerLineSearch.resx">
       <DependentUpon>CustomerLineSearch.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\EmployeeLine.resx">
-      <DependentUpon>EmployeeLine.cs</DependentUpon>
+    <EmbeddedResource Include="Views\EstateAgentLine.resx">
+      <DependentUpon>EstateAgentLine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\CaseLineSimple.resx">
       <DependentUpon>CaseLineSimple.cs</DependentUpon>
@@ -291,8 +345,8 @@
     <EmbeddedResource Include="Views\CustomerLine.resx">
       <DependentUpon>CustomerLine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\EstateAgentSearch.resx">
-      <DependentUpon>EstateAgentSearch.cs</DependentUpon>
+    <EmbeddedResource Include="Views\EstateAgentLineSearch.resx">
+      <DependentUpon>EstateAgentLineSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewAppointment.resx">
       <DependentUpon>NewAppointment.cs</DependentUpon>
@@ -321,8 +375,8 @@
     <EmbeddedResource Include="Views\PartnerView.resx">
       <DependentUpon>PartnerView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Views\PropertyDetails.resx">
-      <DependentUpon>PropertyDetails.cs</DependentUpon>
+    <EmbeddedResource Include="Views\NewCaseStepDetails.resx">
+      <DependentUpon>NewCaseStepDetails.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

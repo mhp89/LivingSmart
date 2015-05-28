@@ -137,10 +137,10 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.clsResult.AutoScroll = true;
 			this.clsResult.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.clsResult.Location = new System.Drawing.Point(10, 299);
+			this.clsResult.Location = new System.Drawing.Point(10, 302);
 			this.clsResult.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.clsResult.Name = "clsResult";
-			this.clsResult.Size = new System.Drawing.Size(380, 287);
+			this.clsResult.Size = new System.Drawing.Size(380, 284);
 			this.clsResult.TabIndex = 15;
 			this.clsResult.WrapContents = false;
 			// 
@@ -150,7 +150,7 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlSubmenuHolder.Controls.Add(this.pnlSubmenuBorder);
 			this.pnlSubmenuHolder.Controls.Add(this.pnlSubmenu);
-			this.pnlSubmenuHolder.Location = new System.Drawing.Point(0, 1);
+			this.pnlSubmenuHolder.Location = new System.Drawing.Point(0, 2);
 			this.pnlSubmenuHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlSubmenuHolder.Name = "pnlSubmenuHolder";
 			this.pnlSubmenuHolder.Size = new System.Drawing.Size(400, 50);
@@ -181,7 +181,7 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.header1.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.header1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.header1.Location = new System.Drawing.Point(10, 264);
+			this.header1.Location = new System.Drawing.Point(10, 267);
 			this.header1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.header1.Name = "header1";
 			this.header1.Size = new System.Drawing.Size(380, 25);
@@ -203,7 +203,7 @@ namespace LivingSmartForms.DropIns
 			this.tlpSeller.Controls.Add(this.stbEmail, 1, 3);
 			this.tlpSeller.Controls.Add(this.lblPhone, 0, 2);
 			this.tlpSeller.Controls.Add(this.lblEmail, 0, 3);
-			this.tlpSeller.Location = new System.Drawing.Point(10, 94);
+			this.tlpSeller.Location = new System.Drawing.Point(10, 97);
 			this.tlpSeller.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.tlpSeller.Name = "tlpSeller";
 			this.tlpSeller.RowCount = 4;
@@ -246,7 +246,9 @@ namespace LivingSmartForms.DropIns
 			this.stbId.MinLength = -1;
 			this.stbId.Name = "stbId";
 			this.stbId.NumericOnly = true;
+			this.stbId.Placeholder = null;
 			this.stbId.RegularExpression = null;
+			this.stbId.Required = false;
 			this.stbId.Size = new System.Drawing.Size(285, 30);
 			this.stbId.Suffix = null;
 			this.stbId.TabIndex = 7;
@@ -285,7 +287,9 @@ namespace LivingSmartForms.DropIns
 			this.stbName.MinLength = -1;
 			this.stbName.Name = "stbName";
 			this.stbName.NumericOnly = false;
+			this.stbName.Placeholder = null;
 			this.stbName.RegularExpression = null;
+			this.stbName.Required = false;
 			this.stbName.Size = new System.Drawing.Size(285, 30);
 			this.stbName.Suffix = null;
 			this.stbName.TabIndex = 4;
@@ -309,7 +313,9 @@ namespace LivingSmartForms.DropIns
 			this.stbPhone.MinLength = -1;
 			this.stbPhone.Name = "stbPhone";
 			this.stbPhone.NumericOnly = true;
+			this.stbPhone.Placeholder = null;
 			this.stbPhone.RegularExpression = null;
+			this.stbPhone.Required = false;
 			this.stbPhone.Size = new System.Drawing.Size(285, 30);
 			this.stbPhone.Suffix = null;
 			this.stbPhone.TabIndex = 3;
@@ -333,7 +339,9 @@ namespace LivingSmartForms.DropIns
 			this.stbEmail.MinLength = -1;
 			this.stbEmail.Name = "stbEmail";
 			this.stbEmail.NumericOnly = false;
+			this.stbEmail.Placeholder = null;
 			this.stbEmail.RegularExpression = null;
+			this.stbEmail.Required = false;
 			this.stbEmail.Size = new System.Drawing.Size(285, 30);
 			this.stbEmail.Suffix = null;
 			this.stbEmail.TabIndex = 2;
@@ -374,7 +382,7 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.header.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.header.Location = new System.Drawing.Point(10, 59);
+			this.header.Location = new System.Drawing.Point(10, 62);
 			this.header.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.header.Name = "header";
 			this.header.Size = new System.Drawing.Size(380, 25);

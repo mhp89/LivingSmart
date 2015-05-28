@@ -15,7 +15,7 @@ namespace SmartControls
 	{
 		private bool firstDraw = true;
 
-		private TextBox textBox;
+		private ExtendedTextBox textBox;
 		private ToolTip toolTip;
 
 		private Color BorderColor;
@@ -57,6 +57,14 @@ namespace SmartControls
 		}
 		private string _suffix;
 
+		[Category("Appearance")]
+		public string Placeholder
+		{
+			get { return _placeholder; }
+			set { _placeholder = textBox.Placeholder = value; }
+		}
+		private string _placeholder;
+
 		#endregion
 
 
@@ -76,13 +84,6 @@ namespace SmartControls
 			set { _useSystemPasswordChar = textBox.UseSystemPasswordChar = value; }
 		}
 		private bool _useSystemPasswordChar;
-        public string Placeholder
-        {
-            get { return _placeholder; }
-            set { _placeholder = value; }
-        }
-        private string _placeholder;
-
 
 		private AutoCompleteMode _autoCompleteMode;
 		public AutoCompleteMode AutoCompleteMode
@@ -122,28 +123,13 @@ namespace SmartControls
 		private int errorIconSize = 10;
 
 		[Category("Validation")]
-		public bool NumericOnly
-		{
-			get { return _numericOnly; }
-			set { _numericOnly = value; }
-		}
-		private bool _numericOnly;
+		public bool NumericOnly { get; set; }
 
 		[Category("Validation")]
-		public bool AllowComma
-		{
-			get { return _allowComma; }
-			set { _allowComma = value; }
-		}
-		private bool _allowComma;
+		public bool AllowComma { get; set; }
 
 		[Category("Validation")]
-		public bool AutomaticValidation
-		{
-			get { return _automaticValidation; }
-			set { _automaticValidation = value; }
-		}
-		private bool _automaticValidation;
+		public bool AutomaticValidation { get; set; }
 
 		[Category("Validation"), ReadOnly(true)]
 		public bool HasError
@@ -152,28 +138,13 @@ namespace SmartControls
 		}
 
 		[Category("Validation"), ReadOnly(true)]
-		public ErrorType CurrentErrorType
-		{
-			get { return _currentErrorType; }
-			set { _currentErrorType = value; }
-		}
-		private ErrorType _currentErrorType;
+		public ErrorType CurrentErrorType { get; set; }
 
 		[Category("Validation"), ReadOnly(true)]
-		public string CustomErrorMessage
-		{
-			get { return _customErrorMessage; }
-			set { _customErrorMessage = value; }
-		}
-		private string _customErrorMessage;
+		public string CustomErrorMessage { get; set; }
 
 		[Category("Validation")]
-		public string RegularExpression
-		{
-			get { return _regularExpression; }
-			set { _regularExpression = value; }
-		}
-		private string _regularExpression;
+		public string RegularExpression { get; set; }
 
 		[Category("Validation")]
 		public int MinLength
@@ -183,11 +154,15 @@ namespace SmartControls
 		}
 		private int _minLength = -1;
 
+		[Category("Validation")]
+		public bool Required { get; set; }
+
 		public enum ErrorType
 		{
 			None,
 			ToShort,
 			InvalidInput,
+			Required,
 			NumericOnly,
 			Custom
 		}
@@ -196,11 +171,12 @@ namespace SmartControls
 		
 		public SmartTextBox()
 		{
+			Required = false;
 			UpdateColor();
 			Cursor = Cursors.IBeam;
 		    _text = String.Empty;
 
-		    Controls.Add(textBox = new TextBox());
+			Controls.Add(textBox = new ExtendedTextBox());
 			
 			textBox.BorderStyle = BorderStyle.None;
 			textBox.BackColor = BackColor;
@@ -288,14 +264,9 @@ namespace SmartControls
 				suffixSizeBuffer = suffixSize;
 				suffixSizeBuffer.Width += 10;
 
-				e.Graphics.FillRectangle(new SolidBrush(SmartColor.DarkA25), new Rectangle(Width - suffixSizeBuffer.Width, 0, suffixSizeBuffer.Width, Height));
+				e.Graphics.FillRectangle(new SolidBrush(SmartColor.DarkA75), new Rectangle(Width - suffixSizeBuffer.Width, 0, suffixSizeBuffer.Width, Height));
 				TextRenderer.DrawText(e.Graphics, Suffix, Font, new Rectangle(Width - suffixSize.Width - 5, 0, suffixSize.Width, Height), ForeColor);
 			}
-
-            if (string.IsNullOrEmpty(Text))
-            {
-                TextRenderer.DrawText(e.Graphics, Placeholder, Font, new Rectangle(0, 0, Width, Height), ForeColor);
-            }
 
 			if (HasError)
 			{
@@ -357,6 +328,10 @@ namespace SmartControls
 			if (DesignMode)
 				return false;
 
+			if (Required && string.IsNullOrEmpty(Text))
+			{
+				SetError(ErrorType.Required);
+			}
 			if (MinLength > 0 && Text.Length < MinLength)
 			{
 				SetError(ErrorType.ToShort);
@@ -419,8 +394,10 @@ namespace SmartControls
 		{
 			string text = "";
 
-			if (CurrentErrorType == ErrorType.ToShort)
-				text = "Feltet skal mindst være " + MinLength + " langt";
+			if (CurrentErrorType == ErrorType.Required)
+				text = "Feltet skal være udfyldt";
+			else if (CurrentErrorType == ErrorType.ToShort)
+				text = "Feltet skal mindst være " + MinLength + " lang";
 			else if (CurrentErrorType == ErrorType.InvalidInput)
 				text = "Ugyldigt input";
 			else if (CurrentErrorType == ErrorType.NumericOnly)

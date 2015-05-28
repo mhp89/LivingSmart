@@ -29,24 +29,30 @@ namespace LivingSmartForms.DropIns
 			Seller,
 			Lot,
 			Property,
-			//Details
+			Details
 		}
 
 
 		public NewCaseDropIn(BaseForm baseForm) : base(baseForm)
 		{
-            InitializeComponent();
+			InitializeComponent();
+
+			CaseController.Instance.MakeNewCase();
 
 			steps = new CaseStep[Enum.GetNames(typeof(StepsIndex)).Length];
 
 			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(baseForm);
             steps[(int)StepsIndex.Lot] = new NewCaseStepLot(baseForm);
 			steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm);
-			//steps[(int)StepsIndex.Details] = new PropertyDetails(baseForm);
+			steps[(int)StepsIndex.Details] = new NewCaseStepDetails(baseForm);
 
 			InitializeSteps();
 
 			ChangeStep(0);
+		}
+		public override string GetDropInId()
+		{
+			return "NewCase";
 		}
 
 		private void InitializeSteps()
@@ -81,7 +87,7 @@ namespace LivingSmartForms.DropIns
 					//Finish
 					CaseController.Instance.SaveActiveCase();
 
-                    baseForm.CloseDropIn();
+					Close();
 				}
 				else
 				{

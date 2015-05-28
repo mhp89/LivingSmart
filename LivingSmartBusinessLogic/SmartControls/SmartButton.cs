@@ -76,7 +76,7 @@ namespace SmartControls
 				//TODO: Fix forecolor
 				e.Graphics.FillRectangle(new SolidBrush(BackColor), new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height));
 				TextRenderer.DrawText(e.Graphics, Text, Font, new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height),
-					System.Drawing.Color.Aquamarine);// (Color == SmartColor.ColorStyle.Light) ? SmartColor.DarkA25 : SmartColor.LightA25);
+					SmartColor.DarkA75);// (Color == SmartColor.ColorStyle.Light) ? SmartColor.DarkA25 : SmartColor.LightA25);
 			}
 		}
 
