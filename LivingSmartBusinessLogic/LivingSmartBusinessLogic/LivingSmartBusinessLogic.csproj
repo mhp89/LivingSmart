@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Ad.cs" />
+    <Compile Include="AdCatalog.cs" />
     <Compile Include="Appointment.cs" />
     <Compile Include="AppointmentCatalog.cs" />
+    <Compile Include="AskingPriceCatalog.cs" />
     <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="AskingPrice.cs" />
     <Compile Include="Case.cs" />
@@ -53,7 +55,9 @@
     <Compile Include="CustomerCatalog.cs" />
     <Compile Include="Controller\CustomerController.cs" />
     <Compile Include="DistanceTo.cs" />
+    <Compile Include="DistanceToCatalog.cs" />
     <Compile Include="Document.cs" />
+    <Compile Include="DocumentCatalog.cs" />
     <Compile Include="EstateAgent.cs" />
     <Compile Include="EstateAgentCatalog.cs" />
     <Compile Include="Controller\EstateAgentController.cs" />
@@ -68,16 +72,20 @@
     <Compile Include="PartnerCatalog.cs" />
     <Compile Include="Controller\PartnerController.cs" />
     <Compile Include="Picture.cs" />
+    <Compile Include="PictureCatalog.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyType.cs" />
+    <Compile Include="PropertyTypeCatalog.cs" />
     <Compile Include="Rating.cs" />
     <Compile Include="City.cs" />
     <Compile Include="Controller\SellPropertyController.cs" />
+    <Compile Include="RatingCatalog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Catalogs\" />
     <Folder Include="DB\" />
     <Folder Include="Model\" />
   </ItemGroup>

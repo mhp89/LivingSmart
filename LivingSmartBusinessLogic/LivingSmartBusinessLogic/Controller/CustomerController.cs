@@ -52,9 +52,9 @@ namespace LivingSmartBusinessLogic.Controller
             customerCatalog.AddToCatalog(customer);
         }
 
-        public Customer MakeNewCustomer()
+        public Customer MakeNewCustomer(int id, string name, DateTime dateOfBirth, string address, City city, string email, string telephone)
         {
-            return new Customer();
+            return new Customer(id, name, dateOfBirth, address, city, email, telephone);
         }
 
         public Customer ReadCustomer(int id)

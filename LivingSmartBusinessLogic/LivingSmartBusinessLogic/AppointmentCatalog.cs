@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 
@@ -7,11 +8,12 @@ namespace LivingSmartBusinessLogic
 {
     public class AppointmentCatalog
     {
-        private List<Appointment> appointments;
+
+        private Dictionary<int, List<Appointment>> appointmentDictionary;
 
         internal AppointmentCatalog()
         {
-            appointments = new List<Appointment>();
+            appointmentDictionary = new Dictionary<int, List<Appointment>>();
         }
 
         internal Appointment Check(int id)
@@ -24,14 +26,21 @@ namespace LivingSmartBusinessLogic
             throw new NotImplementedException();
         }
 
-        internal void AddToCatalog(Appointment appointment)
+        internal void AddToCatalog(int estateAgentId, Appointment appointment)
         {
-            appointments.Add(appointment);
+            if (!appointmentDictionary.ContainsKey(estateAgentId))
+                appointmentDictionary.Add(estateAgentId, new List<Appointment>());
+            appointmentDictionary[estateAgentId].Add(appointment);
         }
 
-        internal void RemoveFromCatalog(Appointment appointment)
+        internal void RemoveFromCatalog(int estateAgentId, Appointment appointment)
         {
-            appointments.Remove(appointment);
+            appointmentDictionary[estateAgentId].Remove(appointment);
+        }
+
+        internal ReadOnlyCollection<Appointment> GetAppointments(int estateAgentId)
+        {
+            return appointmentDictionary[estateAgentId].AsReadOnly();
         }
     }
 }

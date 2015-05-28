@@ -23,10 +23,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal DistanceTo()
-        {
-            
-        }
         internal DistanceTo(int id, string type, int distance)
         {
             Id = id;

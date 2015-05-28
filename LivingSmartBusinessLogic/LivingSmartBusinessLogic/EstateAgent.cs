@@ -29,25 +29,14 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        #region Collections
-
-        private List<Appointment> appointments;
-
-        #endregion
-
-        internal EstateAgent()
-        {
-            
-        }
         internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
         {
-            appointments = new List<Appointment>();
             Id = id;
             Name = name;
             Telephone = telephone;
-            _email = email;
-            _startingDate = startingDate;
-            _terminationDate = terminationDate;
+            Email = email;
+            StartingDate = startingDate;
+            TerminationDate = terminationDate;
 
         }
 

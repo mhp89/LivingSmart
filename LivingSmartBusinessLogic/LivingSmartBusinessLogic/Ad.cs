@@ -31,11 +31,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Ad()
-        {
-            
-        }
-
         internal Ad(int id, string type, DateTime startDate, DateTime endDate, int price)
         {
             Id = id;

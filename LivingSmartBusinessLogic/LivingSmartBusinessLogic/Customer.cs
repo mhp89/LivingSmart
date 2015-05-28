@@ -32,11 +32,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Customer()
-        {
-            
-        }
-
         internal Customer(int id, string name, DateTime dateOfBirth, string address, City city, string email, string telephone)
         {
             Id = id;

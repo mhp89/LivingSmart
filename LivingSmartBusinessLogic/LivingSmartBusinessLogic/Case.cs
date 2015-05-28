@@ -81,25 +81,9 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        #region Collections
-
-        private List<Ad> ads;
-        private List<Document> documents;
-        private List<Rating> ratings;
-        private List<AskingPrice> askingPrices;
-        private List<DistanceTo> distanceTos;
-        private List<Picture> pictures;
-
-        #endregion
-
         internal Case()
         {
-            ads = new List<Ad>();
-            documents = new List<Document>();
-            ratings = new List<Rating>();
-            askingPrices = new List<AskingPrice>();
-            distanceTos = new List<DistanceTo>();
-            pictures = new List<Picture>();
+
         }
 
         #region Methods

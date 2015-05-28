@@ -15,14 +15,15 @@ namespace LivingSmartBusinessLogic.Controller
 
 		#endregion
 
-
         private EstateAgentCatalog estateAgentCatalog;
+        private AppointmentCatalog appointmentCatalog;
 
         private EstateAgent activeEstateAgent;
 
         public EstateAgentController()
         {
             estateAgentCatalog = new EstateAgentCatalog();
+            appointmentCatalog = new AppointmentCatalog();
         }
 
         #region Methods
@@ -32,9 +33,9 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog.AddToCatalog(estateAgent);
         }
 
-        public EstateAgent MakeNewEstateAgent()
+        public EstateAgent MakeNewEstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
         {
-            return new EstateAgent();
+            return new EstateAgent(id, name, telephone, email, startingDate, terminationDate);
         }
 
         public EstateAgent ReadEstateAgent(int id)
@@ -80,7 +81,71 @@ namespace LivingSmartBusinessLogic.Controller
 		public List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
 		{
 			return estateAgentCatalog.SearchEstateAgents(id, name, telephone, email);
-		}
+        }
+
+        #region Appointment
+
+        public Appointment MakeNewAppointment(int id, Case cCase, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, Customer customer)
+        {
+            return new Appointment(id, cCase, startTimeStamp, endTimeStamp, description, place, customer);
+        }
+
+        public void AddAppointment(Appointment appointment)
+        {
+            appointmentCatalog.AddToCatalog(activeEstateAgent.Id, appointment);
+        }
+
+        public void RemoveAppointmentFromEstateAgent(Appointment appointment)
+        {
+            appointmentCatalog.RemoveFromCatalog(activeEstateAgent.Id, appointment);
+        }
+
+        public void GetAppointments(Appointment appointment)
+        {
+            appointmentCatalog.GetAppointments(activeEstateAgent.Id);
+        }
+
+        public void UpdateAppointment(Appointment appointment)
+        {
+            appointmentCatalog.Save(appointment);
+        }
+
+        public Appointment ReadAppointment(int id)
+        {
+            return appointmentCatalog.Check(id);
+        }
+
+        /*
+                         public void SetCase(Appointment appointment, Case newCase)
+        {
+            if (appointment.Case != newCase)
+                appointment.Case = newCase;
+        }
+        public void SetDescription(Appointment appointment, string description)
+        {
+            if (appointment.Description != description)
+                appointment.Description = description;
+        }
+        public void SetPlace(Appointment appointment, string place)
+        {
+            if (appointment.Place != place)
+                appointment.Place = place;
+        }
+        public void SetCustomer(Appointment appointment, Customer customer)
+        {
+            if (appointment.Customer != customer)
+                appointment.Customer = customer;
+        }
+        public void SetEndTimeStamp(Appointment appointment, DateTime endTimeStamp)
+        {
+            if (appointment.EndTimeStamp != endTimeStamp)
+                appointment.EndTimeStamp = endTimeStamp;
+        }
+         * 
+        */
+
+        #endregion
+
         #endregion
     }
 }

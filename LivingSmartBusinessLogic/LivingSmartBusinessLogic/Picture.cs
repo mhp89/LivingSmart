@@ -23,10 +23,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Picture()
-        {
-            
-        }
         internal Picture(int id, string location, string description)
         {
             Id = id;

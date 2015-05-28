@@ -35,10 +35,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Partner()
-        {
-            
-        }
         internal Partner(int id, string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
         {
             Id = id;

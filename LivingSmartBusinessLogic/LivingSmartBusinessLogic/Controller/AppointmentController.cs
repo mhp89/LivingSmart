@@ -1,3 +1,5 @@
+using System;
+
 namespace LivingSmartBusinessLogic.Controller
 {
     public class AppointmentController
@@ -59,15 +61,15 @@ namespace LivingSmartBusinessLogic.Controller
             if (appointment.Place != place)
                 appointment.Place = place;
         }
-        public void SetCustomer(Appointment appointment, Customer PotBuyer)
+        public void SetCustomer(Appointment appointment, Customer customer)
         {
-            if (appointment.Customer != PotBuyer)
-                appointment.Customer = PotBuyer;
+            if (appointment.Customer != customer)
+                appointment.Customer = customer;
         }
-        public void SetDuration(Appointment appointment, int duration)
+        public void SetEndTimeStamp(Appointment appointment, DateTime endTimeStamp)
         {
-            if (appointment.Duration != duration)
-                appointment.Duration = duration;
+            if (appointment.EndTimeStamp != endTimeStamp)
+                appointment.EndTimeStamp = endTimeStamp;
         }
 
         #endregion

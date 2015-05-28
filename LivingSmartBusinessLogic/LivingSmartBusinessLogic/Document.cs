@@ -27,10 +27,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Document()
-        {
-            
-        }
         internal Document(int id, string type, int price, string location, string status)
         {
             Id = id;

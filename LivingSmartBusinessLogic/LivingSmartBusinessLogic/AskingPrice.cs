@@ -23,11 +23,6 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal AskingPrice()
-        {
-            
-        }
-
         internal AskingPrice(int id, long value, DateTime date)
         {
             Id = id;
