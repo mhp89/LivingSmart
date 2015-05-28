@@ -9,8 +9,9 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IPictureDB
     {
-        List<Picture> ReadPictures();
-        void UpdatePicture(Picture picture);
-        int CreatePicture(Picture picture);
+        List<Picture> ReadPictures(int caseId);
+        Dictionary<int, List<Picture>> ReadPictures();
+        void UpdatePicture(Picture picture, int caseId);
+        int CreatePicture(Picture picture, int caseId);
     }
 }
