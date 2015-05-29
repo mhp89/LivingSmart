@@ -7,7 +7,6 @@ namespace LivingSmartBusinessLogic
 {
     public class AskingPrice
     {
-        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -18,6 +17,7 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
+        public int Id { get; private set; }
         public long Value { get { return _value; } internal set { _value = value; } }
         public DateTime Date { get { return _date; } internal set { _date = value; } }
 

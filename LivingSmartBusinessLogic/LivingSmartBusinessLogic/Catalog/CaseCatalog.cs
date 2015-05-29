@@ -40,6 +40,15 @@ namespace LivingSmartBusinessLogic
         {
             cases.Remove(caseId);
         }
-        
+
+        internal Case GetCase(int caseId)
+        {
+            if (cases.ContainsKey(caseId))
+            {
+                return cases[caseId];
+            }
+            return null;
+        }
+
     }
 }

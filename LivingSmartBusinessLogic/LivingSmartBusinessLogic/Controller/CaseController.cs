@@ -82,6 +82,11 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return caseCatalog.Check(activeCase.Id);
         }
+
+        public Case GetCase(int caseId)
+        {
+            return caseCatalog.GetCase(caseId);
+        }
        
         #region Document
 
@@ -233,9 +238,9 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region DistanceTo
 
-        public DistanceTo MakeNewDistanceTo(int id, string type, int distance)
+        public DistanceTo MakeNewDistanceTo(string type, int distance)
         {
-            return new DistanceTo(id, type, distance);
+            return new DistanceTo(type, distance);
         }
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
@@ -259,21 +264,21 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
 
-        #region MyRegion
-        public void SetSeller(int sellerId)
+        #region PropertyMethods
+        public void SetSeller(Customer seller)
         {
-            if (activeCase.SellerId != sellerId)
-                activeCase.SellerId = sellerId;
+			if (activeCase.Seller != seller)
+				activeCase.Seller = seller;
         }
-        public void SetBuyer(int buyerId)
+        public void SetBuyer(Customer buyer)
         {
-            if (activeCase.BuyerId != buyerId)
-                activeCase.BuyerId = buyerId;
+			if (activeCase.Buyer != buyer)
+				activeCase.Buyer = buyer;
         }
-        public void SetEstateAgent(int estateAgentId)
+        public void SetEstateAgent(EstateAgent estateAgent)
         {
-            if (activeCase.EstateAgentId != estateAgentId)
-                activeCase.EstateAgentId = estateAgentId;
+			if (activeCase.EstateAgent != estateAgent)
+				activeCase.EstateAgent = estateAgent;
         }
         public void SetCreationDate(DateTime creationDate)
         {
@@ -320,15 +325,15 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCase.Address != address)
                 activeCase.Address = address;
         }
-        public void SetCity(int zipCode)
+        public void SetCity(City city)
         {
-            if (activeCase.ZipCode != zipCode)
-                activeCase.ZipCode = zipCode;
+			if (activeCase.City != city)
+				activeCase.City = city;
         }
-        public void SetPropertyType(int propertyTypeId)
+        public void SetPropertyType(PropertyType propertyType)
         {
-            if (activeCase.PropertyTypeId != propertyTypeId)
-                activeCase.PropertyTypeId = propertyTypeId;
+			if (activeCase.PropertyType != propertyType)
+				activeCase.PropertyType = propertyType;
         }
         public void SetPublicRating(long publicRating)
         {
@@ -405,7 +410,7 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCase.View != view)
                 activeCase.View = view;
         }
-        public void SetNeighborhood(string neighborhood)
+        public void SetNeighborhood(Neighborhood neighborhood)
         {
             if (activeCase.Neighborhood != neighborhood)
                 activeCase.Neighborhood = neighborhood;

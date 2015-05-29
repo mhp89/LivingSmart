@@ -7,7 +7,6 @@ namespace LivingSmartBusinessLogic
 {
     public class Ad
     {
-        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -20,14 +19,12 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
+        public int Id { get; private set; }
         public string Type { get { return _type; } internal set { _type = value; } }
-        public DateTime StartDate { get { return _startDate; } internal set { _startDate = value; } }
+        public DateTime StartDate { get { return _startDate; } 
+            internal set { _startDate = value; } }
         public DateTime EndDate { get { return _endDate; } internal set { _endDate = value; } }
         public int Price { get { return _price; } internal set { _price = value; } }
-
-        #endregion
-
-        #region Collections
 
         #endregion
 

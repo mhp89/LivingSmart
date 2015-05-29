@@ -48,11 +48,14 @@ namespace LivingSmartBusinessLogic.Controller
 
 	    private void AddCustomer(Customer customer)
         {
+            
         }
 
-        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
+        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, 
+            int zipCode, string email, string telephone)
         {
-            SetActiveCustomer(new Customer(name, dateOfBirth, address, CityController.Instance.GetCity(zipCode), email, telephone));
+            SetActiveCustomer(new Customer(name, dateOfBirth, address, 
+                zipCode, email, telephone));
             return activeCustomer;
         }
 
@@ -66,6 +69,12 @@ namespace LivingSmartBusinessLogic.Controller
             return customerCatalog.GetCustomers();
         }
 
+        public Customer GetCustomer(int customerId)
+        {
+            return customerCatalog.GetCustomer(customerId);
+        }
+
+        #region PropertyMethods
         public void SetName(string name)
         {
             if (activeCustomer.Name != name)
@@ -92,8 +101,8 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SetCity(int zipCode)
         {
-	        var city = CityController.Instance.GetCity(zipCode);
-			if (activeCustomer.City != city)
+            var city = CityController.Instance.GetCity(zipCode);
+            if (activeCustomer.City != city)
                 activeCustomer.City = city;
         }
 
@@ -102,6 +111,8 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCustomer.Email != email)
                 activeCustomer.Email = email;
         }
+        #endregion
+        
 
 		public ReadOnlyCollection<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
 		{

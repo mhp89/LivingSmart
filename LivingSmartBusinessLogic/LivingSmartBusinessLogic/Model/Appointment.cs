@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic
 {
     public class Appointment
     {
-        public int Id { get; private set; }
         
         #region Private Fields
 
@@ -22,30 +22,41 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
-        public int CaseId { get { return _caseId; } internal set { _caseId = value; } }
-        public DateTime StartTimestamp { get { return _startTimeStamp; } internal set { _startTimeStamp = value; } }
-        public DateTime EndTimeStamp { get { return _endTimeStamp; } internal set { _startTimeStamp = value; } }
-        public string Description { get { return _description; } internal set { _description = value; } }
+        public int Id { get; private set; }
+        public DateTime StartTimestamp { get { return _startTimeStamp; } 
+            internal set { _startTimeStamp = value; } }
+        public DateTime EndTimeStamp { get { return _endTimeStamp; } 
+            internal set { _startTimeStamp = value; } }
+        public string Description { get { return _description; } 
+            internal set { _description = value; } }
         public string Place { get { return _place; } internal set { _place = value; } }
-        public int CustomerId { get { return _customerId; } internal set { _customerId = value; } }
+        public Customer Customer { get; private set; }
+        public Case Case { get; private set; }
 
 
         #endregion
 
-        internal Appointment()
+        internal Appointment(int caseId, DateTime startTimeStamp, DateTime endTimeStamp, 
+            string description, string place, int customerId)
         {
-            
+            StartTimestamp = startTimeStamp;
+            EndTimeStamp = endTimeStamp;
+            Description = description;
+            Place = place;
+            Case = CaseController.Instance.GetCase(caseId);
+            Customer = CustomerController.Instance.GetCustomer(customerId);
         }
 
-        internal Appointment(int id, int caseId, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, int customerId)
+        internal Appointment(int id, DateTime startTimeStamp, 
+            DateTime endTimeStamp, string description, string place, Case cCase, Customer customer)
         {
             Id = id;
-            _caseId = caseId;
-            _startTimeStamp = startTimeStamp;
-            _endTimeStamp = endTimeStamp;
-            _description = description;
-            _place = place;
-            _customerId = customerId;
+            StartTimestamp = startTimeStamp;
+            EndTimeStamp = endTimeStamp;
+            Description = description;
+            Place = place;
+            Customer = customer;
+            Case = cCase;
         }
 
         #region Methods

@@ -40,6 +40,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="Database\CityDBFactory.cs" />
+    <Compile Include="Database\CityDBMSSQL.cs" />
+    <Compile Include="Database\ICityDB.cs" />
+=======
+    <Compile Include="Controller\PropertyTypeController.cs" />
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />
     <Compile Include="Database\PropertyTypeDBFactory.cs" />
@@ -50,8 +57,6 @@
     <Compile Include="Database\PartnerDBMSSQL.cs" />
     <Compile Include="Database\NeighborhoodDBFactory.cs" />
     <Compile Include="Database\NeighborhoodDBMSSQL.cs" />
-    <Compile Include="Database\InvoiceDBFactory.cs" />
-    <Compile Include="Database\InvoiceDBMSSQL.cs" />
     <Compile Include="Database\EstateAgentDBFactory.cs" />
     <Compile Include="Database\EstateAgentDBMSSQL.cs" />
     <Compile Include="Database\DocumentDBFactory.cs" />
@@ -70,20 +75,7 @@
     <Compile Include="Database\IRatingDB.cs" />
     <Compile Include="Database\IPropertyTypeDB.cs" />
     <Compile Include="Database\IPictureDB.cs" />
-<<<<<<< HEAD
-=======
-    <Compile Include="Model\Ad.cs" />
-    <Compile Include="Model\Appointment.cs" />
-    <Compile Include="Catalog\AppointmentCatalog.cs" />
-    <Compile Include="Controller\AppointmentController.cs" />
-    <Compile Include="Model\AskingPrice.cs" />
-    <Compile Include="Model\Case.cs" />
     <Compile Include="Catalog\CaseCatalog.cs" />
-    <Compile Include="Controller\CaseController.cs" />
-    <Compile Include="Model\Customer.cs" />
-    <Compile Include="Catalog\CustomerCatalog.cs" />
-    <Compile Include="Controller\CustomerController.cs" />
->>>>>>> 543b4340e6367875970e68683e3ec758f7ea83db
     <Compile Include="Database\AdDBFactory.cs" />
     <Compile Include="Database\AdDBMSSQL.cs" />
     <Compile Include="Database\CustomerDBFactory.cs" />
@@ -93,7 +85,6 @@
     <Compile Include="Database\IAppointmentDB.cs" />
     <Compile Include="Database\ICaseDB.cs" />
     <Compile Include="Database\IAdDB.cs" />
-    <Compile Include="Database\IInvoiceDB.cs" />
     <Compile Include="Database\IEstateAgentDB.cs" />
     <Compile Include="Database\IDocumentDB.cs" />
     <Compile Include="Database\IPartnerDB.cs" />
@@ -102,7 +93,6 @@
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AskingPrice.cs" />
     <Compile Include="Model\Case.cs" />
-    <Compile Include="Model\CaseCatalog.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DistanceTo.cs" />
     <Compile Include="Model\Document.cs" />
@@ -150,8 +140,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

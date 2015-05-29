@@ -8,11 +8,11 @@ namespace LivingSmartBusinessLogic
 {
     class PropertyTypeCatalog
     {
-        private List<PropertyType> propertyTypes; 
+        private Dictionary<int, PropertyType> propertyTypes; 
 
         internal PropertyTypeCatalog()
         {
-            propertyTypes = new List<PropertyType>();
+            propertyTypes = new Dictionary<int, PropertyType>();
         }
 
         internal PropertyType Check(int id)
@@ -27,12 +27,19 @@ namespace LivingSmartBusinessLogic
 
         internal void AddToCatalog(PropertyType propertyType)
         {
-            propertyTypes.Add(propertyType);
+            propertyTypes.Add(propertyType.Id, propertyType);
         }
 
         internal void RemoveFromCatalog(PropertyType propertyType)
         {
-            propertyTypes.Remove(propertyType);
+            propertyTypes.Remove(propertyType.Id);
+        }
+
+        internal PropertyType GetPropertyType(int propertyTypeId)
+        {
+            if (propertyTypes.ContainsKey(propertyTypeId))
+                return propertyTypes[propertyTypeId];
+            return null;
         }
     }
 }

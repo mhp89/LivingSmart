@@ -11,9 +11,9 @@ namespace LivingSmartBusinessLogic
     {
         #region Private Fields
 
-        private Customer _seller;
-        private Customer _buyer;
-        private EstateAgent _estateAgent;
+        private int _sellerId;
+        private int _buyerId;
+        private int _estateAgentId;
         private DateTime _creationDate;
         private string _status;
         private DateTime _dateOfSale;
@@ -23,8 +23,8 @@ namespace LivingSmartBusinessLogic
         private string _description;
         private string _landRegistryNumber;
         private string _address;
-        private City _city;
-        private PropertyType _propertyType;
+        private int _zipCode;
+        private int _propertyTypeId;
         private long _publicRating;
         private long _landValue;
         private int _groundArea;
@@ -40,18 +40,26 @@ namespace LivingSmartBusinessLogic
         private int _toilets;
         private int _garageArea;
         private int _view;
-        private Neighborhood _neighborhood;
+        private string _neighborhood;
 
         #endregion
 
         #region Properties
 
         public int Id { get; private set; }
+<<<<<<< HEAD
+        public int SellerId { get { return _sellerId; } internal set { _sellerId = value; } }
+        public int BuyerId { get { return _buyerId; } internal set { _buyerId = value; } }
+        public int EstateAgentId { get { return _estateAgentId; } internal set { _estateAgentId = value; } }
+        public DateTime CreationDate { get { return _creationDate; } internal set { _creationDate = value; } }
+=======
         public Customer Seller { get { return _seller; } internal set { _seller = value; } }
         public Customer Buyer { get { return _buyer; } internal set { _buyer = value; } }
-        public EstateAgent EstateAgent { get { return _estateAgent; } internal set { _estateAgent = value; } }
+        public EstateAgent EstateAgent { get { return _estateAgent; } 
+            internal set { _estateAgent = value; } }
         public DateTime CreationDate { get { return _creationDate; } 
             internal set { _creationDate = value; } }
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
         public string Status { get { return _status; } internal set { _status = value; } }
         public DateTime DateOfSale { get { return _dateOfSale; } 
             internal set { _dateOfSale = value; } }
@@ -66,10 +74,17 @@ namespace LivingSmartBusinessLogic
         public string LandRegistryNumber { get { return _landRegistryNumber; } 
             internal set { _landRegistryNumber = value; } }
         public string Address { get { return _address; } internal set { _address = value; } }
-		public City City { get { return _city; } internal set { _city = value; } }
-        public PropertyType PropertyType { get { return _propertyType; } internal set { _propertyType = value; } }
+<<<<<<< HEAD
+        public int ZipCode { get { return _zipCode; } internal set { _zipCode = value; } }
+        public int PropertyTypeId { get { return _propertyTypeId; } internal set { _propertyTypeId = value; } }
+        public long PublicRating { get { return _publicRating; } internal set { _publicRating = value; } }
+=======
+        public City City { get { return _city; } internal set { _city = value; } }
+        public PropertyType PropertyType { get { return _propertyType; } 
+            internal set { _propertyType = value; } }
         public long PublicRating { get { return _publicRating; } 
             internal set { _publicRating = value; } }
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
         public long LandValue { get { return _landValue; } internal set { _landValue = value; } }
         public int GroundArea { get { return _groundArea; } internal set { _groundArea = value; } }
         public int BuiltArea { get { return _builtArea; } internal set { _builtArea = value; } }
@@ -86,8 +101,12 @@ namespace LivingSmartBusinessLogic
         public int Toilets { get { return _toilets; } internal set { _toilets = value; } }
         public int GarageArea { get { return _garageArea; } internal set { _garageArea = value; } }
         public int View { get { return _view; } internal set { _view = value; } }
+<<<<<<< HEAD
+        public string Neighborhood { get { return _neighborhood; } internal set { _neighborhood = value; } }
+=======
         public Neighborhood Neighborhood { get { return _neighborhood; } 
             internal set { _neighborhood = value; } }
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
 
         #endregion
 
@@ -95,7 +114,11 @@ namespace LivingSmartBusinessLogic
         {
             CreationDate = new DateTime().Date;
         }
+<<<<<<< HEAD
+        internal Case(int sellerId, int buyerId, int estateAgentId, 
+=======
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
             DateTime creationDate, string status, DateTime dateOfSale, 
             DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
             string description, string landRegistryNumber, string address, int zipCode, 
@@ -103,12 +126,20 @@ namespace LivingSmartBusinessLogic
             int groundArea, int builtArea, int livingArea, int basementArea, 
             int builtYear, string energyClassification, int floors, int rooms, 
             int bedrooms, int bathrooms, int toilets, int garageArea, 
+<<<<<<< HEAD
+            int view, string neighborhood)
+        {
+            SellerId = sellerId;
+            BuyerId = buyerId;
+            EstateAgentId = estateAgentId;
+=======
             int view, int neighborhoodId)
         {
             Id = id;
             Seller = CustomerController.Instance.GetCustomer(sellerId);
             Buyer = CustomerController.Instance.GetCustomer(buyerId);
             EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
             CreationDate = creationDate;
             Status = status;
             DateOfSale = dateOfSale;
@@ -118,8 +149,13 @@ namespace LivingSmartBusinessLogic
             Description = description;
             LandRegistryNumber = landRegistryNumber;
             Address = address;
+<<<<<<< HEAD
+            ZipCode = zipCode;
+            PropertyTypeId = propertyTypeId;
+=======
             City = CityController.Instance.GetCity(zipCode);
             PropertyType = PropertyTypeController.Instance.GetPropertyType(propertyTypeId);
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
             PublicRating = publicRating;
             LandValue = landValue;
             GroundArea = groundArea;

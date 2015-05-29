@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic
 {
     public class Rating
     {
-        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -15,30 +15,36 @@ namespace LivingSmartBusinessLogic
         private long _systemValue;
         private DateTime _date;
 
+
+
+        #endregion
+
+        #region Properties
+        
+        public int Id { get; private set; }
+        public long EstateAgentValue { get { return _estateAgentValue; } 
+            internal set { _estateAgentValue = value; } }
+        public long SystemValue { get { return _systemValue; } 
+            internal set { _systemValue = value; } }
+        public DateTime Date { get { return _date; } internal set { _date = value; } }
+        public EstateAgent EstateAgent { get; private set; }
+
+        #endregion
+
         internal Rating(Case cCase)
         {
             throw new NotImplementedException();
         }
 
-        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
+        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date, 
+            int estateAgentId)
         {
             Id = id;
             EstateAgentValue = estateAgentValue;
             SystemValue = systemValue;
             Date = date;
+            EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
         }
-
-        #endregion
-
-        #region Properties
-
-        public long EstateAgentValue { get { return _estateAgentValue; } internal set { _estateAgentValue = value; } }
-        public long SystemValue { get { return _systemValue; } internal set { _systemValue = value; } }
-        public DateTime Date { get { return _date; } internal set { _date = value; } }
-
-        #endregion
-
-
 
         #region Methods
 

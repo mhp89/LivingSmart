@@ -29,11 +29,13 @@ namespace LivingSmartBusinessLogic.Controller
             partnerCatalog.AddToCatalog(partner);
         }
 
-        public Partner MakeNewPartner(string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
+        public Partner MakeNewPartner(string name, string telephone, string email, 
+            string country, string city, string region, string regionShort, string timeZone)
         {
-            return new Partner(name, telephone, email, city, region, regionShort, timeZone);
+            return new Partner(name, telephone, email, country, city, 
+                region, regionShort, timeZone);
         }
-
+        
         public Partner ReadPartner(int id)
         {
             return partnerCatalog.Check(id);
@@ -44,6 +46,7 @@ namespace LivingSmartBusinessLogic.Controller
             partnerCatalog.Save(partner);
         }
 
+        #region PropertyMethods
         public void SetName(Partner partner, string name)
         {
             if (partner.Name != name)
@@ -67,7 +70,7 @@ namespace LivingSmartBusinessLogic.Controller
         public void SetRegion(Partner partner, string region)
         {
             if (partner.Region != region)
-                partner.Region= region;
+                partner.Region = region;
         }
         public void SetRegionShort(Partner partner, string regionShort)
         {
@@ -84,6 +87,8 @@ namespace LivingSmartBusinessLogic.Controller
             if (partner.Timezone != timeZone)
                 partner.Timezone = timeZone;
         }
+        #endregion
+        
 
         #endregion
     }

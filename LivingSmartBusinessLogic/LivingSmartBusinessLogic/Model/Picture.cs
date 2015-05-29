@@ -7,7 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class Picture
     {
-        public int Id { get; private set; }
+
 
         #region Private Fields
 
@@ -17,9 +17,11 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         #region Properties
-
-        public string Location { get { return _location; } internal set { _location = value; } }
-        public string Desription { get { return _description; } internal set { _description = value; } }
+        public int Id { get; private set; }
+        public string Location { get { return _location; } 
+            internal set { _location = value; } }
+        public string Desription { get { return _description; } 
+            internal set { _description = value; } }
 
         #endregion
 

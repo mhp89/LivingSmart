@@ -91,5 +91,12 @@ namespace LivingSmartBusinessLogic
             var customerList = customers.Values.ToList();
             return customerList.AsReadOnly();
         }
+
+        internal Customer GetCustomer(int customerId)
+        {
+            if (customers.ContainsKey(customerId))
+                return customers[customerId];
+            return null;
+        }
     }
 }

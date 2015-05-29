@@ -40,10 +40,16 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog = null;
         }
 
+<<<<<<< HEAD
 		public void SaveActiveEstateAgent()
 		{
 			estateAgentCatalog.Save(activeEstateAgent);
 			AddEstateAgent(activeEstateAgent);
+=======
+        public void SaveActiveEstateAgent()
+        {
+            AddEstateAgent(activeEstateAgent);
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
         }
         #endregion
 
@@ -68,13 +74,17 @@ namespace LivingSmartBusinessLogic.Controller
 			return estateAgentCatalog.GetEstateAgents();
 		}
 
+<<<<<<< HEAD
+        public void SetName(string name)
+=======
         public EstateAgent GetEstateAgent(int estateAgentId)
         {
             return estateAgentCatalog.GetEstateAgent(estateAgentId);
         }
 
         #region PropertyMethods
-        public void SetName(string name)
+        public void SetName(EstateAgent estateAgent, string name)
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
         {
             if (activeEstateAgent.Name != name)
 				activeEstateAgent.Name = name;
