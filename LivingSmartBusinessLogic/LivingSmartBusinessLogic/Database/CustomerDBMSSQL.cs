@@ -23,8 +23,9 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             try
-            {
-                connection.Open();
+			{
+				if (connection.State == ConnectionState.Closed)
+					connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -46,7 +47,7 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+                //connection.Close();
             }
 
             return customerList;

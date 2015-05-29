@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\CityDBFactory.cs" />
+    <Compile Include="Database\CityDBMSSQL.cs" />
+    <Compile Include="Database\ICityDB.cs" />
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />
     <Compile Include="Database\PropertyTypeDBFactory.cs" />
@@ -50,8 +53,6 @@
     <Compile Include="Database\PartnerDBMSSQL.cs" />
     <Compile Include="Database\NeighborhoodDBFactory.cs" />
     <Compile Include="Database\NeighborhoodDBMSSQL.cs" />
-    <Compile Include="Database\InvoiceDBFactory.cs" />
-    <Compile Include="Database\InvoiceDBMSSQL.cs" />
     <Compile Include="Database\EstateAgentDBFactory.cs" />
     <Compile Include="Database\EstateAgentDBMSSQL.cs" />
     <Compile Include="Database\DocumentDBFactory.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Database\IAppointmentDB.cs" />
     <Compile Include="Database\ICaseDB.cs" />
     <Compile Include="Database\IAdDB.cs" />
-    <Compile Include="Database\IInvoiceDB.cs" />
     <Compile Include="Database\IEstateAgentDB.cs" />
     <Compile Include="Database\IDocumentDB.cs" />
     <Compile Include="Database\IPartnerDB.cs" />
@@ -136,8 +136,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

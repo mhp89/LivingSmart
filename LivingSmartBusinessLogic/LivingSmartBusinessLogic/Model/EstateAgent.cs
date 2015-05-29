@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic
             StartingDate = startingDate;
             TerminationDate = null;
         }
-        internal EstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        internal EstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime? terminationDate)
         {
             Name = name;
             Telephone = telephone;
@@ -45,7 +45,7 @@ namespace LivingSmartBusinessLogic
             StartingDate = startingDate;
             TerminationDate = terminationDate;
         }
-        internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime? terminationDate)
         {
             Id = id;
             Name = name;

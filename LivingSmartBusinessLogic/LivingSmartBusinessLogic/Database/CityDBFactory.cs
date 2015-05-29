@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal static class InvoiceDBFactory
+    internal static class CityDBFactory
     {
-        public static IInvoiceDB GetDBL()
+        public static CityDBMSSQL GetDBL()
         {
-            if (Properties.Settings.Default.Database == "MSSQL")
-                return new InvoiceDBMSSQL();
+            if (Properties.Settings.Default.DatabaseType == "MSSQL")
+                return new CityDBMSSQL();
 //            if (Properties.Settings.Default.Database == "XML")
 //                return new CustomerDBXML();
 //            if (Properties.Settings.Default.Database == "MYSQL")

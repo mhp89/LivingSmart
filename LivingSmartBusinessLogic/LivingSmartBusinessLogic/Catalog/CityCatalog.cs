@@ -12,19 +12,21 @@ namespace LivingSmartBusinessLogic
     {
         private Dictionary<int, City> cities;
 
-		//private ICi db;
+		private ICityDB db;
 
         internal CityCatalog()
 		{
-			//db = CustomerDBFactory.GetDBL();
+			db = CityDBFactory.GetDBL();
             cities = new Dictionary<int, City>();
+
+			Load();
         }
 
         internal void Load()
 		{
-			/*var customerList = db.ReadCustomers();
-			foreach (var customer in customerList)
-				AddToCatalog(customer);*/
+			var cityList = db.ReadCities();
+			foreach (var city in cityList)
+				AddToCatalog(city);
         }
 
         internal void AddToCatalog(City city)

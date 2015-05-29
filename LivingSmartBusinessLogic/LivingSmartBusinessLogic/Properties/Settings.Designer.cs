@@ -25,7 +25,8 @@ namespace LivingSmartBusinessLogic.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=LivingSmart;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=LivingSmart;Integrated Security=True;Multiple" +
+            "ActiveResultSets=true")]
         public string ConnectionString {
             get {
                 return ((string)(this["ConnectionString"]));
@@ -35,9 +36,9 @@ namespace LivingSmartBusinessLogic.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("MSSQL")]
-        public string Database {
+        public string DatabaseType {
             get {
-                return ((string)(this["Database"]));
+                return ((string)(this["DatabaseType"]));
             }
         }
     }

@@ -32,7 +32,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string)reader["Telephone"];
                     string email = (string)reader["Email"];
                     DateTime startingDate = (DateTime)reader["StartingDate"];
-                    DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull))?null:(DateTime?)reader["TerminationDate"];
+                    DateTime terminationDate = (DateTime)reader["TerminationDate"];
 
                     EstateAgent estateAgent = new EstateAgent(estateAgentId, name, telephone, email, startingDate, terminationDate);
                     estateAgentList.Add(estateAgent);
@@ -90,7 +90,11 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
+<<<<<<< HEAD
+				CommandText = "INSERT INTO EstateAgent VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); " + "SELECT CAST(scope_identity() AS int);"
+=======
                 CommandText = "INSERT INTO EstateAgent VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); " + "SELECT CAST(scope_identity() AS int);"
+>>>>>>> 5116dc6771af196f8bd4753cd2afc34ccf3dd79e
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
