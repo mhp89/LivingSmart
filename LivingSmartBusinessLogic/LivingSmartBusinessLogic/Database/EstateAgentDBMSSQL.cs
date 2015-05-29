@@ -90,7 +90,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Ad VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO EstateAgent VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); " + "SELECT CAST(scope_identity() AS int);"
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
