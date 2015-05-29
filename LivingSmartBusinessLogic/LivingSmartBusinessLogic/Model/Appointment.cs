@@ -36,27 +36,28 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Appointment(int caseId, DateTime startTimeStamp, DateTime endTimeStamp, 
-            string description, string place, int customerId)
+        internal Appointment(DateTime startTimeStamp, DateTime endTimeStamp, 
+            string description, string place, Customer customer, Case cCase)
         {
-            StartTimestamp = startTimeStamp;
-            EndTimeStamp = endTimeStamp;
-            Description = description;
-            Place = place;
-            Case = CaseController.Instance.GetCase(caseId);
-            Customer = CustomerController.Instance.GetCustomer(customerId);
-        }
-
-        internal Appointment(int id, DateTime startTimeStamp, 
-            DateTime endTimeStamp, string description, string place, Case cCase, Customer customer)
-        {
-            Id = id;
             StartTimestamp = startTimeStamp;
             EndTimeStamp = endTimeStamp;
             Description = description;
             Place = place;
             Customer = customer;
             Case = cCase;
+        }
+
+        internal Appointment(int id, int caseId, DateTime startTimeStamp, 
+            DateTime endTimeStamp, string description, string place, int customerId)
+        {
+            Id = id;
+            StartTimestamp = startTimeStamp;
+            EndTimeStamp = endTimeStamp;
+            Description = description;
+            Place = place;
+
+            Case = CaseController.Instance.GetCase(caseId);
+            Customer = CustomerController.Instance.GetCustomer(customerId);
         }
 
         #region Methods

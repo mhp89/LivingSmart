@@ -68,8 +68,8 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 50, "EstateAgentId").Value = estateAgentId;
-            cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 50, "CustomerId").Value = appointment.CustomerId;
-            cmd.Parameters.Add("@CaseId", SqlDbType.Date, 50, "CaseId").Value = appointment.CaseId;
+            cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 50, "CustomerId").Value = appointment.Customer.Id;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Date, 50, "CaseId").Value = appointment.Case.Id;
             cmd.Parameters.Add("@StartTimestamp", SqlDbType.Date, 50, "StartTimestamp").Value = appointment.StartTimestamp;
             cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Int, 50, "EndTimeStamp").Value = appointment.EndTimeStamp;
             cmd.Parameters.Add("@Description", SqlDbType.Int, 50, "Description").Value = appointment.Description;
@@ -102,8 +102,8 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Date, 50, "EstateAgentId").Value = estateAgentId;
-            cmd.Parameters.Add("@CustomerId", SqlDbType.Date, 50, "CustomerId").Value = appointment.CustomerId;
-            cmd.Parameters.Add("@CaseId", SqlDbType.Date, 50, "CaseId").Value = appointment.CaseId;
+            cmd.Parameters.Add("@CustomerId", SqlDbType.Date, 50, "CustomerId").Value = appointment.Customer.Id;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Date, 50, "CaseId").Value = appointment.Case.Id;
             cmd.Parameters.Add("@StartTimestamp", SqlDbType.Int, 50, "StartTimestamp").Value = appointment.StartTimestamp;
             cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Int, 50, "EndTimeStamp").Value = appointment.EndTimeStamp;
             cmd.Parameters.Add("@Description", SqlDbType.Int, 50, "Description").Value = appointment.Description;

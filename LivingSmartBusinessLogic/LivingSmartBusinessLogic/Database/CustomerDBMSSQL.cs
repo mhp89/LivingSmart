@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string) reader["Telephone"];
                     string email = (string) reader["Email"];
 
-                    Customer c = new Customer(id, name, dateOfBirth, address, CityController.Instance.GetCity(zipCode), email, telephone);
+                    Customer c = new Customer(id, name, dateOfBirth, address, zipCode, email, telephone);
                     customerList.Add(c);
                 }
             }

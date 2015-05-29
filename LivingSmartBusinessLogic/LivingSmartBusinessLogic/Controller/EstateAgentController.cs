@@ -114,7 +114,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         public Appointment MakeNewAppointment(Case cCase, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, Customer customer)
         {
-            return new Appointment(cCase.Id, startTimeStamp, endTimeStamp, description, place, customer.Id);
+            return new Appointment(startTimeStamp, endTimeStamp, description, place, customer, cCase);
         }
 
         public void AddAppointment(Appointment appointment)
