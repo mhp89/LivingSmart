@@ -89,7 +89,6 @@
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AskingPrice.cs" />
     <Compile Include="Model\Case.cs" />
-    <Compile Include="Model\CaseCatalog.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DistanceTo.cs" />
     <Compile Include="Model\Document.cs" />
