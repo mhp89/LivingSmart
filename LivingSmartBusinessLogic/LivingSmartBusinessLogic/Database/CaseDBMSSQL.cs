@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -27,6 +27,7 @@ namespace LivingSmartBusinessLogic.DB
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
+                    int caseId = (int)reader["CaseId"];
                     int sellerId = (int)reader["SellerId"];
                     int buyerId = (int)reader["BuyerId"];
                     DateTime creationDate = (DateTime)reader["creationDate"];
@@ -40,7 +41,7 @@ namespace LivingSmartBusinessLogic.DB
                     string landRegistryNumber = (string)reader["LandRegistryNumber"];
                     string address = (string)reader["Address"];
                     int zipCode = (int)reader["ZipCode"];
-                    string neighborhood = (string)reader["Neighborhood"];
+                    int neighborhoodId = (int)reader["NeighborhoodId"];
                     long publicRating = (long)reader["PublicRating"];
                     long landValue = (long)reader["LandValue"];
                     string type = (string)reader["Type"];
@@ -58,10 +59,10 @@ namespace LivingSmartBusinessLogic.DB
                     int toilets = (int)reader["Toilets"];
                     int view = (int)reader["View"];
 
-                    Case ca = new Case(sellerId, buyerId, estateAgentId, creationDate, status, dateOfSale,
+                    Case ca = new Case(caseId, sellerId, buyerId, estateAgentId, creationDate, status, dateOfSale,
                         transferDate, dateOfCompletion, sellingPrice, description, landRegistryNumber, address,
                         zipCode, propertyTypeId, publicRating, landValue, groundArea, builtArea, livingArea,
-                        basementArea, builtYear, energyClassification, floors, rooms, bedrooms, bathrooms, toilets, garageArea, view, neighborhood);
+						basementArea, builtYear, energyClassification, floors, rooms, bedrooms, bathrooms, toilets, garageArea, view, neighborhoodId);
                     caseList.Add(ca);
                 }
             }
@@ -94,9 +95,9 @@ namespace LivingSmartBusinessLogic.DB
                 "WHERE CaseId = " + caseId
             };
 
-            cmd.Parameters.Add("@SellerId", SqlDbType.Int, 4, "SellerId").Value = ca.SellerId;
-            cmd.Parameters.Add("@BuyerId", SqlDbType.Int, 4, "BuyerId").Value = ca.BuyerId;
-            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = ca.EstateAgentId;
+            cmd.Parameters.Add("@SellerId", SqlDbType.Int, 4, "SellerId").Value = ca.Seller.Id;
+            cmd.Parameters.Add("@BuyerId", SqlDbType.Int, 4, "BuyerId").Value = ca.Buyer.Id;
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = ca.EstateAgent.Id;
             cmd.Parameters.Add("@CreationDate", SqlDbType.Date, 8, "CreationDate").Value = ca.CreationDate;
             cmd.Parameters.Add("@Status", SqlDbType.Char, 50, "Status").Value = ca.Status;
             cmd.Parameters.Add("@DateOfSale", SqlDbType.Date, 8, "DateOfSale").Value = ca.DateOfSale;
@@ -105,10 +106,10 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@SellingPrice", SqlDbType.BigInt, 8, "SellingPrice").Value = ca.SellingPrice;
             cmd.Parameters.Add("@Description", SqlDbType.Char, 500, "Description").Value = ca.Description;
 
-            cmd.Parameters.Add("@PropertyTypeId", SqlDbType.Int, 4, "PropertyTypeId").Value = ca.PropertyTypeId;
+            cmd.Parameters.Add("@PropertyTypeId", SqlDbType.Int, 4, "PropertyTypeId").Value = ca.PropertyType.Id;
             cmd.Parameters.Add("@LandRegistryNumber", SqlDbType.Char, 10, "LandRegistryNumber").Value = ca.LandRegistryNumber;
             cmd.Parameters.Add("@Address", SqlDbType.Char, 10, "Address").Value = ca.Address;
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = ca.ZipCode;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = ca.City.ZipCode;
             cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = ca.Neighborhood;
             cmd.Parameters.Add("@PublicRating", SqlDbType.BigInt, 8, "PublicRating").Value = ca.PublicRating;
             cmd.Parameters.Add("@LandValue", SqlDbType.BigInt, 8, "LandValue").Value = ca.LandValue;
@@ -156,9 +157,9 @@ namespace LivingSmartBusinessLogic.DB
                     "@BasementArea, @GarageArea, @BuiltYear, @EnergyClassification, @Floors, @Rooms, @Bedrooms, @Bathrooms, @Toilets, @View); " + "SELECT CAST(scope_identity() AS int);"
             };
 
-            cmd.Parameters.Add("@SellerId", SqlDbType.Int, 4, "SellerId").Value = ca.SellerId;
-            cmd.Parameters.Add("@BuyerId", SqlDbType.Int, 4, "BuyerId").Value = ca.BuyerId;
-            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = ca.EstateAgentId;
+            cmd.Parameters.Add("@SellerId", SqlDbType.Int, 4, "SellerId").Value = ca.Seller.Id;
+            cmd.Parameters.Add("@BuyerId", SqlDbType.Int, 4, "BuyerId").Value = ca.Buyer.Id;
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = ca.EstateAgent.Id;
             cmd.Parameters.Add("@CreationDate", SqlDbType.Date, 8, "CreationDate").Value = ca.CreationDate;
             cmd.Parameters.Add("@Status", SqlDbType.Char, 50, "Status").Value = ca.Status;
             cmd.Parameters.Add("@DateOfSale", SqlDbType.Date, 8, "DateOfSale").Value = ca.DateOfSale;
@@ -167,10 +168,10 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@SellingPrice", SqlDbType.BigInt, 8, "SellingPrice").Value = ca.SellingPrice;
             cmd.Parameters.Add("@Description", SqlDbType.Char, 500, "Description").Value = ca.Description;
 
-            cmd.Parameters.Add("@PropertyTypeId", SqlDbType.Int, 4, "PropertyTypeId").Value = ca.PropertyTypeId;
+            cmd.Parameters.Add("@PropertyTypeId", SqlDbType.Int, 4, "PropertyTypeId").Value = ca.PropertyType.Id;
             cmd.Parameters.Add("@LandRegistryNumber", SqlDbType.Char, 10, "LandRegistryNumber").Value = ca.LandRegistryNumber;
             cmd.Parameters.Add("@Address", SqlDbType.Char, 10, "Address").Value = ca.Address;
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = ca.ZipCode;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = ca.City.ZipCode;
             cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = ca.Neighborhood;
             cmd.Parameters.Add("@PublicRating", SqlDbType.BigInt, 8, "PublicRating").Value = ca.PublicRating;
             cmd.Parameters.Add("@LandValue", SqlDbType.BigInt, 8, "LandValue").Value = ca.LandValue;

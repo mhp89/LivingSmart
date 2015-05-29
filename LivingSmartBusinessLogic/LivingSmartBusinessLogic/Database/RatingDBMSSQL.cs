@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -33,7 +33,7 @@ namespace LivingSmartBusinessLogic.DB
                     DateTime date = (DateTime)reader["Date"];
                     int estateAgentId = (int)reader["EstateAgentId"];
 
-                    Rating rating = new Rating(ratingId, estateAgentValue, systemValue, date);
+                    Rating rating = new Rating(ratingId, estateAgentValue, systemValue, date, estateAgentId);
                     ratingList.Add(rating);
                 }
             }
