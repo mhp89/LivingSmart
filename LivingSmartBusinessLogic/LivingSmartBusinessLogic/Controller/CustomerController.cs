@@ -40,15 +40,14 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SaveActiveCustomer()
         {
-
-            AddCustomer(activeCustomer);
+            customerCatalog.AddToCatalog(activeCustomer);
         }
         #endregion
 
         public void AddCustomer(Customer customer)
         {
 			//TODO: Check for valid ID
-            customerCatalog.AddToCatalog(customer);
+            
         }
 
         public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
@@ -67,6 +66,7 @@ namespace LivingSmartBusinessLogic.Controller
             return customerCatalog.GetCustomers();
         }
 
+        #region PropertyMethods
         public void SetName(string name)
         {
             if (activeCustomer.Name != name)
@@ -93,8 +93,8 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SetCity(int zipCode)
         {
-	        var city = CityController.Instance.GetCity(zipCode);
-			if (activeCustomer.City != city)
+            var city = CityController.Instance.GetCity(zipCode);
+            if (activeCustomer.City != city)
                 activeCustomer.City = city;
         }
 
@@ -103,6 +103,8 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCustomer.Email != email)
                 activeCustomer.Email = email;
         }
+        #endregion
+        
 
 		public ReadOnlyCollection<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
 		{

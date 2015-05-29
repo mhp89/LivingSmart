@@ -233,9 +233,9 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region DistanceTo
 
-        public DistanceTo MakeNewDistanceTo(int id, string type, int distance)
+        public DistanceTo MakeNewDistanceTo(string type, int distance)
         {
-            return new DistanceTo(id, type, distance);
+            return new DistanceTo(type, distance);
         }
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
@@ -259,7 +259,7 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
 
-        #region MyRegion
+        #region PropertyMethods
         public void SetSeller(Customer seller)
         {
             if (activeCase.Seller != seller)

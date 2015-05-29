@@ -7,8 +7,7 @@ namespace LivingSmartBusinessLogic
 {
     public class EstateAgent
     {
-        public int Id { get; internal set; }
-
+        
         #region Private Fields
 
         private string _name;
@@ -20,16 +19,20 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         #region Properties
-
+        public int Id { get; internal set; }
         public string Name { get { return _name; } internal set { _name = value; } }
-        public string Telephone { get { return _telephone; } internal set { _telephone = value; } }
+        public string Telephone { get { return _telephone; } 
+            internal set { _telephone = value; } }
         public string Email { get { return _email; } internal set { _email = value; } }
-        public DateTime StartingDate { get { return _startingDate; } internal set { _startingDate = value; } }
-        public DateTime? TerminationDate { get { return _terminationDate; } internal set { _terminationDate = value; } }
+        public DateTime StartingDate { get { return _startingDate; } 
+            internal set { _startingDate = value; } }
+        public DateTime? TerminationDate { get { return _terminationDate; } 
+            internal set { _terminationDate = value; } }
 
         #endregion
 
-        internal EstateAgent(string name, string telephone, string email, DateTime startingDate)
+        internal EstateAgent(string name, string telephone, string email, 
+            DateTime startingDate)
         {
             Name = name;
             Telephone = telephone;
@@ -37,15 +40,8 @@ namespace LivingSmartBusinessLogic
             StartingDate = startingDate;
             TerminationDate = null;
         }
-        internal EstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
-        {
-            Name = name;
-            Telephone = telephone;
-            Email = email;
-            StartingDate = startingDate;
-            TerminationDate = terminationDate;
-        }
-        internal EstateAgent(int id, string name, string telephone, string email, DateTime startingDate, DateTime terminationDate)
+        internal EstateAgent(int id, string name, string telephone, string email, 
+            DateTime startingDate, DateTime terminationDate)
         {
             Id = id;
             Name = name;

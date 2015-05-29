@@ -39,9 +39,8 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog = null;
         }
 
-        public void SaveActiveCustomer()
+        public void SaveActiveEstateAgent()
         {
-
             AddEstateAgent(activeEstateAgent);
         }
         #endregion
@@ -67,6 +66,7 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog.Save(estateAgent);
         }
 
+        #region PropertyMethods
         public void SetName(EstateAgent estateAgent, string name)
         {
             if (estateAgent.Name != name)
@@ -96,7 +96,8 @@ namespace LivingSmartBusinessLogic.Controller
             if (estateAgent.TerminationDate != startingDate)
                 estateAgent.TerminationDate = startingDate;
         }
-
+        #endregion
+        
 		public List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
 		{
 			return estateAgentCatalog.SearchEstateAgents(id, name, telephone, email);
@@ -104,9 +105,9 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region Appointment
 
-        public Appointment MakeNewAppointment(int id, Case cCase, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, Customer customer)
+        public Appointment MakeNewAppointment(Case cCase, DateTime startTimeStamp, DateTime endTimeStamp, string description, string place, Customer customer)
         {
-            return new Appointment(id, cCase.Id, startTimeStamp, endTimeStamp, description, place, customer.Id);
+            return new Appointment(cCase.Id, startTimeStamp, endTimeStamp, description, place, customer.Id);
         }
 
         public void AddAppointment(Appointment appointment)

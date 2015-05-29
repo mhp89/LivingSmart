@@ -7,13 +7,27 @@ namespace LivingSmartBusinessLogic
 {
     public class Rating
     {
-        public int Id { get; private set; }
 
         #region Private Fields
 
         private long _estateAgentValue;
         private long _systemValue;
         private DateTime _date;
+
+
+
+        #endregion
+
+        #region Properties
+        
+        public int Id { get; private set; }
+        public long EstateAgentValue { get { return _estateAgentValue; } 
+            internal set { _estateAgentValue = value; } }
+        public long SystemValue { get { return _systemValue; } 
+            internal set { _systemValue = value; } }
+        public DateTime Date { get { return _date; } internal set { _date = value; } }
+
+        #endregion
 
         internal Rating(Case cCase)
         {
@@ -27,18 +41,6 @@ namespace LivingSmartBusinessLogic
             SystemValue = systemValue;
             Date = date;
         }
-
-        #endregion
-
-        #region Properties
-
-        public long EstateAgentValue { get { return _estateAgentValue; } internal set { _estateAgentValue = value; } }
-        public long SystemValue { get { return _systemValue; } internal set { _systemValue = value; } }
-        public DateTime Date { get { return _date; } internal set { _date = value; } }
-
-        #endregion
-
-
 
         #region Methods
 

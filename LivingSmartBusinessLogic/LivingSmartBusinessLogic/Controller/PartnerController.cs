@@ -33,7 +33,7 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return new Partner(name, telephone, email, city, region, regionShort, timeZone);
         }
-
+        
         public Partner ReadPartner(int id)
         {
             return partnerCatalog.Check(id);
@@ -44,6 +44,7 @@ namespace LivingSmartBusinessLogic.Controller
             partnerCatalog.Save(partner);
         }
 
+        #region PropertyMethods
         public void SetName(Partner partner, string name)
         {
             if (partner.Name != name)
@@ -67,7 +68,7 @@ namespace LivingSmartBusinessLogic.Controller
         public void SetRegion(Partner partner, string region)
         {
             if (partner.Region != region)
-                partner.Region= region;
+                partner.Region = region;
         }
         public void SetRegionShort(Partner partner, string regionShort)
         {
@@ -84,6 +85,8 @@ namespace LivingSmartBusinessLogic.Controller
             if (partner.Timezone != timeZone)
                 partner.Timezone = timeZone;
         }
+        #endregion
+        
 
         #endregion
     }

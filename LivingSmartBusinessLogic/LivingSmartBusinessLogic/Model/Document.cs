@@ -7,7 +7,6 @@ namespace LivingSmartBusinessLogic
 {
     public class Document
     {
-        public int Id { get; private set; }
 
         #region Private Fields
 
@@ -20,6 +19,7 @@ namespace LivingSmartBusinessLogic
 
         #region Properties
 
+        public int Id { get; private set; }
         public string Type { get { return _type; } internal set { _type = value; } }
         public int Price { get { return _price; } internal set { _price = value; } }
         public string Location { get { return _location; } internal set { _location = value; } }
