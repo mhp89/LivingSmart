@@ -9,7 +9,5 @@ namespace LivingSmartBusinessLogic.DB
     internal interface ICityDB
     {
         List<City> ReadCities();
-        void UpdateCity(City city);
-        int CreateCity(City city);
     }
 }

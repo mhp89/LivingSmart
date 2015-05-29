@@ -40,6 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\CityDBFactory.cs" />
+    <Compile Include="Database\CityDBMSSQL.cs" />
+    <Compile Include="Database\ICityDB.cs" />
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />
     <Compile Include="Database\PropertyTypeDBFactory.cs" />
