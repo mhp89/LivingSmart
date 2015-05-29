@@ -94,20 +94,20 @@ namespace LivingSmartBusinessLogic.DB
 
         public void UpdateAd(Ad ad, int caseId)
         {
-            int adID = ad.Id;
+            int adId = ad.Id;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), StartDate = (@StartDate), EndDate = (@EndDate), Price = (@Price)" + "WHERE AdId = " + adID
+                CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), StartDate = (@StartDate), EndDate = (@EndDate), Price = (@Price)" + "WHERE AdId = " + adId
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "Name").Value = ad.Id;
-            cmd.Parameters.Add("@Type", SqlDbType.Date, 50, "Name").Value = ad.Type;
-            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 50, "Name").Value = ad.StartDate;
-            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 50, "Name").Value = ad.EndDate;
-            cmd.Parameters.Add("@Price", SqlDbType.Int, 50, "Name").Value = ad.Price;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "Name").Value = ad.Id;
+            cmd.Parameters.Add("@Type", SqlDbType.Date, 8, "Name").Value = ad.Type;
+            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 8, "Name").Value = ad.StartDate;
+            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "Name").Value = ad.EndDate;
+            cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Name").Value = ad.Price;
 
             try
             {
@@ -135,11 +135,11 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO Ad VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); " + "SELECT CAST(scope_identity() AS int);"
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "Name").Value = ad.Type;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "Name").Value = ad.Type;
             cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Name").Value = ad.StartDate;
-            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 50, "Name").Value = ad.EndDate;
-            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 50, "Name").Value = ad.Price;
-            cmd.Parameters.Add("@Price", SqlDbType.Int, 50, "Name").Value = ad.Id;
+            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 8, "Name").Value = ad.EndDate;
+            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "Name").Value = ad.Price;
+            cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Name").Value = ad.Id;
 
             try
             {

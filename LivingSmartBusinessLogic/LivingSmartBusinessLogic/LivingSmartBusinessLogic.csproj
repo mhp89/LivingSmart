@@ -70,6 +70,7 @@
     <Compile Include="Database\IRatingDB.cs" />
     <Compile Include="Database\IPropertyTypeDB.cs" />
     <Compile Include="Database\IPictureDB.cs" />
+    <Compile Include="Catalog\CaseCatalog.cs" />
     <Compile Include="Database\AdDBFactory.cs" />
     <Compile Include="Database\AdDBMSSQL.cs" />
     <Compile Include="Database\CustomerDBFactory.cs" />

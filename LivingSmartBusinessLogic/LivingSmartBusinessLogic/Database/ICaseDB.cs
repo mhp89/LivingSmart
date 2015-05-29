@@ -8,7 +8,7 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface ICaseDB
     {
-        List<Case> ReadCases();
+        List<Case> ReadCases(int estateAgentUId);
         void UpdateCase(Case ca);
         int CreateCase(Case ca);
     }

@@ -40,48 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
-    <Compile Include="Ad.cs" />
-    <Compile Include="AdCatalog.cs" />
-    <Compile Include="Appointment.cs" />
-    <Compile Include="AppointmentCatalog.cs" />
-    <Compile Include="AskingPriceCatalog.cs" />
-    <Compile Include="AskingPrice.cs" />
-    <Compile Include="Case.cs" />
-    <Compile Include="CaseCatalog.cs" />
-    <Compile Include="Controller\CaseController.cs" />
-    <Compile Include="Controller\CityController.cs" />
-    <Compile Include="Customer.cs" />
-    <Compile Include="CustomerCatalog.cs" />
-    <Compile Include="Controller\CustomerController.cs" />
-    <Compile Include="DB\AdDBFactory.cs" />
-    <Compile Include="DB\AdDBMSSQL.cs" />
-    <Compile Include="DB\CustomerDBFactory.cs" />
-    <Compile Include="DB\CustomerDBMSSQL.cs" />
-    <Compile Include="DB\CustomerDBXML.cs" />
-    <Compile Include="DB\DBConnectionMSSQL.cs" />
-    <Compile Include="DB\IAppointmentDB.cs" />
-    <Compile Include="DB\ICaseDB.cs" />
-    <Compile Include="DB\IAdDB.cs" />
-    <Compile Include="DB\IInvoiceDB.cs" />
-    <Compile Include="DB\IEstateAgentDB.cs" />
-    <Compile Include="DB\IDocumentDB.cs" />
-    <Compile Include="DB\IPartnerDB.cs" />
-    <Compile Include="DB\ICustomerDB.cs" />
-    <Compile Include="DistanceTo.cs" />
-    <Compile Include="DistanceToCatalog.cs" />
-    <Compile Include="Document.cs" />
-    <Compile Include="DocumentCatalog.cs" />
-    <Compile Include="EstateAgent.cs" />
-    <Compile Include="EstateAgentCatalog.cs" />
-    <Compile Include="Controller\EstateAgentController.cs" />
-    <Compile Include="Invoice.cs" />
-    <Compile Include="Controller\InvoiceController.cs" />
-    <Compile Include="InvoiceCatalog.cs" />
-    <Compile Include="CityCatalog.cs" />
-    <Compile Include="Neighborhood.cs" />
-    <Compile Include="NeighborhoodCatalog.cs" />
-=======
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />
     <Compile Include="Database\PropertyTypeDBFactory.cs" />
@@ -112,17 +70,20 @@
     <Compile Include="Database\IRatingDB.cs" />
     <Compile Include="Database\IPropertyTypeDB.cs" />
     <Compile Include="Database\IPictureDB.cs" />
+<<<<<<< HEAD
+=======
     <Compile Include="Model\Ad.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Catalog\AppointmentCatalog.cs" />
     <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="Model\AskingPrice.cs" />
     <Compile Include="Model\Case.cs" />
-    <Compile Include="Model\CaseCatalog.cs" />
+    <Compile Include="Catalog\CaseCatalog.cs" />
     <Compile Include="Controller\CaseController.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Catalog\CustomerCatalog.cs" />
     <Compile Include="Controller\CustomerController.cs" />
+>>>>>>> 543b4340e6367875970e68683e3ec758f7ea83db
     <Compile Include="Database\AdDBFactory.cs" />
     <Compile Include="Database\AdDBMSSQL.cs" />
     <Compile Include="Database\CustomerDBFactory.cs" />
@@ -137,74 +98,60 @@
     <Compile Include="Database\IDocumentDB.cs" />
     <Compile Include="Database\IPartnerDB.cs" />
     <Compile Include="Database\ICustomerDB.cs" />
+    <Compile Include="Model\Ad.cs" />
+    <Compile Include="Model\Appointment.cs" />
+    <Compile Include="Model\AskingPrice.cs" />
+    <Compile Include="Model\Case.cs" />
+    <Compile Include="Model\CaseCatalog.cs" />
+    <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DistanceTo.cs" />
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\EstateAgent.cs" />
-    <Compile Include="Catalog\EstateAgentCatalog.cs" />
-    <Compile Include="Controller\EstateAgentController.cs" />
-    <Compile Include="IModel.cs" />
     <Compile Include="Model\Invoice.cs" />
-    <Compile Include="Controller\InvoiceController.cs" />
-    <Compile Include="Catalog\InvoiceCatalog.cs" />
-    <Compile Include="ISubject.cs" />
     <Compile Include="Model\Neighborhood.cs" />
-    <Compile Include="IObserver.cs" />
-    <Compile Include="Catalog\NeighborhoodCatalog.cs" />
->>>>>>> ef445e5afa983803a993fba24ef279cde7df603d
-    <Compile Include="Controller\NeighborhoodController.cs" />
     <Compile Include="Model\Partner.cs" />
-    <Compile Include="Catalog\PartnerCatalog.cs" />
-    <Compile Include="Controller\PartnerController.cs" />
-<<<<<<< HEAD
-    <Compile Include="Picture.cs" />
-    <Compile Include="PictureCatalog.cs" />
-=======
     <Compile Include="Model\Picture.cs" />
->>>>>>> ef445e5afa983803a993fba24ef279cde7df603d
+    <Compile Include="Model\PropertyType.cs" />
+    <Compile Include="Model\Rating.cs" />
+    <Compile Include="Model\City.cs" />
+    <Compile Include="Catalog\AppointmentCatalog.cs" />
+    <Compile Include="Catalog\AskingPriceCatalog.cs" />
+    <Compile Include="Catalog\AdCatalog.cs" />
+    <Compile Include="Catalog\CustomerCatalog.cs" />
+    <Compile Include="Catalog\EstateAgentCatalog.cs" />
+    <Compile Include="Catalog\DocumentCatalog.cs" />
+    <Compile Include="Catalog\DistanceToCatalog.cs" />
+    <Compile Include="Catalog\InvoiceCatalog.cs" />
+    <Compile Include="Catalog\CityCatalog.cs" />
+    <Compile Include="Catalog\NeighborhoodCatalog.cs" />
+    <Compile Include="Catalog\PartnerCatalog.cs" />
+    <Compile Include="Catalog\PictureCatalog.cs" />
+    <Compile Include="Catalog\PropertyTypeCatalog.cs" />
+    <Compile Include="Catalog\RatingCatalog.cs" />
+    <Compile Include="Controller\CaseController.cs" />
+    <Compile Include="Controller\CityController.cs" />
+    <Compile Include="Controller\CustomerController.cs" />
+    <Compile Include="Controller\EstateAgentController.cs" />
+    <Compile Include="Controller\InvoiceController.cs" />
+    <Compile Include="Controller\NeighborhoodController.cs" />
+    <Compile Include="Controller\PartnerController.cs" />
+    <Compile Include="Controller\SellPropertyController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-<<<<<<< HEAD
-    <Compile Include="PropertyType.cs" />
-    <Compile Include="PropertyTypeCatalog.cs" />
-    <Compile Include="Rating.cs" />
-    <Compile Include="City.cs" />
-=======
-    <Compile Include="Model\PropertyType.cs" />
-    <Compile Include="Model\Rating.cs" />
-    <Compile Include="Model\City.cs" />
->>>>>>> ef445e5afa983803a993fba24ef279cde7df603d
-    <Compile Include="Controller\SellPropertyController.cs" />
-    <Compile Include="RatingCatalog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-<<<<<<< HEAD
-    <None Include="ClassDiagram.cd" />
-=======
->>>>>>> ef445e5afa983803a993fba24ef279cde7df603d
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
-    <Folder Include="Catalogs\" />
     <Folder Include="Model\" />
   </ItemGroup>
-=======
-  <ItemGroup />
->>>>>>> ef445e5afa983803a993fba24ef279cde7df603d
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
 </Project>

@@ -7,9 +7,14 @@ namespace LivingSmartBusinessLogic
 {
     public class Neighborhood
     {
+<<<<<<< HEAD
 
         public int Id { get; private set; }
         public City city { get; private set; }
+=======
+        // are we using this?
+        // private City city;
+>>>>>>> 543b4340e6367875970e68683e3ec758f7ea83db
 
         #region Private Fields
 
@@ -29,9 +34,15 @@ namespace LivingSmartBusinessLogic
 
         internal Neighborhood(int zipCode, string name, int value)
         {
-            _zipCode = zipCode;
+<<<<<<< HEAD
+            this.city = city;
             Name = name;
             Value = value;
+=======
+            _zipCode = zipCode;
+            _name = name;
+            _value = value;
+>>>>>>> 543b4340e6367875970e68683e3ec758f7ea83db
         }
 
         #region Methods
