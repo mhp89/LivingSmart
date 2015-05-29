@@ -260,20 +260,20 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
 
         #region MyRegion
-        public void SetSeller(Customer seller)
+        public void SetSeller(int sellerId)
         {
-            if (activeCase.Seller != seller)
-                activeCase.Seller = seller;
+            if (activeCase.SellerId != sellerId)
+                activeCase.SellerId = sellerId;
         }
-        public void SetBuyer(Customer buyer)
+        public void SetBuyer(int buyerId)
         {
-            if (activeCase.Buyer != buyer)
-                activeCase.Buyer = buyer;
+            if (activeCase.BuyerId != buyerId)
+                activeCase.BuyerId = buyerId;
         }
-        public void SetEstateAgent(EstateAgent estateAgent)
+        public void SetEstateAgent(int estateAgentId)
         {
-            if (activeCase.EstateAgent != estateAgent)
-                activeCase.EstateAgent = estateAgent;
+            if (activeCase.EstateAgentId != estateAgentId)
+                activeCase.EstateAgentId = estateAgentId;
         }
         public void SetCreationDate(DateTime creationDate)
         {
@@ -322,14 +322,13 @@ namespace LivingSmartBusinessLogic.Controller
         }
         public void SetCity(int zipCode)
         {
-            var city = CityController.Instance.GetCity(zipCode);
-            if (activeCase.City != city)
-                activeCase.City = city;
+            if (activeCase.ZipCode != zipCode)
+                activeCase.ZipCode = zipCode;
         }
-        public void SetPropertyType(PropertyType propertyType)
+        public void SetPropertyType(int propertyTypeId)
         {
-            if (activeCase.PropertyType != propertyType)
-                activeCase.PropertyType = propertyType;
+            if (activeCase.PropertyTypeId != propertyTypeId)
+                activeCase.PropertyTypeId = propertyTypeId;
         }
         public void SetPublicRating(long publicRating)
         {
@@ -406,7 +405,7 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCase.View != view)
                 activeCase.View = view;
         }
-        public void SetNeighborhood(Neighborhood neighborhood)
+        public void SetNeighborhood(string neighborhood)
         {
             if (activeCase.Neighborhood != neighborhood)
                 activeCase.Neighborhood = neighborhood;

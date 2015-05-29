@@ -11,9 +11,9 @@ namespace LivingSmartBusinessLogic
     {
         #region Private Fields
 
-        private Customer _seller;
-        private Customer _buyer;
-        private EstateAgent _estateAgent;
+        private int _sellerId;
+        private int _buyerId;
+        private int _estateAgentId;
         private DateTime _creationDate;
         private string _status;
         private DateTime _dateOfSale;
@@ -23,8 +23,8 @@ namespace LivingSmartBusinessLogic
         private string _description;
         private string _landRegistryNumber;
         private string _address;
-        private City _city;
-        private PropertyType _propertyType;
+        private int _zipCode;
+        private int _propertyTypeId;
         private long _publicRating;
         private long _landValue;
         private int _groundArea;
@@ -40,16 +40,16 @@ namespace LivingSmartBusinessLogic
         private int _toilets;
         private int _garageArea;
         private int _view;
-        private Neighborhood _neighborhood;
+        private string _neighborhood;
 
         #endregion
 
         #region Properties
 
         public int Id { get; private set; }
-        public Customer Seller { get { return _seller; } internal set { _seller = value; } }
-        public Customer Buyer { get { return _buyer; } internal set { _buyer = value; } }
-        public EstateAgent EstateAgent { get { return _estateAgent; } internal set { _estateAgent = value; } }
+        public int SellerId { get { return _sellerId; } internal set { _sellerId = value; } }
+        public int BuyerId { get { return _buyerId; } internal set { _buyerId = value; } }
+        public int EstateAgentId { get { return _estateAgentId; } internal set { _estateAgentId = value; } }
         public DateTime CreationDate { get { return _creationDate; } internal set { _creationDate = value; } }
         public string Status { get { return _status; } internal set { _status = value; } }
         public DateTime DateOfSale { get { return _dateOfSale; } internal set { _dateOfSale = value; } }
@@ -59,8 +59,8 @@ namespace LivingSmartBusinessLogic
         public string Description { get { return _description; } internal set { _description = value; } }
         public string LandRegistryNumber { get { return _landRegistryNumber; } internal set { _landRegistryNumber = value; } }
         public string Address { get { return _address; } internal set { _address = value; } }
-        public City City { get { return _city; } internal set { _city = value; } }
-        public PropertyType PropertyType { get { return _propertyType; } internal set { _propertyType = value; } }
+        public int ZipCode { get { return _zipCode; } internal set { _zipCode = value; } }
+        public int PropertyTypeId { get { return _propertyTypeId; } internal set { _propertyTypeId = value; } }
         public long PublicRating { get { return _publicRating; } internal set { _publicRating = value; } }
         public long LandValue { get { return _landValue; } internal set { _landValue = value; } }
         public int GroundArea { get { return _groundArea; } internal set { _groundArea = value; } }
@@ -76,7 +76,7 @@ namespace LivingSmartBusinessLogic
         public int Toilets { get { return _toilets; } internal set { _toilets = value; } }
         public int GarageArea { get { return _garageArea; } internal set { _garageArea = value; } }
         public int View { get { return _view; } internal set { _view = value; } }
-        public Neighborhood Neighborhood { get { return _neighborhood; } internal set { _neighborhood = value; } }
+        public string Neighborhood { get { return _neighborhood; } internal set { _neighborhood = value; } }
 
         #endregion
 
@@ -84,19 +84,19 @@ namespace LivingSmartBusinessLogic
         {
             CreationDate = new DateTime().Date;
         }
-        internal Case(Customer seller, Customer buyer, EstateAgent estateAgent, 
+        internal Case(int sellerId, int buyerId, int estateAgentId, 
             DateTime creationDate, string status, DateTime dateOfSale, 
             DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
-            string description, string landRegistryNumber, string address, City city, 
-            PropertyType propertyType, long publicRating, long landValue, 
+            string description, string landRegistryNumber, string address, int zipCode, 
+            int propertyTypeId, long publicRating, long landValue, 
             int groundArea, int builtArea, int livingArea, int basementArea, 
             int builtYear, string energyClassification, int floors, int rooms, 
             int bedrooms, int bathrooms, int toilets, int garageArea, 
-            int view, Neighborhood neighborhood)
+            int view, string neighborhood)
         {
-            Seller = seller;
-            Buyer = buyer;
-            EstateAgent = estateAgent;
+            SellerId = sellerId;
+            BuyerId = buyerId;
+            EstateAgentId = estateAgentId;
             CreationDate = creationDate;
             Status = status;
             DateOfSale = dateOfSale;
@@ -106,8 +106,8 @@ namespace LivingSmartBusinessLogic
             Description = description;
             LandRegistryNumber = landRegistryNumber;
             Address = address;
-            City = city;
-            PropertyType = propertyType;
+            ZipCode = zipCode;
+            PropertyTypeId = propertyTypeId;
             PublicRating = publicRating;
             LandValue = landValue;
             GroundArea = groundArea;
