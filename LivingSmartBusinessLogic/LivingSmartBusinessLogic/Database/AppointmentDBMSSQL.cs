@@ -55,6 +55,7 @@ namespace LivingSmartBusinessLogic.DB
 
             return appointments;
         }
+
         public void UpdateAppointment(Appointment appointment, int estateAgentId)
         {
             int appointmentId = appointment.Id;
@@ -88,6 +89,7 @@ namespace LivingSmartBusinessLogic.DB
                 connection.Close();
             }
         }
+
         public int CreateAppointment(Appointment appointment, int estateAgentId)
         {
             int appointmentId = 0;

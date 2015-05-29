@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -40,20 +41,30 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SaveActiveCustomer()
         {
-
-            AddCustomer(activeCustomer);
+<<<<<<< HEAD
+			customerCatalog.Save(activeCustomer);
+			customerCatalog.AddToCatalog(activeCustomer);
+=======
+            customerCatalog.AddToCatalog(activeCustomer);
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
         }
         #endregion
 
-        public void AddCustomer(Customer customer)
+	    private void AddCustomer(Customer customer)
         {
+<<<<<<< HEAD
+=======
 			//TODO: Check for valid ID
-            customerCatalog.AddToCatalog(customer);
+            
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
         }
 
-        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
+        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, 
+            int zipCode, string email, string telephone)
         {
-            return new Customer(name, dateOfBirth, address, CityController.Instance.GetCity(zipCode), email, telephone);
+            SetActiveCustomer(new Customer(name, dateOfBirth, address, 
+                zipCode, email, telephone));
+            return activeCustomer;
         }
 
         public Customer ReadCustomer(int id)
@@ -66,6 +77,12 @@ namespace LivingSmartBusinessLogic.Controller
             return customerCatalog.GetCustomers();
         }
 
+        public Customer GetCustomer(int customerId)
+        {
+            return customerCatalog.GetCustomer(customerId);
+        }
+
+        #region PropertyMethods
         public void SetName(string name)
         {
             if (activeCustomer.Name != name)
@@ -92,15 +109,9 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SetCity(int zipCode)
         {
-<<<<<<< HEAD
-	        var city = CityController.Instance.GetCity(zipCode);
-			if (customer.City != city)
-                customer.City = city;
-=======
             var city = CityController.Instance.GetCity(zipCode);
-			if (activeCustomer.City != city)
+            if (activeCustomer.City != city)
                 activeCustomer.City = city;
->>>>>>> 0b7f0f4bbfc7c2d0c6d22ed494edc34972f81eca
         }
 
         public void SetEmail(string email)
@@ -108,6 +119,8 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCustomer.Email != email)
                 activeCustomer.Email = email;
         }
+        #endregion
+        
 
 		public ReadOnlyCollection<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone, string email)
 		{

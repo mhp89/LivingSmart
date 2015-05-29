@@ -50,13 +50,14 @@ namespace LivingSmartBusinessLogic
             estateAgents.Remove(estateAgent.Id);
         }
 
+<<<<<<< HEAD
 
 		internal ReadOnlyCollection<EstateAgent> GetEstateAgents()
 		{
 			var estateAgentList = estateAgents.Values.ToList();
 			return estateAgentList.AsReadOnly();
 		}
-
+=======
         internal EstateAgent GetEstateAgent(int estateAgentId)
         {
             if (estateAgents.ContainsKey(estateAgentId))
@@ -65,6 +66,7 @@ namespace LivingSmartBusinessLogic
             }
             return null;
         }
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
 
 		internal List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
 		{

@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.UserControls
 {
 	partial class DistanceField
@@ -39,11 +41,11 @@ namespace LivingSmartForms.UserControls
             // 
             this.stbType.AllowComma = false;
             this.stbType.AutomaticValidation = false;
-            this.stbType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stbType.BackColor = SmartColor.Light;
             this.stbType.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stbType.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stbType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stbType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stbType.ForeColor = SmartColor.Dark;
             this.stbType.Location = new System.Drawing.Point(0, 0);
             this.stbType.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.stbType.MaxLength = 50;
@@ -60,11 +62,11 @@ namespace LivingSmartForms.UserControls
             // 
             this.stpDistance.AllowComma = false;
             this.stpDistance.AutomaticValidation = true;
-            this.stpDistance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.stpDistance.BackColor = SmartColor.Light;
             this.stpDistance.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.stpDistance.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.stpDistance.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.stpDistance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.stpDistance.ForeColor = SmartColor.Dark;
             this.stpDistance.Location = new System.Drawing.Point(190, 0);
             this.stpDistance.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
             this.stpDistance.MaxLength = 50;
@@ -82,14 +84,14 @@ namespace LivingSmartForms.UserControls
             this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRemove.AutoSize = true;
             this.btnRemove.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnRemove.BackColor = SmartColor.Dark;
             this.btnRemove.Color = SmartControls.SmartColor.ColorStyle.Dark;
             this.btnRemove.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRemove.FlatAppearance.BorderSize = 0;
-            this.btnRemove.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnRemove.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.btnRemove.FlatAppearance.MouseDownBackColor = SmartColor.Light;
+            this.btnRemove.FlatAppearance.MouseOverBackColor = SmartColor.Light;
             this.btnRemove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRemove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.btnRemove.ForeColor = SmartColor.Light;
             this.btnRemove.Location = new System.Drawing.Point(293, 0);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(57, 30);

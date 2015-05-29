@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Pages
 {
 	partial class Partners
@@ -51,7 +53,7 @@ namespace LivingSmartForms.Pages
 			// 
 			// pnlSubmenuBorder
 			// 
-			this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.pnlSubmenuBorder.BackColor = SmartColor.Light;
 			this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 40);
 			this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
@@ -73,14 +75,14 @@ namespace LivingSmartForms.Pages
 			// 
 			this.btnNewPartner.AutoSize = true;
 			this.btnNewPartner.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNewPartner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewPartner.BackColor = SmartColor.Light;
 			this.btnNewPartner.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnNewPartner.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNewPartner.FlatAppearance.BorderSize = 0;
-			this.btnNewPartner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewPartner.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnNewPartner.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnNewPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewPartner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewPartner.ForeColor = SmartColor.Dark;
 			this.btnNewPartner.Location = new System.Drawing.Point(0, 0);
 			this.btnNewPartner.Name = "btnNewPartner";
 			this.btnNewPartner.Size = new System.Drawing.Size(111, 30);
@@ -92,7 +94,7 @@ namespace LivingSmartForms.Pages
 			// sblActiveCases
 			// 
 			this.sblActiveCases.AutoSize = true;
-			this.sblActiveCases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.sblActiveCases.ForeColor = SmartColor.Light;
 			this.sblActiveCases.Location = new System.Drawing.Point(121, 7);
 			this.sblActiveCases.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.sblActiveCases.Name = "sblActiveCases";
@@ -121,7 +123,7 @@ namespace LivingSmartForms.Pages
 			this.hdrPartners.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrPartners.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.hdrPartners.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.hdrPartners.ForeColor = SmartColor.Light;
 			this.hdrPartners.Location = new System.Drawing.Point(10, 55);
 			this.hdrPartners.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.hdrPartners.Name = "hdrPartners";

@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class NewPartner
@@ -36,15 +38,17 @@ namespace LivingSmartForms.Views
 			this.lblPartnerCountry = new System.Windows.Forms.Label();
 			this.lblPartnerPhone = new System.Windows.Forms.Label();
 			this.lblPartnerEmail = new System.Windows.Forms.Label();
-			this.pnlPartnerRegionShort = new System.Windows.Forms.Panel();
-			this.lblPartnerRegionFormat = new System.Windows.Forms.Label();
 			this.stbName = new SmartControls.SmartTextBox();
 			this.stbCity = new SmartControls.SmartTextBox();
 			this.stbCountry = new SmartControls.SmartTextBox();
 			this.stbPhone = new SmartControls.SmartTextBox();
 			this.stbEmail = new SmartControls.SmartTextBox();
 			this.stbTimeZone = new SmartControls.SmartTextBox();
+			this.pnlPartnerRegionShort = new System.Windows.Forms.Panel();
+			this.lblPartnerRegionFormat = new System.Windows.Forms.Label();
 			this.stbRegionShort = new SmartControls.SmartTextBox();
+			this.label1 = new System.Windows.Forms.Label();
+			this.stbRegion = new SmartControls.SmartTextBox();
 			this.tlpNewPartner.SuspendLayout();
 			this.pnlPartnerRegionShort.SuspendLayout();
 			this.SuspendLayout();
@@ -54,20 +58,22 @@ namespace LivingSmartForms.Views
 			this.tlpNewPartner.ColumnCount = 2;
 			this.tlpNewPartner.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpNewPartner.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-			this.tlpNewPartner.Controls.Add(this.lblPartnerTimeZone, 0, 6);
+			this.tlpNewPartner.Controls.Add(this.stbRegion, 1, 2);
+			this.tlpNewPartner.Controls.Add(this.label1, 0, 2);
+			this.tlpNewPartner.Controls.Add(this.lblPartnerTimeZone, 0, 7);
 			this.tlpNewPartner.Controls.Add(this.lblPartnerName, 0, 0);
 			this.tlpNewPartner.Controls.Add(this.lblPartnerCity, 0, 1);
-			this.tlpNewPartner.Controls.Add(this.lblPartnerRegionShort, 0, 2);
-			this.tlpNewPartner.Controls.Add(this.lblPartnerCountry, 0, 3);
-			this.tlpNewPartner.Controls.Add(this.lblPartnerPhone, 0, 4);
-			this.tlpNewPartner.Controls.Add(this.lblPartnerEmail, 0, 5);
+			this.tlpNewPartner.Controls.Add(this.lblPartnerRegionShort, 0, 3);
+			this.tlpNewPartner.Controls.Add(this.lblPartnerCountry, 0, 4);
+			this.tlpNewPartner.Controls.Add(this.lblPartnerPhone, 0, 5);
+			this.tlpNewPartner.Controls.Add(this.lblPartnerEmail, 0, 6);
 			this.tlpNewPartner.Controls.Add(this.stbName, 1, 0);
 			this.tlpNewPartner.Controls.Add(this.stbCity, 1, 1);
-			this.tlpNewPartner.Controls.Add(this.stbCountry, 1, 3);
-			this.tlpNewPartner.Controls.Add(this.stbPhone, 1, 4);
-			this.tlpNewPartner.Controls.Add(this.stbEmail, 1, 5);
-			this.tlpNewPartner.Controls.Add(this.stbTimeZone, 1, 6);
-			this.tlpNewPartner.Controls.Add(this.pnlPartnerRegionShort, 1, 2);
+			this.tlpNewPartner.Controls.Add(this.stbCountry, 1, 4);
+			this.tlpNewPartner.Controls.Add(this.stbPhone, 1, 5);
+			this.tlpNewPartner.Controls.Add(this.stbEmail, 1, 6);
+			this.tlpNewPartner.Controls.Add(this.stbTimeZone, 1, 7);
+			this.tlpNewPartner.Controls.Add(this.pnlPartnerRegionShort, 1, 3);
 			this.tlpNewPartner.Location = new System.Drawing.Point(0, 10);
 			this.tlpNewPartner.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpNewPartner.Name = "tlpNewPartner";
@@ -80,7 +86,8 @@ namespace LivingSmartForms.Views
 			this.tlpNewPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpNewPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpNewPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-			this.tlpNewPartner.Size = new System.Drawing.Size(480, 280);
+			this.tlpNewPartner.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tlpNewPartner.Size = new System.Drawing.Size(480, 320);
 			this.tlpNewPartner.TabIndex = 5;
 			// 
 			// lblPartnerTimeZone
@@ -89,7 +96,7 @@ namespace LivingSmartForms.Views
 			this.lblPartnerTimeZone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPartnerTimeZone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPartnerTimeZone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblPartnerTimeZone.Location = new System.Drawing.Point(0, 240);
+			this.lblPartnerTimeZone.Location = new System.Drawing.Point(0, 280);
 			this.lblPartnerTimeZone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPartnerTimeZone.Name = "lblPartnerTimeZone";
 			this.lblPartnerTimeZone.Size = new System.Drawing.Size(120, 30);
@@ -131,12 +138,12 @@ namespace LivingSmartForms.Views
 			this.lblPartnerRegionShort.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPartnerRegionShort.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPartnerRegionShort.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblPartnerRegionShort.Location = new System.Drawing.Point(0, 80);
+			this.lblPartnerRegionShort.Location = new System.Drawing.Point(0, 120);
 			this.lblPartnerRegionShort.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPartnerRegionShort.Name = "lblPartnerRegionShort";
 			this.lblPartnerRegionShort.Size = new System.Drawing.Size(120, 30);
 			this.lblPartnerRegionShort.TabIndex = 7;
-			this.lblPartnerRegionShort.Text = "Region";
+			this.lblPartnerRegionShort.Text = "Region kort";
 			this.lblPartnerRegionShort.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblPartnerCountry
@@ -145,7 +152,7 @@ namespace LivingSmartForms.Views
 			this.lblPartnerCountry.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPartnerCountry.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPartnerCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblPartnerCountry.Location = new System.Drawing.Point(0, 120);
+			this.lblPartnerCountry.Location = new System.Drawing.Point(0, 160);
 			this.lblPartnerCountry.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPartnerCountry.Name = "lblPartnerCountry";
 			this.lblPartnerCountry.Size = new System.Drawing.Size(120, 30);
@@ -159,7 +166,7 @@ namespace LivingSmartForms.Views
 			this.lblPartnerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPartnerPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPartnerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblPartnerPhone.Location = new System.Drawing.Point(0, 160);
+			this.lblPartnerPhone.Location = new System.Drawing.Point(0, 200);
 			this.lblPartnerPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPartnerPhone.Name = "lblPartnerPhone";
 			this.lblPartnerPhone.Size = new System.Drawing.Size(120, 30);
@@ -173,34 +180,13 @@ namespace LivingSmartForms.Views
 			this.lblPartnerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPartnerEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblPartnerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblPartnerEmail.Location = new System.Drawing.Point(0, 200);
+			this.lblPartnerEmail.Location = new System.Drawing.Point(0, 240);
 			this.lblPartnerEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPartnerEmail.Name = "lblPartnerEmail";
 			this.lblPartnerEmail.Size = new System.Drawing.Size(120, 30);
 			this.lblPartnerEmail.TabIndex = 10;
 			this.lblPartnerEmail.Text = "Email";
 			this.lblPartnerEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// pnlPartnerRegionShort
-			// 
-			this.pnlPartnerRegionShort.Controls.Add(this.lblPartnerRegionFormat);
-			this.pnlPartnerRegionShort.Controls.Add(this.stbRegionShort);
-			this.pnlPartnerRegionShort.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlPartnerRegionShort.Location = new System.Drawing.Point(120, 80);
-			this.pnlPartnerRegionShort.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.pnlPartnerRegionShort.Name = "pnlPartnerRegionShort";
-			this.pnlPartnerRegionShort.Size = new System.Drawing.Size(360, 30);
-			this.pnlPartnerRegionShort.TabIndex = 19;
-			// 
-			// lblPartnerRegionFormat
-			// 
-			this.lblPartnerRegionFormat.Location = new System.Drawing.Point(89, 0);
-			this.lblPartnerRegionFormat.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.lblPartnerRegionFormat.Name = "lblPartnerRegionFormat";
-			this.lblPartnerRegionFormat.Size = new System.Drawing.Size(267, 30);
-			this.lblPartnerRegionFormat.TabIndex = 21;
-			this.lblPartnerRegionFormat.Text = "Brug forkortet regionsbetegnelse";
-			this.lblPartnerRegionFormat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// stbName
 			// 
@@ -226,6 +212,7 @@ namespace LivingSmartForms.Views
 			this.stbName.Size = new System.Drawing.Size(360, 30);
 			this.stbName.Suffix = null;
 			this.stbName.TabIndex = 12;
+			this.stbName.TabStop = false;
 			this.stbName.UseSystemPasswordChar = false;
 			// 
 			// stbCity
@@ -252,6 +239,7 @@ namespace LivingSmartForms.Views
 			this.stbCity.Size = new System.Drawing.Size(360, 30);
 			this.stbCity.Suffix = null;
 			this.stbCity.TabIndex = 13;
+			this.stbCity.TabStop = false;
 			this.stbCity.UseSystemPasswordChar = false;
 			// 
 			// stbCountry
@@ -266,7 +254,7 @@ namespace LivingSmartForms.Views
 			this.stbCountry.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbCountry.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbCountry.Location = new System.Drawing.Point(120, 120);
+			this.stbCountry.Location = new System.Drawing.Point(120, 160);
 			this.stbCountry.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCountry.MaxLength = 50;
 			this.stbCountry.MinLength = -1;
@@ -278,6 +266,7 @@ namespace LivingSmartForms.Views
 			this.stbCountry.Size = new System.Drawing.Size(360, 30);
 			this.stbCountry.Suffix = null;
 			this.stbCountry.TabIndex = 15;
+			this.stbCountry.TabStop = false;
 			this.stbCountry.UseSystemPasswordChar = false;
 			// 
 			// stbPhone
@@ -292,7 +281,7 @@ namespace LivingSmartForms.Views
 			this.stbPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbPhone.Location = new System.Drawing.Point(120, 160);
+			this.stbPhone.Location = new System.Drawing.Point(120, 200);
 			this.stbPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPhone.MaxLength = 50;
 			this.stbPhone.MinLength = 8;
@@ -304,6 +293,7 @@ namespace LivingSmartForms.Views
 			this.stbPhone.Size = new System.Drawing.Size(360, 30);
 			this.stbPhone.Suffix = null;
 			this.stbPhone.TabIndex = 16;
+			this.stbPhone.TabStop = false;
 			this.stbPhone.UseSystemPasswordChar = false;
 			// 
 			// stbEmail
@@ -318,7 +308,7 @@ namespace LivingSmartForms.Views
 			this.stbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbEmail.Location = new System.Drawing.Point(120, 200);
+			this.stbEmail.Location = new System.Drawing.Point(120, 240);
 			this.stbEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEmail.MaxLength = 50;
 			this.stbEmail.MinLength = -1;
@@ -330,6 +320,7 @@ namespace LivingSmartForms.Views
 			this.stbEmail.Size = new System.Drawing.Size(360, 30);
 			this.stbEmail.Suffix = null;
 			this.stbEmail.TabIndex = 17;
+			this.stbEmail.TabStop = false;
 			this.stbEmail.UseSystemPasswordChar = false;
 			// 
 			// stbTimeZone
@@ -344,7 +335,7 @@ namespace LivingSmartForms.Views
 			this.stbTimeZone.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbTimeZone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbTimeZone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbTimeZone.Location = new System.Drawing.Point(120, 240);
+			this.stbTimeZone.Location = new System.Drawing.Point(120, 280);
 			this.stbTimeZone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbTimeZone.MaxLength = 50;
 			this.stbTimeZone.MinLength = -1;
@@ -356,7 +347,29 @@ namespace LivingSmartForms.Views
 			this.stbTimeZone.Size = new System.Drawing.Size(360, 30);
 			this.stbTimeZone.Suffix = null;
 			this.stbTimeZone.TabIndex = 18;
+			this.stbTimeZone.TabStop = false;
 			this.stbTimeZone.UseSystemPasswordChar = false;
+			// 
+			// pnlPartnerRegionShort
+			// 
+			this.pnlPartnerRegionShort.Controls.Add(this.lblPartnerRegionFormat);
+			this.pnlPartnerRegionShort.Controls.Add(this.stbRegionShort);
+			this.pnlPartnerRegionShort.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlPartnerRegionShort.Location = new System.Drawing.Point(120, 120);
+			this.pnlPartnerRegionShort.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.pnlPartnerRegionShort.Name = "pnlPartnerRegionShort";
+			this.pnlPartnerRegionShort.Size = new System.Drawing.Size(360, 30);
+			this.pnlPartnerRegionShort.TabIndex = 19;
+			// 
+			// lblPartnerRegionFormat
+			// 
+			this.lblPartnerRegionFormat.Location = new System.Drawing.Point(89, 0);
+			this.lblPartnerRegionFormat.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblPartnerRegionFormat.Name = "lblPartnerRegionFormat";
+			this.lblPartnerRegionFormat.Size = new System.Drawing.Size(267, 30);
+			this.lblPartnerRegionFormat.TabIndex = 21;
+			this.lblPartnerRegionFormat.Text = "Brug forkortet regionsbetegnelse";
+			this.lblPartnerRegionFormat.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// stbRegionShort
 			// 
@@ -381,14 +394,56 @@ namespace LivingSmartForms.Views
 			this.stbRegionShort.Size = new System.Drawing.Size(68, 30);
 			this.stbRegionShort.Suffix = null;
 			this.stbRegionShort.TabIndex = 20;
+			this.stbRegionShort.TabStop = false;
 			this.stbRegionShort.UseSystemPasswordChar = false;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.label1.Location = new System.Drawing.Point(0, 80);
+			this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(120, 30);
+			this.label1.TabIndex = 20;
+			this.label1.Text = "Region";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// stbRegion
+			// 
+			this.stbRegion.AllowComma = false;
+			this.stbRegion.AllowDrop = true;
+			this.stbRegion.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbRegion.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbRegion.AutomaticValidation = true;
+			this.stbRegion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbRegion.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbRegion.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbRegion.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbRegion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbRegion.Location = new System.Drawing.Point(120, 80);
+			this.stbRegion.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbRegion.MaxLength = 50;
+			this.stbRegion.MinLength = -1;
+			this.stbRegion.Name = "stbRegion";
+			this.stbRegion.NumericOnly = false;
+			this.stbRegion.Placeholder = null;
+			this.stbRegion.RegularExpression = null;
+			this.stbRegion.Required = true;
+			this.stbRegion.Size = new System.Drawing.Size(360, 30);
+			this.stbRegion.Suffix = null;
+			this.stbRegion.TabIndex = 21;
+			this.stbRegion.TabStop = false;
+			this.stbRegion.UseSystemPasswordChar = false;
 			// 
 			// NewPartner
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.tlpNewPartner);
 			this.Name = "NewPartner";
-			this.Size = new System.Drawing.Size(480, 290);
+			this.Size = new System.Drawing.Size(480, 330);
 			this.tlpNewPartner.ResumeLayout(false);
 			this.tlpNewPartner.PerformLayout();
 			this.pnlPartnerRegionShort.ResumeLayout(false);
@@ -415,5 +470,7 @@ namespace LivingSmartForms.Views
         private System.Windows.Forms.Panel pnlPartnerRegionShort;
         private System.Windows.Forms.Label lblPartnerRegionFormat;
         private SmartControls.SmartTextBox stbRegionShort;
+		private SmartTextBox stbRegion;
+		private System.Windows.Forms.Label label1;
     }
 }

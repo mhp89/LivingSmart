@@ -8,8 +8,8 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IAskingPriceDB
     {
-        List<AskingPrice> ReadAskingPrices();
-        void UpdateAskingPrice(AskingPrice askingPrice);
-        int CreateAskingPrice(AskingPrice askingPrice);
+        List<AskingPrice> ReadAskingPrices(int caseId);
+        void UpdateAskingPrice(AskingPrice askingPrice, int caseId);
+        int CreateAskingPrice(AskingPrice askingPrice, int caseId);
     }
 }

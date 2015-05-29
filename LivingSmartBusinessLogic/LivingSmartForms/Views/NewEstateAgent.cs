@@ -24,8 +24,8 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				var estateAgent = EstateAgentController.Instance.MakeNewEstateAgent(stbEstateAgentName.Text, stbEstateAgentPhone.Text, stbEstateAgentEmail.Text, DateTime.Today);
-				EstateAgentController.Instance.AddEstateAgent(estateAgent);
+				EstateAgentController.Instance.MakeNewEstateAgent(stbEstateAgentName.Text, stbEstateAgentPhone.Text, stbEstateAgentEmail.Text, (DateTime) dafEstateAgentStartDate.GetDateTime());
+				EstateAgentController.Instance.SaveActiveEstateAgent();
 			}
 			return fielddataOk;
 		}
@@ -37,9 +37,8 @@ namespace LivingSmartForms.Views
 			fielddataOk &= stbEstateAgentName.Validate();
 			fielddataOk &= stbEstateAgentPhone.Validate();
 			fielddataOk &= stbEstateAgentEmail.Validate();
-
-			//TODO: Validate birthday
-
+			fielddataOk &= dafEstateAgentStartDate.Validate();
+			
 			return fielddataOk;
 		}
     }

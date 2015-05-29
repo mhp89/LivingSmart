@@ -86,9 +86,15 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO Neighborhood VALUES (@ZipCode, @Neighborhood, @Value); " + "SELECT CAST(scope_identity() AS int);"
             };
 
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.City.ZipCode;
+<<<<<<< HEAD
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.ZipCode;
             cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = neighborhood.Name;
             cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
+=======
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.City.ZipCode;
+            cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 50, "Neighborhood").Value = neighborhood.Name;
+            cmd.Parameters.Add("@Value", SqlDbType.Date, 50, "Value").Value = neighborhood.Value;
+>>>>>>> 7353230976306db7d014cae64e858733ee2c0b45
 
             try
             {

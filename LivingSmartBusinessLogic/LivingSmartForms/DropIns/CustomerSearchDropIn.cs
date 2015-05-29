@@ -13,6 +13,7 @@ using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
+using SmartControls;
 
 namespace LivingSmartForms.DropIns
 {

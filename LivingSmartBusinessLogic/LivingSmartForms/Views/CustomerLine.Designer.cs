@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class CustomerLine
@@ -70,7 +72,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomer.AutoSize = true;
 			this.slbCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomer.ForeColor = SmartColor.Light;
 			this.slbCustomer.Location = new System.Drawing.Point(81, 0);
 			this.slbCustomer.Name = "slbCustomer";
 			this.slbCustomer.Size = new System.Drawing.Size(138, 24);
@@ -84,7 +86,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerNo.AutoSize = true;
 			this.slbCustomerNo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomerNo.ForeColor = SmartColor.Light;
 			this.slbCustomerNo.Location = new System.Drawing.Point(0, 0);
 			this.slbCustomerNo.Name = "slbCustomerNo";
 			this.tlpCustomer.SetRowSpan(this.slbCustomerNo, 2);
@@ -99,7 +101,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerBirthday.AutoSize = true;
 			this.slbCustomerBirthday.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerBirthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomerBirthday.ForeColor = SmartColor.Light;
 			this.slbCustomerBirthday.Location = new System.Drawing.Point(81, 24);
 			this.slbCustomerBirthday.Name = "slbCustomerBirthday";
 			this.slbCustomerBirthday.Size = new System.Drawing.Size(138, 25);
@@ -113,7 +115,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerAddress.AutoSize = true;
 			this.slbCustomerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomerAddress.ForeColor = SmartColor.Light;
 			this.slbCustomerAddress.Location = new System.Drawing.Point(219, 0);
 			this.slbCustomerAddress.Name = "slbCustomerAddress";
 			this.slbCustomerAddress.Size = new System.Drawing.Size(152, 24);
@@ -127,7 +129,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerZipcode.AutoSize = true;
 			this.slbCustomerZipcode.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerZipcode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomerZipcode.ForeColor = SmartColor.Light;
 			this.slbCustomerZipcode.Location = new System.Drawing.Point(219, 24);
 			this.slbCustomerZipcode.Name = "slbCustomerZipcode";
 			this.slbCustomerZipcode.Size = new System.Drawing.Size(152, 25);
@@ -141,7 +143,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerPhone.AutoSize = true;
 			this.slbCustomerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomerPhone.ForeColor = SmartColor.Light;
 			this.slbCustomerPhone.Location = new System.Drawing.Point(371, 0);
 			this.slbCustomerPhone.Name = "slbCustomerPhone";
 			this.slbCustomerPhone.Size = new System.Drawing.Size(114, 24);
@@ -155,7 +157,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerEmail.AutoSize = true;
 			this.slbCustomerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbCustomerEmail.ForeColor = SmartColor.Light;
 			this.slbCustomerEmail.Location = new System.Drawing.Point(371, 24);
 			this.slbCustomerEmail.Name = "slbCustomerEmail";
 			this.slbCustomerEmail.Size = new System.Drawing.Size(114, 25);
@@ -169,15 +171,15 @@ namespace LivingSmartForms.Views
 			// 
 			this.btnEditCustomer.AutoSize = true;
 			this.btnEditCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnEditCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnEditCustomer.BackColor = SmartColor.Light;
 			this.btnEditCustomer.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnEditCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnEditCustomer.FlatAppearance.BorderSize = 0;
-			this.btnEditCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnEditCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnEditCustomer.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnEditCustomer.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnEditCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEditCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnEditCustomer.ForeColor = SmartColor.Dark;
 			this.btnEditCustomer.Location = new System.Drawing.Point(495, 10);
 			this.btnEditCustomer.Margin = new System.Windows.Forms.Padding(10);
 			this.btnEditCustomer.Name = "btnEditCustomer";

@@ -1,8 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic
 {
@@ -10,14 +12,21 @@ namespace LivingSmartBusinessLogic
     {
         private Dictionary<int, City> cities;
 
+		private ICityDB db;
+
         internal CityCatalog()
-        {
+		{
+			db = CityDBFactory.GetDBL();
             cities = new Dictionary<int, City>();
+
+			Load();
         }
 
         internal void Load()
-        {
-
+		{
+			var cityList = db.ReadCities();
+			foreach (var city in cityList)
+				AddToCatalog(city);
         }
 
         internal void AddToCatalog(City city)
@@ -31,5 +40,11 @@ namespace LivingSmartBusinessLogic
                 return cities[zipCode];
             return null;
         }
+
+		internal ReadOnlyCollection<City> GetCities()
+		{
+			var cityList = cities.Values.ToList();
+			return cityList.AsReadOnly();
+		}
     }
 }

@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Pages
 {
 	partial class EstateAgents
@@ -51,7 +53,7 @@ namespace LivingSmartForms.Pages
 			// 
 			// pnlSubmenuBorder
 			// 
-			this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.pnlSubmenuBorder.BackColor = SmartColor.Light;
 			this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 40);
 			this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
@@ -73,14 +75,14 @@ namespace LivingSmartForms.Pages
 			// 
 			this.btnNewEstateAgents.AutoSize = true;
 			this.btnNewEstateAgents.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNewEstateAgents.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewEstateAgents.BackColor = SmartColor.Light;
 			this.btnNewEstateAgents.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnNewEstateAgents.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNewEstateAgents.FlatAppearance.BorderSize = 0;
-			this.btnNewEstateAgents.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewEstateAgents.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewEstateAgents.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnNewEstateAgents.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnNewEstateAgents.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewEstateAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewEstateAgents.ForeColor = SmartColor.Dark;
 			this.btnNewEstateAgents.Location = new System.Drawing.Point(0, 0);
 			this.btnNewEstateAgents.Name = "btnNewEstateAgents";
 			this.btnNewEstateAgents.Size = new System.Drawing.Size(113, 30);
@@ -92,7 +94,7 @@ namespace LivingSmartForms.Pages
 			// sblActiveCases
 			// 
 			this.sblActiveCases.AutoSize = true;
-			this.sblActiveCases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.sblActiveCases.ForeColor = SmartColor.Light;
 			this.sblActiveCases.Location = new System.Drawing.Point(123, 7);
 			this.sblActiveCases.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.sblActiveCases.Name = "sblActiveCases";
@@ -121,7 +123,7 @@ namespace LivingSmartForms.Pages
 			this.hdrEstateAgents.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrEstateAgents.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.hdrEstateAgents.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.hdrEstateAgents.ForeColor = SmartColor.Light;
 			this.hdrEstateAgents.Location = new System.Drawing.Point(10, 55);
 			this.hdrEstateAgents.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.hdrEstateAgents.Name = "hdrEstateAgents";

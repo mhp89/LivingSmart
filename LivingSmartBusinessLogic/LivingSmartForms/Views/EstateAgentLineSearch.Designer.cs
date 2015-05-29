@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
 	partial class EstateAgentLineSearch
@@ -40,7 +42,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbName.AutoSize = true;
 			this.slbName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.slbName.ForeColor = SmartColor.Dark;
 			this.slbName.Location = new System.Drawing.Point(141, 0);
 			this.slbName.Name = "slbName";
 			this.slbName.Size = new System.Drawing.Size(239, 22);
@@ -53,7 +55,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbEstateAgentNo.AutoSize = true;
 			this.slbEstateAgentNo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbEstateAgentNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.slbEstateAgentNo.ForeColor = SmartColor.Dark;
 			this.slbEstateAgentNo.Location = new System.Drawing.Point(0, 0);
 			this.slbEstateAgentNo.Name = "slbEstateAgentNo";
 			this.tlpCustomer.SetRowSpan(this.slbEstateAgentNo, 2);
@@ -67,7 +69,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbPhone.AutoSize = true;
 			this.slbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.slbPhone.ForeColor = SmartColor.Dark;
 			this.slbPhone.Location = new System.Drawing.Point(141, 22);
 			this.slbPhone.Name = "slbPhone";
 			this.slbPhone.Size = new System.Drawing.Size(239, 22);
@@ -98,7 +100,7 @@ namespace LivingSmartForms.Views
 			// 
 			// pnlLine
 			// 
-			this.pnlLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.pnlLine.BackColor = SmartColor.Dark;
 			this.tlpCustomer.SetColumnSpan(this.pnlLine, 2);
 			this.pnlLine.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.pnlLine.Location = new System.Drawing.Point(0, 49);

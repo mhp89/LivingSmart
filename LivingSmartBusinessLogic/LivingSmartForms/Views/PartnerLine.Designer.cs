@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class PartnerLine
@@ -72,7 +74,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbParterName.AutoSize = true;
 			this.slbParterName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbParterName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbParterName.ForeColor = SmartColor.Light;
 			this.slbParterName.Location = new System.Drawing.Point(0, 0);
 			this.slbParterName.Name = "slbParterName";
 			this.slbParterName.Size = new System.Drawing.Size(243, 24);
@@ -86,7 +88,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbPartnerAddress.AutoSize = true;
 			this.slbPartnerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbPartnerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbPartnerAddress.ForeColor = SmartColor.Light;
 			this.slbPartnerAddress.Location = new System.Drawing.Point(0, 24);
 			this.slbPartnerAddress.Name = "slbPartnerAddress";
 			this.slbPartnerAddress.Size = new System.Drawing.Size(243, 25);
@@ -100,7 +102,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbPartnerPhone.AutoSize = true;
 			this.slbPartnerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbPartnerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbPartnerPhone.ForeColor = SmartColor.Light;
 			this.slbPartnerPhone.Location = new System.Drawing.Point(243, 0);
 			this.slbPartnerPhone.Name = "slbPartnerPhone";
 			this.slbPartnerPhone.Size = new System.Drawing.Size(242, 24);
@@ -114,7 +116,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbPartnerEmail.AutoSize = true;
 			this.slbPartnerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbPartnerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbPartnerEmail.ForeColor = SmartColor.Light;
 			this.slbPartnerEmail.Location = new System.Drawing.Point(243, 24);
 			this.slbPartnerEmail.Name = "slbPartnerEmail";
 			this.slbPartnerEmail.Size = new System.Drawing.Size(242, 25);
@@ -128,15 +130,15 @@ namespace LivingSmartForms.Views
 			// 
 			this.btnEditPartner.AutoSize = true;
 			this.btnEditPartner.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnEditPartner.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnEditPartner.BackColor = SmartColor.Light;
 			this.btnEditPartner.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnEditPartner.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditPartner.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnEditPartner.FlatAppearance.BorderSize = 0;
-			this.btnEditPartner.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnEditPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnEditPartner.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnEditPartner.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnEditPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEditPartner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnEditPartner.ForeColor = SmartColor.Dark;
 			this.btnEditPartner.Location = new System.Drawing.Point(495, 10);
 			this.btnEditPartner.Margin = new System.Windows.Forms.Padding(10);
 			this.btnEditPartner.Name = "btnEditPartner";

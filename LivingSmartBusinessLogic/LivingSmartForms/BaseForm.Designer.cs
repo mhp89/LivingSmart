@@ -45,7 +45,7 @@ namespace LivingSmartForms
             // 
             // pnlMenuHolder
             // 
-            this.pnlMenuHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.pnlMenuHolder.BackColor = SmartColor.Light;
             this.pnlMenuHolder.Controls.Add(this.flpMenuRight);
             this.pnlMenuHolder.Controls.Add(this.flpMenuLeft);
             this.pnlMenuHolder.Dock = System.Windows.Forms.DockStyle.Top;
@@ -91,7 +91,7 @@ namespace LivingSmartForms
             // 
             this.pnlDropInHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlDropInHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.pnlDropInHolder.BackColor = SmartColor.Light;
             this.pnlDropInHolder.Location = new System.Drawing.Point(0, 0);
             this.pnlDropInHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlDropInHolder.Name = "pnlDropInHolder";
@@ -101,7 +101,7 @@ namespace LivingSmartForms
             // pnlPartnersHolder
             // 
             this.pnlPartnersHolder.AutoSize = true;
-            this.pnlPartnersHolder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.pnlPartnersHolder.BackColor = SmartColor.Light;
             this.pnlPartnersHolder.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlPartnersHolder.Location = new System.Drawing.Point(1324, 30);
             this.pnlPartnersHolder.Margin = new System.Windows.Forms.Padding(0);
@@ -123,7 +123,7 @@ namespace LivingSmartForms
             // BaseForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.BackColor = SmartColor.Dark;
             this.ClientSize = new System.Drawing.Size(1324, 741);
             this.Controls.Add(this.pnlMasterContent);
             this.Controls.Add(this.pnlPartnersHolder);

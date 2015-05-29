@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class CaseLineSimple
@@ -70,7 +72,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbCaseNo.AutoSize = true;
             this.slbCaseNo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbCaseNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbCaseNo.ForeColor = SmartColor.Light;
             this.slbCaseNo.Location = new System.Drawing.Point(0, 0);
             this.slbCaseNo.Name = "slbCaseNo";
             this.tlpCaseLine.SetRowSpan(this.slbCaseNo, 2);
@@ -85,7 +87,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbSeller.AutoSize = true;
             this.slbSeller.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbSeller.ForeColor = SmartColor.Light;
             this.slbSeller.Location = new System.Drawing.Point(63, 0);
             this.slbSeller.Name = "slbSeller";
             this.slbSeller.Size = new System.Drawing.Size(139, 25);
@@ -99,7 +101,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbStatus.AutoSize = true;
             this.slbStatus.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbStatus.ForeColor = SmartColor.Light;
             this.slbStatus.Location = new System.Drawing.Point(63, 25);
             this.slbStatus.Name = "slbStatus";
             this.slbStatus.Size = new System.Drawing.Size(139, 25);
@@ -113,7 +115,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbProperty.AutoSize = true;
             this.slbProperty.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbProperty.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbProperty.ForeColor = SmartColor.Light;
             this.slbProperty.Location = new System.Drawing.Point(202, 0);
             this.slbProperty.Name = "slbProperty";
             this.slbProperty.Size = new System.Drawing.Size(145, 25);
@@ -127,7 +129,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbPropertyType.AutoSize = true;
             this.slbPropertyType.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPropertyType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbPropertyType.ForeColor = SmartColor.Light;
             this.slbPropertyType.Location = new System.Drawing.Point(202, 25);
             this.slbPropertyType.Name = "slbPropertyType";
             this.slbPropertyType.Size = new System.Drawing.Size(145, 25);
@@ -141,7 +143,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbPrice.AutoSize = true;
             this.slbPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbPrice.ForeColor = SmartColor.Light;
             this.slbPrice.Location = new System.Drawing.Point(347, 0);
             this.slbPrice.Name = "slbPrice";
             this.slbPrice.Size = new System.Drawing.Size(143, 25);
@@ -155,7 +157,7 @@ namespace LivingSmartForms.Views
             // 
             this.slbPriceTrend.AutoSize = true;
             this.slbPriceTrend.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbPriceTrend.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.slbPriceTrend.ForeColor = SmartColor.Light;
             this.slbPriceTrend.Location = new System.Drawing.Point(347, 25);
             this.slbPriceTrend.Name = "slbPriceTrend";
             this.slbPriceTrend.Size = new System.Drawing.Size(143, 25);
@@ -169,15 +171,15 @@ namespace LivingSmartForms.Views
             // 
             this.btnViewCase.AutoSize = true;
             this.btnViewCase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnViewCase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.btnViewCase.BackColor = SmartColor.Light;
             this.btnViewCase.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.btnViewCase.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnViewCase.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btnViewCase.FlatAppearance.BorderSize = 0;
-            this.btnViewCase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnViewCase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnViewCase.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+            this.btnViewCase.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
             this.btnViewCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnViewCase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.btnViewCase.ForeColor = SmartColor.Dark;
             this.btnViewCase.Location = new System.Drawing.Point(500, 10);
             this.btnViewCase.Margin = new System.Windows.Forms.Padding(10);
             this.btnViewCase.Name = "btnViewCase";

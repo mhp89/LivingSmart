@@ -267,18 +267,18 @@ namespace LivingSmartBusinessLogic.Controller
         #region PropertyMethods
         public void SetSeller(Customer seller)
         {
-            if (activeCase.Seller != seller)
-                activeCase.Seller = seller;
+			if (activeCase.Seller != seller)
+				activeCase.Seller = seller;
         }
         public void SetBuyer(Customer buyer)
         {
-            if (activeCase.Buyer != buyer)
-                activeCase.Buyer = buyer;
+			if (activeCase.Buyer != buyer)
+				activeCase.Buyer = buyer;
         }
         public void SetEstateAgent(EstateAgent estateAgent)
         {
-            if (activeCase.EstateAgent != estateAgent)
-                activeCase.EstateAgent = estateAgent;
+			if (activeCase.EstateAgent != estateAgent)
+				activeCase.EstateAgent = estateAgent;
         }
         public void SetCreationDate(DateTime creationDate)
         {
@@ -325,16 +325,15 @@ namespace LivingSmartBusinessLogic.Controller
             if (activeCase.Address != address)
                 activeCase.Address = address;
         }
-        public void SetCity(int zipCode)
+        public void SetCity(City city)
         {
-            var city = CityController.Instance.GetCity(zipCode);
-            if (activeCase.City != city)
-                activeCase.City = city;
+			if (activeCase.City != city)
+				activeCase.City = city;
         }
         public void SetPropertyType(PropertyType propertyType)
         {
-            if (activeCase.PropertyType != propertyType)
-                activeCase.PropertyType = propertyType;
+			if (activeCase.PropertyType != propertyType)
+				activeCase.PropertyType = propertyType;
         }
         public void SetPublicRating(long publicRating)
         {

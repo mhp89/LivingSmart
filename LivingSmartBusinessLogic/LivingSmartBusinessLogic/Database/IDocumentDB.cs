@@ -9,7 +9,7 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal interface IDocumentDB
     {
-        List<Document> ReadDocuments();
+        Dictionary<int, List<Document>> ReadDocuments();
         List<Document> ReadDocuments(int caseId);
         void UpdateDocument(Document document, int caseId);
         int CreateDocument(Document document, int caseId);

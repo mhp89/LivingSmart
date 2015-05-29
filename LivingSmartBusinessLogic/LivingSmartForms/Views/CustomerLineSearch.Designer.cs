@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class CustomerLineSearch
@@ -40,7 +42,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerNo.AutoSize = true;
 			this.slbCustomerNo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.slbCustomerNo.ForeColor = SmartColor.Dark;
 			this.slbCustomerNo.Location = new System.Drawing.Point(0, 0);
 			this.slbCustomerNo.Name = "slbCustomerNo";
 			this.tlpCustomer.SetRowSpan(this.slbCustomerNo, 2);
@@ -55,7 +57,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomer.AutoSize = true;
 			this.slbCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.slbCustomer.ForeColor = SmartColor.Dark;
 			this.slbCustomer.Location = new System.Drawing.Point(141, 0);
 			this.slbCustomer.Name = "slbCustomer";
 			this.slbCustomer.Size = new System.Drawing.Size(239, 22);
@@ -89,7 +91,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.slbCustomerPhone.AutoSize = true;
 			this.slbCustomerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbCustomerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.slbCustomerPhone.ForeColor = SmartColor.Dark;
 			this.slbCustomerPhone.Location = new System.Drawing.Point(141, 22);
 			this.slbCustomerPhone.Name = "slbCustomerPhone";
 			this.slbCustomerPhone.Size = new System.Drawing.Size(239, 22);
@@ -101,7 +103,7 @@ namespace LivingSmartForms.Views
 			// 
 			// pnlLine
 			// 
-			this.pnlLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.pnlLine.BackColor = SmartColor.Dark;
 			this.tlpCustomer.SetColumnSpan(this.pnlLine, 2);
 			this.pnlLine.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.pnlLine.Location = new System.Drawing.Point(0, 49);

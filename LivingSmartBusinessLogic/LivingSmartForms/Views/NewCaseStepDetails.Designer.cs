@@ -1,3 +1,6 @@
+using LivingSmartForms.Classes;
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class NewCaseStepDetails
@@ -48,7 +51,7 @@ namespace LivingSmartForms.Views
 			this.hdrPropertyDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrPropertyDetails.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.hdrPropertyDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.hdrPropertyDetails.ForeColor = SmartColor.Dark;
 			this.hdrPropertyDetails.Location = new System.Drawing.Point(0, 10);
 			this.hdrPropertyDetails.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.hdrPropertyDetails.Name = "hdrPropertyDetails";
@@ -87,7 +90,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.lblDetailsPictures.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblDetailsPictures.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDetailsPictures.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDetailsPictures.ForeColor = SmartColor.Dark;
 			this.lblDetailsPictures.Location = new System.Drawing.Point(0, 220);
 			this.lblDetailsPictures.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPictures.Name = "lblDetailsPictures";
@@ -102,11 +105,11 @@ namespace LivingSmartForms.Views
 			this.stbDetailsDescription.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDetailsDescription.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDetailsDescription.AutomaticValidation = true;
-			this.stbDetailsDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+	        this.stbDetailsDescription.BackColor =  SmartColor.Light;
 			this.stbDetailsDescription.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDetailsDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbDetailsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDetailsDescription.ForeColor = SmartColor.Dark;
 			this.stbDetailsDescription.Location = new System.Drawing.Point(130, 120);
 			this.stbDetailsDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsDescription.MaxLength = 500;
@@ -127,11 +130,11 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPrice.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDetailsPrice.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDetailsPrice.AutomaticValidation = true;
-			this.stbDetailsPrice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDetailsPrice.BackColor = SmartColor.Light;
 			this.stbDetailsPrice.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDetailsPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsPrice.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbDetailsPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDetailsPrice.ForeColor = SmartColor.Dark;
 			this.stbDetailsPrice.Location = new System.Drawing.Point(130, 80);
 			this.stbDetailsPrice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsPrice.MaxLength = 50;
@@ -150,7 +153,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.lblDetailsDescription.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblDetailsDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDetailsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDetailsDescription.ForeColor = SmartColor.Dark;
 			this.lblDetailsDescription.Location = new System.Drawing.Point(0, 120);
 			this.lblDetailsDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsDescription.Name = "lblDetailsDescription";
@@ -164,7 +167,7 @@ namespace LivingSmartForms.Views
 			this.lblDetailsPublicEvaluation.AutoSize = true;
 			this.lblDetailsPublicEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblDetailsPublicEvaluation.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDetailsPublicEvaluation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDetailsPublicEvaluation.ForeColor = SmartColor.Dark;
 			this.lblDetailsPublicEvaluation.Location = new System.Drawing.Point(0, 0);
 			this.lblDetailsPublicEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPublicEvaluation.Name = "lblDetailsPublicEvaluation";
@@ -178,7 +181,7 @@ namespace LivingSmartForms.Views
 			this.lblDetailsEvaluation.AutoSize = true;
 			this.lblDetailsEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblDetailsEvaluation.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDetailsEvaluation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDetailsEvaluation.ForeColor = SmartColor.Dark;
 			this.lblDetailsEvaluation.Location = new System.Drawing.Point(0, 40);
 			this.lblDetailsEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsEvaluation.Name = "lblDetailsEvaluation";
@@ -191,7 +194,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.lblDetailsPrice.AutoSize = true;
 			this.lblDetailsPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDetailsPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDetailsPrice.ForeColor = SmartColor.Dark;
 			this.lblDetailsPrice.Location = new System.Drawing.Point(0, 80);
 			this.lblDetailsPrice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPrice.Name = "lblDetailsPrice";
@@ -206,11 +209,11 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPublicEvaluation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDetailsPublicEvaluation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDetailsPublicEvaluation.AutomaticValidation = true;
-			this.stbDetailsPublicEvaluation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDetailsPublicEvaluation.BackColor = SmartColor.Light;
 			this.stbDetailsPublicEvaluation.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDetailsPublicEvaluation.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsPublicEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbDetailsPublicEvaluation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDetailsPublicEvaluation.ForeColor = SmartColor.Dark;
 			this.stbDetailsPublicEvaluation.Location = new System.Drawing.Point(130, 0);
 			this.stbDetailsPublicEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsPublicEvaluation.MaxLength = 50;
@@ -231,11 +234,11 @@ namespace LivingSmartForms.Views
 			this.stbDetailsEvaluation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDetailsEvaluation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDetailsEvaluation.AutomaticValidation = true;
-			this.stbDetailsEvaluation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDetailsEvaluation.BackColor = SmartColor.Light;
 			this.stbDetailsEvaluation.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDetailsEvaluation.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbDetailsEvaluation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDetailsEvaluation.ForeColor = SmartColor.Dark;
 			this.stbDetailsEvaluation.Location = new System.Drawing.Point(130, 40);
 			this.stbDetailsEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsEvaluation.MaxLength = 50;
