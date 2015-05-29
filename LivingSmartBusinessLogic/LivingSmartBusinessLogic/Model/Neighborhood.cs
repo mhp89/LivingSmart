@@ -10,7 +10,7 @@ namespace LivingSmartBusinessLogic
         
         #region Private Fields
 
-        //private int _zipCode;
+        private int _zipCode;
         private string _name;
         private int _value;
 
@@ -20,7 +20,7 @@ namespace LivingSmartBusinessLogic
 
         public int Id { get; private set; }
         public City City { get; private set; }
-        //public int ZipCode { get { return _zipCode; } internal set { _zipCode = value; } }
+        public int ZipCode { get { return _zipCode; } internal set { _zipCode = value; } }
         public string Name { get { return _name; } internal set { _name = value; } }
         public int Value { get { return _value; } internal set { _value = value; } }
 
@@ -36,6 +36,14 @@ namespace LivingSmartBusinessLogic
         {
             Id = id;
             City = city;
+            Name = name;
+            Value = value;
+        }
+
+        internal Neighborhood(int id, int zipCode, string name, int value)
+        {
+            Id = id;
+            ZipCode = zipCode;
             Name = name;
             Value = value;
         }

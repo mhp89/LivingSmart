@@ -23,7 +23,7 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				var partner = PartnerController.Instance.MakeNewPartner(stbName.Text, stbPhone.Text, stbEmail.Text, stbCity.Text, "", stbRegionShort.Text, stbTimeZone.Text);
+				var partner = PartnerController.Instance.MakeNewPartner(stbName.Text, stbPhone.Text, stbEmail.Text, stbCountry.Text, stbCity.Text, "", stbRegionShort.Text, stbTimeZone.Text);
 				PartnerController.Instance.AddPartner(partner);
 			}
 			return fielddataOk;

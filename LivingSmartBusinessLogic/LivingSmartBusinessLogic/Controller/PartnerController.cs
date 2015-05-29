@@ -29,9 +29,11 @@ namespace LivingSmartBusinessLogic.Controller
             partnerCatalog.AddToCatalog(partner);
         }
 
-        public Partner MakeNewPartner(string name, string telephone, string email, string city, string region, string regionShort, string timeZone)
+        public Partner MakeNewPartner(string name, string telephone, string email, 
+            string country, string city, string region, string regionShort, string timeZone)
         {
-            return new Partner(name, telephone, email, city, region, regionShort, timeZone);
+            return new Partner(name, telephone, email, country, city, 
+                region, regionShort, timeZone);
         }
         
         public Partner ReadPartner(int id)
