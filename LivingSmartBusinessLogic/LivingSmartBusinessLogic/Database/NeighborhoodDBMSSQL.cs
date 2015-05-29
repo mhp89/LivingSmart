@@ -27,7 +27,7 @@ namespace LivingSmartBusinessLogic.DB
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    int zipCode = (int)reader["AZipCodedId"];
+                    int zipCode = (int)reader["ZipCoded"];
                     string name = (string)reader["Neighborhood"];
                     int value = (int)reader["Value"];
 

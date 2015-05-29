@@ -10,7 +10,7 @@ namespace LivingSmartBusinessLogic.DB
     {
         public static CaseDBMSSQL GetDBL()
         {
-            if (Properties.Settings.Default.Database == "MSSQL")
+            if (Properties.Settings.Default.DatabaseType == "MSSQL")
                 return new CaseDBMSSQL();
 //            if (Properties.Settings.Default.Database == "XML")
 //                return new CustomerDBXML();

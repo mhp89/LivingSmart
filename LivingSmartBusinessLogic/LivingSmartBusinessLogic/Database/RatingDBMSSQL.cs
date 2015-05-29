@@ -11,12 +11,45 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class RatingDBMSSQL : IRatingDB
     {
-        public List<Rating> ReadRatings()
+        public List<Rating> ReadRatings(int caseId)
         {
-            throw new NotImplementedException();
+            List<Rating> ratingList = new List<Rating>();
+            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = connection,
+                CommandText = "SELECT * FROM Rating WHERE CaseID = " + caseId + ";",
+            };
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int ratingId = (int)reader["RatingId"];
+                    long systemValue = (long)reader["SystemValue"];
+                    long estateAgentValue = (long)reader["EstateAgentValue"];
+                    DateTime date = (DateTime)reader["Date"];
+                    int estateAgentId = (int)reader["EstateAgentId"];
+
+                    Rating rating = new Rating(ratingId, estateAgentValue, systemValue, date);
+                    ratingList.Add(rating);
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return ratingList;
         }
 
-        public Dictionary<int, List<Rating>> ReadRatings(int caseId)
+        public Dictionary<int, List<Rating>> ReadRatings()
         {
             throw new NotImplementedException();
         }

@@ -10,7 +10,7 @@ namespace LivingSmartBusinessLogic.DB
     {
         public static IDistanceToDB GetDBL()
         {
-            if (Properties.Settings.Default.Database == "MSSQL")
+            if (Properties.Settings.Default.DatabaseType == "MSSQL")
                 return new DistanceToDBMSSQL();
 //            if (Properties.Settings.Default.Database == "XML")
 //                return new CustomerDBXML();

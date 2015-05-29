@@ -10,7 +10,7 @@ namespace LivingSmartBusinessLogic.DB
     {
         public static IDocumentDB GetDBL()
         {
-            if (Properties.Settings.Default.Database == "MSSQL")
+            if (Properties.Settings.Default.DatabaseType == "MSSQL")
                 return new DocumentDBMSSQL();
 //            if (Properties.Settings.Default.Database == "XML")
 //                return new CustomerDBXML();
