@@ -76,7 +76,7 @@
     <Compile Include="Controller\AppointmentController.cs" />
     <Compile Include="Model\AskingPrice.cs" />
     <Compile Include="Model\Case.cs" />
-    <Compile Include="Model\CaseCatalog.cs" />
+    <Compile Include="Catalog\CaseCatalog.cs" />
     <Compile Include="Controller\CaseController.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Catalog\CustomerCatalog.cs" />

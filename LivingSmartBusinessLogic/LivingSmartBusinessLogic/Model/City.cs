@@ -7,25 +7,24 @@ namespace LivingSmartBusinessLogic
 {
     public class City
     {
-        private int zipCode;
-        private string district;
-
         #region Private Fields
 
-
+        private int _zipcode;
+        private string _district;
 
         #endregion
 
         #region Properties
 
-
+        public int ZipCode { get { return _zipcode; } internal set { _zipcode = value; } }
+        public string Seller { get { return _district; } internal set { _district = value; } }
 
         #endregion
 
         internal City(int zipCode, string district)
         {
-            this.zipCode = zipCode;
-            this.district = district;
+            _zipcode = zipCode;
+            _district = district;
         }
 
         #region Methods
