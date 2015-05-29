@@ -13,12 +13,66 @@ namespace LivingSmartBusinessLogic.DB
     {
         public List<Neighborhood> ReadNeighborhoods()
         {
-            throw new NotImplementedException();
+            List<Neighborhood> neighborhoodList = new List<Neighborhood>();
+            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = connection,
+                CommandText = "SELECT * FROM Neighborhood;",
+            };
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int zipCode = (int)reader["AZipCodedId"];
+                    string name = (string)reader["Neighborhood"];
+                    int value = (int)reader["Value"];
+
+                    Neighborhood neighborhood = new Neighborhood(zipCode, name, value);
+                    neighborhoodList.Add(neighborhood);
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return neighborhoodList;
         }
 
         public void UpdateNeighborhood(Neighborhood neighborhood)
         {
-            throw new NotImplementedException();
+            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = connection,
+                CommandText = "UPDATE Neighborhood SET Value = (@Value) WHERE ZipCode = (@ZipCode) AND Neighborhood  = (@Neighborhood)"
+            };
+
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.ZipCode;
+            cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = neighborhood.Name;
+            cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
+
+            try
+            {
+                connection.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
         }
 
         public int CreateNeighborhood(Neighborhood neighborhood)
@@ -32,9 +86,9 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO Neighborhood VALUES (@ZipCode, @Neighborhood, @Value); " + "SELECT CAST(scope_identity() AS int);"
             };
 
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.ZipCode;
-            cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 50, "Neighborhood").Value = neighborhood.Name;
-            cmd.Parameters.Add("@Value", SqlDbType.Date, 50, "Value").Value = neighborhood.Value;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.ZipCode;
+            cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = neighborhood.Name;
+            cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
 
             try
             {

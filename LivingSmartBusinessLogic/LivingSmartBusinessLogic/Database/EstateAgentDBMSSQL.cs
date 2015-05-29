@@ -32,7 +32,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string)reader["Telephone"];
                     string email = (string)reader["Email"];
                     DateTime startingDate = (DateTime)reader["StartingDate"];
-                    DateTime terminationDate = (DateTime)reader["StartingDate"];
+                    DateTime terminationDate = (DateTime)reader["TerminationDate"];
 
                     EstateAgent estateAgent = new EstateAgent(estateAgentId, name, telephone, email, startingDate, terminationDate);
                     estateAgentList.Add(estateAgent);
