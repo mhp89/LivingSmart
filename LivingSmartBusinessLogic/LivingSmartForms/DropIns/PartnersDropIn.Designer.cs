@@ -55,7 +55,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// analogClock1
 			// 
-			this.analogClock1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.analogClock1.ForeColor = SmartColor.Dark;
 			this.analogClock1.Location = new System.Drawing.Point(0, 0);
 			this.analogClock1.Margin = new System.Windows.Forms.Padding(0);
 			this.analogClock1.Name = "analogClock1";
@@ -79,7 +79,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// panel2
 			// 
-			this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.panel2.BackColor = SmartColor.Dark;
 			this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.panel2.Location = new System.Drawing.Point(0, 93);
 			this.panel2.Name = "panel2";

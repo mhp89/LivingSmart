@@ -25,13 +25,13 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				var customer = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
+				CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
 					(DateTime) dafCustomerBirthday.GetDateTime(),
 					stbCustomerAddress.Text,
 					Convert.ToInt32(stbCustomerZipCode.Text),
 					stbCustomerEmail.Text,
 					stbCustomerPhone.Text);
-				CustomerController.Instance.AddCustomer(customer);
+				CustomerController.Instance.SaveActiveCustomer();
 			}
 			return fielddataOk;
 		}

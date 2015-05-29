@@ -1,4 +1,5 @@
 using System.Windows.Forms;
+using SmartControls;
 
 namespace LivingSmartForms.Classes
 {
@@ -37,7 +38,7 @@ namespace LivingSmartForms.Classes
 			// 
 			// pnlTopBorder
 			// 
-			this.pnlTopBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.pnlTopBorder.BackColor = SmartColor.Dark;
 			this.pnlTopBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlTopBorder.Location = new System.Drawing.Point(0, 0);
 			this.pnlTopBorder.Margin = new System.Windows.Forms.Padding(0);
@@ -47,7 +48,7 @@ namespace LivingSmartForms.Classes
 			// 
 			// pnlLeftBorder
 			// 
-			this.pnlLeftBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.pnlLeftBorder.BackColor = SmartColor.Dark;
 			this.pnlLeftBorder.Dock = System.Windows.Forms.DockStyle.Left;
 			this.pnlLeftBorder.Location = new System.Drawing.Point(0, 2);
 			this.pnlLeftBorder.Margin = new System.Windows.Forms.Padding(0);
@@ -59,14 +60,14 @@ namespace LivingSmartForms.Classes
 			// 
 			this.btnClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnClose.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnClose.BackColor = SmartColor.Light;
 			this.btnClose.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnClose.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnClose.FlatAppearance.BorderSize = 0;
-			this.btnClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnClose.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnClose.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnClose.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnClose.ForeColor = SmartColor.Dark;
 			this.btnClose.Location = new System.Drawing.Point(360, 10);
 			this.btnClose.Name = "btnClose";
 			this.btnClose.Padding = new System.Windows.Forms.Padding(0);

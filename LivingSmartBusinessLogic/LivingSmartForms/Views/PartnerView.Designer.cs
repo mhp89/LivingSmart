@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
 	partial class PartnerView
@@ -37,7 +39,7 @@ namespace LivingSmartForms.Views
 			// 
 			// analogClock
 			// 
-			this.analogClock.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.analogClock.ForeColor = SmartColor.Dark;
 			this.analogClock.Location = new System.Drawing.Point(10, 10);
 			this.analogClock.Margin = new System.Windows.Forms.Padding(10, 10, 0, 10);
 			this.analogClock.Name = "analogClock";

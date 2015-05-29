@@ -20,15 +20,27 @@ namespace LivingSmartForms.Pages
 			: base(baseForm)
 		{
 			InitializeComponent();
+		}
+		private void UpdateList()
+		{
+			clsEstateAgents.SuspendLayout();
 
-
-			//CustomerController.Instance.
-			for (int i = 0; i < 10; i++)
+			clsEstateAgents.ClearList();
+			var estateAgents = EstateAgentController.Instance.GetEstateAgents();
+			foreach (var estateAgent in estateAgents)
 			{
-				var control = new EstateAgentLine();
+				var control = new EstateAgentLine(baseForm, estateAgent);
 				control.Margin = Padding.Empty;
-				clsEstateAgents.AddControl(control);
+				clsEstateAgents.AddControl(control, true);
 			}
+			sblActiveCases.Text = estateAgents.Count.ToString();
+
+			clsEstateAgents.ResumeLayout();
+		}
+
+		public override void OnShow()
+		{
+			UpdateList();
 		}
 
 		private void btnNewEstateAgents_Click(object sender, EventArgs e)

@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms
 {
     partial class EstateAgentLine
@@ -31,8 +33,6 @@ namespace LivingSmartForms
 			this.tlpEmployee = new System.Windows.Forms.TableLayoutPanel();
 			this.btnEditEstateAgent = new SmartControls.SmartButton();
 			this.slbName = new SmartControls.SmartLabel();
-			this.slbAddress = new SmartControls.SmartLabel();
-			this.slbZipcode = new SmartControls.SmartLabel();
 			this.slbHireDate = new SmartControls.SmartLabel();
 			this.slbPhone = new SmartControls.SmartLabel();
 			this.slbEmail = new SmartControls.SmartLabel();
@@ -50,8 +50,6 @@ namespace LivingSmartForms
 			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
 			this.tlpEmployee.Controls.Add(this.btnEditEstateAgent, 4, 0);
 			this.tlpEmployee.Controls.Add(this.slbName, 1, 0);
-			this.tlpEmployee.Controls.Add(this.slbAddress, 2, 0);
-			this.tlpEmployee.Controls.Add(this.slbZipcode, 2, 1);
 			this.tlpEmployee.Controls.Add(this.slbHireDate, 1, 1);
 			this.tlpEmployee.Controls.Add(this.slbPhone, 3, 0);
 			this.tlpEmployee.Controls.Add(this.slbEmail, 3, 1);
@@ -91,53 +89,27 @@ namespace LivingSmartForms
 			// slbName
 			// 
 			this.slbName.AutoSize = true;
+			this.tlpEmployee.SetColumnSpan(this.slbName, 2);
 			this.slbName.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.slbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.slbName.Location = new System.Drawing.Point(105, 0);
 			this.slbName.Name = "slbName";
-			this.slbName.Size = new System.Drawing.Size(127, 24);
+			this.slbName.Size = new System.Drawing.Size(271, 24);
 			this.slbName.TabIndex = 2;
 			this.slbName.Text = "Medarbejders navn";
 			this.slbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			this.slbName.Title = "Navn:";
 			this.slbName.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			// 
-			// slbAddress
-			// 
-			this.slbAddress.AutoSize = true;
-			this.slbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.slbAddress.Location = new System.Drawing.Point(232, 0);
-			this.slbAddress.Name = "slbAddress";
-			this.slbAddress.Size = new System.Drawing.Size(144, 24);
-			this.slbAddress.TabIndex = 3;
-			this.slbAddress.Text = "Gadenavn og nummer";
-			this.slbAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.slbAddress.Title = "Adresse:";
-			this.slbAddress.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			// 
-			// slbZipcode
-			// 
-			this.slbZipcode.AutoSize = true;
-			this.slbZipcode.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbZipcode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.slbZipcode.Location = new System.Drawing.Point(232, 24);
-			this.slbZipcode.Name = "slbZipcode";
-			this.slbZipcode.Size = new System.Drawing.Size(144, 25);
-			this.slbZipcode.TabIndex = 4;
-			this.slbZipcode.Text = "xxxx by";
-			this.slbZipcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			this.slbZipcode.Title = "Postnr og by:";
-			this.slbZipcode.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-			// 
 			// slbHireDate
 			// 
 			this.slbHireDate.AutoSize = true;
+			this.tlpEmployee.SetColumnSpan(this.slbHireDate, 2);
 			this.slbHireDate.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.slbHireDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.slbHireDate.Location = new System.Drawing.Point(105, 24);
 			this.slbHireDate.Name = "slbHireDate";
-			this.slbHireDate.Size = new System.Drawing.Size(127, 25);
+			this.slbHireDate.Size = new System.Drawing.Size(271, 25);
 			this.slbHireDate.TabIndex = 5;
 			this.slbHireDate.Text = "xx yyy zzzz";
 			this.slbHireDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,12 +159,12 @@ namespace LivingSmartForms
 			this.slbEmployeeNo.Title = "Medarbejdernr:";
 			this.slbEmployeeNo.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			// 
-			// EmployeeLine
+			// EstateAgentLine
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.tlpEmployee);
 			this.Margin = new System.Windows.Forms.Padding(2);
-			this.Name = "EmployeeLine";
+			this.Name = "EstateAgentLine";
 			this.Size = new System.Drawing.Size(600, 49);
 			this.tlpEmployee.ResumeLayout(false);
 			this.tlpEmployee.PerformLayout();
@@ -203,9 +175,7 @@ namespace LivingSmartForms
         #endregion
 
 		private System.Windows.Forms.TableLayoutPanel tlpEmployee;
-        private SmartControls.SmartLabel slbName;
-        private SmartControls.SmartLabel slbAddress;
-        private SmartControls.SmartLabel slbZipcode;
+		private SmartControls.SmartLabel slbName;
         private SmartControls.SmartLabel slbHireDate;
         private SmartControls.SmartLabel slbPhone;
         private SmartControls.SmartLabel slbEmail;

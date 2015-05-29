@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic
 {
@@ -9,35 +11,51 @@ namespace LivingSmartBusinessLogic
     {
         private Dictionary<int,EstateAgent> estateAgents;
 
-		private int lastID = 0;
+		private IEstateAgentDB db;
 
         internal EstateAgentCatalog()
-        {
+		{
+			db = EstateAgentDBFactory.GetDBL();
             estateAgents = new Dictionary<int, EstateAgent>();
+
+			LoadCatalog();
         }
+
+		internal void LoadCatalog()
+		{
+			var estateAgentLst = db.ReadEstateAgents();
+			foreach (var estateAgent in estateAgentLst)
+				AddToCatalog(estateAgent);
+		}
 
         internal EstateAgent Check(int id)
         {
 	        return estateAgents.FirstOrDefault(a => a.Key == id).Value;
-            throw new System.NotImplementedException();
         }
 
         internal void Save(EstateAgent estateAgent)
-        {
-            throw new System.NotImplementedException();
+		{
+			//TODO: Check for exist
+			estateAgent.Id = db.CreateEstateAgent(estateAgent);
         }
 
         internal void AddToCatalog(EstateAgent estateAgent)
 		{
-			//TODO: Remove auto ID
-	        estateAgent.Id = ++lastID;
-            estateAgents.Add(estateAgent.Id, estateAgent);
+			if (!estateAgents.ContainsKey(estateAgent.Id))
+				estateAgents.Add(estateAgent.Id, estateAgent);
         }
 
         internal void RemoveFromCatalog(EstateAgent estateAgent)
         {
             estateAgents.Remove(estateAgent.Id);
         }
+
+
+		internal ReadOnlyCollection<EstateAgent> GetEstateAgents()
+		{
+			var estateAgentList = estateAgents.Values.ToList();
+			return estateAgentList.AsReadOnly();
+		}
 
 		internal List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
 		{

@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Pages
 {
     partial class Customers
@@ -32,7 +34,7 @@ namespace LivingSmartForms.Pages
 			this.pnlSubmenuBorder = new System.Windows.Forms.Panel();
 			this.pnlSubmenu = new System.Windows.Forms.Panel();
 			this.btnNewCustomer = new SmartControls.SmartButton();
-			this.sblActiveCases = new SmartControls.SmartLabel();
+			this.sblCustomers = new SmartControls.SmartLabel();
 			this.clsCustomers = new SmartControls.ControlList();
 			this.hdrCustomers = new SmartControls.Header();
 			this.pnlSubmenuHolder.SuspendLayout();
@@ -51,7 +53,7 @@ namespace LivingSmartForms.Pages
 			// 
 			// pnlSubmenuBorder
 			// 
-			this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.pnlSubmenuBorder.BackColor = SmartColor.Light;
 			this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 40);
 			this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
@@ -61,7 +63,7 @@ namespace LivingSmartForms.Pages
 			// pnlSubmenu
 			// 
 			this.pnlSubmenu.Controls.Add(this.btnNewCustomer);
-			this.pnlSubmenu.Controls.Add(this.sblActiveCases);
+			this.pnlSubmenu.Controls.Add(this.sblCustomers);
 			this.pnlSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenu.Location = new System.Drawing.Point(0, 0);
 			this.pnlSubmenu.Margin = new System.Windows.Forms.Padding(0);
@@ -73,14 +75,14 @@ namespace LivingSmartForms.Pages
 			// 
 			this.btnNewCustomer.AutoSize = true;
 			this.btnNewCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNewCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewCustomer.BackColor = SmartColor.Light;
 			this.btnNewCustomer.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnNewCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNewCustomer.FlatAppearance.BorderSize = 0;
-			this.btnNewCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewCustomer.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnNewCustomer.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnNewCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewCustomer.ForeColor = SmartColor.Dark;
 			this.btnNewCustomer.Location = new System.Drawing.Point(0, 0);
 			this.btnNewCustomer.Name = "btnNewCustomer";
 			this.btnNewCustomer.Size = new System.Drawing.Size(103, 30);
@@ -89,18 +91,18 @@ namespace LivingSmartForms.Pages
 			this.btnNewCustomer.UseVisualStyleBackColor = false;
 			this.btnNewCustomer.Click += new System.EventHandler(this.btnNewCustomer_Click);
 			// 
-			// sblActiveCases
+			// sblCustomers
 			// 
-			this.sblActiveCases.AutoSize = true;
-			this.sblActiveCases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.sblActiveCases.Location = new System.Drawing.Point(113, 7);
-			this.sblActiveCases.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
-			this.sblActiveCases.Name = "sblActiveCases";
-			this.sblActiveCases.Size = new System.Drawing.Size(79, 17);
-			this.sblActiveCases.TabIndex = 1;
-			this.sblActiveCases.Text = "20";
-			this.sblActiveCases.Title = "Kunder:";
-			this.sblActiveCases.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			this.sblCustomers.AutoSize = true;
+			this.sblCustomers.ForeColor = SmartColor.Light;
+			this.sblCustomers.Location = new System.Drawing.Point(113, 7);
+			this.sblCustomers.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
+			this.sblCustomers.Name = "sblCustomers";
+			this.sblCustomers.Size = new System.Drawing.Size(79, 17);
+			this.sblCustomers.TabIndex = 1;
+			this.sblCustomers.Text = "20";
+			this.sblCustomers.Title = "Kunder:";
+			this.sblCustomers.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
 			// 
 			// clsCustomers
 			// 
@@ -121,7 +123,7 @@ namespace LivingSmartForms.Pages
 			this.hdrCustomers.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrCustomers.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.hdrCustomers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.hdrCustomers.ForeColor = SmartColor.Light;
 			this.hdrCustomers.Location = new System.Drawing.Point(10, 55);
 			this.hdrCustomers.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.hdrCustomers.Name = "hdrCustomers";
@@ -152,6 +154,6 @@ namespace LivingSmartForms.Pages
 		private System.Windows.Forms.Panel pnlSubmenuBorder;
 		private System.Windows.Forms.Panel pnlSubmenu;
 		private SmartControls.SmartButton btnNewCustomer;
-		private SmartControls.SmartLabel sblActiveCases;
+		private SmartControls.SmartLabel sblCustomers;
 	}
 }

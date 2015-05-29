@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class NewAppointment
@@ -61,7 +63,7 @@ namespace LivingSmartForms.Views
 			this.hdrNewAppointment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrNewAppointment.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.hdrNewAppointment.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.hdrNewAppointment.ForeColor = SmartColor.Dark;
 			this.hdrNewAppointment.Location = new System.Drawing.Point(0, 10);
 			this.hdrNewAppointment.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.hdrNewAppointment.Name = "hdrNewAppointment";
@@ -107,11 +109,11 @@ namespace LivingSmartForms.Views
 			this.stbAppointmentDescription.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbAppointmentDescription.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbAppointmentDescription.AutomaticValidation = true;
-			this.stbAppointmentDescription.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbAppointmentDescription.BackColor = SmartColor.Light;
 			this.stbAppointmentDescription.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbAppointmentDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbAppointmentDescription.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbAppointmentDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbAppointmentDescription.ForeColor = SmartColor.Dark;
 			this.stbAppointmentDescription.Location = new System.Drawing.Point(123, 240);
 			this.stbAppointmentDescription.Margin = new System.Windows.Forms.Padding(0);
 			this.stbAppointmentDescription.MaxLength = 500;
@@ -130,7 +132,7 @@ namespace LivingSmartForms.Views
 			// 
 			this.lblAppointmentDescription.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblAppointmentDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAppointmentDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblAppointmentDescription.ForeColor = SmartColor.Dark;
 			this.lblAppointmentDescription.Location = new System.Drawing.Point(0, 240);
 			this.lblAppointmentDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAppointmentDescription.Name = "lblAppointmentDescription";
@@ -145,11 +147,11 @@ namespace LivingSmartForms.Views
 			this.stbAppointmentPlace.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbAppointmentPlace.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbAppointmentPlace.AutomaticValidation = true;
-			this.stbAppointmentPlace.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbAppointmentPlace.BackColor = SmartColor.Light;
 			this.stbAppointmentPlace.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbAppointmentPlace.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbAppointmentPlace.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbAppointmentPlace.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbAppointmentPlace.ForeColor = SmartColor.Dark;
 			this.stbAppointmentPlace.Location = new System.Drawing.Point(123, 200);
 			this.stbAppointmentPlace.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbAppointmentPlace.MaxLength = 50;
@@ -169,7 +171,7 @@ namespace LivingSmartForms.Views
 			this.label1.AutoSize = true;
 			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.label1.ForeColor = SmartColor.Dark;
 			this.label1.Location = new System.Drawing.Point(0, 200);
 			this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.label1.Name = "label1";
@@ -191,7 +193,7 @@ namespace LivingSmartForms.Views
 			this.lblAppointmentEnd.AutoSize = true;
 			this.lblAppointmentEnd.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAppointmentEnd.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAppointmentEnd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblAppointmentEnd.ForeColor = SmartColor.Dark;
 			this.lblAppointmentEnd.Location = new System.Drawing.Point(0, 160);
 			this.lblAppointmentEnd.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAppointmentEnd.Name = "lblAppointmentEnd";
@@ -205,7 +207,7 @@ namespace LivingSmartForms.Views
 			this.lblAppointmentStart.AutoSize = true;
 			this.lblAppointmentStart.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAppointmentStart.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAppointmentStart.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblAppointmentStart.ForeColor = SmartColor.Dark;
 			this.lblAppointmentStart.Location = new System.Drawing.Point(0, 120);
 			this.lblAppointmentStart.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAppointmentStart.Name = "lblAppointmentStart";
@@ -219,7 +221,7 @@ namespace LivingSmartForms.Views
 			this.lblAppointmentCase.AutoSize = true;
 			this.lblAppointmentCase.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAppointmentCase.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAppointmentCase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblAppointmentCase.ForeColor = SmartColor.Dark;
 			this.lblAppointmentCase.Location = new System.Drawing.Point(0, 80);
 			this.lblAppointmentCase.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAppointmentCase.Name = "lblAppointmentCase";
@@ -233,7 +235,7 @@ namespace LivingSmartForms.Views
 			this.lblAppointmentCustomer.AutoSize = true;
 			this.lblAppointmentCustomer.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAppointmentCustomer.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAppointmentCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblAppointmentCustomer.ForeColor = SmartColor.Dark;
 			this.lblAppointmentCustomer.Location = new System.Drawing.Point(0, 40);
 			this.lblAppointmentCustomer.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAppointmentCustomer.Name = "lblAppointmentCustomer";
@@ -247,7 +249,7 @@ namespace LivingSmartForms.Views
 			this.lblAppointmentEstateAgent.AutoSize = true;
 			this.lblAppointmentEstateAgent.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAppointmentEstateAgent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAppointmentEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblAppointmentEstateAgent.ForeColor = SmartColor.Dark;
 			this.lblAppointmentEstateAgent.Location = new System.Drawing.Point(0, 0);
 			this.lblAppointmentEstateAgent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAppointmentEstateAgent.Name = "lblAppointmentEstateAgent";
@@ -285,15 +287,15 @@ namespace LivingSmartForms.Views
 			// 
 			this.btnAppointmentFindEstateAgent.AutoSize = true;
 			this.btnAppointmentFindEstateAgent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnAppointmentFindEstateAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnAppointmentFindEstateAgent.BackColor = SmartColor.Dark;
 			this.btnAppointmentFindEstateAgent.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnAppointmentFindEstateAgent.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAppointmentFindEstateAgent.Dock = System.Windows.Forms.DockStyle.Right;
 			this.btnAppointmentFindEstateAgent.FlatAppearance.BorderSize = 0;
-			this.btnAppointmentFindEstateAgent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnAppointmentFindEstateAgent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnAppointmentFindEstateAgent.FlatAppearance.MouseDownBackColor = SmartColor.Light;
+			this.btnAppointmentFindEstateAgent.FlatAppearance.MouseOverBackColor = SmartColor.Light;
 			this.btnAppointmentFindEstateAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAppointmentFindEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnAppointmentFindEstateAgent.ForeColor = SmartColor.Light;
 			this.btnAppointmentFindEstateAgent.Location = new System.Drawing.Point(236, 0);
 			this.btnAppointmentFindEstateAgent.Name = "btnAppointmentFindEstateAgent";
 			this.btnAppointmentFindEstateAgent.Size = new System.Drawing.Size(121, 30);
@@ -316,15 +318,15 @@ namespace LivingSmartForms.Views
 			// 
 			this.btnAppointmentFindCustomer.AutoSize = true;
 			this.btnAppointmentFindCustomer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnAppointmentFindCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnAppointmentFindCustomer.BackColor = SmartColor.Dark;
 			this.btnAppointmentFindCustomer.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnAppointmentFindCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAppointmentFindCustomer.Dock = System.Windows.Forms.DockStyle.Right;
 			this.btnAppointmentFindCustomer.FlatAppearance.BorderSize = 0;
-			this.btnAppointmentFindCustomer.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnAppointmentFindCustomer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnAppointmentFindCustomer.FlatAppearance.MouseDownBackColor = SmartColor.Light;
+			this.btnAppointmentFindCustomer.FlatAppearance.MouseOverBackColor = SmartColor.Light;
 			this.btnAppointmentFindCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAppointmentFindCustomer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnAppointmentFindCustomer.ForeColor = SmartColor.Light;
 			this.btnAppointmentFindCustomer.Location = new System.Drawing.Point(246, 0);
 			this.btnAppointmentFindCustomer.Name = "btnAppointmentFindCustomer";
 			this.btnAppointmentFindCustomer.Size = new System.Drawing.Size(111, 30);
@@ -375,15 +377,15 @@ namespace LivingSmartForms.Views
 			// 
 			this.btnAppointmentFindCase.AutoSize = true;
 			this.btnAppointmentFindCase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnAppointmentFindCase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnAppointmentFindCase.BackColor = SmartColor.Dark;
 			this.btnAppointmentFindCase.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnAppointmentFindCase.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnAppointmentFindCase.Dock = System.Windows.Forms.DockStyle.Right;
 			this.btnAppointmentFindCase.FlatAppearance.BorderSize = 0;
-			this.btnAppointmentFindCase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnAppointmentFindCase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnAppointmentFindCase.FlatAppearance.MouseDownBackColor = SmartColor.Light;
+			this.btnAppointmentFindCase.FlatAppearance.MouseOverBackColor = SmartColor.Light;
 			this.btnAppointmentFindCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnAppointmentFindCase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnAppointmentFindCase.ForeColor = SmartColor.Light;
 			this.btnAppointmentFindCase.Location = new System.Drawing.Point(260, 0);
 			this.btnAppointmentFindCase.Name = "btnAppointmentFindCase";
 			this.btnAppointmentFindCase.Size = new System.Drawing.Size(97, 30);

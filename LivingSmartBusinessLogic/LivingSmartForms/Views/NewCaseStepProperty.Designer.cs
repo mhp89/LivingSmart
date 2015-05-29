@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Views
 {
     partial class NewCaseStepProperty
@@ -108,7 +110,7 @@ namespace LivingSmartForms.Views
 			this.label1.AutoSize = true;
 			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.label1.ForeColor = SmartColor.Dark;
 			this.label1.Location = new System.Drawing.Point(0, 400);
 			this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.label1.Name = "label1";
@@ -122,11 +124,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyToilets.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyToilets.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyToilets.AutomaticValidation = true;
-			this.stbPropertyToilets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyToilets.BackColor = SmartColor.Light;
 			this.stbPropertyToilets.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyToilets.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyToilets.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyToilets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyToilets.ForeColor = SmartColor.Dark;
 			this.stbPropertyToilets.Location = new System.Drawing.Point(192, 360);
 			this.stbPropertyToilets.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyToilets.MaxLength = 50;
@@ -147,11 +149,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBathrooms.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyBathrooms.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyBathrooms.AutomaticValidation = true;
-			this.stbPropertyBathrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyBathrooms.BackColor = SmartColor.Light;
 			this.stbPropertyBathrooms.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyBathrooms.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyBathrooms.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyBathrooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyBathrooms.ForeColor = SmartColor.Dark;
 			this.stbPropertyBathrooms.Location = new System.Drawing.Point(192, 320);
 			this.stbPropertyBathrooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBathrooms.MaxLength = 50;
@@ -172,11 +174,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBedrooms.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyBedrooms.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyBedrooms.AutomaticValidation = true;
-			this.stbPropertyBedrooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyBedrooms.BackColor = SmartColor.Light;
 			this.stbPropertyBedrooms.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyBedrooms.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyBedrooms.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyBedrooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyBedrooms.ForeColor = SmartColor.Dark;
 			this.stbPropertyBedrooms.Location = new System.Drawing.Point(192, 280);
 			this.stbPropertyBedrooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBedrooms.MaxLength = 50;
@@ -197,11 +199,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyRooms.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyRooms.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyRooms.AutomaticValidation = true;
-			this.stbPropertyRooms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyRooms.BackColor = SmartColor.Light;
 			this.stbPropertyRooms.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyRooms.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyRooms.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyRooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyRooms.ForeColor = SmartColor.Dark;
 			this.stbPropertyRooms.Location = new System.Drawing.Point(192, 240);
 			this.stbPropertyRooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyRooms.MaxLength = 50;
@@ -222,11 +224,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyFloors.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyFloors.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyFloors.AutomaticValidation = true;
-			this.stbPropertyFloors.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyFloors.BackColor = SmartColor.Light;
 			this.stbPropertyFloors.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyFloors.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyFloors.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyFloors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyFloors.ForeColor = SmartColor.Dark;
 			this.stbPropertyFloors.Location = new System.Drawing.Point(192, 200);
 			this.stbPropertyFloors.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyFloors.MaxLength = 50;
@@ -247,11 +249,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyEnergyMark.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyEnergyMark.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyEnergyMark.AutomaticValidation = true;
-			this.stbPropertyEnergyMark.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyEnergyMark.BackColor = SmartColor.Light;
 			this.stbPropertyEnergyMark.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyEnergyMark.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyEnergyMark.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyEnergyMark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyEnergyMark.ForeColor = SmartColor.Dark;
 			this.stbPropertyEnergyMark.Location = new System.Drawing.Point(192, 160);
 			this.stbPropertyEnergyMark.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyEnergyMark.MaxLength = 50;
@@ -272,11 +274,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBuildYear.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyBuildYear.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyBuildYear.AutomaticValidation = true;
-			this.stbPropertyBuildYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyBuildYear.BackColor = SmartColor.Light;
 			this.stbPropertyBuildYear.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyBuildYear.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyBuildYear.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyBuildYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyBuildYear.ForeColor = SmartColor.Dark;
 			this.stbPropertyBuildYear.Location = new System.Drawing.Point(192, 120);
 			this.stbPropertyBuildYear.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBuildYear.MaxLength = 50;
@@ -297,11 +299,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBasement.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyBasement.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyBasement.AutomaticValidation = true;
-			this.stbPropertyBasement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyBasement.BackColor = SmartColor.Light;
 			this.stbPropertyBasement.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyBasement.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyBasement.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyBasement.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyBasement.ForeColor = SmartColor.Dark;
 			this.stbPropertyBasement.Location = new System.Drawing.Point(192, 80);
 			this.stbPropertyBasement.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBasement.MaxLength = 50;
@@ -322,11 +324,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyArea.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyArea.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyArea.AutomaticValidation = true;
-			this.stbPropertyArea.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyArea.BackColor = SmartColor.Light;
 			this.stbPropertyArea.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyArea.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyArea.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyArea.ForeColor = SmartColor.Dark;
 			this.stbPropertyArea.Location = new System.Drawing.Point(192, 40);
 			this.stbPropertyArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyArea.MaxLength = 50;
@@ -347,11 +349,11 @@ namespace LivingSmartForms.Views
 			this.stbPropertyType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPropertyType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPropertyType.AutomaticValidation = true;
-			this.stbPropertyType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPropertyType.BackColor = SmartColor.Light;
 			this.stbPropertyType.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPropertyType.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPropertyType.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPropertyType.ForeColor = SmartColor.Dark;
 			this.stbPropertyType.Location = new System.Drawing.Point(192, 0);
 			this.stbPropertyType.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyType.MaxLength = 50;
@@ -371,7 +373,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyToilets.AutoSize = true;
 			this.lblPropertyToilets.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyToilets.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyToilets.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyToilets.ForeColor = SmartColor.Dark;
 			this.lblPropertyToilets.Location = new System.Drawing.Point(0, 360);
 			this.lblPropertyToilets.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyToilets.Name = "lblPropertyToilets";
@@ -385,7 +387,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyBasementArea.AutoSize = true;
 			this.lblPropertyBasementArea.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyBasementArea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyBasementArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyBasementArea.ForeColor = SmartColor.Dark;
 			this.lblPropertyBasementArea.Location = new System.Drawing.Point(0, 80);
 			this.lblPropertyBasementArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyBasementArea.Name = "lblPropertyBasementArea";
@@ -399,7 +401,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyType.AutoSize = true;
 			this.lblPropertyType.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyType.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyType.ForeColor = SmartColor.Dark;
 			this.lblPropertyType.Location = new System.Drawing.Point(0, 0);
 			this.lblPropertyType.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyType.Name = "lblPropertyType";
@@ -413,7 +415,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyLivingArea.AutoSize = true;
 			this.lblPropertyLivingArea.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyLivingArea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyLivingArea.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyLivingArea.ForeColor = SmartColor.Dark;
 			this.lblPropertyLivingArea.Location = new System.Drawing.Point(0, 40);
 			this.lblPropertyLivingArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyLivingArea.Name = "lblPropertyLivingArea";
@@ -427,7 +429,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyBuildYear.AutoSize = true;
 			this.lblPropertyBuildYear.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyBuildYear.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyBuildYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyBuildYear.ForeColor = SmartColor.Dark;
 			this.lblPropertyBuildYear.Location = new System.Drawing.Point(0, 120);
 			this.lblPropertyBuildYear.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyBuildYear.Name = "lblPropertyBuildYear";
@@ -441,7 +443,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyEnergyMark.AutoSize = true;
 			this.lblPropertyEnergyMark.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyEnergyMark.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyEnergyMark.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyEnergyMark.ForeColor = SmartColor.Dark;
 			this.lblPropertyEnergyMark.Location = new System.Drawing.Point(0, 160);
 			this.lblPropertyEnergyMark.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyEnergyMark.Name = "lblPropertyEnergyMark";
@@ -455,7 +457,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyStories.AutoSize = true;
 			this.lblPropertyStories.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyStories.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyStories.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyStories.ForeColor = SmartColor.Dark;
 			this.lblPropertyStories.Location = new System.Drawing.Point(0, 200);
 			this.lblPropertyStories.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyStories.Name = "lblPropertyStories";
@@ -469,7 +471,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyRooms.AutoSize = true;
 			this.lblPropertyRooms.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyRooms.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyRooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyRooms.ForeColor = SmartColor.Dark;
 			this.lblPropertyRooms.Location = new System.Drawing.Point(0, 240);
 			this.lblPropertyRooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyRooms.Name = "lblPropertyRooms";
@@ -483,7 +485,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyBedrooms.AutoSize = true;
 			this.lblPropertyBedrooms.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyBedrooms.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyBedrooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyBedrooms.ForeColor = SmartColor.Dark;
 			this.lblPropertyBedrooms.Location = new System.Drawing.Point(0, 280);
 			this.lblPropertyBedrooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyBedrooms.Name = "lblPropertyBedrooms";
@@ -497,7 +499,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyBathrooms.AutoSize = true;
 			this.lblPropertyBathrooms.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPropertyBathrooms.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPropertyBathrooms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPropertyBathrooms.ForeColor = SmartColor.Dark;
 			this.lblPropertyBathrooms.Location = new System.Drawing.Point(0, 320);
 			this.lblPropertyBathrooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblPropertyBathrooms.Name = "lblPropertyBathrooms";
@@ -523,7 +525,7 @@ namespace LivingSmartForms.Views
 			this.header1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.header1.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.header1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.header1.ForeColor = SmartColor.Dark;
 			this.header1.Location = new System.Drawing.Point(0, 10);
 			this.header1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.header1.Name = "header1";

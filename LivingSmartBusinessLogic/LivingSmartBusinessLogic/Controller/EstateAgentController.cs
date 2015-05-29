@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -39,14 +40,14 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog = null;
         }
 
-        public void SaveActiveCustomer()
-        {
-
-            AddEstateAgent(activeEstateAgent);
+		public void SaveActiveEstateAgent()
+		{
+			estateAgentCatalog.Save(activeEstateAgent);
+			AddEstateAgent(activeEstateAgent);
         }
         #endregion
 
-        public void AddEstateAgent(EstateAgent estateAgent)
+        private void AddEstateAgent(EstateAgent estateAgent)
         {
             estateAgentCatalog.AddToCatalog(estateAgent);
         }
@@ -62,39 +63,39 @@ namespace LivingSmartBusinessLogic.Controller
 			return estateAgentCatalog.Check(id);
         }
 
-        public void UpdateEstateAgent(EstateAgent estateAgent)
+		public ReadOnlyCollection<EstateAgent> GetEstateAgents()
+		{
+			return estateAgentCatalog.GetEstateAgents();
+		}
+
+        public void SetName(string name)
         {
-            estateAgentCatalog.Save(estateAgent);
+            if (activeEstateAgent.Name != name)
+				activeEstateAgent.Name = name;
         }
 
-        public void SetName(EstateAgent estateAgent, string name)
+        public void SetTelephone(string telephone)
         {
-            if (estateAgent.Name != name)
-                estateAgent.Name = name;
+			if (activeEstateAgent.Telephone != telephone)
+				activeEstateAgent.Telephone = telephone;
         }
 
-        public void SetTelephone(EstateAgent estateAgent, string telephone)
+        public void SetEmail(string email)
         {
-            if (estateAgent.Telephone != telephone)
-                estateAgent.Telephone = telephone;
+			if (activeEstateAgent.Email != email)
+				activeEstateAgent.Email = email;
         }
 
-        public void SetEmail(EstateAgent estateAgent, string email)
+        public void SetStartingDate(DateTime startingDate)
         {
-            if (estateAgent.Email != email)
-                estateAgent.Email = email;
+			if (activeEstateAgent.StartingDate != startingDate)
+				activeEstateAgent.StartingDate = startingDate;
         }
 
-        public void SetStartingDate(EstateAgent estateAgent, DateTime startingDate)
+        public void SetTerminationDate(DateTime startingDate)
         {
-            if (estateAgent.StartingDate != startingDate)
-                estateAgent.StartingDate = startingDate;
-        }
-
-        public void SetTerminationDate(EstateAgent estateAgent, DateTime startingDate)
-        {
-            if (estateAgent.TerminationDate != startingDate)
-                estateAgent.TerminationDate = startingDate;
+			if (activeEstateAgent.TerminationDate != startingDate)
+				activeEstateAgent.TerminationDate = startingDate;
         }
 
 		public List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)

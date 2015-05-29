@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.Pages
 {
 	partial class Overview
@@ -53,7 +55,7 @@ namespace LivingSmartForms.Pages
 			this.header1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.header1.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.header1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.header1.ForeColor = SmartColor.Light;
 			this.header1.Location = new System.Drawing.Point(10, 266);
 			this.header1.Name = "header1";
 			this.header1.Size = new System.Drawing.Size(1115, 25);
@@ -63,7 +65,7 @@ namespace LivingSmartForms.Pages
 			// meter2
 			// 
 			this.meter2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.meter2.CircleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.meter2.CircleBackColor = SmartColor.Light;
 			this.meter2.CirclePoints = 3;
 			this.meter2.CircleSize = 175;
 			this.meter2.Location = new System.Drawing.Point(915, 20);
@@ -71,7 +73,7 @@ namespace LivingSmartForms.Pages
 			this.meter2.MaxValue = 60;
 			this.meter2.MinValue = 0;
 			this.meter2.Name = "meter2";
-			this.meter2.PointerColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.meter2.PointerColor = SmartColor.Dark;
 			this.meter2.Size = new System.Drawing.Size(200, 100);
 			this.meter2.TabIndex = 1;
 			this.meter2.Text = "meter2";
@@ -79,7 +81,7 @@ namespace LivingSmartForms.Pages
 			// 
 			// meter1
 			// 
-			this.meter1.CircleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.meter1.CircleBackColor = SmartColor.Light;
 			this.meter1.CirclePoints = 3;
 			this.meter1.CircleSize = 175;
 			this.meter1.Location = new System.Drawing.Point(20, 20);
@@ -87,7 +89,7 @@ namespace LivingSmartForms.Pages
 			this.meter1.MaxValue = 60;
 			this.meter1.MinValue = 0;
 			this.meter1.Name = "meter1";
-			this.meter1.PointerColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.meter1.PointerColor = SmartColor.Dark;
 			this.meter1.Size = new System.Drawing.Size(200, 100);
 			this.meter1.TabIndex = 0;
 			this.meter1.Text = "meter1";

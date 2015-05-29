@@ -9,7 +9,6 @@ using LivingSmartForms.DropIns;
 using LivingSmartForms.Pages;
 using SmartControls;
 using Menu = LivingSmartForms.Classes.Menu;
-using SmartColor = LivingSmartForms.Classes.SmartColor;
 
 namespace LivingSmartForms
 {
@@ -56,8 +55,6 @@ namespace LivingSmartForms
 			InitializePages();
 
 			InitializeMenu();
-
-			InitTestData();
 
 			DefaultEstateAgent = EstateAgentController.Instance.ReadEstateAgent(1);
         }
@@ -299,20 +296,20 @@ namespace LivingSmartForms
 
 			var estateAgentController = EstateAgentController.Instance;
 
-			var estateAgent = estateAgentController.MakeNewEstateAgent("Anders And", "19560606", "Anders@andeby.dk", DateTime.Today);
-			estateAgentController.AddEstateAgent(estateAgent);
+			estateAgentController.MakeNewEstateAgent("Anders And", "19560606", "Anders@andeby.dk", DateTime.Today);
+			estateAgentController.SaveActiveEstateAgent();
 
-			estateAgent = estateAgentController.MakeNewEstateAgent("Rip", "19920428", "Rip@andeby.dk", DateTime.Today);
-			estateAgentController.AddEstateAgent(estateAgent);
+			estateAgentController.MakeNewEstateAgent("Rip", "19920428", "Rip@andeby.dk", DateTime.Today);
+			estateAgentController.SaveActiveEstateAgent();
 
-			estateAgent = estateAgentController.MakeNewEstateAgent("Rap", "19921428", "Rap@andeby.dk", DateTime.Today);
-			estateAgentController.AddEstateAgent(estateAgent);
+			estateAgentController.MakeNewEstateAgent("Rap", "19921428", "Rap@andeby.dk", DateTime.Today);
+			estateAgentController.SaveActiveEstateAgent();
 
-			estateAgent = estateAgentController.MakeNewEstateAgent("Rup", "19922428", "Rup@andeby.dk", DateTime.Today);
-			estateAgentController.AddEstateAgent(estateAgent);
+			estateAgentController.MakeNewEstateAgent("Rup", "19922428", "Rup@andeby.dk", DateTime.Today);
+			estateAgentController.SaveActiveEstateAgent();
 
-			estateAgent = estateAgentController.MakeNewEstateAgent("Fedtmule", "19321112", "Fedtmule@mouseton.dk", DateTime.Today);
-			estateAgentController.AddEstateAgent(estateAgent);
+			estateAgentController.MakeNewEstateAgent("Fedtmule", "19321112", "Fedtmule@mouseton.dk", DateTime.Today);
+			estateAgentController.SaveActiveEstateAgent();
 	    }
 	}
 }

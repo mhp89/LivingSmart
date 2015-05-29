@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.UserControls
 {
     partial class DateField
@@ -41,11 +43,11 @@ namespace LivingSmartForms.UserControls
 			this.stbDateYear.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDateYear.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDateYear.AutomaticValidation = true;
-			this.stbDateYear.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDateYear.BackColor = SmartColor.Light;
 			this.stbDateYear.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDateYear.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbDateYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbDateYear.Location = new System.Drawing.Point(140, 0);
+			this.stbDateYear.ForeColor = SmartColor.Dark;
+			this.stbDateYear.Location = new System.Drawing.Point(145, 0);
 			this.stbDateYear.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDateYear.MaxLength = 4;
 			this.stbDateYear.MinLength = 4;
@@ -62,7 +64,7 @@ namespace LivingSmartForms.UserControls
 			// lblHyphenDateMonthYear
 			// 
 			this.lblHyphenDateMonthYear.AutoSize = true;
-			this.lblHyphenDateMonthYear.Location = new System.Drawing.Point(125, 7);
+			this.lblHyphenDateMonthYear.Location = new System.Drawing.Point(130, 7);
 			this.lblHyphenDateMonthYear.Margin = new System.Windows.Forms.Padding(5);
 			this.lblHyphenDateMonthYear.Name = "lblHyphenDateMonthYear";
 			this.lblHyphenDateMonthYear.Size = new System.Drawing.Size(10, 13);
@@ -75,10 +77,10 @@ namespace LivingSmartForms.UserControls
 			this.stbDateDay.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDateDay.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDateDay.AutomaticValidation = true;
-			this.stbDateDay.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDateDay.BackColor = SmartColor.Light;
 			this.stbDateDay.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDateDay.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbDateDay.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDateDay.ForeColor = SmartColor.Dark;
 			this.stbDateDay.Location = new System.Drawing.Point(0, 0);
 			this.stbDateDay.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDateDay.MaxLength = 2;
@@ -109,10 +111,10 @@ namespace LivingSmartForms.UserControls
 			this.stbDateMonth.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbDateMonth.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbDateMonth.AutomaticValidation = true;
-			this.stbDateMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDateMonth.BackColor = SmartColor.Light;
 			this.stbDateMonth.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbDateMonth.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbDateMonth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDateMonth.ForeColor = SmartColor.Dark;
 			this.stbDateMonth.Location = new System.Drawing.Point(70, 0);
 			this.stbDateMonth.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDateMonth.MaxLength = 2;
@@ -122,7 +124,7 @@ namespace LivingSmartForms.UserControls
 			this.stbDateMonth.Placeholder = "MM";
 			this.stbDateMonth.RegularExpression = null;
 			this.stbDateMonth.Required = true;
-			this.stbDateMonth.Size = new System.Drawing.Size(50, 30);
+			this.stbDateMonth.Size = new System.Drawing.Size(55, 30);
 			this.stbDateMonth.Suffix = null;
 			this.stbDateMonth.TabIndex = 1;
 			this.stbDateMonth.UseSystemPasswordChar = false;
@@ -137,7 +139,7 @@ namespace LivingSmartForms.UserControls
 			this.Controls.Add(this.stbDateMonth);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "DateField";
-			this.Size = new System.Drawing.Size(205, 30);
+			this.Size = new System.Drawing.Size(210, 30);
 			this.ResumeLayout(false);
 			this.PerformLayout();
 

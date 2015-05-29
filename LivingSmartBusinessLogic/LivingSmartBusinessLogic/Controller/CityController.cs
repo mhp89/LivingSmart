@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,16 +23,16 @@ namespace LivingSmartBusinessLogic.Controller
         public CityController()
         {
             cityCatalog = new CityCatalog();
-
-			//TODO: Remove test data
-			cityCatalog.AddToCatalog(new City(7100, "Vejle"));
-			cityCatalog.AddToCatalog(new City(5500, "Middelfart"));
-			cityCatalog.AddToCatalog(new City(2412, "Julemanden"));
         }
 
         public City GetCity(int zipCode)
         {
             return cityCatalog.GetCity(zipCode);
         }
+
+		public ReadOnlyCollection<City> GetCities()
+		{
+			return cityCatalog.GetCities();
+		}
     }
 }

@@ -174,7 +174,8 @@ namespace SmartControls
 			Required = false;
 			UpdateColor();
 			Cursor = Cursors.IBeam;
-		    _text = String.Empty;
+			_text = String.Empty;
+			TabStop = false;
 
 			Controls.Add(textBox = new ExtendedTextBox());
 			
@@ -187,7 +188,6 @@ namespace SmartControls
 			SizeChanged += SmartTextBox_SizeChanged;
 			textBox.TextChanged += textBox_TextChanged;
 			textBox.KeyPress += textBox_KeyPress;
-		
 
 			toolTip = new ToolTip();
 			toolTip.InitialDelay = 1000;

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -40,15 +41,13 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void SaveActiveCustomer()
         {
-
-            AddCustomer(activeCustomer);
+			customerCatalog.Save(activeCustomer);
+			customerCatalog.AddToCatalog(activeCustomer);
         }
         #endregion
 
-        public void AddCustomer(Customer customer)
+	    private void AddCustomer(Customer customer)
         {
-			//TODO: Check for valid ID
-            customerCatalog.AddToCatalog(customer);
         }
 
         public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)

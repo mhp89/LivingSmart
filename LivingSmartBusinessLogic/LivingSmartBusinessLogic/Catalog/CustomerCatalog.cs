@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
+using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic
 {
@@ -11,16 +12,21 @@ namespace LivingSmartBusinessLogic
     {
         private Dictionary<int, Customer> customers;
 
-	    private int lastID = 0;
-
+	    private ICustomerDB db;
+		
         internal CustomerCatalog()
         {
+			db = CustomerDBFactory.GetDBL();
             customers = new Dictionary<int, Customer>();
+
+			LoadCatalog();
         }
 
         internal void LoadCatalog()
         {
-            throw new System.NotImplementedException();
+	        var customerList = db.ReadCustomers();
+	        foreach (var customer in customerList)
+		        AddToCatalog(customer);
         }
 
         internal Customer Check(int id)
@@ -29,15 +35,15 @@ namespace LivingSmartBusinessLogic
         }
 
         internal void Save(Customer customer)
-        {
-            throw new System.NotImplementedException();
+		{
+			//TODO: Check for exist
+			customer.Id = db.CreateCustomer(customer);
         }
 
         internal void AddToCatalog(Customer customer)
         {
-			//TODO: Remove auto ID
-			customer.Id = ++lastID;
-			customers.Add(customer.Id, customer);
+			if(!customers.ContainsKey(customer.Id))
+				customers.Add(customer.Id, customer);
         }
 
         internal void RemoveFromCatalog(Customer customer)

@@ -1,3 +1,5 @@
+using SmartControls;
+
 namespace LivingSmartForms.DropIns
 {
 	partial class NewPartnerDropIn
