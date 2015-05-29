@@ -281,6 +281,12 @@
     <Compile Include="Views\PropertyLineSelect.Designer.cs">
       <DependentUpon>PropertyLineSelect.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\ViewEstateAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewEstateAgent.Designer.cs">
+      <DependentUpon>ViewEstateAgent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -395,6 +401,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\PropertyLineSelect.resx">
       <DependentUpon>PropertyLineSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewEstateAgent.resx">
+      <DependentUpon>ViewEstateAgent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
