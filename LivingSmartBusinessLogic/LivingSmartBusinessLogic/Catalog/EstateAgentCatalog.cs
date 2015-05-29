@@ -39,6 +39,15 @@ namespace LivingSmartBusinessLogic
             estateAgents.Remove(estateAgent.Id);
         }
 
+        internal EstateAgent GetEstateAgent(int estateAgentId)
+        {
+            if (estateAgents.ContainsKey(estateAgentId))
+            {
+                return estateAgents[estateAgentId];
+            }
+            return null;
+        }
+
 		internal List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
 		{
 			List<EstateAgent> result = new List<EstateAgent>();

@@ -36,23 +36,23 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         internal Customer(string name, DateTime dateOfBirth, string address, 
-            City city, string email, string telephone)
+            int zipCode, string email, string telephone)
         {
             Name = name;
             DateOfBirth = dateOfBirth;
             Address = address;
-            City = city;
+            City = CityController.Instance.GetCity(zipCode);
             Email = email;
             Telephone = telephone;
         }
         internal Customer(int id, string name, DateTime dateOfBirth, string address, 
-            City city, string email, string telephone)
+            int zipCode, string email, string telephone)
         {
             Id = id;
             Name = name;
             DateOfBirth = dateOfBirth;
             Address = address;
-            City = city;
+            City = CityController.Instance.GetCity(zipCode);
             Email = email;
             Telephone = telephone;
         }

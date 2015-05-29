@@ -66,6 +66,11 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog.Save(estateAgent);
         }
 
+        public EstateAgent GetEstateAgent(int estateAgentId)
+        {
+            return estateAgentCatalog.GetEstateAgent(estateAgentId);
+        }
+
         #region PropertyMethods
         public void SetName(EstateAgent estateAgent, string name)
         {

@@ -97,20 +97,20 @@ namespace LivingSmartBusinessLogic
         {
             CreationDate = new DateTime().Date;
         }
-        internal Case(int id, Customer seller, Customer buyer, EstateAgent estateAgent, 
+        internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
             DateTime creationDate, string status, DateTime dateOfSale, 
             DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
-            string description, string landRegistryNumber, string address, City city, 
-            PropertyType propertyType, long publicRating, long landValue, 
+            string description, string landRegistryNumber, string address, int zipCode, 
+            int propertyTypeId, long publicRating, long landValue, 
             int groundArea, int builtArea, int livingArea, int basementArea, 
             int builtYear, string energyClassification, int floors, int rooms, 
             int bedrooms, int bathrooms, int toilets, int garageArea, 
-            int view, Neighborhood neighborhood)
+            int view, int neighborhoodId)
         {
             Id = id;
-            Seller = seller;
-            Buyer = buyer;
-            EstateAgent = estateAgent;
+            Seller = CustomerController.Instance.GetCustomer(sellerId);
+            Buyer = CustomerController.Instance.GetCustomer(buyerId);
+            EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
             CreationDate = creationDate;
             Status = status;
             DateOfSale = dateOfSale;
@@ -120,8 +120,8 @@ namespace LivingSmartBusinessLogic
             Description = description;
             LandRegistryNumber = landRegistryNumber;
             Address = address;
-            City = city;
-            PropertyType = propertyType;
+            City = CityController.Instance.GetCity(zipCode);
+            PropertyType = PropertyTypeController.Instance.GetPropertyType(propertyTypeId);
             PublicRating = publicRating;
             LandValue = landValue;
             GroundArea = groundArea;
@@ -137,7 +137,7 @@ namespace LivingSmartBusinessLogic
             Toilets = toilets;
             GarageArea = garageArea;
             View = view;
-            Neighborhood = neighborhood;
+            Neighborhood = NeighborhoodController.Instance.GetHood(neighborhoodId);
         }
 
 	    #region Methods

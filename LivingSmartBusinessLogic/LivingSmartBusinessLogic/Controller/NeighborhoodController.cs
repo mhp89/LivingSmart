@@ -12,6 +12,17 @@ namespace LivingSmartBusinessLogic.Controller
 
 		#endregion
 
+        private NeighborhoodCatalog neighborhoodCatalog;
 
-    }
+        public NeighborhoodController()
+        {
+            neighborhoodCatalog = new NeighborhoodCatalog();
+        }
+
+        public Neighborhood GetHood(int hoodId)
+        {
+            return neighborhoodCatalog.GetHood(hoodId);
+        }
+
+	}
 }

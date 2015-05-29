@@ -82,6 +82,11 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return caseCatalog.Check(activeCase.Id);
         }
+
+        public Case GetCase(int caseId)
+        {
+            return caseCatalog.GetCase(caseId);
+        }
        
         #region Document
 

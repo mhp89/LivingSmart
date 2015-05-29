@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic
 {
@@ -26,6 +27,7 @@ namespace LivingSmartBusinessLogic
         public long SystemValue { get { return _systemValue; } 
             internal set { _systemValue = value; } }
         public DateTime Date { get { return _date; } internal set { _date = value; } }
+        public EstateAgent EstateAgent { get; private set; }
 
         #endregion
 
@@ -34,12 +36,14 @@ namespace LivingSmartBusinessLogic
             throw new NotImplementedException();
         }
 
-        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date)
+        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date, 
+            int estateAgentId)
         {
             Id = id;
             EstateAgentValue = estateAgentValue;
             SystemValue = systemValue;
             Date = date;
+            EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
         }
 
         #region Methods

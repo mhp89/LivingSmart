@@ -54,7 +54,7 @@ namespace LivingSmartBusinessLogic.Controller
             int zipCode, string email, string telephone)
         {
             SetActiveCustomer(new Customer(name, dateOfBirth, address, 
-                CityController.Instance.GetCity(zipCode), email, telephone));
+                zipCode, email, telephone));
             return activeCustomer;
         }
 
@@ -66,6 +66,11 @@ namespace LivingSmartBusinessLogic.Controller
         public ReadOnlyCollection<Customer> GetCustomers()
         {
             return customerCatalog.GetCustomers();
+        }
+
+        public Customer GetCustomer(int customerId)
+        {
+            return customerCatalog.GetCustomer(customerId);
         }
 
         #region PropertyMethods
