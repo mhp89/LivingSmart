@@ -50,9 +50,11 @@ namespace LivingSmartBusinessLogic.Controller
             
         }
 
-        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, int zipCode, string email, string telephone)
+        public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, 
+            int zipCode, string email, string telephone)
         {
-            SetActiveCustomer(new Customer(name, dateOfBirth, address, CityController.Instance.GetCity(zipCode), email, telephone));
+            SetActiveCustomer(new Customer(name, dateOfBirth, address, 
+                CityController.Instance.GetCity(zipCode), email, telephone));
             return activeCustomer;
         }
 
