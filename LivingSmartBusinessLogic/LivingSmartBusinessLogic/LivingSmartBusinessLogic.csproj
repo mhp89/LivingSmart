@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\StatisticsDBFactory.cs" />
+    <Compile Include="Database\IStatisticsDB.cs" />
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />
     <Compile Include="Database\PropertyTypeDBFactory.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="Database\IDocumentDB.cs" />
     <Compile Include="Database\IPartnerDB.cs" />
     <Compile Include="Database\ICustomerDB.cs" />
+    <Compile Include="Database\StatisticsDBMSSQL.cs" />
     <Compile Include="Model\Ad.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AskingPrice.cs" />
@@ -92,11 +95,14 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DistanceTo.cs" />
     <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\DocumentGenerator.cs" />
+    <Compile Include="Model\Statistics.cs" />
     <Compile Include="Model\EstateAgent.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\Neighborhood.cs" />
     <Compile Include="Model\Partner.cs" />
     <Compile Include="Model\Picture.cs" />
+    <Compile Include="Model\PrintStatistics.cs" />
     <Compile Include="Model\PropertyType.cs" />
     <Compile Include="Model\Rating.cs" />
     <Compile Include="Model\City.cs" />
@@ -136,8 +142,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
