@@ -41,7 +41,7 @@ namespace LivingSmartBusinessLogic
             TerminationDate = null;
         }
         internal EstateAgent(int id, string name, string telephone, string email, 
-            DateTime startingDate, DateTime terminationDate)
+            DateTime startingDate, DateTime? terminationDate)
         {
             Id = id;
             Name = name;

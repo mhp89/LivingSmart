@@ -18,7 +18,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "SELECT * FROM City;"
+				CommandText = "SELECT * FROM ZipCode;"
             };
 
             try

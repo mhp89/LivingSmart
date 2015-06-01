@@ -52,8 +52,8 @@ namespace LivingSmartForms.Views
 					customer = existingCustomer;
 				}
 
-				CaseController.Instance.SetEstateAgent(estateAgent.Id);
-				CaseController.Instance.SetSeller(customer.Id);
+				CaseController.Instance.SetEstateAgent(estateAgent);
+				CaseController.Instance.SetSeller(customer);
 			}
 			return fielddataOk;
 	    }

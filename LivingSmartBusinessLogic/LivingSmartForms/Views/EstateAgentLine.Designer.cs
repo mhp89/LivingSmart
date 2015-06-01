@@ -68,15 +68,15 @@ namespace LivingSmartForms
 			// 
 			this.btnEditEstateAgent.AutoSize = true;
 			this.btnEditEstateAgent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnEditEstateAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnEditEstateAgent.BackColor = SmartColor.Light;
 			this.btnEditEstateAgent.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnEditEstateAgent.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnEditEstateAgent.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btnEditEstateAgent.FlatAppearance.BorderSize = 0;
-			this.btnEditEstateAgent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnEditEstateAgent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnEditEstateAgent.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
+			this.btnEditEstateAgent.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
 			this.btnEditEstateAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnEditEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnEditEstateAgent.ForeColor = SmartColor.Dark;
 			this.btnEditEstateAgent.Location = new System.Drawing.Point(494, 10);
 			this.btnEditEstateAgent.Margin = new System.Windows.Forms.Padding(10);
 			this.btnEditEstateAgent.Name = "btnEditEstateAgent";
@@ -91,7 +91,7 @@ namespace LivingSmartForms
 			this.slbName.AutoSize = true;
 			this.tlpEmployee.SetColumnSpan(this.slbName, 2);
 			this.slbName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbName.ForeColor = SmartColor.Light;
 			this.slbName.Location = new System.Drawing.Point(105, 0);
 			this.slbName.Name = "slbName";
 			this.slbName.Size = new System.Drawing.Size(271, 24);
@@ -106,7 +106,7 @@ namespace LivingSmartForms
 			this.slbHireDate.AutoSize = true;
 			this.tlpEmployee.SetColumnSpan(this.slbHireDate, 2);
 			this.slbHireDate.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbHireDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbHireDate.ForeColor = SmartColor.Light;
 			this.slbHireDate.Location = new System.Drawing.Point(105, 24);
 			this.slbHireDate.Name = "slbHireDate";
 			this.slbHireDate.Size = new System.Drawing.Size(271, 25);
@@ -120,7 +120,7 @@ namespace LivingSmartForms
 			// 
 			this.slbPhone.AutoSize = true;
 			this.slbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbPhone.ForeColor = SmartColor.Light;
 			this.slbPhone.Location = new System.Drawing.Point(376, 0);
 			this.slbPhone.Name = "slbPhone";
 			this.slbPhone.Size = new System.Drawing.Size(108, 24);
@@ -134,7 +134,7 @@ namespace LivingSmartForms
 			// 
 			this.slbEmail.AutoSize = true;
 			this.slbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbEmail.ForeColor = SmartColor.Light;
 			this.slbEmail.Location = new System.Drawing.Point(376, 24);
 			this.slbEmail.Name = "slbEmail";
 			this.slbEmail.Size = new System.Drawing.Size(108, 25);
@@ -148,7 +148,7 @@ namespace LivingSmartForms
 			// 
 			this.slbEmployeeNo.AutoSize = true;
 			this.slbEmployeeNo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbEmployeeNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbEmployeeNo.ForeColor = SmartColor.Light;
 			this.slbEmployeeNo.Location = new System.Drawing.Point(0, 0);
 			this.slbEmployeeNo.Name = "slbEmployeeNo";
 			this.tlpEmployee.SetRowSpan(this.slbEmployeeNo, 2);

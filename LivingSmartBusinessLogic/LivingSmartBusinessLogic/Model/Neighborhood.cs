@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic
 {
@@ -26,23 +27,17 @@ namespace LivingSmartBusinessLogic
 
         #endregion
 
-        internal Neighborhood(City city, string name, int value)
+        internal Neighborhood(int zipCode, string name, int value)
         {
-            City = city;
-            Name = name;
-            Value = value;
-        }
-        internal Neighborhood(int id, City city, string name, int value)
-        {
-            Id = id;
-            City = city;
+            City = CityController.Instance.GetCity(zipCode);
             Name = name;
             Value = value;
         }
 
         internal Neighborhood(int id, int zipCode, string name, int value)
         {
-            Id = id;
+			Id = id;
+			City = CityController.Instance.GetCity(zipCode);
             ZipCode = zipCode;
             Name = name;
             Value = value;

@@ -24,6 +24,7 @@ namespace LivingSmartBusinessLogic
 
         internal void Load()
 		{
+	        Console.WriteLine("Load cities");
 			var cityList = db.ReadCities();
 			foreach (var city in cityList)
 				AddToCatalog(city);
