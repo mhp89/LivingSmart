@@ -96,7 +96,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO PropertyType OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
+				CommandText = "INSERT INTO PropertyType OUTPUT INSERTED.PropertyTypeId VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
             cmd.Parameters.Add("@Description", SqlDbType.Char, 50, "Description").Value = propertyType.Description;

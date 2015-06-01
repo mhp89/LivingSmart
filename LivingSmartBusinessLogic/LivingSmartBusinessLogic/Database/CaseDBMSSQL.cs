@@ -166,7 +166,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Case OUTPUT INSERTED.ID VALUES (" +
+                CommandText = "INSERT INTO Case OUTPUT INSERTED.CaseId VALUES (" +
                     "@SellerId, @BuyerId, @EstateAgentId, @CreationDate, @Status,@DateOfSale, @TransferDate, @DateOfCompletion, @SellingPrice, @Description" +
                     "@PropertyTypeId, @LandRegistryNumber, @Address, @ZipCode, @Neighborhood, @PublicRating, @LandValue, @GroundArea, @LivingArea, @BuiltArea" +
                     "@BasementArea, @GarageArea, @BuiltYear, @EnergyClassification, @Floors, @Rooms, @Bedrooms, @Bathrooms, @Toilets, @View); "

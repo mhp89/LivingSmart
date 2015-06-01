@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -153,7 +153,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Ad OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
+                CommandText = "INSERT INTO Ad OUTPUT INSERTED.AdId VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "Name").Value = ad.Type;

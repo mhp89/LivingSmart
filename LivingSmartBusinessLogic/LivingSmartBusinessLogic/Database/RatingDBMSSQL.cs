@@ -117,7 +117,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Rating OUTPUT INSERTED.ID VALUES (@CaseId, @SystemValue, @EstateAgentValue, @Date, @EstateAgentId); "
+				CommandText = "INSERT INTO Rating OUTPUT INSERTED.RatingId VALUES (@CaseId, @SystemValue, @EstateAgentValue, @Date, @EstateAgentId); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;

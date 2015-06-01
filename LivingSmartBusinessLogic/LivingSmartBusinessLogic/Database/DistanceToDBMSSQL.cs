@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -147,7 +147,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO DistanceTo OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @Distance); "
+				CommandText = "INSERT INTO DistanceTo OUTPUT INSERTED.DistanceToId VALUES (@CaseId, @Type, @Distance); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;

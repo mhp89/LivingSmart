@@ -110,7 +110,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Partner OUTPUT INSERTED.ID VALUES (@Name, @Telephone, @Email, @Country, @Region, @RegionShort, @City, @Timezone); "
+				CommandText = "INSERT INTO Partner OUTPUT INSERTED.PartnerId VALUES (@Name, @Telephone, @Email, @Country, @Region, @RegionShort, @City, @Timezone); "
             };
 
 			cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = partner.Name;
