@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class PartnerDBMSSQL : IPartnerDB
     {
+        /// <summary>
+        /// Returns all the Partners from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the Partners from the database.</returns>
         public List<Partner> ReadPartners()
         {
             List<Partner> partnerList = new List<Partner>();
@@ -53,6 +57,10 @@ namespace LivingSmartBusinessLogic.DB
             return partnerList;
         }
 
+        /// <summary>
+        /// Updates the information from a Partner, in the database.
+        /// </summary>
+        /// <param name="partner">Partner to be updated.</param>
         public void UpdatePartner(Partner partner)
         {
             int partnerId = partner.Id;
@@ -88,6 +96,11 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Partner in the database.
+        /// </summary>
+        /// <param name="partner">Partner to be created.</param>
+        /// <returns>Returns the Id of the Partner created.</returns>
         public int CreatePartner(Partner partner)
         {
             int partnerId = 0;
@@ -96,7 +109,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Partner VALUES (@Name, @Telephone, @Email, @Country, @Region, @RegionShort, @City, @Timezone); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Partner OUTPUT INSERTED.ID VALUES (@Name, @Telephone, @Email, @Country, @Region, @RegionShort, @City, @Timezone); "
             };
 
 			cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = partner.Name;

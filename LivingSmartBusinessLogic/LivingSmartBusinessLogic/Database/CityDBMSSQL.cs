@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class CityDBMSSQL : ICityDB
     {
+        /// <summary>
+        /// Returns all the Cities from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the Cities from the database</returns>
         public List<City> ReadCities()
         {
             List<City> cityList = new List<City>();

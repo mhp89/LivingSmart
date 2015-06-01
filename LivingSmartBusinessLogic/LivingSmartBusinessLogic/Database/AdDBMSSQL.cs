@@ -11,6 +11,11 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class AdDBMSSQL : IAdDB
     {
+        /// <summary>
+        /// Returns all the ads from the database, with a given CaseId.
+        /// </summary>
+        /// <param name="caseId">Id of the case</param>
+        /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
         public List<Ad> ReadAds(int caseId)
         {
             List<Ad> adList = new List<Ad>();
@@ -49,6 +54,10 @@ namespace LivingSmartBusinessLogic.DB
             return adList;
         }
 
+        /// <summary>
+        /// Returns a dictionary containing all the ads in the database.
+        /// </summary>
+        /// <returns>Returns a dictionary containing all the ads in the database, with CaseId as key and a list of Ads containing that CaseId</returns>
         public Dictionary<int, List<Ad>> ReadAds()
         {
             Dictionary<int, List<Ad>> adDictionary = new Dictionary<int, List<Ad>>();
@@ -92,6 +101,11 @@ namespace LivingSmartBusinessLogic.DB
             return adDictionary;
         }
 
+        /// <summary>
+        /// Updates the information from and ad, in the database.
+        /// </summary>
+        /// <param name="ad">Ad to be updated.</param>
+        /// <param name="caseId">CaseId connected to the ad.</param>
         public void UpdateAd(Ad ad, int caseId)
         {
             int adId = ad.Id;
@@ -124,6 +138,12 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Ad in the database.
+        /// </summary>
+        /// <param name="ad">Ad to be created.</param>
+        /// <param name="caseId">CaseId connected to the ad.</param>
+        /// <returns>Returns the Id of the Ad created.</returns>
         public int CreateAd(Ad ad, int caseId)
         {
             int adId = 0;
@@ -132,7 +152,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Ad VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Ad OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "Name").Value = ad.Type;

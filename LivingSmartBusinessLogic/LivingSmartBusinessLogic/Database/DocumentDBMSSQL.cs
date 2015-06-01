@@ -54,6 +54,11 @@ namespace LivingSmartBusinessLogic.DB
             return documentDictionary;
         }
 
+        /// <summary>
+        /// Returns all the ads from the database, with a given CaseId.
+        /// </summary>
+        /// <param name="caseId">Id of the case</param>
+        /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
         public List<Document> ReadDocuments(int caseId)
         {
             List<Document> documentList = new List<Document>();
@@ -92,6 +97,11 @@ namespace LivingSmartBusinessLogic.DB
             return documentList;
         }
 
+        /// <summary>
+        /// Updates the information from a Document, in the database.
+        /// </summary>
+        /// <param name="document">Document to be updated.</param>
+        /// <param name="caseId">CaseId connected to the Document</param>
         public void UpdateDocument(Document document, int caseId)
         {
             int documentId = document.Id;
@@ -124,6 +134,12 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Document in the database.
+        /// </summary>
+        /// <param name="document">Document to be created.</param>
+        /// <param name="caseId">CaseId connected to the Document.</param>
+        /// <returns>Returns the Id of the Document created.</returns>
         public int CreateDocument(Document document, int caseId)
         {
             int adId = 0;
@@ -132,7 +148,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Document VALUES (@CaseId, @Type, @Price, @Location, @Status); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Document OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @Price, @Location, @Status); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;

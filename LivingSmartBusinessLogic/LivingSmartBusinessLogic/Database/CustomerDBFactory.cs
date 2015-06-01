@@ -8,14 +8,18 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal static class CustomerDBFactory
     {
+        /// <summary>
+        /// Returns the database layer for the Customers. Type is chosen in the settings file and can be "MSSQL", "XML" or "MYSQL". 
+        /// </summary>
+        /// <returns>Returns the database layer for the Customers.</returns>
         public static ICustomerDB GetDBL()
         {
             if (Properties.Settings.Default.DatabaseType == "MSSQL")
                 return new CustomerDBMSSQL();
-//            if (Properties.Settings.Default.Database == "XML")
-//                return new AdDBXML();
-//            if (Properties.Settings.Default.Database == "MYSQL")
-//                return new CustomerDBMYSQL();
+            if (Properties.Settings.Default.DatabaseType == "XML")
+                return new CustomerDBXML();
+            if (Properties.Settings.Default.DatabaseType == "MYSQL")
+                return new CustomerDBMYSQL();
             return null;
         }
     }

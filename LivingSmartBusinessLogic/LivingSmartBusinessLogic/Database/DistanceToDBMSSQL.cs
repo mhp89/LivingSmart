@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class DistanceToDBMSSQL : IDistanceToDB
     {
+        /// <summary>
+        /// Returns a dictionary containing all the DistanceTos in the database.
+        /// </summary>
+        /// <returns>Returns a dictionary containing all the DistanceTos in the database, with CaseId as key and a list of DistanceTos containing that CaseId</returns>
         public Dictionary<int, List<DistanceTo>> ReadDistanceTos()
         {
             Dictionary<int, List<DistanceTo>> distanceToDictionary = new Dictionary<int, List<DistanceTo>>();
@@ -52,6 +56,11 @@ namespace LivingSmartBusinessLogic.DB
             return distanceToDictionary;
         }
 
+        /// <summary>
+        /// Returns all the ads from the database, with a given CaseId.
+        /// </summary>
+        /// <param name="caseId">Id of the case</param>
+        /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
         public List<DistanceTo> ReadDistanceTos(int caseId)
         {
             var distanceToList = new List<DistanceTo>();
@@ -88,6 +97,11 @@ namespace LivingSmartBusinessLogic.DB
             return distanceToList;
         }
 
+        /// <summary>
+        /// Updates the information from a DistanceTo, in the database.
+        /// </summary>
+        /// <param name="distanceTo">DistanceTo to be updated.</param>
+        /// <param name="caseId">CaseId connected to the DistanceTo.</param>
         public void UpdateDistanceTo(DistanceTo distanceTo, int caseId)
         {
             int distanceToId = distanceTo.Id;
@@ -99,9 +113,9 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), Distance = (@Distance) WHERE DistanceToId = " + distanceToId
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "CaseId").Value = caseId;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = distanceTo.Type;
-            cmd.Parameters.Add("@Distance", SqlDbType.Int, 50, "Distance").Value = distanceTo.Distance;
+            cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
             try
             {
@@ -118,6 +132,12 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new DistanceTo in the database.
+        /// </summary>
+        /// <param name="distanceTo">DistanceTo to be created.</param>
+        /// <param name="caseId">CaseId connected to the DistanceTo.</param>
+        /// <returns>Returns the Id of the DistanceTo created.</returns>
         public int CreateDistanceTo(DistanceTo distanceTo, int caseId)
         {
             int appointmentId = 0;
@@ -126,12 +146,12 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO DistanceTo VALUES (@CaseId, @Type, @Distance); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO DistanceTo OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @Distance); "
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "CaseId").Value = caseId;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = distanceTo.Type;
-            cmd.Parameters.Add("@Distance", SqlDbType.Int, 50, "Distance").Value = distanceTo.Distance;
+            cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
             try
             {

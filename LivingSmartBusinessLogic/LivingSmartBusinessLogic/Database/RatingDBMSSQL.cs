@@ -11,6 +11,11 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class RatingDBMSSQL : IRatingDB
     {
+        /// <summary>
+        /// Returns all the Ratings from the database, with a given CaseId.
+        /// </summary>
+        /// <param name="caseId">Id of the case</param>
+        /// <returns>Returns a List of all the Ratings, having a CaseId given by the parameter</returns>
         public List<Rating> ReadRatings(int caseId)
         {
             List<Rating> ratingList = new List<Rating>();
@@ -49,11 +54,21 @@ namespace LivingSmartBusinessLogic.DB
             return ratingList;
         }
 
+        /// <summary>
+        /// Returns a dictionary containing all the Ratings in the database.
+        /// </summary>
+        /// <returns>Returns a dictionary containing all the Ratings in the database, with CaseId as key and a list of Ratings containing that CaseId as value</returns>
         public Dictionary<int, List<Rating>> ReadRatings()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Updates the information from a Rating, in the database.
+        /// </summary>
+        /// <param name="rating">Rating to be updated.</param>
+        /// <param name="caseId">CaseId connected to the Rating</param>
+        /// <param name="estateAgentId">EstateAgentId connected to the Rating</param>
         public void UpdateRating(Rating rating, int caseId, int estateAgentId)
         {
             int ratingId = rating.Id;
@@ -86,6 +101,13 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Rating in the database.
+        /// </summary>
+        /// <param name="rating">Rating to be created.</param>
+        /// <param name="caseId">CaseId connected to the Rating</param>
+        /// <param name="estateAgentId">EstateAgentId connected to the Rating</param>
+        /// <returns>Returns the Id of the Rating created.</returns>
         public int CreateRating(Rating rating, int caseId, int estateAgentId)
         {
             int ratingId = 0;
@@ -94,7 +116,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Rating VALUES (@CaseId, @SystemValue, @EstateAgentValue, @Date, @EstateAgentId); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Rating OUTPUT INSERTED.ID VALUES (@CaseId, @SystemValue, @EstateAgentValue, @Date, @EstateAgentId); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;

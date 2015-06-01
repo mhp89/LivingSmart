@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class EstateAgentDBMSSQL : IEstateAgentDB
     {
+        /// <summary>
+        /// Returns all the EstateAgents from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the EstateAgents from the database.</returns>
         public List<EstateAgent> ReadEstateAgents()
         {
             List<EstateAgent> estateAgentList = new List<EstateAgent>();
@@ -50,6 +54,10 @@ namespace LivingSmartBusinessLogic.DB
             return estateAgentList;
         }
 
+        /// <summary>
+        /// Updates the information from an EstateAgent, in the database.
+        /// </summary>
+        /// <param name="estateAgent">EstateAgent to be updated.</param>
         public void UpdateEstateAgent(EstateAgent estateAgent)
         {
             int estateagentId = estateAgent.Id;
@@ -64,8 +72,8 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
-            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 50, "StartingDate").Value = estateAgent.StartingDate;
-			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 50, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
+            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
+			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
             try
             {
@@ -82,6 +90,11 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new EstateAgent in the database.
+        /// </summary>
+        /// <param name="estateAgent">EstateAgent to be created.</param>
+        /// <returns>Returns the Id of the EstateAgent created.</returns>
         public int CreateEstateAgent(EstateAgent estateAgent)
         {
             int estateagentId = 0;
@@ -90,14 +103,14 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO EstateAgent VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.ID VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); "
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
-            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 50, "StartingDate").Value = estateAgent.StartingDate;
-			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 50, "TerminationDate").Value = (object) estateAgent.TerminationDate ?? DBNull.Value;
+            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
+            cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
             try
             {

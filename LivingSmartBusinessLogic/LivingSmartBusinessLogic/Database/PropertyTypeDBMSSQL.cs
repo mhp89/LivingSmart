@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class PropertyTypeDBMSSQL : IPropertyTypeDB
     {
+        /// <summary>
+        /// Returns all the PropertyTypes from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the PropertyTypes.</returns>
         public List<PropertyType> ReadPropertyTypes()
         {
             List<PropertyType> propertyTypeList = new List<PropertyType>();
@@ -46,6 +50,10 @@ namespace LivingSmartBusinessLogic.DB
             return propertyTypeList;
         }
 
+        /// <summary>
+        /// Updates the information from a PropertyType, in the database.
+        /// </summary>
+        /// <param name="propertyType">PropertyType to be updated.</param>
         public void UpdatePropertyType(PropertyType propertyType)
         {
             int propertyTypeId = propertyType.Id;
@@ -73,6 +81,12 @@ namespace LivingSmartBusinessLogic.DB
                 connection.Close();
             }
         }
+
+        /// <summary>
+        /// Creates a new PropertyType in the database.
+        /// </summary>
+        /// <param name="propertyType">PropertyType to be created.</param>
+        /// <returns>Returns the Id of the PropertyType created.</returns>
         public int CreatePropertyType(PropertyType propertyType)
         {
             int propertyTypeId = 0;
@@ -81,7 +95,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO PropertyType VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO PropertyType OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
             cmd.Parameters.Add("@Description", SqlDbType.Char, 50, "Description").Value = propertyType.Description;

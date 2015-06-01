@@ -8,14 +8,18 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal static class AppointmentDBFactory
     {
+        /// <summary>
+        /// Returns the database layer for the Appointments. Type is chosen in the settings file and can be "MSSQL", "XML" or "MYSQL". 
+        /// </summary>
+        /// <returns>Returns the database layer for the Appointments.</returns>
         public static IAppointmentDB GetDBL()
         {
             if (Properties.Settings.Default.DatabaseType == "MSSQL")
                 return new AppointmentDBMSSQL();
-//            if (Properties.Settings.Default.Database == "XML")
-//                return new CustomerDBXML();
-//            if (Properties.Settings.Default.Database == "MYSQL")
-//                return new CustomerDBMYSQL();
+//            if (Properties.Settings.Default.DatabaseType == "XML")
+//                return new AppointmentDBXML();
+//            if (Properties.Settings.Default.DatabaseType == "MYSQL")
+//                return new AppointmentDBMYSQL();
             return null;
         }
     }

@@ -11,6 +11,11 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class AskingPriceDBMSSQL : IAskingPriceDB
     {
+        /// <summary>
+        /// Returns all the AskingPrices from the database, with a given CaseId.
+        /// </summary>
+        /// <param name="caseId">Id of the case</param>
+        /// <returns>Returns a List of all the AskingPrices, having a CaseId given by the parameter</returns>
         public List<AskingPrice> ReadAskingPrices(int caseId)
         {
             List<AskingPrice> askingPriceList = new List<AskingPrice>();
@@ -47,6 +52,11 @@ namespace LivingSmartBusinessLogic.DB
             return askingPriceList;
         }
 
+        /// <summary>
+        /// Updates the information from and AskingPrice, in the database.
+        /// </summary>
+        /// <param name="askingPrice">AskingPrice to be updated.</param>
+        /// <param name="caseId">CaseId connected to the ad</param>
         public void UpdateAskingPrice(AskingPrice askingPrice, int caseId)
         {
             int askingPriceId = askingPrice.Id;
@@ -77,6 +87,12 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new AskingPrice in the database.
+        /// </summary>
+        /// <param name="askingPrice">AskingPrice to be created.</param>
+        /// <param name="caseId">CaseId connected to the AskingPrice.</param>
+        /// <returns>Returns the Id of the AskingPrice created.</returns>
         public int CreateAskingPrice(AskingPrice askingPrice, int caseId)
         {
             int askingPriceId = 0;
@@ -85,7 +101,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO AskingPrice VALUES (@CaseId, @Value, @Date); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO AskingPrice OUTPUT INSERTED.ID VALUES (@CaseId, @Value, @Date); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "caseId").Value = caseId;

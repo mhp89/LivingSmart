@@ -11,6 +11,11 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class PictureDBMSSQL : IPictureDB
     {
+        /// <summary>
+        /// Returns all the Pictures from the database, with a given CaseId.
+        /// </summary>
+        /// <param name="caseId">Id of the case</param>
+        /// <returns>Returns a List of all the Pictures, having a CaseId given by the parameter</returns>
         public List<Picture> ReadPictures(int caseId)
         {
             List<Picture> pictureList = new List<Picture>();
@@ -47,6 +52,10 @@ namespace LivingSmartBusinessLogic.DB
             return pictureList;
         }
 
+        /// <summary>
+        /// Returns a dictionary containing all the Pictures in the database.
+        /// </summary>
+        /// <returns>Returns a dictionary containing all the Pictures in the database, with CaseId as key and a list of Pictures containing that CaseId as value</returns>
         public Dictionary<int, List<Picture>> ReadPictures()
         {
             Dictionary<int, List<Picture>> pictureDictionary = new Dictionary<int, List<Picture>>();
@@ -88,6 +97,11 @@ namespace LivingSmartBusinessLogic.DB
             return pictureDictionary;
         }
 
+        /// <summary>
+        /// Updates the information from a Picture, in the database.
+        /// </summary>
+        /// <param name="picture">Picture to be updated.</param>
+        /// <param name="caseId">CaseId connected to the Picture</param>
         public void UpdatePicture(Picture picture, int caseId)
         {
             int pictureId = picture.Id;
@@ -100,8 +114,8 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Location", SqlDbType.Date, 8, "Location").Value = picture.Location;
-            cmd.Parameters.Add("@Description", SqlDbType.Date, 8, "Description").Value = picture.Desription;
+            cmd.Parameters.Add("@Location", SqlDbType.Char, 50, "Location").Value = picture.Location;
+            cmd.Parameters.Add("@Description", SqlDbType.Char, 255, "Description").Value = picture.Desription;
 
             try
             {
@@ -118,6 +132,12 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Picture in the database.
+        /// </summary>
+        /// <param name="picture">Picture to be created.</param>
+        /// <param name="caseId">CaseId connected to the Picture</param>
+        /// <returns>Returns the Id of the Picture created.</returns>
         public int CreatePicture(Picture picture, int caseId)
         {
             int pictureId = 0;
@@ -126,12 +146,12 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Picture VALUES (@CaseId, @Location, @Description); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Picture OUTPUT INSERTED.ID VALUES (@CaseId, @Location, @Description); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Location", SqlDbType.Date, 8, "Location").Value = picture.Location;
-            cmd.Parameters.Add("@Description", SqlDbType.Date, 8, "Description").Value = picture.Desription;
+            cmd.Parameters.Add("@Location", SqlDbType.Char, 50, "Location").Value = picture.Location;
+            cmd.Parameters.Add("@Description", SqlDbType.Char, 255, "Description").Value = picture.Desription;
 
             try
             {

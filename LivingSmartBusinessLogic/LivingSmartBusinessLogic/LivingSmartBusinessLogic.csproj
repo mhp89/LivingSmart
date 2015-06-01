@@ -45,6 +45,7 @@
     <Compile Include="Database\IStatisticsDB.cs" />
     <Compile Include="Database\CityDBFactory.cs" />
     <Compile Include="Database\CityDBMSSQL.cs" />
+    <Compile Include="Database\CustomerDBMYSQL.cs" />
     <Compile Include="Database\ICityDB.cs" />
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />
@@ -99,7 +100,10 @@
     <Compile Include="Model\Statistics.cs" />
     <Compile Include="Model\EstateAgent.cs" />
     <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\IPriorityQueue.cs" />
+    <Compile Include="Model\PriorityQueue.cs" />
     <Compile Include="Model\Neighborhood.cs" />
+    <Compile Include="Model\OpenHouse.cs" />
     <Compile Include="Model\Partner.cs" />
     <Compile Include="Model\Picture.cs" />
     <Compile Include="Model\PropertyType.cs" />

@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class NeighborhoodDBMSSQL : INeighborhoodDB
     {
+        /// <summary>
+        /// Returns all the Neighborhoods from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the Neighborhoods from the database.</returns>
         public List<Neighborhood> ReadNeighborhoods()
         {
             List<Neighborhood> neighborhoodList = new List<Neighborhood>();
@@ -47,6 +51,10 @@ namespace LivingSmartBusinessLogic.DB
             return neighborhoodList;
         }
 
+        /// <summary>
+        /// Updates the information from a Neighborhood, in the database.
+        /// </summary>
+        /// <param name="neighborhood">Neighborhood to be updated.</param>
         public void UpdateNeighborhood(Neighborhood neighborhood)
         {
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
@@ -75,6 +83,11 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Neighborhood in the database.
+        /// </summary>
+        /// <param name="neighborhood">Neighborhood to be created.</param>
+        /// <returns>Returns the Id of the Neighborhood created.</returns>
         public int CreateNeighborhood(Neighborhood neighborhood)
         {
             int neighborhoodId = 0;
@@ -83,7 +96,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Neighborhood VALUES (@ZipCode, @Neighborhood, @Value); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Neighborhood OUTPUT INSERTED.ID VALUES (@ZipCode, @Neighborhood, @Value); "
             };
 
             cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.City.ZipCode;

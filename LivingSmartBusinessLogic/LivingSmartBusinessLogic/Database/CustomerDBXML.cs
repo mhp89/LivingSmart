@@ -8,17 +8,16 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class CustomerDBXML : ICustomerDB
     {
+        /// <summary>
+        /// Returns all the customers from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the customers from the database.</returns>
         public List<Customer> ReadCustomers()
         {
             throw new NotImplementedException();
         }
 
         public void UpdateCustomer(Customer customer)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void UpdateCustomer()
         {
             throw new NotImplementedException();
         }

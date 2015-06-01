@@ -3,29 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.DB
 {
-    internal interface ICustomerDB
+    internal class CustomerDBMYSQL : ICustomerDB
     {
         /// <summary>
         /// Returns all the Customers from the database.
         /// </summary>
         /// <returns>Returns a List of all the Customer from the database</returns>
-        List<Customer> ReadCustomers();
+        public List<Customer> ReadCustomers()
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Updates the information from a Customer, in the database.
         /// </summary>
         /// <param name="customer">Customer to be updated.</param>
-        void UpdateCustomer(Customer customer);
+        public void UpdateCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
 
         /// <summary>
         /// Creates a new Customer in the database.
         /// </summary>
         /// <param name="customer">Customer to be created.</param>
         /// <returns>Returns the Id of the Customer created.</returns>
-        int CreateCustomer(Customer customer);
+        public int CreateCustomer(Customer customer)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
