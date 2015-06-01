@@ -9,32 +9,32 @@ namespace LivingSmartBusinessLogic.Model
     /// </summary>
     public class OpenHouse
     {
-        private List<EstateAgent> brokers;
-        private List<KeyValuePair<decimal, Case>> caseAskingPricePairs;
-        private IPriorityQueue<decimal, Case> pq;
-        private Dictionary<EstateAgent, List<Case>> openHouse;
+        private readonly List<EstateAgent> brokers;
+        private readonly List<KeyValuePair<decimal, Case>> keyCasePair;
+        private readonly IPriorityQueue<decimal, Case> pq;
+        private readonly Dictionary<EstateAgent, List<Case>> openHouse;
 
         /// <summary>
-        /// 
+        /// Takes a list of brokers and a List of KeyValuesPairs of Decimals and Cases
         /// </summary>
         /// <param name="brokers"></param>
-        /// <param name="cases"></param>
-        public OpenHouse(List<EstateAgent> brokers, List<KeyValuePair<decimal, Case>> caseAskingPricePairs)
+        /// <param name="keyCasePair"></param>
+        public OpenHouse(List<EstateAgent> brokers, List<KeyValuePair<decimal, Case>> keyCasePair)
         {
-            this.caseAskingPricePairs = caseAskingPricePairs;
+            this.keyCasePair = keyCasePair;
             this.brokers = brokers;
             pq = new MyPriorityQueue<decimal, Case>();
             openHouse = new Dictionary<EstateAgent, List<Case>>();
 
-            foreach (var caseAskingPricePair in this.caseAskingPricePairs)
+            foreach (var caseAskingPricePair in this.keyCasePair)
             {
                 pq.Insert(caseAskingPricePair.Key, caseAskingPricePair.Value);
             }
         }
 
         /// <summary>
-        /// Given a list of brokers and a list of Cases, this method distributes the cases to the brokers
-        /// evenly by price.
+        /// Distributes Cases to EstateAgents based on the Key in given in the constructor.
+        /// The key could be the price of the house 
         /// </summary>
         /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
         public Dictionary<EstateAgent, List<Case>> ReturnOpenHouse()
