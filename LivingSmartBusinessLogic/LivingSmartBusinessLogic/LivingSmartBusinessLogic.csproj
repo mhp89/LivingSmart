@@ -95,7 +95,10 @@
     <Compile Include="Model\Document.cs" />
     <Compile Include="Model\EstateAgent.cs" />
     <Compile Include="Model\Invoice.cs" />
+    <Compile Include="Model\IPriorityQueue.cs" />
+    <Compile Include="Model\PriorityQueue.cs" />
     <Compile Include="Model\Neighborhood.cs" />
+    <Compile Include="Model\OpenHouse.cs" />
     <Compile Include="Model\Partner.cs" />
     <Compile Include="Model\Picture.cs" />
     <Compile Include="Model\PropertyType.cs" />
