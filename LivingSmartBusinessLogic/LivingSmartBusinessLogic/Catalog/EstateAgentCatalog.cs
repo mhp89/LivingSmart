@@ -6,7 +6,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    public class EstateAgentCatalog
+    internal class EstateAgentCatalog
     {
         private Dictionary<int,EstateAgent> estateAgents;
 

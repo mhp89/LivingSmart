@@ -5,7 +5,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    class AdCatalog
+    internal class AdCatalog
     {
         private Dictionary<int, List<Ad>> adDictionary;
 

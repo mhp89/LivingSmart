@@ -5,7 +5,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    public class AppointmentCatalog
+    internal class AppointmentCatalog
     {
 
         private Dictionary<int, List<Appointment>> appointmentDictionary;

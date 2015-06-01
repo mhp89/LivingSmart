@@ -3,7 +3,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    public class InvoiceCatalog
+    internal class InvoiceCatalog
     {
         private List<Invoice> invoices;
 

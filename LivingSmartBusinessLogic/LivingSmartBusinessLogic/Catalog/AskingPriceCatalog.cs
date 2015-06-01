@@ -5,7 +5,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    class AskingPriceCatalog
+    internal class AskingPriceCatalog
     {
         private Dictionary<int, List<AskingPrice>> askingPriceDictionary;
 

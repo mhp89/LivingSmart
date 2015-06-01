@@ -5,7 +5,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    class DocumentCatalog
+    internal class DocumentCatalog
     {
         private Dictionary<int, List<Document>> documentDictionary;
 

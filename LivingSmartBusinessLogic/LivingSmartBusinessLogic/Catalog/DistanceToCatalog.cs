@@ -5,7 +5,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    class DistanceToCatalog
+    internal class DistanceToCatalog
     {
         private Dictionary<int, List<DistanceTo>> distanceToDictionary;
 

@@ -5,7 +5,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    class PictureCatalog
+    internal class PictureCatalog
     {
         private Dictionary<int, List<Picture>> pictureDictionary;
 

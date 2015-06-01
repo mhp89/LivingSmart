@@ -45,16 +45,26 @@ namespace LivingSmartBusinessLogic.Controller
         #region Methods
 
         #region AdminActiveCase
+        /// <summary>
+        /// Sætter den aktive sag
+        /// </summary>
+        /// <param name="activeCase"></param>
         public void SetActiveCase(Case activeCase)
         {
             this.activeCase = activeCase;
         }
 
+        /// <summary>
+        /// Fortryder valg af aktiv sag
+        /// </summary>
         public void CancelActiveCase()
         {
             activeCase = null;
         }
 
+        /// <summary>
+        /// Gemmer aktiv sag
+        /// </summary>
         public void SaveActiveCase()
         {
             AddCase();
@@ -80,7 +90,7 @@ namespace LivingSmartBusinessLogic.Controller
         }
 
         /// <summary>
-        /// Læser en given fil fra casecatalog
+        /// Læser den aktive sag fra casecatalog
         /// </summary>
         /// <returns></returns>
         public Case ReadCase()
@@ -88,6 +98,11 @@ namespace LivingSmartBusinessLogic.Controller
             return caseCatalog.Check(activeCase.Id);
         }
 
+        /// <summary>
+        /// Læser en given sag fra casecatalog
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
         public Case GetCase(int caseId)
         {
             return caseCatalog.GetCase(caseId);
@@ -95,6 +110,14 @@ namespace LivingSmartBusinessLogic.Controller
        
         #region Document
 
+        /// <summary>
+        /// Laver et nyt dokument
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="price"></param>
+        /// <param name="location"></param>
+        /// <param name="status"></param>
+        /// <returns></returns>
         public Document MakeNewDocument(string type, int price, string location, string status)
         {
             return new Document(type, price, location, status);
@@ -115,6 +138,10 @@ namespace LivingSmartBusinessLogic.Controller
         {
             documentCatalog.RemoveFromCatalog(activeCase.Id, document);
         }
+        /// <summary>
+        /// Returnerer den aktive sags billeder som en list
+        /// </summary>
+        /// <returns></returns>
         public ReadOnlyCollection<Document> GetDocuments()
         {
             return documentCatalog.GetDocuments(activeCase.Id);
@@ -122,6 +149,12 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #region Picture
+        /// <summary>
+        /// Laver et nyt billede
+        /// </summary>
+        /// <param name="location"></param>
+        /// <param name="description"></param>
+        /// <returns></returns>
         public Picture MakeNewPicture(string location, string description)
         {
             return new Picture(location, description);
@@ -143,6 +176,10 @@ namespace LivingSmartBusinessLogic.Controller
         {
             pictureCatalog.RemoveFromCatalog(activeCase.Id, picture);
         }
+        /// <summary>
+        /// Returnerer den aktive sags billeder som en list
+        /// </summary>
+        /// <returns></returns>
         public ReadOnlyCollection<Picture> GetPictures()
         {
             return pictureCatalog.GetPictures(activeCase.Id);
@@ -151,12 +188,20 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region Ad
 
+        /// <summary>
+        /// Laver en ny annonce
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="startDate"></param>
+        /// <param name="endDate"></param>
+        /// <param name="price"></param>
+        /// <returns></returns>
         public Ad MakeNewAd(string type, DateTime startDate, DateTime endDate, int price)
         {
             return new Ad(type, startDate, endDate, price);
         }
         /// <summary>
-        /// Tilføjer en annonce til casen
+        /// Tilføjer en annonce til den aktive sag
         /// </summary>
         /// <param name="ad"></param>
         public void AddAdToCase(Ad ad)
@@ -165,12 +210,16 @@ namespace LivingSmartBusinessLogic.Controller
         }
 
         /// <summary>
-        /// Fjerner en annonce fra casen
+        /// Fjerner en annonce fra den aktive sag
         /// </summary>
         public void RemoveAdFromCase(Ad ad)
         {
             adCatalog.RemoveFromCatalog(activeCase.Id, ad);
         }
+        /// <summary>
+        /// Henter den aktive sags annoncer som en list
+        /// </summary>
+        /// <returns></returns>
         public ReadOnlyCollection<Ad> GetAds()
         {
             return adCatalog.GetAds(activeCase.Id);
@@ -179,6 +228,10 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region Rating
 
+        /// <summary>
+        /// Laver en ny vurdering baseret på den aktive sag
+        /// </summary>
+        /// <returns></returns>
         public Rating MakeNewRating()
         {
             return new Rating(activeCase);
@@ -207,11 +260,21 @@ namespace LivingSmartBusinessLogic.Controller
         {
             ratingCatalog.RemoveFromCatalog(activeCase.Id, rating);
         }
+        /// <summary>
+        /// Henter en given sags vurderinger som en list
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public ReadOnlyCollection<Rating> GetRatings(int id)
         {
             return ratingCatalog.GetRatings(activeCase.Id);
         }
 
+        /// <summary>
+        /// Henter den aktive sags vurderinger som en list
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Rating GetLastRating(Case cCase)
         {
             return ratingCatalog.GetLastRating(cCase);
@@ -221,6 +284,12 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region AskingPrice
 
+        /// <summary>
+        /// Laver en ny udbudspris
+        /// </summary>
+        /// <param name="value"></param>
+        /// <param name="date"></param>
+        /// <returns></returns>
         public AskingPrice MakeNewAskingPrice(long value, DateTime date)
         {
             return new AskingPrice(value, date);
@@ -241,16 +310,31 @@ namespace LivingSmartBusinessLogic.Controller
         {
             askingPriceCatalog.RemoveFromCatalog(activeCase.Id, askingPrice);
         }
+        /// <summary>
+        /// Henter en given sags udbudspriser som en list
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
         public ReadOnlyCollection<AskingPrice> GetAskingPrices(int caseId)
         {
             return askingPriceCatalog.GetAskingPrices(caseId);
         }
 
+        /// <summary>
+        /// Henter den aktive sags udbudspriser som en list
+        /// </summary>
+        /// <returns></returns>
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
             return GetAskingPrices(activeCase.Id);
         }
 
+        /// <summary>
+        /// Henter prisudvikling på en given case. Prisudviklingen udregnes på 
+        /// baggrund af den første og den sidste udbudspris
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
         public double GetPriceTrend(int caseId)
         {
             ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(caseId);
@@ -263,10 +347,17 @@ namespace LivingSmartBusinessLogic.Controller
 
             return (((lastRating / firstRating) - 1) * 100);
         }
+
         #endregion
 
         #region DistanceTo
 
+        /// <summary>
+        /// Laver en ny "Afstand til"
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="distance"></param>
+        /// <returns></returns>
         public DistanceTo MakeNewDistanceTo(string type, int distance)
         {
             return new DistanceTo(type, distance);
@@ -294,151 +385,271 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
 
         #region PropertyMethods
+        /// <summary>
+        /// Sætter sælger
+        /// </summary>
+        /// <param name="seller"></param>
         public void SetSeller(Customer seller)
         {
 			if (activeCase.Seller != seller)
 				activeCase.Seller = seller;
         }
+        /// <summary>
+        /// Sætter køber
+        /// </summary>
+        /// <param name="buyer"></param>
         public void SetBuyer(Customer buyer)
         {
 			if (activeCase.Buyer != buyer)
 				activeCase.Buyer = buyer;
         }
+        /// <summary>
+        /// Sætter mægler
+        /// </summary>
+        /// <param name="estateAgent"></param>
         public void SetEstateAgent(EstateAgent estateAgent)
         {
 			if (activeCase.EstateAgent != estateAgent)
 				activeCase.EstateAgent = estateAgent;
         }
+        /// <summary>
+        /// Sætter oprettelsesdato
+        /// </summary>
+        /// <param name="creationDate"></param>
         public void SetCreationDate(DateTime creationDate)
         {
             if (activeCase.CreationDate != creationDate)
                 activeCase.CreationDate = creationDate;
         }
+        /// <summary>
+        /// Sætter sagens status
+        /// </summary>
+        /// <param name="status"></param>
         public void SetStatus(string status)
         {
             if (activeCase.Status != status)
                 activeCase.Status = status;
         }
+        /// <summary>
+        /// Sætter salgsdato
+        /// </summary>
+        /// <param name="dateOfSale"></param>
         public void SetDateOfSale(DateTime dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
                 activeCase.DateOfSale = dateOfSale;
         }
+        /// <summary>
+        /// Sætter overdragelsesdato
+        /// </summary>
+        /// <param name="transferDate"></param>
         public void SetTransferDate(DateTime transferDate)
         {
             if (activeCase.TransferDate != transferDate)
                 activeCase.TransferDate = transferDate;
         }
+        /// <summary>
+        /// Sætter dato for sagens afsluttelse
+        /// </summary>
+        /// <param name="dateOfCompletion"></param>
         public void SetDateOfCompletion(DateTime dateOfCompletion)
         {
             if (activeCase.DateOfCompletion != dateOfCompletion)
                 activeCase.DateOfCompletion = dateOfCompletion;
         }
+        /// <summary>
+        /// Sætter salgspris
+        /// </summary>
+        /// <param name="sellingPrice"></param>
         public void SetSellingPrice(long sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
                 activeCase.SellingPrice = sellingPrice;
         }
+        /// <summary>
+        /// Sætter beskrivelse
+        /// </summary>
+        /// <param name="description"></param>
         public void SetDescription(string description)
         {
             if (activeCase.Description != description)
                 activeCase.Description = description;
         }
+        /// <summary>
+        /// Sætter matrikelnummer
+        /// </summary>
+        /// <param name="landRegistryNumber"></param>
         public void SetLandRegistryNumber(string landRegistryNumber)
         {
             if (activeCase.LandRegistryNumber != landRegistryNumber)
                 activeCase.LandRegistryNumber = landRegistryNumber;
         }
+        /// <summary>
+        /// Sætter adresse
+        /// </summary>
+        /// <param name="address"></param>
         public void SetAddress(string address)
         {
             if (activeCase.Address != address)
                 activeCase.Address = address;
         }
-        public void SetCity(City city)
+        /// <summary>
+        /// Sætter by baseret på postnummer
+        /// </summary>
+        /// <param name="zipcode"></param>
+        public void SetZipCode(int zipcode)
         {
-			if (activeCase.City != city)
-				activeCase.City = city;
+			if (activeCase.ZipCode != zipcode)
+				activeCase.ZipCode = zipcode;
         }
+        /// <summary>
+        /// Sætter ejendomstype
+        /// </summary>
+        /// <param name="propertyType"></param>
         public void SetPropertyType(PropertyType propertyType)
         {
 			if (activeCase.PropertyType != propertyType)
 				activeCase.PropertyType = propertyType;
         }
+        /// <summary>
+        /// Sætter den offentlige vurdering
+        /// </summary>
+        /// <param name="publicRating"></param>
         public void SetPublicRating(long publicRating)
         {
             if (activeCase.PublicRating != publicRating)
                 activeCase.PublicRating = publicRating;
         }
+        /// <summary>
+        /// Sætter grundværdien
+        /// </summary>
+        /// <param name="landValue"></param>
         public void SetLandValue(long landValue)
         {
             if (activeCase.LandValue != landValue)
                 activeCase.LandValue = landValue;
         }
+        /// <summary>
+        /// Sætter grundareal
+        /// </summary>
+        /// <param name="groundArea"></param>
         public void SetGroundArea(int groundArea)
         {
             if (activeCase.GroundArea != groundArea)
                 activeCase.GroundArea = groundArea;
         }
+        /// <summary>
+        /// Sætter bebygget areal
+        /// </summary>
+        /// <param name="builtArea"></param>
         public void SetBuiltArea(int builtArea)
         {
             if (activeCase.BuiltArea != builtArea)
                 activeCase.BuiltArea = builtArea;
         }
+        /// <summary>
+        /// Sætter beboelsesareal
+        /// </summary>
+        /// <param name="livingArea"></param>
         public void SetLivingArea(int livingArea)
         {
             if (activeCase.LivingArea != livingArea)
                 activeCase.LivingArea = livingArea;
         }
+        /// <summary>
+        /// Sætter kælderareal
+        /// </summary>
+        /// <param name="basementArea"></param>
         public void SetBasementArea(int basementArea)
         {
             if (activeCase.BasementArea != basementArea)
                 activeCase.BasementArea = basementArea;
         }
+        /// <summary>
+        /// Sætter byggeår
+        /// </summary>
+        /// <param name="builtYear"></param>
         public void SetBuiltYear(int builtYear)
         {
             if (activeCase.BuiltYear != builtYear)
                 activeCase.BuiltYear = builtYear;
         }
+        /// <summary>
+        /// Sætter energimærke
+        /// </summary>
+        /// <param name="energyClassification"></param>
         public void SetEnergyClassification(string energyClassification)
         {
             if (activeCase.EnergyClassification != energyClassification)
                 activeCase.EnergyClassification = energyClassification;
         }
+        /// <summary>
+        /// Sætter antal etager
+        /// </summary>
+        /// <param name="floors"></param>
         public void SetFloors(int floors)
         {
             if (activeCase.Floors != floors)
                 activeCase.Floors = floors;
         }
+        /// <summary>
+        /// Sætter antal rum
+        /// </summary>
+        /// <param name="rooms"></param>
         public void SetRooms(int rooms)
         {
             if (activeCase.Rooms != rooms)
                 activeCase.Rooms = rooms;
         }
+        /// <summary>
+        /// Sætter antal soveværelser
+        /// </summary>
+        /// <param name="bedrooms"></param>
         public void SetBedrooms(int bedrooms)
         {
             if (activeCase.Bedrooms != bedrooms)
                 activeCase.Bedrooms = bedrooms;
         }
+        /// <summary>
+        /// Sætter antal badeværelser
+        /// </summary>
+        /// <param name="bathrooms"></param>
         public void SetBathrooms(int bathrooms)
         {
             if (activeCase.Bathrooms != bathrooms)
                 activeCase.Bathrooms = bathrooms;
         }
+        /// <summary>
+        /// Sætter antal toiletter
+        /// </summary>
+        /// <param name="toilets"></param>
         public void SetToilets(int toilets)
         {
             if (activeCase.Toilets != toilets)
                 activeCase.Toilets = toilets;
         }
+        /// <summary>
+        /// Sætter garageareal
+        /// </summary>
+        /// <param name="garageArea"></param>
         public void SetGarageArea(int garageArea)
         {
             if (activeCase.GarageArea != garageArea)
                 activeCase.GarageArea = garageArea;
         }
+        /// <summary>
+        /// Sætter "udsigtsfaktor"
+        /// </summary>
+        /// <param name="view"></param>
         public void SetView(int view)
         {
             if (activeCase.View != view)
                 activeCase.View = view;
         }
+        /// <summary>
+        /// Bestemmer nabolag
+        /// </summary>
+        /// <param name="neighborhood"></param>
         public void SetNeighborhood(Neighborhood neighborhood)
         {
             if (activeCase.Neighborhood != neighborhood)

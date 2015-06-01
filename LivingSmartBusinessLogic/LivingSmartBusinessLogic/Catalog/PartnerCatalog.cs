@@ -3,7 +3,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
-    public class PartnerCatalog
+    internal class PartnerCatalog
     {
         private Dictionary<int,Partner> partners;
 
