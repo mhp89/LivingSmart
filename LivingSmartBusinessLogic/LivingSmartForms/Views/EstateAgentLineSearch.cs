@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms.Views

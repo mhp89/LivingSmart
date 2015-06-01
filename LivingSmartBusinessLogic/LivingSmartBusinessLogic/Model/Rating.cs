@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using LivingSmartBusinessLogic.Controller;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Model
 {
     public class Rating
     {
@@ -14,8 +11,6 @@ namespace LivingSmartBusinessLogic
         private long _estateAgentValue;
         private long _systemValue;
         private DateTime _date;
-
-
 
         #endregion
 

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {

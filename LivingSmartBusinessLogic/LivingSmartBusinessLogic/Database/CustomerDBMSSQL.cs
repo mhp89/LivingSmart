@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.DBLayer;
+using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.DB
 {
