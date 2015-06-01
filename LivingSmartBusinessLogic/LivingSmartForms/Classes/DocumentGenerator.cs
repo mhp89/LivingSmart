@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.IO;
 
-namespace LivingSmartBusinessLogic.Model
+namespace LivingSmartForms.Classes
 {
     /// <summary>
     /// Klasse med metoder til opbygning af udskriftsfil

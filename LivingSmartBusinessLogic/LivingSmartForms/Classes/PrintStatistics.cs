@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
-using LivingSmartBusinessLogic.DB;
-using docGen = LivingSmartBusinessLogic.Model.DocumentGenerator;
+using LivingSmartBusinessLogic.Controller;
+using docGen = LivingSmartForms.Classes.DocumentGenerator;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -17,9 +17,9 @@ namespace LivingSmartBusinessLogic.Model
         /// Laver udskriftfil med statistik for solgte ejendomme for en bestemt mægler og et bestemt år
         /// </summary>
         /// <param name="fileStream"></param>
-        public static void CreatePrintEstateAgent(Stream fileStream)
+        public static void CreatePrintEstateAgent(Stream fileStream, int estateAgentId, int year)
         {
-            var db = StatisticsDBFactory.GetDBL();
+            var list = StatisticsController.Instance.ReadEstateAgentStatistics(estateAgentId, year);
 
             string page = "";
             string[] headerText = {"Statistik af solgte ejendomme i databasen for en udvalgt mægler og",
@@ -36,7 +36,7 @@ namespace LivingSmartBusinessLogic.Model
 			});
             page += docGen.FilledLine();
 
-            foreach (Statistics statLine in db.ReadAllStatistics())
+            foreach (Statistics statLine in list)
                 page += CreateStatisticsLineEstateAgent(statLine);
 
             page += docGen.FilledLine();
@@ -57,7 +57,7 @@ namespace LivingSmartBusinessLogic.Model
         /// <param name="fileStream"></param>
         public static void CreatePrintAll(Stream fileStream)
         {
-            var db = StatisticsDBFactory.GetDBL();
+            var list = StatisticsController.Instance.ReadAllStatistics();
 
             string page = "";
             string[] headerText = {"Statistik af alle solgte ejendomme i databasen vist som summen",
@@ -75,7 +75,7 @@ namespace LivingSmartBusinessLogic.Model
 			});
             page += docGen.FilledLine();
 
-            foreach (Statistics statLine in db.ReadAllStatistics())
+            foreach (Statistics statLine in list)
                 page += CreateStatisticsLineAll(statLine);
 
             page += docGen.FilledLine();

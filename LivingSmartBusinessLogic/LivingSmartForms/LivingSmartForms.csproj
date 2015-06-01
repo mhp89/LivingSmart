@@ -77,9 +77,11 @@
     <Compile Include="Classes\CaseStep.Designer.cs">
       <DependentUpon>CaseStep.cs</DependentUpon>
     </Compile>
+    <Compile Include="Classes\DocumentGenerator.cs" />
     <Compile Include="Classes\DrawUtils.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Classes\Page.cs" />
+    <Compile Include="Classes\PrintStatistics.cs" />
     <Compile Include="Classes\SmartColor.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
