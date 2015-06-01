@@ -11,6 +11,11 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class CaseDBMSSQL : ICaseDB
     {
+        /// <summary>
+        /// Returns all the Cases from the database, with a given EstateAgentId.
+        /// </summary>
+        /// <param name="estateAgentId">Id of the estate agent</param>
+        /// <returns>Returns a List of all the Cases, having a EstateAgentId given by the parameter</returns>
         public List<Case> ReadCases(int estateAgentId)
         {
             List<Case> caseList = new List<Case>();
@@ -78,6 +83,10 @@ namespace LivingSmartBusinessLogic.DB
             return caseList;
         }
 
+        /// <summary>
+        /// Updates the information from a Case, in the database.
+        /// </summary>
+        /// <param name="ca">Case to be updated.</param>
         public void UpdateCase(Case ca)
         {
             int caseId = ca.Id;
@@ -143,6 +152,11 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Case in the database.
+        /// </summary>
+        /// <param name="ca">Case to be created.</param>
+        /// <returns>Returns the Id of the Case created.</returns>
         public int CreateCase(Case ca)
         {
             int adId = 0;
@@ -151,10 +165,10 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Case VALUES (" +
+                CommandText = "INSERT INTO Case OUTPUT INSERTED.ID VALUES (" +
                     "@SellerId, @BuyerId, @EstateAgentId, @CreationDate, @Status,@DateOfSale, @TransferDate, @DateOfCompletion, @SellingPrice, @Description" +
                     "@PropertyTypeId, @LandRegistryNumber, @Address, @ZipCode, @Neighborhood, @PublicRating, @LandValue, @GroundArea, @LivingArea, @BuiltArea" +
-                    "@BasementArea, @GarageArea, @BuiltYear, @EnergyClassification, @Floors, @Rooms, @Bedrooms, @Bathrooms, @Toilets, @View); " + "SELECT CAST(scope_identity() AS int);"
+                    "@BasementArea, @GarageArea, @BuiltYear, @EnergyClassification, @Floors, @Rooms, @Bedrooms, @Bathrooms, @Toilets, @View); "
             };
 
             cmd.Parameters.Add("@SellerId", SqlDbType.Int, 4, "SellerId").Value = ca.Seller.Id;

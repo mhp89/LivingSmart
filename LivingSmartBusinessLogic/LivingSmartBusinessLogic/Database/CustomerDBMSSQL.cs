@@ -12,6 +12,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class CustomerDBMSSQL : ICustomerDB
     {
+        /// <summary>
+        /// Returns all the Customers from the database.
+        /// </summary>
+        /// <returns>Returns a List of all the Customer from the database</returns>
         public List<Customer> ReadCustomers()
         {
             List<Customer> customerList = new List<Customer>();
@@ -53,6 +57,10 @@ namespace LivingSmartBusinessLogic.DB
             return customerList;
         }
 
+        /// <summary>
+        /// Updates the information from a Customer, in the database.
+        /// </summary>
+        /// <param name="customer">Customer to be updated.</param>
         public void UpdateCustomer(Customer customer)
         {
             int customerID = customer.Id;
@@ -86,6 +94,11 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates a new Customer in the database.
+        /// </summary>
+        /// <param name="customer">Customer to be created.</param>
+        /// <returns>Returns the Id of the Customer created.</returns>
         public int CreateCustomer(Customer customer)
         {
             int customerID = 0;
@@ -94,7 +107,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Customer VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Customer OUTPUT INSERTED.ID VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email); "
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = customer.Name;

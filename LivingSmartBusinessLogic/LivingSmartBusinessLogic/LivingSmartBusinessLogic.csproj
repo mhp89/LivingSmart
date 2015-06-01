@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="Database\CityDBFactory.cs" />
     <Compile Include="Database\CityDBMSSQL.cs" />
+    <Compile Include="Database\CustomerDBMYSQL.cs" />
     <Compile Include="Database\ICityDB.cs" />
     <Compile Include="Database\RatingDBFactory.cs" />
     <Compile Include="Database\RatingDBMSSQL.cs" />

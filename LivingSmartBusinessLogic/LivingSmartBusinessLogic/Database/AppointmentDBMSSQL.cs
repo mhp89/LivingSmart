@@ -11,6 +11,10 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal class AppointmentDBMSSQL : IAppointmentDB
     {
+        /// <summary>
+        /// Returns a dictionary containing all the appointments in the database.
+        /// </summary>
+        /// <returns>Returns a dictionary containing all the appointments in the database, with estateAgentId as key and a list of appointments containing that estateAgentId</returns>
         public Dictionary<int, List<Appointment>> ReadAppointments()
         {
             Dictionary<int, List<Appointment>> appointments = new Dictionary<int, List<Appointment>>();
@@ -56,6 +60,11 @@ namespace LivingSmartBusinessLogic.DB
             return appointments;
         }
 
+        /// <summary>
+        /// Updates the information from and appointment, in the database.
+        /// </summary>
+        /// <param name="appointment">Appointment to be updated.</param>
+        /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
         public void UpdateAppointment(Appointment appointment, int estateAgentId)
         {
             int appointmentId = appointment.Id;
@@ -90,6 +99,12 @@ namespace LivingSmartBusinessLogic.DB
             }
         }
 
+        /// <summary>
+        /// Creates an appointment in the database.
+        /// </summary>
+        /// <param name="appointment">Appointment to be created.</param>
+        /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
+        /// <returns>Returns the Id of the Appointment created.</returns>
         public int CreateAppointment(Appointment appointment, int estateAgentId)
         {
             int appointmentId = 0;
@@ -98,7 +113,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Appointment VALUES (@EstateAgentId, @CustomerId, @CaseId, @StartTimestamp, @EndTimeStamp, @Description, @Place); " + "SELECT CAST(scope_identity() AS int);"
+                CommandText = "INSERT INTO Appointment OUTPUT INSERTED.ID VALUES (@EstateAgentId, @CustomerId, @CaseId, @StartTimestamp, @EndTimeStamp, @Description, @Place); "
             };
 
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Date, 50, "EstateAgentId").Value = estateAgentId;
