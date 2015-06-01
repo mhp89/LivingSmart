@@ -1,0 +1,70 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using LivingSmartBusinessLogic.DB;
+
+namespace LivingSmartBusinessLogic.Controller
+{
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</author>
+	public class StatisticsController
+	{
+		#region Singleton
+
+        /// <summary>
+        /// 
+        /// </summary>
+		private static StatisticsController _instance;
+        /// <summary>
+        /// 
+        /// </summary>
+		public static StatisticsController Instance
+		{
+			get { return _instance ?? (_instance = new StatisticsController()); }
+		}
+
+		#endregion
+
+        private IStatisticsDB db;
+
+        /// <summary>
+        /// Contructor der instantierer db
+        /// </summary>
+        public StatisticsController()
+        {
+            db = StatisticsDBFactory.GetDBL();
+        }
+        /// <summary>
+        /// Returnerer en liste med statistik over alle solgte ejendomme
+        /// </summary>
+        /// <returns></returns>
+        public List<Statistics> ReadAllStatistics()
+        {
+            return db.ReadAllStatistics();
+        }
+
+        /// <summary>
+        /// Returnerer en liste med statistik for en given mægler og et givent år
+        /// </summary>
+        /// <param name="estateAgentId"></param>
+        /// <param name="year"></param>
+        /// <returns></returns>
+        public List<Statistics> ReadEstateAgentStatistics(int estateAgentId, int year)
+        {
+            return db.ReadEstateAgentStatistics(estateAgentId, year);
+        }
+
+        /// <summary>
+        /// Returnerer statistik for solgte ejendomme i indeværende år
+        /// </summary>
+        /// <returns></returns>
+        public Statistics ReadDialStatistics()
+        {
+            return db.ReadDialStatistics();
+        }
+    }
+}

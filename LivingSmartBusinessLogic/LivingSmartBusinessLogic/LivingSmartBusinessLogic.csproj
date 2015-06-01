@@ -41,6 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\StatisticsDBFactory.cs" />
+    <Compile Include="Database\IStatisticsDB.cs" />
     <Compile Include="Database\CityDBFactory.cs" />
     <Compile Include="Database\CityDBMSSQL.cs" />
     <Compile Include="Database\ICityDB.cs" />
@@ -86,6 +88,7 @@
     <Compile Include="Database\IDocumentDB.cs" />
     <Compile Include="Database\IPartnerDB.cs" />
     <Compile Include="Database\ICustomerDB.cs" />
+    <Compile Include="Database\StatisticsDBMSSQL.cs" />
     <Compile Include="Model\Ad.cs" />
     <Compile Include="Model\Appointment.cs" />
     <Compile Include="Model\AskingPrice.cs" />
@@ -93,6 +96,7 @@
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\DistanceTo.cs" />
     <Compile Include="Model\Document.cs" />
+    <Compile Include="Model\Statistics.cs" />
     <Compile Include="Model\EstateAgent.cs" />
     <Compile Include="Model\Invoice.cs" />
     <Compile Include="Model\Neighborhood.cs" />
@@ -124,6 +128,7 @@
     <Compile Include="Controller\PartnerController.cs" />
     <Compile Include="Controller\SellPropertyController.cs" />
     <Compile Include="Controller\PropertyTypeController.cs" />
+    <Compile Include="Controller\StatisticsController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
