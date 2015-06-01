@@ -41,8 +41,12 @@ namespace LivingSmartBusinessLogic
 =======
             _zipCode = zipCode;
             _name = name;
-            _value = value; //gennemsnitlig m2 pris af boligen for det område
+<<<<<<< HEAD:LivingSmartBusinessLogic/LivingSmartBusinessLogic/Model/Neighborhood.cs.orig
+            _value = value;
 >>>>>>> 543b4340e6367875970e68683e3ec758f7ea83db
+=======
+            _value = value; //gennemsnitlig m2 pris af boligen for det område
+>>>>>>> origin/Beliggenhedsberegning#78:LivingSmartBusinessLogic/LivingSmartBusinessLogic/Neighborhood.cs
         }
 
         #region Methods

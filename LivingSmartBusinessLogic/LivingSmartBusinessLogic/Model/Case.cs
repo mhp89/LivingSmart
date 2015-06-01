@@ -149,6 +149,76 @@ namespace LivingSmartBusinessLogic.Model
             throw new System.NotImplementedException();
         }
         
+        /// <summary>
+        /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
+        /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
+        /// </summary>
+        /// <returns></returns>
+        internal long CalculatePropertyRating()
+        {
+            int basementValue = _neighborhood.Value / 4;  //Estimeret værdi
+            
+            return Convert.ToInt64((_landValue + _livingArea * _neighborhood.Value 
+                                    + _basementArea * basementValue) * RatingFactor()
+                                    * (1 - (DateTime.Today.Year -_builtYear) / 1000));
+        }
+
+        /// <summary>
+        /// Finder beregningsfaktorer for udsigt, afstand til skole, indkøb og centrum
+        /// baseret på deres faktiske værdier. 
+        /// </summary>
+        internal double RatingFactor()
+        {
+            double viewFactor;
+            double schoolFactor;
+            double shoppingFactor;
+            double centerFactor;
+            int schoolDistance;
+            int shoppingDistance;
+            int centerDistance;
+
+            //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
+            foreach (DistanceTo dist in distanceTos)
+            {
+                if (dist.Type == "school")
+                    schoolDistance = dist.Distance;
+                else if (dist.Type == "shopping")
+                    shoppingDistance = dist.Distance;
+                else if (dist.Type == "center")
+                    centerDistance = dist.Distance;
+            }
+
+            if (_view == 1)
+                viewFactor = 0.7;
+            else if (_view == 2)
+                viewFactor = 0.4;
+            else
+                viewFactor = 0.1;
+
+            if (schoolDistance <= 1000)
+                schoolFactor = 0.5;
+            else if (schoolDistance <= 4000)
+                schoolFactor = 0.3;
+            else
+                schoolFactor = 0.1;
+
+            if (shoppingDistance <= 500)
+                shoppingFactor = 0.4;
+            else if (shoppingDistance <= 3000)
+                shoppingFactor = 0.2;
+            else
+                shoppingFactor = 0.1;
+
+            if (centerDistance <= 1000)
+                centerFactor = 0.6;
+            else if (centerDistance <= 4000)
+                centerFactor = 0.3;
+            else
+                centerFactor = 0.1;
+
+            return viewFactor + schoolFactor + shoppingFactor + centerFactor;
+        }
+
         #endregion
     }
 }
