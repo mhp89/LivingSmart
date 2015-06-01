@@ -113,9 +113,9 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), Distance = (@Distance) WHERE DistanceToId = " + distanceToId
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "CaseId").Value = caseId;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = distanceTo.Type;
-            cmd.Parameters.Add("@Distance", SqlDbType.Int, 50, "Distance").Value = distanceTo.Distance;
+            cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
             try
             {
@@ -149,9 +149,9 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO DistanceTo OUTPUT INSERTED.ID VALUES (@CaseId, @Type, @Distance); "
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 50, "CaseId").Value = caseId;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = distanceTo.Type;
-            cmd.Parameters.Add("@Distance", SqlDbType.Int, 50, "Distance").Value = distanceTo.Distance;
+            cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
             try
             {

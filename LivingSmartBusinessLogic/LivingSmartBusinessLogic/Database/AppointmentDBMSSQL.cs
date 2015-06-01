@@ -76,13 +76,13 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE Ad SET EstateAgentId = (@estateAgentId), CustomerId = (@CustomerId), CaseId = (@CaseId), StartTimestamp = (@StartTimestamp), EndTimeStamp = (@EndTimeStamp), Description = (@Description), Place = (@Place)" + "WHERE AppointmentId = " + appointmentId
             };
 
-            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 50, "EstateAgentId").Value = estateAgentId;
-            cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 50, "CustomerId").Value = appointment.Customer.Id;
-            cmd.Parameters.Add("@CaseId", SqlDbType.Date, 50, "CaseId").Value = appointment.Case.Id;
-            cmd.Parameters.Add("@StartTimestamp", SqlDbType.Date, 50, "StartTimestamp").Value = appointment.StartTimestamp;
-            cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Int, 50, "EndTimeStamp").Value = appointment.EndTimeStamp;
-            cmd.Parameters.Add("@Description", SqlDbType.Int, 50, "Description").Value = appointment.Description;
-            cmd.Parameters.Add("@Place", SqlDbType.Int, 50, "Place").Value = appointment.Place;
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
+            cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 4, "CustomerId").Value = appointment.Customer.Id;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = appointment.Case.Id;
+            cmd.Parameters.Add("@StartTimestamp", SqlDbType.Date, 8, "StartTimestamp").Value = appointment.StartTimestamp;
+            cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Date, 8, "EndTimeStamp").Value = appointment.EndTimeStamp;
+            cmd.Parameters.Add("@Description", SqlDbType.Char, 500, "Description").Value = appointment.Description;
+            cmd.Parameters.Add("@Place", SqlDbType.Char, 500, "Place").Value = appointment.Place;
 
             try
             {
@@ -116,13 +116,13 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO Appointment OUTPUT INSERTED.ID VALUES (@EstateAgentId, @CustomerId, @CaseId, @StartTimestamp, @EndTimeStamp, @Description, @Place); "
             };
 
-            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Date, 50, "EstateAgentId").Value = estateAgentId;
-            cmd.Parameters.Add("@CustomerId", SqlDbType.Date, 50, "CustomerId").Value = appointment.Customer.Id;
-            cmd.Parameters.Add("@CaseId", SqlDbType.Date, 50, "CaseId").Value = appointment.Case.Id;
-            cmd.Parameters.Add("@StartTimestamp", SqlDbType.Int, 50, "StartTimestamp").Value = appointment.StartTimestamp;
-            cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Int, 50, "EndTimeStamp").Value = appointment.EndTimeStamp;
-            cmd.Parameters.Add("@Description", SqlDbType.Int, 50, "Description").Value = appointment.Description;
-            cmd.Parameters.Add("@Place", SqlDbType.Int, 50, "Place").Value = appointment.Place;
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
+            cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 4, "CustomerId").Value = appointment.Customer.Id;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = appointment.Case.Id;
+            cmd.Parameters.Add("@StartTimestamp", SqlDbType.Date, 8, "StartTimestamp").Value = appointment.StartTimestamp;
+            cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Date, 8, "EndTimeStamp").Value = appointment.EndTimeStamp;
+            cmd.Parameters.Add("@Description", SqlDbType.Char, 500, "Description").Value = appointment.Description;
+            cmd.Parameters.Add("@Place", SqlDbType.Char, 500, "Place").Value = appointment.Place;
 
             try
             {

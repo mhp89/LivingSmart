@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="dc27794e-3528-4461-a634-e2ad94680000"
+  name="LivingSmartBusinessLogic"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="41ccd26a-34f5-4894-88fc-725b25db91c7"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DLivingSmartBusinessLogic"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="006b7c4d-53ec-4e49-8471-ad88d336c250"
+        LastKnownName="DB"
+        LastKnownLocation="Package1_1141.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d5b2f32d-0bf8-4e8e-b94a-bdd7f6423aed"
+        name="Customer"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="c6b70268-11ae-4502-aa72-521540a0f668"
+            handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="2212861a-46ad-4ab1-a292-49f3528eaa92"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="b5428e25-bfbc-415a-9415-97979f5b3f14">
+                <propertyInstance
+                  Id="6172e076-ea57-4092-b250-e8aaa8d2ab3e"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9ccfa906-737c-49d0-a2c5-f6d722e205b2">
+                <propertyInstance
+                  Id="17b3eaae-196c-4c32-9ddb-9cc3a29bbce1"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="74ac113c-9ee0-4d38-9ca0-1bd14aee0f3e">
+                <propertyInstance
+                  Id="f4fa571b-e665-469d-8d1b-b675f7efd173"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0012a98f-e6af-4da6-84db-34f61ce951a4">
+                <propertyInstance
+                  Id="69954901-e4ff-4c3b-915b-90e046a81d68"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="423b5243-a395-48c4-a19c-b3820d9c6efb">
+                <propertyInstance
+                  Id="fc5df9e8-3d07-41a8-84d8-f50554e16d1b"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

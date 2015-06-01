@@ -22,11 +22,6 @@ namespace LivingSmartBusinessLogic.DB
             throw new NotImplementedException();
         }
 
-        public void UpdateCustomer()
-        {
-            throw new NotImplementedException();
-        }
-
         public int CreateCustomer(Customer customer)
         {
             throw new NotImplementedException();

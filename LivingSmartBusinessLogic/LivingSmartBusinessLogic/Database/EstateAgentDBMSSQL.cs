@@ -72,8 +72,8 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
-            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 50, "StartingDate").Value = estateAgent.StartingDate;
-			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 50, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
+            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
+			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
             try
             {
@@ -109,8 +109,8 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
-            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 50, "StartingDate").Value = estateAgent.StartingDate;
-			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 50, "TerminationDate").Value = (object) estateAgent.TerminationDate ?? DBNull.Value;
+            cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
+            cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
             try
             {

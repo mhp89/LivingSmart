@@ -1,0 +1,1329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="d533ca83-4e31-4384-9568-8e1dc69ff0a6" name="UMLClassDiagram1" linkedPackageId="b36d10f7-1108-4411-8946-059d5a45217e" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="952593b5-5bb1-4ade-ae13-6f92209728b3">
+      <profileInstance Id="69a28ff3-b49d-48c8-8124-8e1c13c75479" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="6cfea1ed-eb18-4878-b8fa-622a6606e1e3">
+      <profileInstance Id="452b6ae9-1164-435c-860b-a16ed792406e" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="0f9e5e19-3cb1-4786-9dc9-5694300ce4d2">
+      <profileInstance Id="870259ec-cd0d-4eee-a051-81e35309314b" name="CSharpProfile">
+        <elementDefinition Id="678fc50a-78de-48d2-9183-6eda743bfa28" />
+      </profileInstance>
+      <elementDefinition Id="dd150460-39b4-4ac3-be68-b1cd7972d972" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="36a20468-1841-40f0-b77d-87103e6db24a" name="CustomerDBFactory" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="7ad91f36-3264-4455-8606-f5264f436f56" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBFactory" tag="ViewCode">
+            <elementDefinition Id="b456e9e1-c42b-453a-a0e2-ae21bbe3537e" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="81c58fb4-b2da-45d3-a767-2269a7b6e8c3" name="class" profile="CSharpProfile">
+            <elementDefinition Id="d0f813c0-715a-48ba-b9ac-a2b42dfffc61" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6494f2a5-b768-4a6e-b7c9-24bebd1adcf9">
+                <propertyInstance Id="b876903d-2b41-43f9-b87b-f0cbd26d7f8c" name="ClrAttributes">
+                  <elementDefinition Id="d4a2cd7d-df3d-4f0f-a282-13aec184d468" />
+                </propertyInstance>
+                <elementDefinition Id="8e136f32-5df1-4f2a-9c1b-6e0cb4dece9c" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9407bc64-ce75-4d04-a65b-c2aced372155">
+                <propertyInstance Id="77d45967-8a04-4fac-a72f-2c8b534f8246" name="IsPartial" value="false">
+                  <elementDefinition Id="9d0478b7-2a39-4a97-99c1-a720b2fc0a73" />
+                </propertyInstance>
+                <elementDefinition Id="429c54aa-75ca-42c3-bf5a-9ef23b02740a" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a6cedde9-1ceb-4ed3-b2c1-b12dd8f7e554">
+                <propertyInstance Id="4f01d8f6-4843-42cb-940a-1d585538f193" name="IsStatic" value="True">
+                  <elementDefinition Id="f956775d-835c-4c81-8b24-95ccb87ac65d" />
+                </propertyInstance>
+                <elementDefinition Id="8b1c950a-711c-49ee-b92d-46d5e1698269" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="757b0b08-6c68-4c11-ba64-3edf9b275311">
+                <propertyInstance Id="ece58b9f-a665-4856-80d9-6c822e26b46f" name="IsUnsafe" value="false">
+                  <elementDefinition Id="a7f4d159-2668-4d16-91fa-90d0a8b00fd4" />
+                </propertyInstance>
+                <elementDefinition Id="03f37a9f-49b2-426a-a964-ad05a0cd4800" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="bdef5563-2bb9-421f-862e-6382f47f6f7a">
+                <propertyInstance Id="072f1b83-5ea8-4726-9013-f82bdbc572c1" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="cc1c931f-7688-4a70-8329-0f86506ad571" />
+                </propertyInstance>
+                <elementDefinition Id="dc6badf0-bb66-41b1-bbac-5e4161af31a1" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="4ce14864-e21a-4e35-9b00-427ab6b40c60" />
+        <suppliersInternal>
+          <dependency Id="b267f33d-98f7-4c7f-a11c-ee9aca63e362">
+            <interfaceMoniker Id="aea7514c-6201-4780-94cc-7ce701008ef6" LastKnownName="ICustomerDB" />
+            <elementDefinition Id="eb142274-0100-41bc-a749-f2629d0b21c8" />
+          </dependency>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="08ebd39f-ff05-484f-a8de-68da2aa6c531" name="GetDBL" isLeaf="false" isStatic="true" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a3d91188-1659-41ba-9538-4fd5a974d2c2" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBFactory Member%3DGetDBL" tag="ViewCode">
+                <elementDefinition Id="15058647-753c-4ea5-891b-97759ac77eea" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1e4e41c2-0c8d-414c-879f-26563d23ec7e" name="method" profile="CSharpProfile">
+                <elementDefinition Id="2a77ad5a-c85c-4a83-a286-bad12fd17746" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="54ff8793-7169-4b8d-a674-f78e63191b1b">
+                    <propertyInstance Id="820d7472-e8ff-4a9d-ac8e-f1bac6841c99" name="ClrAttributes">
+                      <elementDefinition Id="e3f3a4ae-eac6-436f-9a83-2505bfae18d2" />
+                    </propertyInstance>
+                    <elementDefinition Id="d7123294-fc6f-4407-9c81-192e73e3b27c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1728fa48-7675-4246-85e7-20aaf908d7fa">
+                    <propertyInstance Id="9e877764-3191-4ee7-bc78-bd804413087a" name="IsPartial" value="false">
+                      <elementDefinition Id="ec9cec2f-6f47-4223-8c76-97c0314352a5" />
+                    </propertyInstance>
+                    <elementDefinition Id="f401fa3a-8d14-4d8f-be38-5d3c25cbaeb0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2e5f822d-9084-4eff-9e61-96067eb86511">
+                    <propertyInstance Id="092cdebc-5d85-48bd-abaa-793d798b2211" name="IsUnsafe" value="false">
+                      <elementDefinition Id="7c5f4a8f-1687-4fd8-b616-d3f9454c297b" />
+                    </propertyInstance>
+                    <elementDefinition Id="3b08fd7f-b44c-4391-a63f-d7a790c637eb" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b0926a24-0146-4ee7-a2c6-fc0b8cf64624">
+                    <propertyInstance Id="36cbcbf0-5cb7-4236-84c8-2bfcff4e3c62" name="Inheritance" value="none">
+                      <elementDefinition Id="0b3a7dca-21bc-4878-bf0f-cb44930672a2" />
+                    </propertyInstance>
+                    <elementDefinition Id="47f6a4b1-0a72-4887-857c-d323902594c8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="41b80c2b-4f92-402e-88f5-7c9b2864c861">
+                    <propertyInstance Id="85a32cb3-b863-4b29-b1a1-7a6b6405a57b" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="b4d88931-a7ce-4a23-b259-403dd8cd88e8" />
+                    </propertyInstance>
+                    <elementDefinition Id="4185b292-5381-420d-ac23-7d7b13bb697b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="16e75aaa-c222-486b-bab4-49eefe88f27f">
+                    <propertyInstance Id="0f98dec5-bad7-4f33-8a01-cf80bd30c4e6" name="params" value="false">
+                      <elementDefinition Id="500bcbc9-79e3-425a-9096-a610bd7faa49" />
+                    </propertyInstance>
+                    <elementDefinition Id="8cbd3972-32ac-497a-84b9-c8f059dc3abf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7ad14364-6c90-48f6-84b1-aa6873b41cb5" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1ed7cc19-af74-41d7-b56b-a4f9b91560db" direction="Return">
+                  <elementDefinition Id="63d9b43e-98e8-4aa0-9608-6b22e36cdc80" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c63bfa01-9d7c-4012-b0f6-112af8774301" LastKnownName="ICustomerDB" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="c63bfa01-9d7c-4012-b0f6-112af8774301" name="ICustomerDB" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::LivingSmartBusinessLogic::DB::ICustomerDB">
+        <elementDefinition Id="6bef23cd-b988-4167-a70a-1c50a22b1786" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5fce5fb3-afb5-48ac-835f-0742aa123b25" name="CustomerDBMSSQL" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="524a11b9-9efb-4318-867d-1f868c07ecb0" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL" tag="ViewCode">
+            <elementDefinition Id="4b96b200-6359-4313-afe7-da74ceb0f6f6" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="366c6fe8-e5cf-496f-92ff-5729014971c7" name="class" profile="CSharpProfile">
+            <elementDefinition Id="c01c8910-a477-4a94-973e-899486ffd02b" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="45b3d752-0481-4b53-b501-9b5f45a3dd6d">
+                <propertyInstance Id="c87c3d1f-e9a4-4784-9485-0aa407c8f133" name="ClrAttributes">
+                  <elementDefinition Id="a43d6538-a42d-4afc-abbe-e446dc91f3df" />
+                </propertyInstance>
+                <elementDefinition Id="bee75c91-a839-43a2-9bc6-ef087b68d809" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="591959e6-c24a-4d78-a64d-89f495f26443">
+                <propertyInstance Id="0db1e380-f873-416b-858f-2037eeb52af5" name="IsPartial" value="false">
+                  <elementDefinition Id="fc3379fe-2eea-4523-b614-d73de272d32e" />
+                </propertyInstance>
+                <elementDefinition Id="86c7cde0-5fce-4115-9ba8-41b6745a76a7" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="06b035db-5697-4e78-9882-9b56b77a965c">
+                <propertyInstance Id="9ff421ba-d68f-42b1-a7df-f0f606b43d6a" name="IsStatic" value="False">
+                  <elementDefinition Id="3f3b30f3-a028-44eb-b1f7-6a1535084497" />
+                </propertyInstance>
+                <elementDefinition Id="745b034d-3bf2-4ca6-a3c3-349648a45b6f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="5aa7a344-33a8-4d60-9854-6fd7b2b428ec">
+                <propertyInstance Id="3bb2d16d-313f-420e-a446-1355f78cc163" name="IsUnsafe" value="false">
+                  <elementDefinition Id="0cac8add-c6cb-421c-bf0a-6d9c9b7bd588" />
+                </propertyInstance>
+                <elementDefinition Id="9990c5fa-d65a-4b64-929c-6fafde422247" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="0ae102a8-4b94-449c-a27a-02d1054ed517">
+                <propertyInstance Id="dda0c077-ab5e-4de5-ac71-cb0996b40e66" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="39b20051-787a-4fb6-91db-7513ebfc7a34" />
+                </propertyInstance>
+                <elementDefinition Id="23df93df-d4ea-4c35-9659-8a358f3889a4" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="df43e780-3202-472f-96e3-9679bba78975" />
+        <suppliersInternal>
+          <interfaceRealization Id="fbca6a5a-1e73-4986-a859-07b9fe284efb">
+            <interfaceMoniker Id="aea7514c-6201-4780-94cc-7ce701008ef6" LastKnownName="ICustomerDB" />
+            <elementDefinition Id="da2e86fa-5140-4011-a005-8383aeeeaa69" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="7065cc22-9a52-438b-9f48-649826ed5168" name="CreateCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="a9e61d76-ebd3-4c72-9f80-357f81c2d068" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="4f347cac-86ce-4e33-8cbc-3184e99281f1" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1deb462f-4f4c-4235-8f15-58f9cee42ebf" name="method" profile="CSharpProfile">
+                <elementDefinition Id="c4e97c6e-8f84-4369-8062-076a09bdadad" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7bb0ff23-f413-4e3e-8ff1-386a5f1603ed">
+                    <propertyInstance Id="6ae5183b-c2fb-4b5c-835b-1013a99898cf" name="ClrAttributes">
+                      <elementDefinition Id="62abe668-2c95-44d4-9a25-0dfe2cfce317" />
+                    </propertyInstance>
+                    <elementDefinition Id="464e5749-c943-4f49-8970-c60b5ff89797" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="08cad1f1-28a3-4ae4-9e89-37b708a833a3">
+                    <propertyInstance Id="590e7069-b4a3-4e07-8579-c0b181b5f3d6" name="IsPartial" value="false">
+                      <elementDefinition Id="e0718746-2897-40a7-af2e-b3943fc3bc8b" />
+                    </propertyInstance>
+                    <elementDefinition Id="6852f9fb-f5c7-4658-a954-b2720422c80b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a78d8245-a881-444e-b11c-6b0ed06bce95">
+                    <propertyInstance Id="c6fc3424-f0d5-448e-b2d7-8d429ec03f7f" name="IsUnsafe" value="false">
+                      <elementDefinition Id="cf695c21-37f6-414f-9a45-b4dfc9c1ab5a" />
+                    </propertyInstance>
+                    <elementDefinition Id="e6e5c025-bf66-4887-9223-60267c52d532" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="60f5e19c-6352-4ae4-9133-89604631e111">
+                    <propertyInstance Id="e6835d07-59e5-41f6-86fe-2103c2641b0c" name="Inheritance" value="none">
+                      <elementDefinition Id="826a51b8-be9a-482b-81a3-8ee3ed522525" />
+                    </propertyInstance>
+                    <elementDefinition Id="e26d75d3-0164-40ca-8859-69534aa8e706" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b0c22e07-63b1-448f-a115-432637eca745">
+                    <propertyInstance Id="3d916270-49bf-4e15-a512-88e966449727" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="c1814b95-442c-46e7-8ff9-987d2af6ad89" />
+                    </propertyInstance>
+                    <elementDefinition Id="4092b55e-f01f-49a9-9125-26a65bb6d4bc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ae8e7fed-ada9-4807-845e-d885d43dcadc">
+                    <propertyInstance Id="9fc8e729-014e-4711-897b-163eb18b5b94" name="params" value="false">
+                      <elementDefinition Id="3b71f85a-c79f-42fd-ab1c-6875b517151d" />
+                    </propertyInstance>
+                    <elementDefinition Id="f618e06e-9f40-4612-97ef-b805a221575a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="4445cedd-16d6-4ee6-bbf9-02608d408a47" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a5d810c5-9f9e-4453-af87-1f4da8c51c44" direction="Return">
+                  <elementDefinition Id="95746ade-3717-47d2-86be-e80ef6140140" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d5293caa-c219-4375-a0d8-d056f976a099" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5910850a-9b27-467c-8688-34bb9d9d21ee" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="fba44548-2f50-4f46-9c26-f6f03c329897" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="efd3317d-ac38-4577-87c4-78529bc4de8f" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="e468b8ee-f028-440b-a0b8-cf117d8d6486" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="aa87276b-7fa8-44f2-839e-708e2706dc42" name="UpdateCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="12075f15-4aa8-4f41-bcff-3967dffb15cb" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="163648a1-4a0d-41c2-8fca-2e2fe9673afb" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="d5fdaa1f-c060-4112-ae75-c987926d7bf5" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0f0dbf29-170f-4e3b-b8f9-1ac608afc77a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6d32d44b-9057-4f13-85fc-eeecda85f0f8">
+                    <propertyInstance Id="d73fd65a-6789-470a-911c-24d435494eb4" name="ClrAttributes">
+                      <elementDefinition Id="2c2424ca-3607-4f76-b3eb-6ae7e15388da" />
+                    </propertyInstance>
+                    <elementDefinition Id="1eadb013-bad5-4b57-b484-0770692d29a9" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b2efd726-8613-408f-a403-8d5c32a24119">
+                    <propertyInstance Id="eb6d01e3-7437-4e3f-9beb-80f140ccdf0d" name="IsPartial" value="false">
+                      <elementDefinition Id="e9f1cdad-cebd-4387-a8a9-e40b5cd8730b" />
+                    </propertyInstance>
+                    <elementDefinition Id="5dbaa9f5-0788-4726-b5a8-07f14fb64449" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b7868964-ffb5-4d11-b9be-a140e6df2261">
+                    <propertyInstance Id="2e2227db-0c58-460a-8458-3268ef6a13fa" name="IsUnsafe" value="false">
+                      <elementDefinition Id="d2887da0-64d1-4f95-a6d3-3d53ef9a2513" />
+                    </propertyInstance>
+                    <elementDefinition Id="dec30f2a-e480-41e8-a224-20c7f31b432a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="80404fe5-6426-4286-a19c-a9ee40ff96f7">
+                    <propertyInstance Id="c4d9de24-faa8-4a99-944e-ea6f5f493cef" name="Inheritance" value="none">
+                      <elementDefinition Id="8d37632f-39f6-4057-a3c3-3a4706e3a788" />
+                    </propertyInstance>
+                    <elementDefinition Id="a3d92a8a-ab24-4b2b-b6ae-4563fb1c8f00" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="37ab946c-a20d-4382-a434-776000308419">
+                    <propertyInstance Id="578b801c-8a76-4a50-b55d-9a2338cce8ee" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="6c59ee8e-0a6c-460e-8bc4-b881857bf064" />
+                    </propertyInstance>
+                    <elementDefinition Id="57294422-f420-4467-ad4d-dade0b12198b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a1c8a34c-e0a8-40bb-947a-092ff0348b16">
+                    <propertyInstance Id="5d6cc7f1-e1d5-42de-801a-811fc3fa4d3b" name="params" value="false">
+                      <elementDefinition Id="f806563f-c26e-498b-9a0e-61dd1a8bc907" />
+                    </propertyInstance>
+                    <elementDefinition Id="0be6c746-154f-4bed-b72c-88e7a681c8ca" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="d58d0484-2074-4c7e-88be-dc8c4045f0d1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e28cbf6c-77dd-404e-ba29-ad46488194dd" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="df9ed4f6-44e3-47ee-9a8e-35834a62c718" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="62c7dd4c-ca6b-4378-aa52-3d88a49abe68" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="263cdb2f-5c8d-415f-88e1-3f70df747162" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="e97db7a1-6f36-4112-9944-b5d532a3ea64" name="CustomerDBMSSQL" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="65e6e90b-97e8-4c5a-8eda-d8e498d05ecc" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL Member%3D.ctor" tag="ViewCode">
+                <elementDefinition Id="313eed87-5f17-420e-98d4-d560139f55f9" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="1b02aabe-c899-4782-9cd7-512396290060" name="method" profile="CSharpProfile">
+                <elementDefinition Id="f2439347-e2e5-43dc-85f1-e2947006b54f" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c657810b-92de-43ab-8242-1f7c6cad502c">
+                    <propertyInstance Id="2e61d642-f86c-427b-b5df-9a0cd7422ed8" name="ClrAttributes">
+                      <elementDefinition Id="4e45a409-781c-4f2f-a9af-96666b5514a2" />
+                    </propertyInstance>
+                    <elementDefinition Id="3e05ba49-2d85-447b-b969-41fd51d02995" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="8c89d58b-0918-4a64-ac6a-0c9b7cb3dc27">
+                    <propertyInstance Id="0dc41357-76b5-4c17-bcb3-22794d929cf4" name="IsPartial" value="false">
+                      <elementDefinition Id="03963163-5230-47fc-93fe-131bb86b8f10" />
+                    </propertyInstance>
+                    <elementDefinition Id="5bbc7dcf-370d-42f6-beb6-741d66d09d8a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="775875e7-e643-42ec-a27b-d0e214ee6269">
+                    <propertyInstance Id="9e3e61ee-69c2-47f3-acf2-ae27041ec995" name="IsUnsafe" value="false">
+                      <elementDefinition Id="82f87ccd-4070-432b-a042-a7a2a4d022ee" />
+                    </propertyInstance>
+                    <elementDefinition Id="408c864c-8339-423f-bab4-cb7ddab23b71" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="58b29ca8-017d-4f38-bbb7-2ff9b79338d8">
+                    <propertyInstance Id="8fe1028d-c584-43c1-8d2b-12ffe44d218d" name="Inheritance" value="none">
+                      <elementDefinition Id="6007ff4e-b92b-473e-aa2e-88e47ace61b0" />
+                    </propertyInstance>
+                    <elementDefinition Id="8ec2cdc8-ddef-4b79-90f9-4030ba0a7b33" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="08255374-a8f7-4d11-b734-79cdd712c60d">
+                    <propertyInstance Id="96be2749-cb70-40dc-bf74-aa5ac5555ad5" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="5812f021-4df3-4ed8-ac9f-da3218d6c55a" />
+                    </propertyInstance>
+                    <elementDefinition Id="10d9df1b-25fe-4fa4-98e0-67a29085bcbd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="9e4c55dc-c371-40ad-a688-2bb1768ccecc">
+                    <propertyInstance Id="564ac226-d728-4d88-99ad-09c782afeeda" name="params" value="false">
+                      <elementDefinition Id="0d18b197-e998-4295-bb2c-3162ffec1637" />
+                    </propertyInstance>
+                    <elementDefinition Id="643e0fb1-0315-401c-a61c-6a0f814e2632" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c4561022-69a3-43a9-892a-5f9bd38aa390" />
+          </operation>
+          <operation Id="95d7fd08-c4d3-47ee-95ac-541d2aa012de" name="ReadCustomers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="42e9b1e0-ee4d-437d-8c2b-54dfc3373bc1" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMSSQL Member%3DReadCustomers" tag="ViewCode">
+                <elementDefinition Id="2d40c2a9-777e-4d8b-8f14-d43355e977ec" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="a333ef04-45e4-4781-bf08-25a4bec31e2b" name="method" profile="CSharpProfile">
+                <elementDefinition Id="daf67711-e7d3-4378-9512-3d607806012d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ea35e7e4-c977-49cd-b9df-02bb0fa08875">
+                    <propertyInstance Id="8f72a2da-d035-4f2e-a13e-482fdae58eb2" name="ClrAttributes">
+                      <elementDefinition Id="44fd39a4-9a3a-41e3-89f0-5e6b32035659" />
+                    </propertyInstance>
+                    <elementDefinition Id="26bef670-df52-4de2-980e-111636639098" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="38ee82fc-454a-4999-922c-74e78a153a67">
+                    <propertyInstance Id="7feb47d6-823f-4480-97b5-7186144f5dbc" name="IsPartial" value="false">
+                      <elementDefinition Id="6cd1bebb-699d-4ff1-8c03-7b7106281dee" />
+                    </propertyInstance>
+                    <elementDefinition Id="87d55adf-890d-4aa2-881e-280415e7445d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="79a9aa32-1a61-4584-9229-580cb41bb16a">
+                    <propertyInstance Id="d7320d47-8f67-4670-b15d-c17b28782080" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f93350bf-afe6-4960-9e95-e4098fee69c5" />
+                    </propertyInstance>
+                    <elementDefinition Id="6e79411f-f5c8-485c-90ce-ed33d1fc2e50" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="00346da4-a4a4-4c28-af38-31df4e3ba5a5">
+                    <propertyInstance Id="29636b64-34d4-4f89-85ae-4ddedea5ef1f" name="Inheritance" value="none">
+                      <elementDefinition Id="f9aee045-f45f-4fe5-b9d3-83a4b54f10ba" />
+                    </propertyInstance>
+                    <elementDefinition Id="c6edee10-bc7e-49d1-b564-eb0accfc43cf" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="60c2277d-0241-4fc7-bd92-8b95cfa99b58">
+                    <propertyInstance Id="7a85acfe-a2c5-459e-9b2b-7a03cc3f2c31" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="33d1453e-48c8-4cdd-ba2c-0eed3ec0d30d" />
+                    </propertyInstance>
+                    <elementDefinition Id="733bc42b-91ac-466c-9a25-76fcee82bf01" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7bf7d927-b600-404c-80f8-917f952a346f">
+                    <propertyInstance Id="06ffbb40-e062-4174-bf77-d0736aa28309" name="params" value="false">
+                      <elementDefinition Id="c2ff15c5-c81b-4457-8fca-96df31ccd7a2" />
+                    </propertyInstance>
+                    <elementDefinition Id="9fe9ce3a-3189-45e6-9086-699abcfa12e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="c6ede0d5-aeac-4428-be5b-c8218bbfa625" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fa172fe4-fa9a-4d8a-81d3-193b9166f5a4" direction="Return">
+                  <elementDefinition Id="7f0fbe0d-aa06-46e2-a966-0528f0655039" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d711e08d-632c-4a0c-a054-4950dd40f672" LastKnownName="List&lt;Customer‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="d5293caa-c219-4375-a0d8-d056f976a099" name="Integer" isAbstract="false" isLeaf="false" cachedFullName="Integer">
+        <elementDefinition Id="220a3521-e091-4221-bae9-3ef9018e845c" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" name="Customer" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::LivingSmartBusinessLogic::Customer">
+        <elementDefinition Id="d5b2f32d-0bf8-4e8e-b94a-bdd7f6423aed" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="d711e08d-632c-4a0c-a054-4950dd40f672" name="List&lt;Customer‎&gt;" isAbstract="false" isLeaf="false" cachedFullName="ModelingProject1::System::Collections::Generic::List&lt;Customer‎&gt;">
+        <elementDefinition Id="c0bb0b2d-8cce-46b4-a568-1dc299e933fe" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6345a9fd-f3cd-484f-b0a3-250fcb680732" name="CustomerDBMYSQL" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="7493a02e-9103-4569-bae8-339d8c969b05" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL" tag="ViewCode">
+            <elementDefinition Id="b89e3121-6a3c-4ba1-89ab-4d69594b633d" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="fee5f2a2-457f-432b-897f-0080893cda2c" name="class" profile="CSharpProfile">
+            <elementDefinition Id="0e6a2963-d5b4-4867-9b23-0a7a58e7f839" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="1b6c4747-1442-4531-b869-2a91b0a083da">
+                <propertyInstance Id="fb2ab05e-6c6f-4dca-9185-ad622db9641b" name="ClrAttributes">
+                  <elementDefinition Id="af452a5c-c629-4d78-b0c3-b0e3050b3c87" />
+                </propertyInstance>
+                <elementDefinition Id="84f7608d-a24a-437d-9c1c-d70dd2ab4e8f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="a55cd897-ce68-4d0b-9fdc-09b8a76e7459">
+                <propertyInstance Id="a57530d8-1d14-4023-965f-a6ce4a5cca70" name="IsPartial" value="false">
+                  <elementDefinition Id="12edd430-c024-4cc9-aa20-ff9b7072bee1" />
+                </propertyInstance>
+                <elementDefinition Id="3883f7e1-5919-47eb-a637-1e33341e3e44" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="6a396a03-369b-4d18-9413-bd1caa65f4af">
+                <propertyInstance Id="ccc8507a-9fd7-4219-add5-477e1565bb69" name="IsStatic" value="False">
+                  <elementDefinition Id="e769c84a-efd7-453d-bcdd-df81fa53eb9f" />
+                </propertyInstance>
+                <elementDefinition Id="bf9e66aa-e614-436d-b124-690633b93cf6" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9b0cb9cc-9c9c-4b1a-91a4-9209c41fe111">
+                <propertyInstance Id="99a50e6d-9fce-44a3-ac99-c6cd4b4e4d85" name="IsUnsafe" value="false">
+                  <elementDefinition Id="c4092b19-42ae-4375-9a24-ab043fd95b35" />
+                </propertyInstance>
+                <elementDefinition Id="517c8ebb-0a50-42e6-b849-07556c16b67d" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="f73dc81c-bbec-4be1-8c99-0cd86e088e01">
+                <propertyInstance Id="9c58ceed-13ee-4205-a178-8e593951cd7e" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="184821f3-8ac0-4447-94a1-7912c56446c4" />
+                </propertyInstance>
+                <elementDefinition Id="fa2500ea-d261-4bee-bf52-13de7fdff4d7" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="505b9c7b-6332-4bd9-81bc-fe24d9303a28" />
+        <suppliersInternal>
+          <interfaceRealization Id="6fb81138-a4c8-4205-ab57-5adde3cd5f53">
+            <interfaceMoniker Id="aea7514c-6201-4780-94cc-7ce701008ef6" LastKnownName="ICustomerDB" />
+            <elementDefinition Id="c1902046-2b10-4136-b4b9-2794c5ad05ee" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="a9c511a6-e1ea-481a-b52c-227933e281b1" name="ReadCustomers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="0323a927-69f0-49de-97a4-59dc0153e9b1" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL Member%3DReadCustomers" tag="ViewCode">
+                <elementDefinition Id="6d874db7-7620-46c3-ad35-308bededaf11" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="fe402bf4-758f-4693-82b5-729d1b1dbc26" name="method" profile="CSharpProfile">
+                <elementDefinition Id="9aa54411-be87-4b9d-9004-7ab81f7224b0" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="be6312d7-b3d1-4782-bb19-8d77e44b1439">
+                    <propertyInstance Id="bec4ed8c-a57e-41be-a3f7-803e0a76052d" name="ClrAttributes">
+                      <elementDefinition Id="8559bebf-76c5-4bca-bd2d-f8c94917c38c" />
+                    </propertyInstance>
+                    <elementDefinition Id="7eaa896f-eb0d-4620-8746-7ee16e75caa2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c2bd5d03-a82c-499d-a709-f7daeff6cc1c">
+                    <propertyInstance Id="54822699-2652-4c8e-aefb-fbaa4a09f09c" name="IsPartial" value="false">
+                      <elementDefinition Id="2f58f841-cf8d-4572-b1a9-b6ccafe4bdab" />
+                    </propertyInstance>
+                    <elementDefinition Id="723a30a8-8768-4493-8eb0-c316927b4c76" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d00c30d8-f2b0-459d-b84e-e0eb1ace490c">
+                    <propertyInstance Id="3bbbdbb7-ab76-44f9-94ee-ca1c19fca168" name="IsUnsafe" value="false">
+                      <elementDefinition Id="44382fe8-596b-448a-917a-37515501be6f" />
+                    </propertyInstance>
+                    <elementDefinition Id="e905c494-f229-4942-be5a-2e972a922989" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6cadeb77-e781-48bf-af53-f56ce14069fb">
+                    <propertyInstance Id="e6a7432a-324c-4c99-b711-664ad601ef98" name="Inheritance" value="none">
+                      <elementDefinition Id="ec995477-24b7-4f83-94d0-58be278c0ecc" />
+                    </propertyInstance>
+                    <elementDefinition Id="a3d956aa-c2cd-4255-a0e4-b6eb915a097c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f56f7380-630c-46d8-8a00-0b3addc9c777">
+                    <propertyInstance Id="c46aaf99-8dae-4681-a42b-e24534dcaa1a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="9e4f3c9d-6ab3-4bfa-8149-6b2611fe4447" />
+                    </propertyInstance>
+                    <elementDefinition Id="b0da271a-2a95-43a8-b3be-32b397e72899" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c0da0072-1130-4cd9-a014-b85e592ddb14">
+                    <propertyInstance Id="518227f9-1b3c-4650-954c-983d3ac3bcc6" name="params" value="false">
+                      <elementDefinition Id="b2b94b27-cccf-413c-ab45-356b8619ee4d" />
+                    </propertyInstance>
+                    <elementDefinition Id="f0913ebc-affa-4076-aa5d-82d33ab451f0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="3488fd8b-287c-4224-87a4-a852e07319f6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="194db3fd-b662-493e-a2d4-1a6506c4b03c" direction="Return">
+                  <elementDefinition Id="3769c277-d717-4a1e-b725-7cd7169d9576" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d711e08d-632c-4a0c-a054-4950dd40f672" LastKnownName="List&lt;Customer‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="0e76f249-6095-40e5-940a-d574a98d9010" name="UpdateCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="cf6c32ba-4b5d-4096-b569-ee1ad62bcf82" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="b4089957-e732-4766-8e08-4460a6aad988" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="aaace8c0-6232-459e-9293-5e20213ac537" name="method" profile="CSharpProfile">
+                <elementDefinition Id="95155987-3542-4263-946e-f61804ba0e5e" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="61801df1-21e8-4b3a-8ba7-d001ff48d098">
+                    <propertyInstance Id="8db3b4c0-2739-4b3d-a870-323b99cffa0a" name="ClrAttributes">
+                      <elementDefinition Id="82fc857c-27c6-484c-a2db-39287c6cbc55" />
+                    </propertyInstance>
+                    <elementDefinition Id="74ea948b-463d-4162-85b4-97eff8c5e399" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="000aee69-4c05-4218-b1f4-37815edaa04e">
+                    <propertyInstance Id="9d4babe8-a175-4825-8740-e3408a23a939" name="IsPartial" value="false">
+                      <elementDefinition Id="f23c2108-8da1-43cc-a6eb-35edd10269d3" />
+                    </propertyInstance>
+                    <elementDefinition Id="375d681d-34cc-45f0-840d-3512a5912690" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6ac21682-6ba8-47c1-830b-f8e773ac9f75">
+                    <propertyInstance Id="5c4ad331-f69e-48d6-9c9a-1f6210161ef2" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f726effb-5afe-4b26-b638-4b2ee26e8ea1" />
+                    </propertyInstance>
+                    <elementDefinition Id="17f3e9d0-245a-4bb7-8979-6be6f838b0ab" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f97d129c-e450-4b0c-9c55-86723858ac95">
+                    <propertyInstance Id="a84a530f-694c-4e0b-8e15-2153bccbf598" name="Inheritance" value="none">
+                      <elementDefinition Id="7890cb37-8518-4275-a2af-beb42cc9ad9f" />
+                    </propertyInstance>
+                    <elementDefinition Id="f7ed11ee-9eb4-4a55-a3aa-1026ff0a0c70" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5b020987-855f-4a73-a5d1-db62f81bd836">
+                    <propertyInstance Id="9f1c1dd0-f3b9-4111-ba90-1065f5aa1e77" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="33e75460-9cb7-443c-aaf3-b58577519cc9" />
+                    </propertyInstance>
+                    <elementDefinition Id="1192c405-7b5a-473e-9452-5d80eb4f1f8f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a7114832-e1f7-4f5e-a905-1da9d9c49331">
+                    <propertyInstance Id="ce1d34f9-d328-42c3-89f8-39984445bf08" name="params" value="false">
+                      <elementDefinition Id="1b217104-cd68-4618-833a-e3bdb5d9686c" />
+                    </propertyInstance>
+                    <elementDefinition Id="b0159faa-109f-4b04-b408-6450494c3a03" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="6ba124a4-ee94-4597-96a1-c0e199908b18" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fe7990ff-ab58-49cf-957e-6a46aba165cd" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="a741f3d8-a83c-4db8-a4f8-b68e9fb91d41" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="70bfc1f0-d34e-4f82-8959-f50141a04705" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="4852f7a9-c9c3-4e31-8889-0eb8211b0d0a" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1ca5e2f4-80ea-423e-8255-055d0b92bdeb" name="CreateCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="9ccdd143-2b51-4649-b747-cccb9387b852" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="5e2262ba-2146-4cf0-9b2c-69818897cd0b" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="f663e1d3-5737-4811-b5c9-fc08d02c458f" name="method" profile="CSharpProfile">
+                <elementDefinition Id="0274850b-bccd-4408-93f8-3127836ae49a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="30a43664-e52f-4582-b290-478a82677999">
+                    <propertyInstance Id="c07e9c69-36d7-4eb8-863d-ab8050d14daa" name="ClrAttributes">
+                      <elementDefinition Id="8e24455c-c8d0-444a-a363-686d81a9fb7b" />
+                    </propertyInstance>
+                    <elementDefinition Id="e69c23e0-89cc-4c0c-b061-b509bd950ea6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="0df57c47-3d93-4e20-b6df-844e36661eac">
+                    <propertyInstance Id="0d98d86a-e451-4e92-9aa3-dd6d4230253d" name="IsPartial" value="false">
+                      <elementDefinition Id="251b251c-0973-4807-b8b4-0119d881addf" />
+                    </propertyInstance>
+                    <elementDefinition Id="34396067-16cd-4046-a6b7-39051afc357c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="67b3fd7f-1da0-4492-9b53-a585231e9491">
+                    <propertyInstance Id="88b6a2eb-48a2-4284-b116-a4326e0d2c66" name="IsUnsafe" value="false">
+                      <elementDefinition Id="4202b8fd-1b1f-4ce6-9001-b8ded97a5660" />
+                    </propertyInstance>
+                    <elementDefinition Id="8c1581eb-c999-4447-80e4-2e9f7bb1aba2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="5dadf429-8e5f-47ed-bf60-33c9d7dcdebf">
+                    <propertyInstance Id="ddb9687b-b9ec-4437-9c0f-b687802cc5c4" name="Inheritance" value="none">
+                      <elementDefinition Id="1a2670eb-3a3f-4950-b3ea-201676d5e288" />
+                    </propertyInstance>
+                    <elementDefinition Id="c4f7a022-a904-455a-89c9-5b124c437d29" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="75dd9bc2-9193-4279-9645-c60ea6e16924">
+                    <propertyInstance Id="61d5aab5-35e0-40e7-a18a-758790d96dde" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="bba51bfd-4f18-47a4-8a55-c32a2944d9b4" />
+                    </propertyInstance>
+                    <elementDefinition Id="68d9990a-2427-4f03-a489-eb72b0c6eb37" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="45246ce1-a665-41e0-b71e-c7fb866aa7bf">
+                    <propertyInstance Id="b6305a55-05a2-4b86-aab6-7cbacc195595" name="params" value="false">
+                      <elementDefinition Id="2f0a5c3c-053c-44d2-9ae9-dab51fd9f6e1" />
+                    </propertyInstance>
+                    <elementDefinition Id="71fefe5b-38ed-4b4f-87e5-083c7e6af0e3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="847f1b64-f624-49b8-a07c-d6a0d360e01a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f3989fc-5b26-4c09-9f59-adac1637e8c5" direction="Return">
+                  <elementDefinition Id="d0efd3b5-b47d-4908-994d-5cb8e3e151cf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d5293caa-c219-4375-a0d8-d056f976a099" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c0ac43b1-bf32-4dde-baf8-a2353a827086" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="70fefe87-9aa7-4cc4-8416-3606142e8ec2" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="27fa5df4-5fee-45ba-897f-5f2a67eb1660" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="7accc833-7d35-4ae3-bad2-c52fc5d1a2cf" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="f3631536-51cd-4f78-9134-fa1805c0bb11" name="CustomerDBMYSQL" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="62da0ea8-7c20-44b7-bd7e-541595412f2e" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBMYSQL Member%3D.ctor" tag="ViewCode">
+                <elementDefinition Id="56ffb78c-35e8-4f21-a6f3-168ce9571a32" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="e4b3c45c-e112-4ad9-8dc3-79bf854563c5" name="method" profile="CSharpProfile">
+                <elementDefinition Id="98e303ac-0685-46a3-bfe1-009196ac985d" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dbb68906-d12e-47d7-934f-f2568c6e7a95">
+                    <propertyInstance Id="ba546f29-24dc-4bb3-b318-b711c785f1c7" name="ClrAttributes">
+                      <elementDefinition Id="f5034571-273f-449e-aa04-2303e3a81f18" />
+                    </propertyInstance>
+                    <elementDefinition Id="02e92e52-e658-4a84-8b4f-5049b4e4c8a6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="17be7512-4b27-49de-91b8-1454da9cec97">
+                    <propertyInstance Id="4d56a253-b04d-4659-8126-bf73a7a07712" name="IsPartial" value="false">
+                      <elementDefinition Id="3177645b-becf-4889-bb68-29ecd5312856" />
+                    </propertyInstance>
+                    <elementDefinition Id="3f148163-56bd-45da-b720-e1b35132414c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="adcaa75b-b43f-4ba0-8493-9180877fb263">
+                    <propertyInstance Id="55e0c19c-d9d0-4b86-9054-0c89ecfd3be4" name="IsUnsafe" value="false">
+                      <elementDefinition Id="f71fac7d-7d59-4eab-90f2-ec2f3f646495" />
+                    </propertyInstance>
+                    <elementDefinition Id="85c16834-9172-4ab8-822b-97282d8357d0" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="17249d5a-9cec-41bb-a459-4f10098fafb0">
+                    <propertyInstance Id="c2611155-b02c-4553-840a-8cd0581f371f" name="Inheritance" value="none">
+                      <elementDefinition Id="7fe36733-01c4-45cc-b026-5a51b064ebf4" />
+                    </propertyInstance>
+                    <elementDefinition Id="1097e8a8-13e3-4c6f-a57a-c3ddefb2568a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c4ceeab6-8fdf-438d-8102-e5b1d475c915">
+                    <propertyInstance Id="c06933fe-e44c-42ed-8f0b-695e8e74cfa0" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="4dc35297-80f0-4301-b611-8c7eb33057eb" />
+                    </propertyInstance>
+                    <elementDefinition Id="362672d3-fe9c-4db0-9963-d2a61531e812" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="7eaf1a31-b92e-4723-bbba-a188c397d548">
+                    <propertyInstance Id="bfdaa1c5-dee4-4f9a-aa40-cf38973769c3" name="params" value="false">
+                      <elementDefinition Id="2417c618-5cb5-448e-b797-c350d477929f" />
+                    </propertyInstance>
+                    <elementDefinition Id="98be3235-aa71-42b5-bb4b-e573dd1f9b55" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="8a5dca01-3007-4fc9-ada3-919e76d86eaa" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3409d2d9-d2ef-425a-8384-68f6041f7bc2" name="CustomerDBXML" visibility="Package" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <referencesInternal>
+          <reference Id="4b1b801b-b292-425f-8ef1-7b4e80d7c14f" handle="viewcode://./CodeSchema_Class?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML" tag="ViewCode">
+            <elementDefinition Id="021aec33-20f5-4a15-8422-3f518dc4a550" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="17365a5a-69a4-4ce5-a1ba-a94297544653" name="class" profile="CSharpProfile">
+            <elementDefinition Id="99680fd3-7f33-439d-a623-8c4cd8ca5e03" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="e4d457bf-6878-4384-abf0-3915a6880cb8">
+                <propertyInstance Id="48ac1558-63cf-4eb3-9c8b-a1d69e1af387" name="ClrAttributes">
+                  <elementDefinition Id="47da97b2-f181-4fed-bd32-46b7601a3fa9" />
+                </propertyInstance>
+                <elementDefinition Id="50d2bd5b-1178-441b-b811-b68bd5fa8411" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="ed4165f6-be3d-4708-af3c-255d42552b3f">
+                <propertyInstance Id="c5a0ad88-89f6-4e70-9032-c8e8bee7977c" name="IsPartial" value="false">
+                  <elementDefinition Id="be9b7c7d-9b54-4d58-b8ad-421063fff38c" />
+                </propertyInstance>
+                <elementDefinition Id="f9fed9a2-0a0b-4975-8ca0-cc437c502561" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="0fdbdc0e-f503-4375-984f-494ddf3db780">
+                <propertyInstance Id="af11cbc9-a67e-41b8-8c41-c81b2a1705ab" name="IsStatic" value="False">
+                  <elementDefinition Id="ac108c98-7486-4ec6-862e-7a91fae2463f" />
+                </propertyInstance>
+                <elementDefinition Id="774d2f38-4089-4e12-9029-9054fa141e35" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="864092ee-d8bd-436f-9a7e-0c30126f097a">
+                <propertyInstance Id="684936ed-ee72-44a4-8604-ecf4b639f53a" name="IsUnsafe" value="false">
+                  <elementDefinition Id="5ca5d9d9-fa45-4b00-9554-aceb73a9f704" />
+                </propertyInstance>
+                <elementDefinition Id="379aeedc-408c-4b7b-9c3b-1e1b2de44825" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="31b9f251-1b13-44f7-8b72-fa21b3224bde">
+                <propertyInstance Id="300dcf91-7f50-4853-a097-05c0668cc4e9" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="1fc120bf-2a34-4f82-9e1f-bc3ea65b88fd" />
+                </propertyInstance>
+                <elementDefinition Id="941b7756-5241-4b78-ac5b-4d48d16478f9" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="fad1223a-1b09-4aae-bbbe-2389c4a82c90" />
+        <suppliersInternal>
+          <interfaceRealization Id="20290714-55e0-498b-b9c3-f88b2ba0fd59">
+            <interfaceMoniker Id="aea7514c-6201-4780-94cc-7ce701008ef6" LastKnownName="ICustomerDB" />
+            <elementDefinition Id="1ae11913-ff18-499a-b912-efd946c3b7b9" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedOperationsInternal>
+          <operation Id="cad40672-448c-4184-a83c-eb0433e63364" name="ReadCustomers" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="384d1975-ec64-42aa-847d-786723a90832" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML Member%3DReadCustomers" tag="ViewCode">
+                <elementDefinition Id="db6b1f01-4dba-43e6-b90a-d9c99ee2e2e0" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="91aaf48f-daef-431a-be9d-a2091fa7c3f4" name="method" profile="CSharpProfile">
+                <elementDefinition Id="eb9cf0c0-0ea8-4bed-a7ff-92b6db215a86" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="c8e1fb5b-ad03-4deb-ad44-833d711c2f2d">
+                    <propertyInstance Id="68742cbd-34d3-4d95-b30c-eaefc2c14201" name="ClrAttributes">
+                      <elementDefinition Id="1d20e2a1-79c9-46da-b293-1ca97d7c979c" />
+                    </propertyInstance>
+                    <elementDefinition Id="b9fc9379-4e52-4222-a52b-cffdfa8dc995" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b7866804-cee7-49f6-ae12-6217e8b1e9bf">
+                    <propertyInstance Id="0ed6f70b-b92c-4af4-95fb-ea51d5632ac2" name="IsPartial" value="false">
+                      <elementDefinition Id="435ac950-f2c0-4abf-bbdc-ba1f588204e4" />
+                    </propertyInstance>
+                    <elementDefinition Id="81f0ea08-cba3-4adc-a20a-1df36b701a76" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1b167096-7a7b-4632-bee3-d3fd04a3c46e">
+                    <propertyInstance Id="58680b07-6268-41b3-b804-ff75fb035d23" name="IsUnsafe" value="false">
+                      <elementDefinition Id="306dab35-b7e5-4504-bc1f-a1236db72109" />
+                    </propertyInstance>
+                    <elementDefinition Id="e476c508-0928-4868-ab35-b0c90abca171" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2cd1ed8a-eeb6-4dea-9e95-b1f1fec1ef36">
+                    <propertyInstance Id="b176aa03-5810-4115-a730-be52412e228a" name="Inheritance" value="none">
+                      <elementDefinition Id="d1dd83ea-b9b8-464a-b8eb-911a96a71d37" />
+                    </propertyInstance>
+                    <elementDefinition Id="820b9fdb-4baa-452e-a6d4-c1af09067925" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="58ceed92-f85b-4cda-b5f8-3b92ba7ce0f8">
+                    <propertyInstance Id="1e86288d-8193-4fed-b7d6-183c244d288a" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="e7e7eafb-b06c-418c-8f83-3b38c90bdec0" />
+                    </propertyInstance>
+                    <elementDefinition Id="473c0109-335a-455a-91cf-961b50459a91" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2ab8352c-1158-4aa6-9cc1-e6979910010c">
+                    <propertyInstance Id="7c897cf0-8a46-41f6-ad71-69f2bb48629b" name="params" value="false">
+                      <elementDefinition Id="4ed7b8eb-9acd-4dab-a53b-e30a02b7852f" />
+                    </propertyInstance>
+                    <elementDefinition Id="07980b5d-6340-469e-a29d-056e425ae05c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="b8844a12-9a52-4b48-8c1d-51b53b2b929d" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1ae8bcd8-ce76-4364-9242-86a739d8fadd" direction="Return">
+                  <elementDefinition Id="e21f5d46-d51e-436b-bb3b-b352530ad795" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d711e08d-632c-4a0c-a054-4950dd40f672" LastKnownName="List&lt;Customer‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="fd2c624a-a88b-4fa6-90f9-12c7459d2fa5" name="UpdateCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="c59d9b9e-930a-4c3d-a6c8-d296d4fe3d14" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="dc778e8b-cbad-4684-88e8-f4e07ea722ca" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="dfa82610-7340-4523-9cf4-1a239c112a5f" name="method" profile="CSharpProfile">
+                <elementDefinition Id="104d2f05-dc0e-4494-8f29-a60604c296b5" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="246c8ed0-4cd9-49cc-8d96-9d347c2ce260">
+                    <propertyInstance Id="ce318e17-2460-467d-86a2-1bcfbd306687" name="ClrAttributes">
+                      <elementDefinition Id="a85956f6-b922-4deb-8ed5-c7ceccb5fb38" />
+                    </propertyInstance>
+                    <elementDefinition Id="6d20dbec-9af2-4fd4-815e-1ad85bbdd243" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="468a7381-c7ba-4a3d-9c13-ab8dd73e7f2f">
+                    <propertyInstance Id="5b07f1f4-d176-4d8a-b88d-80b2227f8bce" name="IsPartial" value="false">
+                      <elementDefinition Id="ebe2699b-ccf5-4bd0-b512-a8fcbdb02d3e" />
+                    </propertyInstance>
+                    <elementDefinition Id="7bac93dd-6d72-446c-a05b-903c01cd6926" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a5d1be4c-d367-4d65-ae08-ce7750e470ac">
+                    <propertyInstance Id="e6d85d8b-95b7-428a-b6a8-504c8f3de1c7" name="IsUnsafe" value="false">
+                      <elementDefinition Id="2bac002a-5c1a-40a4-8136-5c9dd65236f9" />
+                    </propertyInstance>
+                    <elementDefinition Id="b3cd9c96-2a02-4988-bad4-daa9f1e23e00" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f6808792-e0a5-4e9a-b2fe-1c1b21a08fd0">
+                    <propertyInstance Id="67c9102a-92c4-47a9-86a9-603d4bbfac6e" name="Inheritance" value="none">
+                      <elementDefinition Id="9e5a5647-1500-43cd-a12e-3f6b29c14043" />
+                    </propertyInstance>
+                    <elementDefinition Id="e4379f80-c6bb-4ac4-9e44-e1e05614589a" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="59f6667a-e60d-404f-ba81-67d7f59fb953">
+                    <propertyInstance Id="875b1446-e0a2-403c-8e79-d4401ac89928" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="95919186-4df9-4022-9f19-96ab8da00099" />
+                    </propertyInstance>
+                    <elementDefinition Id="a5179272-fb30-409b-a5c4-c200069fdd3d" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="dc406308-c8e8-45ec-84d8-ab1e1906b7eb">
+                    <propertyInstance Id="813e9bbd-2c17-4168-8899-b865a6ae1431" name="params" value="false">
+                      <elementDefinition Id="3163a563-48c3-40fc-8b03-a7d6fd8c49be" />
+                    </propertyInstance>
+                    <elementDefinition Id="8d450901-e130-4f0d-bd06-92ef35aaa052" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="ce9fc1b3-bd85-4f74-9dba-cf81f7e21c53" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="6ca1e802-6a9d-47a2-99ee-a681c1ae4901" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="f134ac20-d7bc-40a0-8d5b-8abcd084ebcc" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="47b3643a-ae16-4af8-a776-44108df633b8" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="b7f221f4-f032-412c-b93f-552a9f54f96f" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="23b20b48-2377-40e5-86b3-084edddedca2" name="CreateCustomer" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="669c6ce1-e414-488f-80e9-245c6d049b34" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="3081ae85-c6c4-4c97-be9e-09467f85a637" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="324580bb-0679-46c8-827f-02df99167a81" name="method" profile="CSharpProfile">
+                <elementDefinition Id="2b2fcbb0-dc72-48cc-aeb6-d1c83c6ac19a" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="822bada6-5325-4ed3-b4e0-b82f342ba4f8">
+                    <propertyInstance Id="d41053fe-98be-4636-bd31-af609c730f96" name="ClrAttributes">
+                      <elementDefinition Id="3dc6c133-e7b9-47e3-b6f7-170eb333ac54" />
+                    </propertyInstance>
+                    <elementDefinition Id="ebb4a801-fc67-43ba-b768-6bf1cbadd125" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e1d4a2e1-1c32-40bd-b7ee-a6348ca3517e">
+                    <propertyInstance Id="7b9b3b19-f64d-4845-ab96-3c6f0d21dbf8" name="IsPartial" value="false">
+                      <elementDefinition Id="d381197a-be9f-4a19-bf93-b88893797082" />
+                    </propertyInstance>
+                    <elementDefinition Id="7155ff56-ff3a-4d6f-afed-8845b500b8c5" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="a9cdfdf2-13b5-4dcb-8864-eacd50ead9d4">
+                    <propertyInstance Id="c60da771-c31b-4a84-bd8e-881a297c8ee5" name="IsUnsafe" value="false">
+                      <elementDefinition Id="68de1e1a-235c-44f9-9e48-722fc27a2324" />
+                    </propertyInstance>
+                    <elementDefinition Id="81697f53-8b9a-4ca2-81bb-083ff12ecdbc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="fd731dd3-e851-43ec-888d-0c12dd47f9fa">
+                    <propertyInstance Id="156aaea8-0a5d-4ef8-849d-dd10d2bfc2a8" name="Inheritance" value="none">
+                      <elementDefinition Id="ab772896-931c-4d3d-9941-cd6bdf20dba1" />
+                    </propertyInstance>
+                    <elementDefinition Id="f19da0c5-412f-4aad-a203-11907d4dafa4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="791e3855-3a17-4785-8f68-fdba00c30b28">
+                    <propertyInstance Id="b8190b9e-def2-45bf-adbc-73bc3f795886" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="24155284-ccde-4f18-8034-b8187c660b0f" />
+                    </propertyInstance>
+                    <elementDefinition Id="5d743fe2-ee9b-429a-95ba-d8360d99bf2b" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="aaf3eefa-c97f-44bf-a6c6-3902a45440b1">
+                    <propertyInstance Id="e65f0d4b-f18f-434a-8ba5-d5d111087a78" name="params" value="false">
+                      <elementDefinition Id="89cf8bcf-d3d5-4af4-918d-2d203c5ac6dc" />
+                    </propertyInstance>
+                    <elementDefinition Id="041ad95a-fb0f-43cf-8c46-e1e9a98de61e" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="e345ddc6-457f-4a55-9433-f003aec832f8" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1170b513-5acf-404e-a319-713603a57f36" direction="Return">
+                  <elementDefinition Id="4ed762af-784e-459c-ba90-a6f7a0b2e121" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d5293caa-c219-4375-a0d8-d056f976a099" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="a9ebbbaf-9d9e-41ef-a57a-8f3190c43ae2" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="06072017-9e27-48ec-9f20-88bf03bc5df9" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="448205f1-02b3-4aa5-ad47-71f20c36b713" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="de3b7d56-99bc-4eb2-bbb9-b408ce5b719d" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c9f497d9-d303-42cd-b14d-a2f42f2ebcf7" name="CustomerDBXML" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="71264313-8e69-48c6-9f7f-6a9d1606459b" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DCustomerDBXML Member%3D.ctor" tag="ViewCode">
+                <elementDefinition Id="ef3c7938-27b1-40f4-b0d7-e8e21d8a6ed0" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="59a0976d-e91a-4f8e-8e21-730393b761d4" name="method" profile="CSharpProfile">
+                <elementDefinition Id="71c6e75a-dd3c-426d-92e6-fb6483372526" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="93f7428b-d63c-42fb-b6e6-793953702b39">
+                    <propertyInstance Id="998a246c-d7d2-4a4d-a7f7-eda282dfbe8d" name="ClrAttributes">
+                      <elementDefinition Id="f8a3f991-84af-4c06-b238-d6171e041b41" />
+                    </propertyInstance>
+                    <elementDefinition Id="588b7f6e-fbf5-4454-bb2f-2c951fd0a032" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="81115b81-17e5-4e66-a287-344f3f51999c">
+                    <propertyInstance Id="dad5d21b-f0c4-4719-943e-d646a4672430" name="IsPartial" value="false">
+                      <elementDefinition Id="0422777b-d951-4f21-a57f-35a5e46e00b6" />
+                    </propertyInstance>
+                    <elementDefinition Id="d31d439a-fb41-4ae8-9576-528a1338f060" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="92ddd223-8347-40d1-b50f-d24dd6d7eaf9">
+                    <propertyInstance Id="17f8d54a-b1b7-4019-9760-1db0a73bf547" name="IsUnsafe" value="false">
+                      <elementDefinition Id="8c26b936-eea5-480f-90da-26129f55f212" />
+                    </propertyInstance>
+                    <elementDefinition Id="3cebca14-f5b5-4cca-9630-cc316e6c8fda" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d523eaa1-b112-44e4-b8a1-1f433a4fa2f4">
+                    <propertyInstance Id="8b7d1ffb-a2b1-427c-9700-da29bb4e075a" name="Inheritance" value="none">
+                      <elementDefinition Id="44ac324d-8292-4530-80ce-f34195d03fd8" />
+                    </propertyInstance>
+                    <elementDefinition Id="f139b852-4b1e-4bb5-a3bd-9586928640a8" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ae62ac29-e922-4c3b-b057-76bc2d0de3be">
+                    <propertyInstance Id="8921e01e-34d5-4c4d-984c-142722af067f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="ae4ab783-71c9-4dd7-99b8-a80074b6d6c3" />
+                    </propertyInstance>
+                    <elementDefinition Id="aba97a7d-47f8-4409-a404-0952c36c2efc" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b85b886a-12e9-45e5-8345-0d8d4459e5ec">
+                    <propertyInstance Id="72b36cd8-11eb-46ba-ab49-b766a18f2377" name="params" value="false">
+                      <elementDefinition Id="00cb9701-bca0-4ed6-a062-4e1adedae153" />
+                    </propertyInstance>
+                    <elementDefinition Id="3476d0c7-29f9-4e6c-a11f-93fb5d491fee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7739d3bd-cbea-4d61-9ae4-79cb6fa7f4c2" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="aea7514c-6201-4780-94cc-7ce701008ef6" name="ICustomerDB" visibility="Package" isAbstract="false" isLeaf="false">
+        <referencesInternal>
+          <reference Id="86db0b6f-328d-426e-85b4-3450bda1f6b4" handle="viewcode://./CodeSchema_Interface?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DICustomerDB" tag="ViewCode">
+            <elementDefinition Id="6df5bcc9-44c0-41a6-8e92-9eb5cb0fa2ee" />
+          </reference>
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="4bf4f3e5-0cd4-4fdc-bca5-788208461607" name="interface" profile="CSharpProfile">
+            <elementDefinition Id="65c26974-91cc-4b37-b45b-600b924acf1b" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="9e3c7569-eb32-476b-a603-f9ca492f1f46">
+                <propertyInstance Id="d2f1adad-7ba6-4e82-a660-c597b0ffcaf3" name="ClrAttributes">
+                  <elementDefinition Id="b4f3bac5-3614-4e76-acc5-2d7dcd2415cb" />
+                </propertyInstance>
+                <elementDefinition Id="c13dd59f-1186-4007-aa0d-61d6bd5c8a32" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="3385d8d9-a831-4d29-888e-d31ba2319da4">
+                <propertyInstance Id="381b5468-d13f-4ab5-8b6f-51eb3074891b" name="IsPartial" value="false">
+                  <elementDefinition Id="bbe1b3ea-0041-48e8-b91a-867047ad6f02" />
+                </propertyInstance>
+                <elementDefinition Id="ab850a45-eaa1-445e-ac13-ee95f0554e19" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="63d0efa5-9901-4cd4-9bdf-f68edff7e504">
+                <propertyInstance Id="f539aa06-83ab-4fa6-a8cf-649598293395" name="IsUnsafe" value="false">
+                  <elementDefinition Id="b74ec8a0-b13f-4be5-8e5e-52e3c39663c3" />
+                </propertyInstance>
+                <elementDefinition Id="cbd800dd-ff67-427d-935b-e0c092b4a617" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="7f097e9b-171b-4f47-8fde-9a3b2b2d56aa">
+                <propertyInstance Id="8b93f808-b68a-4ff7-8c29-1ce9f04acf5a" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="2eed1443-70b5-4a02-8014-b87dfcd43ab2" />
+                </propertyInstance>
+                <elementDefinition Id="01de02c7-f80c-4650-9f35-035878439664" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="6bef23cd-b988-4167-a70a-1c50a22b1786" />
+        <ownedOperations>
+          <operation Id="fdec54ad-62b3-4efe-b4e4-87d3682ea6d5" name="ReadCustomers" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="538da626-ab55-43ec-a7d5-7f7ef3c657cf" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DICustomerDB Member%3DReadCustomers" tag="ViewCode">
+                <elementDefinition Id="c505604c-aab5-4534-998d-ae511cd1379d" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="63bc3412-7829-432c-bd74-7a475baf24cf" name="method" profile="CSharpProfile">
+                <elementDefinition Id="6dc5ef5d-8614-4ea9-a417-9e2ce7189282" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="89064478-6dc3-45a0-89bc-f734d37a39aa">
+                    <propertyInstance Id="1a46c681-87a4-4436-b8af-6bdbbfe4f919" name="ClrAttributes">
+                      <elementDefinition Id="fa45ac8d-a2cc-435d-9d73-4c122adcbf16" />
+                    </propertyInstance>
+                    <elementDefinition Id="bc568c4d-5c4d-42b3-97de-13c82fc1339f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="52d8172a-59b1-4cc3-a4a3-8a82b200f91f">
+                    <propertyInstance Id="a9f8e698-c678-4e3c-8335-758208fb3893" name="IsPartial" value="false">
+                      <elementDefinition Id="7564200c-3cea-44a6-a712-d0d5d905a0ac" />
+                    </propertyInstance>
+                    <elementDefinition Id="1966a703-1f37-4e93-a41a-525fd3c6f04c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="f4c77492-2eee-4c2d-81f2-062358e72587">
+                    <propertyInstance Id="aa1d81ea-f01d-4aaf-b4f5-0b693e5e79dc" name="IsUnsafe" value="false">
+                      <elementDefinition Id="eafedda5-51f7-47cc-8451-a0abfd9f8eb5" />
+                    </propertyInstance>
+                    <elementDefinition Id="7b10a41a-4a42-400a-89be-bb9034575213" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="1bf38a14-3b07-4a96-b667-5316acda1160">
+                    <propertyInstance Id="1bb3454e-61f5-4793-a352-72051027d171" name="Inheritance" value="none">
+                      <elementDefinition Id="10a9e9f0-929c-4da5-8840-c9655bc45ec8" />
+                    </propertyInstance>
+                    <elementDefinition Id="e312c342-345d-40a4-bfec-55f7ac26821f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="40f74f30-28ec-444c-bf33-0b8ea975bef9">
+                    <propertyInstance Id="ec133b2a-b324-4007-b6c2-826f01e09def" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="da1d4151-edde-48c2-ba82-7e0ebfe48631" />
+                    </propertyInstance>
+                    <elementDefinition Id="102680aa-4e20-49a4-9ba1-1739f8207bdd" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="088cfb61-3254-4cb7-8885-c67cdbea4e22">
+                    <propertyInstance Id="96c0e4fa-e16b-423b-a90e-422b332715f4" name="params" value="false">
+                      <elementDefinition Id="29df72c0-323b-40f0-ae0d-90991e6cca9e" />
+                    </propertyInstance>
+                    <elementDefinition Id="9f6c2a6a-b35b-4bba-80e6-478be0897a53" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="f869078b-f220-4359-bfc8-0edb3479d6b4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8517578a-9129-4427-af0d-81a98cb1f84f" direction="Return">
+                  <elementDefinition Id="54a9386e-154f-401d-b513-48b282f18490" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d711e08d-632c-4a0c-a054-4950dd40f672" LastKnownName="List&lt;Customer‎&gt;" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="c2eeeea1-8988-4890-82b3-0ebb74c54c3f" name="UpdateCustomer" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="b749e494-5b64-46d4-9921-6273d83a8929" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DICustomerDB Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="4d03e32c-cb1e-4bed-b446-2d23c25ed9fc" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="c2f8c586-ff18-4fa6-8446-26d987c45364" name="method" profile="CSharpProfile">
+                <elementDefinition Id="a9d9d49a-a1a9-4208-a6ae-9c1c5715fda8" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b7ae7fb7-534c-4e9d-a851-4fbc0b26f52e">
+                    <propertyInstance Id="97919de9-ac4b-493b-bc59-b982cd682584" name="ClrAttributes">
+                      <elementDefinition Id="b292db03-022f-4759-8881-3c4dbe807f7e" />
+                    </propertyInstance>
+                    <elementDefinition Id="06362995-cd37-4e81-ac93-e35ad181889f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="3e44a805-5266-4452-bad7-a3a93bcabf27">
+                    <propertyInstance Id="5ec58d3f-aa9a-464d-8bc7-5a979d424e38" name="IsPartial" value="false">
+                      <elementDefinition Id="f4458c21-9ebb-4794-8942-b99015d8df55" />
+                    </propertyInstance>
+                    <elementDefinition Id="dbefc987-628c-493c-97b0-59d61a9f6216" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b6c081d3-d554-4c9d-b73f-50a1e77a6411">
+                    <propertyInstance Id="242371b0-a6e2-473f-800b-bc3b39047434" name="IsUnsafe" value="false">
+                      <elementDefinition Id="367f617f-6483-4207-8aae-bdee6905738b" />
+                    </propertyInstance>
+                    <elementDefinition Id="8b7dc446-b7bd-452e-ab3b-4dc18733a4ec" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="92646032-f1f5-4f12-9b91-fc011bf7a262">
+                    <propertyInstance Id="2308d8ff-1ba4-4fef-b879-469aa4d06869" name="Inheritance" value="none">
+                      <elementDefinition Id="c8ac532e-3864-478c-9808-b7497588f806" />
+                    </propertyInstance>
+                    <elementDefinition Id="93b0ae28-6e73-4a42-8c4d-3e05cf420d3f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="6edd7605-5785-41a4-8b57-d5749f4c9404">
+                    <propertyInstance Id="911e5689-08dd-4a2c-b496-2fdb7946928d" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="34fd8a28-a51a-4bbe-98d0-089090843394" />
+                    </propertyInstance>
+                    <elementDefinition Id="67153c2d-3915-41eb-85e4-875c59bd5ce4" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b23408fd-e80c-488f-9393-534d1aec1b42">
+                    <propertyInstance Id="357b4451-02d0-48e4-9038-0904f75c10d8" name="params" value="false">
+                      <elementDefinition Id="504b3572-edf0-4e68-97fb-096f8c815ff9" />
+                    </propertyInstance>
+                    <elementDefinition Id="1fdf94e3-6955-414b-8ec6-7f6adbfe68c6" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="78f78ef7-33a0-4aec-865f-dd2cb6a2ea2e" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="08f83291-75de-4a1a-8dda-2b4677ed1d01" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="baa9a9ce-3f35-4711-8156-cfa5f1a48e5c" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DICustomerDB Member%3D(Name%3DUpdateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="3d4ede16-2b29-40ba-ab23-6dffd7b8da5b" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="f0f785cf-6ce2-4f71-97cd-b6724d45d892" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="85455b93-f282-41a8-9254-7f58372145b1" name="CreateCustomer" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <referencesInternal>
+              <reference Id="00596762-b123-4109-a903-6c5d729a6652" handle="viewcode://./CodeSchema_Method?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DICustomerDB Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)])" tag="ViewCode">
+                <elementDefinition Id="3d896745-cbca-4b51-a3e7-198e41f3b9c4" />
+              </reference>
+            </referencesInternal>
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="6774b0ae-f784-407d-983c-9097d1d372b0" name="method" profile="CSharpProfile">
+                <elementDefinition Id="8d2e2688-0f88-4fbb-b26b-dcf538268315" />
+                <propertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="d3417b37-93e0-447f-ab45-9c6ce625e122">
+                    <propertyInstance Id="15c3780a-9eb2-4efc-bfc2-ef30dfd237bc" name="ClrAttributes">
+                      <elementDefinition Id="b31a6c17-656f-4e9f-988c-86348e9413f6" />
+                    </propertyInstance>
+                    <elementDefinition Id="0f3e642d-6146-49a6-a7e5-a14fc9366e0c" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="2581b26d-ad0b-4347-944d-d6beb5f068be">
+                    <propertyInstance Id="7a6f43c4-371f-4a2c-b164-d0923e4eec98" name="IsPartial" value="false">
+                      <elementDefinition Id="ec1a9c31-5207-426f-a45c-4e819ec5b435" />
+                    </propertyInstance>
+                    <elementDefinition Id="38209a11-ebbc-4c47-be77-ff7961fd03f3" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="b4a7cf48-5844-42de-b342-d593369b7dd8">
+                    <propertyInstance Id="e1755bb9-f07b-4270-9975-f629ab18422d" name="IsUnsafe" value="false">
+                      <elementDefinition Id="bd035f1a-bcbf-4f82-b8e1-71b849a01d89" />
+                    </propertyInstance>
+                    <elementDefinition Id="39dbcce8-da85-4d5b-8401-bb2dc24750a2" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="bbf2234c-5a15-408c-9df5-3e7ec2e7aa23">
+                    <propertyInstance Id="c8bba6b9-57ca-4a85-b27d-0dcd6913fd7a" name="Inheritance" value="none">
+                      <elementDefinition Id="4f16ebb4-3d5f-43ba-985b-7fc0fb999e75" />
+                    </propertyInstance>
+                    <elementDefinition Id="5821463d-700f-4963-90ba-a0d9bd8966ee" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="ec0ee62e-2889-4400-8048-e5c683ce2200">
+                    <propertyInstance Id="aa60bf2a-cc60-45a6-8358-1852d68d3e0f" name="PackageVisibility" value="internal">
+                      <elementDefinition Id="1c5b8edc-15b1-4437-aca8-11b46bb366d4" />
+                    </propertyInstance>
+                    <elementDefinition Id="d948f0b8-a717-4ada-9f6d-bb7edefbfab1" />
+                  </stereotypeInstanceHasPropertyInstances>
+                  <stereotypeInstanceHasPropertyInstances Id="e3801519-e307-43ea-bb27-287febd09480">
+                    <propertyInstance Id="75454539-92ca-4dff-8fe3-3ff98d46063b" name="params" value="false">
+                      <elementDefinition Id="cbb02d21-e203-4b3c-9f4d-e8e14e6e017c" />
+                    </propertyInstance>
+                    <elementDefinition Id="721365d8-0229-4e83-b2c4-0945ad4b6c7f" />
+                  </stereotypeInstanceHasPropertyInstances>
+                </propertyInstances>
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="7f1e6bc1-4394-41b1-8a46-7080ab2f7095" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4fb39a10-9f68-4047-8d4b-f4a92ad4db78" direction="Return">
+                  <elementDefinition Id="4397f086-1cba-4d8b-9526-b534175d64f7" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="d5293caa-c219-4375-a0d8-d056f976a099" LastKnownName="Integer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5f69fe8c-a58e-4093-beb6-7cc11d855a03" name="customer" direction="In">
+                  <referencesInternal>
+                    <reference Id="a66ce77f-83ac-44b5-b068-8d3934d1b303" handle="viewcode://./CodeSchema_Parameter?Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic.DB Type%3DICustomerDB Member%3D(Name%3DCreateCustomer OverloadingParameters%3D[(Assembly%3Dfile:%2F%2F%2FC:%2FUsers%2FRene%2FDocuments%2FLivingSmart%2FLivingSmartBusinessLogic%2FLivingSmartBusinessLogic%2Fbin%2FDebug%2FLivingSmartBusinessLogic.dll Namespace%3DLivingSmartBusinessLogic Type%3DCustomer)]) ParameterIdentifier%3Dcustomer" tag="ViewCode">
+                      <elementDefinition Id="75122357-627f-4a4a-8739-8851249b535e" />
+                    </reference>
+                  </referencesInternal>
+                  <elementDefinition Id="0ef8305e-1256-4c96-aec1-c67d18b061da" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="c728c723-5dc6-407e-8bd0-55337bfe6b28" LastKnownName="Customer" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="b36d10f7-1108-4411-8946-059d5a45217e" name="ModelingProject1">
+    <elementDefinition Id="174f4af5-1916-4a43-b984-f2275fc9740e" />
+  </package>
+</logicalClassDesignerModel>
