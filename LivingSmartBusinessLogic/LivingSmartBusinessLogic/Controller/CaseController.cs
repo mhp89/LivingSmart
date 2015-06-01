@@ -251,9 +251,9 @@ namespace LivingSmartBusinessLogic.Controller
             return GetAskingPrices(activeCase.Id);
         }
 
-        public double GetPriceTrend(Case cCase)
+        public double GetPriceTrend(int caseId)
         {
-            ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(cCase.Id);
+            ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(caseId);
             if (askingPrices.Count == 0)
             {
                 return 0;

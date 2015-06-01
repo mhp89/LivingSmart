@@ -84,6 +84,7 @@ namespace LivingSmartBusinessLogic.Model
         public int View { get { return _view; } internal set { _view = value; } }
         public Neighborhood Neighborhood { get { return _neighborhood; } 
             internal set { _neighborhood = value; } }
+        public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
         #endregion
 
