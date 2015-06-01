@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Catalog
 {
-    class PropertyTypeCatalog
+    internal class PropertyTypeCatalog
     {
         private Dictionary<int, PropertyType> propertyTypes; 
 

@@ -2,10 +2,11 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using LivingSmartBusinessLogic.DB;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Catalog
 {
-    public class CustomerCatalog
+    internal class CustomerCatalog
     {
         private Dictionary<int, Customer> customers;
 

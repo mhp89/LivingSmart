@@ -2,13 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LivingSmartBusinessLogic.DB;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Catalog
 {
-    class CityCatalog
+    internal class CityCatalog
     {
         private Dictionary<int, City> cities;
 

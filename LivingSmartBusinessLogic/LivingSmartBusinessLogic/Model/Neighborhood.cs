@@ -1,10 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using LivingSmartBusinessLogic.Controller;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Model
 {
     public class Neighborhood
     {

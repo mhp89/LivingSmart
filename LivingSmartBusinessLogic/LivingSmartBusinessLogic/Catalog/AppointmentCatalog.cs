@@ -1,12 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Catalog
 {
-    public class AppointmentCatalog
+    internal class AppointmentCatalog
     {
 
         private Dictionary<int, List<Appointment>> appointmentDictionary;

@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Pages;

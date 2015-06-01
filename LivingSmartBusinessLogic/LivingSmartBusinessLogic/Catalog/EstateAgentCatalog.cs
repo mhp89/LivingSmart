@@ -1,13 +1,12 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
 using LivingSmartBusinessLogic.DB;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Catalog
 {
-    public class EstateAgentCatalog
+    internal class EstateAgentCatalog
     {
         private Dictionary<int,EstateAgent> estateAgents;
 

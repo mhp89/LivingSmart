@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
 using LivingSmartBusinessLogic.Controller;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Model
 {
     public class Case
     {
@@ -88,6 +84,13 @@ namespace LivingSmartBusinessLogic
         public int View { get { return _view; } internal set { _view = value; } }
         public Neighborhood Neighborhood { get { return _neighborhood; } 
             internal set { _neighborhood = value; } }
+        public int ZipCode
+        {
+            internal set { City = CityController.Instance.GetCity(value); }
+            get { return City.ZipCode; }
+        }
+
+        public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
         #endregion
 

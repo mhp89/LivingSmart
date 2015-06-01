@@ -1,5 +1,9 @@
+<<<<<<< HEAD
+using System.Collections.ObjectModel;
+=======
 using LivingSmartBusinessLogic.Catalog;
 using LivingSmartBusinessLogic.Model;
+>>>>>>> origin/ControlRettelser
 
 namespace LivingSmartBusinessLogic.Controller
 {

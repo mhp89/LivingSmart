@@ -1,5 +1,13 @@
+<<<<<<< HEAD
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Linq;
+using System.Text;
+=======
+﻿using System.Collections.Generic;
 using LivingSmartBusinessLogic.Model;
+>>>>>>> origin/ControlRettelser
 
 namespace LivingSmartBusinessLogic.Catalog
 {

@@ -2,12 +2,11 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Catalog
 {
-    class RatingCatalog
+    internal class RatingCatalog
     {
         private Dictionary<int, List<Rating>> ratingDictionary;
 
@@ -44,6 +43,11 @@ namespace LivingSmartBusinessLogic
         internal ReadOnlyCollection<Rating> GetRatings(int caseId)
         {
             return ratingDictionary[caseId].AsReadOnly();
+        }
+
+        internal Rating GetLastRating(Case cCase)
+        {
+            return ratingDictionary[cCase.Id][ratingDictionary[cCase.Id].Count - 1];
         }
     }
 }
