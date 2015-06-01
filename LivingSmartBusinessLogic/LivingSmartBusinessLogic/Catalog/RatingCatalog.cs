@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
@@ -39,6 +40,11 @@ namespace LivingSmartBusinessLogic.Catalog
         internal ReadOnlyCollection<Rating> GetRatings(int caseId)
         {
             return ratingDictionary[caseId].AsReadOnly();
+        }
+
+        internal Rating GetLastRating(Case cCase)
+        {
+            return ratingDictionary[cCase.Id].Last();
         }
     }
 }

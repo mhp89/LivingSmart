@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using LivingSmartBusinessLogic.Catalog;
 using LivingSmartBusinessLogic.Model;
@@ -88,6 +89,11 @@ namespace LivingSmartBusinessLogic.Controller
         public Case GetCase(int caseId)
         {
             return caseCatalog.GetCase(caseId);
+        }
+
+        public double GetPriceTrend()
+        {
+            throw new NotImplementedException();
         }
        
         #region Document
@@ -208,6 +214,12 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return ratingCatalog.GetRatings(activeCase.Id);
         }
+
+        public Rating GetLastRating(Case cCase)
+        {
+            return ratingCatalog.GetLastRating(cCase);
+        }
+
         #endregion
 
         #region AskingPrice
