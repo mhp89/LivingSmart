@@ -1,3 +1,5 @@
+using LivingSmartBusinessLogic.Catalog;
+
 namespace LivingSmartBusinessLogic.Controller
 {
     class NeighborhoodController
