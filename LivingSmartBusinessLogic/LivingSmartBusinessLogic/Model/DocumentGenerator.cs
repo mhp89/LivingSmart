@@ -5,6 +5,10 @@ using System.IO;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Klasse med metoder til opbygning af udskriftsfil
+    /// </summary>
+    /// <author>Mathias Petersen</author>
     internal static class DocumentGenerator
     {
         private const int PageWidth = 97;
@@ -15,6 +19,10 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Document methods
 
+        /// <summary>
+        /// Laver en linje i dokumentets bredde bestående af TopBorderChar
+        /// </summary>
+        /// <returns></returns>
         internal static string CreateHeaderLine()
         {
             string line = "";
@@ -24,6 +32,10 @@ namespace LivingSmartBusinessLogic.Model
 
             return line;
         }
+        /// <summary>
+        /// Laver en linje i dokumentets bredde bestående af BottomBorderChar
+        /// </summary>
+        /// <returns></returns>
         internal static string CreateFooterLine()
         {
             string line = "";
@@ -34,6 +46,11 @@ namespace LivingSmartBusinessLogic.Model
             return line;
         }
 
+        /// <summary>
+        /// Sørger for at teksten står centreret baseret på sidens bredde
+        /// </summary>
+        /// <param name="text"></param>
+        /// <returns></returns>
         internal static string CenteredText(string text)
         {
             string line = SideBorderChar + "";
@@ -48,6 +65,10 @@ namespace LivingSmartBusinessLogic.Model
 
             return line;
         }
+        /// <summary>
+        /// Laver en tom linje og indsætter SideBorderChar i hver side
+        /// </summary>
+        /// <returns></returns>
          internal static string EmptyLine()
         {
             string line = SideBorderChar + "";
@@ -57,6 +78,12 @@ namespace LivingSmartBusinessLogic.Model
 
             return line;
         }
+        /// <summary>
+        /// Laver en linje i dokumentets bredde af en char defineret i input
+        /// </summary>
+        /// <param name="fill"></param>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         internal static string FilledLine(char fill = '-', int padding = DefaultPadding)
         {
             string line = SideBorderChar + "";
@@ -71,6 +98,12 @@ namespace LivingSmartBusinessLogic.Model
 
             return line;
         }
+        /// <summary>
+        /// Sørger for teksten står til venstre og indsætter SideBorderChar i hver side
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         internal static string LeftSideText(string text, int padding = DefaultPadding)
         {
             string line = SideBorderChar + "";
@@ -82,6 +115,12 @@ namespace LivingSmartBusinessLogic.Model
 
             return line;
         }
+        /// <summary>
+        /// Sørger for teksten står til højre og indsætter SideBorderChar i hver side
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         internal static string RightSideText(string text, int padding = DefaultPadding)
         {
             string line = SideBorderChar + "";
@@ -93,6 +132,13 @@ namespace LivingSmartBusinessLogic.Model
 
             return line;
         }
+        /// <summary>
+        /// Gøre det muligt at indsætte tekst i både højre og venstre side
+        /// </summary>
+        /// <param name="leftText"></param>
+        /// <param name="rightText"></param>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         internal static string BothSideText(string leftText, string rightText, int padding = DefaultPadding)
         {
             string line = SideBorderChar + "";
@@ -107,6 +153,12 @@ namespace LivingSmartBusinessLogic.Model
             return line;
         }
 
+        /// <summary>
+        /// Definerer automatisk bredden på kolonner
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         internal static string AutoSizeMultiColumnstext(string[] columns, int padding = DefaultPadding)
         {
             string line = SideBorderChar + "";
@@ -127,6 +179,12 @@ namespace LivingSmartBusinessLogic.Model
             return line;
 
         }
+        /// <summary>
+        /// Manuel definering af kolonnebredde med klassen Column
+        /// </summary>
+        /// <param name="columns"></param>
+        /// <param name="padding"></param>
+        /// <returns></returns>
         internal static string FixedMultiColumnstext(Column[] columns, int padding = DefaultPadding)
         {
             string line = SideBorderChar + "";
@@ -151,6 +209,11 @@ namespace LivingSmartBusinessLogic.Model
             return line;
         }
 
+        /// <summary>
+        /// Indsætter et input defineret antal mellemrum
+        /// </summary>
+        /// <param name="spacingWidth"></param>
+        /// <returns></returns>
         internal static string Spacing(int spacingWidth)
         {
             string spacing = "";
@@ -161,6 +224,9 @@ namespace LivingSmartBusinessLogic.Model
 
         #endregion
 
+        /// <summary>
+        /// Definerer tekst og bredde til en kolonne
+        /// </summary>
         internal class Column
         {
             public string Text { get; private set; }

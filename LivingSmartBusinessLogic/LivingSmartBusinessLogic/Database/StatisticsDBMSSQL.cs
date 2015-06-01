@@ -19,6 +19,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="estateAgentId"></param>
         /// <param name="chosenYear"></param>
         /// <returns></returns>
+        /// <author>Maja Olesen</author>
         public List<Statistics> ReadEstateAgentStatistics(int estateAgentId, int chosenYear)
         {
             List<Statistics> list = new List<Statistics>();
@@ -73,6 +74,7 @@ namespace LivingSmartBusinessLogic.DB
         /// og antallet af ejendomme per år per måned per mægler
         /// </summary>
         /// <returns></returns>
+        /// <author>Maja Olesen</author>
         public List<Statistics> ReadAllStatistics()
         {
             List<Statistics> list = new List<Statistics>();
@@ -122,6 +124,11 @@ namespace LivingSmartBusinessLogic.DB
             return list;
         }
 
+        /// <summary>
+        /// Returnerer antal solgte ejendomme for indeværende år og den total salgspris
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Maja Olesen</author>
         public Statistics ReadDialStatistics()
         {
             Statistics stats = new Statistics();
@@ -169,6 +176,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="month"></param>
         /// <returns></returns>
+        /// <author>Maja Olesen</author>
         private static string MonthToString(int month)
         {
             return CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(month);

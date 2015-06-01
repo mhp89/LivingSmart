@@ -8,6 +8,11 @@ namespace LivingSmartBusinessLogic.DB
 {
     internal static class StatisticsDBFactory
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Maja Olesen</author>
         public static IStatisticsDB GetDBL()
         {
             if (Properties.Settings.Default.Database == "MSSQL")

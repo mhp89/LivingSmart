@@ -7,8 +7,16 @@ using docGen = LivingSmartBusinessLogic.Model.DocumentGenerator;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Mathias Petersen</author>
     class PrintStatistics
     {
+        /// <summary>
+        /// Laver udskriftfil med statistik for solgte ejendomme for en bestemt mægler og et bestemt år
+        /// </summary>
+        /// <param name="fileStream"></param>
         public static void CreatePrintEstateAgent(Stream fileStream)
         {
             var db = StatisticsDBFactory.GetDBL();
@@ -43,6 +51,10 @@ namespace LivingSmartBusinessLogic.Model
             writer.Write(page);
             writer.Close();
         }
+        /// <summary>
+        /// Laver udskriftfil med statistik for alle solgte ejendomme i databasen
+        /// </summary>
+        /// <param name="fileStream"></param>
         public static void CreatePrintAll(Stream fileStream)
         {
             var db = StatisticsDBFactory.GetDBL();
@@ -107,10 +119,11 @@ namespace LivingSmartBusinessLogic.Model
         }
 
         /// <summary>
-        /// Laver linjen til statistiktabellen
+        /// Laver linjen til statistiktabellen for en mægler og et år
         /// </summary>
         /// <param name="statisticsLine"></param>
         /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         private static string CreateStatisticsLineEstateAgent(Statistics statisticsLine)
         {
             String line = "";
@@ -125,6 +138,11 @@ namespace LivingSmartBusinessLogic.Model
             return line;
         }
 
+        /// <summary>
+        /// Laver linjen til statistiktabellen for alle solgte ejendomme
+        /// </summary>
+        /// <param name="statisticsLine"></param>
+        /// <returns></returns>
         private static string CreateStatisticsLineAll(Statistics statisticsLine)
         {
             String line = "";

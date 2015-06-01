@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\StatisticsController.cs" />
     <Compile Include="Database\StatisticsDBFactory.cs" />
     <Compile Include="Database\IStatisticsDB.cs" />
     <Compile Include="Database\RatingDBFactory.cs" />
