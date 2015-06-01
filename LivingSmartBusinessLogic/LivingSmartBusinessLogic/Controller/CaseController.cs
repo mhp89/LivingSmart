@@ -92,21 +92,6 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return caseCatalog.GetCase(caseId);
         }
-
-        public double GetPriceTrend(Case cCase)
-        {
-            ReadOnlyCollection<Rating> ratings = GetRatings(cCase.Id);
-            if (ratings.Count == 0)
-            {
-                return 0;
-            }
-            long firstRating = ratings[0].EstateAgentValue;
-            long lastRating = ratings[ratings.Count - 1].EstateAgentValue;
-
-            double priceTrend = lastRating - firstRating;
-
-
-        }
        
         #region Document
 
@@ -256,9 +241,27 @@ namespace LivingSmartBusinessLogic.Controller
         {
             askingPriceCatalog.RemoveFromCatalog(activeCase.Id, askingPrice);
         }
+        public ReadOnlyCollection<AskingPrice> GetAskingPrices(int caseId)
+        {
+            return askingPriceCatalog.GetAskingPrices(caseId);
+        }
+
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
-            return askingPriceCatalog.GetAskingPrices(activeCase.Id);
+            return GetAskingPrices(activeCase.Id);
+        }
+
+        public double GetPriceTrend(Case cCase)
+        {
+            ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(cCase.Id);
+            if (askingPrices.Count == 0)
+            {
+                return 0;
+            }
+            long firstRating = askingPrices[0].Value;
+            long lastRating = askingPrices[askingPrices.Count - 1].Value;
+
+            return (((lastRating / firstRating) - 1) * 100);
         }
         #endregion
 
