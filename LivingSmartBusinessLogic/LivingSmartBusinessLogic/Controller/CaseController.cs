@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Threading;
 using LivingSmartBusinessLogic.Catalog;
 using LivingSmartBusinessLogic.Model;
 
@@ -91,9 +93,19 @@ namespace LivingSmartBusinessLogic.Controller
             return caseCatalog.GetCase(caseId);
         }
 
-        public double GetPriceTrend()
+        public double GetPriceTrend(Case cCase)
         {
-            throw new NotImplementedException();
+            ReadOnlyCollection<Rating> ratings = GetRatings(cCase.Id);
+            if (ratings.Count == 0)
+            {
+                return 0;
+            }
+            long firstRating = ratings[0].EstateAgentValue;
+            long lastRating = ratings[ratings.Count - 1].EstateAgentValue;
+
+            double priceTrend = lastRating - firstRating;
+
+
         }
        
         #region Document
@@ -210,7 +222,7 @@ namespace LivingSmartBusinessLogic.Controller
         {
             ratingCatalog.RemoveFromCatalog(activeCase.Id, rating);
         }
-        public ReadOnlyCollection<Rating> GetRatings()
+        public ReadOnlyCollection<Rating> GetRatings(int id)
         {
             return ratingCatalog.GetRatings(activeCase.Id);
         }
