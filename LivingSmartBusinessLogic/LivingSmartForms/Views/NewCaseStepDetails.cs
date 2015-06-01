@@ -28,7 +28,7 @@ namespace LivingSmartForms.Views
 			{
 				var systemValue = Convert.ToInt64(stbSystemRating.Text);
 				var agentValue = Convert.ToInt64(stbDetailsRating.Text);
-				var lastRating = CaseController.Instance.GetRatings()[0];
+				var lastRating = CaseController.Instance.GetLastRating();
 				if (lastRating.SystemValue != systemValue || lastRating.EstateAgentValue != agentValue)
 				{
 					var rating = CaseController.Instance.MakeNewRating();

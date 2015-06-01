@@ -162,7 +162,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <returns></returns>
         public Picture MakeNewPicture(string location, string description)
         {
-			return new Picture(fileLocation, description);
+			return new Picture(location, description);
         }
 
         /// <summary>
@@ -276,14 +276,21 @@ namespace LivingSmartBusinessLogic.Controller
         }
 
         /// <summary>
-        /// Henter den aktive sags vurderinger som en list
+        /// Henter en specifik sags vurderinger som en list
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
         public Rating GetLastRating(Case cCase)
         {
             return ratingCatalog.GetLastRating(cCase);
         }
+		/// <summary>
+		/// Henter den aktive sags vurderinger som en list
+		/// </summary>
+		/// <returns></returns>
+		public Rating GetLastRating()
+		{
+			return GetLastRating(activeCase);
+		}
 
         #endregion
 

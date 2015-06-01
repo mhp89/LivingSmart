@@ -2,7 +2,13 @@ namespace LivingSmartBusinessLogic.Model
 {
     public class DistanceTo
     {
-        
+	    public enum DistanceToSystemType
+	    {
+		    Shopping,
+			School,
+			Center
+	    }
+
         #region Private Fields
 
         private string _type;

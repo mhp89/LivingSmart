@@ -1,5 +1,6 @@
-namespace LivingSmartBusinessLogic.Model
 using System.Drawing;
+
+namespace LivingSmartBusinessLogic.Model
 {
     public class Picture
     {

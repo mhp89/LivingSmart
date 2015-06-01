@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using LivingSmartBusinessLogic.Catalog;
 using LivingSmartBusinessLogic.Model;
 

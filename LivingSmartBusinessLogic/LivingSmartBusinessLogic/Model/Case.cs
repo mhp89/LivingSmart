@@ -1,5 +1,6 @@
 using System;
 using LivingSmartBusinessLogic.Controller;
+using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -150,13 +151,13 @@ namespace LivingSmartBusinessLogic.Model
         }
         
         /// <summary>
-        /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
-        /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
+        /// Beregner vï¿½rdien af ejendommen baseret pï¿½ grundpris, pris for bebygget areal,
+        /// kï¿½lderareal, alder af ejendommen og faktor fra RatingFactor()
         /// </summary>
         /// <returns></returns>
         internal long CalculatePropertyRating()
         {
-            int basementValue = _neighborhood.Value / 4;  //Estimeret værdi
+            int basementValue = _neighborhood.Value / 4;  //Estimeret vï¿½rdi
             
             return Convert.ToInt64((_landValue + _livingArea * _neighborhood.Value 
                                     + _basementArea * basementValue) * RatingFactor()
@@ -164,8 +165,8 @@ namespace LivingSmartBusinessLogic.Model
         }
 
         /// <summary>
-        /// Finder beregningsfaktorer for udsigt, afstand til skole, indkøb og centrum
-        /// baseret på deres faktiske værdier. 
+        /// Finder beregningsfaktorer for udsigt, afstand til skole, indkï¿½b og centrum
+        /// baseret pï¿½ deres faktiske vï¿½rdier. 
         /// </summary>
         internal double RatingFactor()
         {
@@ -173,20 +174,22 @@ namespace LivingSmartBusinessLogic.Model
             double schoolFactor;
             double shoppingFactor;
             double centerFactor;
-            int schoolDistance;
-            int shoppingDistance;
-            int centerDistance;
+            int schoolDistance = 0;
+			int shoppingDistance = 0;
+			int centerDistance = 0;
 
-            //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
-            foreach (DistanceTo dist in distanceTos)
+			
+            //Disse 3 afstandstyper er pï¿½krï¿½vet af programmet og vil altid forefindes i databasen
+			//TODO: Get distanceTos
+            /*foreach (DistanceTo dist in distanceTos)
             {
-                if (dist.Type == "school")
+				if (dist.Type == DistanceToSystemType.School.ToString())
                     schoolDistance = dist.Distance;
-                else if (dist.Type == "shopping")
+				else if (dist.Type == DistanceToSystemType.Shopping.ToString())
                     shoppingDistance = dist.Distance;
-                else if (dist.Type == "center")
+				else if (dist.Type == DistanceToSystemType.Center.ToString())
                     centerDistance = dist.Distance;
-            }
+            }*/
 
             if (_view == 1)
                 viewFactor = 0.7;
