@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
 
@@ -29,6 +30,11 @@ namespace LivingSmartForms.DropIns
 		{
 			return "NewEstateAgent";
 		}
+		protected override void Close()
+		{
+			EstateAgentController.Instance.CancelActiveEstateAgent();
+			base.Close();
+		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
@@ -39,7 +45,7 @@ namespace LivingSmartForms.DropIns
 		{
 			if (newEstateAgentForm.Save())
 			{
-				//Customer saved
+				//EstateAgent saved
 				Close();
 			}
 		}

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,8 +15,11 @@ namespace LivingSmartBusinessLogic
         }
 
         internal void Save(Invoice invoice)
-        {
-            throw new System.NotImplementedException();
+		{
+			//if (invoice.Id == -1)
+				//Create
+			//else
+				//Update
         }
 
         internal void AddToCatalog(Invoice invoice)

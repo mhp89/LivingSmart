@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
 
@@ -17,18 +18,29 @@ namespace LivingSmartForms.Pages
 		public Overview(BaseForm baseForm) : base(baseForm)
 		{
 			InitializeComponent();
-
-			for (int i = 0; i < 10; i++)
-			{
-				var control = new CaseLineSimple();
-				control.Margin = Padding.Empty;
-				controlList1.AddControl(control);
-			}
 		}
 
 		public override void OnShow()
 		{
 			base.OnShow();
+
+			UpdateCaseList();
+		}
+
+		private void UpdateCaseList()
+		{
+			clsActiveCases.SuspendLayout();
+
+			clsActiveCases.ClearList();
+			var cases = CaseController.Instance.GetCases();
+			foreach (var cCase in cases)
+			{
+				var control = new CaseLineSimple(baseForm, cCase);
+				control.Margin = Padding.Empty;
+				clsActiveCases.AddControl(control, true);
+			}
+
+			clsActiveCases.ResumeLayout();
 		}
 	}
 }

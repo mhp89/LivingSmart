@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,5 +12,6 @@ namespace LivingSmartBusinessLogic.DB
         List<EstateAgent> ReadEstateAgents();
         void UpdateEstateAgent(EstateAgent estateAgent);
         int CreateEstateAgent(EstateAgent estateAgent);
+		EstateAgent LoginEstateAgent(string username, string password);
     }
 }

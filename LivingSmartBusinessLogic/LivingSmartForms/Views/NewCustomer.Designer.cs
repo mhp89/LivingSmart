@@ -88,11 +88,11 @@ namespace LivingSmartForms.Views
 			this.stbCustomerPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbCustomerPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbCustomerPhone.AutomaticValidation = true;
-			this.stbCustomerPhone.BackColor = SmartColor.Light;
+			this.stbCustomerPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbCustomerPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbCustomerPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbCustomerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbCustomerPhone.ForeColor = SmartColor.Dark;
+			this.stbCustomerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbCustomerPhone.Location = new System.Drawing.Point(120, 120);
 			this.stbCustomerPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCustomerPhone.MaxLength = 8;
@@ -104,7 +104,8 @@ namespace LivingSmartForms.Views
 			this.stbCustomerPhone.Required = true;
 			this.stbCustomerPhone.Size = new System.Drawing.Size(360, 30);
 			this.stbCustomerPhone.Suffix = null;
-			this.stbCustomerPhone.TabIndex = 16;
+			this.stbCustomerPhone.TabIndex = 3;
+			this.stbCustomerPhone.TabStop = false;
 			this.stbCustomerPhone.UseSystemPasswordChar = false;
 			// 
 			// stbCustomerEmail
@@ -113,11 +114,11 @@ namespace LivingSmartForms.Views
 			this.stbCustomerEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbCustomerEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbCustomerEmail.AutomaticValidation = true;
-			this.stbCustomerEmail.BackColor = SmartColor.Light;
+			this.stbCustomerEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbCustomerEmail.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbCustomerEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbCustomerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbCustomerEmail.ForeColor = SmartColor.Dark;
+			this.stbCustomerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbCustomerEmail.Location = new System.Drawing.Point(120, 160);
 			this.stbCustomerEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCustomerEmail.MaxLength = 50;
@@ -129,7 +130,8 @@ namespace LivingSmartForms.Views
 			this.stbCustomerEmail.Required = true;
 			this.stbCustomerEmail.Size = new System.Drawing.Size(360, 30);
 			this.stbCustomerEmail.Suffix = null;
-			this.stbCustomerEmail.TabIndex = 14;
+			this.stbCustomerEmail.TabIndex = 4;
+			this.stbCustomerEmail.TabStop = false;
 			this.stbCustomerEmail.UseSystemPasswordChar = false;
 			// 
 			// stbCustomerAddress
@@ -138,11 +140,11 @@ namespace LivingSmartForms.Views
 			this.stbCustomerAddress.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbCustomerAddress.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbCustomerAddress.AutomaticValidation = true;
-			this.stbCustomerAddress.BackColor = SmartColor.Light;
+			this.stbCustomerAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbCustomerAddress.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbCustomerAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbCustomerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbCustomerAddress.ForeColor = SmartColor.Dark;
+			this.stbCustomerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbCustomerAddress.Location = new System.Drawing.Point(120, 40);
 			this.stbCustomerAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCustomerAddress.MaxLength = 50;
@@ -154,7 +156,8 @@ namespace LivingSmartForms.Views
 			this.stbCustomerAddress.Required = true;
 			this.stbCustomerAddress.Size = new System.Drawing.Size(360, 30);
 			this.stbCustomerAddress.Suffix = null;
-			this.stbCustomerAddress.TabIndex = 12;
+			this.stbCustomerAddress.TabIndex = 1;
+			this.stbCustomerAddress.TabStop = false;
 			this.stbCustomerAddress.UseSystemPasswordChar = false;
 			// 
 			// stbCustomerName
@@ -164,11 +167,11 @@ namespace LivingSmartForms.Views
 			this.stbCustomerName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbCustomerName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbCustomerName.AutomaticValidation = true;
-			this.stbCustomerName.BackColor = SmartColor.Light;
+			this.stbCustomerName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbCustomerName.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbCustomerName.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbCustomerName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbCustomerName.ForeColor = SmartColor.Dark;
+			this.stbCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbCustomerName.Location = new System.Drawing.Point(120, 0);
 			this.stbCustomerName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCustomerName.MaxLength = 50;
@@ -180,7 +183,8 @@ namespace LivingSmartForms.Views
 			this.stbCustomerName.Required = true;
 			this.stbCustomerName.Size = new System.Drawing.Size(360, 30);
 			this.stbCustomerName.Suffix = null;
-			this.stbCustomerName.TabIndex = 11;
+			this.stbCustomerName.TabIndex = 0;
+			this.stbCustomerName.TabStop = false;
 			this.stbCustomerName.UseSystemPasswordChar = false;
 			// 
 			// lblCustomerName
@@ -188,7 +192,7 @@ namespace LivingSmartForms.Views
 			this.lblCustomerName.AutoSize = true;
 			this.lblCustomerName.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCustomerName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerName.ForeColor = SmartColor.Dark;
+			this.lblCustomerName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerName.Location = new System.Drawing.Point(0, 0);
 			this.lblCustomerName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCustomerName.Name = "lblCustomerName";
@@ -202,7 +206,7 @@ namespace LivingSmartForms.Views
 			this.lblCustomerAddress.AutoSize = true;
 			this.lblCustomerAddress.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCustomerAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerAddress.ForeColor = SmartColor.Dark;
+			this.lblCustomerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerAddress.Location = new System.Drawing.Point(0, 40);
 			this.lblCustomerAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCustomerAddress.Name = "lblCustomerAddress";
@@ -216,7 +220,7 @@ namespace LivingSmartForms.Views
 			this.lblCustomerCity.AutoSize = true;
 			this.lblCustomerCity.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCustomerCity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerCity.ForeColor = SmartColor.Dark;
+			this.lblCustomerCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerCity.Location = new System.Drawing.Point(0, 80);
 			this.lblCustomerCity.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCustomerCity.Name = "lblCustomerCity";
@@ -234,14 +238,14 @@ namespace LivingSmartForms.Views
 			this.pnlCustomerCity.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.pnlCustomerCity.Name = "pnlCustomerCity";
 			this.pnlCustomerCity.Size = new System.Drawing.Size(360, 30);
-			this.pnlCustomerCity.TabIndex = 7;
+			this.pnlCustomerCity.TabIndex = 2;
 			// 
 			// lblCustomerCityCountry
 			// 
 			this.lblCustomerCityCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblCustomerCityCountry.Font = new System.Drawing.Font("Segoe UI", 9.75F);
-			this.lblCustomerCityCountry.ForeColor = SmartColor.Dark;
+			this.lblCustomerCityCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerCityCountry.Location = new System.Drawing.Point(78, 0);
 			this.lblCustomerCityCountry.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.lblCustomerCityCountry.Name = "lblCustomerCityCountry";
@@ -256,11 +260,11 @@ namespace LivingSmartForms.Views
 			this.stbCustomerZipCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbCustomerZipCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbCustomerZipCode.AutomaticValidation = true;
-			this.stbCustomerZipCode.BackColor = SmartColor.Light;
+			this.stbCustomerZipCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbCustomerZipCode.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbCustomerZipCode.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbCustomerZipCode.Dock = System.Windows.Forms.DockStyle.Left;
-			this.stbCustomerZipCode.ForeColor = SmartColor.Dark;
+			this.stbCustomerZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbCustomerZipCode.Location = new System.Drawing.Point(0, 0);
 			this.stbCustomerZipCode.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCustomerZipCode.MaxLength = 4;
@@ -272,7 +276,8 @@ namespace LivingSmartForms.Views
 			this.stbCustomerZipCode.Required = true;
 			this.stbCustomerZipCode.Size = new System.Drawing.Size(68, 30);
 			this.stbCustomerZipCode.Suffix = null;
-			this.stbCustomerZipCode.TabIndex = 4;
+			this.stbCustomerZipCode.TabIndex = 0;
+			this.stbCustomerZipCode.TabStop = false;
 			this.stbCustomerZipCode.UseSystemPasswordChar = false;
 			this.stbCustomerZipCode.TextChanged += new System.EventHandler(this.stbCustomerZipCode_TextChanged);
 			// 
@@ -281,7 +286,7 @@ namespace LivingSmartForms.Views
 			this.lblCustomerEmail.AutoSize = true;
 			this.lblCustomerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCustomerEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerEmail.ForeColor = SmartColor.Dark;
+			this.lblCustomerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerEmail.Location = new System.Drawing.Point(0, 160);
 			this.lblCustomerEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCustomerEmail.Name = "lblCustomerEmail";
@@ -295,7 +300,7 @@ namespace LivingSmartForms.Views
 			this.lblCustomerPhone.AutoSize = true;
 			this.lblCustomerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCustomerPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerPhone.ForeColor = SmartColor.Dark;
+			this.lblCustomerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerPhone.Location = new System.Drawing.Point(0, 120);
 			this.lblCustomerPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCustomerPhone.Name = "lblCustomerPhone";
@@ -309,7 +314,7 @@ namespace LivingSmartForms.Views
 			this.lblCustomerDateOfBirth.AutoSize = true;
 			this.lblCustomerDateOfBirth.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCustomerDateOfBirth.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCustomerDateOfBirth.ForeColor = SmartColor.Dark;
+			this.lblCustomerDateOfBirth.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCustomerDateOfBirth.Location = new System.Drawing.Point(0, 200);
 			this.lblCustomerDateOfBirth.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCustomerDateOfBirth.Name = "lblCustomerDateOfBirth";
@@ -325,7 +330,7 @@ namespace LivingSmartForms.Views
 			this.dafCustomerBirthday.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.dafCustomerBirthday.Name = "dafCustomerBirthday";
 			this.dafCustomerBirthday.Size = new System.Drawing.Size(360, 30);
-			this.dafCustomerBirthday.TabIndex = 17;
+			this.dafCustomerBirthday.TabIndex = 5;
 			// 
 			// NewCustomer
 			// 

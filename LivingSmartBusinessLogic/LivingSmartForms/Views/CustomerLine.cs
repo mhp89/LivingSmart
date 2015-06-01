@@ -31,7 +31,7 @@ namespace LivingSmartForms.Views
 		    slbCustomerZipcode.Text = customer.City.ZipCode + " " + customer.City.District;
 		    slbCustomerPhone.Text = customer.Telephone;
 		    slbCustomerEmail.Text = customer.Email;
-		    slbCustomerBirthday.Text = customer.DateOfBirth.ToString();
+		    slbCustomerBirthday.Text = customer.DateOfBirth.ToShortDateString();
 	    }
     }
 }

@@ -20,7 +20,8 @@ namespace LivingSmartBusinessLogic.Controller
 		#endregion
 
         private CityCatalog cityCatalog;
-        public CityController()
+
+		private CityController()
         {
             cityCatalog = new CityCatalog();
         }

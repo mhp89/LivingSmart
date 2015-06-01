@@ -78,11 +78,11 @@ namespace LivingSmartForms.Views
 			this.stbEstateAgentEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbEstateAgentEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbEstateAgentEmail.AutomaticValidation = true;
-			this.stbEstateAgentEmail.BackColor = SmartColor.Light;
+			this.stbEstateAgentEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbEstateAgentEmail.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbEstateAgentEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbEstateAgentEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentEmail.ForeColor = SmartColor.Dark;
+			this.stbEstateAgentEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbEstateAgentEmail.Location = new System.Drawing.Point(120, 80);
 			this.stbEstateAgentEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEstateAgentEmail.MaxLength = 50;
@@ -94,7 +94,8 @@ namespace LivingSmartForms.Views
 			this.stbEstateAgentEmail.Required = true;
 			this.stbEstateAgentEmail.Size = new System.Drawing.Size(360, 30);
 			this.stbEstateAgentEmail.Suffix = null;
-			this.stbEstateAgentEmail.TabIndex = 14;
+			this.stbEstateAgentEmail.TabIndex = 2;
+			this.stbEstateAgentEmail.TabStop = false;
 			this.stbEstateAgentEmail.UseSystemPasswordChar = false;
 			// 
 			// stbEstateAgentPhone
@@ -104,11 +105,11 @@ namespace LivingSmartForms.Views
 			this.stbEstateAgentPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbEstateAgentPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbEstateAgentPhone.AutomaticValidation = true;
-			this.stbEstateAgentPhone.BackColor = SmartColor.Light;
+			this.stbEstateAgentPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbEstateAgentPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbEstateAgentPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbEstateAgentPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentPhone.ForeColor = SmartColor.Dark;
+			this.stbEstateAgentPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbEstateAgentPhone.Location = new System.Drawing.Point(120, 40);
 			this.stbEstateAgentPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEstateAgentPhone.MaxLength = 50;
@@ -120,7 +121,8 @@ namespace LivingSmartForms.Views
 			this.stbEstateAgentPhone.Required = true;
 			this.stbEstateAgentPhone.Size = new System.Drawing.Size(360, 30);
 			this.stbEstateAgentPhone.Suffix = null;
-			this.stbEstateAgentPhone.TabIndex = 13;
+			this.stbEstateAgentPhone.TabIndex = 1;
+			this.stbEstateAgentPhone.TabStop = false;
 			this.stbEstateAgentPhone.UseSystemPasswordChar = false;
 			// 
 			// lblEstateAgentTerminationDate
@@ -128,7 +130,7 @@ namespace LivingSmartForms.Views
 			this.lblEstateAgentTerminationDate.AutoSize = true;
 			this.lblEstateAgentTerminationDate.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblEstateAgentTerminationDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEstateAgentTerminationDate.ForeColor = SmartColor.Dark;
+			this.lblEstateAgentTerminationDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblEstateAgentTerminationDate.Location = new System.Drawing.Point(0, 160);
 			this.lblEstateAgentTerminationDate.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblEstateAgentTerminationDate.Name = "lblEstateAgentTerminationDate";
@@ -142,7 +144,7 @@ namespace LivingSmartForms.Views
 			this.lblEstateAgentName.AutoSize = true;
 			this.lblEstateAgentName.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblEstateAgentName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEstateAgentName.ForeColor = SmartColor.Dark;
+			this.lblEstateAgentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblEstateAgentName.Location = new System.Drawing.Point(0, 0);
 			this.lblEstateAgentName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblEstateAgentName.Name = "lblEstateAgentName";
@@ -156,7 +158,7 @@ namespace LivingSmartForms.Views
 			this.lblEstateAgentPhone.AutoSize = true;
 			this.lblEstateAgentPhone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblEstateAgentPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEstateAgentPhone.ForeColor = SmartColor.Dark;
+			this.lblEstateAgentPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblEstateAgentPhone.Location = new System.Drawing.Point(0, 40);
 			this.lblEstateAgentPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblEstateAgentPhone.Name = "lblEstateAgentPhone";
@@ -170,7 +172,7 @@ namespace LivingSmartForms.Views
 			this.lblEstateAgentEmail.AutoSize = true;
 			this.lblEstateAgentEmail.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblEstateAgentEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEstateAgentEmail.ForeColor = SmartColor.Dark;
+			this.lblEstateAgentEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblEstateAgentEmail.Location = new System.Drawing.Point(0, 80);
 			this.lblEstateAgentEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblEstateAgentEmail.Name = "lblEstateAgentEmail";
@@ -184,7 +186,7 @@ namespace LivingSmartForms.Views
 			this.lblEstateAgentStartDate.AutoSize = true;
 			this.lblEstateAgentStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblEstateAgentStartDate.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEstateAgentStartDate.ForeColor = SmartColor.Dark;
+			this.lblEstateAgentStartDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblEstateAgentStartDate.Location = new System.Drawing.Point(0, 120);
 			this.lblEstateAgentStartDate.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblEstateAgentStartDate.Name = "lblEstateAgentStartDate";
@@ -200,11 +202,11 @@ namespace LivingSmartForms.Views
 			this.stbEstateAgentName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbEstateAgentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbEstateAgentName.AutomaticValidation = true;
-			this.stbEstateAgentName.BackColor = SmartColor.Light;
+			this.stbEstateAgentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbEstateAgentName.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbEstateAgentName.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbEstateAgentName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentName.ForeColor = SmartColor.Dark;
+			this.stbEstateAgentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbEstateAgentName.Location = new System.Drawing.Point(120, 0);
 			this.stbEstateAgentName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEstateAgentName.MaxLength = 50;
@@ -216,7 +218,8 @@ namespace LivingSmartForms.Views
 			this.stbEstateAgentName.Required = true;
 			this.stbEstateAgentName.Size = new System.Drawing.Size(360, 30);
 			this.stbEstateAgentName.Suffix = null;
-			this.stbEstateAgentName.TabIndex = 12;
+			this.stbEstateAgentName.TabIndex = 0;
+			this.stbEstateAgentName.TabStop = false;
 			this.stbEstateAgentName.UseSystemPasswordChar = false;
 			// 
 			// dafEstateAgentStartDate
@@ -226,7 +229,7 @@ namespace LivingSmartForms.Views
 			this.dafEstateAgentStartDate.Margin = new System.Windows.Forms.Padding(0);
 			this.dafEstateAgentStartDate.Name = "dafEstateAgentStartDate";
 			this.dafEstateAgentStartDate.Size = new System.Drawing.Size(360, 40);
-			this.dafEstateAgentStartDate.TabIndex = 15;
+			this.dafEstateAgentStartDate.TabIndex = 3;
 			// 
 			// dafEstateAgentTerminationDate
 			// 
@@ -235,7 +238,7 @@ namespace LivingSmartForms.Views
 			this.dafEstateAgentTerminationDate.Margin = new System.Windows.Forms.Padding(0);
 			this.dafEstateAgentTerminationDate.Name = "dafEstateAgentTerminationDate";
 			this.dafEstateAgentTerminationDate.Size = new System.Drawing.Size(360, 40);
-			this.dafEstateAgentTerminationDate.TabIndex = 16;
+			this.dafEstateAgentTerminationDate.TabIndex = 4;
 			// 
 			// NewEstateAgent
 			// 

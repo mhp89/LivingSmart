@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -22,8 +22,11 @@ namespace LivingSmartBusinessLogic
         }
 
         internal void Save(Ad ad)
-        {
-            throw new NotImplementedException();
+		{
+			//if (ad.Id == -1)
+				//Create
+			//else
+				//Update
         }
 
         internal void AddToCatalog(int caseId, Ad ad)

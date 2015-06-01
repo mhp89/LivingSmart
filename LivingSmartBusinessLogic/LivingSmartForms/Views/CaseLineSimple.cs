@@ -7,14 +7,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic;
 
 namespace LivingSmartForms.Views
 {
     public partial class CaseLineSimple : UserControl
     {
-        public CaseLineSimple()
-        {
+	    private Case cCase;
+		public CaseLineSimple(BaseForm baseForm, Case cCase)
+		{
+			this.cCase = cCase;
+
             InitializeComponent();
-        }
+
+			UpdateFields();
+		}
+		private void UpdateFields()
+		{
+			slbCaseNo.Text = cCase.Id.ToString();
+			slbSeller.Text = cCase.Seller.Name;
+			slbStatus.Text = cCase.Status;
+			slbProperty.Text = cCase.Address+", "+cCase.City.District;
+			slbPropertyType.Text = cCase.PropertyType.Description;
+			slbPrice.Text = cCase.SellingPrice.ToString();
+			//slbPriceTrend.Text = cCase..Email;
+		}
     }
 }

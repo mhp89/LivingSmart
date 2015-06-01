@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,8 +21,11 @@ namespace LivingSmartBusinessLogic
         }
 
         internal void Save(PropertyType propertyType)
-        {
-            throw new NotImplementedException();
+		{
+			//if (propertyType.Id == -1)
+				//Create
+			//else
+				//Update
         }
 
         internal void AddToCatalog(PropertyType propertyType)

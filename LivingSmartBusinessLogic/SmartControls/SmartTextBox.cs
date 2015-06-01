@@ -41,10 +41,7 @@ namespace SmartControls
 			set
 			{
 				if (value != Text)
-				{
 					_text = textBox.Text = value;
-					OnTextChanged(EventArgs.Empty);
-				}
 			}
 		}
 		private string _text;
@@ -188,12 +185,19 @@ namespace SmartControls
 			SizeChanged += SmartTextBox_SizeChanged;
 			textBox.TextChanged += textBox_TextChanged;
 			textBox.KeyPress += textBox_KeyPress;
+			textBox.KeyDown += textBox_KeyDown;
 
 			toolTip = new ToolTip();
-			toolTip.InitialDelay = 1000;
-			toolTip.ReshowDelay = 500;
+			toolTip.InitialDelay = 500;
+			toolTip.ReshowDelay = 350;
 
 			UpdateSize();
+		}
+
+		void textBox_KeyDown(object sender, KeyEventArgs e)
+		{
+			//Når TextBox'en får en KeyDown event, videresendes den til SmartTextBox
+			OnKeyDown(e);
 		}
 
 		void textBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -220,6 +224,9 @@ namespace SmartControls
 
 			if (AutomaticValidation)
 				Validate();
+
+			//Efter egenvalidering sendes eventen videre til andre evt. lyttere
+			OnTextChanged(e);
 		}
 
 		void SmartTextBox_SizeChanged(object sender, EventArgs e)
@@ -265,7 +272,7 @@ namespace SmartControls
 				suffixSizeBuffer.Width += 10;
 
 				e.Graphics.FillRectangle(new SolidBrush(SmartColor.DarkA75), new Rectangle(Width - suffixSizeBuffer.Width, 0, suffixSizeBuffer.Width, Height));
-				TextRenderer.DrawText(e.Graphics, Suffix, Font, new Rectangle(Width - suffixSize.Width - 5, 0, suffixSize.Width, Height), ForeColor);
+				TextRenderer.DrawText(e.Graphics, Suffix, Font, new Rectangle(Width - suffixSize.Width - 5, 0, suffixSize.Width, Height), SmartColor.Light);
 			}
 
 			if (HasError)

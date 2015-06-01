@@ -101,7 +101,7 @@ namespace LivingSmartForms.DropIns
 			this.lblId.AutoSize = true;
 			this.lblId.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblId.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblId.ForeColor = SmartColor.Dark;
+			this.lblId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblId.Location = new System.Drawing.Point(0, 0);
 			this.lblId.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblId.Name = "lblId";
@@ -116,21 +116,24 @@ namespace LivingSmartForms.DropIns
 			this.stbId.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbId.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbId.AutomaticValidation = false;
-			this.stbId.BackColor = SmartColor.Light;
+			this.stbId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbId.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbId.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbId.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbId.ForeColor = SmartColor.Dark;
+			this.stbId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbId.Location = new System.Drawing.Point(95, 0);
 			this.stbId.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbId.MaxLength = 32767;
 			this.stbId.MinLength = -1;
 			this.stbId.Name = "stbId";
 			this.stbId.NumericOnly = true;
+			this.stbId.Placeholder = null;
 			this.stbId.RegularExpression = null;
+			this.stbId.Required = false;
 			this.stbId.Size = new System.Drawing.Size(285, 30);
 			this.stbId.Suffix = null;
-			this.stbId.TabIndex = 7;
+			this.stbId.TabIndex = 0;
+			this.stbId.TabStop = false;
 			this.stbId.UseSystemPasswordChar = false;
 			// 
 			// stbEmail
@@ -139,21 +142,24 @@ namespace LivingSmartForms.DropIns
 			this.stbEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbEmail.AutomaticValidation = false;
-			this.stbEmail.BackColor = SmartColor.Light;
+			this.stbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbEmail.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEmail.ForeColor = SmartColor.Dark;
+			this.stbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbEmail.Location = new System.Drawing.Point(95, 200);
 			this.stbEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEmail.MaxLength = 32767;
 			this.stbEmail.MinLength = -1;
 			this.stbEmail.Name = "stbEmail";
 			this.stbEmail.NumericOnly = false;
+			this.stbEmail.Placeholder = null;
 			this.stbEmail.RegularExpression = null;
+			this.stbEmail.Required = false;
 			this.stbEmail.Size = new System.Drawing.Size(285, 30);
 			this.stbEmail.Suffix = null;
-			this.stbEmail.TabIndex = 2;
+			this.stbEmail.TabIndex = 4;
+			this.stbEmail.TabStop = false;
 			this.stbEmail.UseSystemPasswordChar = false;
 			this.stbEmail.TextChanged += new System.EventHandler(this.Search);
 			// 
@@ -163,21 +169,24 @@ namespace LivingSmartForms.DropIns
 			this.stbAddress.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbAddress.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbAddress.AutomaticValidation = false;
-			this.stbAddress.BackColor = SmartColor.Light;
+			this.stbAddress.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbAddress.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbAddress.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbAddress.ForeColor = SmartColor.Dark;
+			this.stbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbAddress.Location = new System.Drawing.Point(95, 80);
 			this.stbAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbAddress.MaxLength = 32767;
 			this.stbAddress.MinLength = -1;
 			this.stbAddress.Name = "stbAddress";
 			this.stbAddress.NumericOnly = false;
+			this.stbAddress.Placeholder = null;
 			this.stbAddress.RegularExpression = null;
+			this.stbAddress.Required = false;
 			this.stbAddress.Size = new System.Drawing.Size(285, 30);
 			this.stbAddress.Suffix = null;
-			this.stbAddress.TabIndex = 3;
+			this.stbAddress.TabIndex = 2;
+			this.stbAddress.TabStop = false;
 			this.stbAddress.UseSystemPasswordChar = false;
 			this.stbAddress.TextChanged += new System.EventHandler(this.Search);
 			// 
@@ -186,7 +195,7 @@ namespace LivingSmartForms.DropIns
 			this.lblEmail.AutoSize = true;
 			this.lblEmail.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblEmail.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblEmail.ForeColor = SmartColor.Dark;
+			this.lblEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblEmail.Location = new System.Drawing.Point(0, 200);
 			this.lblEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblEmail.Name = "lblEmail";
@@ -200,7 +209,7 @@ namespace LivingSmartForms.DropIns
 			this.lblPhone.AutoSize = true;
 			this.lblPhone.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblPhone.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPhone.ForeColor = SmartColor.Dark;
+			this.lblPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblPhone.Location = new System.Drawing.Point(0, 160);
 			this.lblPhone.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.lblPhone.Name = "lblPhone";
@@ -214,7 +223,7 @@ namespace LivingSmartForms.DropIns
 			this.lblName.AutoSize = true;
 			this.lblName.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblName.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblName.ForeColor = SmartColor.Dark;
+			this.lblName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblName.Location = new System.Drawing.Point(0, 40);
 			this.lblName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblName.Name = "lblName";
@@ -228,7 +237,7 @@ namespace LivingSmartForms.DropIns
 			this.lblAddress.AutoSize = true;
 			this.lblAddress.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblAddress.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblAddress.ForeColor = SmartColor.Dark;
+			this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblAddress.Location = new System.Drawing.Point(0, 80);
 			this.lblAddress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblAddress.Name = "lblAddress";
@@ -242,7 +251,7 @@ namespace LivingSmartForms.DropIns
 			this.lblCity.AutoSize = true;
 			this.lblCity.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.lblCity.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblCity.ForeColor = SmartColor.Dark;
+			this.lblCity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblCity.Location = new System.Drawing.Point(0, 120);
 			this.lblCity.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblCity.Name = "lblCity";
@@ -258,21 +267,24 @@ namespace LivingSmartForms.DropIns
 			this.stbName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbName.AutomaticValidation = false;
-			this.stbName.BackColor = SmartColor.Light;
+			this.stbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbName.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbName.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbName.ForeColor = SmartColor.Dark;
+			this.stbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbName.Location = new System.Drawing.Point(95, 40);
 			this.stbName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbName.MaxLength = 32767;
 			this.stbName.MinLength = -1;
 			this.stbName.Name = "stbName";
 			this.stbName.NumericOnly = false;
+			this.stbName.Placeholder = null;
 			this.stbName.RegularExpression = null;
+			this.stbName.Required = false;
 			this.stbName.Size = new System.Drawing.Size(285, 30);
 			this.stbName.Suffix = null;
-			this.stbName.TabIndex = 4;
+			this.stbName.TabIndex = 1;
+			this.stbName.TabStop = false;
 			this.stbName.UseSystemPasswordChar = false;
 			this.stbName.TextChanged += new System.EventHandler(this.Search);
 			// 
@@ -282,21 +294,24 @@ namespace LivingSmartForms.DropIns
 			this.stbPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbPhone.AutomaticValidation = false;
-			this.stbPhone.BackColor = SmartColor.Light;
+			this.stbPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPhone.ForeColor = SmartColor.Dark;
+			this.stbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbPhone.Location = new System.Drawing.Point(95, 160);
 			this.stbPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPhone.MaxLength = 8;
 			this.stbPhone.MinLength = -1;
 			this.stbPhone.Name = "stbPhone";
 			this.stbPhone.NumericOnly = true;
+			this.stbPhone.Placeholder = null;
 			this.stbPhone.RegularExpression = null;
+			this.stbPhone.Required = false;
 			this.stbPhone.Size = new System.Drawing.Size(285, 30);
 			this.stbPhone.Suffix = null;
 			this.stbPhone.TabIndex = 3;
+			this.stbPhone.TabStop = false;
 			this.stbPhone.UseSystemPasswordChar = false;
 			this.stbPhone.TextChanged += new System.EventHandler(this.Search);
 			// 
@@ -315,7 +330,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			this.lblSellerCityCountry.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.lblSellerCityCountry.ForeColor = SmartColor.Dark;
+			this.lblSellerCityCountry.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblSellerCityCountry.Location = new System.Drawing.Point(79, 0);
 			this.lblSellerCityCountry.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.lblSellerCityCountry.Name = "lblSellerCityCountry";
@@ -330,21 +345,24 @@ namespace LivingSmartForms.DropIns
 			this.stbZipCode.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbZipCode.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
 			this.stbZipCode.AutomaticValidation = false;
-			this.stbZipCode.BackColor = SmartColor.Light;
+			this.stbZipCode.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stbZipCode.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.stbZipCode.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbZipCode.Dock = System.Windows.Forms.DockStyle.Left;
-			this.stbZipCode.ForeColor = SmartColor.Dark;
+			this.stbZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbZipCode.Location = new System.Drawing.Point(0, 0);
 			this.stbZipCode.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbZipCode.MaxLength = 4;
 			this.stbZipCode.MinLength = 4;
 			this.stbZipCode.Name = "stbZipCode";
 			this.stbZipCode.NumericOnly = true;
+			this.stbZipCode.Placeholder = null;
 			this.stbZipCode.RegularExpression = null;
+			this.stbZipCode.Required = false;
 			this.stbZipCode.Size = new System.Drawing.Size(68, 30);
 			this.stbZipCode.Suffix = null;
-			this.stbZipCode.TabIndex = 3;
+			this.stbZipCode.TabIndex = 0;
+			this.stbZipCode.TabStop = false;
 			this.stbZipCode.UseSystemPasswordChar = false;
 			this.stbZipCode.TextChanged += new System.EventHandler(this.Search);
 			// 
@@ -353,7 +371,7 @@ namespace LivingSmartForms.DropIns
 			this.header.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.header.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.header.ForeColor = SmartColor.Dark;
+			this.header.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.header.Location = new System.Drawing.Point(10, 60);
 			this.header.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.header.Name = "header";
@@ -375,7 +393,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// pnlSubmenuBorder
 			// 
-			this.pnlSubmenuBorder.BackColor = SmartColor.Dark;
+			this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 48);
 			this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
@@ -406,7 +424,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// pnlBottomControlsBorder
 			// 
-			this.pnlBottomControlsBorder.BackColor = SmartColor.Dark;
+			this.pnlBottomControlsBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.pnlBottomControlsBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlBottomControlsBorder.Location = new System.Drawing.Point(0, 0);
 			this.pnlBottomControlsBorder.Name = "pnlBottomControlsBorder";
@@ -429,14 +447,14 @@ namespace LivingSmartForms.DropIns
 			// 
 			this.btnCancel.AutoSize = true;
 			this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnCancel.BackColor = SmartColor.Dark;
+			this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnCancel.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnCancel.FlatAppearance.BorderSize = 0;
-			this.btnCancel.FlatAppearance.MouseDownBackColor = SmartColor.Light;
-			this.btnCancel.FlatAppearance.MouseOverBackColor = SmartColor.Light;
+			this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCancel.ForeColor = SmartColor.Light;
+			this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnCancel.Location = new System.Drawing.Point(17, 10);
 			this.btnCancel.Margin = new System.Windows.Forms.Padding(20, 10, 0, 10);
 			this.btnCancel.Name = "btnCancel";
@@ -451,14 +469,14 @@ namespace LivingSmartForms.DropIns
 			this.btnSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnSelect.AutoSize = true;
 			this.btnSelect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnSelect.BackColor = SmartColor.Dark;
+			this.btnSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnSelect.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnSelect.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnSelect.FlatAppearance.BorderSize = 0;
-			this.btnSelect.FlatAppearance.MouseDownBackColor = SmartColor.Light;
-			this.btnSelect.FlatAppearance.MouseOverBackColor = SmartColor.Light;
+			this.btnSelect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnSelect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSelect.ForeColor = SmartColor.Light;
+			this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnSelect.Location = new System.Drawing.Point(303, 10);
 			this.btnSelect.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
 			this.btnSelect.Name = "btnSelect";
@@ -473,7 +491,7 @@ namespace LivingSmartForms.DropIns
 			this.header1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.header1.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.header1.ForeColor = SmartColor.Dark;
+			this.header1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.header1.Location = new System.Drawing.Point(10, 345);
 			this.header1.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.header1.Name = "header1";

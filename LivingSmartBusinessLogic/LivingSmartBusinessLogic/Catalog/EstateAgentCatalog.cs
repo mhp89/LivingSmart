@@ -35,8 +35,10 @@ namespace LivingSmartBusinessLogic
 
         internal void Save(EstateAgent estateAgent)
 		{
-			//TODO: Check for exist
-			estateAgent.Id = db.CreateEstateAgent(estateAgent);
+			if(estateAgent.Id == -1)
+				estateAgent.Id = db.CreateEstateAgent(estateAgent);
+			else
+				db.UpdateEstateAgent(estateAgent);
         }
 
         internal void AddToCatalog(EstateAgent estateAgent)
@@ -92,5 +94,10 @@ namespace LivingSmartBusinessLogic
 
 			return result;
 		}
+
+		public EstateAgent LoginEstateAgent(string username, string password)
+	    {
+			return db.LoginEstateAgent(username, password);
+	    }
     }
 }

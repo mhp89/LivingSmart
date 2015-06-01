@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,7 +28,8 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         internal Document(string type, int price, string location, string status)
-        {
+		{
+			Id = -1;
             Type = type;
             Price = price;
             Location = location;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -22,8 +22,11 @@ namespace LivingSmartBusinessLogic
         }
 
         internal void Save(Appointment appointment)
-        {
-            throw new NotImplementedException();
+		{
+			//if (appointment.Id == -1)
+				//Create
+			//else
+				//Update
         }
 
         internal void AddToCatalog(int estateAgentId, Appointment appointment)

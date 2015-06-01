@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -27,8 +27,11 @@ namespace LivingSmartBusinessLogic
         }
 
         internal void Save(Case cCase)
-        {
-            throw new System.NotImplementedException();
+		{
+			//if (cCase.Id == -1)
+				//Create
+			//else
+				//Update
         }
 
         internal void AddToCatalog(Case cCase)
@@ -50,5 +53,10 @@ namespace LivingSmartBusinessLogic
             return null;
         }
 
+	    public ReadOnlyCollection<Case> GetCases()
+	    {
+            var caseList = cases.Values.ToList();
+			return caseList.AsReadOnly();
+	    }
     }
 }

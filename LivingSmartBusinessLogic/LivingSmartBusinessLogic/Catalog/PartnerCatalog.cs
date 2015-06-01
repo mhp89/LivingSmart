@@ -1,27 +1,43 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
+using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic
 {
     public class PartnerCatalog
     {
-        private Dictionary<int,Partner> partners;
+		private Dictionary<int, Partner> partners;
+
+		private IPartnerDB db;
 
         internal PartnerCatalog()
-        {
+		{
+			db = PartnerDBFactory.GetDBL();
             partners = new Dictionary<int, Partner>();
-        }
+
+	        LoadCatalog();
+		}
+		internal void LoadCatalog()
+		{
+			var customerList = db.ReadPartners();
+			foreach (var customer in customerList)
+				AddToCatalog(customer);
+		}
 
         internal Partner Check(int id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         internal void Save(Partner partner)
-        {
-            throw new System.NotImplementedException();
+		{
+			if (partner.Id == -1)
+				partner.Id = db.CreatePartner(partner);
+			else
+				db.UpdatePartner(partner);
         }
 
         internal void AddToCatalog(Partner partner)
@@ -33,5 +49,11 @@ namespace LivingSmartBusinessLogic
         {
             partners.Add(partner.Id, partner);
         }
+
+		internal ReadOnlyCollection<Partner> GetPartners()
+		{
+			var customerList = partners.Values.ToList();
+			return customerList.AsReadOnly();
+		}
     }
 }

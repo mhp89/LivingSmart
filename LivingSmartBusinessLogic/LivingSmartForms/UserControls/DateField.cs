@@ -17,20 +17,43 @@ namespace LivingSmartForms.UserControls
             InitializeComponent();
         }
 
+		/// <summary>
+		/// Retunere et DateTime objekt med en gyldig dato.
+		/// </summary>
+		/// <returns></returns>
 	    public DateTime? GetDateTime()
 		{
 			if (!Validate())
 				return null;
 
-			var day = Convert.ToInt32(stbDateDay.Text);
-			var month = Convert.ToInt32(stbDateMonth.Text);
-			var year = Convert.ToInt32(stbDateYear.Text);
+		    return GetValidDate();
+		}
 
-			var date = new DateTime(year, month, day);
+		/// <summary>
+		/// Retunere en dato hvis det indtastede er gyldigt
+		/// </summary>
+		/// <returns></returns>
+	    private DateTime? GetValidDate()
+		{
+			DateTime? date = null;
 
-		    return date;
+			try
+			{
+				var day = Convert.ToInt32(stbDateDay.Text);
+				var month = Convert.ToInt32(stbDateMonth.Text);
+				var year = Convert.ToInt32(stbDateYear.Text);
+
+				date = new DateTime(year, month, day);
+			}
+			catch (Exception) { }
+
+			return date;
 	    }
 
+		/// <summary>
+		/// Validere den indtastede dato
+		/// </summary>
+		/// <returns></returns>
 	    public bool Validate()
 		{
 			bool fielddataOk = true;
@@ -39,7 +62,31 @@ namespace LivingSmartForms.UserControls
 			fielddataOk &= stbDateMonth.Validate();
 			fielddataOk &= stbDateYear.Validate();
 
+			if(fielddataOk)
+				fielddataOk &= GetValidDate() != null;
+
 			return fielddataOk;
+	    }
+
+		/// <summary>
+		/// Rydder tekstfelterne
+		/// </summary>
+	    public void ClearDate()
+	    {
+		    stbDateDay.Text = "";
+		    stbDateMonth.Text = "";
+		    stbDateYear.Text = "";
+	    }
+
+		/// <summary>
+		/// S�tter tekstfelterne til en specific dato
+		/// </summary>
+		/// <param name="date"></param>
+	    public void SetDate(DateTime date)
+	    {
+			stbDateDay.Text = date.Day.ToString();
+			stbDateMonth.Text = date.Month.ToString();
+			stbDateYear.Text = date.Year.ToString();
 	    }
     }
 }

@@ -1,9 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic
@@ -29,15 +26,19 @@ namespace LivingSmartBusinessLogic
 		        AddToCatalog(customer);
         }
 
-        internal Customer Check(int id)
-        {
-            throw new System.NotImplementedException();
+        internal Customer Read(int id)
+		{
+			if (customers.ContainsKey(id))
+				return customers[id];
+			return null;
         }
 
         internal void Save(Customer customer)
 		{
-			//TODO: Check for exist
-			customer.Id = db.CreateCustomer(customer);
+			if (customer.Id == -1)
+				customer.Id = db.CreateCustomer(customer);
+			else
+				db.UpdateCustomer(customer);
         }
 
         internal void AddToCatalog(Customer customer)
@@ -51,8 +52,8 @@ namespace LivingSmartBusinessLogic
             customers.Remove(customer.Id);
         }
 
-        internal List<Customer> SearchCustomers(int id, string name, string address, int zipcode, string telephone,
-            string email)
+        internal List<Customer> SearchCustomers(int id, string name, string address, int zipcode,
+			string telephone, string email)
         {
             List<Customer> result = new List<Customer>();
 

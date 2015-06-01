@@ -23,8 +23,7 @@ namespace LivingSmartBusinessLogic.DB
 
             try
             {
-				if(connection.State == ConnectionState.Closed)
-					connection.Open();
+				connection.Open();
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
@@ -41,7 +40,7 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                //connection.Close();
+                connection.Close();
             }
 
             return cityList;

@@ -61,13 +61,12 @@ namespace LivingSmartForms.Views
         private bool ValidateFields()
 		{
 			bool fielddataOk = true;
-			//fielddataOk &= stbEstateAgentName.Validate();
-
 			fielddataOk &= stbSellerName.Validate();
 			fielddataOk &= stbSellerAdress.Validate();
 			fielddataOk &= stbSellerZipCode.Validate();
 			fielddataOk &= stbSellerPhone.Validate();
 			fielddataOk &= stbSellerEmail.Validate();
+	        fielddataOk &= dafBirthday.Validate();
 			return fielddataOk;
         }
 
@@ -94,11 +93,12 @@ namespace LivingSmartForms.Views
 				stbSellerPhone.Text = customer.Telephone;
 			    stbSellerEmail.Text = customer.Email;
 			    stbSellerZipCode.Text = customer.City.ZipCode.ToString();
+			    dafBirthday.SetDate(customer.DateOfBirth);
 			    btnFindCustomer.Text = "Ryd kunde";
 
 			    stbSellerName.Enabled = stbSellerAdress.Enabled = 
 				stbSellerPhone.Enabled = stbSellerEmail.Enabled = 
-				stbSellerZipCode.Enabled = false;
+				stbSellerZipCode.Enabled = dafBirthday.Enabled = false;
 
 			    newCustomer = false;
 		    }
@@ -110,6 +110,7 @@ namespace LivingSmartForms.Views
 				stbSellerEmail.Text = "";
 				stbSellerZipCode.Text = "";
 				btnFindCustomer.Text = "Find kunde";
+				dafBirthday.ClearDate();
 
 				stbSellerName.Enabled = stbSellerAdress.Enabled =
 				stbSellerPhone.Enabled = stbSellerEmail.Enabled =
@@ -138,10 +139,13 @@ namespace LivingSmartForms.Views
 		{
 			City city = null;
 
-			if (!string.IsNullOrEmpty(stbSellerZipCode.Text))
+			if (stbSellerZipCode.Validate())
 			{
 				int zipCode = Convert.ToInt32(stbSellerZipCode.Text);
 				city = CityController.Instance.GetCity(zipCode);
+
+				if (city == null)
+					stbSellerZipCode.SetError("Ugyldigt postnummer");
 			}
 
 			lblSellerCityCountry.Text = city != null ? city.District : "";

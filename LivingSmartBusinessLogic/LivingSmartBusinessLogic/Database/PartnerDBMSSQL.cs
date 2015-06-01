@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -64,14 +64,14 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE Partner SET Name = (@Name), Telephone = (@Telephone), Email = (@Email), Country = (@Country), Region = (@Region), RegionShort = (@RegionShort), City = (@City), Timezone = (@Timezone)" + "WHERE PartnerId = " + partnerId
             };
 
-            cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = partner.Name;
-            cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = partner.Telephone;
-            cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = partner.Email;
-            cmd.Parameters.Add("@Country", SqlDbType.Char, 50, "Country").Value = partner.Country;
-            cmd.Parameters.Add("@Region", SqlDbType.Char, 50, "Region").Value = partner.Region;
-            cmd.Parameters.Add("@RegionShort", SqlDbType.Char, 50, "RegionShort").Value = partner.RegionShort;
-            cmd.Parameters.Add("@City", SqlDbType.Char, 4, "City").Value = partner.City;
-            cmd.Parameters.Add("@Timezone", SqlDbType.Char, 50, "Timezone").Value = partner.Timezone;
+			cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = partner.Name;
+			cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = partner.Telephone;
+			cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = partner.Email;
+			cmd.Parameters.Add("@Country", SqlDbType.NVarChar, 50, "Country").Value = partner.Country;
+			cmd.Parameters.Add("@Region", SqlDbType.NVarChar, 50, "Region").Value = partner.Region;
+            cmd.Parameters.Add("@RegionShort", SqlDbType.NVarChar, 4, "RegionShort").Value = partner.RegionShort;
+			cmd.Parameters.Add("@City", SqlDbType.NVarChar, 50, "City").Value = partner.City;
+			cmd.Parameters.Add("@Timezone", SqlDbType.NVarChar, 50, "Timezone").Value = partner.Timezone;
 
             try
             {
@@ -99,14 +99,14 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO Partner VALUES (@Name, @Telephone, @Email, @Country, @Region, @RegionShort, @City, @Timezone); " + "SELECT CAST(scope_identity() AS int);"
             };
 
-            cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = partner.Name;
-            cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = partner.Telephone;
-            cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = partner.Email;
-            cmd.Parameters.Add("@Country", SqlDbType.Char, 50, "Country").Value = partner.Country;
-            cmd.Parameters.Add("@Region", SqlDbType.Char, 50, "Region").Value = partner.Region;
-            cmd.Parameters.Add("@RegionShort", SqlDbType.Char, 50, "RegionShort").Value = partner.RegionShort;
-            cmd.Parameters.Add("@City", SqlDbType.Char, 4, "City").Value = partner.City;
-            cmd.Parameters.Add("@Timezone", SqlDbType.Char, 50, "Timezone").Value = partner.Timezone;
+			cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = partner.Name;
+			cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = partner.Telephone;
+			cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = partner.Email;
+			cmd.Parameters.Add("@Country", SqlDbType.NVarChar, 50, "Country").Value = partner.Country;
+			cmd.Parameters.Add("@Region", SqlDbType.NVarChar, 50, "Region").Value = partner.Region;
+			cmd.Parameters.Add("@RegionShort", SqlDbType.NVarChar, 4, "RegionShort").Value = partner.RegionShort;
+			cmd.Parameters.Add("@City", SqlDbType.NVarChar, 50, "City").Value = partner.City;
+			cmd.Parameters.Add("@Timezone", SqlDbType.NVarChar, 50, "Timezone").Value = partner.Timezone;
 
             try
             {

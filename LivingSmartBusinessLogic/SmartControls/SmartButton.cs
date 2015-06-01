@@ -34,13 +34,13 @@ namespace SmartControls
 			set
 			{
 				_font = value;
+				Invalidate();
 			}
 		}
-
+		
 		public SmartButton()
 		{
 			FlatStyle = FlatStyle.Flat;
-			AutoSize = true;
 			AutoSizeMode = AutoSizeMode.GrowAndShrink;
 
 			UpdateColor();

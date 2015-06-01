@@ -46,10 +46,6 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
 
-	    private void AddCustomer(Customer customer)
-        {
-            
-        }
 
         public Customer MakeNewCustomer(string name, DateTime dateOfBirth, string address, 
             int zipCode, string email, string telephone)
@@ -61,7 +57,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         public Customer ReadCustomer(int id)
         {
-            return customerCatalog.Check(id);        
+            return customerCatalog.Read(id);        
         }
 
         public ReadOnlyCollection<Customer> GetCustomers()

@@ -19,15 +19,28 @@ namespace LivingSmartForms.Pages
 		public Partners(BaseForm baseForm) : base(baseForm)
 		{
 			InitializeComponent();
+		}
 
+		private void UpdateList()
+		{
+			clsPartners.SuspendLayout();
 
-			//CustomerController.Instance.
-			for (int i = 0; i < 10; i++)
+			clsPartners.ClearList();
+			var partners = PartnerController.Instance.GetPartners();
+			foreach (var partner in partners)
 			{
-				var control = new PartnerLine();
+				var control = new PartnerLine(baseForm, partner);
 				control.Margin = Padding.Empty;
-				clsPartners.AddControl(control);
+				clsPartners.AddControl(control, true);
 			}
+			sblPartners.Text = partners.Count.ToString();
+
+			clsPartners.ResumeLayout();
+		}
+
+		public override void OnShow()
+		{
+			UpdateList();
 		}
 
 		private void btnNewEstateAgents_Click(object sender, EventArgs e)

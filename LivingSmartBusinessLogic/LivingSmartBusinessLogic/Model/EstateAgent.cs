@@ -34,6 +34,7 @@ namespace LivingSmartBusinessLogic
         internal EstateAgent(string name, string telephone, string email, 
             DateTime startingDate)
         {
+	        Id = -1;
             Name = name;
             Telephone = telephone;
             Email = email;

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +22,7 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         #region Properties
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public string Name { get { return _name; } internal set { _name = value; } }
         public string Telephone { get { return _telephone; } 
             internal set { _telephone = value; } }
@@ -38,7 +38,8 @@ namespace LivingSmartBusinessLogic
 
         internal Partner(string name, string telephone, string email, string country, 
             string city, string region, string regionShort, string timeZone)
-        {
+		{
+			Id = -1;
             Name = name;
             Telephone = telephone;
             Email = email;

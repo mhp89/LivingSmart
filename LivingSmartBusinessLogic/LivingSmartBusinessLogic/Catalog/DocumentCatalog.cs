@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -21,9 +21,12 @@ namespace LivingSmartBusinessLogic
             throw new NotImplementedException();
         }
 
-        internal void Save(Document appointment)
-        {
-            throw new NotImplementedException();
+        internal void Save(Document document)
+		{
+			//if (document.Id == -1)
+				//Create
+			//else
+				//Update
         }
 
         internal void AddToCatalog(int caseId, Document document)

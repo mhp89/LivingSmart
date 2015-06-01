@@ -1,5 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.ObjectModel;
+using System.Net.Mime;
+using System.Drawing;
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -87,6 +90,11 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return caseCatalog.GetCase(caseId);
         }
+
+		public ReadOnlyCollection<Case> GetCases()
+		{
+			return caseCatalog.GetCases();
+		}
        
         #region Document
 
@@ -117,9 +125,9 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #region Picture
-        public Picture MakeNewPicture(string location, string description)
+        public Picture MakeNewPicture(string fileLocation, string description)
         {
-            return new Picture(location, description);
+			return new Picture(fileLocation, description);
         }
 
         /// <summary>
@@ -424,6 +432,7 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
         
-        #endregion  
-    }
+        #endregion
+
+	}
 }

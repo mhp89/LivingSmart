@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +32,8 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         internal Rating(Case cCase)
-        {
+		{
+			Id = -1;
             throw new NotImplementedException();
         }
 

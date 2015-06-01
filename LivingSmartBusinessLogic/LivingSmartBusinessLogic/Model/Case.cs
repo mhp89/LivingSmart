@@ -92,7 +92,8 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         internal Case()
-        {
+		{
+			Id = -1;
             CreationDate = new DateTime().Date;
         }
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 

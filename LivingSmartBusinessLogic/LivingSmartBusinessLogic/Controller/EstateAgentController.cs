@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void CancelActiveEstateAgent()
         {
-            estateAgentCatalog = null;
+            activeEstateAgent = null;
         }
 
 		public void SaveActiveEstateAgent()
@@ -174,5 +174,10 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
 
         #endregion
-    }
+
+		public EstateAgent LoginEstateAgent(string username, string password)
+	    {
+			return estateAgentCatalog.LoginEstateAgent(username, password);
+	    }
+	}
 }

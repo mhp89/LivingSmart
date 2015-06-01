@@ -54,10 +54,13 @@ namespace LivingSmartForms.Views
 		{
 			City city = null;
 
-			if (!string.IsNullOrEmpty(stbCustomerZipCode.Text))
+			if (stbCustomerZipCode.Validate())
 			{
 				int zipCode = Convert.ToInt32(stbCustomerZipCode.Text);
 				city = CityController.Instance.GetCity(zipCode);
+
+				if (city == null)
+					stbCustomerZipCode.SetError("Ugyldigt postnummer");
 			}
 
 			lblCustomerCityCountry.Text = city != null ? city.District : "";

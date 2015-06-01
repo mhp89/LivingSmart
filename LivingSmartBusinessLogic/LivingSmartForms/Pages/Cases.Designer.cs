@@ -37,10 +37,8 @@ namespace LivingSmartForms.Pages
 			this.sblActiveCases = new SmartControls.SmartLabel();
 			this.clsCases = new SmartControls.ControlList();
 			this.hdrCases = new SmartControls.Header();
-			this.smartTextBox1 = new SmartControls.SmartTextBox();
 			this.pnlSubmenuHolder.SuspendLayout();
 			this.pnlSubmenu.SuspendLayout();
-			this.clsCases.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pnlSubmenuHolder
@@ -55,7 +53,7 @@ namespace LivingSmartForms.Pages
 			// 
 			// pnlSubmenuBorder
 			// 
-			this.pnlSubmenuBorder.BackColor = SmartColor.Light;
+			this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 40);
 			this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
@@ -77,14 +75,14 @@ namespace LivingSmartForms.Pages
 			// 
 			this.btnNewCase.AutoSize = true;
 			this.btnNewCase.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNewCase.BackColor = SmartColor.Light;
+			this.btnNewCase.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnNewCase.Color = SmartControls.SmartColor.ColorStyle.Light;
 			this.btnNewCase.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNewCase.FlatAppearance.BorderSize = 0;
-			this.btnNewCase.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
-			this.btnNewCase.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
+			this.btnNewCase.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewCase.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnNewCase.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewCase.ForeColor = SmartColor.Dark;
+			this.btnNewCase.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnNewCase.Location = new System.Drawing.Point(0, 0);
 			this.btnNewCase.Name = "btnNewCase";
 			this.btnNewCase.Size = new System.Drawing.Size(89, 30);
@@ -96,7 +94,7 @@ namespace LivingSmartForms.Pages
 			// sblActiveCases
 			// 
 			this.sblActiveCases.AutoSize = true;
-			this.sblActiveCases.ForeColor = SmartColor.Light;
+			this.sblActiveCases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.sblActiveCases.Location = new System.Drawing.Point(99, 7);
 			this.sblActiveCases.Margin = new System.Windows.Forms.Padding(10, 0, 0, 0);
 			this.sblActiveCases.Name = "sblActiveCases";
@@ -112,7 +110,6 @@ namespace LivingSmartForms.Pages
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.clsCases.AutoScroll = true;
-			this.clsCases.Controls.Add(this.smartTextBox1);
 			this.clsCases.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.clsCases.Location = new System.Drawing.Point(20, 90);
 			this.clsCases.Margin = new System.Windows.Forms.Padding(20, 10, 20, 20);
@@ -126,37 +123,13 @@ namespace LivingSmartForms.Pages
 			this.hdrCases.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrCases.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.hdrCases.ForeColor = SmartColor.Light;
+			this.hdrCases.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.hdrCases.Location = new System.Drawing.Point(10, 55);
 			this.hdrCases.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
 			this.hdrCases.Name = "hdrCases";
 			this.hdrCases.Size = new System.Drawing.Size(1115, 25);
 			this.hdrCases.TabIndex = 7;
 			this.hdrCases.Text = "Sager";
-			// 
-			// smartTextBox1
-			// 
-			this.smartTextBox1.AllowComma = false;
-			this.smartTextBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.smartTextBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.smartTextBox1.AutomaticValidation = false;
-			this.smartTextBox1.BackColor = SmartColor.Light;
-			this.smartTextBox1.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.smartTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.smartTextBox1.ForeColor = SmartColor.Dark;
-			this.smartTextBox1.Location = new System.Drawing.Point(10, 10);
-			this.smartTextBox1.MaxLength = 32767;
-			this.smartTextBox1.MinLength = -1;
-			this.smartTextBox1.Name = "smartTextBox1";
-			this.smartTextBox1.NumericOnly = false;
-			this.smartTextBox1.Placeholder = "Sej tekst";
-			this.smartTextBox1.RegularExpression = null;
-			this.smartTextBox1.Required = false;
-			this.smartTextBox1.Size = new System.Drawing.Size(1075, 30);
-			this.smartTextBox1.Suffix = null;
-			this.smartTextBox1.TabIndex = 0;
-			this.smartTextBox1.Text = "smartTextBox1";
-			this.smartTextBox1.UseSystemPasswordChar = false;
 			// 
 			// Cases
 			// 
@@ -169,7 +142,6 @@ namespace LivingSmartForms.Pages
 			this.pnlSubmenuHolder.ResumeLayout(false);
 			this.pnlSubmenu.ResumeLayout(false);
 			this.pnlSubmenu.PerformLayout();
-			this.clsCases.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -183,7 +155,6 @@ namespace LivingSmartForms.Pages
 		private System.Windows.Forms.Panel pnlSubmenuHolder;
 		private SmartControls.ControlList clsCases;
 		private SmartControls.Header hdrCases;
-		private SmartControls.SmartTextBox smartTextBox1;
 
 
 	}

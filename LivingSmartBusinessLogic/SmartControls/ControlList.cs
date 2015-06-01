@@ -19,6 +19,9 @@ namespace SmartControls
 			get { return base.Controls; }
 		}
 
+		public int Spacing { get { return _spacing; } set { _spacing = value; } }
+		private int _spacing = 5;
+
 		public ControlList()
 		{
 			InitializeComponent();
@@ -58,7 +61,7 @@ namespace SmartControls
 		void ControlList_MouseEnter(object sender, EventArgs e)
 		{
 			//S�tter focus p� control'et s� den kan kalde mousewheel event
-			((Control)sender).Focus();
+			Focus();
 		}
 
 		private void BindEvent(Control parent)
@@ -83,10 +86,14 @@ namespace SmartControls
 			Controls[0].Dock = DockStyle.None;
 			//ClientSize.Width er bredden uden scrollbar
 			Controls[0].Width = ClientSize.Width - Controls[0].Margin.Horizontal;
+			Controls[0].Margin = Padding.Empty;
 
 			//De andre f�r automatisk den rigtige bredde, n�r de dockes til toppen.
 			for (int i = 1; i < Controls.Count; i++)
+			{
 				Controls[i].Dock = DockStyle.Top;
+				Controls[i].Margin = new Padding(0, Spacing, 0, 0);
+			}
 
 			ResumeLayout(true);
 		}
@@ -99,6 +106,14 @@ namespace SmartControls
 			Controls.Add(control);
 
 			if(!ignoreLayoutUpdate)
+				FixControlsWidth();
+		}
+
+		public void RemoveControl(Control control, bool ignoreLayoutUpdate = false)
+		{
+			Controls.Remove(control);
+			
+			if (!ignoreLayoutUpdate)
 				FixControlsWidth();
 		}
 

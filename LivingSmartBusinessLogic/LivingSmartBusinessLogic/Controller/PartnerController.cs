@@ -1,3 +1,5 @@
+using System.Collections.ObjectModel;
+
 namespace LivingSmartBusinessLogic.Controller
 {
     public class PartnerController
@@ -28,18 +30,33 @@ namespace LivingSmartBusinessLogic.Controller
         {
             partnerCatalog.AddToCatalog(partner);
         }
+		public void SetActivePartner(Partner activePartner)
+		{
+			this.activePartner = activePartner;
+		}
 
         public Partner MakeNewPartner(string name, string telephone, string email, 
             string country, string city, string region, string regionShort, string timeZone)
         {
-            return new Partner(name, telephone, email, country, city, 
-                region, regionShort, timeZone);
+			SetActivePartner(new Partner(name, telephone, email, country, city, 
+                region, regionShort, timeZone));
+	        return activePartner;
         }
+		public void SaveActivePartner()
+		{
+			partnerCatalog.Save(activePartner);
+			AddPartner(activePartner);
+		}
+
         
         public Partner ReadPartner(int id)
         {
             return partnerCatalog.Check(id);
         }
+		public ReadOnlyCollection<Partner> GetPartners()
+		{
+			return partnerCatalog.GetPartners();
+		}
 
         public void UpdatePartner(Partner partner)
         {

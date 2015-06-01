@@ -14,6 +14,8 @@ namespace LivingSmartForms
 {
     public partial class BaseForm : Form
     {
+	    private bool formShift;
+
 	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
 		
 	    private Control partnerView;
@@ -37,11 +39,13 @@ namespace LivingSmartForms
 		#endregion
 
 
-		public BaseForm()
+		public BaseForm(EstateAgent estateAgent)
         {
 			AutoScaleMode = AutoScaleMode.None;
 
             InitializeComponent();
+
+			InitializeSystem();
 			
 			pages = new Page[Enum.GetNames(typeof(PagesIndex)).Length];
 
@@ -56,9 +60,14 @@ namespace LivingSmartForms
 
 			InitializeMenu();
 
-			DefaultEstateAgent = EstateAgentController.Instance.ReadEstateAgent(1);
+			DefaultEstateAgent = estateAgent;// EstateAgentController.Instance.ReadEstateAgent(1);
         }
 
+	    private void InitializeSystem()
+	    {
+			/*if(Base.RegKey.GetValue("ServerImageLocation") == null)
+				Base.RegKey.SetValue("ServerImageLocation", "C:/LivingSmartServer/Images/");*/
+	    }
 
 		#region Menu
 
@@ -132,9 +141,10 @@ namespace LivingSmartForms
 
 		private void MenuLogoutButtonClick(object sender, EventArgs e)
 		{
-			MenuButton btn = (MenuButton)sender;
-
-			//TODO: Log out
+			formShift = true;
+			Login.ClearAutomaticLogin();
+			FormHandler.ShowLoginForm();
+			Close();
 		}
 		private void MenuPartnersButtonClick(object sender, EventArgs e)
 		{
@@ -263,7 +273,8 @@ namespace LivingSmartForms
 
 		private void BaseForm_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			Environment.Exit(Environment.ExitCode);
+			if (!formShift)
+				Environment.Exit(Environment.ExitCode);
 		}
 		private void BaseForm_SizeChanged(object sender, EventArgs e)
 		{

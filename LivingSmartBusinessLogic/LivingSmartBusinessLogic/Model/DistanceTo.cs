@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,7 +23,8 @@ namespace LivingSmartBusinessLogic
         #endregion
 
         internal DistanceTo(string type, int distance)
-        {
+		{
+			Id = -1;
             Type = type;
             Distance = distance;
         }

@@ -59,6 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Base.cs" />
     <Compile Include="Classes\BaseDropIn.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +79,7 @@
       <DependentUpon>CaseStep.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\DrawUtils.cs" />
+    <Compile Include="Classes\FormHandler.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Classes\Page.cs" />
     <Compile Include="BaseForm.cs">
@@ -128,6 +130,12 @@
     <Compile Include="DropIns\PartnersDropIn.Designer.cs">
       <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Cases.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -171,6 +179,12 @@
     </Compile>
     <Compile Include="UserControls\DateField.Designer.cs">
       <DependentUpon>DateField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\DetailImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\DetailImage.Designer.cs">
+      <DependentUpon>DetailImage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DistanceField.cs">
       <SubType>UserControl</SubType>
@@ -298,6 +312,9 @@
     <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
       <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pages\Cases.resx">
       <DependentUpon>Cases.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DateField.resx">
       <DependentUpon>DateField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\DetailImage.resx">
+      <DependentUpon>DetailImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DistanceField.resx">
       <DependentUpon>DistanceField.cs</DependentUpon>
@@ -400,7 +420,9 @@
       <Name>SmartControls</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\Logo.png" />
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5">
       <Visible>False</Visible>
@@ -420,6 +442,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Error.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

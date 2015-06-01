@@ -48,7 +48,7 @@ namespace LivingSmartForms.DropIns
 
 			InitializeSteps();
 
-			ChangeStep(0);
+			ChangeStep((int)StepsIndex.Details);
 		}
 		public override string GetDropInId()
 		{

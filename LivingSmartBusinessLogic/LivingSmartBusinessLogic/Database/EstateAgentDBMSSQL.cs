@@ -115,5 +115,46 @@ namespace LivingSmartBusinessLogic.DB
 
             return estateagentId;
         }
+
+	    public EstateAgent LoginEstateAgent(string username, string password)
+	    {
+		    EstateAgent estateAgent = null;
+			SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+			SqlCommand cmd = new SqlCommand
+			{
+				Connection = connection,
+				CommandText = "SELECT * FROM EstateAgent WHERE Username = (@Username) AND Password = (@Password);",
+			};
+
+			cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 15, "Username").Value = username;
+			cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 25, "Password").Value = password;
+
+			try
+			{
+				connection.Open();
+				SqlDataReader reader = cmd.ExecuteReader();
+				while (reader.Read())
+				{
+					int readEstateAgentId = (int)reader["EstateAgentId"];
+					string name = (string)reader["Name"];
+					string telephone = (string)reader["Telephone"];
+					string email = (string)reader["Email"];
+					DateTime startingDate = (DateTime)reader["StartingDate"];
+					DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
+
+					estateAgent = new EstateAgent(readEstateAgentId, name, telephone, email, startingDate, terminationDate);
+				}
+			}
+			catch (SqlException e)
+			{
+				Console.WriteLine(e.Message);
+			}
+			finally
+			{
+				connection.Close();
+			}
+
+			return estateAgent;
+	    }
     }
 }

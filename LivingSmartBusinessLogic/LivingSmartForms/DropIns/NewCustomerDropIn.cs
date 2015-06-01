@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
 
@@ -28,6 +29,12 @@ namespace LivingSmartForms.DropIns
 		public override string GetDropInId()
 		{
 			return "NewCustomer";
+		}
+
+		protected override void Close()
+		{
+			CustomerController.Instance.CancelActiveCustomer();
+			base.Close();
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
