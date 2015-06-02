@@ -20,28 +20,13 @@ namespace LivingSmartForms.DropIns
         {
             InitializeComponent();
 
-            UpdateList();
-        }
-
-        public override string GetDropInId()
-        {
-            return "SelectProperty";
-        }
-
-        private void UpdateList()
-        {
-            clsAllProperties.SuspendLayout();
-
-            clsAllProperties.ClearList();
-            var properties = CaseController.Instance.GetCases();
-            foreach (var property in properties)
+            //CustomerController.Instance.
+            for (int i = 0; i < 10; i++)  //Vis alle ejendomme til salg
             {
-                var control = new PropertyLineSelect(this, property);
+                var control = new PropertyLineSelect();
                 control.Margin = Padding.Empty;
-                clsAllProperties.AddControl(control, true);
+                clsAllProperties.AddControl(control);
             }
-
-            clsAllProperties.ResumeLayout();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

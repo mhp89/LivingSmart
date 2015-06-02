@@ -50,7 +50,7 @@
             this.hdrEstateAgentSelect.Location = new System.Drawing.Point(10, 60);
             this.hdrEstateAgentSelect.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.hdrEstateAgentSelect.Name = "hdrEstateAgentSelect";
-            this.hdrEstateAgentSelect.Size = new System.Drawing.Size(430, 25);
+            this.hdrEstateAgentSelect.Size = new System.Drawing.Size(380, 25);
             this.hdrEstateAgentSelect.TabIndex = 5;
             this.hdrEstateAgentSelect.Text = "Vælg mæglere";
             // 
@@ -64,8 +64,7 @@
             this.clsAllEstateAgents.Location = new System.Drawing.Point(10, 95);
             this.clsAllEstateAgents.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.clsAllEstateAgents.Name = "clsAllEstateAgents";
-            this.clsAllEstateAgents.Size = new System.Drawing.Size(430, 495);
-            this.clsAllEstateAgents.Spacing = 5;
+            this.clsAllEstateAgents.Size = new System.Drawing.Size(380, 495);
             this.clsAllEstateAgents.TabIndex = 10;
             this.clsAllEstateAgents.WrapContents = false;
             // 
@@ -78,7 +77,7 @@
             this.pnlBottomControls.Margin = new System.Windows.Forms.Padding(0);
             this.pnlBottomControls.Name = "pnlBottomControls";
             this.pnlBottomControls.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pnlBottomControls.Size = new System.Drawing.Size(450, 50);
+            this.pnlBottomControls.Size = new System.Drawing.Size(400, 50);
             this.pnlBottomControls.TabIndex = 11;
             // 
             // btnCancel
@@ -115,7 +114,7 @@
             this.btnSelect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnSelect.Location = new System.Drawing.Point(341, 10);
+            this.btnSelect.Location = new System.Drawing.Point(291, 10);
             this.btnSelect.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
             this.btnSelect.Name = "btnSelect";
             this.btnSelect.Size = new System.Drawing.Size(89, 30);
@@ -129,7 +128,7 @@
             this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 598);
             this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
-            this.pnlSubmenuBorder.Size = new System.Drawing.Size(450, 2);
+            this.pnlSubmenuBorder.Size = new System.Drawing.Size(400, 2);
             this.pnlSubmenuBorder.TabIndex = 12;
             // 
             // pnlSubmenuHolder
@@ -141,7 +140,7 @@
             this.pnlSubmenuHolder.Location = new System.Drawing.Point(0, 2);
             this.pnlSubmenuHolder.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSubmenuHolder.Name = "pnlSubmenuHolder";
-            this.pnlSubmenuHolder.Size = new System.Drawing.Size(450, 50);
+            this.pnlSubmenuHolder.Size = new System.Drawing.Size(400, 50);
             this.pnlSubmenuHolder.TabIndex = 13;
             // 
             // pnlMenuLine
@@ -150,7 +149,7 @@
             this.pnlMenuLine.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.pnlMenuLine.Location = new System.Drawing.Point(0, 48);
             this.pnlMenuLine.Name = "pnlMenuLine";
-            this.pnlMenuLine.Size = new System.Drawing.Size(450, 2);
+            this.pnlMenuLine.Size = new System.Drawing.Size(400, 2);
             this.pnlMenuLine.TabIndex = 1;
             // 
             // pnlSubmenu
@@ -160,19 +159,20 @@
             this.pnlSubmenu.Margin = new System.Windows.Forms.Padding(0);
             this.pnlSubmenu.Name = "pnlSubmenu";
             this.pnlSubmenu.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-            this.pnlSubmenu.Size = new System.Drawing.Size(450, 50);
+            this.pnlSubmenu.Size = new System.Drawing.Size(400, 50);
             this.pnlSubmenu.TabIndex = 0;
             // 
             // SelectEstateAgentDropIn
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlSubmenuHolder);
             this.Controls.Add(this.pnlSubmenuBorder);
             this.Controls.Add(this.pnlBottomControls);
             this.Controls.Add(this.clsAllEstateAgents);
             this.Controls.Add(this.hdrEstateAgentSelect);
             this.Name = "SelectEstateAgentDropIn";
-            this.Size = new System.Drawing.Size(450, 650);
+            this.Size = new System.Drawing.Size(400, 650);
             this.pnlBottomControls.ResumeLayout(false);
             this.pnlBottomControls.PerformLayout();
             this.pnlSubmenuHolder.ResumeLayout(false);

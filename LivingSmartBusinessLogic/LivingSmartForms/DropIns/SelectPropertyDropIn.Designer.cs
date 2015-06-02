@@ -36,7 +36,6 @@
             this.pnlBottomControls = new System.Windows.Forms.Panel();
             this.btnCancel = new SmartControls.SmartButton();
             this.btnSelect = new SmartControls.SmartButton();
-            this.pnlSubmenuBorder = new System.Windows.Forms.Panel();
             this.pnlSubmenuHolder.SuspendLayout();
             this.pnlBottomControls.SuspendLayout();
             this.SuspendLayout();
@@ -96,7 +95,6 @@
             this.clsAllProperties.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
             this.clsAllProperties.Name = "clsAllProperties";
             this.clsAllProperties.Size = new System.Drawing.Size(430, 495);
-            this.clsAllProperties.Spacing = 5;
             this.clsAllProperties.TabIndex = 16;
             this.clsAllProperties.WrapContents = false;
             // 
@@ -154,19 +152,10 @@
             this.btnSelect.Text = "Vælg";
             this.btnSelect.UseVisualStyleBackColor = false;
             // 
-            // pnlSubmenuBorder
-            // 
-            this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 598);
-            this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
-            this.pnlSubmenuBorder.Size = new System.Drawing.Size(450, 2);
-            this.pnlSubmenuBorder.TabIndex = 18;
-            // 
             // SelectPropertyDropIn
             // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.pnlSubmenuBorder);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.pnlBottomControls);
             this.Controls.Add(this.clsAllProperties);
             this.Controls.Add(this.hdrPropertySelect);
@@ -190,6 +179,5 @@
         private System.Windows.Forms.Panel pnlBottomControls;
         private SmartControls.SmartButton btnCancel;
         private SmartControls.SmartButton btnSelect;
-        private System.Windows.Forms.Panel pnlSubmenuBorder;
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.tlpEstateAgentId = new System.Windows.Forms.TableLayoutPanel();
-            this.slbEstateAgentId = new SmartControls.SmartLabel();
+            this.slbCustomerNo = new SmartControls.SmartLabel();
             this.slbEstateAgentName = new SmartControls.SmartLabel();
             this.pnlLine = new System.Windows.Forms.Panel();
             this.tlpEstateAgentId.SuspendLayout();
@@ -40,7 +40,7 @@
             this.tlpEstateAgentId.ColumnCount = 2;
             this.tlpEstateAgentId.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.15789F));
             this.tlpEstateAgentId.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.8421F));
-            this.tlpEstateAgentId.Controls.Add(this.slbEstateAgentId, 0, 0);
+            this.tlpEstateAgentId.Controls.Add(this.slbCustomerNo, 0, 0);
             this.tlpEstateAgentId.Controls.Add(this.slbEstateAgentName, 1, 0);
             this.tlpEstateAgentId.Controls.Add(this.pnlLine, 0, 1);
             this.tlpEstateAgentId.Location = new System.Drawing.Point(0, 0);
@@ -53,19 +53,19 @@
             this.tlpEstateAgentId.Size = new System.Drawing.Size(380, 30);
             this.tlpEstateAgentId.TabIndex = 1;
             // 
-            // slbEstateAgentId
+            // slbCustomerNo
             // 
-            this.slbEstateAgentId.AutoSize = true;
-            this.slbEstateAgentId.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbEstateAgentId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.slbEstateAgentId.Location = new System.Drawing.Point(0, 0);
-            this.slbEstateAgentId.Name = "slbEstateAgentId";
-            this.slbEstateAgentId.Size = new System.Drawing.Size(87, 24);
-            this.slbEstateAgentId.TabIndex = 3;
-            this.slbEstateAgentId.Text = "xxx";
-            this.slbEstateAgentId.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbEstateAgentId.Title = "Id:";
-            this.slbEstateAgentId.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+            this.slbCustomerNo.AutoSize = true;
+            this.slbCustomerNo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.slbCustomerNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.slbCustomerNo.Location = new System.Drawing.Point(0, 0);
+            this.slbCustomerNo.Name = "slbCustomerNo";
+            this.slbCustomerNo.Size = new System.Drawing.Size(87, 24);
+            this.slbCustomerNo.TabIndex = 3;
+            this.slbCustomerNo.Text = "xxx";
+            this.slbCustomerNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.slbCustomerNo.Title = "Id:";
+            this.slbCustomerNo.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
             // 
             // slbEstateAgentName
             // 
@@ -109,7 +109,7 @@
 
         private System.Windows.Forms.TableLayoutPanel tlpEstateAgentId;
         private SmartControls.SmartLabel slbEstateAgentName;
-        private SmartControls.SmartLabel slbEstateAgentId;
+        private SmartControls.SmartLabel slbCustomerNo;
         private System.Windows.Forms.Panel pnlLine;
 
     }

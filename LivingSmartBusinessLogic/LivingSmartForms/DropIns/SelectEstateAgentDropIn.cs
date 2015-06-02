@@ -20,28 +20,13 @@ namespace LivingSmartForms.DropIns
         {
             InitializeComponent();
 
-            UpdateList();
-        }
-
-        public override string GetDropInId()
-        {
-            return "SelectEstateAgent";
-        }
-
-        private void UpdateList()
-        {
-            clsAllEstateAgents.SuspendLayout();
-
-            clsAllEstateAgents.ClearList();
-            var estateAgents = EstateAgentController.Instance.GetEstateAgents();
-            foreach (var estateAgent in estateAgents)
+            //EstateAgentController.Instance.
+            for (int i = 0; i < 10; i++)
             {
-                var control = new EstateAgentLineSelect(this, estateAgent);
+                var control = new EstateAgentLineSelect();
                 control.Margin = Padding.Empty;
-                clsAllEstateAgents.AddControl(control, true);
+                clsAllEstateAgents.AddControl(control);
             }
-
-            clsAllEstateAgents.ResumeLayout();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
