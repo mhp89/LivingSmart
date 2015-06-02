@@ -29,7 +29,7 @@ namespace LivingSmartBusinessLogic.DB
             sqlstring += "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count";
             sqlstring += "FROM [Case] inner join EstateAgent on";
             sqlstring += "[Case].EstateAgentId = EstateAgent.EstateAgentId";
-            sqlstring += "WHERE Status = 'Solgt' and DATEPART(YEAR, DateOfSale) = " + chosenYear;
+            sqlstring += "WHERE Status = 'Sold' and DATEPART(YEAR, DateOfSale) = " + chosenYear;
             sqlstring += "and [Case].EstateAgentId = " + estateAgentId;
             sqlstring += "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), ";
             sqlstring += "EstateAgent.Name";
@@ -84,7 +84,7 @@ namespace LivingSmartBusinessLogic.DB
             sqlstring += "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count";
             sqlstring += "FROM [Case] inner join EstateAgent on";
             sqlstring += "[Case].EstateAgentId = EstateAgent.EstateAgentId";
-            sqlstring += "WHERE Status = 'Solgt'";
+            sqlstring += "WHERE Status = 'Sold'";
             sqlstring += "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), ";
             sqlstring += "EstateAgent.Name";
             sqlstring += "Order by YEAR desc, Month desc";
@@ -136,7 +136,7 @@ namespace LivingSmartBusinessLogic.DB
             string sqlstring = "SELECT DATEPART(YEAR, DateOfSale) AS Year,";
             sqlstring += "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count";
             sqlstring += "FROM [Case]";
-            sqlstring += "WHERE Status = 'Solgt'";
+            sqlstring += "WHERE Status = 'Sold'";
             sqlstring += "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE())";
             sqlstring += "Group by DATEPART(YEAR, DateOfSale)";
 
