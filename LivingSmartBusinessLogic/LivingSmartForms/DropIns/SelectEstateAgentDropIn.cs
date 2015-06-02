@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Views;
@@ -16,8 +16,13 @@ namespace LivingSmartForms.DropIns
 {
     public partial class SelectEstateAgentDropIn : BaseDropIn
     {
-        public SelectEstateAgentDropIn(BaseForm baseForm) : base(baseForm)
+        private EstateAgentSelectCallback callback;
+
+        public delegate void EstateAgentSelectCallback(List<EstateAgent> agents);
+
+        public SelectEstateAgentDropIn(BaseForm baseForm, EstateAgentSelectCallback callback) : base(baseForm)
         {
+            this.callback = callback;
             InitializeComponent();
 
             UpdateList();
@@ -42,6 +47,21 @@ namespace LivingSmartForms.DropIns
             }
 
             clsAllEstateAgents.ResumeLayout();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            List<EstateAgent> agents = new List<EstateAgent>();
+
+            foreach (var control in clsAllEstateAgents.Controls)
+            {
+                var lineObject = (EstateAgentLineSelect)control;
+                if (lineObject.Selected == true)
+                    agents.Add(lineObject.EstateAgent);
+            }
+
+            callback(agents);
+            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

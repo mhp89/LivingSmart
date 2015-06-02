@@ -18,12 +18,12 @@ namespace LivingSmartForms.Views
     public partial class EstateAgentLineSelect : UserControl
     {
         private SelectEstateAgentDropIn dropIn;
-        private EstateAgent estateAgent;
+        public EstateAgent EstateAgent { get; private set; }
         public bool Selected { get; private set; }
 
         public EstateAgentLineSelect(SelectEstateAgentDropIn dropIn, EstateAgent estateAgent)
         {
-            this.estateAgent = estateAgent;
+            EstateAgent = estateAgent;
             this.dropIn = dropIn;
             InitializeComponent();
 
@@ -42,8 +42,8 @@ namespace LivingSmartForms.Views
 
         private void UpdateFields()
         {
-            slbEstateAgentId.Text = estateAgent.Id.ToString();
-            slbEstateAgentName.Text = estateAgent.Name;
+            slbEstateAgentId.Text = EstateAgent.Id.ToString();
+            slbEstateAgentName.Text = EstateAgent.Name;
         }
 
         private void Select(object sender, EventArgs e)

@@ -122,6 +122,7 @@
             this.btnSelect.TabIndex = 0;
             this.btnSelect.Text = "Vælg";
             this.btnSelect.UseVisualStyleBackColor = false;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
             // pnlSubmenuBorder
             // 
