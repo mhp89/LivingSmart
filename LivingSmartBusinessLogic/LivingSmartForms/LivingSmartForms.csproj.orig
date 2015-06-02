@@ -83,11 +83,7 @@
     <Compile Include="Classes\FormHandler.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Classes\Page.cs" />
-<<<<<<< HEAD
-=======
     <Compile Include="Classes\PrintStatistics.cs" />
-    <Compile Include="Classes\SmartColor.cs" />
->>>>>>> origin/PrintStatistikKlasse#80
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -105,6 +101,12 @@
     </Compile>
     <Compile Include="DropIns\EstateAgentSearchDropIn.Designer.cs">
       <DependentUpon>EstateAgentSearchDropIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropIns\SelectEstateAgentDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\SelectEstateAgentDropIn.Designer.cs">
+      <DependentUpon>SelectEstateAgentDropIn.cs</DependentUpon>
     </Compile>
     <Compile Include="DropIns\NewCaseDropIn.cs">
       <SubType>UserControl</SubType>
@@ -136,17 +138,31 @@
     <Compile Include="DropIns\PartnersDropIn.Designer.cs">
       <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
+=======
+    <Compile Include="DropIns\SelectPropertyDropIn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DropIns\SelectPropertyDropIn.Designer.cs">
+      <DependentUpon>SelectPropertyDropIn.cs</DependentUpon>
+>>>>>>> 70a7a52cb5e6106c22ca1cef9f4a2c30bf7e4163
     </Compile>
     <Compile Include="Pages\Cases.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Pages\Cases.Designer.cs">
       <DependentUpon>Cases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\OpenHouse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Pages\OpenHouse.Designer.cs">
+      <DependentUpon>OpenHouse.cs</DependentUpon>
     </Compile>
     <Compile Include="Pages\Partners.cs">
       <SubType>UserControl</SubType>
@@ -228,6 +244,12 @@
     <Compile Include="Views\EstateAgentLineSearch.Designer.cs">
       <DependentUpon>EstateAgentLineSearch.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\EstateAgentLineSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\EstateAgentLineSelect.Designer.cs">
+      <DependentUpon>EstateAgentLineSelect.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewAppointment.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -270,6 +292,18 @@
     <Compile Include="Views\NewPartner.Designer.cs">
       <DependentUpon>NewPartner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\OpenHousePair.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OpenHousePair.Designer.cs">
+      <DependentUpon>OpenHousePair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\OpenHouseProperty.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\OpenHouseProperty.Designer.cs">
+      <DependentUpon>OpenHouseProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\PartnerLine.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -288,6 +322,18 @@
     <Compile Include="Views\NewCaseStepDetails.Designer.cs">
       <DependentUpon>NewCaseStepDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\PropertyLineSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\PropertyLineSelect.Designer.cs">
+      <DependentUpon>PropertyLineSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\ViewEstateAgent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ViewEstateAgent.Designer.cs">
+      <DependentUpon>ViewEstateAgent.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaseForm.resx">
       <DependentUpon>BaseForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -302,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DropIns\EstateAgentSearchDropIn.resx">
       <DependentUpon>EstateAgentSearchDropIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropIns\SelectEstateAgentDropIn.resx">
+      <DependentUpon>SelectEstateAgentDropIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DropIns\NewCaseDropIn.resx">
       <DependentUpon>NewCaseDropIn.cs</DependentUpon>
@@ -318,11 +367,19 @@
     <EmbeddedResource Include="DropIns\PartnersDropIn.resx">
       <DependentUpon>PartnersDropIn.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="DropIns\SelectPropertyDropIn.resx">
+      <DependentUpon>SelectPropertyDropIn.cs</DependentUpon>
+>>>>>>> 70a7a52cb5e6106c22ca1cef9f4a2c30bf7e4163
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Cases.resx">
       <DependentUpon>Cases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pages\OpenHouse.resx">
+      <DependentUpon>OpenHouse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pages\Partners.resx">
       <DependentUpon>Partners.cs</DependentUpon>
@@ -373,6 +430,9 @@
     <EmbeddedResource Include="Views\EstateAgentLineSearch.resx">
       <DependentUpon>EstateAgentLineSearch.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\EstateAgentLineSelect.resx">
+      <DependentUpon>EstateAgentLineSelect.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\NewAppointment.resx">
       <DependentUpon>NewAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -394,6 +454,12 @@
     <EmbeddedResource Include="Views\NewPartner.resx">
       <DependentUpon>NewPartner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\OpenHousePair.resx">
+      <DependentUpon>OpenHousePair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\OpenHouseProperty.resx">
+      <DependentUpon>OpenHouseProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\PartnerLine.resx">
       <DependentUpon>PartnerLine.cs</DependentUpon>
     </EmbeddedResource>
@@ -402,6 +468,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepDetails.resx">
       <DependentUpon>NewCaseStepDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\PropertyLineSelect.resx">
+      <DependentUpon>PropertyLineSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ViewEstateAgent.resx">
+      <DependentUpon>ViewEstateAgent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

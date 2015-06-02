@@ -2,8 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
-using LivingSmartBusinessLogic;
-using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
@@ -31,6 +29,7 @@ namespace LivingSmartForms
 		{
 			Overview,
 			Cases,
+            OpenHouse,
 			Customers,
 			EstateAgents,
 			Partners,
@@ -55,13 +54,14 @@ namespace LivingSmartForms
 			pages[GetPageIndex(PagesIndex.Customers)]		= new Page(typeof(Customers),		"Kunder",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mægler",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partner",			Classes.Menu.MenuAnchor.Left);
+            pages[GetPageIndex(PagesIndex.OpenHouse)]       = new Page(typeof(OpenHousePage),   "Åbent hus",        Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Settings)]		= new Page(typeof(Cases),			"Indstillinger",	Classes.Menu.MenuAnchor.Right);
 			
 			InitializePages();
 
 			InitializeMenu();
 
-			DefaultEstateAgent = estateAgent;// EstateAgentController.Instance.ReadEstateAgent(1);
+			DefaultEstateAgent = estateAgent;
         }
 
 	    private void InitializeSystem()

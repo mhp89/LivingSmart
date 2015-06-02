@@ -47,5 +47,10 @@ namespace LivingSmartForms.Pages
 		{
 			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
 		}
+
+        private void btnArrangeOpenHouse_Click(object sender, EventArgs e)
+        {
+
+        }
 	}
 }

@@ -121,23 +121,23 @@ namespace LivingSmartForms.Pages
 			// 
 			// hdrPartners
 			// 
-			this.hdrPartners.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.hdrPartners.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.hdrPartners.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.hdrPartners.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.hdrPartners.Location = new System.Drawing.Point(10, 55);
-			this.hdrPartners.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
-			this.hdrPartners.Name = "hdrPartners";
-			this.hdrPartners.Size = new System.Drawing.Size(1115, 25);
-			this.hdrPartners.TabIndex = 5;
-			this.hdrPartners.Text = "Partner";
+            this.hdrPartners.Color = SmartControls.SmartColor.ColorStyle.Light;
+            this.hdrPartners.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.hdrPartners.Location = new System.Drawing.Point(10, 55);
+            this.hdrPartners.Margin = new System.Windows.Forms.Padding(10, 10, 10, 0);
+            this.hdrPartners.Name = "hdrPartners";
+            this.hdrPartners.Size = new System.Drawing.Size(1115, 25);
+            this.hdrPartners.TabIndex = 5;
+            this.hdrPartners.Text = "Partner";
 			// 
 			// Partners
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.pnlSubmenuHolder);
 			this.Controls.Add(this.clsPartners);
-			this.Controls.Add(this.hdrPartners);
+            this.Controls.Add(this.hdrPartners);
 			this.Name = "Partners";
 			this.Size = new System.Drawing.Size(1135, 560);
 			this.pnlSubmenuHolder.ResumeLayout(false);
