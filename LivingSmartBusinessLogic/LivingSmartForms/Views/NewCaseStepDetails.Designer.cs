@@ -405,10 +405,12 @@ namespace LivingSmartForms.Views
 			// NewCaseStepDetails
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.AutoSize = true;
+			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.BackColor = System.Drawing.Color.Fuchsia;
 			this.Controls.Add(this.tlpPropertyDetails);
 			this.Controls.Add(this.hdrPropertyDetails);
-			this.MinimumSize = new System.Drawing.Size(480, 525);
+			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "NewCaseStepDetails";
 			this.Size = new System.Drawing.Size(480, 525);
 			this.tlpPropertyDetails.ResumeLayout(false);

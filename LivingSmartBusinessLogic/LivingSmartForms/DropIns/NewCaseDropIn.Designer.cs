@@ -1,3 +1,4 @@
+using LivingSmartForms.Views;
 using SmartControls;
 
 namespace LivingSmartForms.DropIns
@@ -40,10 +41,14 @@ namespace LivingSmartForms.DropIns
 			this.btnPrev = new SmartControls.SmartButton();
 			this.btnNext = new SmartControls.SmartButton();
 			this.pnlStepHolder = new System.Windows.Forms.Panel();
+			this.pnlStepHolderInner = new System.Windows.Forms.Panel();
+			this.newCaseStepDetails1 = new NewCaseStepDetails();
 			this.pnlSubmenuHolder.SuspendLayout();
 			this.pnlSubmenu.SuspendLayout();
 			this.pnlBottomControlsHolder.SuspendLayout();
 			this.pnlBottomControls.SuspendLayout();
+			this.pnlStepHolder.SuspendLayout();
+			this.pnlStepHolderInner.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// pnlSubmenuHolder
@@ -104,7 +109,7 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlBottomControlsHolder.Controls.Add(this.pnlBottomControlsBorder);
 			this.pnlBottomControlsHolder.Controls.Add(this.pnlBottomControls);
-			this.pnlBottomControlsHolder.Location = new System.Drawing.Point(2, 550);
+			this.pnlBottomControlsHolder.Location = new System.Drawing.Point(2, 558);
 			this.pnlBottomControlsHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlBottomControlsHolder.Name = "pnlBottomControlsHolder";
 			this.pnlBottomControlsHolder.Size = new System.Drawing.Size(498, 50);
@@ -183,12 +188,40 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlStepHolder.AutoScroll = true;
 			this.pnlStepHolder.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlStepHolder.Controls.Add(this.pnlStepHolderInner);
 			this.pnlStepHolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.pnlStepHolder.Location = new System.Drawing.Point(2, 50);
 			this.pnlStepHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlStepHolder.Name = "pnlStepHolder";
-			this.pnlStepHolder.Size = new System.Drawing.Size(498, 500);
+			this.pnlStepHolder.Padding = new System.Windows.Forms.Padding(10);
+			this.pnlStepHolder.Size = new System.Drawing.Size(498, 508);
 			this.pnlStepHolder.TabIndex = 1;
+			// 
+			// pnlStepHolderInner
+			// 
+			this.pnlStepHolderInner.AutoScroll = true;
+			this.pnlStepHolderInner.BackColor = System.Drawing.SystemColors.ButtonFace;
+			this.pnlStepHolderInner.Controls.Add(this.newCaseStepDetails1);
+			this.pnlStepHolderInner.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlStepHolderInner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.pnlStepHolderInner.Location = new System.Drawing.Point(10, 10);
+			this.pnlStepHolderInner.Margin = new System.Windows.Forms.Padding(10);
+			this.pnlStepHolderInner.Name = "pnlStepHolderInner";
+			this.pnlStepHolderInner.Size = new System.Drawing.Size(478, 488);
+			this.pnlStepHolderInner.TabIndex = 2;
+			// 
+			// newCaseStepDetails1
+			// 
+			this.newCaseStepDetails1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.newCaseStepDetails1.BackColor = System.Drawing.Color.Fuchsia;
+			this.newCaseStepDetails1.Location = new System.Drawing.Point(0, 0);
+			this.newCaseStepDetails1.Margin = new System.Windows.Forms.Padding(0);
+			this.newCaseStepDetails1.MinimumSize = new System.Drawing.Size(478, 525);
+			this.newCaseStepDetails1.Name = "newCaseStepDetails1";
+			this.newCaseStepDetails1.Size = new System.Drawing.Size(478, 525);
+			this.newCaseStepDetails1.TabIndex = 0;
 			// 
 			// NewCaseDropIn
 			// 
@@ -198,12 +231,14 @@ namespace LivingSmartForms.DropIns
 			this.Controls.Add(this.pnlStepHolder);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "NewCaseDropIn";
-			this.Size = new System.Drawing.Size(500, 600);
+			this.Size = new System.Drawing.Size(500, 608);
 			this.pnlSubmenuHolder.ResumeLayout(false);
 			this.pnlSubmenu.ResumeLayout(false);
 			this.pnlBottomControlsHolder.ResumeLayout(false);
 			this.pnlBottomControls.ResumeLayout(false);
 			this.pnlBottomControls.PerformLayout();
+			this.pnlStepHolder.ResumeLayout(false);
+			this.pnlStepHolderInner.ResumeLayout(false);
 			this.ResumeLayout(false);
 
 		}
@@ -220,6 +255,8 @@ namespace LivingSmartForms.DropIns
 		private SmartControls.SmartButton btnPrev;
 		private SmartControls.SmartButton btnNext;
 		private System.Windows.Forms.Panel pnlStepHolder;
+		private System.Windows.Forms.Panel pnlStepHolderInner;
+		private Views.NewCaseStepDetails newCaseStepDetails1;
 
 	}
 }

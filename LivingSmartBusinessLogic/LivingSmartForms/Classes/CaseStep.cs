@@ -13,6 +13,8 @@ namespace LivingSmartForms.Classes
 {
 	public partial class CaseStep : UserControl
 	{
+		public Size DefaultSize;
+
 		public CaseStep()
 		{
 			InitializeComponent();

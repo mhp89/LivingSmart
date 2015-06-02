@@ -21,6 +21,11 @@ namespace LivingSmartForms.Views
             InitializeComponent();
         }
 
+		public NewCaseStepDetails()
+		{
+			InitializeComponent();
+		}
+
 		public override bool Save()
 		{
 			bool fielddataOk = ValidateFields();

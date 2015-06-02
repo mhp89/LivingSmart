@@ -35,7 +35,7 @@ namespace LivingSmartForms
 		private void Login_Load(object sender, EventArgs e)
 		{
 			//Logger automatisk ind hvis brugeroplysningerne er gemt
-			if (Convert.ToBoolean(Base.RegKey.GetValue("AutomaticLoginActive", false)))
+			if (Convert.ToBoolean(RegistryWrapper.RegKey.GetValue("AutomaticLoginActive", false)))
 			{
 				chbAutoLogin.Checked = true;
 				PerformAutoLogin();
@@ -91,8 +91,8 @@ namespace LivingSmartForms
 		}
 		private void PerformAutoLogin()
 		{
-			string username = Convert.ToString(Base.RegKey.GetValue("AutomaticLoginEstateAgentId", null));
-			string password = Convert.ToString(Base.RegKey.GetValue("AutomaticLoginPassword", null));
+			string username = Convert.ToString(RegistryWrapper.RegKey.GetValue("AutomaticLoginEstateAgentId", null));
+			string password = Convert.ToString(RegistryWrapper.RegKey.GetValue("AutomaticLoginPassword", null));
 
 			EstateAgent estateAgent = EstateAgentController.Instance.LoginEstateAgent(username, password);
 
@@ -115,9 +115,9 @@ namespace LivingSmartForms
 		/// <param name="password">Adgangskoden for m�gleren</param>
 		private void SaveAutomaticLogin(string username, string password)
 		{
-			Base.RegKey.SetValue("AutomaticLoginActive", true);
-			Base.RegKey.SetValue("AutomaticLoginEstateAgentId", username);
-			Base.RegKey.SetValue("AutomaticLoginPassword", password);
+			RegistryWrapper.RegKey.SetValue("AutomaticLoginActive", true);
+			RegistryWrapper.RegKey.SetValue("AutomaticLoginEstateAgentId", username);
+			RegistryWrapper.RegKey.SetValue("AutomaticLoginPassword", password);
 		}
 		
 		/// <summary>
@@ -125,9 +125,9 @@ namespace LivingSmartForms
 		/// </summary>
 		public static void ClearAutomaticLogin()
 		{
-			Base.RemoveKey("AutomaticLoginActive");
-			Base.RemoveKey("AutomaticLoginEstateAgentId");
-			Base.RemoveKey("AutomaticLoginPassword");
+			RegistryWrapper.RemoveKey("AutomaticLoginActive");
+			RegistryWrapper.RemoveKey("AutomaticLoginEstateAgentId");
+			RegistryWrapper.RemoveKey("AutomaticLoginPassword");
 		}
 
 

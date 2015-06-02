@@ -63,17 +63,22 @@ namespace LivingSmartForms.DropIns
 			foreach (var step in steps)
 			{
 				step.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-				step.Location = new Point(10, 8);	
+				step.Location = new Point(10, 8);
+				step.DefaultSize = step.Size;
 			}
 		}
 
 		private void ChangeStep(int stepIndex)
 		{
 			activeStep = steps[stepIndex];
-			pnlStepHolder.Controls.Clear();
-			pnlStepHolder.Controls.Add(activeStep);
+			pnlStepHolderInner.Controls.Clear();
+			pnlStepHolderInner.Controls.Add(activeStep);
+			pnlStepHolderInner.MinimumSize = activeStep.MinimumSize;
 
-			activeStep.Size = new Size(pnlStepHolder.Width-20, pnlStepHolder.Height-20);
+			activeStep.Dock = DockStyle.Fill;
+
+			/*if(pnlStepHolder.Height-20 > activeStep.DefaultSize.Height)
+				activeStep.Height = pnlStepHolder.Height - 20;*/
 
 			currentStepIndex = stepIndex;
 			stepIndicator.CurrentStep = stepIndex;
