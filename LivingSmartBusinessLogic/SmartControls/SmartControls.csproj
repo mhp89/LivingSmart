@@ -44,6 +44,12 @@
     <Compile Include="AnalogClock.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="ControlCurtain.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ControlCurtain.Designer.cs">
+      <DependentUpon>ControlCurtain.cs</DependentUpon>
+    </Compile>
     <Compile Include="ControlList.cs">
       <SubType>Component</SubType>
     </Compile>

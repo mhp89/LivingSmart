@@ -29,6 +29,7 @@ namespace LivingSmartForms
 		{
 			Overview,
 			Cases,
+            OpenHouse,
 			Customers,
 			EstateAgents,
 			Partners,
@@ -51,6 +52,7 @@ namespace LivingSmartForms
 			pages[GetPageIndex(PagesIndex.Customers)]		= new Page(typeof(Customers),		"Kunder",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mægler",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partner",			Classes.Menu.MenuAnchor.Left);
+            pages[GetPageIndex(PagesIndex.OpenHouse)]       = new Page(typeof(OpenHouse),       "Åbent hus",        Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Settings)]		= new Page(typeof(Cases),			"Indstillinger",	Classes.Menu.MenuAnchor.Right);
 			
 			InitializePages();
