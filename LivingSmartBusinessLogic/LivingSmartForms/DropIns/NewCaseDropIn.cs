@@ -62,9 +62,9 @@ namespace LivingSmartForms.DropIns
 			
 			foreach (var step in steps)
 			{
-				step.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
-				step.Location = new Point(10, 8);
-				step.DefaultSize = step.Size;
+				//step.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+				//step.Location = new Point(10, 8);
+				//step.DefaultSize = step.Size;
 			}
 		}
 
@@ -73,9 +73,8 @@ namespace LivingSmartForms.DropIns
 			activeStep = steps[stepIndex];
 			pnlStepHolderInner.Controls.Clear();
 			pnlStepHolderInner.Controls.Add(activeStep);
-			pnlStepHolderInner.MinimumSize = activeStep.MinimumSize;
 
-			activeStep.Dock = DockStyle.Fill;
+			activeStep.Dock = DockStyle.Top;
 
 			/*if(pnlStepHolder.Height-20 > activeStep.DefaultSize.Height)
 				activeStep.Height = pnlStepHolder.Height - 20;*/
@@ -127,6 +126,11 @@ namespace LivingSmartForms.DropIns
 		private void btnNext_Click(object sender, EventArgs e)
 		{
 			NextStep();
+		}
+
+		private void pnlStepHolderInner_SizeChanged(object sender, EventArgs e)
+		{
+			activeStep.Height = pnlStepHolderInner.Height;
 		}
 	}
 }

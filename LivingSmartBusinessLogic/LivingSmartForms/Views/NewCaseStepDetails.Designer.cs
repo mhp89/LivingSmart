@@ -131,6 +131,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsDescription.MaxLength = 500;
 			this.stbDetailsDescription.MinLength = -1;
+			this.stbDetailsDescription.Multiline = true;
 			this.stbDetailsDescription.Name = "stbDetailsDescription";
 			this.stbDetailsDescription.NumericOnly = false;
 			this.stbDetailsDescription.Placeholder = null;
@@ -157,6 +158,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPrice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsPrice.MaxLength = 50;
 			this.stbDetailsPrice.MinLength = -1;
+			this.stbDetailsPrice.Multiline = false;
 			this.stbDetailsPrice.Name = "stbDetailsPrice";
 			this.stbDetailsPrice.NumericOnly = true;
 			this.stbDetailsPrice.Placeholder = null;
@@ -238,6 +240,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPublicEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsPublicEvaluation.MaxLength = 50;
 			this.stbDetailsPublicEvaluation.MinLength = -1;
+			this.stbDetailsPublicEvaluation.Multiline = false;
 			this.stbDetailsPublicEvaluation.Name = "stbDetailsPublicEvaluation";
 			this.stbDetailsPublicEvaluation.NumericOnly = true;
 			this.stbDetailsPublicEvaluation.Placeholder = null;
@@ -264,6 +267,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsRating.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsRating.MaxLength = 50;
 			this.stbDetailsRating.MinLength = -1;
+			this.stbDetailsRating.Multiline = false;
 			this.stbDetailsRating.Name = "stbDetailsRating";
 			this.stbDetailsRating.NumericOnly = true;
 			this.stbDetailsRating.Placeholder = null;
@@ -289,7 +293,6 @@ namespace LivingSmartForms.Views
 			// clsImages
 			// 
 			this.clsImages.AutoScroll = true;
-			this.clsImages.BackColor = System.Drawing.SystemColors.ControlDarkDark;
 			this.clsImages.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.clsImages.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.clsImages.Location = new System.Drawing.Point(0, 40);
@@ -378,6 +381,7 @@ namespace LivingSmartForms.Views
 			this.stbSystemRating.Margin = new System.Windows.Forms.Padding(0, 0, 10, 0);
 			this.stbSystemRating.MaxLength = 50;
 			this.stbSystemRating.MinLength = -1;
+			this.stbSystemRating.Multiline = false;
 			this.stbSystemRating.Name = "stbSystemRating";
 			this.stbSystemRating.NumericOnly = true;
 			this.stbSystemRating.Placeholder = null;
@@ -407,10 +411,10 @@ namespace LivingSmartForms.Views
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.AutoSize = true;
 			this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.BackColor = System.Drawing.Color.Fuchsia;
 			this.Controls.Add(this.tlpPropertyDetails);
 			this.Controls.Add(this.hdrPropertyDetails);
 			this.Margin = new System.Windows.Forms.Padding(0);
+			this.MinimumSize = new System.Drawing.Size(480, 525);
 			this.Name = "NewCaseStepDetails";
 			this.Size = new System.Drawing.Size(480, 525);
 			this.tlpPropertyDetails.ResumeLayout(false);

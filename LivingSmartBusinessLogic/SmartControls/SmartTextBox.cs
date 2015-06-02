@@ -82,6 +82,14 @@ namespace SmartControls
 		}
 		private bool _useSystemPasswordChar;
 
+		[Category("Behavior")]
+		public bool Multiline
+		{
+			get { return _multiline; }
+			set { _multiline = textBox.Multiline = value; UpdateSize(); Invalidate(); }
+		}
+		private bool _multiline;
+
 		private AutoCompleteMode _autoCompleteMode;
 		public AutoCompleteMode AutoCompleteMode
 		{
@@ -173,7 +181,7 @@ namespace SmartControls
 			Cursor = Cursors.IBeam;
 			_text = String.Empty;
 			TabStop = false;
-
+			
 			Controls.Add(textBox = new ExtendedTextBox());
 			
 			textBox.BorderStyle = BorderStyle.None;
@@ -312,7 +320,16 @@ namespace SmartControls
 				var suffixSize = TextRenderer.MeasureText(CreateGraphics(), Suffix, Font, Size.Empty);
 				textBox.Width -= (suffixSize.Width+10);
 			}
-			textBox.Location = new Point(5, (Height - textBox.Height) / 2);
+
+			if (Multiline)
+			{
+				textBox.Location = new Point(5, 5);
+				textBox.Height = Height - 10;
+			}
+			else
+			{
+				textBox.Location = new Point(5, (Height - textBox.Height)/2);
+			}
 		}
 
 		/// <summary>

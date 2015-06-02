@@ -15,8 +15,13 @@ namespace LivingSmartForms
     {
 	    private bool formShift;
 
+<<<<<<< HEAD
 	    private List<BaseDropIn> DropIns = new List<BaseDropIn>(); 
+=======
+        private FormWindowState lastState;
 
+	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
+>>>>>>> origin/mhp
 		
 	    private Control partnerView;
 
@@ -67,16 +72,20 @@ namespace LivingSmartForms
 
 	    private void InitializeSystem()
 	    {
-	    	if (RegistryWrapper.RegKey.GetValue("DatabaseConnection") == null)
+<<<<<<< HEAD
+			if (RegistryWrapper.RegKey.GetValue("DatabaseConnection") == null)
 				RegistryWrapper.RegKey.SetValue("DatabaseConnection", "Data Source=(local); Initial Catalog=LivingSmart; Integrated Security=SSPI; MultipleActiveResultSets=true");
 
-
+			/*if(Base.RegKey.GetValue("ServerImageLocation") == null)
+				Base.RegKey.SetValue("ServerImageLocation", "C:/LivingSmartServer/Images/");*/
+=======
 	        if (Base.RegKey.GetValue("WindowState") != null)
 	        {
 	            WindowState =
 	                (FormWindowState) Enum.Parse(typeof (FormWindowState), Base.RegKey.GetValue("WindowState") as string);
 	            lastState = WindowState;
 	        }
+>>>>>>> origin/mhp
 	    }
 
 		#region Menu

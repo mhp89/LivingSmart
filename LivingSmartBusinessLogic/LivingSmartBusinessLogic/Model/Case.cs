@@ -6,6 +6,13 @@ namespace LivingSmartBusinessLogic.Model
 {
     public class Case
     {
+        public enum CaseStatus
+        {
+            Open,
+            Sold,
+            Closed,
+        }
+
         #region Private Fields
 
         private Customer _seller;
