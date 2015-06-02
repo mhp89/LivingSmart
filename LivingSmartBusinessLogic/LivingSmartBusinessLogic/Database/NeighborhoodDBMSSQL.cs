@@ -91,7 +91,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Neighborhood created.</returns>
         public int CreateNeighborhood(Neighborhood neighborhood)
         {
-            int neighborhoodId = 0;
+            int neighborhoodId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

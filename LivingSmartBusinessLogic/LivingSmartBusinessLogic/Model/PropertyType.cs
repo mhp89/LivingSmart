@@ -1,5 +1,8 @@
 ﻿namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Hold the information for a PropertyType
+    /// </summary>
     public class PropertyType
     {
         

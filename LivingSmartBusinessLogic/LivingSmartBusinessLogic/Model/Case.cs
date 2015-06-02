@@ -4,6 +4,9 @@ using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceT
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for a Case
+    /// </summary>
     public class Case
     {
         #region Private Fields

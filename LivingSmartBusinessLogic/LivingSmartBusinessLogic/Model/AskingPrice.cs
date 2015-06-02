@@ -2,6 +2,9 @@
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for an AskingPrice
+    /// </summary>
     public class AskingPrice
     {
 

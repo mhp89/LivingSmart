@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private PropertyTypeCatalog propertyTypeCatalog;
 
-        public PropertyTypeController()
+        private PropertyTypeController()
         {
             propertyTypeCatalog = new PropertyTypeCatalog();
         }

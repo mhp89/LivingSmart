@@ -143,7 +143,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Document created.</returns>
         public int CreateDocument(Document document, int caseId)
         {
-            int adId = 0;
+            int adId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

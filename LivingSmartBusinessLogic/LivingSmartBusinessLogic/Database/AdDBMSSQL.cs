@@ -147,7 +147,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Ad created.</returns>
         public int CreateAd(Ad ad, int caseId)
         {
-            int adId = 0;
+            int adId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

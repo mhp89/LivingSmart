@@ -2,6 +2,9 @@ using System.Drawing;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Hold the information for a Picture
+    /// </summary>
     public class Picture
     {
 

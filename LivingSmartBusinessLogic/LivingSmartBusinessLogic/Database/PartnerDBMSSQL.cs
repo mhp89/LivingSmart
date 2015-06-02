@@ -104,7 +104,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Partner created.</returns>
         public int CreatePartner(Partner partner)
         {
-            int partnerId = 0;
+            int partnerId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

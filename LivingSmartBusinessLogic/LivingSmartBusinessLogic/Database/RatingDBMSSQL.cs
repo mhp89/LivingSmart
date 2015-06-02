@@ -111,7 +111,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Rating created.</returns>
         public int CreateRating(Rating rating, int caseId, int estateAgentId)
         {
-            int ratingId = 0;
+            int ratingId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

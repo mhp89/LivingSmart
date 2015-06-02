@@ -31,7 +31,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private Case activeCase;
 
-        public CaseController()
+        private CaseController()
         {
             caseCatalog = new CaseCatalog();
             adCatalog = new AdCatalog();

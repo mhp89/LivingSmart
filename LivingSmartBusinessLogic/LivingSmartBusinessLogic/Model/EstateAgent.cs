@@ -2,6 +2,9 @@ using System;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for an EstateAgent
+    /// </summary>
     public class EstateAgent
     {
         

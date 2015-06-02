@@ -3,6 +3,9 @@ using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for a Appointment.
+    /// </summary>
     public class Appointment
     {
         

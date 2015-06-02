@@ -1,5 +1,8 @@
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for distances to Shopping, School, Center, etc.
+    /// </summary>
     public class DistanceTo
     {
 	    public enum DistanceToSystemType

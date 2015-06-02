@@ -160,7 +160,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Case created.</returns>
         public int CreateCase(Case ca)
         {
-            int adId = 0;
+            int caseId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
@@ -208,7 +208,7 @@ namespace LivingSmartBusinessLogic.DB
             try
             {
                 connection.Open();
-                adId = (int)cmd.ExecuteScalar();
+                caseId = (int)cmd.ExecuteScalar();
             }
             catch (SqlException e)
             {
@@ -219,7 +219,7 @@ namespace LivingSmartBusinessLogic.DB
                 connection.Close();
             }
 
-            return adId;
+            return caseId;
         }
     }
 }

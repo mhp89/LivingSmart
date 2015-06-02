@@ -1,5 +1,8 @@
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Hold the information for a Partner.
+    /// </summary>
     public class Partner
     {
 

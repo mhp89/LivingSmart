@@ -14,7 +14,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="estateAgentId">Id of the estate agent</param>
         /// <returns>Returns a List of all the Cases, having a EstateAgentId given by the parameter</returns>
-        List<Case> ReadCases(int estateAgentUId);
+        List<Case> ReadCases(int estateAgentId);
 
         /// <summary>
         /// Updates the information from a Case, in the database.

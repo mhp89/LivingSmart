@@ -1,5 +1,8 @@
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for a Document.
+    /// </summary>
     public class Document
     {
 
