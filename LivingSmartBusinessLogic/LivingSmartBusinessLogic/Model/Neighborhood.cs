@@ -2,6 +2,9 @@ using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Hold the information for a Neighborhood.
+    /// </summary>
     public class Neighborhood
     {
         

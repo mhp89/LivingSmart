@@ -54,8 +54,8 @@ namespace LivingSmartForms
 			pages[GetPageIndex(PagesIndex.Overview)]		= new Page(typeof(Overview),		"Oversigt",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Cases)]			= new Page(typeof(Cases),			"Sager",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Customers)]		= new Page(typeof(Customers),		"Kunder",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mægler",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partner",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mæglere",			Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partnere",			Classes.Menu.MenuAnchor.Left);
             pages[GetPageIndex(PagesIndex.OpenHouse)]       = new Page(typeof(OpenHousePage),   "Åbent hus",        Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Settings)]		= new Page(typeof(Cases),			"Indstillinger",	Classes.Menu.MenuAnchor.Right);
 			

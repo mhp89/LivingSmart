@@ -17,7 +17,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private NeighborhoodCatalog neighborhoodCatalog;
 
-        public NeighborhoodController()
+        private NeighborhoodController()
         {
             neighborhoodCatalog = new NeighborhoodCatalog();
         }

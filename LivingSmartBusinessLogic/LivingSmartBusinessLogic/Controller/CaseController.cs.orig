@@ -1,17 +1,10 @@
 using System;
-<<<<<<< HEAD
-using System.Collections;
-using System.Collections.ObjectModel;
-using System.Net.Mime;
-using System.Drawing;
-=======
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
 using LivingSmartBusinessLogic.Catalog;
 using LivingSmartBusinessLogic.Model;
->>>>>>> origin/ControlRettelser
 
 namespace LivingSmartBusinessLogic.Controller
 {
@@ -38,7 +31,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private Case activeCase;
 
-        public CaseController()
+        private CaseController()
         {
             caseCatalog = new CaseCatalog();
             adCatalog = new AdCatalog();
@@ -73,18 +66,16 @@ namespace LivingSmartBusinessLogic.Controller
         /// Gemmer aktiv sag
         /// </summary>
         public void SaveActiveCase()
-        {
-            AddCase();
+		{
+			caseCatalog.Save(activeCase);
+			if (activeCase.Id != -1)
+				caseCatalog.AddToCatalog(activeCase);
         }
         #endregion
+<<<<<<< HEAD
         
-        /// <summary>
-        /// Tilføjer en case til casecatalog
-        /// </summary>
-        public void AddCase()
-        {
-            caseCatalog.AddToCatalog(activeCase);
-        }
+=======
+>>>>>>> test
 
         /// <summary>
         /// Laver en ny case
@@ -114,6 +105,15 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return caseCatalog.GetCase(caseId);
         }
+
+		/// <summary>
+		/// Retunere den aktive sag
+		/// </summary>
+		/// <returns></returns>
+	    public Case GetActiveCase()
+	    {
+		    return activeCase;
+	    }
 
 		public ReadOnlyCollection<Case> GetCases()
 		{
@@ -161,9 +161,6 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #region Picture
-<<<<<<< HEAD
-        public Picture MakeNewPicture(string fileLocation, string description)
-=======
         /// <summary>
         /// Laver et nyt billede
         /// </summary>
@@ -171,9 +168,8 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="description"></param>
         /// <returns></returns>
         public Picture MakeNewPicture(string location, string description)
->>>>>>> origin/ControlRettelser
         {
-			return new Picture(fileLocation, description);
+			return new Picture(location, description);
         }
 
         /// <summary>
@@ -287,14 +283,21 @@ namespace LivingSmartBusinessLogic.Controller
         }
 
         /// <summary>
-        /// Henter den aktive sags vurderinger som en list
+        /// Henter en specifik sags vurderinger som en list
         /// </summary>
-        /// <param name="id"></param>
         /// <returns></returns>
         public Rating GetLastRating(Case cCase)
         {
             return ratingCatalog.GetLastRating(cCase);
         }
+		/// <summary>
+		/// Henter den aktive sags vurderinger som en list
+		/// </summary>
+		/// <returns></returns>
+		public Rating GetLastRating()
+		{
+			return GetLastRating(activeCase);
+		}
 
         #endregion
 
@@ -680,13 +683,7 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
         
-<<<<<<< HEAD
         #endregion
 
 	}
 }
-=======
-        #endregion  
-    }
-}
->>>>>>> origin/ControlRettelser

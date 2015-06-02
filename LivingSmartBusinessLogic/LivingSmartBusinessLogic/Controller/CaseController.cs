@@ -31,7 +31,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private Case activeCase;
 
-        public CaseController()
+        private CaseController()
         {
             caseCatalog = new CaseCatalog();
             adCatalog = new AdCatalog();
@@ -72,7 +72,6 @@ namespace LivingSmartBusinessLogic.Controller
 				caseCatalog.AddToCatalog(activeCase);
         }
         #endregion
-        
 
         /// <summary>
         /// Laver en ny case

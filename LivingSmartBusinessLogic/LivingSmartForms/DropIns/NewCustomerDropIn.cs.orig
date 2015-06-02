@@ -1,5 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
 using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
@@ -12,20 +18,30 @@ namespace LivingSmartForms.DropIns
 	{
 		private NewCustomer newCustomerForm;
 
+<<<<<<< HEAD
 		private NewCustomerFinish callback;
 		public delegate void NewCustomerFinish(Customer customer);
 
-		public NewCustomerDropIn(BaseForm baseForm, Customer customer, NewCustomerFinish callback=null) : base(baseForm)
+		public NewCustomerDropIn(BaseForm baseForm, NewCustomerFinish callback) : base(baseForm)
 		{
 			InitializeComponent();
+
 			this.callback = callback;
+
+			newCustomerForm = new NewCustomer(baseForm);
+=======
+		public NewCustomerDropIn(BaseForm baseForm, Customer customer) : base(baseForm)
+		{
+			InitializeComponent();
+
 		    if (customer != null)
 		    {
 		        btnSave.Text = "Gem";
-		        lblNewCustomer.Text = "Redigï¿½r kunde";
+		        lblNewCustomer.Text = "Redigér kunde";
 		    }
 
 		    newCustomerForm = new NewCustomer(baseForm, customer);
+>>>>>>> test
 			newCustomerForm.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
 			newCustomerForm.Location = new Point(10, 10);
 			pnlContentHolder.Controls.Add(newCustomerForm);
@@ -37,8 +53,7 @@ namespace LivingSmartForms.DropIns
 		private void FinishCreating(Customer customer)
 		{
 			CustomerController.Instance.CancelActiveCustomer();
-			if(callback != null)
-				callback(customer);
+			callback(customer);
 			Close();
 		}
 

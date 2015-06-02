@@ -21,7 +21,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private Partner activePartner;
 
-        public PartnerController()
+        private PartnerController()
         {
             partnerCatalog = new PartnerCatalog();
         }

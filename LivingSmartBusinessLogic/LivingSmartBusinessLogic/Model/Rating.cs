@@ -3,6 +3,9 @@ using LivingSmartBusinessLogic.Controller;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Hold the information for a Rating
+    /// </summary>
     public class Rating
     {
 

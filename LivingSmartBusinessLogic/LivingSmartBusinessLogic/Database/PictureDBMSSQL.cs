@@ -141,7 +141,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Picture created.</returns>
         public int CreatePicture(Picture picture, int caseId)
         {
-            int pictureId = 0;
+            int pictureId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

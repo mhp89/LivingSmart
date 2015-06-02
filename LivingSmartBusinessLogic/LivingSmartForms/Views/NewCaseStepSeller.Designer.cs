@@ -87,7 +87,7 @@ namespace LivingSmartForms.Views
 			this.tlpEstateAgent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
 			this.tlpEstateAgent.Controls.Add(lblEstateAgentNameTitle, 0, 0);
 			this.tlpEstateAgent.Controls.Add(this.panel1, 1, 0);
-			this.tlpEstateAgent.Location = new System.Drawing.Point(0, 45);
+			this.tlpEstateAgent.Location = new System.Drawing.Point(0, 43);
 			this.tlpEstateAgent.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpEstateAgent.Name = "tlpEstateAgent";
 			this.tlpEstateAgent.RowCount = 1;
@@ -163,7 +163,7 @@ namespace LivingSmartForms.Views
 			this.tlpSeller.Controls.Add(this.stbSellerPhone, 1, 4);
 			this.tlpSeller.Controls.Add(this.pnlSellerCity, 1, 3);
 			this.tlpSeller.Controls.Add(this.dafBirthday, 1, 6);
-			this.tlpSeller.Location = new System.Drawing.Point(0, 130);
+			this.tlpSeller.Location = new System.Drawing.Point(0, 128);
 			this.tlpSeller.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpSeller.Name = "tlpSeller";
 			this.tlpSeller.RowCount = 7;
@@ -206,6 +206,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerEmail.MaxLength = 32767;
 			this.stbSellerEmail.MinLength = -1;
+			this.stbSellerEmail.Multiline = false;
 			this.stbSellerEmail.Name = "stbSellerEmail";
 			this.stbSellerEmail.NumericOnly = false;
 			this.stbSellerEmail.Placeholder = null;
@@ -232,6 +233,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerAdress.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerAdress.MaxLength = 50;
 			this.stbSellerAdress.MinLength = -1;
+			this.stbSellerAdress.Multiline = false;
 			this.stbSellerAdress.Name = "stbSellerAdress";
 			this.stbSellerAdress.NumericOnly = false;
 			this.stbSellerAdress.Placeholder = null;
@@ -343,6 +345,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerName.MaxLength = 50;
 			this.stbSellerName.MinLength = -1;
+			this.stbSellerName.Multiline = false;
 			this.stbSellerName.Name = "stbSellerName";
 			this.stbSellerName.NumericOnly = false;
 			this.stbSellerName.Placeholder = null;
@@ -415,6 +418,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerPhone.MaxLength = 8;
 			this.stbSellerPhone.MinLength = 8;
+			this.stbSellerPhone.Multiline = false;
 			this.stbSellerPhone.Name = "stbSellerPhone";
 			this.stbSellerPhone.NumericOnly = true;
 			this.stbSellerPhone.Placeholder = null;
@@ -466,6 +470,7 @@ namespace LivingSmartForms.Views
 			this.stbSellerZipCode.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbSellerZipCode.MaxLength = 4;
 			this.stbSellerZipCode.MinLength = 4;
+			this.stbSellerZipCode.Multiline = false;
 			this.stbSellerZipCode.Name = "stbSellerZipCode";
 			this.stbSellerZipCode.NumericOnly = true;
 			this.stbSellerZipCode.Placeholder = null;
@@ -493,7 +498,7 @@ namespace LivingSmartForms.Views
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrEstateAgent.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.hdrEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.hdrEstateAgent.Location = new System.Drawing.Point(0, 10);
+			this.hdrEstateAgent.Location = new System.Drawing.Point(0, 8);
 			this.hdrEstateAgent.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.hdrEstateAgent.Name = "hdrEstateAgent";
 			this.hdrEstateAgent.Size = new System.Drawing.Size(480, 25);
@@ -506,7 +511,7 @@ namespace LivingSmartForms.Views
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.hdrSeller.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.hdrSeller.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.hdrSeller.Location = new System.Drawing.Point(0, 95);
+			this.hdrSeller.Location = new System.Drawing.Point(0, 93);
 			this.hdrSeller.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
 			this.hdrSeller.Name = "hdrSeller";
 			this.hdrSeller.Size = new System.Drawing.Size(480, 25);
@@ -520,8 +525,9 @@ namespace LivingSmartForms.Views
 			this.Controls.Add(this.hdrEstateAgent);
 			this.Controls.Add(this.tlpSeller);
 			this.Controls.Add(this.tlpEstateAgent);
+			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "NewCaseStepSeller";
-			this.Size = new System.Drawing.Size(480, 410);
+			this.Size = new System.Drawing.Size(480, 408);
 			this.tlpEstateAgent.ResumeLayout(false);
 			this.tlpEstateAgent.PerformLayout();
 			this.panel1.ResumeLayout(false);

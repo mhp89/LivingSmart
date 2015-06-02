@@ -42,11 +42,19 @@ namespace LivingSmartForms.Views
 		private bool ValidateFields()
 		{
 			bool fielddataOk = true;
-
+            
 			fielddataOk &= stbName.Validate();
 			fielddataOk &= stbPhone.Validate();
 			fielddataOk &= stbEmail.Validate();
 			fielddataOk &= dafStartDate.Validate();
+		    fielddataOk &= stbUsername.Validate();
+            fielddataOk &= stbPassword.Validate();
+
+            if (fielddataOk && !EstateAgentController.Instance.IsUsernameAvailable(stbUsername.Text))
+            {
+                stbUsername.SetError("Brugernavn allerede i brug");
+                fielddataOk = false;
+            }
 			
 			return fielddataOk;
 		}

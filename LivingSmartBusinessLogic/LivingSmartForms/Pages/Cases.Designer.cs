@@ -47,6 +47,7 @@ namespace LivingSmartForms.Pages
 			this.pnlSubmenuHolder.Controls.Add(this.pnlSubmenu);
 			this.pnlSubmenuHolder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenuHolder.Location = new System.Drawing.Point(0, 0);
+			this.pnlSubmenuHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlSubmenuHolder.Name = "pnlSubmenuHolder";
 			this.pnlSubmenuHolder.Size = new System.Drawing.Size(1135, 42);
 			this.pnlSubmenuHolder.TabIndex = 2;

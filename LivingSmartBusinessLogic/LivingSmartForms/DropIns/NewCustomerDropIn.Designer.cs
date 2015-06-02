@@ -115,12 +115,12 @@ namespace LivingSmartForms.DropIns
 			this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnSave.Location = new System.Drawing.Point(396, 10);
+            this.btnSave.Location = new System.Drawing.Point(396, 10);
 			this.btnSave.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
 			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(82, 30);
+            this.btnSave.Size = new System.Drawing.Size(82, 30);
 			this.btnSave.TabIndex = 0;
-			this.btnSave.Text = "Opret";
+            this.btnSave.Text = "Opret";
 			this.btnSave.UseVisualStyleBackColor = false;
 			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 			// 

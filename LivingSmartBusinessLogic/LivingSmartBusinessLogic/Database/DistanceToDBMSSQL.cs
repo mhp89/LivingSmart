@@ -141,7 +141,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the DistanceTo created.</returns>
         public int CreateDistanceTo(DistanceTo distanceTo, int caseId)
         {
-            int appointmentId = 0;
+            int appointmentId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

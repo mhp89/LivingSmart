@@ -1,5 +1,8 @@
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for a City
+    /// </summary>
     public class City
     {
         #region Private Fields

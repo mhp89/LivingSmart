@@ -53,7 +53,11 @@ namespace LivingSmartForms.Pages
 
 		private void btnNewCustomer_Click(object sender, EventArgs e)
 		{
-			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, null, NewCustomerAdded));
+<<<<<<< HEAD
+			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, NewCustomerAdded));
+=======
+			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, null));
+>>>>>>> test
 		}
 	}
 }

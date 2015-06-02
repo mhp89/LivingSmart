@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private EstateAgent activeEstateAgent;
 
-        public EstateAgentController()
+        private EstateAgentController()
         {
             estateAgentCatalog = new EstateAgentCatalog();
             appointmentCatalog = new AppointmentCatalog();
@@ -182,5 +182,10 @@ namespace LivingSmartBusinessLogic.Controller
 	    {
 			return estateAgentCatalog.LoginEstateAgent(username, password);
 	    }
+
+        public bool IsUsernameAvailable(string username)
+        {
+            return estateAgentCatalog.IsUsernameAvailable(username);
+        }
 	}
 }

@@ -1,3 +1,4 @@
+using System.Windows.Forms;
 using LivingSmartForms.Views;
 using SmartControls;
 
@@ -34,6 +35,7 @@ namespace LivingSmartForms.DropIns
 			this.pnlSubmenuHolder = new System.Windows.Forms.Panel();
 			this.pnlSubmenuBorder = new System.Windows.Forms.Panel();
 			this.pnlSubmenu = new System.Windows.Forms.Panel();
+			this.lblNewCustomer = new System.Windows.Forms.Label();
 			this.stepIndicator = new SmartControls.StepIndicator();
 			this.pnlBottomControlsHolder = new System.Windows.Forms.Panel();
 			this.pnlBottomControlsBorder = new System.Windows.Forms.Panel();
@@ -71,14 +73,28 @@ namespace LivingSmartForms.DropIns
 			// 
 			// pnlSubmenu
 			// 
+			this.pnlSubmenu.Controls.Add(this.lblNewCustomer);
 			this.pnlSubmenu.Controls.Add(this.stepIndicator);
 			this.pnlSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlSubmenu.Location = new System.Drawing.Point(0, 0);
 			this.pnlSubmenu.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlSubmenu.Name = "pnlSubmenu";
-			this.pnlSubmenu.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
+			this.pnlSubmenu.Padding = new System.Windows.Forms.Padding(10, 15, 0, 0);
 			this.pnlSubmenu.Size = new System.Drawing.Size(498, 50);
 			this.pnlSubmenu.TabIndex = 0;
+			// 
+			// lblNewCustomer
+			// 
+			this.lblNewCustomer.AutoSize = true;
+			this.lblNewCustomer.Dock = System.Windows.Forms.DockStyle.Left;
+			this.lblNewCustomer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.lblNewCustomer.Location = new System.Drawing.Point(10, 15);
+			this.lblNewCustomer.Margin = new System.Windows.Forms.Padding(0);
+			this.lblNewCustomer.Name = "lblNewCustomer";
+			this.lblNewCustomer.Size = new System.Drawing.Size(57, 20);
+			this.lblNewCustomer.TabIndex = 1;
+			this.lblNewCustomer.Text = "Ny sag";
+			this.lblNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// stepIndicator
 			// 
@@ -107,7 +123,7 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlBottomControlsHolder.Controls.Add(this.pnlBottomControlsBorder);
 			this.pnlBottomControlsHolder.Controls.Add(this.pnlBottomControls);
-			this.pnlBottomControlsHolder.Location = new System.Drawing.Point(2, 558);
+			this.pnlBottomControlsHolder.Location = new System.Drawing.Point(2, 550);
 			this.pnlBottomControlsHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlBottomControlsHolder.Name = "pnlBottomControlsHolder";
 			this.pnlBottomControlsHolder.Size = new System.Drawing.Size(498, 50);
@@ -216,9 +232,10 @@ namespace LivingSmartForms.DropIns
 			this.Controls.Add(this.pnlStepHolder);
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.Name = "NewCaseDropIn";
-			this.Size = new System.Drawing.Size(500, 608);
+			this.Size = new System.Drawing.Size(500, 600);
 			this.pnlSubmenuHolder.ResumeLayout(false);
 			this.pnlSubmenu.ResumeLayout(false);
+			this.pnlSubmenu.PerformLayout();
 			this.pnlBottomControlsHolder.ResumeLayout(false);
 			this.pnlBottomControls.ResumeLayout(false);
 			this.pnlBottomControls.PerformLayout();
@@ -240,6 +257,7 @@ namespace LivingSmartForms.DropIns
 		private SmartControls.SmartButton btnNext;
 		private System.Windows.Forms.Panel pnlStepHolder;
 		private System.Windows.Forms.Panel pnlStepHolderInner;
+		private Label lblNewCustomer;
 
 	}
 }

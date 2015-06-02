@@ -62,10 +62,10 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlBottomControlsHolder.Controls.Add(this.pnlBottomControlsBorder);
 			this.pnlBottomControlsHolder.Controls.Add(this.pnlBottomControls);
-			this.pnlBottomControlsHolder.Location = new System.Drawing.Point(0, 599);
+			this.pnlBottomControlsHolder.Location = new System.Drawing.Point(0, 600);
 			this.pnlBottomControlsHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlBottomControlsHolder.Name = "pnlBottomControlsHolder";
-			this.pnlBottomControlsHolder.Size = new System.Drawing.Size(401, 50);
+			this.pnlBottomControlsHolder.Size = new System.Drawing.Size(400, 50);
 			this.pnlBottomControlsHolder.TabIndex = 13;
 			// 
 			// pnlBottomControlsBorder
@@ -74,7 +74,7 @@ namespace LivingSmartForms.DropIns
 			this.pnlBottomControlsBorder.Dock = System.Windows.Forms.DockStyle.Top;
 			this.pnlBottomControlsBorder.Location = new System.Drawing.Point(0, 0);
 			this.pnlBottomControlsBorder.Name = "pnlBottomControlsBorder";
-			this.pnlBottomControlsBorder.Size = new System.Drawing.Size(401, 2);
+			this.pnlBottomControlsBorder.Size = new System.Drawing.Size(400, 2);
 			this.pnlBottomControlsBorder.TabIndex = 1;
 			// 
 			// pnlBottomControls
@@ -86,7 +86,7 @@ namespace LivingSmartForms.DropIns
 			this.pnlBottomControls.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlBottomControls.Name = "pnlBottomControls";
 			this.pnlBottomControls.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-			this.pnlBottomControls.Size = new System.Drawing.Size(401, 50);
+			this.pnlBottomControls.Size = new System.Drawing.Size(400, 50);
 			this.pnlBottomControls.TabIndex = 0;
 			// 
 			// btnCancel
@@ -123,7 +123,7 @@ namespace LivingSmartForms.DropIns
 			this.btnSelect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btnSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnSelect.Location = new System.Drawing.Point(303, 10);
+			this.btnSelect.Location = new System.Drawing.Point(302, 10);
 			this.btnSelect.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
 			this.btnSelect.Name = "btnSelect";
 			this.btnSelect.Size = new System.Drawing.Size(78, 30);
@@ -143,6 +143,7 @@ namespace LivingSmartForms.DropIns
 			this.clsResult.Margin = new System.Windows.Forms.Padding(0, 10, 0, 10);
 			this.clsResult.Name = "clsResult";
 			this.clsResult.Size = new System.Drawing.Size(380, 284);
+			this.clsResult.Spacing = 5;
 			this.clsResult.TabIndex = 15;
 			this.clsResult.WrapContents = false;
 			// 
@@ -246,6 +247,7 @@ namespace LivingSmartForms.DropIns
 			this.stbId.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbId.MaxLength = 32767;
 			this.stbId.MinLength = -1;
+			this.stbId.Multiline = false;
 			this.stbId.Name = "stbId";
 			this.stbId.NumericOnly = true;
 			this.stbId.Placeholder = null;
@@ -288,6 +290,7 @@ namespace LivingSmartForms.DropIns
 			this.stbName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbName.MaxLength = 32767;
 			this.stbName.MinLength = -1;
+			this.stbName.Multiline = false;
 			this.stbName.Name = "stbName";
 			this.stbName.NumericOnly = false;
 			this.stbName.Placeholder = null;
@@ -315,6 +318,7 @@ namespace LivingSmartForms.DropIns
 			this.stbPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPhone.MaxLength = 8;
 			this.stbPhone.MinLength = -1;
+			this.stbPhone.Multiline = false;
 			this.stbPhone.Name = "stbPhone";
 			this.stbPhone.NumericOnly = true;
 			this.stbPhone.Placeholder = null;
@@ -342,6 +346,7 @@ namespace LivingSmartForms.DropIns
 			this.stbEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEmail.MaxLength = 32767;
 			this.stbEmail.MinLength = -1;
+			this.stbEmail.Multiline = false;
 			this.stbEmail.Name = "stbEmail";
 			this.stbEmail.NumericOnly = false;
 			this.stbEmail.Placeholder = null;
