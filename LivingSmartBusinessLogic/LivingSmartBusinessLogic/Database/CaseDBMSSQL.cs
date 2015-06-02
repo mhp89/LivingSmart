@@ -84,6 +84,74 @@ namespace LivingSmartBusinessLogic.DB
             return caseList;
         }
 
+		public List<Case> ReadCases()
+		{
+			List<Case> caseList = new List<Case>();
+			SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+			SqlCommand cmd = new SqlCommand
+			{
+				Connection = connection,
+				CommandText = "SELECT * FROM Case;",
+			};
+
+			try
+			{
+				connection.Open();
+				SqlDataReader reader = cmd.ExecuteReader();
+				while (reader.Read())
+				{
+					int caseId = (int)reader["CaseId"];
+					int sellerId = (int)reader["SellerId"];
+					int buyerId = (int)reader["BuyerId"];
+					int estateAgentId = (int)reader["EstateAgentId"];
+					DateTime creationDate = (DateTime)reader["creationDate"];
+					string status = (string)reader["Status"];
+					DateTime dateOfSale = (DateTime)reader["DateOfSale"];
+					DateTime transferDate = (DateTime)reader["TransferDate"];
+					DateTime dateOfCompletion = (DateTime)reader["DateOfCompletion"];
+					long sellingPrice = (long)reader["SellingPrice"];
+					string description = (string)reader["Description"];
+					int propertyTypeId = (int)reader["PropertyTypeId"];
+					string landRegistryNumber = (string)reader["LandRegistryNumber"];
+					string address = (string)reader["Address"];
+					int zipCode = (int)reader["ZipCode"];
+					int neighborhoodId = (int)reader["NeighborhoodId"];
+					long publicRating = (long)reader["PublicRating"];
+					long landValue = (long)reader["LandValue"];
+					string type = (string)reader["Type"];
+					int groundArea = (int)reader["GroundArea"];
+					int livingArea = (int)reader["LivingArea"];
+					int builtArea = (int)reader["BuiltArea"];
+					int basementArea = (int)reader["BasementArea"];
+					int garageArea = (int)reader["GarageArea"];
+					int builtYear = (int)reader["BuiltYear"];
+					string energyClassification = (string)reader["EnergyClassification"];
+					int floors = (int)reader["Floors"];
+					int rooms = (int)reader["Rooms"];
+					int bedrooms = (int)reader["Bedrooms"];
+					int bathrooms = (int)reader["Bathrooms"];
+					int toilets = (int)reader["Toilets"];
+					int view = (int)reader["View"];
+
+					Case ca = new Case(caseId, sellerId, buyerId, estateAgentId, creationDate, status, dateOfSale,
+						transferDate, dateOfCompletion, sellingPrice, description, landRegistryNumber, address,
+						zipCode, propertyTypeId, publicRating, landValue, groundArea, builtArea, livingArea,
+						basementArea, builtYear, energyClassification, floors, rooms, bedrooms, bathrooms, toilets, garageArea, view, neighborhoodId);
+					caseList.Add(ca);
+				}
+			}
+			catch (SqlException e)
+			{
+				Console.WriteLine(e.Message);
+			}
+			finally
+			{
+				connection.Close();
+			}
+
+			return caseList;
+		}
+
         /// <summary>
         /// Updates the information from a Case, in the database.
         /// </summary>

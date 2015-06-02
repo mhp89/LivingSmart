@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +15,12 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="estateAgentId">Id of the estate agent</param>
         /// <returns>Returns a List of all the Cases, having a EstateAgentId given by the parameter</returns>
         List<Case> ReadCases(int estateAgentUId);
+
+		/// <summary>
+		/// Returns all the Cases from the database.
+		/// </summary>
+		/// <returns>Returns a List of all the Cases</returns>
+	    List<Case> ReadCases();
 
         /// <summary>
         /// Updates the information from a Case, in the database.
