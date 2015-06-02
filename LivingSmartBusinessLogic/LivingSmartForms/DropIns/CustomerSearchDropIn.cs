@@ -108,7 +108,7 @@ namespace LivingSmartForms.DropIns
 			var email = (string.IsNullOrEmpty(stbEmail.Text)) ? null : stbEmail.Text;
 			var zipcode = (string.IsNullOrEmpty(stbZipCode.Text)) ? -1 : Convert.ToInt32(stbZipCode.Text);
 
-			if(name == null && address == null && phone == null && email == null && zipcode == -1)
+			if(id == -1 && name == null && address == null && phone == null && email == null && zipcode == -1)
 				return;
 
 			var result = CustomerController.Instance.SearchCustomers(id, name, address, zipcode, phone, email);

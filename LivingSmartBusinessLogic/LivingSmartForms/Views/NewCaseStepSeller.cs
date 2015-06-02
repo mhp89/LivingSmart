@@ -115,7 +115,7 @@ namespace LivingSmartForms.Views
 
 				stbSellerName.Enabled = stbSellerAdress.Enabled =
 				stbSellerPhone.Enabled = stbSellerEmail.Enabled =
-				stbSellerZipCode.Enabled = true;
+				stbSellerZipCode.Enabled = dafBirthday.Enabled = true;
 
 				newCustomer = true;
 		    }
