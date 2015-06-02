@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using LivingSmartBusinessLogic;
 
 namespace LivingSmartBusinessLogic.Model
 {
     /// <summary>
-    /// 
+    /// Given a list of cases and estate agents, this class is responsible for distributing
+    /// cases to estate agents based on a given priority.
     /// </summary>
     public class OpenHouse
     {

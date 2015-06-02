@@ -34,7 +34,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Contructor der instantierer db
         /// </summary>
-        public StatisticsController()
+        private StatisticsController()
         {
             db = StatisticsDBFactory.GetDBL();
         }

@@ -14,6 +14,7 @@ namespace LivingSmartBusinessLogic.Controller
 		#region Singleton
 
 		private static CityController _instance;
+
 		public static CityController Instance
 		{
 			get { return _instance ?? (_instance = new CityController()); }

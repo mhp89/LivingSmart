@@ -96,7 +96,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the AskingPrice created.</returns>
         public int CreateAskingPrice(AskingPrice askingPrice, int caseId)
         {
-            int askingPriceId = 0;
+            int askingPriceId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private EstateAgent activeEstateAgent;
 
-        public EstateAgentController()
+        private EstateAgentController()
         {
             estateAgentCatalog = new EstateAgentCatalog();
             appointmentCatalog = new AppointmentCatalog();

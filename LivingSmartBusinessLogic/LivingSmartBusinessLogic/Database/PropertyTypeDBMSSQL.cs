@@ -90,7 +90,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the PropertyType created.</returns>
         public int CreatePropertyType(PropertyType propertyType)
         {
-            int propertyTypeId = 0;
+            int propertyTypeId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

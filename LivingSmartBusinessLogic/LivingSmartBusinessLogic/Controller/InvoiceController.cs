@@ -3,6 +3,9 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
 {
+    /// <summary>
+    /// Hold the information for an InvoiceController.
+    /// </summary>
     public class InvoiceController
 	{
 		#region Singleton
@@ -15,10 +18,9 @@ namespace LivingSmartBusinessLogic.Controller
 
 		#endregion
 
-
         private InvoiceCatalog invoiceCatalog;
 
-        public InvoiceController()
+        private InvoiceController()
         {
             invoiceCatalog = new InvoiceCatalog();
         }

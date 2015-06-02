@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         private Customer activeCustomer;
 
-        public CustomerController()
+        private CustomerController()
         {
             customerCatalog = new CustomerCatalog();
         }

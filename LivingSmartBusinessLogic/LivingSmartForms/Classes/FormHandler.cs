@@ -23,8 +23,7 @@ namespace LivingSmartForms.Classes
 			Application.Run(new Login());//Starter en ny applikation med formen Login
 		}
 
-
-		public static void ShowBaseForm(EstateAgent estateAgent)
+        public static void ShowBaseForm(EstateAgent estateAgent)
 		{
 			Thread loginThread = new Thread(RunBaseForm);//Kalder metoden RunLogin i en ny tråd
 			loginThread.SetApartmentState(ApartmentState.STA);//Indstiller tråden til at køre med en enkelt tråd

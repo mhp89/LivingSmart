@@ -62,73 +62,6 @@ namespace LivingSmartForms.DropIns
             // 
             this.pnlBottomControlsBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-<<<<<<< HEAD
-			this.pnlBottomControlsBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.pnlBottomControlsBorder.Location = new System.Drawing.Point(0, 0);
-			this.pnlBottomControlsBorder.Name = "pnlBottomControlsBorder";
-			this.pnlBottomControlsBorder.Size = new System.Drawing.Size(498, 2);
-			this.pnlBottomControlsBorder.TabIndex = 1;
-			// 
-			// pnlBottomControls
-			// 
-			this.pnlBottomControls.Controls.Add(this.btnCancel);
-			this.pnlBottomControls.Controls.Add(this.btnSave);
-			this.pnlBottomControls.Dock = System.Windows.Forms.DockStyle.Bottom;
-			this.pnlBottomControls.Location = new System.Drawing.Point(0, 0);
-			this.pnlBottomControls.Margin = new System.Windows.Forms.Padding(0);
-			this.pnlBottomControls.Name = "pnlBottomControls";
-			this.pnlBottomControls.Padding = new System.Windows.Forms.Padding(10, 10, 0, 0);
-			this.pnlBottomControls.Size = new System.Drawing.Size(498, 50);
-			this.pnlBottomControls.TabIndex = 0;
-			// 
-			// btnCancel
-			// 
-			this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-			this.btnCancel.AutoSize = true;
-			this.btnCancel.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnCancel.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnCancel.FlatAppearance.BorderSize = 0;
-			this.btnCancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnCancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnCancel.Location = new System.Drawing.Point(17, 10);
-			this.btnCancel.Margin = new System.Windows.Forms.Padding(20, 10, 0, 10);
-			this.btnCancel.Name = "btnCancel";
-			this.btnCancel.Size = new System.Drawing.Size(95, 30);
-			this.btnCancel.TabIndex = 1;
-			this.btnCancel.Text = "Annullér";
-			this.btnCancel.UseVisualStyleBackColor = false;
-			this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-			// 
-			// btnSave
-			// 
-			this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-			this.btnSave.AutoSize = true;
-			this.btnSave.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnSave.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.btnSave.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnSave.FlatAppearance.BorderSize = 0;
-			this.btnSave.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnSave.Location = new System.Drawing.Point(396, 10);
-			this.btnSave.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
-			this.btnSave.Name = "btnSave";
-			this.btnSave.Size = new System.Drawing.Size(82, 30);
-			this.btnSave.TabIndex = 0;
-			this.btnSave.Text = "Opret";
-			this.btnSave.UseVisualStyleBackColor = false;
-			this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-			// 
-			// pnlSubmenuHolder
-			// 
-			this.pnlSubmenuHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-=======
             this.pnlBottomControlsBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.pnlBottomControlsBorder.Location = new System.Drawing.Point(0, 0);
             this.pnlBottomControlsBorder.Name = "pnlBottomControlsBorder";
@@ -163,7 +96,11 @@ namespace LivingSmartForms.DropIns
             this.btnCancel.Location = new System.Drawing.Point(17, 10);
             this.btnCancel.Margin = new System.Windows.Forms.Padding(20, 10, 0, 10);
             this.btnCancel.Name = "btnCancel";
+<<<<<<< HEAD
             this.btnCancel.Size = new System.Drawing.Size(114, 30);
+=======
+            this.btnCancel.Size = new System.Drawing.Size(95, 30);
+>>>>>>> origin/OpenHouse#76
             this.btnCancel.TabIndex = 1;
             this.btnCancel.Text = "Annullér";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -182,19 +119,27 @@ namespace LivingSmartForms.DropIns
             this.btnSave.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSave.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.btnSave.Location = new System.Drawing.Point(392, 10);
+<<<<<<< HEAD
+			this.btnSave.Location = new System.Drawing.Point(396, 10);
             this.btnSave.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(86, 30);
+			this.btnSave.Size = new System.Drawing.Size(82, 30);
             this.btnSave.TabIndex = 0;
-            this.btnSave.Text = "Gem";
+			this.btnSave.Text = "Opret";
+=======
+            this.btnSave.Location = new System.Drawing.Point(396, 10);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(82, 30);
+            this.btnSave.TabIndex = 0;
+            this.btnSave.Text = "Opret";
+>>>>>>> origin/OpenHouse#76
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // pnlSubmenuHolder
             // 
             this.pnlSubmenuHolder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
->>>>>>> 70a7a52cb5e6106c22ca1cef9f4a2c30bf7e4163
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlSubmenuHolder.Controls.Add(this.pnlSubmenuBorder);
             this.pnlSubmenuHolder.Controls.Add(this.pnlSubmenu);
@@ -231,7 +176,11 @@ namespace LivingSmartForms.DropIns
             this.lblNewCustomer.Location = new System.Drawing.Point(10, 15);
             this.lblNewCustomer.Margin = new System.Windows.Forms.Padding(0);
             this.lblNewCustomer.Name = "lblNewCustomer";
+<<<<<<< HEAD
             this.lblNewCustomer.Size = new System.Drawing.Size(99, 25);
+=======
+            this.lblNewCustomer.Size = new System.Drawing.Size(76, 20);
+>>>>>>> origin/OpenHouse#76
             this.lblNewCustomer.TabIndex = 0;
             this.lblNewCustomer.Text = "Ny kunde";
             this.lblNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
