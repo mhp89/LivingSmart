@@ -67,8 +67,8 @@ namespace LivingSmartBusinessLogic.Model
         /// <summary>
         /// Helper method - shuffles a list of values
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="list"></param>
+        /// <typeparam name="T">Type of elements in the list.</typeparam>
+        /// <param name="list">The list of elements to be shuffled.</param>
         private void Shuffle<T>(List<T> list)
         {
             if (list.Count >= 2)
