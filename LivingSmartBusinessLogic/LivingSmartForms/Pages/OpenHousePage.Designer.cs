@@ -114,7 +114,7 @@ namespace LivingSmartForms.Pages
             this.btnSelectProperties.Name = "btnSelectProperties";
             this.btnSelectProperties.Size = new System.Drawing.Size(185, 30);
             this.btnSelectProperties.TabIndex = 3;
-            this.btnSelectProperties.Text = "V�lg ejendomme";
+            this.btnSelectProperties.Text = "Vælg ejendomme";
             this.btnSelectProperties.UseVisualStyleBackColor = false;
             this.btnSelectProperties.Click += new System.EventHandler(this.btnSelectProperties_Click);
             // 
@@ -134,7 +134,7 @@ namespace LivingSmartForms.Pages
             this.btnSelectEstateAgents.Name = "btnSelectEstateAgents";
             this.btnSelectEstateAgents.Size = new System.Drawing.Size(161, 30);
             this.btnSelectEstateAgents.TabIndex = 2;
-            this.btnSelectEstateAgents.Text = "V�lg m�glere";
+            this.btnSelectEstateAgents.Text = "Vælg mæglere";
             this.btnSelectEstateAgents.UseVisualStyleBackColor = false;
             this.btnSelectEstateAgents.Click += new System.EventHandler(this.btnSelectEstateAgents_Click);
             // 
@@ -149,7 +149,7 @@ namespace LivingSmartForms.Pages
             this.hdrOpenHouse.Name = "hdrOpenHouse";
             this.hdrOpenHouse.Size = new System.Drawing.Size(1115, 25);
             this.hdrOpenHouse.TabIndex = 5;
-            this.hdrOpenHouse.Text = "�bent hus";
+            this.hdrOpenHouse.Text = "Åbent hus";
             // 
             // ctcOpenHouse
             // 
@@ -210,13 +210,13 @@ namespace LivingSmartForms.Pages
             this.openHousePair5.Size = new System.Drawing.Size(195, 450);
             this.openHousePair5.TabIndex = 4;
             // 
-            // OpenHouse
+            // OpenHousePage
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.ctcOpenHouse);
             this.Controls.Add(this.pnlSubmenuHolder);
             this.Controls.Add(this.hdrOpenHouse);
-            this.Name = "OpenHouse";
+            this.Name = "OpenHousePage";
             this.Size = new System.Drawing.Size(1135, 560);
             this.pnlSubmenuHolder.ResumeLayout(false);
             this.pnlSubmenu.ResumeLayout(false);
