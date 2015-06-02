@@ -100,7 +100,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the EstateAgent created.</returns>
         public int CreateEstateAgent(EstateAgent estateAgent)
         {
-            int estateagentId = 0;
+            int estateagentId = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

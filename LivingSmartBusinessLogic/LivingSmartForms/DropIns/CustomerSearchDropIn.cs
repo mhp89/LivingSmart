@@ -31,7 +31,7 @@ namespace LivingSmartForms.DropIns
 		private CustomerSearchDropIn() : base(null)
 		{ }
 
-		protected override void Close()
+		protected override void Closing()
 		{
 			FinishSearch(null);
 		}

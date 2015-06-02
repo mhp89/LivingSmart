@@ -24,7 +24,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "SELECT * FROM Case WHERE EstateAgentUId = " + estateAgentId + ";",
+                CommandText = "SELECT * FROM [Case] WHERE EstateAgentUId = " + estateAgentId + ";",
             };
 
             try
@@ -91,7 +91,7 @@ namespace LivingSmartBusinessLogic.DB
 			SqlCommand cmd = new SqlCommand
 			{
 				Connection = connection,
-				CommandText = "SELECT * FROM Case;",
+				CommandText = "SELECT * FROM [Case];",
 			};
 
 			try
@@ -164,7 +164,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "UPDATE Case SET SellerId = (@SellerId), BuyerId = (@BuyerId), EstateAgentId = (@EstateAgentId), CreationDate = (@CreationDate), Status = (@Status)" +
+                CommandText = "UPDATE [Case] SET SellerId = (@SellerId), BuyerId = (@BuyerId), EstateAgentId = (@EstateAgentId), CreationDate = (@CreationDate), Status = (@Status)" +
                 "DateOfSale = (@DateOfSale), TransferDate = (@TransferDate), DateOfCompletion = (@DateOfCompletion), SellingPrice = (@SellingPrice), Description = (@Description)" +
                 "PropertyTypeId = (@PropertyTypeId), LandRegistryNumber = (@LandRegistryNumber), Address = (@Address), ZipCode = (@ZipCode), Neighborhood = (@Neighborhood)" +
                 "PublicRating = (@PublicRating), LandValue = (@LandValue), GroundArea = (@GroundArea), LivingArea = (@LivingArea), BuiltArea = (@BuiltArea)" +
@@ -234,7 +234,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Case OUTPUT INSERTED.CaseId VALUES (" +
+                CommandText = "INSERT INTO [Case] OUTPUT INSERTED.CaseId VALUES (" +
                     "@SellerId, @BuyerId, @EstateAgentId, @CreationDate, @Status,@DateOfSale, @TransferDate, @DateOfCompletion, @SellingPrice, @Description" +
                     "@PropertyTypeId, @LandRegistryNumber, @Address, @ZipCode, @Neighborhood, @PublicRating, @LandValue, @GroundArea, @LivingArea, @BuiltArea" +
                     "@BasementArea, @GarageArea, @BuiltYear, @EnergyClassification, @Floors, @Rooms, @Bedrooms, @Bathrooms, @Toilets, @View); "

@@ -28,10 +28,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region Methods
         
-        public void AddPartner(Partner partner)
-        {
-            partnerCatalog.AddToCatalog(partner);
-        }
+        
 		public void SetActivePartner(Partner activePartner)
 		{
 			this.activePartner = activePartner;
@@ -47,7 +44,8 @@ namespace LivingSmartBusinessLogic.Controller
 		public void SaveActivePartner()
 		{
 			partnerCatalog.Save(activePartner);
-			AddPartner(activePartner);
+			if (activePartner.Id != -1)
+				partnerCatalog.AddToCatalog(activePartner);
 		}
 
         

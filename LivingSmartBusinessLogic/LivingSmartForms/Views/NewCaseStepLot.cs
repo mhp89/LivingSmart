@@ -32,7 +32,7 @@ namespace LivingSmartForms.Views
 				CaseController.Instance.SetLandValue(Convert.ToInt32(stbLotValue.Text));
 				CaseController.Instance.SetGroundArea(Convert.ToInt32(stbLotArea.Text));
 				CaseController.Instance.SetBuiltArea(Convert.ToInt32(stbLotBuildArea.Text));
-				CaseController.Instance.SetGarageArea(Convert.ToInt32(stbLotGarageArea.Text));
+				CaseController.Instance.SetGarageArea((string.IsNullOrEmpty(stbLotGarageArea.Text)?0:Convert.ToInt32(stbLotGarageArea.Text)));
 				CaseController.Instance.SetView(Convert.ToInt32(stbLotView.Text));
             }
             return fielddataOk;
@@ -53,15 +53,7 @@ namespace LivingSmartForms.Views
 
 		private void stbLotZipCode_TextChanged(object sender, EventArgs e)
 		{
-			City city = null;
-
-			if (!string.IsNullOrEmpty(stbLotZipCode.Text))
-			{
-				int zipCode = Convert.ToInt32(stbLotZipCode.Text);
-				city = CityController.Instance.GetCity(zipCode);
-			}
-
-			lblLotCityCountry.Text = city != null ? city.District : "";
+			GeneralValidation.ZipCodeValidation(stbLotZipCode, lblLotCityCountry);
 		}
     }
 }

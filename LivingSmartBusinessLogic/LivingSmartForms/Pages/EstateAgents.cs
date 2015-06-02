@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Views;
@@ -29,8 +30,7 @@ namespace LivingSmartForms.Pages
 			var estateAgents = EstateAgentController.Instance.GetEstateAgents();
 			foreach (var estateAgent in estateAgents)
 			{
-				var control = new EstateAgentLine(baseForm, estateAgent);
-				control.Margin = Padding.Empty;
+				var control = new EstateAgentLine(baseForm, estateAgent) {Margin = Padding.Empty};
 				clsEstateAgents.AddControl(control, true);
 			}
 			sblActiveCases.Text = estateAgents.Count.ToString();
@@ -43,9 +43,16 @@ namespace LivingSmartForms.Pages
 			UpdateList();
 		}
 
+		private void NewEstateAgentAdded(EstateAgent estateAgent)
+		{
+			var control = new EstateAgentLine(baseForm, estateAgent) { Margin = Padding.Empty };
+			clsEstateAgents.AddControl(control);
+			sblActiveCases.Text = clsEstateAgents.Controls.Count.ToString();
+		}
+
 		private void btnNewEstateAgents_Click(object sender, EventArgs e)
 		{
-			baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm));
+			baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm, NewEstateAgentAdded));
 		}
 	}
 }

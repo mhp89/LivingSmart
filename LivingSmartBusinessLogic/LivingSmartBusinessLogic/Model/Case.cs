@@ -1,6 +1,5 @@
 using System;
 using LivingSmartBusinessLogic.Controller;
-using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -154,7 +153,7 @@ namespace LivingSmartBusinessLogic.Model
 
         internal void CloseCase()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         
         /// <summary>

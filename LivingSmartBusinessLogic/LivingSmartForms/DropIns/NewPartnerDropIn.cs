@@ -16,7 +16,8 @@ namespace LivingSmartForms.DropIns
 	{
 		private NewPartner newPartnerForm;
 
-		public NewPartnerDropIn(BaseForm baseForm) : base(baseForm)
+		public NewPartnerDropIn(BaseForm baseForm, DropInClosed onDropInClosed)
+			: base(baseForm, onDropInClosed)
 		{
 			InitializeComponent();
 

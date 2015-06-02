@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
 
@@ -17,9 +18,14 @@ namespace LivingSmartForms.DropIns
 	{
 		private NewEstateAgent newEstateAgentForm;
 
-		public NewEstateAgentDropIn(BaseForm baseForm) : base(baseForm)
+		private NewEstateAgentFinish callback;
+		public delegate void NewEstateAgentFinish(EstateAgent customer);
+
+		public NewEstateAgentDropIn(BaseForm baseForm, NewEstateAgentFinish callback) : base(baseForm)
 		{
 			InitializeComponent();
+
+			this.callback = callback;
 
 			newEstateAgentForm = new NewEstateAgent(baseForm);
 			newEstateAgentForm.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
@@ -30,23 +36,24 @@ namespace LivingSmartForms.DropIns
 		{
 			return "NewEstateAgent";
 		}
-		protected override void Close()
+		private void FinishCreating(EstateAgent estateAgent)
 		{
 			EstateAgentController.Instance.CancelActiveEstateAgent();
-			base.Close();
+			callback(estateAgent);
+			Close();
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			Close();
+			FinishCreating(null);
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
 			if (newEstateAgentForm.Save())
 			{
-				//EstateAgent saved
-				Close();
+				//Customer saved
+				FinishCreating(newEstateAgentForm.CreatedEstateAgent);
 			}
 		}
 	}

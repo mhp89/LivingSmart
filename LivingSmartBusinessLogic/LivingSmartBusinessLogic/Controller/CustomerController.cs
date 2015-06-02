@@ -44,7 +44,8 @@ namespace LivingSmartBusinessLogic.Controller
         public void SaveActiveCustomer()
         {
 			customerCatalog.Save(activeCustomer);
-			customerCatalog.AddToCatalog(activeCustomer);
+			if(activeCustomer.Id != -1)
+				customerCatalog.AddToCatalog(activeCustomer);
         }
         #endregion
 

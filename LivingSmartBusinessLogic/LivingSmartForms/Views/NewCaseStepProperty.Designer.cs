@@ -31,7 +31,12 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
 			this.tlpProperty = new System.Windows.Forms.TableLayoutPanel();
-			this.label1 = new System.Windows.Forms.Label();
+			this.stbDistanceToSchool = new SmartControls.SmartTextBox();
+			this.stbDistanceToShopping = new SmartControls.SmartTextBox();
+			this.stbDistanceToCenter = new SmartControls.SmartTextBox();
+			this.lblDistanceToSchool = new System.Windows.Forms.Label();
+			this.lblDistanceToCenter = new System.Windows.Forms.Label();
+			this.lblDistanceToShopping = new System.Windows.Forms.Label();
 			this.stbPropertyToilets = new SmartControls.SmartTextBox();
 			this.stbPropertyBathrooms = new SmartControls.SmartTextBox();
 			this.stbPropertyBedrooms = new SmartControls.SmartTextBox();
@@ -41,7 +46,6 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBuildYear = new SmartControls.SmartTextBox();
 			this.stbPropertyBasement = new SmartControls.SmartTextBox();
 			this.stbPropertyArea = new SmartControls.SmartTextBox();
-			this.stbPropertyType = new SmartControls.SmartTextBox();
 			this.lblPropertyToilets = new System.Windows.Forms.Label();
 			this.lblPropertyBasementArea = new System.Windows.Forms.Label();
 			this.lblPropertyType = new System.Windows.Forms.Label();
@@ -52,7 +56,7 @@ namespace LivingSmartForms.Views
 			this.lblPropertyRooms = new System.Windows.Forms.Label();
 			this.lblPropertyBedrooms = new System.Windows.Forms.Label();
 			this.lblPropertyBathrooms = new System.Windows.Forms.Label();
-			this.clsDistances = new SmartControls.ControlList();
+			this.cboPropertyType = new System.Windows.Forms.ComboBox();
 			this.header1 = new SmartControls.Header();
 			this.tlpProperty.SuspendLayout();
 			this.SuspendLayout();
@@ -65,7 +69,12 @@ namespace LivingSmartForms.Views
 			this.tlpProperty.ColumnCount = 2;
 			this.tlpProperty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
 			this.tlpProperty.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-			this.tlpProperty.Controls.Add(this.label1, 0, 10);
+			this.tlpProperty.Controls.Add(this.stbDistanceToSchool, 1, 12);
+			this.tlpProperty.Controls.Add(this.stbDistanceToShopping, 1, 10);
+			this.tlpProperty.Controls.Add(this.stbDistanceToCenter, 1, 11);
+			this.tlpProperty.Controls.Add(this.lblDistanceToSchool, 0, 12);
+			this.tlpProperty.Controls.Add(this.lblDistanceToCenter, 0, 11);
+			this.tlpProperty.Controls.Add(this.lblDistanceToShopping, 0, 10);
 			this.tlpProperty.Controls.Add(this.stbPropertyToilets, 1, 9);
 			this.tlpProperty.Controls.Add(this.stbPropertyBathrooms, 1, 8);
 			this.tlpProperty.Controls.Add(this.stbPropertyBedrooms, 1, 7);
@@ -75,7 +84,6 @@ namespace LivingSmartForms.Views
 			this.tlpProperty.Controls.Add(this.stbPropertyBuildYear, 1, 3);
 			this.tlpProperty.Controls.Add(this.stbPropertyBasement, 1, 2);
 			this.tlpProperty.Controls.Add(this.stbPropertyArea, 1, 1);
-			this.tlpProperty.Controls.Add(this.stbPropertyType, 1, 0);
 			this.tlpProperty.Controls.Add(this.lblPropertyToilets, 0, 9);
 			this.tlpProperty.Controls.Add(this.lblPropertyBasementArea, 0, 2);
 			this.tlpProperty.Controls.Add(this.lblPropertyType, 0, 0);
@@ -86,11 +94,11 @@ namespace LivingSmartForms.Views
 			this.tlpProperty.Controls.Add(this.lblPropertyRooms, 0, 6);
 			this.tlpProperty.Controls.Add(this.lblPropertyBedrooms, 0, 7);
 			this.tlpProperty.Controls.Add(this.lblPropertyBathrooms, 0, 8);
-			this.tlpProperty.Controls.Add(this.clsDistances, 1, 10);
+			this.tlpProperty.Controls.Add(this.cboPropertyType, 1, 0);
 			this.tlpProperty.Location = new System.Drawing.Point(0, 45);
 			this.tlpProperty.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpProperty.Name = "tlpProperty";
-			this.tlpProperty.RowCount = 11;
+			this.tlpProperty.RowCount = 13;
 			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
@@ -102,21 +110,135 @@ namespace LivingSmartForms.Views
 			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-			this.tlpProperty.Size = new System.Drawing.Size(480, 480);
+			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tlpProperty.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tlpProperty.Size = new System.Drawing.Size(480, 520);
 			this.tlpProperty.TabIndex = 0;
 			// 
-			// label1
+			// stbDistanceToSchool
 			// 
-			this.label1.AutoSize = true;
-			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.label1.Location = new System.Drawing.Point(0, 400);
-			this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(192, 70);
-			this.label1.TabIndex = 21;
-			this.label1.Text = "Afstande";
+			this.stbDistanceToSchool.AllowComma = false;
+			this.stbDistanceToSchool.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbDistanceToSchool.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbDistanceToSchool.AutomaticValidation = true;
+			this.stbDistanceToSchool.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDistanceToSchool.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbDistanceToSchool.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbDistanceToSchool.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbDistanceToSchool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDistanceToSchool.Location = new System.Drawing.Point(192, 480);
+			this.stbDistanceToSchool.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbDistanceToSchool.MaxLength = 50;
+			this.stbDistanceToSchool.MinLength = -1;
+			this.stbDistanceToSchool.Multiline = false;
+			this.stbDistanceToSchool.Name = "stbDistanceToSchool";
+			this.stbDistanceToSchool.NumericOnly = true;
+			this.stbDistanceToSchool.Placeholder = null;
+			this.stbDistanceToSchool.RegularExpression = null;
+			this.stbDistanceToSchool.Required = true;
+			this.stbDistanceToSchool.Size = new System.Drawing.Size(288, 30);
+			this.stbDistanceToSchool.Suffix = null;
+			this.stbDistanceToSchool.TabIndex = 26;
+			this.stbDistanceToSchool.TabStop = false;
+			this.stbDistanceToSchool.UseSystemPasswordChar = false;
+			// 
+			// stbDistanceToShopping
+			// 
+			this.stbDistanceToShopping.AllowComma = false;
+			this.stbDistanceToShopping.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbDistanceToShopping.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbDistanceToShopping.AutomaticValidation = true;
+			this.stbDistanceToShopping.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDistanceToShopping.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbDistanceToShopping.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbDistanceToShopping.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbDistanceToShopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDistanceToShopping.Location = new System.Drawing.Point(192, 400);
+			this.stbDistanceToShopping.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbDistanceToShopping.MaxLength = 50;
+			this.stbDistanceToShopping.MinLength = -1;
+			this.stbDistanceToShopping.Multiline = false;
+			this.stbDistanceToShopping.Name = "stbDistanceToShopping";
+			this.stbDistanceToShopping.NumericOnly = true;
+			this.stbDistanceToShopping.Placeholder = null;
+			this.stbDistanceToShopping.RegularExpression = null;
+			this.stbDistanceToShopping.Required = true;
+			this.stbDistanceToShopping.Size = new System.Drawing.Size(288, 30);
+			this.stbDistanceToShopping.Suffix = null;
+			this.stbDistanceToShopping.TabIndex = 25;
+			this.stbDistanceToShopping.TabStop = false;
+			this.stbDistanceToShopping.UseSystemPasswordChar = false;
+			// 
+			// stbDistanceToCenter
+			// 
+			this.stbDistanceToCenter.AllowComma = false;
+			this.stbDistanceToCenter.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbDistanceToCenter.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbDistanceToCenter.AutomaticValidation = true;
+			this.stbDistanceToCenter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbDistanceToCenter.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbDistanceToCenter.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbDistanceToCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbDistanceToCenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbDistanceToCenter.Location = new System.Drawing.Point(192, 440);
+			this.stbDistanceToCenter.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbDistanceToCenter.MaxLength = 50;
+			this.stbDistanceToCenter.MinLength = -1;
+			this.stbDistanceToCenter.Multiline = false;
+			this.stbDistanceToCenter.Name = "stbDistanceToCenter";
+			this.stbDistanceToCenter.NumericOnly = true;
+			this.stbDistanceToCenter.Placeholder = null;
+			this.stbDistanceToCenter.RegularExpression = null;
+			this.stbDistanceToCenter.Required = true;
+			this.stbDistanceToCenter.Size = new System.Drawing.Size(288, 30);
+			this.stbDistanceToCenter.Suffix = null;
+			this.stbDistanceToCenter.TabIndex = 24;
+			this.stbDistanceToCenter.TabStop = false;
+			this.stbDistanceToCenter.UseSystemPasswordChar = false;
+			// 
+			// lblDistanceToSchool
+			// 
+			this.lblDistanceToSchool.AutoSize = true;
+			this.lblDistanceToSchool.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblDistanceToSchool.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDistanceToSchool.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDistanceToSchool.Location = new System.Drawing.Point(0, 480);
+			this.lblDistanceToSchool.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblDistanceToSchool.Name = "lblDistanceToSchool";
+			this.lblDistanceToSchool.Size = new System.Drawing.Size(192, 30);
+			this.lblDistanceToSchool.TabIndex = 23;
+			this.lblDistanceToSchool.Text = "Afstand til skole";
+			this.lblDistanceToSchool.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblDistanceToCenter
+			// 
+			this.lblDistanceToCenter.AutoSize = true;
+			this.lblDistanceToCenter.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblDistanceToCenter.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDistanceToCenter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDistanceToCenter.Location = new System.Drawing.Point(0, 440);
+			this.lblDistanceToCenter.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblDistanceToCenter.Name = "lblDistanceToCenter";
+			this.lblDistanceToCenter.Size = new System.Drawing.Size(192, 30);
+			this.lblDistanceToCenter.TabIndex = 22;
+			this.lblDistanceToCenter.Text = "Afstand til centrum";
+			this.lblDistanceToCenter.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblDistanceToShopping
+			// 
+			this.lblDistanceToShopping.AutoSize = true;
+			this.lblDistanceToShopping.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblDistanceToShopping.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDistanceToShopping.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDistanceToShopping.Location = new System.Drawing.Point(0, 400);
+			this.lblDistanceToShopping.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblDistanceToShopping.Name = "lblDistanceToShopping";
+			this.lblDistanceToShopping.Size = new System.Drawing.Size(192, 30);
+			this.lblDistanceToShopping.TabIndex = 21;
+			this.lblDistanceToShopping.Text = "Afstand til indkøb";
+			this.lblDistanceToShopping.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// stbPropertyToilets
 			// 
@@ -133,6 +255,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyToilets.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyToilets.MaxLength = 50;
 			this.stbPropertyToilets.MinLength = -1;
+			this.stbPropertyToilets.Multiline = false;
 			this.stbPropertyToilets.Name = "stbPropertyToilets";
 			this.stbPropertyToilets.NumericOnly = true;
 			this.stbPropertyToilets.Placeholder = null;
@@ -159,6 +282,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBathrooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBathrooms.MaxLength = 50;
 			this.stbPropertyBathrooms.MinLength = -1;
+			this.stbPropertyBathrooms.Multiline = false;
 			this.stbPropertyBathrooms.Name = "stbPropertyBathrooms";
 			this.stbPropertyBathrooms.NumericOnly = true;
 			this.stbPropertyBathrooms.Placeholder = null;
@@ -185,6 +309,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBedrooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBedrooms.MaxLength = 50;
 			this.stbPropertyBedrooms.MinLength = -1;
+			this.stbPropertyBedrooms.Multiline = false;
 			this.stbPropertyBedrooms.Name = "stbPropertyBedrooms";
 			this.stbPropertyBedrooms.NumericOnly = true;
 			this.stbPropertyBedrooms.Placeholder = null;
@@ -211,6 +336,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyRooms.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyRooms.MaxLength = 50;
 			this.stbPropertyRooms.MinLength = -1;
+			this.stbPropertyRooms.Multiline = false;
 			this.stbPropertyRooms.Name = "stbPropertyRooms";
 			this.stbPropertyRooms.NumericOnly = true;
 			this.stbPropertyRooms.Placeholder = null;
@@ -237,6 +363,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyFloors.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyFloors.MaxLength = 50;
 			this.stbPropertyFloors.MinLength = -1;
+			this.stbPropertyFloors.Multiline = false;
 			this.stbPropertyFloors.Name = "stbPropertyFloors";
 			this.stbPropertyFloors.NumericOnly = true;
 			this.stbPropertyFloors.Placeholder = null;
@@ -263,6 +390,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyEnergyMark.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyEnergyMark.MaxLength = 50;
 			this.stbPropertyEnergyMark.MinLength = -1;
+			this.stbPropertyEnergyMark.Multiline = false;
 			this.stbPropertyEnergyMark.Name = "stbPropertyEnergyMark";
 			this.stbPropertyEnergyMark.NumericOnly = false;
 			this.stbPropertyEnergyMark.Placeholder = null;
@@ -289,6 +417,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBuildYear.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBuildYear.MaxLength = 50;
 			this.stbPropertyBuildYear.MinLength = -1;
+			this.stbPropertyBuildYear.Multiline = false;
 			this.stbPropertyBuildYear.Name = "stbPropertyBuildYear";
 			this.stbPropertyBuildYear.NumericOnly = true;
 			this.stbPropertyBuildYear.Placeholder = null;
@@ -315,6 +444,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBasement.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyBasement.MaxLength = 50;
 			this.stbPropertyBasement.MinLength = -1;
+			this.stbPropertyBasement.Multiline = false;
 			this.stbPropertyBasement.Name = "stbPropertyBasement";
 			this.stbPropertyBasement.NumericOnly = true;
 			this.stbPropertyBasement.Placeholder = null;
@@ -341,6 +471,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyArea.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPropertyArea.MaxLength = 50;
 			this.stbPropertyArea.MinLength = -1;
+			this.stbPropertyArea.Multiline = false;
 			this.stbPropertyArea.Name = "stbPropertyArea";
 			this.stbPropertyArea.NumericOnly = true;
 			this.stbPropertyArea.Placeholder = null;
@@ -351,32 +482,6 @@ namespace LivingSmartForms.Views
 			this.stbPropertyArea.TabIndex = 1;
 			this.stbPropertyArea.TabStop = false;
 			this.stbPropertyArea.UseSystemPasswordChar = false;
-			// 
-			// stbPropertyType
-			// 
-			this.stbPropertyType.AllowComma = false;
-			this.stbPropertyType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbPropertyType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbPropertyType.AutomaticValidation = true;
-			this.stbPropertyType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbPropertyType.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbPropertyType.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbPropertyType.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPropertyType.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbPropertyType.Location = new System.Drawing.Point(192, 0);
-			this.stbPropertyType.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbPropertyType.MaxLength = 50;
-			this.stbPropertyType.MinLength = -1;
-			this.stbPropertyType.Name = "stbPropertyType";
-			this.stbPropertyType.NumericOnly = false;
-			this.stbPropertyType.Placeholder = null;
-			this.stbPropertyType.RegularExpression = null;
-			this.stbPropertyType.Required = true;
-			this.stbPropertyType.Size = new System.Drawing.Size(288, 30);
-			this.stbPropertyType.Suffix = null;
-			this.stbPropertyType.TabIndex = 0;
-			this.stbPropertyType.TabStop = false;
-			this.stbPropertyType.UseSystemPasswordChar = false;
 			// 
 			// lblPropertyToilets
 			// 
@@ -518,17 +623,15 @@ namespace LivingSmartForms.Views
 			this.lblPropertyBathrooms.Text = "Antal badeværelser";
 			this.lblPropertyBathrooms.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// clsDistances
+			// cboPropertyType
 			// 
-			this.clsDistances.AutoScroll = true;
-			this.clsDistances.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.clsDistances.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.clsDistances.Location = new System.Drawing.Point(192, 400);
-			this.clsDistances.Margin = new System.Windows.Forms.Padding(0);
-			this.clsDistances.Name = "clsDistances";
-			this.clsDistances.Size = new System.Drawing.Size(288, 80);
-			this.clsDistances.TabIndex = 22;
-			this.clsDistances.WrapContents = false;
+			this.cboPropertyType.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.cboPropertyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboPropertyType.FormattingEnabled = true;
+			this.cboPropertyType.Location = new System.Drawing.Point(195, 3);
+			this.cboPropertyType.Name = "cboPropertyType";
+			this.cboPropertyType.Size = new System.Drawing.Size(282, 21);
+			this.cboPropertyType.TabIndex = 27;
 			// 
 			// header1
 			// 
@@ -550,7 +653,7 @@ namespace LivingSmartForms.Views
 			this.Controls.Add(this.tlpProperty);
 			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "NewCaseStepProperty";
-			this.Size = new System.Drawing.Size(480, 525);
+			this.Size = new System.Drawing.Size(480, 565);
 			this.tlpProperty.ResumeLayout(false);
 			this.tlpProperty.PerformLayout();
 			this.ResumeLayout(false);
@@ -578,10 +681,14 @@ namespace LivingSmartForms.Views
         private SmartControls.SmartTextBox stbPropertyEnergyMark;
         private SmartControls.SmartTextBox stbPropertyBuildYear;
         private SmartControls.SmartTextBox stbPropertyBasement;
-        private SmartControls.SmartTextBox stbPropertyArea;
-        private SmartControls.SmartTextBox stbPropertyType;
-		private System.Windows.Forms.Label label1;
-		private SmartControls.ControlList clsDistances;
+		private SmartControls.SmartTextBox stbPropertyArea;
+		private System.Windows.Forms.Label lblDistanceToShopping;
 		private SmartControls.Header header1;
+		private SmartTextBox stbDistanceToSchool;
+		private SmartTextBox stbDistanceToShopping;
+		private SmartTextBox stbDistanceToCenter;
+		private System.Windows.Forms.Label lblDistanceToSchool;
+		private System.Windows.Forms.Label lblDistanceToCenter;
+		private System.Windows.Forms.ComboBox cboPropertyType;
     }
 }

@@ -101,7 +101,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Customer created.</returns>
         public int CreateCustomer(Customer customer)
         {
-            int customerID = 0;
+            int customerID = -1;
 
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand

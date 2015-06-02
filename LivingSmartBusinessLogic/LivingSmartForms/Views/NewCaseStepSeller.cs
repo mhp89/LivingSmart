@@ -20,8 +20,7 @@ namespace LivingSmartForms.Views
 	    private BaseForm baseForm;
 
 	    private bool newCustomer = true;
-	    private Customer existingCustomer;
-	    private EstateAgent estateAgent;
+	    private Customer createdCustomer;
 
         public NewCaseStepSeller(BaseForm baseForm)
         {
@@ -37,24 +36,36 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				Customer customer;
+				//Hvis der skal oprettes en ny kunde, og kunden ikke allerede er oprettet,
+				//ellers opdatere den oprettede.
 				if (newCustomer)
 				{
-					customer = CustomerController.Instance.MakeNewCustomer(stbSellerName.Text,
-						(DateTime) dafBirthday.GetDateTime(),
-						stbSellerAdress.Text,
-						Convert.ToInt32(stbSellerZipCode.Text),
-						stbSellerEmail.Text,
-						stbSellerPhone.Text);
+					if (CaseController.Instance.GetActiveCase().Seller == null)
+					{
+						createdCustomer = CustomerController.Instance.MakeNewCustomer(
+							stbSellerName.Text,
+							(DateTime) dafBirthday.GetDateTime(),
+							stbSellerAdress.Text,
+							Convert.ToInt32(stbSellerZipCode.Text),
+							stbSellerEmail.Text,
+							stbSellerPhone.Text
+							);
+						CaseController.Instance.SetSeller(createdCustomer);
+					}
+					else if (newCustomer)
+					{
+						//Sikrer at det er den oprettede kunde der ændres.
+						CustomerController.Instance.SetActiveCustomer(createdCustomer);
+
+						CustomerController.Instance.SetName(stbSellerName.Text);
+						CustomerController.Instance.SetDateOfBirth((DateTime) dafBirthday.GetDateTime());
+						CustomerController.Instance.SetAddress(stbSellerAdress.Text);
+						CustomerController.Instance.SetCity(Convert.ToInt32(stbSellerZipCode.Text));
+						CustomerController.Instance.SetEmail(stbSellerEmail.Text);
+						CustomerController.Instance.SetTelephone(stbSellerPhone.Text);
+					}
 					CustomerController.Instance.SaveActiveCustomer();
 				}
-				else
-				{
-					customer = existingCustomer;
-				}
-
-				CaseController.Instance.SetEstateAgent(estateAgent);
-				CaseController.Instance.SetSeller(customer);
 			}
 			return fielddataOk;
 	    }
@@ -74,21 +85,17 @@ namespace LivingSmartForms.Views
 		private void btnExistingCustomer_Click(object sender, EventArgs e)
 		{
 			if (newCustomer)
-			{
 				CustomerSearchDropIn.Show(baseForm, CustomerSearchFinish);
-			}
 			else
-			{
 				CustomerSearchFinish(null);
-			}
 		}
 
 	    private void CustomerSearchFinish(Customer customer)
 		{
+			CaseController.Instance.SetSeller(customer);
+
 		    if (customer != null)
 		    {
-			    existingCustomer = customer;
-
 			    stbSellerName.Text = customer.Name;
 				stbSellerAdress.Text = customer.Address;
 				stbSellerPhone.Text = customer.Telephone;
@@ -97,35 +104,37 @@ namespace LivingSmartForms.Views
 			    dafBirthday.SetDate(customer.DateOfBirth);
 			    btnFindCustomer.Text = "Ryd kunde";
 
-			    stbSellerName.Enabled = stbSellerAdress.Enabled = 
-				stbSellerPhone.Enabled = stbSellerEmail.Enabled = 
-				stbSellerZipCode.Enabled = dafBirthday.Enabled = false;
+				SetSellerFieldsEnabled(false);
 
 			    newCustomer = false;
 		    }
 		    else
 			{
-				stbSellerName.Text = "";
-				stbSellerAdress.Text = "";
-				stbSellerPhone.Text = "";
-				stbSellerEmail.Text = "";
+				stbSellerName.Text = stbSellerAdress.Text = 
+				stbSellerPhone.Text = stbSellerEmail.Text = 
 				stbSellerZipCode.Text = "";
+
 				btnFindCustomer.Text = "Find kunde";
 				dafBirthday.ClearDate();
 
-				stbSellerName.Enabled = stbSellerAdress.Enabled =
-				stbSellerPhone.Enabled = stbSellerEmail.Enabled =
-				stbSellerZipCode.Enabled = dafBirthday.Enabled = true;
+				SetSellerFieldsEnabled(true);
 
 				newCustomer = true;
 		    }
+	    }
+
+	    private void SetSellerFieldsEnabled(bool newState)
+		{
+			stbSellerName.Enabled = stbSellerAdress.Enabled =
+			stbSellerPhone.Enabled = stbSellerEmail.Enabled =
+			stbSellerZipCode.Enabled = dafBirthday.Enabled = newState;
 	    }
 
 	    private void UpdateEstateAgent(EstateAgent estateAgent)
 		{
 			if (estateAgent != null)
 			{
-				this.estateAgent = estateAgent;
+				CaseController.Instance.SetEstateAgent(estateAgent);
 
 				lblEstateAgentName.Text = estateAgent.Name;
 			}
@@ -138,18 +147,7 @@ namespace LivingSmartForms.Views
 		
 		private void stbSellerZipCode_TextChanged(object sender, EventArgs e)
 		{
-			City city = null;
-
-			if (stbSellerZipCode.Validate())
-			{
-				int zipCode = Convert.ToInt32(stbSellerZipCode.Text);
-				city = CityController.Instance.GetCity(zipCode);
-
-				if (city == null)
-					stbSellerZipCode.SetError("Ugyldigt postnummer");
-			}
-
-			lblSellerCityCountry.Text = city != null ? city.District : "";
+			GeneralValidation.ZipCodeValidation(stbSellerZipCode, lblSellerCityCountry);
 		}
     }
 }

@@ -45,7 +45,7 @@ namespace LivingSmartForms.Pages
 
 		private void btnNewEstateAgents_Click(object sender, EventArgs e)
 		{
-			baseForm.ShowDropIn(new NewPartnerDropIn(baseForm));
+			baseForm.ShowDropIn(new NewPartnerDropIn(baseForm, UpdateList));
 		}
 	}
 }

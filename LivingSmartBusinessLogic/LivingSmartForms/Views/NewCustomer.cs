@@ -16,6 +16,8 @@ namespace LivingSmartForms.Views
 {
 	public partial class NewCustomer : UserControl
     {
+		public Customer CreatedUser { get; private set; }
+
         public NewCustomer(BaseForm baseForm)
         {
             InitializeComponent();
@@ -26,13 +28,19 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
+				CreatedUser = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
 					(DateTime) dafCustomerBirthday.GetDateTime(),
 					stbCustomerAddress.Text,
 					Convert.ToInt32(stbCustomerZipCode.Text),
 					stbCustomerEmail.Text,
 					stbCustomerPhone.Text);
 				CustomerController.Instance.SaveActiveCustomer();
+
+				if (CreatedUser.Id == -1)
+				{
+					MessageBox.Show("Tilykke, du fandt en fejl!");
+					fielddataOk = false;
+				}
 			}
 			return fielddataOk;
 		}
@@ -53,18 +61,7 @@ namespace LivingSmartForms.Views
 
 		private void stbCustomerZipCode_TextChanged(object sender, EventArgs e)
 		{
-			City city = null;
-
-			if (stbCustomerZipCode.Validate())
-			{
-				int zipCode = Convert.ToInt32(stbCustomerZipCode.Text);
-				city = CityController.Instance.GetCity(zipCode);
-
-				if (city == null)
-					stbCustomerZipCode.SetError("Ugyldigt postnummer");
-			}
-
-			lblCustomerCityCountry.Text = city != null ? city.District : "";
+			GeneralValidation.ZipCodeValidation(stbCustomerZipCode, lblCustomerCityCountry);
 		}
     }
 }

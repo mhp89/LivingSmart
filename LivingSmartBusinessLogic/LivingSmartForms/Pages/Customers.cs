@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Views;
@@ -30,11 +31,10 @@ namespace LivingSmartForms.Pages
 			var customers = CustomerController.Instance.GetCustomers();
 			foreach (var customer in customers)
 			{
-				var control = new CustomerLine(baseForm, customer);
-				control.Margin = Padding.Empty;
+				var control = new CustomerLine(baseForm, customer) {Margin = Padding.Empty};
 				clsCustomers.AddControl(control, true);
 			}
-			sblCustomers.Text = customers.Count.ToString();
+			sblCustomers.Text = clsCustomers.Controls.Count.ToString();
 
 			clsCustomers.ResumeLayout();
 		}
@@ -44,9 +44,16 @@ namespace LivingSmartForms.Pages
 			UpdateList();
 		}
 
+		private void NewCustomerAdded(Customer customer)
+		{
+			var control = new CustomerLine(baseForm, customer) {Margin = Padding.Empty};
+			clsCustomers.AddControl(control);
+			sblCustomers.Text = clsCustomers.Controls.Count.ToString();
+		}
+
 		private void btnNewCustomer_Click(object sender, EventArgs e)
 		{
-			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm));
+			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, NewCustomerAdded));
 		}
 	}
 }

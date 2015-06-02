@@ -45,7 +45,8 @@ namespace LivingSmartBusinessLogic.Controller
 		public void SaveActiveEstateAgent()
 		{
 			estateAgentCatalog.Save(activeEstateAgent);
-			AddEstateAgent(activeEstateAgent);
+			if (activeEstateAgent.Id != -1)
+				AddEstateAgent(activeEstateAgent);
         }
         #endregion
 

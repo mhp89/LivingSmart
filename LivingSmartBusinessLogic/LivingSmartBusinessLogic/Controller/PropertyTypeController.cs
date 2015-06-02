@@ -1,5 +1,6 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
 {
-    class PropertyTypeController
+	public class PropertyTypeController
     {
 
         #region Singleton
@@ -32,5 +33,10 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return propertyTypeCatalog.GetPropertyType(propertyTypeId);
         }
+
+		public ReadOnlyCollection<PropertyType> GetPropertyTypes()
+		{
+			return propertyTypeCatalog.GetPropertyTypes();
+		} 
     }
 }

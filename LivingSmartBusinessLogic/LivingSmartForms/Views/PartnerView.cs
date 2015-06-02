@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Model;
+using SmartControls;
 
 namespace LivingSmartForms.Views
 {
@@ -23,7 +24,7 @@ namespace LivingSmartForms.Views
 			lblTelephone.Text = partner.Telephone;
 			lblEmail.Text = partner.Email;
 
-			analogClock.Timezone = partner.Timezone;
+			pnlClockHolder.Controls.Add(new AnalogClock(partner.Timezone){Dock = DockStyle.Fill});
 		}
 
 		public PartnerView()

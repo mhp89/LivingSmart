@@ -13,8 +13,14 @@ namespace LivingSmartForms.Classes
 	public partial class BaseDropIn : UserControl
 	{
 		protected BaseForm baseForm;
-		public BaseDropIn(BaseForm baseForm)
+
+		public delegate void DropInClosed();
+
+		private DropInClosed OnDropInClosed;
+
+		public BaseDropIn(BaseForm baseForm, DropInClosed onDropInClosed=null)
 		{
+			OnDropInClosed = onDropInClosed;
 			this.baseForm = baseForm;
 			AutoScaleMode = AutoScaleMode.None;
 
@@ -41,7 +47,14 @@ namespace LivingSmartForms.Classes
 			Close();
 		}
 
-		protected virtual void Close()
+		public void Close()
+		{
+			if (OnDropInClosed != null)
+				OnDropInClosed();
+			Closing();
+		}
+
+		protected virtual void Closing()
 		{
 			baseForm.CloseDropIn(this);
 		}

@@ -31,6 +31,10 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
 			this.tlpNewEstateAgent = new System.Windows.Forms.TableLayoutPanel();
+			this.stbPassword = new SmartControls.SmartTextBox();
+			this.stbUsername = new SmartControls.SmartTextBox();
+			this.lblPassword = new System.Windows.Forms.Label();
+			this.lblUsername = new System.Windows.Forms.Label();
 			this.stbEmail = new SmartControls.SmartTextBox();
 			this.stbPhone = new SmartControls.SmartTextBox();
 			this.lblEstateAgentTerminationDate = new System.Windows.Forms.Label();
@@ -41,10 +45,6 @@ namespace LivingSmartForms.Views
 			this.stbName = new SmartControls.SmartTextBox();
 			this.dafStartDate = new LivingSmartForms.UserControls.DateField();
 			this.dafTerminationDate = new LivingSmartForms.UserControls.DateField();
-			this.lblUsername = new System.Windows.Forms.Label();
-			this.lblPassword = new System.Windows.Forms.Label();
-			this.stbUsername = new SmartControls.SmartTextBox();
-			this.stbPassword = new SmartControls.SmartTextBox();
 			this.tlpNewEstateAgent.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -81,6 +81,90 @@ namespace LivingSmartForms.Views
 			this.tlpNewEstateAgent.Size = new System.Drawing.Size(480, 280);
 			this.tlpNewEstateAgent.TabIndex = 5;
 			// 
+			// stbPassword
+			// 
+			this.stbPassword.AllowComma = false;
+			this.stbPassword.AllowDrop = true;
+			this.stbPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbPassword.AutomaticValidation = true;
+			this.stbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPassword.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPassword.Location = new System.Drawing.Point(120, 240);
+			this.stbPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbPassword.MaxLength = 50;
+			this.stbPassword.MinLength = -1;
+			this.stbPassword.Multiline = false;
+			this.stbPassword.Name = "stbPassword";
+			this.stbPassword.NumericOnly = false;
+			this.stbPassword.Placeholder = null;
+			this.stbPassword.RegularExpression = null;
+			this.stbPassword.Required = true;
+			this.stbPassword.Size = new System.Drawing.Size(360, 30);
+			this.stbPassword.Suffix = null;
+			this.stbPassword.TabIndex = 13;
+			this.stbPassword.TabStop = false;
+			this.stbPassword.UseSystemPasswordChar = false;
+			// 
+			// stbUsername
+			// 
+			this.stbUsername.AllowComma = false;
+			this.stbUsername.AllowDrop = true;
+			this.stbUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbUsername.AutomaticValidation = true;
+			this.stbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbUsername.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbUsername.Location = new System.Drawing.Point(120, 200);
+			this.stbUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbUsername.MaxLength = 50;
+			this.stbUsername.MinLength = -1;
+			this.stbUsername.Multiline = false;
+			this.stbUsername.Name = "stbUsername";
+			this.stbUsername.NumericOnly = false;
+			this.stbUsername.Placeholder = null;
+			this.stbUsername.RegularExpression = null;
+			this.stbUsername.Required = true;
+			this.stbUsername.Size = new System.Drawing.Size(360, 30);
+			this.stbUsername.Suffix = null;
+			this.stbUsername.TabIndex = 12;
+			this.stbUsername.TabStop = false;
+			this.stbUsername.UseSystemPasswordChar = false;
+			// 
+			// lblPassword
+			// 
+			this.lblPassword.AutoSize = true;
+			this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPassword.Location = new System.Drawing.Point(0, 240);
+			this.lblPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblPassword.Name = "lblPassword";
+			this.lblPassword.Size = new System.Drawing.Size(120, 30);
+			this.lblPassword.TabIndex = 11;
+			this.lblPassword.Text = "Adgangskode";
+			this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblUsername
+			// 
+			this.lblUsername.AutoSize = true;
+			this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblUsername.Location = new System.Drawing.Point(0, 200);
+			this.lblUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblUsername.Name = "lblUsername";
+			this.lblUsername.Size = new System.Drawing.Size(120, 30);
+			this.lblUsername.TabIndex = 10;
+			this.lblUsername.Text = "Brugernavn";
+			this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// stbEmail
 			// 
 			this.stbEmail.AllowComma = false;
@@ -97,6 +181,7 @@ namespace LivingSmartForms.Views
 			this.stbEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEmail.MaxLength = 50;
 			this.stbEmail.MinLength = -1;
+			this.stbEmail.Multiline = false;
 			this.stbEmail.Name = "stbEmail";
 			this.stbEmail.NumericOnly = false;
 			this.stbEmail.Placeholder = null;
@@ -122,8 +207,9 @@ namespace LivingSmartForms.Views
 			this.stbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbPhone.Location = new System.Drawing.Point(120, 40);
 			this.stbPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbPhone.MaxLength = 50;
+			this.stbPhone.MaxLength = 8;
 			this.stbPhone.MinLength = 8;
+			this.stbPhone.Multiline = false;
 			this.stbPhone.Name = "stbPhone";
 			this.stbPhone.NumericOnly = true;
 			this.stbPhone.Placeholder = null;
@@ -221,6 +307,7 @@ namespace LivingSmartForms.Views
 			this.stbName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbName.MaxLength = 50;
 			this.stbName.MinLength = -1;
+			this.stbName.Multiline = false;
 			this.stbName.Name = "stbName";
 			this.stbName.NumericOnly = false;
 			this.stbName.Placeholder = null;
@@ -249,88 +336,6 @@ namespace LivingSmartForms.Views
 			this.dafTerminationDate.Name = "dafTerminationDate";
 			this.dafTerminationDate.Size = new System.Drawing.Size(360, 40);
 			this.dafTerminationDate.TabIndex = 4;
-			// 
-			// lblUsername
-			// 
-			this.lblUsername.AutoSize = true;
-			this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblUsername.Location = new System.Drawing.Point(0, 200);
-			this.lblUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.lblUsername.Name = "lblUsername";
-			this.lblUsername.Size = new System.Drawing.Size(120, 30);
-			this.lblUsername.TabIndex = 10;
-			this.lblUsername.Text = "Brugernavn";
-			this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblPassword
-			// 
-			this.lblPassword.AutoSize = true;
-			this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblPassword.Location = new System.Drawing.Point(0, 240);
-			this.lblPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.lblPassword.Name = "lblPassword";
-			this.lblPassword.Size = new System.Drawing.Size(120, 30);
-			this.lblPassword.TabIndex = 11;
-			this.lblPassword.Text = "Adgangskode";
-			this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// stbUsername
-			// 
-			this.stbUsername.AllowComma = false;
-			this.stbUsername.AllowDrop = true;
-			this.stbUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbUsername.AutomaticValidation = true;
-			this.stbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbUsername.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbUsername.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbUsername.Location = new System.Drawing.Point(120, 200);
-			this.stbUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbUsername.MaxLength = 50;
-			this.stbUsername.MinLength = -1;
-			this.stbUsername.Name = "stbUsername";
-			this.stbUsername.NumericOnly = false;
-			this.stbUsername.Placeholder = null;
-			this.stbUsername.RegularExpression = null;
-			this.stbUsername.Required = true;
-			this.stbUsername.Size = new System.Drawing.Size(360, 30);
-			this.stbUsername.Suffix = null;
-			this.stbUsername.TabIndex = 12;
-			this.stbUsername.TabStop = false;
-			this.stbUsername.UseSystemPasswordChar = false;
-			// 
-			// stbPassword
-			// 
-			this.stbPassword.AllowComma = false;
-			this.stbPassword.AllowDrop = true;
-			this.stbPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbPassword.AutomaticValidation = true;
-			this.stbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbPassword.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbPassword.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbPassword.Location = new System.Drawing.Point(120, 240);
-			this.stbPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbPassword.MaxLength = 50;
-			this.stbPassword.MinLength = -1;
-			this.stbPassword.Name = "stbPassword";
-			this.stbPassword.NumericOnly = false;
-			this.stbPassword.Placeholder = null;
-			this.stbPassword.RegularExpression = null;
-			this.stbPassword.Required = true;
-			this.stbPassword.Size = new System.Drawing.Size(360, 30);
-			this.stbPassword.Suffix = null;
-			this.stbPassword.TabIndex = 13;
-			this.stbPassword.TabStop = false;
-			this.stbPassword.UseSystemPasswordChar = false;
 			// 
 			// NewEstateAgent
 			// 

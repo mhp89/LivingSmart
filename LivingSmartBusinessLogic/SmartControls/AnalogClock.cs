@@ -26,7 +26,7 @@ namespace SmartControls
 			get { return _points; }
 			set { _points = value; }
 		}
-		private int _points = 24;
+		private int _points = 12;
 		private Color FillColor;
 
 		//Clock
@@ -58,13 +58,7 @@ namespace SmartControls
 
 		public AnalogClock()
 		{
-			DoubleBuffered = true;
 
-			if (!DesignMode)
-			{
-				thread = new Thread(Run);
-				thread.Start();
-			}
 		}
 		
 
@@ -81,6 +75,7 @@ namespace SmartControls
 			// Draw arc to screen.
 			e.Graphics.FillEllipse(new SolidBrush(FillColor), rect);
 			e.Graphics.DrawEllipse(new Pen(ForeColor, 1), rect);
+			e.Graphics.FillEllipse(new SolidBrush(ForeColor), new Rectangle(center.X - 3, center.Y - 3, 6, 6));
 
 			//Draw minute pointer
 			Matrix mx = new Matrix();

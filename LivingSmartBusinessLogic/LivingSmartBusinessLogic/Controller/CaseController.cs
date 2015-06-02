@@ -66,18 +66,13 @@ namespace LivingSmartBusinessLogic.Controller
         /// Gemmer aktiv sag
         /// </summary>
         public void SaveActiveCase()
-        {
-            AddCase();
+		{
+			caseCatalog.Save(activeCase);
+			if (activeCase.Id != -1)
+				caseCatalog.AddToCatalog(activeCase);
         }
         #endregion
         
-        /// <summary>
-        /// Tilføjer en case til casecatalog
-        /// </summary>
-        public void AddCase()
-        {
-            caseCatalog.AddToCatalog(activeCase);
-        }
 
         /// <summary>
         /// Laver en ny case
@@ -107,6 +102,15 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return caseCatalog.GetCase(caseId);
         }
+
+		/// <summary>
+		/// Retunere den aktive sag
+		/// </summary>
+		/// <returns></returns>
+	    public Case GetActiveCase()
+	    {
+		    return activeCase;
+	    }
 
 		public ReadOnlyCollection<Case> GetCases()
 		{

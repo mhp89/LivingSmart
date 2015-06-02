@@ -27,7 +27,7 @@ namespace LivingSmartForms.DropIns
 		
 		public delegate void EstateAgentSearchCallback(EstateAgent estateAgent);
 
-		protected override void Close()
+		protected override void Closing()
 		{
 			FinishSearch(null);
 		}

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
 
@@ -17,9 +18,14 @@ namespace LivingSmartForms.DropIns
 	{
 		private NewCustomer newCustomerForm;
 
-		public NewCustomerDropIn(BaseForm baseForm) : base(baseForm)
+		private NewCustomerFinish callback;
+		public delegate void NewCustomerFinish(Customer customer);
+
+		public NewCustomerDropIn(BaseForm baseForm, NewCustomerFinish callback) : base(baseForm)
 		{
 			InitializeComponent();
+
+			this.callback = callback;
 
 			newCustomerForm = new NewCustomer(baseForm);
 			newCustomerForm.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
@@ -30,16 +36,16 @@ namespace LivingSmartForms.DropIns
 		{
 			return "NewCustomer";
 		}
-
-		protected override void Close()
+		private void FinishCreating(Customer customer)
 		{
 			CustomerController.Instance.CancelActiveCustomer();
-			base.Close();
+			callback(customer);
+			Close();
 		}
 
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			Close();
+			FinishCreating(null);
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
@@ -47,7 +53,7 @@ namespace LivingSmartForms.DropIns
 			if (newCustomerForm.Save())
 			{
 				//Customer saved
-				Close();
+				FinishCreating(newCustomerForm.CreatedUser);
 			}
 		}
 	}
