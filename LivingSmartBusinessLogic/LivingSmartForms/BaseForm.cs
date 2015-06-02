@@ -17,6 +17,8 @@ namespace LivingSmartForms
     {
 	    private bool formShift;
 
+        private FormWindowState lastState;
+
 	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
 		
 	    private Control partnerView;
@@ -66,8 +68,12 @@ namespace LivingSmartForms
 
 	    private void InitializeSystem()
 	    {
-			/*if(Base.RegKey.GetValue("ServerImageLocation") == null)
-				Base.RegKey.SetValue("ServerImageLocation", "C:/LivingSmartServer/Images/");*/
+	        if (Base.RegKey.GetValue("WindowState") != null)
+	        {
+	            WindowState =
+	                (FormWindowState) Enum.Parse(typeof (FormWindowState), Base.RegKey.GetValue("WindowState") as string);
+	            lastState = WindowState;
+	        }
 	    }
 
 		#region Menu
@@ -270,6 +276,7 @@ namespace LivingSmartForms
 			SetSelectedPage(PagesIndex.Overview);
 
 			pnlDropInHolder.BringToFront();
+            Activate();
 		}
 
 		private void BaseForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -281,6 +288,12 @@ namespace LivingSmartForms
 		{
 			//Gentegner hele formen for at sikre korrekt design
 			Refresh();
+            if (WindowState != lastState)
+		    {
+                Base.RegKey.SetValue("WindowState", WindowState);
+		        lastState = WindowState;
+		    }
+		    
 		}
 		
 		#endregion
