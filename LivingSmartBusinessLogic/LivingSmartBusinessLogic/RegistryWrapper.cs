@@ -7,7 +7,7 @@ using Microsoft.Win32;
 
 namespace LivingSmartForms.Classes
 {
-	public static class Base
+	public static class RegistryWrapper
 	{
 		//Opretter adgang til Windows Registry. Readonly sikre at den ikke kan blive ændret under runtime.
 		public static readonly RegistryKey RegKey = Registry.CurrentUser.CreateSubKey(@"Software\DMU14A\LivingSmart");

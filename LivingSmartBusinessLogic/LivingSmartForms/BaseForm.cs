@@ -66,6 +66,9 @@ namespace LivingSmartForms
 
 	    private void InitializeSystem()
 	    {
+			if (RegistryWrapper.RegKey.GetValue("DatabaseConnection") == null)
+				RegistryWrapper.RegKey.SetValue("DatabaseConnection", "Data Source=(local); Initial Catalog=LivingSmart; Integrated Security=SSPI; MultipleActiveResultSets=true");
+
 			/*if(Base.RegKey.GetValue("ServerImageLocation") == null)
 				Base.RegKey.SetValue("ServerImageLocation", "C:/LivingSmartServer/Images/");*/
 	    }
