@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Model
         {
             this.keyCasePair = keyCasePair;
             this.brokers = brokers;
-            pq = new MyPriorityQueue<decimal, Case>();
+            pq = new PriorityQueue<decimal, Case>();
             openHouse = new Dictionary<EstateAgent, List<Case>>();
 
             foreach (var caseAskingPricePair in this.keyCasePair)

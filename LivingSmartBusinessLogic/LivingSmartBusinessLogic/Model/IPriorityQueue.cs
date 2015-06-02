@@ -9,8 +9,8 @@ namespace LivingSmartBusinessLogic
     /// <summary>
     /// Defines an interface to a priority queue.
     /// </summary>
-    /// <typeparam name="TKey">Type of </typeparam>
-    /// <typeparam name="TValue"></typeparam>
+    /// <typeparam name="TKey">Type of key - must implement IComparable.</typeparam>
+    /// <typeparam name="TValue">Type of value to be saved in the priority queue.</typeparam>
     public interface IPriorityQueue<TKey, TValue> where TKey : IComparable
     {
         /// <summary>
@@ -21,7 +21,7 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Insert an elements in the priority queue with a specific priority. 
         /// </summary>
-        /// <param name="key">Key used to specify priority - must implemets IComparable</param>
+        /// <param name="key">Key used to specify priority - must implemet IComparable</param>
         /// <param name="element">The element associated with the key.</param>
         void Insert(TKey key, TValue element);
 
