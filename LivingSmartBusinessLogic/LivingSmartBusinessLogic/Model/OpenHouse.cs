@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic.Model
         /// The key could be the price of the house 
         /// </summary>
         /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
-        public Dictionary<EstateAgent, List<Case>> ReturnOpenHouse()
+        public Dictionary<EstateAgent, List<Case>> ReturnOpenHouseShuffle()
         {
             if (brokers.Count > 0)
             {
@@ -55,10 +55,59 @@ namespace LivingSmartBusinessLogic.Model
                     {
                         openHouse.Add(b, new List<Case>());
                     }
-
                     openHouse[b].Add(c);
 
                     brokerIndex = (brokerIndex + 1) % brokers.Count;
+                }
+            }
+            return openHouse;
+        }
+
+        /// <summary>
+        /// Distributes Cases to EstateAgents based on the Key in given in the constructor.
+        /// The key could be the price of the house 
+        /// </summary>
+        /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
+        public Dictionary<EstateAgent, List<Case>> ReturnOpenHouseEvenly()
+        {
+            if (brokers.Count > 0)
+            {
+                bool usingLeft = true;
+                Stack<EstateAgent> left = new Stack<EstateAgent>();
+                Stack<EstateAgent> right = new Stack<EstateAgent>();
+                EstateAgent estateAgent;
+                Case c;
+
+                foreach (EstateAgent agent in brokers)
+                {
+                    left.Push(agent);
+                }
+
+                while (pq.Count > 0)
+                {
+                    while (pq.Count > 0 && left.Count > 0)
+                    {
+                        c = pq.RemoveMax();
+                        estateAgent = left.Pop();
+                        right.Push(estateAgent);
+                        if (!openHouse.ContainsKey(estateAgent))
+                        {
+                            openHouse.Add(estateAgent, new List<Case>());
+                        }
+                        openHouse[estateAgent].Add(c);
+                    }
+
+                    while (pq.Count > 0 && right.Count > 0)
+                    {
+                        c = pq.RemoveMax();
+                        estateAgent = left.Pop();
+                        left.Push(estateAgent);
+                        if (!openHouse.ContainsKey(estateAgent))
+                        {
+                            openHouse.Add(estateAgent, new List<Case>());
+                        }
+                        openHouse[estateAgent].Add(c);
+                    }
                 }
             }
             return openHouse;
