@@ -14,6 +14,7 @@ namespace LivingSmartForms
     public partial class BaseForm : Form
     {
 	    private bool formShift;
+	    private FormWindowState lastState;
 
 	    private List<BaseDropIn> DropIns = new List<BaseDropIn>(); 
 
@@ -71,10 +72,10 @@ namespace LivingSmartForms
 				RegistryWrapper.RegKey.SetValue("DatabaseConnection", "Data Source=(local); Initial Catalog=LivingSmart; Integrated Security=SSPI; MultipleActiveResultSets=true");
 
 
-	        if (Base.RegKey.GetValue("WindowState") != null)
+	        if (RegistryWrapper.RegKey.GetValue("WindowState") != null)
 	        {
 	            WindowState =
-	                (FormWindowState) Enum.Parse(typeof (FormWindowState), Base.RegKey.GetValue("WindowState") as string);
+					(FormWindowState)Enum.Parse(typeof(FormWindowState), RegistryWrapper.RegKey.GetValue("WindowState") as string);
 	            lastState = WindowState;
 	        }
 	    }
@@ -296,7 +297,7 @@ namespace LivingSmartForms
 			Refresh();
             if (WindowState != lastState)
 		    {
-                Base.RegKey.SetValue("WindowState", WindowState);
+				RegistryWrapper.RegKey.SetValue("WindowState", WindowState);
 		        lastState = WindowState;
 		    }
 		    
