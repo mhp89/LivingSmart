@@ -70,14 +70,6 @@ namespace LivingSmartBusinessLogic.Controller
             AddCase();
         }
         #endregion
-        
-        /// <summary>
-        /// Tilføjer en case til casecatalog
-        /// </summary>
-        public void AddCase()
-        {
-            caseCatalog.AddToCatalog(activeCase);
-        }
 
         /// <summary>
         /// Laver en ny case

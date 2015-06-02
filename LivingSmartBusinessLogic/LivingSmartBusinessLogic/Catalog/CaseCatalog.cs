@@ -1,23 +1,30 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
     internal class CaseCatalog
     {
+		private Dictionary<int, Case> cases;
 
-        private Dictionary<int,Case> cases;
+		private ICaseDB db;
 
         internal CaseCatalog()
-        {
+		{
+			db = CaseDBFactory.GetDBL();
             cases = new Dictionary<int, Case>();
+
+			Load();
         }
 
         internal void Load()
         {
-            
+	        var caseList = db.ReadCases();
+			foreach (var cCase in caseList)
+				AddToCatalog(cCase);
         }
 
         internal Case Check(int id)
