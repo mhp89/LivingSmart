@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string)reader["Telephone"];
                     string email = (string)reader["Email"];
                     DateTime startingDate = (DateTime)reader["StartingDate"];
-                    DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull))?null:(DateTime?)reader["TerminationDate"];
+                    DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
 
                     EstateAgent estateAgent = new EstateAgent(estateAgentId, name, telephone, email, startingDate, terminationDate);
                     estateAgentList.Add(estateAgent);
@@ -74,7 +74,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = estateAgent.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = estateAgent.Email;
             cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
-			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
+            cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
             try
             {
@@ -104,7 +104,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-				CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.EstateAgentId VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); "
+                CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.EstateAgentId VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate);"
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = estateAgent.Name;
@@ -130,45 +130,51 @@ namespace LivingSmartBusinessLogic.DB
             return estateagentId;
         }
 
-	    public EstateAgent LoginEstateAgent(string username, string password)
-	    {
-		    EstateAgent estateAgent = null;
-			SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
-			SqlCommand cmd = new SqlCommand
-			{
-				Connection = connection,
-				CommandText = "SELECT * FROM EstateAgent WHERE Username = (@Username) AND Password = (@Password);",
-			};
+        /// <summary>
+        /// Returns an EstateAgent having the specified username and password.
+        /// </summary>
+        /// <param name="username">username of the estate agent.</param>
+        /// <param name="password">password of the estate agent.</param>
+        /// <returns></returns>
+        public EstateAgent LoginEstateAgent(string username, string password)
+        {
+            EstateAgent estateAgent = null;
+            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+            SqlCommand cmd = new SqlCommand
+            {
+                Connection = connection,
+                CommandText = "SELECT * FROM EstateAgent WHERE Username = (@Username) AND Password = (@Password);",
+            };
 
-			cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 15, "Username").Value = username;
-			cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 25, "Password").Value = password;
+            cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 15, "Username").Value = username;
+            cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 25, "Password").Value = password;
 
-			try
-			{
-				connection.Open();
-				SqlDataReader reader = cmd.ExecuteReader();
-				while (reader.Read())
-				{
-					int readEstateAgentId = (int)reader["EstateAgentId"];
-					string name = (string)reader["Name"];
-					string telephone = (string)reader["Telephone"];
-					string email = (string)reader["Email"];
-					DateTime startingDate = (DateTime)reader["StartingDate"];
-					DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    int readEstateAgentId = (int)reader["EstateAgentId"];
+                    string name = (string)reader["Name"];
+                    string telephone = (string)reader["Telephone"];
+                    string email = (string)reader["Email"];
+                    DateTime startingDate = (DateTime)reader["StartingDate"];
+                    DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
 
-					estateAgent = new EstateAgent(readEstateAgentId, name, telephone, email, startingDate, terminationDate);
-				}
-			}
-			catch (SqlException e)
-			{
-				Console.WriteLine(e.Message);
-			}
-			finally
-			{
-				connection.Close();
-			}
+                    estateAgent = new EstateAgent(readEstateAgentId, name, telephone, email, startingDate, terminationDate);
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                connection.Close();
+            }
 
-			return estateAgent;
-	    }
+            return estateAgent;
+        }
     }
 }

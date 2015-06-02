@@ -111,11 +111,11 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = customer.Name;
-            cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date, 8, "Name").Value = customer.DateOfBirth;
-            cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 50, "Name").Value = customer.Address;
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "Name").Value = customer.City.ZipCode;
-            cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Name").Value = customer.Telephone;
-            cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Name").Value = customer.Email;
+            cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date, 8, "DateOfBirth").Value = customer.DateOfBirth;
+            cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 50, "Address").Value = customer.Address;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = customer.City.ZipCode;
+            cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = customer.Telephone;
+            cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = customer.Email;
 
             try
             {
