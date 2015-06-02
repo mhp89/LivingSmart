@@ -72,7 +72,7 @@ namespace LivingSmartBusinessLogic.Catalog
                     success = false;
 
                 if (zipcode != -1 &&
-                    customer.Value.City.ZipCode.ToString().ToLower().Contains(zipcode.ToString().ToLower()))
+                    !customer.Value.City.ZipCode.ToString().ToLower().Contains(zipcode.ToString().ToLower()))
                     success = false;
 
                 if (telephone != null && !customer.Value.Telephone.ToLower().Contains(telephone.ToLower()))
