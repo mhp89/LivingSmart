@@ -43,7 +43,7 @@ namespace LivingSmartForms.Classes
 
 		protected virtual void Close()
 		{
-			baseForm.CloseDropIn();
+			baseForm.CloseDropIn(this);
 		}
 
 		public virtual string GetDropInId()

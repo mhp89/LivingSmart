@@ -59,7 +59,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			// pnlSubmenuBorder
 			// 
-			this.pnlSubmenuBorder.BackColor = SmartColor.Dark;
+			this.pnlSubmenuBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.pnlSubmenuBorder.Dock = System.Windows.Forms.DockStyle.Bottom;
 			this.pnlSubmenuBorder.Location = new System.Drawing.Point(0, 48);
 			this.pnlSubmenuBorder.Name = "pnlSubmenuBorder";
@@ -80,21 +80,21 @@ namespace LivingSmartForms.DropIns
 			// stepIndicator
 			// 
 			this.stepIndicator.CurrentStep = 0;
-			this.stepIndicator.CurrentStepBorderColor = SmartColor.Dark;
+			this.stepIndicator.CurrentStepBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stepIndicator.CurrentStepFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stepIndicator.LineCompletedColor = SmartColor.Dark;
+			this.stepIndicator.LineCompletedColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stepIndicator.LineThickness = 2;
 			this.stepIndicator.LineUncompletedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stepIndicator.LineWidth = 25;
 			this.stepIndicator.Location = new System.Drawing.Point(74, 15);
 			this.stepIndicator.Name = "stepIndicator";
 			this.stepIndicator.Size = new System.Drawing.Size(350, 20);
-			this.stepIndicator.StepCompletedBorderColor = SmartColor.Dark;
-			this.stepIndicator.StepCompletedFillColor = SmartColor.Dark;
+			this.stepIndicator.StepCompletedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stepIndicator.StepCompletedFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stepIndicator.Steps = 6;
 			this.stepIndicator.StepSize = 18;
-			this.stepIndicator.StepUncompletedBorderColor = SmartColor.Dark;
-			this.stepIndicator.StepUncompletedFillColor = SmartColor.Light;
+			this.stepIndicator.StepUncompletedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stepIndicator.StepUncompletedFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.stepIndicator.TabIndex = 0;
 			this.stepIndicator.Text = "stepIndicator1";
 			// 
@@ -114,7 +114,7 @@ namespace LivingSmartForms.DropIns
 			// 
 			this.pnlBottomControlsBorder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.pnlBottomControlsBorder.BackColor = SmartColor.Dark;
+			this.pnlBottomControlsBorder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.pnlBottomControlsBorder.Location = new System.Drawing.Point(0, 0);
 			this.pnlBottomControlsBorder.Name = "pnlBottomControlsBorder";
 			this.pnlBottomControlsBorder.Size = new System.Drawing.Size(498, 2);
@@ -137,14 +137,14 @@ namespace LivingSmartForms.DropIns
 			this.btnPrev.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
 			this.btnPrev.AutoSize = true;
 			this.btnPrev.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnPrev.BackColor = SmartColor.Dark;
+			this.btnPrev.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnPrev.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnPrev.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnPrev.FlatAppearance.BorderSize = 0;
-			this.btnPrev.FlatAppearance.MouseDownBackColor = SmartColor.Light;
-			this.btnPrev.FlatAppearance.MouseOverBackColor = SmartColor.Light;
+			this.btnPrev.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnPrev.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnPrev.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnPrev.ForeColor = SmartColor.Light;
+			this.btnPrev.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnPrev.Location = new System.Drawing.Point(17, 10);
 			this.btnPrev.Margin = new System.Windows.Forms.Padding(20, 10, 0, 10);
 			this.btnPrev.Name = "btnPrev";
@@ -159,14 +159,14 @@ namespace LivingSmartForms.DropIns
 			this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnNext.AutoSize = true;
 			this.btnNext.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNext.BackColor = SmartColor.Dark;
+			this.btnNext.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnNext.Color = SmartControls.SmartColor.ColorStyle.Dark;
 			this.btnNext.Cursor = System.Windows.Forms.Cursors.Hand;
 			this.btnNext.FlatAppearance.BorderSize = 0;
-			this.btnNext.FlatAppearance.MouseDownBackColor = SmartColor.Light;
-			this.btnNext.FlatAppearance.MouseOverBackColor = SmartColor.Light;
+			this.btnNext.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNext.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNext.ForeColor = SmartColor.Light;
+			this.btnNext.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
 			this.btnNext.Location = new System.Drawing.Point(392, 10);
 			this.btnNext.Margin = new System.Windows.Forms.Padding(0, 10, 20, 10);
 			this.btnNext.Name = "btnNext";
@@ -182,7 +182,8 @@ namespace LivingSmartForms.DropIns
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.pnlStepHolder.AutoScroll = true;
-			this.pnlStepHolder.ForeColor = SmartColor.Dark;
+			this.pnlStepHolder.BackColor = System.Drawing.SystemColors.ControlDark;
+			this.pnlStepHolder.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.pnlStepHolder.Location = new System.Drawing.Point(2, 50);
 			this.pnlStepHolder.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlStepHolder.Name = "pnlStepHolder";

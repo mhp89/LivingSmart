@@ -31,16 +31,20 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
 			this.tlpNewEstateAgent = new System.Windows.Forms.TableLayoutPanel();
-			this.stbEstateAgentEmail = new SmartControls.SmartTextBox();
-			this.stbEstateAgentPhone = new SmartControls.SmartTextBox();
+			this.stbEmail = new SmartControls.SmartTextBox();
+			this.stbPhone = new SmartControls.SmartTextBox();
 			this.lblEstateAgentTerminationDate = new System.Windows.Forms.Label();
 			this.lblEstateAgentName = new System.Windows.Forms.Label();
 			this.lblEstateAgentPhone = new System.Windows.Forms.Label();
 			this.lblEstateAgentEmail = new System.Windows.Forms.Label();
 			this.lblEstateAgentStartDate = new System.Windows.Forms.Label();
-			this.stbEstateAgentName = new SmartControls.SmartTextBox();
-			this.dafEstateAgentStartDate = new LivingSmartForms.UserControls.DateField();
-			this.dafEstateAgentTerminationDate = new LivingSmartForms.UserControls.DateField();
+			this.stbName = new SmartControls.SmartTextBox();
+			this.dafStartDate = new LivingSmartForms.UserControls.DateField();
+			this.dafTerminationDate = new LivingSmartForms.UserControls.DateField();
+			this.lblUsername = new System.Windows.Forms.Label();
+			this.lblPassword = new System.Windows.Forms.Label();
+			this.stbUsername = new SmartControls.SmartTextBox();
+			this.stbPassword = new SmartControls.SmartTextBox();
 			this.tlpNewEstateAgent.SuspendLayout();
 			this.SuspendLayout();
 			// 
@@ -49,81 +53,87 @@ namespace LivingSmartForms.Views
 			this.tlpNewEstateAgent.ColumnCount = 2;
 			this.tlpNewEstateAgent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpNewEstateAgent.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
-			this.tlpNewEstateAgent.Controls.Add(this.stbEstateAgentEmail, 1, 2);
-			this.tlpNewEstateAgent.Controls.Add(this.stbEstateAgentPhone, 1, 1);
+			this.tlpNewEstateAgent.Controls.Add(this.stbPassword, 1, 6);
+			this.tlpNewEstateAgent.Controls.Add(this.stbUsername, 1, 5);
+			this.tlpNewEstateAgent.Controls.Add(this.lblPassword, 0, 6);
+			this.tlpNewEstateAgent.Controls.Add(this.lblUsername, 0, 5);
+			this.tlpNewEstateAgent.Controls.Add(this.stbEmail, 1, 2);
+			this.tlpNewEstateAgent.Controls.Add(this.stbPhone, 1, 1);
 			this.tlpNewEstateAgent.Controls.Add(this.lblEstateAgentTerminationDate, 0, 4);
 			this.tlpNewEstateAgent.Controls.Add(this.lblEstateAgentName, 0, 0);
 			this.tlpNewEstateAgent.Controls.Add(this.lblEstateAgentPhone, 0, 1);
 			this.tlpNewEstateAgent.Controls.Add(this.lblEstateAgentEmail, 0, 2);
 			this.tlpNewEstateAgent.Controls.Add(this.lblEstateAgentStartDate, 0, 3);
-			this.tlpNewEstateAgent.Controls.Add(this.stbEstateAgentName, 1, 0);
-			this.tlpNewEstateAgent.Controls.Add(this.dafEstateAgentStartDate, 1, 3);
-			this.tlpNewEstateAgent.Controls.Add(this.dafEstateAgentTerminationDate, 1, 4);
+			this.tlpNewEstateAgent.Controls.Add(this.stbName, 1, 0);
+			this.tlpNewEstateAgent.Controls.Add(this.dafStartDate, 1, 3);
+			this.tlpNewEstateAgent.Controls.Add(this.dafTerminationDate, 1, 4);
 			this.tlpNewEstateAgent.Location = new System.Drawing.Point(0, 10);
 			this.tlpNewEstateAgent.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
 			this.tlpNewEstateAgent.Name = "tlpNewEstateAgent";
-			this.tlpNewEstateAgent.RowCount = 5;
+			this.tlpNewEstateAgent.RowCount = 7;
 			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-			this.tlpNewEstateAgent.Size = new System.Drawing.Size(480, 200);
+			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+			this.tlpNewEstateAgent.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+			this.tlpNewEstateAgent.Size = new System.Drawing.Size(480, 280);
 			this.tlpNewEstateAgent.TabIndex = 5;
 			// 
-			// stbEstateAgentEmail
+			// stbEmail
 			// 
-			this.stbEstateAgentEmail.AllowComma = false;
-			this.stbEstateAgentEmail.AllowDrop = true;
-			this.stbEstateAgentEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbEstateAgentEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbEstateAgentEmail.AutomaticValidation = true;
-			this.stbEstateAgentEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbEstateAgentEmail.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbEstateAgentEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbEstateAgentEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbEstateAgentEmail.Location = new System.Drawing.Point(120, 80);
-			this.stbEstateAgentEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbEstateAgentEmail.MaxLength = 50;
-			this.stbEstateAgentEmail.MinLength = -1;
-			this.stbEstateAgentEmail.Name = "stbEstateAgentEmail";
-			this.stbEstateAgentEmail.NumericOnly = false;
-			this.stbEstateAgentEmail.Placeholder = null;
-			this.stbEstateAgentEmail.RegularExpression = null;
-			this.stbEstateAgentEmail.Required = true;
-			this.stbEstateAgentEmail.Size = new System.Drawing.Size(360, 30);
-			this.stbEstateAgentEmail.Suffix = null;
-			this.stbEstateAgentEmail.TabIndex = 2;
-			this.stbEstateAgentEmail.TabStop = false;
-			this.stbEstateAgentEmail.UseSystemPasswordChar = false;
+			this.stbEmail.AllowComma = false;
+			this.stbEmail.AllowDrop = true;
+			this.stbEmail.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbEmail.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbEmail.AutomaticValidation = true;
+			this.stbEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbEmail.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbEmail.Location = new System.Drawing.Point(120, 80);
+			this.stbEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbEmail.MaxLength = 50;
+			this.stbEmail.MinLength = -1;
+			this.stbEmail.Name = "stbEmail";
+			this.stbEmail.NumericOnly = false;
+			this.stbEmail.Placeholder = null;
+			this.stbEmail.RegularExpression = null;
+			this.stbEmail.Required = true;
+			this.stbEmail.Size = new System.Drawing.Size(360, 30);
+			this.stbEmail.Suffix = null;
+			this.stbEmail.TabIndex = 2;
+			this.stbEmail.TabStop = false;
+			this.stbEmail.UseSystemPasswordChar = false;
 			// 
-			// stbEstateAgentPhone
+			// stbPhone
 			// 
-			this.stbEstateAgentPhone.AllowComma = false;
-			this.stbEstateAgentPhone.AllowDrop = true;
-			this.stbEstateAgentPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbEstateAgentPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbEstateAgentPhone.AutomaticValidation = true;
-			this.stbEstateAgentPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbEstateAgentPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbEstateAgentPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbEstateAgentPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbEstateAgentPhone.Location = new System.Drawing.Point(120, 40);
-			this.stbEstateAgentPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbEstateAgentPhone.MaxLength = 50;
-			this.stbEstateAgentPhone.MinLength = 8;
-			this.stbEstateAgentPhone.Name = "stbEstateAgentPhone";
-			this.stbEstateAgentPhone.NumericOnly = true;
-			this.stbEstateAgentPhone.Placeholder = null;
-			this.stbEstateAgentPhone.RegularExpression = null;
-			this.stbEstateAgentPhone.Required = true;
-			this.stbEstateAgentPhone.Size = new System.Drawing.Size(360, 30);
-			this.stbEstateAgentPhone.Suffix = null;
-			this.stbEstateAgentPhone.TabIndex = 1;
-			this.stbEstateAgentPhone.TabStop = false;
-			this.stbEstateAgentPhone.UseSystemPasswordChar = false;
+			this.stbPhone.AllowComma = false;
+			this.stbPhone.AllowDrop = true;
+			this.stbPhone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbPhone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbPhone.AutomaticValidation = true;
+			this.stbPhone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPhone.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbPhone.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPhone.Location = new System.Drawing.Point(120, 40);
+			this.stbPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbPhone.MaxLength = 50;
+			this.stbPhone.MinLength = 8;
+			this.stbPhone.Name = "stbPhone";
+			this.stbPhone.NumericOnly = true;
+			this.stbPhone.Placeholder = null;
+			this.stbPhone.RegularExpression = null;
+			this.stbPhone.Required = true;
+			this.stbPhone.Size = new System.Drawing.Size(360, 30);
+			this.stbPhone.Suffix = null;
+			this.stbPhone.TabIndex = 1;
+			this.stbPhone.TabStop = false;
+			this.stbPhone.UseSystemPasswordChar = false;
 			// 
 			// lblEstateAgentTerminationDate
 			// 
@@ -195,57 +205,139 @@ namespace LivingSmartForms.Views
 			this.lblEstateAgentStartDate.Text = "Startdato";
 			this.lblEstateAgentStartDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// stbEstateAgentName
+			// stbName
 			// 
-			this.stbEstateAgentName.AllowComma = false;
-			this.stbEstateAgentName.AllowDrop = true;
-			this.stbEstateAgentName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbEstateAgentName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbEstateAgentName.AutomaticValidation = true;
-			this.stbEstateAgentName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbEstateAgentName.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbEstateAgentName.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbEstateAgentName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbEstateAgentName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbEstateAgentName.Location = new System.Drawing.Point(120, 0);
-			this.stbEstateAgentName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbEstateAgentName.MaxLength = 50;
-			this.stbEstateAgentName.MinLength = -1;
-			this.stbEstateAgentName.Name = "stbEstateAgentName";
-			this.stbEstateAgentName.NumericOnly = false;
-			this.stbEstateAgentName.Placeholder = null;
-			this.stbEstateAgentName.RegularExpression = null;
-			this.stbEstateAgentName.Required = true;
-			this.stbEstateAgentName.Size = new System.Drawing.Size(360, 30);
-			this.stbEstateAgentName.Suffix = null;
-			this.stbEstateAgentName.TabIndex = 0;
-			this.stbEstateAgentName.TabStop = false;
-			this.stbEstateAgentName.UseSystemPasswordChar = false;
+			this.stbName.AllowComma = false;
+			this.stbName.AllowDrop = true;
+			this.stbName.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbName.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbName.AutomaticValidation = true;
+			this.stbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbName.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbName.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbName.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbName.Location = new System.Drawing.Point(120, 0);
+			this.stbName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbName.MaxLength = 50;
+			this.stbName.MinLength = -1;
+			this.stbName.Name = "stbName";
+			this.stbName.NumericOnly = false;
+			this.stbName.Placeholder = null;
+			this.stbName.RegularExpression = null;
+			this.stbName.Required = true;
+			this.stbName.Size = new System.Drawing.Size(360, 30);
+			this.stbName.Suffix = null;
+			this.stbName.TabIndex = 0;
+			this.stbName.TabStop = false;
+			this.stbName.UseSystemPasswordChar = false;
 			// 
-			// dafEstateAgentStartDate
+			// dafStartDate
 			// 
-			this.dafEstateAgentStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dafEstateAgentStartDate.Location = new System.Drawing.Point(120, 120);
-			this.dafEstateAgentStartDate.Margin = new System.Windows.Forms.Padding(0);
-			this.dafEstateAgentStartDate.Name = "dafEstateAgentStartDate";
-			this.dafEstateAgentStartDate.Size = new System.Drawing.Size(360, 40);
-			this.dafEstateAgentStartDate.TabIndex = 3;
+			this.dafStartDate.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dafStartDate.Location = new System.Drawing.Point(120, 120);
+			this.dafStartDate.Margin = new System.Windows.Forms.Padding(0);
+			this.dafStartDate.Name = "dafStartDate";
+			this.dafStartDate.Size = new System.Drawing.Size(360, 40);
+			this.dafStartDate.TabIndex = 3;
 			// 
-			// dafEstateAgentTerminationDate
+			// dafTerminationDate
 			// 
-			this.dafEstateAgentTerminationDate.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.dafEstateAgentTerminationDate.Location = new System.Drawing.Point(120, 160);
-			this.dafEstateAgentTerminationDate.Margin = new System.Windows.Forms.Padding(0);
-			this.dafEstateAgentTerminationDate.Name = "dafEstateAgentTerminationDate";
-			this.dafEstateAgentTerminationDate.Size = new System.Drawing.Size(360, 40);
-			this.dafEstateAgentTerminationDate.TabIndex = 4;
+			this.dafTerminationDate.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.dafTerminationDate.Location = new System.Drawing.Point(120, 160);
+			this.dafTerminationDate.Margin = new System.Windows.Forms.Padding(0);
+			this.dafTerminationDate.Name = "dafTerminationDate";
+			this.dafTerminationDate.Size = new System.Drawing.Size(360, 40);
+			this.dafTerminationDate.TabIndex = 4;
+			// 
+			// lblUsername
+			// 
+			this.lblUsername.AutoSize = true;
+			this.lblUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblUsername.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblUsername.Location = new System.Drawing.Point(0, 200);
+			this.lblUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblUsername.Name = "lblUsername";
+			this.lblUsername.Size = new System.Drawing.Size(120, 30);
+			this.lblUsername.TabIndex = 10;
+			this.lblUsername.Text = "Brugernavn";
+			this.lblUsername.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// lblPassword
+			// 
+			this.lblPassword.AutoSize = true;
+			this.lblPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblPassword.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblPassword.Location = new System.Drawing.Point(0, 240);
+			this.lblPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblPassword.Name = "lblPassword";
+			this.lblPassword.Size = new System.Drawing.Size(120, 30);
+			this.lblPassword.TabIndex = 11;
+			this.lblPassword.Text = "Adgangskode";
+			this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// stbUsername
+			// 
+			this.stbUsername.AllowComma = false;
+			this.stbUsername.AllowDrop = true;
+			this.stbUsername.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbUsername.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbUsername.AutomaticValidation = true;
+			this.stbUsername.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbUsername.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbUsername.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbUsername.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbUsername.Location = new System.Drawing.Point(120, 200);
+			this.stbUsername.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbUsername.MaxLength = 50;
+			this.stbUsername.MinLength = -1;
+			this.stbUsername.Name = "stbUsername";
+			this.stbUsername.NumericOnly = false;
+			this.stbUsername.Placeholder = null;
+			this.stbUsername.RegularExpression = null;
+			this.stbUsername.Required = true;
+			this.stbUsername.Size = new System.Drawing.Size(360, 30);
+			this.stbUsername.Suffix = null;
+			this.stbUsername.TabIndex = 12;
+			this.stbUsername.TabStop = false;
+			this.stbUsername.UseSystemPasswordChar = false;
+			// 
+			// stbPassword
+			// 
+			this.stbPassword.AllowComma = false;
+			this.stbPassword.AllowDrop = true;
+			this.stbPassword.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbPassword.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbPassword.AutomaticValidation = true;
+			this.stbPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbPassword.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbPassword.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbPassword.Location = new System.Drawing.Point(120, 240);
+			this.stbPassword.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbPassword.MaxLength = 50;
+			this.stbPassword.MinLength = -1;
+			this.stbPassword.Name = "stbPassword";
+			this.stbPassword.NumericOnly = false;
+			this.stbPassword.Placeholder = null;
+			this.stbPassword.RegularExpression = null;
+			this.stbPassword.Required = true;
+			this.stbPassword.Size = new System.Drawing.Size(360, 30);
+			this.stbPassword.Suffix = null;
+			this.stbPassword.TabIndex = 13;
+			this.stbPassword.TabStop = false;
+			this.stbPassword.UseSystemPasswordChar = false;
 			// 
 			// NewEstateAgent
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
 			this.Controls.Add(this.tlpNewEstateAgent);
 			this.Name = "NewEstateAgent";
-			this.Size = new System.Drawing.Size(480, 210);
+			this.Size = new System.Drawing.Size(480, 290);
 			this.tlpNewEstateAgent.ResumeLayout(false);
 			this.tlpNewEstateAgent.PerformLayout();
 			this.ResumeLayout(false);
@@ -260,10 +352,14 @@ namespace LivingSmartForms.Views
         private System.Windows.Forms.Label lblEstateAgentPhone;
         private System.Windows.Forms.Label lblEstateAgentEmail;
         private System.Windows.Forms.Label lblEstateAgentStartDate;
-        private SmartControls.SmartTextBox stbEstateAgentEmail;
-        private SmartControls.SmartTextBox stbEstateAgentPhone;
-        private SmartControls.SmartTextBox stbEstateAgentName;
-        private UserControls.DateField dafEstateAgentStartDate;
-        private UserControls.DateField dafEstateAgentTerminationDate;
+        private SmartControls.SmartTextBox stbEmail;
+        private SmartControls.SmartTextBox stbPhone;
+        private SmartControls.SmartTextBox stbName;
+        private UserControls.DateField dafStartDate;
+        private UserControls.DateField dafTerminationDate;
+		private SmartTextBox stbPassword;
+		private SmartTextBox stbUsername;
+		private System.Windows.Forms.Label lblPassword;
+		private System.Windows.Forms.Label lblUsername;
     }
 }

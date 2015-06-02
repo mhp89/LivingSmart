@@ -30,177 +30,144 @@ namespace LivingSmartForms
         /// </summary>
         private void InitializeComponent()
         {
-            this.tlpEmployee = new System.Windows.Forms.TableLayoutPanel();
-            this.btnSeeEstateAgent = new SmartControls.SmartButton();
-            this.slbName = new SmartControls.SmartLabel();
-            this.slbAddress = new SmartControls.SmartLabel();
-            this.slbZipcode = new SmartControls.SmartLabel();
-            this.slbHireDate = new SmartControls.SmartLabel();
-            this.slbPhone = new SmartControls.SmartLabel();
-            this.slbEmail = new SmartControls.SmartLabel();
-            this.slbEmployeeNo = new SmartControls.SmartLabel();
-            this.tlpEmployee.SuspendLayout();
-            this.SuspendLayout();
-            // 
-            // tlpEmployee
-            // 
-            this.tlpEmployee.ColumnCount = 5;
-            this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.80028F));
-            this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 26.16034F));
-            this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.67651F));
-            this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 22.36287F));
-            this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
-            this.tlpEmployee.Controls.Add(this.btnSeeEstateAgent, 4, 0);
-            this.tlpEmployee.Controls.Add(this.slbName, 1, 0);
-            this.tlpEmployee.Controls.Add(this.slbAddress, 2, 0);
-            this.tlpEmployee.Controls.Add(this.slbZipcode, 2, 1);
-            this.tlpEmployee.Controls.Add(this.slbHireDate, 1, 1);
-            this.tlpEmployee.Controls.Add(this.slbPhone, 3, 0);
-            this.tlpEmployee.Controls.Add(this.slbEmail, 3, 1);
-            this.tlpEmployee.Controls.Add(this.slbEmployeeNo, 0, 0);
-            this.tlpEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpEmployee.Location = new System.Drawing.Point(0, 0);
-            this.tlpEmployee.Margin = new System.Windows.Forms.Padding(2);
-            this.tlpEmployee.Name = "tlpEmployee";
-            this.tlpEmployee.RowCount = 2;
-            this.tlpEmployee.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpEmployee.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tlpEmployee.Size = new System.Drawing.Size(600, 49);
-            this.tlpEmployee.TabIndex = 0;
-            // 
-            // btnSeeEstateAgent
-            // 
-            this.btnSeeEstateAgent.AutoSize = true;
-            this.btnSeeEstateAgent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-	    this.btnSeeEstateAgent.BackColor = SmartColor.Light;
-            this.btnSeeEstateAgent.Color = SmartControls.SmartColor.ColorStyle.Light;
-            this.btnSeeEstateAgent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSeeEstateAgent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnSeeEstateAgent.FlatAppearance.BorderSize = 0;
-            this.btnSeeEstateAgent.FlatAppearance.MouseDownBackColor = SmartColor.Dark;
-            this.btnSeeEstateAgent.FlatAppearance.MouseOverBackColor = SmartColor.Dark;
-            this.btnSeeEstateAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnSeeEstateAgent.ForeColor = SmartColor.Dark;
-            this.btnSeeEstateAgent.Location = new System.Drawing.Point(457, 10);
-            this.btnSeeEstateAgent.Margin = new System.Windows.Forms.Padding(10);
-            this.btnSeeEstateAgent.Name = "btnSeeEstateAgent";
-            this.tlpEmployee.SetRowSpan(this.btnSeeEstateAgent, 2);
-            this.btnSeeEstateAgent.Size = new System.Drawing.Size(133, 29);
-            this.btnSeeEstateAgent.TabIndex = 10;
-            this.btnSeeEstateAgent.Text = "Se mægler";
-            this.btnSeeEstateAgent.UseVisualStyleBackColor = false;
-            // 
-            // slbName
-            // 
-            this.slbName.AutoSize = true;
-			this.tlpEmployee.SetColumnSpan(this.slbName, 2);
-            this.slbName.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbName.ForeColor = SmartColor.Light;
-            this.slbName.Location = new System.Drawing.Point(97, 0);
-            this.slbName.Name = "slbName";
-			this.slbName.Size = new System.Drawing.Size(271, 24);
-            this.slbName.TabIndex = 2;
-            this.slbName.Text = "Medarbejders navn";
-            this.slbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbName.Title = "Navn:";
-            this.slbName.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
-            // slbAddress
-            // 
-            this.slbAddress.AutoSize = true;
-            this.slbAddress.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbAddress.Location = new System.Drawing.Point(214, 0);
-            this.slbAddress.Name = "slbAddress";
-            this.slbAddress.Size = new System.Drawing.Size(133, 24);
-            this.slbAddress.TabIndex = 3;
-            this.slbAddress.Text = "Gadenavn og nummer";
-            this.slbAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbAddress.Title = "Adresse:";
-            this.slbAddress.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
-            // slbZipcode
-            // 
-            this.slbZipcode.AutoSize = true;
-            this.slbZipcode.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.slbZipcode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbZipcode.Location = new System.Drawing.Point(214, 24);
-            this.slbZipcode.Name = "slbZipcode";
-            this.slbZipcode.Size = new System.Drawing.Size(133, 25);
-            this.slbZipcode.TabIndex = 4;
-            this.slbZipcode.Text = "xxxx by";
-            this.slbZipcode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbZipcode.Title = "Postnr og by:";
-            this.slbZipcode.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
-            // slbHireDate
-            // 
-            this.slbHireDate.AutoSize = true;
-			this.tlpEmployee.SetColumnSpan(this.slbHireDate, 2);
-            this.slbHireDate.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbHireDate.ForeColor = SmartColor.Light;
-            this.slbHireDate.Location = new System.Drawing.Point(97, 24);
-            this.slbHireDate.Name = "slbHireDate";
-			this.slbHireDate.Size = new System.Drawing.Size(271, 25);
-            this.slbHireDate.TabIndex = 5;
-            this.slbHireDate.Text = "xx yyy zzzz";
-            this.slbHireDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbHireDate.Title = "Ansættelsesdato:";
-            this.slbHireDate.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
-            // slbPhone
-            // 
-            this.slbPhone.AutoSize = true;
-            this.slbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbPhone.ForeColor = SmartColor.Light;
-            this.slbPhone.Location = new System.Drawing.Point(347, 0);
-            this.slbPhone.Name = "slbPhone";
-            this.slbPhone.Size = new System.Drawing.Size(100, 24);
-            this.slbPhone.TabIndex = 6;
-            this.slbPhone.Text = "xxxx xxxx";
-            this.slbPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbPhone.Title = "Telefonnummer:";
-            this.slbPhone.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
-            // slbEmail
-            // 
-            this.slbEmail.AutoSize = true;
-            this.slbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbEmail.ForeColor = SmartColor.Light;
-            this.slbEmail.Location = new System.Drawing.Point(347, 24);
-            this.slbEmail.Name = "slbEmail";
-            this.slbEmail.Size = new System.Drawing.Size(100, 25);
-            this.slbEmail.TabIndex = 7;
-            this.slbEmail.Text = "employee@smartliving.dk";
-            this.slbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbEmail.Title = "Email:";
-            this.slbEmail.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
-            // slbEmployeeNo
-            // 
-            this.slbEmployeeNo.AutoSize = true;
-            this.slbEmployeeNo.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.slbEmployeeNo.ForeColor = SmartColor.Light;
-            this.slbEmployeeNo.Location = new System.Drawing.Point(0, 0);
-            this.slbEmployeeNo.Name = "slbEmployeeNo";
-            this.tlpEmployee.SetRowSpan(this.slbEmployeeNo, 2);
-            this.slbEmployeeNo.Size = new System.Drawing.Size(97, 49);
-            this.slbEmployeeNo.TabIndex = 8;
-            this.slbEmployeeNo.Text = "xxx";
-            this.slbEmployeeNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.slbEmployeeNo.Title = "Medarbejdernr:";
-            this.slbEmployeeNo.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
-            // 
+			this.tlpEmployee = new System.Windows.Forms.TableLayoutPanel();
+			this.slbName = new SmartControls.SmartLabel();
+			this.slbHireDate = new SmartControls.SmartLabel();
+			this.slbPhone = new SmartControls.SmartLabel();
+			this.slbEmail = new SmartControls.SmartLabel();
+			this.slbEmployeeNo = new SmartControls.SmartLabel();
+			this.btnSeeEstateAgent = new SmartControls.SmartButton();
+			this.tlpEmployee.SuspendLayout();
+			this.SuspendLayout();
+			// 
+			// tlpEmployee
+			// 
+			this.tlpEmployee.ColumnCount = 4;
+			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tlpEmployee.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tlpEmployee.Controls.Add(this.btnSeeEstateAgent, 3, 0);
+			this.tlpEmployee.Controls.Add(this.slbName, 1, 0);
+			this.tlpEmployee.Controls.Add(this.slbHireDate, 1, 1);
+			this.tlpEmployee.Controls.Add(this.slbPhone, 2, 0);
+			this.tlpEmployee.Controls.Add(this.slbEmail, 2, 1);
+			this.tlpEmployee.Controls.Add(this.slbEmployeeNo, 0, 0);
+			this.tlpEmployee.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.tlpEmployee.Location = new System.Drawing.Point(0, 0);
+			this.tlpEmployee.Margin = new System.Windows.Forms.Padding(2);
+			this.tlpEmployee.Name = "tlpEmployee";
+			this.tlpEmployee.RowCount = 2;
+			this.tlpEmployee.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tlpEmployee.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tlpEmployee.Size = new System.Drawing.Size(1064, 49);
+			this.tlpEmployee.TabIndex = 0;
+			// 
+			// slbName
+			// 
+			this.slbName.AutoSize = true;
+			this.slbName.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.slbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbName.Location = new System.Drawing.Point(310, 0);
+			this.slbName.Name = "slbName";
+			this.slbName.Size = new System.Drawing.Size(310, 24);
+			this.slbName.TabIndex = 2;
+			this.slbName.Text = "Medarbejders navn";
+			this.slbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.slbName.Title = "Navn:";
+			this.slbName.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			// 
+			// slbHireDate
+			// 
+			this.slbHireDate.AutoSize = true;
+			this.slbHireDate.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.slbHireDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbHireDate.Location = new System.Drawing.Point(310, 24);
+			this.slbHireDate.Name = "slbHireDate";
+			this.slbHireDate.Size = new System.Drawing.Size(310, 25);
+			this.slbHireDate.TabIndex = 5;
+			this.slbHireDate.Text = "xx yyy zzzz";
+			this.slbHireDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.slbHireDate.Title = "Ansættelsesdato:";
+			this.slbHireDate.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			// 
+			// slbPhone
+			// 
+			this.slbPhone.AutoSize = true;
+			this.slbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.slbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbPhone.Location = new System.Drawing.Point(620, 0);
+			this.slbPhone.Name = "slbPhone";
+			this.slbPhone.Size = new System.Drawing.Size(310, 24);
+			this.slbPhone.TabIndex = 6;
+			this.slbPhone.Text = "xxxx xxxx";
+			this.slbPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.slbPhone.Title = "Telefonnummer:";
+			this.slbPhone.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			// 
+			// slbEmail
+			// 
+			this.slbEmail.AutoSize = true;
+			this.slbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.slbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbEmail.Location = new System.Drawing.Point(620, 24);
+			this.slbEmail.Name = "slbEmail";
+			this.slbEmail.Size = new System.Drawing.Size(310, 25);
+			this.slbEmail.TabIndex = 7;
+			this.slbEmail.Text = "employee@smartliving.dk";
+			this.slbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.slbEmail.Title = "Email:";
+			this.slbEmail.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			// 
+			// slbEmployeeNo
+			// 
+			this.slbEmployeeNo.AutoSize = true;
+			this.slbEmployeeNo.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.slbEmployeeNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.slbEmployeeNo.Location = new System.Drawing.Point(0, 0);
+			this.slbEmployeeNo.Name = "slbEmployeeNo";
+			this.tlpEmployee.SetRowSpan(this.slbEmployeeNo, 2);
+			this.slbEmployeeNo.Size = new System.Drawing.Size(310, 49);
+			this.slbEmployeeNo.TabIndex = 8;
+			this.slbEmployeeNo.Text = "xxx";
+			this.slbEmployeeNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.slbEmployeeNo.Title = "Medarbejdernr:";
+			this.slbEmployeeNo.TitleFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold);
+			// 
+			// btnSeeEstateAgent
+			// 
+			this.btnSeeEstateAgent.AutoSize = true;
+			this.btnSeeEstateAgent.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnSeeEstateAgent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnSeeEstateAgent.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.btnSeeEstateAgent.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnSeeEstateAgent.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.btnSeeEstateAgent.FlatAppearance.BorderSize = 0;
+			this.btnSeeEstateAgent.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnSeeEstateAgent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnSeeEstateAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnSeeEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnSeeEstateAgent.Location = new System.Drawing.Point(940, 10);
+			this.btnSeeEstateAgent.Margin = new System.Windows.Forms.Padding(10);
+			this.btnSeeEstateAgent.Name = "btnSeeEstateAgent";
+			this.tlpEmployee.SetRowSpan(this.btnSeeEstateAgent, 2);
+			this.btnSeeEstateAgent.Size = new System.Drawing.Size(114, 29);
+			this.btnSeeEstateAgent.TabIndex = 10;
+			this.btnSeeEstateAgent.Text = "Se mægler";
+			this.btnSeeEstateAgent.UseVisualStyleBackColor = false;
+			// 
 			// EstateAgentLine
-            // 
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.Controls.Add(this.tlpEmployee);
-            this.Margin = new System.Windows.Forms.Padding(2);
+			// 
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.Controls.Add(this.tlpEmployee);
+			this.Margin = new System.Windows.Forms.Padding(2);
 			this.Name = "EstateAgentLine";
-            this.Size = new System.Drawing.Size(600, 49);
-            this.tlpEmployee.ResumeLayout(false);
-            this.tlpEmployee.PerformLayout();
-            this.ResumeLayout(false);
+			this.Size = new System.Drawing.Size(1064, 49);
+			this.tlpEmployee.ResumeLayout(false);
+			this.tlpEmployee.PerformLayout();
+			this.ResumeLayout(false);
 
         }
 
@@ -212,8 +179,6 @@ namespace LivingSmartForms
         private SmartControls.SmartLabel slbPhone;
         private SmartControls.SmartLabel slbEmail;
 		private SmartControls.SmartLabel slbEmployeeNo;
-		private SmartControls.SmartLabel slbZipcode;
-		private SmartControls.SmartLabel slbAddress;
-		private SmartControls.SmartButton btnSeeEstateAgent;
+		private SmartButton btnSeeEstateAgent;
     }
 }

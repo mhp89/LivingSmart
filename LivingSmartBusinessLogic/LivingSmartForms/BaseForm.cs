@@ -17,7 +17,7 @@ namespace LivingSmartForms
     {
 	    private bool formShift;
 
-	    private Stack<BaseDropIn> DropIns = new Stack<BaseDropIn>(); 
+	    private List<BaseDropIn> DropIns = new List<BaseDropIn>(); 
 		
 	    private Control partnerView;
 
@@ -233,7 +233,7 @@ namespace LivingSmartForms
 			pnlMasterContent.Controls.Add(dropInHolder);
 
 			//Tilføjer dropin'et til stack'en
-			DropIns.Push(view);
+			DropIns.Add(view);
 
 			//Tilføjet view'et til holderen
 			dropInHolder.Controls.Add(view);
@@ -247,12 +247,15 @@ namespace LivingSmartForms
 			dropInHolder.BringToFront();
 	    }
 
-	    public void CloseDropIn()
+	    public void CloseDropIn(BaseDropIn baseDropIn)
 	    {
-			pnlMasterContent.Controls.Remove(DropIns.Pop().Parent);
+		    var dropInX = baseDropIn.Parent.Location.X;
+			pnlMasterContent.Controls.Remove(baseDropIn.Parent);
+		    DropIns.Remove(baseDropIn);
 
 		    foreach (var dropIn in DropIns)
-			    dropIn.Parent.Location = new Point(dropIn.Parent.Location.X + 50, dropIn.Parent.Location.Y);
+				if(dropIn.Parent.Location.X < dropInX)
+					dropIn.Parent.Location = new Point(dropIn.Parent.Location.X + 50, dropIn.Parent.Location.Y);
 
 		    //Nustiller st�rrelsen
 			//pnlDropInHolder.Size = new Size(0, pnlDropInHolder.Height);
@@ -284,44 +287,5 @@ namespace LivingSmartForms
 		}
 		
 		#endregion
-        
-
-	    private void InitTestData()
-	    {
-			var customerController = CustomerController.Instance;
-
-		    customerController.MakeNewCustomer("Anders And", new DateTime(1956, 6, 6), "Andeby", 2412, "Anders@andeby.dk", "19560606");
-			customerController.SaveActiveCustomer();
-
-			customerController.MakeNewCustomer("Rip", new DateTime(1992, 4, 28), "Andeby", 7100, "Rip@andeby.dk", "19920428");
-			customerController.SaveActiveCustomer();
-
-			customerController.MakeNewCustomer("Rap", new DateTime(1992, 4, 28), "Andeby", 7100, "Rap@andeby.dk", "19921428");
-			customerController.SaveActiveCustomer();
-
-			customerController.MakeNewCustomer("Rup", new DateTime(1992, 4, 28), "Andeby", 7100, "Rup@andeby.dk", "19922428");
-			customerController.SaveActiveCustomer();
-
-			customerController.MakeNewCustomer("Fedtmule", new DateTime(1932, 11, 12), "Mouseton", 5500, "Fedtmule@Mouseton.dk", "19321112");
-			customerController.SaveActiveCustomer();
-
-
-			var estateAgentController = EstateAgentController.Instance;
-
-			estateAgentController.MakeNewEstateAgent("Anders And", "19560606", "Anders@andeby.dk", DateTime.Today);
-			estateAgentController.SaveActiveEstateAgent();
-
-			estateAgentController.MakeNewEstateAgent("Rip", "19920428", "Rip@andeby.dk", DateTime.Today);
-			estateAgentController.SaveActiveEstateAgent();
-
-			estateAgentController.MakeNewEstateAgent("Rap", "19921428", "Rap@andeby.dk", DateTime.Today);
-			estateAgentController.SaveActiveEstateAgent();
-
-			estateAgentController.MakeNewEstateAgent("Rup", "19922428", "Rup@andeby.dk", DateTime.Today);
-			estateAgentController.SaveActiveEstateAgent();
-
-			estateAgentController.MakeNewEstateAgent("Fedtmule", "19321112", "Fedtmule@mouseton.dk", DateTime.Today);
-			estateAgentController.SaveActiveEstateAgent();
-	    }
 	}
 }

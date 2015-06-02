@@ -59,11 +59,11 @@ namespace LivingSmartForms.DropIns
 		private void InitializeSteps()
 		{
 			stepIndicator.Steps = steps.Length;
-
+			
 			foreach (var step in steps)
 			{
-				step.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
-				step.Location = new Point(10, 10);	
+				step.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top | AnchorStyles.Bottom;
+				step.Location = new Point(10, 8);	
 			}
 		}
 
@@ -72,6 +72,8 @@ namespace LivingSmartForms.DropIns
 			activeStep = steps[stepIndex];
 			pnlStepHolder.Controls.Clear();
 			pnlStepHolder.Controls.Add(activeStep);
+
+			activeStep.Size = new Size(pnlStepHolder.Width-20, pnlStepHolder.Height-20);
 
 			currentStepIndex = stepIndex;
 			stepIndicator.CurrentStep = stepIndex;

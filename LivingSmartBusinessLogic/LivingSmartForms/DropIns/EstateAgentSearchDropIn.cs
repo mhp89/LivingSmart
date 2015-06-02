@@ -58,18 +58,16 @@ namespace LivingSmartForms.DropIns
 
 		private void FinishSearch(EstateAgent estateAgent)
 		{
-			baseForm.CloseDropIn();
+			baseForm.CloseDropIn(this);
 			callback(estateAgent);
 		}
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			baseForm.CloseDropIn();
-			callback(null);
+			FinishSearch(null);
 		}
 		private void btnSelect_Click(object sender, EventArgs e)
 		{
-			baseForm.CloseDropIn();
-			callback(selectedEstateAgent.EstateAgent);
+			FinishSearch(selectedEstateAgent.EstateAgent);
 		}
 
 		#region Search

@@ -54,9 +54,9 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog.AddToCatalog(estateAgent);
         }
 
-        public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate)
+		public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate, string username, string password)
         {
-            SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate));
+            SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate, username, password));
             return activeEstateAgent;
         }
 

@@ -11,7 +11,9 @@ namespace LivingSmartBusinessLogic.Model
         private string _telephone;
         private string _email;
         private DateTime _startingDate;
-        private DateTime? _terminationDate;
+		private DateTime? _terminationDate;
+		private string _username;
+		private string _password;
 
         #endregion
 
@@ -23,23 +25,28 @@ namespace LivingSmartBusinessLogic.Model
         public string Email { get { return _email; } internal set { _email = value; } }
         public DateTime StartingDate { get { return _startingDate; } 
             internal set { _startingDate = value; } }
-        public DateTime? TerminationDate { get { return _terminationDate; } 
-            internal set { _terminationDate = value; } }
+        public DateTime? TerminationDate { get { return _terminationDate; }
+			internal set { _terminationDate = value; }
+		}
+		public string Username { get { return _username; } internal set { _username = value; } }
+		public string Password { get { return _password; } internal set { _password = value; } }
 
         #endregion
 
-        internal EstateAgent(string name, string telephone, string email, 
-            DateTime startingDate)
+        internal EstateAgent(string name, string telephone, string email,
+			DateTime startingDate, string username, string password)
         {
 	        Id = -1;
             Name = name;
             Telephone = telephone;
             Email = email;
             StartingDate = startingDate;
-            TerminationDate = null;
+			TerminationDate = null;
+			Username = username;
+			Password = password;
         }
         internal EstateAgent(int id, string name, string telephone, string email, 
-            DateTime startingDate, DateTime? terminationDate)
+            DateTime startingDate, DateTime? terminationDate, string username, string password)
         {
             Id = id;
             Name = name;
@@ -47,6 +54,8 @@ namespace LivingSmartBusinessLogic.Model
             Email = email;
             StartingDate = startingDate;
             TerminationDate = terminationDate;
+	        Username = username;
+	        Password = password;
         }
 
         #region Methods

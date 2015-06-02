@@ -61,7 +61,7 @@ namespace LivingSmartForms.DropIns
 
 		private void FinishSearch(Customer customer)
 		{
-			baseForm.CloseDropIn();
+			baseForm.CloseDropIn(this);
 			callback(customer);
 		}
 

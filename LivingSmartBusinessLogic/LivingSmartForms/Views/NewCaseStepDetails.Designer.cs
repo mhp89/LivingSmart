@@ -32,6 +32,7 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
 			this.tlpPropertyDetails = new System.Windows.Forms.TableLayoutPanel();
+			this.lblSystemRating = new System.Windows.Forms.Label();
 			this.lblDetailsPictures = new System.Windows.Forms.Label();
 			this.stbDetailsDescription = new SmartControls.SmartTextBox();
 			this.stbDetailsPrice = new SmartControls.SmartTextBox();
@@ -45,11 +46,10 @@ namespace LivingSmartForms.Views
 			this.clsImages = new SmartControls.ControlList();
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnAddImage = new SmartControls.SmartButton();
-			this.hdrPropertyDetails = new SmartControls.Header();
-			this.lblSystemRating = new System.Windows.Forms.Label();
 			this.pnlSystemRating = new System.Windows.Forms.Panel();
-			this.stbSystemRating = new SmartControls.SmartTextBox();
 			this.btnGetNewRating = new SmartControls.SmartButton();
+			this.stbSystemRating = new SmartControls.SmartTextBox();
+			this.hdrPropertyDetails = new SmartControls.Header();
 			this.tlpPropertyDetails.SuspendLayout();
 			this.pnlDetailsPictures.SuspendLayout();
 			this.panel1.SuspendLayout();
@@ -63,7 +63,7 @@ namespace LivingSmartForms.Views
             | System.Windows.Forms.AnchorStyles.Right)));
 			this.tlpPropertyDetails.ColumnCount = 2;
 			this.tlpPropertyDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.08333F));
-			this.tlpPropertyDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.91666F));
+			this.tlpPropertyDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.91667F));
 			this.tlpPropertyDetails.Controls.Add(this.lblSystemRating, 0, 1);
 			this.tlpPropertyDetails.Controls.Add(this.lblDetailsPictures, 0, 5);
 			this.tlpPropertyDetails.Controls.Add(this.stbDetailsDescription, 1, 4);
@@ -83,22 +83,35 @@ namespace LivingSmartForms.Views
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 100F));
-			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 210F));
-			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
-			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
+			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
 			this.tlpPropertyDetails.Size = new System.Drawing.Size(480, 480);
 			this.tlpPropertyDetails.TabIndex = 5;
+			// 
+			// lblSystemRating
+			// 
+			this.lblSystemRating.AutoSize = true;
+			this.lblSystemRating.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblSystemRating.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblSystemRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblSystemRating.Location = new System.Drawing.Point(0, 40);
+			this.lblSystemRating.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblSystemRating.Name = "lblSystemRating";
+			this.lblSystemRating.Size = new System.Drawing.Size(129, 30);
+			this.lblSystemRating.TabIndex = 18;
+			this.lblSystemRating.Text = "Systemvurdering";
+			this.lblSystemRating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblDetailsPictures
 			// 
 			this.lblDetailsPictures.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblDetailsPictures.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblDetailsPictures.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblDetailsPictures.Location = new System.Drawing.Point(0, 430);
+			this.lblDetailsPictures.Location = new System.Drawing.Point(0, 320);
 			this.lblDetailsPictures.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPictures.Name = "lblDetailsPictures";
-			this.lblDetailsPictures.Size = new System.Drawing.Size(130, 30);
+			this.lblDetailsPictures.Size = new System.Drawing.Size(129, 30);
 			this.lblDetailsPictures.TabIndex = 16;
 			this.lblDetailsPictures.Text = "Billeder";
 			this.lblDetailsPictures.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -114,7 +127,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsDescription.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbDetailsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbDetailsDescription.Location = new System.Drawing.Point(130, 220);
+			this.stbDetailsDescription.Location = new System.Drawing.Point(129, 160);
 			this.stbDetailsDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsDescription.MaxLength = 500;
 			this.stbDetailsDescription.MinLength = -1;
@@ -123,7 +136,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsDescription.Placeholder = null;
 			this.stbDetailsDescription.RegularExpression = null;
 			this.stbDetailsDescription.Required = true;
-			this.stbDetailsDescription.Size = new System.Drawing.Size(350, 200);
+			this.stbDetailsDescription.Size = new System.Drawing.Size(351, 150);
 			this.stbDetailsDescription.Suffix = null;
 			this.stbDetailsDescription.TabIndex = 3;
 			this.stbDetailsDescription.TabStop = false;
@@ -140,7 +153,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsPrice.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbDetailsPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbDetailsPrice.Location = new System.Drawing.Point(130, 120);
+			this.stbDetailsPrice.Location = new System.Drawing.Point(129, 120);
 			this.stbDetailsPrice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsPrice.MaxLength = 50;
 			this.stbDetailsPrice.MinLength = -1;
@@ -149,7 +162,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPrice.Placeholder = null;
 			this.stbDetailsPrice.RegularExpression = null;
 			this.stbDetailsPrice.Required = true;
-			this.stbDetailsPrice.Size = new System.Drawing.Size(350, 90);
+			this.stbDetailsPrice.Size = new System.Drawing.Size(351, 30);
 			this.stbDetailsPrice.Suffix = null;
 			this.stbDetailsPrice.TabIndex = 2;
 			this.stbDetailsPrice.TabStop = false;
@@ -160,10 +173,10 @@ namespace LivingSmartForms.Views
 			this.lblDetailsDescription.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblDetailsDescription.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblDetailsDescription.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblDetailsDescription.Location = new System.Drawing.Point(0, 220);
+			this.lblDetailsDescription.Location = new System.Drawing.Point(0, 160);
 			this.lblDetailsDescription.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsDescription.Name = "lblDetailsDescription";
-			this.lblDetailsDescription.Size = new System.Drawing.Size(130, 30);
+			this.lblDetailsDescription.Size = new System.Drawing.Size(129, 30);
 			this.lblDetailsDescription.TabIndex = 8;
 			this.lblDetailsDescription.Text = "Beskrivelse";
 			this.lblDetailsDescription.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -177,7 +190,7 @@ namespace LivingSmartForms.Views
 			this.lblDetailsPublicEvaluation.Location = new System.Drawing.Point(0, 0);
 			this.lblDetailsPublicEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPublicEvaluation.Name = "lblDetailsPublicEvaluation";
-			this.lblDetailsPublicEvaluation.Size = new System.Drawing.Size(130, 30);
+			this.lblDetailsPublicEvaluation.Size = new System.Drawing.Size(129, 30);
 			this.lblDetailsPublicEvaluation.TabIndex = 5;
 			this.lblDetailsPublicEvaluation.Text = "Off. vurdering";
 			this.lblDetailsPublicEvaluation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -191,7 +204,7 @@ namespace LivingSmartForms.Views
 			this.lblDetailsEvaluation.Location = new System.Drawing.Point(0, 80);
 			this.lblDetailsEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsEvaluation.Name = "lblDetailsEvaluation";
-			this.lblDetailsEvaluation.Size = new System.Drawing.Size(130, 30);
+			this.lblDetailsEvaluation.Size = new System.Drawing.Size(129, 30);
 			this.lblDetailsEvaluation.TabIndex = 6;
 			this.lblDetailsEvaluation.Text = "Vurdering";
 			this.lblDetailsEvaluation.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -205,7 +218,7 @@ namespace LivingSmartForms.Views
 			this.lblDetailsPrice.Location = new System.Drawing.Point(0, 120);
 			this.lblDetailsPrice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPrice.Name = "lblDetailsPrice";
-			this.lblDetailsPrice.Size = new System.Drawing.Size(130, 90);
+			this.lblDetailsPrice.Size = new System.Drawing.Size(129, 30);
 			this.lblDetailsPrice.TabIndex = 7;
 			this.lblDetailsPrice.Text = "Udbudspris";
 			this.lblDetailsPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -221,7 +234,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPublicEvaluation.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsPublicEvaluation.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbDetailsPublicEvaluation.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbDetailsPublicEvaluation.Location = new System.Drawing.Point(130, 0);
+			this.stbDetailsPublicEvaluation.Location = new System.Drawing.Point(129, 0);
 			this.stbDetailsPublicEvaluation.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsPublicEvaluation.MaxLength = 50;
 			this.stbDetailsPublicEvaluation.MinLength = -1;
@@ -230,7 +243,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPublicEvaluation.Placeholder = null;
 			this.stbDetailsPublicEvaluation.RegularExpression = null;
 			this.stbDetailsPublicEvaluation.Required = true;
-			this.stbDetailsPublicEvaluation.Size = new System.Drawing.Size(350, 30);
+			this.stbDetailsPublicEvaluation.Size = new System.Drawing.Size(351, 30);
 			this.stbDetailsPublicEvaluation.Suffix = null;
 			this.stbDetailsPublicEvaluation.TabIndex = 0;
 			this.stbDetailsPublicEvaluation.TabStop = false;
@@ -247,7 +260,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsRating.Cursor = System.Windows.Forms.Cursors.IBeam;
 			this.stbDetailsRating.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.stbDetailsRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbDetailsRating.Location = new System.Drawing.Point(130, 80);
+			this.stbDetailsRating.Location = new System.Drawing.Point(129, 80);
 			this.stbDetailsRating.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbDetailsRating.MaxLength = 50;
 			this.stbDetailsRating.MinLength = -1;
@@ -256,7 +269,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsRating.Placeholder = null;
 			this.stbDetailsRating.RegularExpression = null;
 			this.stbDetailsRating.Required = true;
-			this.stbDetailsRating.Size = new System.Drawing.Size(350, 30);
+			this.stbDetailsRating.Size = new System.Drawing.Size(351, 30);
 			this.stbDetailsRating.Suffix = null;
 			this.stbDetailsRating.TabIndex = 1;
 			this.stbDetailsRating.TabStop = false;
@@ -267,21 +280,22 @@ namespace LivingSmartForms.Views
 			this.pnlDetailsPictures.Controls.Add(this.clsImages);
 			this.pnlDetailsPictures.Controls.Add(this.panel1);
 			this.pnlDetailsPictures.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlDetailsPictures.Location = new System.Drawing.Point(130, 430);
+			this.pnlDetailsPictures.Location = new System.Drawing.Point(129, 320);
 			this.pnlDetailsPictures.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlDetailsPictures.Name = "pnlDetailsPictures";
-			this.pnlDetailsPictures.Size = new System.Drawing.Size(350, 50);
+			this.pnlDetailsPictures.Size = new System.Drawing.Size(351, 160);
 			this.pnlDetailsPictures.TabIndex = 17;
 			// 
 			// clsImages
 			// 
 			this.clsImages.AutoScroll = true;
+			this.clsImages.BackColor = System.Drawing.SystemColors.ControlDarkDark;
 			this.clsImages.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.clsImages.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
 			this.clsImages.Location = new System.Drawing.Point(0, 40);
 			this.clsImages.Margin = new System.Windows.Forms.Padding(0);
 			this.clsImages.Name = "clsImages";
-			this.clsImages.Size = new System.Drawing.Size(350, 10);
+			this.clsImages.Size = new System.Drawing.Size(351, 120);
 			this.clsImages.Spacing = 5;
 			this.clsImages.TabIndex = 0;
 			this.clsImages.WrapContents = false;
@@ -292,7 +306,7 @@ namespace LivingSmartForms.Views
 			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
 			this.panel1.Location = new System.Drawing.Point(0, 0);
 			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(350, 40);
+			this.panel1.Size = new System.Drawing.Size(351, 40);
 			this.panel1.TabIndex = 1;
 			// 
 			// btnAddImage
@@ -315,43 +329,37 @@ namespace LivingSmartForms.Views
 			this.btnAddImage.UseVisualStyleBackColor = false;
 			this.btnAddImage.Click += new System.EventHandler(this.btnAddImage_Click);
 			// 
-			// hdrPropertyDetails
-			// 
-			this.hdrPropertyDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.hdrPropertyDetails.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.hdrPropertyDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.hdrPropertyDetails.Location = new System.Drawing.Point(0, 10);
-			this.hdrPropertyDetails.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
-			this.hdrPropertyDetails.Name = "hdrPropertyDetails";
-			this.hdrPropertyDetails.Size = new System.Drawing.Size(480, 25);
-			this.hdrPropertyDetails.TabIndex = 4;
-			this.hdrPropertyDetails.Text = "Detaljer";
-			// 
-			// lblSystemRating
-			// 
-			this.lblSystemRating.AutoSize = true;
-			this.lblSystemRating.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblSystemRating.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblSystemRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblSystemRating.Location = new System.Drawing.Point(0, 40);
-			this.lblSystemRating.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.lblSystemRating.Name = "lblSystemRating";
-			this.lblSystemRating.Size = new System.Drawing.Size(130, 30);
-			this.lblSystemRating.TabIndex = 18;
-			this.lblSystemRating.Text = "Systemvurdering";
-			this.lblSystemRating.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
 			// pnlSystemRating
 			// 
 			this.pnlSystemRating.Controls.Add(this.btnGetNewRating);
 			this.pnlSystemRating.Controls.Add(this.stbSystemRating);
 			this.pnlSystemRating.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlSystemRating.Location = new System.Drawing.Point(130, 40);
+			this.pnlSystemRating.Location = new System.Drawing.Point(129, 40);
 			this.pnlSystemRating.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.pnlSystemRating.Name = "pnlSystemRating";
-			this.pnlSystemRating.Size = new System.Drawing.Size(350, 30);
+			this.pnlSystemRating.Size = new System.Drawing.Size(351, 30);
 			this.pnlSystemRating.TabIndex = 19;
+			// 
+			// btnGetNewRating
+			// 
+			this.btnGetNewRating.AutoSize = true;
+			this.btnGetNewRating.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnGetNewRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnGetNewRating.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.btnGetNewRating.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnGetNewRating.Dock = System.Windows.Forms.DockStyle.Right;
+			this.btnGetNewRating.FlatAppearance.BorderSize = 0;
+			this.btnGetNewRating.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnGetNewRating.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnGetNewRating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnGetNewRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnGetNewRating.Location = new System.Drawing.Point(208, 0);
+			this.btnGetNewRating.Name = "btnGetNewRating";
+			this.btnGetNewRating.Size = new System.Drawing.Size(143, 30);
+			this.btnGetNewRating.TabIndex = 3;
+			this.btnGetNewRating.Text = "Vurdér ejendom";
+			this.btnGetNewRating.UseVisualStyleBackColor = false;
+			this.btnGetNewRating.Click += new System.EventHandler(this.btnGetNewRating_Click);
 			// 
 			// stbSystemRating
 			// 
@@ -375,38 +383,32 @@ namespace LivingSmartForms.Views
 			this.stbSystemRating.Placeholder = null;
 			this.stbSystemRating.RegularExpression = null;
 			this.stbSystemRating.Required = true;
-			this.stbSystemRating.Size = new System.Drawing.Size(197, 30);
+			this.stbSystemRating.Size = new System.Drawing.Size(198, 30);
 			this.stbSystemRating.Suffix = null;
 			this.stbSystemRating.TabIndex = 2;
 			this.stbSystemRating.TabStop = false;
 			this.stbSystemRating.UseSystemPasswordChar = false;
 			// 
-			// btnGetNewRating
+			// hdrPropertyDetails
 			// 
-			this.btnGetNewRating.AutoSize = true;
-			this.btnGetNewRating.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnGetNewRating.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnGetNewRating.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.btnGetNewRating.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnGetNewRating.Dock = System.Windows.Forms.DockStyle.Right;
-			this.btnGetNewRating.FlatAppearance.BorderSize = 0;
-			this.btnGetNewRating.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnGetNewRating.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnGetNewRating.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnGetNewRating.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnGetNewRating.Location = new System.Drawing.Point(207, 0);
-			this.btnGetNewRating.Name = "btnGetNewRating";
-			this.btnGetNewRating.Size = new System.Drawing.Size(143, 30);
-			this.btnGetNewRating.TabIndex = 3;
-			this.btnGetNewRating.Text = "Vurdér ejendom";
-			this.btnGetNewRating.UseVisualStyleBackColor = false;
-			this.btnGetNewRating.Click += new System.EventHandler(this.btnGetNewRating_Click);
+			this.hdrPropertyDetails.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.hdrPropertyDetails.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.hdrPropertyDetails.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.hdrPropertyDetails.Location = new System.Drawing.Point(0, 10);
+			this.hdrPropertyDetails.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
+			this.hdrPropertyDetails.Name = "hdrPropertyDetails";
+			this.hdrPropertyDetails.Size = new System.Drawing.Size(480, 25);
+			this.hdrPropertyDetails.TabIndex = 4;
+			this.hdrPropertyDetails.Text = "Detaljer";
 			// 
 			// NewCaseStepDetails
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+			this.BackColor = System.Drawing.Color.Fuchsia;
 			this.Controls.Add(this.tlpPropertyDetails);
 			this.Controls.Add(this.hdrPropertyDetails);
+			this.MinimumSize = new System.Drawing.Size(480, 525);
 			this.Name = "NewCaseStepDetails";
 			this.Size = new System.Drawing.Size(480, 525);
 			this.tlpPropertyDetails.ResumeLayout(false);

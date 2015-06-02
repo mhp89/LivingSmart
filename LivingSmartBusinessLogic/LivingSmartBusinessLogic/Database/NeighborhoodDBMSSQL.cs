@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -97,7 +97,7 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "INSERT INTO Neighborhood OUTPUT INSERTED.ID VALUES (@ZipCode, @Neighborhood, @Value); "
+                CommandText = "INSERT INTO Neighborhood OUTPUT INSERTED.Id VALUES (@ZipCode, @Neighborhood, @Value); "
             };
 
             cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.City.ZipCode;

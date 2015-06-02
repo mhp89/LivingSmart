@@ -37,9 +37,11 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string)reader["Telephone"];
                     string email = (string)reader["Email"];
                     DateTime startingDate = (DateTime)reader["StartingDate"];
-                    DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull))?null:(DateTime?)reader["TerminationDate"];
+					DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
+					string username = (string)reader["Username"];
+					string password = (string)reader["Password"];
 
-                    EstateAgent estateAgent = new EstateAgent(estateAgentId, name, telephone, email, startingDate, terminationDate);
+                    EstateAgent estateAgent = new EstateAgent(estateAgentId, name, telephone, email, startingDate, terminationDate, username, password);
                     estateAgentList.Add(estateAgent);
                 }
             }
@@ -104,14 +106,16 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-				CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.EstateAgentId VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); "
+				CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.EstateAgentId VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate, @Username, @Password); "
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
             cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
             cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
-            cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
+			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
+			cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 50, "Username").Value = estateAgent.Username;
+			cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 50, "Password").Value = estateAgent.Password;
 
             try
             {
@@ -155,8 +159,10 @@ namespace LivingSmartBusinessLogic.DB
 					string email = (string)reader["Email"];
 					DateTime startingDate = (DateTime)reader["StartingDate"];
 					DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
+					string usernameData = (string)reader["Username"];
+					string passwordData = (string)reader["Password"];
 
-					estateAgent = new EstateAgent(readEstateAgentId, name, telephone, email, startingDate, terminationDate);
+					estateAgent = new EstateAgent(readEstateAgentId, name, telephone, email, startingDate, terminationDate, usernameData, passwordData);
 				}
 			}
 			catch (SqlException e)
