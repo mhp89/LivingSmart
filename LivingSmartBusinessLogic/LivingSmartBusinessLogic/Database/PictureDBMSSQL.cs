@@ -115,8 +115,8 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Location", SqlDbType.Char, 50, "Location").Value = picture.Location;
-            cmd.Parameters.Add("@Description", SqlDbType.Char, 255, "Description").Value = picture.Desription;
+            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 50, "Location").Value = picture.Location;
+            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = picture.Desription;
 
             try
             {
@@ -151,8 +151,8 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Location", SqlDbType.Char, 50, "Location").Value = picture.Location;
-            cmd.Parameters.Add("@Description", SqlDbType.Char, 255, "Description").Value = picture.Desription;
+            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 50, "Location").Value = picture.Location;
+            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = picture.Desription;
 
             try
             {

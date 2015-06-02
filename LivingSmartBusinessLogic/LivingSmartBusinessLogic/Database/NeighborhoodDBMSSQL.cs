@@ -66,7 +66,7 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.ZipCode;
-            cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = neighborhood.Name;
+            cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
             cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
 
             try
@@ -101,7 +101,7 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.City.ZipCode;
-            cmd.Parameters.Add("@Neighborhood", SqlDbType.Char, 15, "Neighborhood").Value = neighborhood.Name;
+            cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
             cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
 
             try

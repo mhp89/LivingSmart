@@ -18,7 +18,7 @@ namespace LivingSmartBusinessLogic.DB
                 return new AdDBMSSQL();
 //            if (Properties.Settings.Default.DatabaseType == "XML")
 //                return new AdDBXML();
-//            if (Properties.Settings.Default.DataDatabaseTypebase == "MYSQL")
+//            if (Properties.Settings.Default.DatabaseType == "MYSQL")
 //                return new AdDBMYSQL();
             return null;
         }

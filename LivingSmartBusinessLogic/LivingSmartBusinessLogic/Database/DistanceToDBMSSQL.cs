@@ -115,7 +115,7 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = distanceTo.Type;
+            cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = distanceTo.Type;
             cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
             try
@@ -151,7 +151,7 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = distanceTo.Type;
+            cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = distanceTo.Type;
             cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
             try

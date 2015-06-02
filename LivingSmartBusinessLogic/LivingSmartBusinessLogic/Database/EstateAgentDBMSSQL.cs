@@ -70,9 +70,9 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE EstateAgent SET Name = (@Name), Telephone = (@Telephone), Email = (@Email), StartingDate = (@StartingDate), TerminationDate = (@TerminationDate)" + "WHERE EstateAgentId = " + estateagentId
             };
 
-            cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
-            cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
-            cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
+            cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = estateAgent.Name;
+            cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = estateAgent.Telephone;
+            cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = estateAgent.Email;
             cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
 			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
@@ -107,9 +107,9 @@ namespace LivingSmartBusinessLogic.DB
 				CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.EstateAgentId VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate); "
             };
 
-            cmd.Parameters.Add("@Name", SqlDbType.Char, 50, "Name").Value = estateAgent.Name;
-            cmd.Parameters.Add("@Telephone", SqlDbType.Char, 20, "Telephone").Value = estateAgent.Telephone;
-            cmd.Parameters.Add("@Email", SqlDbType.Char, 50, "Email").Value = estateAgent.Email;
+            cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = estateAgent.Name;
+            cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = estateAgent.Telephone;
+            cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = estateAgent.Email;
             cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
             cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 

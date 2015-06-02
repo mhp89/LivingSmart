@@ -25,6 +25,10 @@ namespace LivingSmartBusinessLogic
         /// <param name="element">The element associated with the key.</param>
         void Insert(TKey key, TValue element);
 
+        /// <summary>
+        /// Removes the element from the priority queue having the higest priority.
+        /// </summary>
+        /// <returns>The element from the priority queue having the highest priority - default(TValue) if no elements exists</returns>
         TValue RemoveMax();
     }
 }
