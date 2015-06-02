@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Model
         {
             this.keyCasePair = keyCasePair;
             this.brokers = brokers;
-            pq = new MyPriorityQueue<decimal, Case>();
+            pq = new PriorityQueue<decimal, Case>();
             openHouse = new Dictionary<EstateAgent, List<Case>>();
 
             foreach (var caseAskingPricePair in this.keyCasePair)
@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic.Model
         /// The key could be the price of the house 
         /// </summary>
         /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
-        public Dictionary<EstateAgent, List<Case>> ReturnOpenHouse()
+        public Dictionary<EstateAgent, List<Case>> ReturnOpenHouseShuffle()
         {
             if (brokers.Count > 0)
             {
@@ -55,7 +55,6 @@ namespace LivingSmartBusinessLogic.Model
                     {
                         openHouse.Add(b, new List<Case>());
                     }
-
                     openHouse[b].Add(c);
 
                     brokerIndex = (brokerIndex + 1) % brokers.Count;
@@ -65,10 +64,60 @@ namespace LivingSmartBusinessLogic.Model
         }
 
         /// <summary>
+        /// Distributes Cases to EstateAgents based on the Key in given in the constructor.
+        /// The key could be the price of the house 
+        /// </summary>
+        /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
+        public Dictionary<EstateAgent, List<Case>> ReturnOpenHouseEvenly()
+        {
+            if (brokers.Count > 0)
+            {
+                bool usingLeft = true;
+                Stack<EstateAgent> left = new Stack<EstateAgent>();
+                Stack<EstateAgent> right = new Stack<EstateAgent>();
+                EstateAgent estateAgent;
+                Case c;
+
+                foreach (EstateAgent agent in brokers)
+                {
+                    left.Push(agent);
+                }
+
+                while (pq.Count > 0)
+                {
+                    while (pq.Count > 0 && left.Count > 0)
+                    {
+                        c = pq.RemoveMax();
+                        estateAgent = left.Pop();
+                        right.Push(estateAgent);
+                        if (!openHouse.ContainsKey(estateAgent))
+                        {
+                            openHouse.Add(estateAgent, new List<Case>());
+                        }
+                        openHouse[estateAgent].Add(c);
+                    }
+
+                    while (pq.Count > 0 && right.Count > 0)
+                    {
+                        c = pq.RemoveMax();
+                        estateAgent = left.Pop();
+                        left.Push(estateAgent);
+                        if (!openHouse.ContainsKey(estateAgent))
+                        {
+                            openHouse.Add(estateAgent, new List<Case>());
+                        }
+                        openHouse[estateAgent].Add(c);
+                    }
+                }
+            }
+            return openHouse;
+        }
+
+        /// <summary>
         /// Helper method - shuffles a list of values
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="list"></param>
+        /// <typeparam name="T">Type of elements in the list.</typeparam>
+        /// <param name="list">The list of elements to be shuffled.</param>
         private void Shuffle<T>(List<T> list)
         {
             if (list.Count >= 2)

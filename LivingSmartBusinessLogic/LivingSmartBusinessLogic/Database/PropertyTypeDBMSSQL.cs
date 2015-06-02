@@ -66,7 +66,7 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE PropertyType SET Description = (@Description) WHERE AppointmentId = " + propertyTypeId
             };
 
-            cmd.Parameters.Add("@Description", SqlDbType.Char, 50, "Description").Value = propertyType.Description;
+            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 50, "Description").Value = propertyType.Description;
 
             try
             {
@@ -99,7 +99,7 @@ namespace LivingSmartBusinessLogic.DB
 				CommandText = "INSERT INTO PropertyType OUTPUT INSERTED.PropertyTypeId VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
-            cmd.Parameters.Add("@Description", SqlDbType.Char, 50, "Description").Value = propertyType.Description;
+            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 50, "Description").Value = propertyType.Description;
 
             try
             {

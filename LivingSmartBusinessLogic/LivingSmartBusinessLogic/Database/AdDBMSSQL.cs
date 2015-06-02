@@ -156,11 +156,11 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "INSERT INTO Ad OUTPUT INSERTED.AdId VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "Name").Value = ad.Type;
-            cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Name").Value = ad.StartDate;
-            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 8, "Name").Value = ad.EndDate;
-            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "Name").Value = ad.Price;
-            cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Name").Value = ad.Id;
+            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = ad.Type;
+            cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = ad.StartDate;
+            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 8, "StartDate").Value = ad.EndDate;
+            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "EndDate").Value = ad.Price;
+            cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = ad.Id;
 
             try
             {

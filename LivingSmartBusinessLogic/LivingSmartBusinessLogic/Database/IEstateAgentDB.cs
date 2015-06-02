@@ -28,6 +28,13 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="estateAgent">EstateAgent to be created.</param>
         /// <returns>Returns the Id of the EstateAgent created.</returns>
         int CreateEstateAgent(EstateAgent estateAgent);
-		EstateAgent LoginEstateAgent(string username, string password);
+
+        /// <summary>
+        /// Returns an EstateAgent having the specified username and password.
+        /// </summary>
+        /// <param name="username">username of the estate agent.</param>
+        /// <param name="password">password of the estate agent.</param>
+        /// <returns></returns>
+        EstateAgent LoginEstateAgent(string username, string password);
     }
 }

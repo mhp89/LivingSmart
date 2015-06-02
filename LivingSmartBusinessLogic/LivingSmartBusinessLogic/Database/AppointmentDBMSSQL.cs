@@ -82,8 +82,8 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = appointment.Case.Id;
             cmd.Parameters.Add("@StartTimestamp", SqlDbType.Date, 8, "StartTimestamp").Value = appointment.StartTimestamp;
             cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Date, 8, "EndTimeStamp").Value = appointment.EndTimeStamp;
-            cmd.Parameters.Add("@Description", SqlDbType.Char, 500, "Description").Value = appointment.Description;
-            cmd.Parameters.Add("@Place", SqlDbType.Char, 500, "Place").Value = appointment.Place;
+            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500, "Description").Value = appointment.Description;
+            cmd.Parameters.Add("@Place", SqlDbType.NVarChar, 500, "Place").Value = appointment.Place;
 
             try
             {
@@ -122,8 +122,8 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = appointment.Case.Id;
             cmd.Parameters.Add("@StartTimestamp", SqlDbType.Date, 8, "StartTimestamp").Value = appointment.StartTimestamp;
             cmd.Parameters.Add("@EndTimeStamp", SqlDbType.Date, 8, "EndTimeStamp").Value = appointment.EndTimeStamp;
-            cmd.Parameters.Add("@Description", SqlDbType.Char, 500, "Description").Value = appointment.Description;
-            cmd.Parameters.Add("@Place", SqlDbType.Char, 500, "Place").Value = appointment.Place;
+            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500, "Description").Value = appointment.Description;
+            cmd.Parameters.Add("@Place", SqlDbType.NVarChar, 500, "Place").Value = appointment.Place;
 
             try
             {

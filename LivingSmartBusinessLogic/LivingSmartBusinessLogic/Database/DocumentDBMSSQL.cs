@@ -115,10 +115,10 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = document.Type;
+            cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = document.Price;
-            cmd.Parameters.Add("@Location", SqlDbType.Char, 100, "Location").Value = document.Location;
-            cmd.Parameters.Add("@Status", SqlDbType.Char, 50, "Status").Value = document.Status;
+            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
+            cmd.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status").Value = document.Status;
 
             try
             {
@@ -153,10 +153,10 @@ namespace LivingSmartBusinessLogic.DB
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
-            cmd.Parameters.Add("@Type", SqlDbType.Char, 50, "Type").Value = document.Type;
+            cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = document.Price;
-            cmd.Parameters.Add("@Location", SqlDbType.Char, 100, "Location").Value = document.Location;
-            cmd.Parameters.Add("@Status", SqlDbType.Char, 50, "Status").Value = document.Status;
+            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
+            cmd.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status").Value = document.Status;
 
             try
             {
