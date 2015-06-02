@@ -94,9 +94,23 @@ namespace LivingSmartBusinessLogic.Catalog
 			return result;
 		}
 
-		public EstateAgent LoginEstateAgent(string username, string password)
+		internal EstateAgent LoginEstateAgent(string username, string password)
 	    {
 			return db.LoginEstateAgent(username, password);
 	    }
+
+        internal bool IsUsernameAvailable(string username)
+        {
+            var estateAgentlist = GetEstateAgents();
+
+            for (int i = 0; i <= estateAgentlist.Count - 1; i++)
+            {
+                if (estateAgentlist[i].Username == username)
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
     }
 }
