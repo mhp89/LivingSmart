@@ -57,5 +57,37 @@ namespace LivingSmartBusinessLogic.Catalog
             var caseList = cases.Values.ToList();
 			return caseList.AsReadOnly();
 	    }
+
+        public ReadOnlyCollection<Case> GetOpenCases()
+        {
+            var caseList = GetCases();
+            List<Case> openCases = new List<Case>();
+
+            foreach (Case cCase in caseList)
+            {
+                if (cCase.Status == Case.CaseStatus.Open.ToString())
+                {
+                    openCases.Add(cCase);
+                }
+            }
+
+            return openCases.AsReadOnly();
+        }
+
+        public ReadOnlyCollection<Case> GetOpenCases(int estateAgentId)
+        {
+            var caseList = GetOpenCases();
+            List<Case> estateAgentCases = new List<Case>();
+
+            foreach (Case cCase in caseList)
+            {
+                if (cCase.EstateAgent.Id == estateAgentId)
+                {
+                    estateAgentCases.Add(cCase);
+                }
+            }
+
+            return estateAgentCases.AsReadOnly();
+        }
     }
 }
