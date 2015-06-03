@@ -35,7 +35,7 @@ namespace LivingSmartBusinessLogic.Catalog
         internal void Save(Partner partner)
 		{
 			if (partner.Id == -1)
-				partner.Id = db.CreatePartner(partner);
+				partner.Id = partner.Id = db.CreatePartner(partner);
 			else
 				db.UpdatePartner(partner);
         }
@@ -52,8 +52,9 @@ namespace LivingSmartBusinessLogic.Catalog
 
 		internal ReadOnlyCollection<Partner> GetPartners()
 		{
-			var customerList = partners.Values.ToList();
-			return customerList.AsReadOnly();
+		    var partnerList = new List<Partner>();
+            partnerList.AddRange(partners.Values);
+			return partnerList.AsReadOnly();
 		}
     }
 }

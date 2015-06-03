@@ -17,7 +17,7 @@ namespace LivingSmartBusinessLogic.Model
         #endregion
 
         #region Properties
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public string Location { get { return _location; } 
             internal set { _location = value; } }
         public string Desription { get { return _description; } 

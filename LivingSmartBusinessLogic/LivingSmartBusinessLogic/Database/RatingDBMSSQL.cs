@@ -71,7 +71,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="rating">Rating to be updated.</param>
         /// <param name="caseId">CaseId connected to the Rating</param>
         /// <param name="estateAgentId">EstateAgentId connected to the Rating</param>
-        public void UpdateRating(Rating rating, int caseId, int estateAgentId)
+        public void UpdateRating(Rating rating, int caseId)
         {
             int ratingId = rating.Id;
 
@@ -86,7 +86,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@SystemValue", SqlDbType.BigInt, 8, "SystemValue").Value = rating.SystemValue;
             cmd.Parameters.Add("@EstateAgentValue", SqlDbType.BigInt, 8, "EstateAgentValue").Value = rating.EstateAgentValue;
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = rating.Date;
-            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = rating.EstateAgent.Id;
 
 			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
@@ -98,7 +98,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="caseId">CaseId connected to the Rating</param>
         /// <param name="estateAgentId">EstateAgentId connected to the Rating</param>
         /// <returns>Returns the Id of the Rating created.</returns>
-        public int CreateRating(Rating rating, int caseId, int estateAgentId)
+        public int CreateRating(Rating rating, int caseId)
         {
             SqlCommand cmd = new SqlCommand
             {
@@ -109,7 +109,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@SystemValue", SqlDbType.BigInt, 8, "SystemValue").Value = rating.SystemValue;
             cmd.Parameters.Add("@EstateAgentValue", SqlDbType.BigInt, 8, "EstateAgentValue").Value = rating.EstateAgentValue;
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = rating.Date;
-            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = rating.EstateAgent.Id;
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }

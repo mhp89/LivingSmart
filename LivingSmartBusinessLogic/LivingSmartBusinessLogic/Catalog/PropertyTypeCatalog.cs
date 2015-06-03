@@ -18,9 +18,9 @@ namespace LivingSmartBusinessLogic.Catalog
 	        db = PropertyTypeDBFactory.GetDBL();
             propertyTypes = new Dictionary<int, PropertyType>();
 
-			Load();
+			LoadCatalog();
         }
-		internal void Load()
+		internal void LoadCatalog()
 		{
 			var propertyTypeList = db.ReadPropertyTypes();
 			foreach (var propertyType in propertyTypeList)
@@ -33,11 +33,11 @@ namespace LivingSmartBusinessLogic.Catalog
         }
 
         internal void Save(PropertyType propertyType)
-		{
-			//if (propertyType.Id == -1)
-				//Create
-			//else
-				//Update
+        {
+            if (propertyType.Id == -1)
+                propertyType.Id = db.CreatePropertyType(propertyType);
+            else
+                db.UpdatePropertyType(propertyType);
         }
 
         internal void AddToCatalog(PropertyType propertyType)
@@ -59,7 +59,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
 	    public ReadOnlyCollection<PropertyType> GetPropertyTypes()
 	    {
-		    var cityList = propertyTypes.Values.ToList();
+	        var cityList = new List<PropertyType>();
+            cityList.AddRange(propertyTypes.Values);
 			return cityList.AsReadOnly();
 	    }
     }

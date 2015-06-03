@@ -32,8 +32,9 @@ namespace LivingSmartBusinessLogic.DB
                 {
                     int propertyTypeId = (int)reader["PropertyTypeId"];
                     string description = (string)reader["Description"];
+                    bool deleted = (bool) reader["Deleted"];
 
-                    PropertyType propertyType = new PropertyType(propertyTypeId, description);
+                    PropertyType propertyType = new PropertyType(propertyTypeId, description, deleted);
                     propertyTypeList.Add(propertyType);
                 }
             }

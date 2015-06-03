@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
@@ -8,10 +9,24 @@ namespace LivingSmartBusinessLogic.Catalog
     internal class DistanceToCatalog
     {
         private Dictionary<int, List<DistanceTo>> distanceToDictionary;
+        private IDistanceToDB db;
 
         internal DistanceToCatalog()
         {
+            db = DistanceToDBFactory.GetDBL();
             distanceToDictionary = new Dictionary<int, List<DistanceTo>>();
+
+            LoadCatalog();
+        }
+
+        internal void LoadCatalog()
+        {
+            var distanceList = db.ReadDistanceTos();
+            foreach (var distances in distanceList)
+                foreach (var distance in distances.Value)
+                {
+                    AddToCatalog(distances.Key, distance);
+                }
         }
 
         internal DistanceTo Check(int id)
@@ -19,12 +34,12 @@ namespace LivingSmartBusinessLogic.Catalog
             throw new NotImplementedException();
         }
 
-        internal void Save(DistanceTo distanceTo)
-		{
-			//if (distanceTo.Id == -1)
-				//Create
-			//else
-				//Update
+        internal void Save(DistanceTo distanceTo, int caseId)
+        {
+            if (distanceTo.Id == -1)
+                distanceTo.Id = db.CreateDistanceTo(distanceTo, caseId);
+            else
+                db.UpdateDistanceTo(distanceTo, caseId);
         }
 
         internal void AddToCatalog(int caseId, DistanceTo distanceTo)

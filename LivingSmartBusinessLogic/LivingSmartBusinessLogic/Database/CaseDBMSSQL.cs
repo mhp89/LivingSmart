@@ -104,14 +104,14 @@ namespace LivingSmartBusinessLogic.DB
 				{
 					int caseId = (int)reader["CaseId"];
 					int sellerId = (int)reader["SellerId"];
-					int buyerId = (int)reader["BuyerId"];
-					int estateAgentId = (int)reader["EstateAgentId"];
+				    int buyerId = reader["BuyerId"] is DBNull ? -1 : (int) reader["BuyerId"];
+                    int estateAgentId = (int)reader["EstateAgentId"];
 					DateTime creationDate = (DateTime)reader["creationDate"];
 					string status = (string)reader["Status"];
-					DateTime dateOfSale = (DateTime)reader["DateOfSale"];
-					DateTime transferDate = (DateTime)reader["TransferDate"];
-					DateTime dateOfCompletion = (DateTime)reader["DateOfCompletion"];
-					long sellingPrice = (long)reader["SellingPrice"];
+					DateTime? dateOfSale = reader["DateOfSale"] is DBNull? null : (DateTime?) reader["DateOfSale"];
+                    DateTime? transferDate = reader["TransferDate"] is DBNull ? null : (DateTime?)reader["TransferDate"];
+                    DateTime? dateOfCompletion = reader["DateOfCompletion"] is DBNull ? null : (DateTime?)reader["DateOfCompletion"];
+					long? sellingPrice = reader["SellingPrice"] is DBNull ? (long?) null : (long) reader["SellingPrice"];
 					string description = (string)reader["Description"];
 					int propertyTypeId = (int)reader["PropertyTypeId"];
 					string landRegistryNumber = (string)reader["LandRegistryNumber"];
@@ -120,7 +120,6 @@ namespace LivingSmartBusinessLogic.DB
 					int neighborhoodId = (int)reader["NeighborhoodId"];
 					long publicRating = (long)reader["PublicRating"];
 					long landValue = (long)reader["LandValue"];
-					string type = (string)reader["Type"];
 					int groundArea = (int)reader["GroundArea"];
 					int livingArea = (int)reader["LivingArea"];
 					int builtArea = (int)reader["BuiltArea"];

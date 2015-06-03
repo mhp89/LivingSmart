@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
@@ -9,10 +10,24 @@ namespace LivingSmartBusinessLogic.Catalog
     {
 
         private Dictionary<int, List<Appointment>> appointmentDictionary;
+        private IAppointmentDB db;
 
         internal AppointmentCatalog()
         {
+            db = AppointmentDBFactory.GetDBL();
             appointmentDictionary = new Dictionary<int, List<Appointment>>();
+
+            LoadCatalog();
+        }
+
+        internal void LoadCatalog()
+        {
+            var appointmentList = db.ReadAppointments();
+            foreach (var appointments in appointmentList)
+                foreach (var appointment in appointments.Value)
+                {
+                    AddToCatalog(appointments.Key, appointment);
+                }
         }
 
         internal Appointment Check(int id)
@@ -20,12 +35,12 @@ namespace LivingSmartBusinessLogic.Catalog
             throw new NotImplementedException();
         }
 
-        internal void Save(Appointment appointment)
-		{
-			//if (appointment.Id == -1)
-				//Create
-			//else
-				//Update
+        internal void Save(Appointment appointment, int estateAgentId)
+        {
+            if (appointment.Id == -1)
+                appointment.Id = db.CreateAppointment(appointment, estateAgentId);
+            else
+                db.UpdateAppointment(appointment, estateAgentId);
         }
 
         internal void AddToCatalog(int estateAgentId, Appointment appointment)

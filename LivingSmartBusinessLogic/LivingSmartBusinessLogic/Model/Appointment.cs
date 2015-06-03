@@ -22,7 +22,7 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public DateTime StartTimestamp { get { return _startTimeStamp; } 
             internal set { _startTimeStamp = value; } }
         public DateTime EndTimeStamp { get { return _endTimeStamp; } 
