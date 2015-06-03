@@ -24,8 +24,9 @@ namespace LivingSmartBusinessLogic.DB
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = "SELECT * FROM [Case] WHERE EstateAgentUId = " + estateAgentId + ";",
+                CommandText = "SELECT * FROM [Case] WHERE EstateAgentId = (@EstateAgentId);",
             };
+            cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
 
             try
             {
@@ -50,7 +51,6 @@ namespace LivingSmartBusinessLogic.DB
                     int neighborhoodId = (int)reader["NeighborhoodId"];
                     long publicRating = (long)reader["PublicRating"];
                     long landValue = (long)reader["LandValue"];
-                    string type = (string)reader["Type"];
                     int groundArea = (int)reader["GroundArea"];
                     int livingArea = (int)reader["LivingArea"];
                     int builtArea = (int)reader["BuiltArea"];
@@ -106,9 +106,9 @@ namespace LivingSmartBusinessLogic.DB
 					int estateAgentId = (int)reader["EstateAgentId"];
 					DateTime creationDate = (DateTime)reader["creationDate"];
 					string status = (string)reader["Status"];
-					DateTime dateOfSale = (DateTime)reader["DateOfSale"];
-					DateTime transferDate = (DateTime)reader["TransferDate"];
-					DateTime dateOfCompletion = (DateTime)reader["DateOfCompletion"];
+                    DateTime? dateOfSale = (reader["DateOfSale"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["DateOfSale"];
+                    DateTime? transferDate = (reader["TransferDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TransferDate"];
+                    DateTime? dateOfCompletion = (reader["DateOfCompletion"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["DateOfCompletion"];
 					long sellingPrice = (long)reader["SellingPrice"];
 					string description = (string)reader["Description"];
 					int propertyTypeId = (int)reader["PropertyTypeId"];
@@ -118,7 +118,6 @@ namespace LivingSmartBusinessLogic.DB
 					int neighborhoodId = (int)reader["NeighborhoodId"];
 					long publicRating = (long)reader["PublicRating"];
 					long landValue = (long)reader["LandValue"];
-					string type = (string)reader["Type"];
 					int groundArea = (int)reader["GroundArea"];
 					int livingArea = (int)reader["LivingArea"];
 					int builtArea = (int)reader["BuiltArea"];

@@ -22,9 +22,9 @@ namespace LivingSmartBusinessLogic.Model
         private EstateAgent _estateAgent;
         private DateTime _creationDate;
         private string _status;
-        private DateTime _dateOfSale;
-        private DateTime _transferDate;
-        private DateTime _dateOfCompletion;
+        private DateTime? _transferDate;
+        private DateTime? _dateOfSale;
+        private DateTime? _dateOfCompletion;
         private long? _sellingPrice;
         private string _description;
         private string _landRegistryNumber;
@@ -59,11 +59,11 @@ namespace LivingSmartBusinessLogic.Model
         public DateTime CreationDate { get { return _creationDate; } 
             internal set { _creationDate = value; } }
         public string Status { get { return _status; } internal set { _status = value; } }
-        public DateTime DateOfSale { get { return _dateOfSale; } 
+        public DateTime? DateOfSale { get { return _dateOfSale; } 
             internal set { _dateOfSale = value; } }
-        public DateTime TransferDate { get { return _transferDate; } 
+        public DateTime? TransferDate { get { return _transferDate; } 
             internal set { _transferDate = value; } }
-        public DateTime DateOfCompletion { get { return _dateOfCompletion; } 
+        public DateTime? DateOfCompletion { get { return _dateOfCompletion; } 
             internal set { _dateOfCompletion = value; } }
         public long? SellingPrice { get { return _sellingPrice; } 
             internal set { _sellingPrice = value; } }
@@ -99,7 +99,7 @@ namespace LivingSmartBusinessLogic.Model
             internal set { City = CityController.Instance.GetCity(value); }
             get { return City.ZipCode; }
         }
-
+        public decimal NewestAskingPrice { get { return CaseController.Instance.GetNewestAskingPrice(Id).Value; } }
         public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
         #endregion
@@ -110,8 +110,8 @@ namespace LivingSmartBusinessLogic.Model
             CreationDate = new DateTime().Date;
         }
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
-            DateTime creationDate, string status, DateTime dateOfSale, 
-            DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
+            DateTime creationDate, string status, DateTime? dateOfSale, 
+            DateTime? transferDate, DateTime? dateOfCompletion, long sellingPrice, 
             string description, string landRegistryNumber, string address, int zipCode, 
             int propertyTypeId, long publicRating, long landValue, 
             int groundArea, int builtArea, int livingArea, int basementArea, 
@@ -160,13 +160,13 @@ namespace LivingSmartBusinessLogic.Model
         }
         
         /// <summary>
-        /// Beregner v�rdien af ejendommen baseret p� grundpris, pris for bebygget areal,
-        /// k�lderareal, alder af ejendommen og faktor fra RatingFactor()
+        /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
+        /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
         /// </summary>
         /// <returns></returns>
         internal long CalculatePropertyRating()
         {
-            int basementValue = _neighborhood.Value / 4;  //Estimeret v�rdi
+            int basementValue = _neighborhood.Value / 4;  //Estimeret værdi
             
             return Convert.ToInt64((_landValue + _livingArea * _neighborhood.Value 
                                     + _basementArea * basementValue) * RatingFactor()
@@ -174,8 +174,8 @@ namespace LivingSmartBusinessLogic.Model
         }
 
         /// <summary>
-        /// Finder beregningsfaktorer for udsigt, afstand til skole, indk�b og centrum
-        /// baseret p� deres faktiske v�rdier. 
+        /// Finder beregningsfaktorer for udsigt, afstand til skole, indkøb og centrum
+        /// baseret på deres faktiske værdier. 
         /// </summary>
         internal double RatingFactor()
         {
@@ -188,7 +188,7 @@ namespace LivingSmartBusinessLogic.Model
 			int centerDistance = 0;
 
 			
-            //Disse 3 afstandstyper er p�kr�vet af programmet og vil altid forefindes i databasen
+            //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
 			//TODO: Get distanceTos
             /*foreach (DistanceTo dist in distanceTos)
             {

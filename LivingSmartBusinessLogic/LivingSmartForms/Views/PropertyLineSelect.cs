@@ -17,12 +17,12 @@ namespace LivingSmartForms.Views
     public partial class PropertyLineSelect : UserControl
     {
         private SelectPropertyDropIn dropIn;
-        private Case property;
+        public Case Property { get; private set; }
         public bool Selected { get; private set; }
 
         public PropertyLineSelect(SelectPropertyDropIn dropIn, Case property)
         {
-            this.property = property;
+            Property = property;
             this.dropIn = dropIn;
             InitializeComponent();
 
@@ -41,7 +41,7 @@ namespace LivingSmartForms.Views
 
         private void UpdateFields()
         {
-            slbPropertyAddress.Text = property.Address + ", " + property.ZipCode + " " + property.City;
+            slbPropertyAddress.Text = Property.Address + ", " + Property.ZipCode + " " + Property.City;
         }
 
         private void Select(object sender, EventArgs e)

@@ -24,22 +24,19 @@ namespace LivingSmartBusinessLogic.DB
         {
             List<Statistics> list = new List<Statistics>();
 
-            string sqlstring = "SELECT DATEPART(YEAR, DateOfSale) AS Year,";
-            sqlstring += "DATEPART(MONTH, DateOfSale) AS Month,";
-            sqlstring += "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count";
-            sqlstring += "FROM [Case] inner join EstateAgent on";
-            sqlstring += "[Case].EstateAgentId = EstateAgent.EstateAgentId";
-            sqlstring += "WHERE Status = 'Sold' and DATEPART(YEAR, DateOfSale) = " + chosenYear;
-            sqlstring += "and [Case].EstateAgentId = " + estateAgentId;
-            sqlstring += "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), ";
-            sqlstring += "EstateAgent.Name";
-            sqlstring += "Order by MONTH desc";
-
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = sqlstring,
+                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year," +
+                "DATEPART(MONTH, DateOfSale) AS Month," +
+                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
+                "FROM [Case] inner join EstateAgent on " +
+                "[Case].EstateAgentId = EstateAgent.EstateAgentId" +
+                "WHERE Status = 'Sold' and DATEPART(YEAR, DateOfSale) = " + chosenYear +
+                "and [Case].EstateAgentId = " + estateAgentId +
+                "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), EstateAgent.Name" +
+                "Order by MONTH desc"
             };
 
             try
@@ -79,21 +76,19 @@ namespace LivingSmartBusinessLogic.DB
         {
             List<Statistics> list = new List<Statistics>();
 
-            string sqlstring = "SELECT DATEPART(YEAR, DateOfSale) AS Year,";
-            sqlstring += "DATEPART(MONTH, DateOfSale) AS Month, EstateAgent.Name,";
-            sqlstring += "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count";
-            sqlstring += "FROM [Case] inner join EstateAgent on";
-            sqlstring += "[Case].EstateAgentId = EstateAgent.EstateAgentId";
-            sqlstring += "WHERE Status = 'Sold'";
-            sqlstring += "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), ";
-            sqlstring += "EstateAgent.Name";
-            sqlstring += "Order by YEAR desc, Month desc";
-
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = sqlstring,
+                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year," +
+                "DATEPART(MONTH, DateOfSale) AS Month, EstateAgent.Name," +
+                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
+                "FROM [Case] inner join EstateAgent on " +
+                "[Case].EstateAgentId = EstateAgent.EstateAgentId" +
+                "WHERE Status = 'Sold'" +
+                "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), " +
+                "EstateAgent.Name" +
+                "Order by YEAR desc, Month desc"
             };
 
             try
@@ -133,18 +128,16 @@ namespace LivingSmartBusinessLogic.DB
         {
             Statistics stats = new Statistics();
 
-            string sqlstring = "SELECT DATEPART(YEAR, DateOfSale) AS Year,";
-            sqlstring += "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count";
-            sqlstring += "FROM [Case]";
-            sqlstring += "WHERE Status = 'Sold'";
-            sqlstring += "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE())";
-            sqlstring += "Group by DATEPART(YEAR, DateOfSale)";
-
             SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
                 Connection = connection,
-                CommandText = sqlstring,
+                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year," +
+                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
+                "FROM [Case]" +
+                "WHERE Status = 'Sold'" +
+                "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE())" +
+                "Group by DATEPART(YEAR, DateOfSale)"
             };
 
             try

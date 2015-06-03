@@ -1,15 +1,21 @@
 using System;
 using System.Collections.Generic;
+using System.Windows.Forms;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
+using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
 	public partial class OpenHousePage : BasePage
 	{
         public List<EstateAgent> agents = new List<EstateAgent>();
-        public List<Case> property = new List<Case>();
+        public List<Case> properties = new List<Case>();
+        public List<KeyValuePair<decimal, Case>> priceCasePair = 
+            new List<KeyValuePair<decimal, Case>>();
+        public Dictionary<EstateAgent, List<Case>> openHousePairs =
+            new Dictionary<EstateAgent, List<Case>>();
 
 		public OpenHousePage(BaseForm baseForm) : base(baseForm)
 		{
@@ -23,13 +29,53 @@ namespace LivingSmartForms.Pages
 
         private void btnSelectProperties_Click(object sender, EventArgs e)
         {
-            baseForm.ShowDropIn(new SelectPropertyDropIn(baseForm));
+            baseForm.ShowDropIn(new SelectPropertyDropIn(baseForm, PropertyList));
         }
 
+        /// <summary>
+        /// Får en liste med valgte mæglere fra drop in menuen for valg af mæglere
+        /// </summary>
+        /// <param name="agents"></param>
         private void EstateAgentList(List<EstateAgent> agents)
         {
             this.agents = agents;
             Console.WriteLine(agents.Count);
+        }
+        /// <summary>
+        /// Får en liste med valgte ejendomme fra drop in menuen for valg af ejendomme
+        /// </summary>
+        /// <param name="properties"></param>
+        private void PropertyList(List<Case> properties)
+        {
+            this.properties = properties;
+            Console.WriteLine(agents.Count);
+        }
+
+
+        private void btnMakeSelection_Click(object sender, EventArgs e)
+        {
+            foreach (Case cases in properties)
+                priceCasePair.Add(new KeyValuePair<decimal, Case>(cases.NewestAskingPrice, cases));        
+
+            OpenHouse openHouse = new OpenHouse(agents, priceCasePair);
+
+            openHousePairs = openHouse.ReturnOpenHouseEvenly();
+            UpdateList();
+        }
+
+        private void UpdateList()
+        {
+            ctcOpenHouse.SuspendLayout();
+
+            ctcOpenHouse.ClearList();
+            foreach (var pair in openHousePairs)
+            {
+                var control = new OpenHousePair(pair.Key, pair.Value);
+                control.Margin = Padding.Empty;
+                ctcOpenHouse.AddControl(control, true);
+            }
+
+            ctcOpenHouse.ResumeLayout();
         }
 	}
 }
