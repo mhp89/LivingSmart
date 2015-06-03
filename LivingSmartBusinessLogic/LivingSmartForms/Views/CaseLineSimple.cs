@@ -30,8 +30,8 @@ namespace LivingSmartForms.Views
 			slbStatus.Text = cCase.Status;
 			slbProperty.Text = cCase.Address+", "+cCase.City.District;
 			slbPropertyType.Text = cCase.PropertyType.Description;
-			slbPrice.Text = cCase.SellingPrice.ToString();
-			slbPriceTrend.Text = cCase.PriceTrend.ToString();
+			slbPrice.Text = cCase.NewestAskingPrice.ToString();
+			slbPriceTrend.Text = cCase.PriceTrend+" %";
 		}
     }
 }

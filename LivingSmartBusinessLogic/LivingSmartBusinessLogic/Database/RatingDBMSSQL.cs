@@ -78,12 +78,14 @@ namespace LivingSmartBusinessLogic.DB
 					int ratingId = (int)reader["RatingId"];
 					int caseId = (int)reader["CaseId"];
 					long systemValue = (long)reader["SystemValue"];
-					long estateAgentValue = (long)reader["EstateAgentValue"];
+					long? estateAgentValue = reader["EstateAgentValue"] is DBNull ? (long?) null : (long)reader["EstateAgentValue"];
 					DateTime date = (DateTime)reader["Date"];
 					int estateAgentId = (int)reader["EstateAgentId"];
 
 					Rating rating = new Rating(ratingId, estateAgentValue, systemValue, date, estateAgentId);
 
+					if(!caseRatingList.ContainsKey(caseId))
+						caseRatingList.Add(caseId, new List<Rating>());
 					caseRatingList[caseId].Add(rating);
 				}
 			}

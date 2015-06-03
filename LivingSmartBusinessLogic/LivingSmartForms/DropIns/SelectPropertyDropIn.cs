@@ -8,16 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</author>
     public partial class SelectPropertyDropIn : BaseDropIn
     {
-        public SelectPropertyDropIn(BaseForm baseForm) : base(baseForm)
+        private PropertySelectCallback callback;
+
+        public delegate void PropertySelectCallback(List<Case> properties);
+
+        public SelectPropertyDropIn(BaseForm baseForm, PropertySelectCallback callback) : base(baseForm)
         {
+            this.callback = callback; 
             InitializeComponent();
 
             UpdateList();
@@ -42,6 +52,21 @@ namespace LivingSmartForms.DropIns
             }
 
             clsAllProperties.ResumeLayout();
+        }
+
+        private void btnSelect_Click(object sender, EventArgs e)
+        {
+            List<Case> properties = new List<Case>();
+
+            foreach (var control in clsAllProperties.Controls)
+            {
+                var lineObject = (PropertyLineSelect)control;
+                if (lineObject.Selected == true)
+                    properties.Add(lineObject.Property);
+            }
+
+            callback(properties);
+            Close();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

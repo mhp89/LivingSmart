@@ -25,6 +25,7 @@ namespace LivingSmartBusinessLogic.Model
 
         internal AskingPrice(long value)
         {
+	        Id = -1;
             Value = value;
 			Date = new DateTime();
         }

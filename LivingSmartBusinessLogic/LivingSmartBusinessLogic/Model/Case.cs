@@ -96,6 +96,7 @@ namespace LivingSmartBusinessLogic.Model
         public Neighborhood Neighborhood { get { return _neighborhood; } 
             internal set { _neighborhood = value; } }
         
+        public decimal NewestAskingPrice { get { return CaseController.Instance.GetNewestAskingPrice(Id).Value; } }
         public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
 

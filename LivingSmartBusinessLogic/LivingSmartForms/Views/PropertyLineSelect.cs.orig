@@ -41,7 +41,11 @@ namespace LivingSmartForms.Views
 
         private void UpdateFields()
         {
+<<<<<<< HEAD
+            slbPropertyAddress.Text = property.Address + ", " + property.City.ZipCode + " " + property.City.District;
+=======
             slbPropertyAddress.Text = Property.Address + ", " + Property.City.ZipCode + " " + Property.City.District;
+>>>>>>> origin/GUI-OpenHouseControls
         }
 
         private void Select(object sender, EventArgs e)

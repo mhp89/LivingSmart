@@ -27,6 +27,7 @@ namespace LivingSmartBusinessLogic.Model
 
         internal Picture(string location, string description)
         {
+	        Id = -1;
             Location = location;
             Desription = description;
         }

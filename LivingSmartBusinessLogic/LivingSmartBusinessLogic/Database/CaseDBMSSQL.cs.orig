@@ -107,10 +107,17 @@ namespace LivingSmartBusinessLogic.DB
                     int estateAgentId = (int)reader["EstateAgentId"];
 					DateTime creationDate = (DateTime)reader["creationDate"];
 					string status = (string)reader["Status"];
+<<<<<<< HEAD
 					DateTime? dateOfSale = reader["DateOfSale"] is DBNull? null : (DateTime?) reader["DateOfSale"];
                     DateTime? transferDate = reader["TransferDate"] is DBNull ? null : (DateTime?)reader["TransferDate"];
                     DateTime? dateOfCompletion = reader["DateOfCompletion"] is DBNull ? null : (DateTime?)reader["DateOfCompletion"];
 					long? sellingPrice = reader["SellingPrice"] is DBNull ? (long?) null : (long) reader["SellingPrice"];
+=======
+                    DateTime? dateOfSale = (reader["DateOfSale"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["DateOfSale"];
+                    DateTime? transferDate = (reader["TransferDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TransferDate"];
+                    DateTime? dateOfCompletion = (reader["DateOfCompletion"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["DateOfCompletion"];
+					long sellingPrice = (long)reader["SellingPrice"];
+>>>>>>> origin/GUI-OpenHouseControls
 					string description = (string)reader["Description"];
 					int propertyTypeId = (int)reader["PropertyTypeId"];
 					string landRegistryNumber = (string)reader["LandRegistryNumber"];

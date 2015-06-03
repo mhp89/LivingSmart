@@ -38,13 +38,12 @@
             // 
             this.lblEstateAgentTitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblEstateAgentTitle.Font = new System.Drawing.Font("Segoe UI", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEstateAgentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+            this.lblEstateAgentTitle.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEstateAgentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.lblEstateAgentTitle.Location = new System.Drawing.Point(3, 34);
             this.lblEstateAgentTitle.Name = "lblEstateAgentTitle";
-            this.lblEstateAgentTitle.Size = new System.Drawing.Size(192, 30);
+            this.lblEstateAgentTitle.Size = new System.Drawing.Size(222, 30);
             this.lblEstateAgentTitle.TabIndex = 0;
-            this.lblEstateAgentTitle.Text = "Navn på mægler";
             this.lblEstateAgentTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // clsProperties
@@ -53,9 +52,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clsProperties.AutoScroll = true;
             this.clsProperties.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.clsProperties.Location = new System.Drawing.Point(0, 125);
+            this.clsProperties.Location = new System.Drawing.Point(0, 135);
             this.clsProperties.Name = "clsProperties";
-            this.clsProperties.Size = new System.Drawing.Size(195, 250);
+            this.clsProperties.Size = new System.Drawing.Size(225, 312);
+            this.clsProperties.Spacing = 10;
             this.clsProperties.TabIndex = 3;
             this.clsProperties.WrapContents = false;
             // 
@@ -65,9 +65,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hdrProperties.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.hdrProperties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.hdrProperties.Location = new System.Drawing.Point(0, 90);
+            this.hdrProperties.Location = new System.Drawing.Point(0, 100);
             this.hdrProperties.Name = "hdrProperties";
-            this.hdrProperties.Size = new System.Drawing.Size(195, 25);
+            this.hdrProperties.Size = new System.Drawing.Size(225, 25);
             this.hdrProperties.TabIndex = 2;
             this.hdrProperties.Text = "Ejendomme";
             // 
@@ -78,21 +78,20 @@
             this.hdrEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.hdrEstateAgent.Location = new System.Drawing.Point(0, 0);
             this.hdrEstateAgent.Name = "hdrEstateAgent";
-            this.hdrEstateAgent.Size = new System.Drawing.Size(195, 25);
+            this.hdrEstateAgent.Size = new System.Drawing.Size(225, 25);
             this.hdrEstateAgent.TabIndex = 1;
             this.hdrEstateAgent.Text = "Mægler";
             // 
             // OpenHousePair
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.clsProperties);
             this.Controls.Add(this.hdrProperties);
             this.Controls.Add(this.hdrEstateAgent);
             this.Controls.Add(this.lblEstateAgentTitle);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "OpenHousePair";
-            this.Size = new System.Drawing.Size(195, 375);
+            this.Size = new System.Drawing.Size(225, 450);
             this.ResumeLayout(false);
 
         }

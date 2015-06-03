@@ -421,8 +421,26 @@ namespace LivingSmartBusinessLogic.Controller
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
             return GetAskingPrices(activeCase.Id);
-		}
-		
+
+        }
+        /// <summary>
+        /// Henter den nyeste udbudsprise på en given sag
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
+        public AskingPrice GetNewestAskingPrice(int caseId)
+        {
+            var askingPrices = GetAskingPrices(caseId);
+            return askingPrices[askingPrices.Count - 1];
+        }
+        /// <summary>
+        /// Henter den nyeste udbudsprise på den aktive sag
+        /// </summary>
+        /// <returns></returns>
+        public AskingPrice GetNewestAskingPrice()
+        {
+            return GetNewestAskingPrice(activeCase.Id);
+        }
 
         /// <summary>
         /// Henter prisudvikling på en given case. Prisudviklingen udregnes på 

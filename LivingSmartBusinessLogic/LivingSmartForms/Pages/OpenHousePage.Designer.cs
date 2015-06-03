@@ -36,14 +36,8 @@ namespace LivingSmartForms.Pages
             this.btnSelectEstateAgents = new SmartControls.SmartButton();
             this.hdrOpenHouse = new SmartControls.Header();
             this.ctcOpenHouse = new SmartControls.ControlCurtain();
-            this.openHousePair1 = new LivingSmartForms.Views.OpenHousePair();
-            this.openHousePair2 = new LivingSmartForms.Views.OpenHousePair();
-            this.openHousePair3 = new LivingSmartForms.Views.OpenHousePair();
-            this.openHousePair4 = new LivingSmartForms.Views.OpenHousePair();
-            this.openHousePair5 = new LivingSmartForms.Views.OpenHousePair();
             this.pnlSubmenuHolder.SuspendLayout();
             this.pnlSubmenu.SuspendLayout();
-            this.ctcOpenHouse.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSubmenuHolder
@@ -85,7 +79,6 @@ namespace LivingSmartForms.Pages
             this.btnMakeSelection.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.btnMakeSelection.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.btnMakeSelection.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMakeSelection.Enabled = false;
             this.btnMakeSelection.FlatAppearance.BorderSize = 0;
             this.btnMakeSelection.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btnMakeSelection.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -97,6 +90,7 @@ namespace LivingSmartForms.Pages
             this.btnMakeSelection.TabIndex = 4;
             this.btnMakeSelection.Text = "Lav tildeling";
             this.btnMakeSelection.UseVisualStyleBackColor = false;
+            this.btnMakeSelection.Click += new System.EventHandler(this.btnMakeSelection_Click);
             // 
             // btnSelectProperties
             // 
@@ -153,62 +147,16 @@ namespace LivingSmartForms.Pages
             // 
             // ctcOpenHouse
             // 
+            this.ctcOpenHouse.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ctcOpenHouse.AutoScroll = true;
-            this.ctcOpenHouse.Controls.Add(this.openHousePair1);
-            this.ctcOpenHouse.Controls.Add(this.openHousePair2);
-            this.ctcOpenHouse.Controls.Add(this.openHousePair3);
-            this.ctcOpenHouse.Controls.Add(this.openHousePair4);
-            this.ctcOpenHouse.Controls.Add(this.openHousePair5);
             this.ctcOpenHouse.Location = new System.Drawing.Point(20, 90);
             this.ctcOpenHouse.Name = "ctcOpenHouse";
             this.ctcOpenHouse.Size = new System.Drawing.Size(1095, 450);
             this.ctcOpenHouse.Spacing = 30;
             this.ctcOpenHouse.TabIndex = 8;
             this.ctcOpenHouse.WrapContents = false;
-            // 
-            // openHousePair1
-            // 
-            this.openHousePair1.Location = new System.Drawing.Point(0, 0);
-            this.openHousePair1.Margin = new System.Windows.Forms.Padding(0);
-            this.openHousePair1.Name = "openHousePair1";
-            this.openHousePair1.Size = new System.Drawing.Size(195, 450);
-            this.openHousePair1.TabIndex = 0;
-            // 
-            // openHousePair2
-            // 
-            this.openHousePair2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.openHousePair2.Location = new System.Drawing.Point(225, 0);
-            this.openHousePair2.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.openHousePair2.Name = "openHousePair2";
-            this.openHousePair2.Size = new System.Drawing.Size(195, 450);
-            this.openHousePair2.TabIndex = 1;
-            // 
-            // openHousePair3
-            // 
-            this.openHousePair3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.openHousePair3.Location = new System.Drawing.Point(450, 0);
-            this.openHousePair3.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.openHousePair3.Name = "openHousePair3";
-            this.openHousePair3.Size = new System.Drawing.Size(195, 450);
-            this.openHousePair3.TabIndex = 2;
-            // 
-            // openHousePair4
-            // 
-            this.openHousePair4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.openHousePair4.Location = new System.Drawing.Point(675, 0);
-            this.openHousePair4.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.openHousePair4.Name = "openHousePair4";
-            this.openHousePair4.Size = new System.Drawing.Size(195, 450);
-            this.openHousePair4.TabIndex = 3;
-            // 
-            // openHousePair5
-            // 
-            this.openHousePair5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.openHousePair5.Location = new System.Drawing.Point(900, 0);
-            this.openHousePair5.Margin = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.openHousePair5.Name = "openHousePair5";
-            this.openHousePair5.Size = new System.Drawing.Size(195, 450);
-            this.openHousePair5.TabIndex = 4;
             // 
             // OpenHousePage
             // 
@@ -221,7 +169,6 @@ namespace LivingSmartForms.Pages
             this.pnlSubmenuHolder.ResumeLayout(false);
             this.pnlSubmenu.ResumeLayout(false);
             this.pnlSubmenu.PerformLayout();
-            this.ctcOpenHouse.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -236,10 +183,5 @@ namespace LivingSmartForms.Pages
         private SmartControls.SmartButton btnMakeSelection;
         private SmartControls.SmartButton btnSelectProperties;
         private SmartControls.ControlCurtain ctcOpenHouse;
-        private Views.OpenHousePair openHousePair1;
-        private Views.OpenHousePair openHousePair2;
-        private Views.OpenHousePair openHousePair3;
-        private Views.OpenHousePair openHousePair4;
-        private Views.OpenHousePair openHousePair5;
 	}
 }
