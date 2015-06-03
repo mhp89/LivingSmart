@@ -519,8 +519,8 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="zipcode"></param>
         public void SetZipCode(int zipcode)
         {
-			if (activeCase.ZipCode != zipcode)
-				activeCase.ZipCode = zipcode;
+			if (activeCase.City == null || activeCase.City.ZipCode != zipcode)
+				activeCase.City = CityController.Instance.GetCity(zipcode);
         }
         /// <summary>
         /// Sætter ejendomstype

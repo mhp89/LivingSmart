@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -41,7 +41,7 @@ namespace LivingSmartForms.Views
 
         private void UpdateFields()
         {
-            slbPropertyAddress.Text = property.Address + ", " + property.ZipCode + " " + property.City;
+            slbPropertyAddress.Text = property.Address + ", " + property.City.ZipCode + " " + property.City.District;
         }
 
         private void Select(object sender, EventArgs e)

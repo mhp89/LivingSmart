@@ -19,9 +19,7 @@ namespace LivingSmartForms
             /*CaseController caseController = new CaseController();
 			CustomerController customerController = new CustomerController();
 			EstateAgentController estateAgentController = new EstateAgentController();*/
-
-	        CityController.Instance.GetCity(0);
-
+			
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Login());
