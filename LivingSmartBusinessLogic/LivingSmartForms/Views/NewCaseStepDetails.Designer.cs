@@ -272,7 +272,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsRating.NumericOnly = true;
 			this.stbDetailsRating.Placeholder = null;
 			this.stbDetailsRating.RegularExpression = null;
-			this.stbDetailsRating.Required = true;
+			this.stbDetailsRating.Required = false;
 			this.stbDetailsRating.Size = new System.Drawing.Size(351, 30);
 			this.stbDetailsRating.Suffix = null;
 			this.stbDetailsRating.TabIndex = 1;

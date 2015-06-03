@@ -54,8 +54,7 @@ namespace LivingSmartForms.Views
 		            disShopping = CaseController.Instance.MakeNewDistanceTo(
 			            DistanceToSystemType.Shopping.ToString(),
 			            shoppingDistance
-			            );
-		            CaseController.Instance.AddDistanceToCase(disShopping);
+			        );
 	            }
 	            /*else
 		            disShopping.Distance = shoppingDistance;*/
@@ -66,7 +65,6 @@ namespace LivingSmartForms.Views
 						DistanceToSystemType.Center.ToString(),
 						centerDistance
 					);
-					CaseController.Instance.AddDistanceToCase(disCenter);
 				}
 				/*else
 					disShopping.Distance = centerDistance;*/
@@ -77,7 +75,6 @@ namespace LivingSmartForms.Views
 						DistanceToSystemType.School.ToString(),
 						schoolDistance
 					);
-					CaseController.Instance.AddDistanceToCase(disSchool);
 				}
 				/*else
 					disShopping.Distance = schoolDistance;*/

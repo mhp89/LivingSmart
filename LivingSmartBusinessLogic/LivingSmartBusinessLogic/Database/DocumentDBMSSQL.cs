@@ -56,10 +56,10 @@ namespace LivingSmartBusinessLogic.DB
         }
 
         /// <summary>
-        /// Returns all the ads from the database, with a given CaseId.
+		/// Returns all the documents from the database, with a given CaseId.
         /// </summary>
         /// <param name="caseId">Id of the case</param>
-        /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
+        /// <returns>Returns a List of all the documents, having a CaseId given by the parameter</returns>
         public List<Document> ReadDocuments(int caseId)
         {
             List<Document> documentList = new List<Document>();

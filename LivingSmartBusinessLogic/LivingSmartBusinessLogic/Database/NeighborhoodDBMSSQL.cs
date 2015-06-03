@@ -30,7 +30,7 @@ namespace LivingSmartBusinessLogic.DB
 	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
-                    int zipCode = (int)reader["ZipCoded"];
+                    int zipCode = (int)reader["ZipCode"];
                     string name = (string)reader["Neighborhood"];
                     int value = (int)reader["Value"];
 
@@ -62,7 +62,7 @@ namespace LivingSmartBusinessLogic.DB
                 CommandText = "UPDATE Neighborhood SET Value = (@Value) WHERE ZipCode = (@ZipCode) AND Neighborhood  = (@Neighborhood)"
             };
 
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.ZipCode;
+            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.City.ZipCode;
             cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
             cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
 

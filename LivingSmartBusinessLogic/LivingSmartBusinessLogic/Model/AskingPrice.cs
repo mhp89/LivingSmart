@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -23,10 +23,10 @@ namespace LivingSmartBusinessLogic.Model
 
         #endregion
 
-        internal AskingPrice(long value, DateTime date)
+        internal AskingPrice(long value)
         {
             Value = value;
-            Date = date;
+			Date = new DateTime();
         }
         internal AskingPrice(int id, long value, DateTime date)
         {

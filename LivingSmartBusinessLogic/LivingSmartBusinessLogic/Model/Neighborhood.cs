@@ -20,9 +20,10 @@ namespace LivingSmartBusinessLogic.Model
 
         public int Id { get; private set; }
         public City City { get; private set; }
-        public int ZipCode { get { return _zipCode; } internal set { _zipCode = value; } }
         public string Name { get { return _name; } internal set { _name = value; } }
         public int Value { get { return _value; } internal set { _value = value; } }
+
+		public string DisplayName { get { return City.District + " " + Name; } }
 
         #endregion
 
@@ -37,7 +38,6 @@ namespace LivingSmartBusinessLogic.Model
         {
 			Id = id;
 			City = CityController.Instance.GetCity(zipCode);
-            ZipCode = zipCode;
             Name = name;
             Value = value;
         }

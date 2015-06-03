@@ -393,7 +393,7 @@ namespace LivingSmartForms.Views
 			this.stbPropertyEnergyMark.Multiline = false;
 			this.stbPropertyEnergyMark.Name = "stbPropertyEnergyMark";
 			this.stbPropertyEnergyMark.NumericOnly = false;
-			this.stbPropertyEnergyMark.Placeholder = null;
+			this.stbPropertyEnergyMark.Placeholder = "Fx. A+";
 			this.stbPropertyEnergyMark.RegularExpression = "^[A-Ea-e](\\+*|\\-*)$";
 			this.stbPropertyEnergyMark.Required = true;
 			this.stbPropertyEnergyMark.Size = new System.Drawing.Size(288, 30);
@@ -415,12 +415,12 @@ namespace LivingSmartForms.Views
 			this.stbPropertyBuildYear.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.stbPropertyBuildYear.Location = new System.Drawing.Point(192, 120);
 			this.stbPropertyBuildYear.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbPropertyBuildYear.MaxLength = 50;
-			this.stbPropertyBuildYear.MinLength = -1;
+			this.stbPropertyBuildYear.MaxLength = 4;
+			this.stbPropertyBuildYear.MinLength = 4;
 			this.stbPropertyBuildYear.Multiline = false;
 			this.stbPropertyBuildYear.Name = "stbPropertyBuildYear";
 			this.stbPropertyBuildYear.NumericOnly = true;
-			this.stbPropertyBuildYear.Placeholder = null;
+			this.stbPropertyBuildYear.Placeholder = "YYYY";
 			this.stbPropertyBuildYear.RegularExpression = null;
 			this.stbPropertyBuildYear.Required = true;
 			this.stbPropertyBuildYear.Size = new System.Drawing.Size(288, 30);

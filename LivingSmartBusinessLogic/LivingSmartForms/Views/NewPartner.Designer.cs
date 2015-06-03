@@ -45,10 +45,10 @@ namespace LivingSmartForms.Views
 			this.stbCountry = new SmartControls.SmartTextBox();
 			this.stbPhone = new SmartControls.SmartTextBox();
 			this.stbEmail = new SmartControls.SmartTextBox();
-			this.stbTimeZone = new SmartControls.SmartTextBox();
 			this.pnlPartnerRegionShort = new System.Windows.Forms.Panel();
 			this.lblPartnerRegionFormat = new System.Windows.Forms.Label();
 			this.stbRegionShort = new SmartControls.SmartTextBox();
+			this.cboTimezone = new System.Windows.Forms.ComboBox();
 			this.tlpNewPartner.SuspendLayout();
 			this.pnlPartnerRegionShort.SuspendLayout();
 			this.SuspendLayout();
@@ -58,6 +58,7 @@ namespace LivingSmartForms.Views
 			this.tlpNewPartner.ColumnCount = 2;
 			this.tlpNewPartner.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
 			this.tlpNewPartner.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 75F));
+			this.tlpNewPartner.Controls.Add(this.cboTimezone, 1, 7);
 			this.tlpNewPartner.Controls.Add(this.stbRegion, 1, 2);
 			this.tlpNewPartner.Controls.Add(this.label1, 0, 2);
 			this.tlpNewPartner.Controls.Add(this.lblPartnerTimeZone, 0, 7);
@@ -72,7 +73,6 @@ namespace LivingSmartForms.Views
 			this.tlpNewPartner.Controls.Add(this.stbCountry, 1, 4);
 			this.tlpNewPartner.Controls.Add(this.stbPhone, 1, 5);
 			this.tlpNewPartner.Controls.Add(this.stbEmail, 1, 6);
-			this.tlpNewPartner.Controls.Add(this.stbTimeZone, 1, 7);
 			this.tlpNewPartner.Controls.Add(this.pnlPartnerRegionShort, 1, 3);
 			this.tlpNewPartner.Location = new System.Drawing.Point(0, 10);
 			this.tlpNewPartner.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
@@ -106,6 +106,7 @@ namespace LivingSmartForms.Views
 			this.stbRegion.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbRegion.MaxLength = 50;
 			this.stbRegion.MinLength = -1;
+			this.stbRegion.Multiline = false;
 			this.stbRegion.Name = "stbRegion";
 			this.stbRegion.NumericOnly = false;
 			this.stbRegion.Placeholder = null;
@@ -245,6 +246,7 @@ namespace LivingSmartForms.Views
 			this.stbName.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbName.MaxLength = 50;
 			this.stbName.MinLength = -1;
+			this.stbName.Multiline = false;
 			this.stbName.Name = "stbName";
 			this.stbName.NumericOnly = false;
 			this.stbName.Placeholder = null;
@@ -272,6 +274,7 @@ namespace LivingSmartForms.Views
 			this.stbCity.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCity.MaxLength = 50;
 			this.stbCity.MinLength = -1;
+			this.stbCity.Multiline = false;
 			this.stbCity.Name = "stbCity";
 			this.stbCity.NumericOnly = false;
 			this.stbCity.Placeholder = null;
@@ -299,6 +302,7 @@ namespace LivingSmartForms.Views
 			this.stbCountry.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbCountry.MaxLength = 50;
 			this.stbCountry.MinLength = -1;
+			this.stbCountry.Multiline = false;
 			this.stbCountry.Name = "stbCountry";
 			this.stbCountry.NumericOnly = false;
 			this.stbCountry.Placeholder = "";
@@ -326,6 +330,7 @@ namespace LivingSmartForms.Views
 			this.stbPhone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbPhone.MaxLength = 50;
 			this.stbPhone.MinLength = 8;
+			this.stbPhone.Multiline = false;
 			this.stbPhone.Name = "stbPhone";
 			this.stbPhone.NumericOnly = true;
 			this.stbPhone.Placeholder = "";
@@ -353,6 +358,7 @@ namespace LivingSmartForms.Views
 			this.stbEmail.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbEmail.MaxLength = 50;
 			this.stbEmail.MinLength = -1;
+			this.stbEmail.Multiline = false;
 			this.stbEmail.Name = "stbEmail";
 			this.stbEmail.NumericOnly = false;
 			this.stbEmail.Placeholder = null;
@@ -363,33 +369,6 @@ namespace LivingSmartForms.Views
 			this.stbEmail.TabIndex = 6;
 			this.stbEmail.TabStop = false;
 			this.stbEmail.UseSystemPasswordChar = false;
-			// 
-			// stbTimeZone
-			// 
-			this.stbTimeZone.AllowComma = false;
-			this.stbTimeZone.AllowDrop = true;
-			this.stbTimeZone.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbTimeZone.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbTimeZone.AutomaticValidation = true;
-			this.stbTimeZone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbTimeZone.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbTimeZone.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbTimeZone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbTimeZone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbTimeZone.Location = new System.Drawing.Point(120, 280);
-			this.stbTimeZone.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbTimeZone.MaxLength = 50;
-			this.stbTimeZone.MinLength = -1;
-			this.stbTimeZone.Name = "stbTimeZone";
-			this.stbTimeZone.NumericOnly = false;
-			this.stbTimeZone.Placeholder = null;
-			this.stbTimeZone.RegularExpression = null;
-			this.stbTimeZone.Required = true;
-			this.stbTimeZone.Size = new System.Drawing.Size(360, 30);
-			this.stbTimeZone.Suffix = null;
-			this.stbTimeZone.TabIndex = 7;
-			this.stbTimeZone.TabStop = false;
-			this.stbTimeZone.UseSystemPasswordChar = false;
 			// 
 			// pnlPartnerRegionShort
 			// 
@@ -427,6 +406,7 @@ namespace LivingSmartForms.Views
 			this.stbRegionShort.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.stbRegionShort.MaxLength = 10;
 			this.stbRegionShort.MinLength = -1;
+			this.stbRegionShort.Multiline = false;
 			this.stbRegionShort.Name = "stbRegionShort";
 			this.stbRegionShort.NumericOnly = false;
 			this.stbRegionShort.Placeholder = "Fx. NY";
@@ -437,6 +417,17 @@ namespace LivingSmartForms.Views
 			this.stbRegionShort.TabIndex = 0;
 			this.stbRegionShort.TabStop = false;
 			this.stbRegionShort.UseSystemPasswordChar = false;
+			// 
+			// cboTimezone
+			// 
+			this.cboTimezone.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.cboTimezone.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+			this.cboTimezone.FormattingEnabled = true;
+			this.cboTimezone.Location = new System.Drawing.Point(120, 280);
+			this.cboTimezone.Margin = new System.Windows.Forms.Padding(0);
+			this.cboTimezone.Name = "cboTimezone";
+			this.cboTimezone.Size = new System.Drawing.Size(360, 21);
+			this.cboTimezone.TabIndex = 21;
 			// 
 			// NewPartner
 			// 
@@ -465,12 +456,12 @@ namespace LivingSmartForms.Views
         private SmartControls.SmartTextBox stbCity;
         private SmartControls.SmartTextBox stbCountry;
         private SmartControls.SmartTextBox stbPhone;
-        private SmartControls.SmartTextBox stbEmail;
-        private SmartControls.SmartTextBox stbTimeZone;
+		private SmartControls.SmartTextBox stbEmail;
         private System.Windows.Forms.Panel pnlPartnerRegionShort;
         private System.Windows.Forms.Label lblPartnerRegionFormat;
         private SmartControls.SmartTextBox stbRegionShort;
 		private SmartTextBox stbRegion;
 		private System.Windows.Forms.Label label1;
+		private System.Windows.Forms.ComboBox cboTimezone;
     }
 }

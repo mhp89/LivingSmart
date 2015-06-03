@@ -62,7 +62,10 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal Rating GetLastRating(Case cCase)
         {
-            return ratingDictionary[cCase.Id][ratingDictionary[cCase.Id].Count - 1];
+			if(!ratingDictionary.ContainsKey(cCase.Id))
+				return null;
+
+			return ratingDictionary[cCase.Id][ratingDictionary[cCase.Id].Count - 1];
         }
     }
 }

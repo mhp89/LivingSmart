@@ -105,7 +105,8 @@ namespace LivingSmartBusinessLogic.Model
 		{
 			Id = -1;
             CreationDate = new DateTime().Date;
-        }
+	        Status = CaseStatus.Open.ToString();
+		}
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
             DateTime creationDate, string status, DateTime? dateOfSale, 
             DateTime? transferDate, DateTime? dateOfCompletion, long? sellingPrice, 
@@ -160,8 +161,8 @@ namespace LivingSmartBusinessLogic.Model
         }
         
         /// <summary>
-        /// Beregner v�rdien af ejendommen baseret p� grundpris, pris for bebygget areal,
-        /// k�lderareal, alder af ejendommen og faktor fra RatingFactor()
+        /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
+        /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
         /// </summary>
         /// <returns></returns>
         internal long CalculatePropertyRating()
@@ -188,8 +189,9 @@ namespace LivingSmartBusinessLogic.Model
 			int centerDistance = 0;
 
 			
+			//TODO: Load temp distance
             //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
-            foreach (DistanceTo dist in CaseController.Instance.GetDistanceTos(Id))
+            /*foreach (DistanceTo dist in CaseController.Instance.GetDistanceTos(Id))
             {
 				if (dist.Type == DistanceToSystemType.School.ToString())
                     schoolDistance = dist.Distance;
@@ -197,7 +199,7 @@ namespace LivingSmartBusinessLogic.Model
                     shoppingDistance = dist.Distance;
 				else if (dist.Type == DistanceToSystemType.Center.ToString())
                     centerDistance = dist.Distance;
-            }
+            }*/
 
             if (_view == 1)
                 viewFactor = 0.7;

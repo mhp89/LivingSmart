@@ -61,10 +61,10 @@ namespace LivingSmartBusinessLogic.DB
 
             SqlCommand cmd = new SqlCommand
             {
-				CommandText = "UPDATE PropertyType SET Description = (@Description), Deleted = (@Deleted) WHERE AppointmentId = (@AppointmentId)"
+				CommandText = "UPDATE PropertyType SET Description = (@Description), Deleted = (@Deleted) WHERE PropertyTypeId = (@PropertyTypeId)"
             };
 
-			cmd.Parameters.Add("@AppointmentId", SqlDbType.Int, 4, "AppointmentId").Value = propertyTypeId;
+			cmd.Parameters.Add("@PropertyTypeId", SqlDbType.Int, 4, "PropertyTypeId").Value = propertyTypeId;
 
 			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 50, "Description").Value = propertyType.Description;
 			//TODO: ENABLE cmd.Parameters.Add("@Deleted", SqlDbType.Bit, 1, "Deleted").Value = propertyType.Deleted;

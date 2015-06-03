@@ -11,7 +11,7 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Private Fields
 
-        private long _estateAgentValue;
+        private long? _estateAgentValue;
         private long _systemValue;
         private DateTime _date;
 
@@ -20,7 +20,7 @@ namespace LivingSmartBusinessLogic.Model
         #region Properties
         
         public int Id { get; internal set; }
-        public long EstateAgentValue { get { return _estateAgentValue; } 
+        public long? EstateAgentValue { get { return _estateAgentValue; } 
             internal set { _estateAgentValue = value; } }
         public long SystemValue { get { return _systemValue; } 
             internal set { _systemValue = value; } }
@@ -29,16 +29,16 @@ namespace LivingSmartBusinessLogic.Model
 
         #endregion
 
-        internal Rating(long systemValue)
+        internal Rating(long systemValue, long? estateAgentValue, int estateAgentId)
 		{
 			Id = -1;
-            EstateAgentValue = systemValue;
+			EstateAgentValue = estateAgentValue;
             SystemValue = systemValue;
             Date = new DateTime();
-            EstateAgent = EstateAgentController.Instance.ActiveEstateAgent;
+			EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
 		}
 
-        internal Rating(int id, long estateAgentValue, long systemValue, DateTime date, 
+        internal Rating(int id, long? estateAgentValue, long systemValue, DateTime date, 
             int estateAgentId)
         {
             Id = id;

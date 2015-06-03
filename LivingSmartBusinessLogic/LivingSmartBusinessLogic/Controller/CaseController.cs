@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Threading;
 using LivingSmartBusinessLogic.Catalog;
 using LivingSmartBusinessLogic.Model;
@@ -30,6 +31,11 @@ namespace LivingSmartBusinessLogic.Controller
         private RatingCatalog ratingCatalog;
 
         private Case activeCase;
+	    private AskingPrice tempAskingPrice { get; set; }
+		private List<DistanceTo> tempDistanceTos { get; set; }
+		private List<Document> tempDocuments { get; set; }
+		private List<Picture> tempPictures { get; set; }
+		private Rating tempRating { get; set; }
 
         private CaseController()
         {
@@ -52,6 +58,7 @@ namespace LivingSmartBusinessLogic.Controller
         public void SetActiveCase(Case activeCase)
         {
             this.activeCase = activeCase;
+	        ResetTempData();
         }
 
         /// <summary>
@@ -59,7 +66,8 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void CancelActiveCase()
         {
-            activeCase = null;
+			activeCase = null;
+			ResetTempData();
         }
 
         /// <summary>
@@ -68,12 +76,65 @@ namespace LivingSmartBusinessLogic.Controller
         public void SaveActiveCase()
 		{
 			caseCatalog.Save(activeCase);
-			if (activeCase.Id != -1)
-				caseCatalog.AddToCatalog(activeCase);
-        }
+	        if (activeCase.Id != -1)
+	        {
+		        caseCatalog.AddToCatalog(activeCase);
+
+		        foreach (var document in tempDocuments)
+		        {
+					documentCatalog.Save(document, activeCase.Id);
+					if(document.Id != -1)
+						AddDocumentToCase(document);
+		        }
+
+		        foreach (var distanceTo in tempDistanceTos)
+		        {
+					distanceToCatalog.Save(distanceTo, activeCase.Id);
+					if (distanceTo.Id != -1)
+						AddDistanceToCase(distanceTo);
+		        }
+
+		        foreach (var picture in tempPictures)
+		        {
+					pictureCatalog.Save(picture, activeCase.Id);
+					if (picture.Id != -1)
+						AddPictureToCase(picture);
+		        }
+
+				if(tempAskingPrice != null)
+				{
+					askingPriceCatalog.Save(tempAskingPrice, activeCase.Id);
+					if(tempAskingPrice.Id != -1)
+						AddAskingPriceToCase(tempAskingPrice);
+				}
+
+				if(tempRating != null)
+		        {
+			        ratingCatalog.Save(tempRating, activeCase.Id);
+			        if (tempRating.Id != -1)
+				        AddRatingToCase(tempRating);
+		        }
+	        }
+	        else
+	        {
+		        Console.WriteLine("Create case: Something went wrong");
+	        }
+		}
+
+	    private void ResetTempData()
+	    {
+			tempDistanceTos = new List<DistanceTo>();
+			tempDocuments = new List<Document>();
+			tempPictures = new List<Picture>();
+
+		    tempAskingPrice = null;
+			tempRating = null;
+	    }
         #endregion
 
-        /// <summary>
+		#region CRUD
+		
+		/// <summary>
         /// Laver en ny case
         /// </summary>
         /// <returns></returns>
@@ -115,10 +176,17 @@ namespace LivingSmartBusinessLogic.Controller
 		{
 			return caseCatalog.GetCases();
 		}
-       
-        #region Document
 
-        /// <summary>
+	    public ReadOnlyCollection<Case> GetOpenCases(int estateAgentId)
+	    {
+		    return caseCatalog.GetOpenCases(estateAgentId);
+	    }
+
+		#endregion
+
+		#region Document
+
+		/// <summary>
         /// Laver et nyt dokument
         /// </summary>
         /// <param name="type"></param>
@@ -128,13 +196,16 @@ namespace LivingSmartBusinessLogic.Controller
         /// <returns></returns>
         public Document MakeNewDocument(string type, int price, string location, string status)
         {
-            return new Document(type, price, location, status);
+			var documentObj = new Document(type, price, location, status);
+			tempDocuments.Add(documentObj);
+			return documentObj;
         }
+
         /// <summary>
         /// Tilføjer et dokument til casen
         /// </summary>
         /// <param name="document"></param>
-        public void AddDocumentToCase(Document document)
+        private void AddDocumentToCase(Document document)
         {
             documentCatalog.AddToCatalog(activeCase.Id, document);
         }
@@ -143,8 +214,10 @@ namespace LivingSmartBusinessLogic.Controller
         /// Fjerner et dokument fra casen
         /// </summary>
         public void RemoveDocumentFromCase(Document document)
-        {
-            documentCatalog.RemoveFromCatalog(activeCase.Id, document);
+		{
+			//Hvis den ikke findes i tempDocuments, fjern den fra kataloget
+			if (!tempDocuments.Remove(document))
+				documentCatalog.RemoveFromCatalog(activeCase.Id, document);
         }
         /// <summary>
         /// Returnerer den aktive sags billeder som en list
@@ -164,15 +237,17 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="description"></param>
         /// <returns></returns>
         public Picture MakeNewPicture(string location, string description)
-        {
-			return new Picture(location, description);
+		{
+			var pictureObj = new Picture(location, description);
+			tempPictures.Add(pictureObj);
+			return pictureObj;
         }
 
         /// <summary>
         /// Tilføjer et billede til casen
         /// </summary>
         /// <param name="picture"></param>
-        public void AddPictureToCase(Picture picture)
+		private void AddPictureToCase(Picture picture)
         {
             pictureCatalog.AddToCatalog(activeCase.Id, picture);
         }
@@ -182,7 +257,9 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         public void RemovePictureFromCase(Picture picture)
         {
-            pictureCatalog.RemoveFromCatalog(activeCase.Id, picture);
+			//Hvis den ikke findes i tempPictures, fjern den fra kataloget
+			if(!tempPictures.Remove(picture))
+				pictureCatalog.RemoveFromCatalog(activeCase.Id, picture);
         }
         /// <summary>
         /// Returnerer den aktive sags billeder som en list
@@ -212,7 +289,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer en annonce til den aktive sag
         /// </summary>
         /// <param name="ad"></param>
-        public void AddAdToCase(Ad ad)
+		private void AddAdToCase(Ad ad)
         {
             adCatalog.AddToCatalog(activeCase.Id, ad);
         }
@@ -240,27 +317,24 @@ namespace LivingSmartBusinessLogic.Controller
         /// Laver en ny vurdering baseret på den aktive sag
         /// </summary>
         /// <returns></returns>
-        public Rating MakeNewRating()
+        public Rating MakeNewRating(long systemValue, long? agentValue)
         {
-            Rating newRating = new Rating(activeCase.CalculatePropertyRating());
-            ratingCatalog.Save(newRating, activeCase.Id);
+			tempRating = new Rating(systemValue, agentValue, activeCase.EstateAgent.Id);
+            /*ratingCatalog.Save(newRating, activeCase.Id);
             if (newRating.Id != -1)
-                ratingCatalog.AddToCatalog(activeCase.Id,newRating);
-            return newRating;
+                ratingCatalog.AddToCatalog(activeCase.Id,newRating);*/
+			return tempRating;
         }
-        /// <summary>
-        /// Laver en ny vurdering ud fra en given case
-        /// </summary>
-        /// <returns></returns>
-        public Rating RateProperty()
-        {
-            return new Rating(activeCase.CalculatePropertyRating());
-        }
+
+	    public long GetSystemRating()
+	    {
+		    return activeCase.CalculatePropertyRating();
+	    }
         /// <summary>
         /// Tilføjer en vurdering til casen
         /// </summary>
         /// <param name="rating"></param>
-        public void AddRatingToCase(Rating rating)
+		private void AddRatingToCase(Rating rating)
         {
             ratingCatalog.AddToCatalog(activeCase.Id, rating);
         }
@@ -309,15 +383,16 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="value"></param>
         /// <param name="date"></param>
         /// <returns></returns>
-        public AskingPrice MakeNewAskingPrice(long value, DateTime date)
+        public AskingPrice MakeNewAskingPrice(long value)
         {
-            return new AskingPrice(value, date);
+	        tempAskingPrice = new AskingPrice(value);
+	        return tempAskingPrice;
         }
         /// <summary>
         /// Tilføjer en udbudspris til casen
         /// </summary>
         /// <param name="askingPrice"></param>
-        public void AddAskingPriceToCase(AskingPrice askingPrice)
+		private void AddAskingPriceToCase(AskingPrice askingPrice)
         {
             askingPriceCatalog.AddToCatalog(activeCase.Id, askingPrice);
         }
@@ -380,13 +455,15 @@ namespace LivingSmartBusinessLogic.Controller
         /// <returns></returns>
         public DistanceTo MakeNewDistanceTo(string type, int distance)
         {
-            return new DistanceTo(type, distance);
+	        var distanceObj = new DistanceTo(type, distance);
+			tempDistanceTos.Add(distanceObj);
+			return distanceObj;
         }
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
         /// <param name="distanceTo"></param>
-        public void AddDistanceToCase(DistanceTo distanceTo)
+		private void AddDistanceToCase(DistanceTo distanceTo)
         {
             distanceToCatalog.AddToCatalog(activeCase.Id, distanceTo);
         }
@@ -395,8 +472,10 @@ namespace LivingSmartBusinessLogic.Controller
         /// Fjerner en "Afstand til" fra casen
         /// </summary>
         public void RemoveDistanceToFromCase(DistanceTo distanceTo)
-        {
-            distanceToCatalog.RemoveFromCatalog(activeCase.Id, distanceTo);
+		{
+			//Hvis den ikke findes i tempDistanceTos, fjern den fra kataloget
+			if (!tempDistanceTos.Remove(distanceTo))
+				distanceToCatalog.RemoveFromCatalog(activeCase.Id, distanceTo);
         }
 		public ReadOnlyCollection<DistanceTo> GetDistanceTos(int id)
 		{
@@ -697,6 +776,5 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #endregion
-
 	}
 }

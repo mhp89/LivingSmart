@@ -31,7 +31,7 @@ namespace LivingSmartForms.Views
 			slbProperty.Text = cCase.Address+", "+cCase.City.District;
 			slbPropertyType.Text = cCase.PropertyType.Description;
 			slbPrice.Text = cCase.SellingPrice.ToString();
-			//slbPriceTrend.Text = cCase..Email;
+			slbPriceTrend.Text = cCase.PriceTrend.ToString();
 		}
     }
 }

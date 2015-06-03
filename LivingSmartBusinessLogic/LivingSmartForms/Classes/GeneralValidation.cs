@@ -12,8 +12,9 @@ namespace LivingSmartForms.Classes
 {
 	public static class GeneralValidation
 	{
-		public static void ZipCodeValidation(SmartTextBox textBox, Label label = null)
+		public static bool ZipCodeValidation(SmartTextBox textBox, Label label = null)
 		{
+			bool success = false;
 			City city = null;
 
 			if (textBox.Validate())
@@ -23,10 +24,14 @@ namespace LivingSmartForms.Classes
 
 				if (city == null)
 					textBox.SetError("Ugyldigt postnummer");
+				else
+					success = true;
 			}
 
 			if (label != null)
 				label.Text = city != null ? city.District : "";
+
+			return success;
 		}
 	}
 }

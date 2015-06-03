@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -13,8 +12,6 @@ namespace LivingSmartForms.Classes
 {
 	public partial class CaseStep : UserControl
 	{
-		public Size DefaultSize;
-
 		public CaseStep()
 		{
 			InitializeComponent();

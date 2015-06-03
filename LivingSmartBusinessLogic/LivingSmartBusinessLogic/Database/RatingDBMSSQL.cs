@@ -142,7 +142,7 @@ namespace LivingSmartBusinessLogic.DB
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@SystemValue", SqlDbType.BigInt, 8, "SystemValue").Value = rating.SystemValue;
-            cmd.Parameters.Add("@EstateAgentValue", SqlDbType.BigInt, 8, "EstateAgentValue").Value = rating.EstateAgentValue;
+            cmd.Parameters.Add("@EstateAgentValue", SqlDbType.BigInt, 8, "EstateAgentValue").Value = (object) rating.EstateAgentValue??DBNull.Value;
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = rating.Date;
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = rating.EstateAgent.Id;
 

@@ -20,6 +20,8 @@ namespace LivingSmartForms.Views
         public NewCaseStepLot(BaseForm baseForm)
         {
             InitializeComponent();
+
+	        cboNeighborhood.DisplayMember = "DisplayName";
         }
 
         public override bool Save()
@@ -29,6 +31,8 @@ namespace LivingSmartForms.Views
             {
                 CaseController.Instance.SetLandRegistryNumber(stbLotNumber.Text);
 				CaseController.Instance.SetAddress(stbLotAddress.Text);
+				CaseController.Instance.SetZipCode(Convert.ToInt32(stbLotZipCode.Text));
+				CaseController.Instance.SetNeighborhood(cboNeighborhood.SelectedItem as Neighborhood);
 				CaseController.Instance.SetLandValue(Convert.ToInt32(stbLotValue.Text));
 				CaseController.Instance.SetGroundArea(Convert.ToInt32(stbLotArea.Text));
 				CaseController.Instance.SetBuiltArea(Convert.ToInt32(stbLotBuildArea.Text));
@@ -43,6 +47,8 @@ namespace LivingSmartForms.Views
             bool fielddataOk = true;
             fielddataOk &= stbLotNumber.Validate();
             fielddataOk &= stbLotAddress.Validate();
+	        fielddataOk &= stbLotZipCode.Validate();
+	        fielddataOk &= cboNeighborhood.SelectedItem != null;
             fielddataOk &= stbLotValue.Validate();
             fielddataOk &= stbLotArea.Validate();
             fielddataOk &= stbLotBuildArea.Validate();
@@ -53,7 +59,24 @@ namespace LivingSmartForms.Views
 
 		private void stbLotZipCode_TextChanged(object sender, EventArgs e)
 		{
-			GeneralValidation.ZipCodeValidation(stbLotZipCode, lblLotCityCountry);
+			if (GeneralValidation.ZipCodeValidation(stbLotZipCode, lblLotCityCountry))
+			{
+				cboNeighborhood.Enabled = true;
+
+				int zipCode = Convert.ToInt32(stbLotZipCode.Text);
+
+				var hoods = NeighborhoodController.Instance.GetHoods(zipCode);
+				cboNeighborhood.Items.Clear();
+				if (hoods != null)
+				{
+					foreach (var hood in hoods)
+						cboNeighborhood.Items.Add(hood);
+				}
+			}
+			else
+			{
+				cboNeighborhood.Enabled = false;
+			}
 		}
     }
 }

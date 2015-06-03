@@ -28,7 +28,9 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddHood(Neighborhood hood)
         {
-            neighborhoods[hood.ZipCode].Add(hood);
+			if(!neighborhoods.ContainsKey(hood.City.ZipCode))
+				neighborhoods.Add(hood.City.ZipCode, new List<Neighborhood>());
+            neighborhoods[hood.City.ZipCode].Add(hood);
         }
 
         internal Neighborhood GetHood(int zipCode, int hoodId)
@@ -46,7 +48,10 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal ReadOnlyCollection<Neighborhood> GetHoods(int zipCode)
         {
-            List<Neighborhood> hoodList = neighborhoods[zipCode];
+			if(!neighborhoods.ContainsKey(zipCode))
+				return null;
+
+	        var hoodList = neighborhoods[zipCode];
             return hoodList.AsReadOnly();
         }
     }

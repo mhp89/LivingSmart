@@ -32,14 +32,12 @@ namespace LivingSmartForms.Views
 			if (fielddataOk)
 			{
 				var systemValue = Convert.ToInt64(stbSystemRating.Text);
-				var agentValue = Convert.ToInt64(stbDetailsRating.Text);
+				var agentValue = (string.IsNullOrEmpty(stbDetailsRating.Text))?(long?) null:Convert.ToInt64(stbDetailsRating.Text);
 				var lastRating = CaseController.Instance.GetLastRating();
-				if (lastRating.SystemValue != systemValue || lastRating.EstateAgentValue != agentValue)
-				{
-					var rating = CaseController.Instance.MakeNewRating();
-					//TODO: Set rating
-				}
+				if (lastRating == null || lastRating.SystemValue != systemValue || lastRating.EstateAgentValue != agentValue)
+					CaseController.Instance.MakeNewRating(systemValue, agentValue);
 
+				CaseController.Instance.MakeNewAskingPrice(Convert.ToInt64(stbDetailsPrice.Text));
 				CaseController.Instance.SetPublicRating(Convert.ToInt64(stbDetailsPublicEvaluation.Text));
 				CaseController.Instance.SetDescription(stbDetailsDescription.Text);
 			}
@@ -70,16 +68,16 @@ namespace LivingSmartForms.Views
 			{
 				foreach (var filename in ofd.FileNames)
 				{
-					Image image = Image.FromFile(filename);
-					clsImages.AddControl(new DetailImage(this, image));
-
 					var picture = CaseController.Instance.MakeNewPicture(filename, "");
-					CaseController.Instance.AddPictureToCase(picture);
+
+					Image image = Image.FromFile(filename);
+					clsImages.AddControl(new DetailImage(this, image, picture));
 				}
 			}
 		}
 		public void RemoveImage(DetailImage detailImage)
 		{
+			CaseController.Instance.RemovePictureFromCase(detailImage.Picture);
 			clsImages.RemoveControl(detailImage);
 		}
 
@@ -87,9 +85,12 @@ namespace LivingSmartForms.Views
 
 		private void btnGetNewRating_Click(object sender, EventArgs e)
 		{
-			var rating = CaseController.Instance.MakeNewRating();
+			var rating = CaseController.Instance.GetSystemRating();
 
-			stbSystemRating.Text = rating.SystemValue.ToString();
+			stbSystemRating.Text = rating.ToString();
+
+			if (string.IsNullOrEmpty(stbDetailsPrice.Text))
+				stbDetailsPrice.Text = rating.ToString();
 		}
 	}
 }
