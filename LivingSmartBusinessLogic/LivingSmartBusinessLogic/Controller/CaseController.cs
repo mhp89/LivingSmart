@@ -463,7 +463,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter sagens status
         /// </summary>
         /// <param name="status"></param>
-        public void SetStatus(string status)
+        public void SetStatus(Case.CaseStatus status)
         {
             if (activeCase.Status != status)
                 activeCase.Status = status;

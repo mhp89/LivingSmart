@@ -27,7 +27,7 @@ namespace LivingSmartForms.Views
 		{
 			slbCaseNo.Text = cCase.Id.ToString();
 			slbSeller.Text = cCase.Seller.Name;
-			slbStatus.Text = cCase.Status;
+            slbStatus.Text = Case.TranslateStatus(cCase.Status);
 			slbProperty.Text = cCase.Address+", "+cCase.City.District;
 			slbPropertyType.Text = cCase.PropertyType.Description;
 			slbPrice.Text = cCase.SellingPrice.ToString();

@@ -126,13 +126,13 @@ namespace LivingSmartBusinessLogic.DB
         {
             Statistics stats = new Statistics();
 
-	        SqlDataReader reader = null;
-                string sqlstring = "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
-                "FROM [Case]" +
-                "WHERE Status = 'Sold'" +
-                "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE())" +
-                "Group by DATEPART(YEAR, DateOfSale)"
-		SqlDataReader reader = null;
+            string sqlstring = "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
+            "FROM [Case]" +
+            "WHERE Status = 'Sold'" +
+            "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE())" +
+            "Group by DATEPART(YEAR, DateOfSale)";
+		    
+            SqlDataReader reader = null;
             try
             {
 				reader = DBConnectionMSSQL.Instance.ExecuteReader(sqlstring);

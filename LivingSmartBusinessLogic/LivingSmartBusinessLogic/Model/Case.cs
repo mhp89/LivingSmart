@@ -22,7 +22,7 @@ namespace LivingSmartBusinessLogic.Model
         private Customer _buyer;
         private EstateAgent _estateAgent;
         private DateTime _creationDate;
-        private string _status;
+        private CaseStatus _status;
         private DateTime? _transferDate;
         private DateTime? _dateOfSale;
         private DateTime? _dateOfCompletion;
@@ -59,7 +59,7 @@ namespace LivingSmartBusinessLogic.Model
         public EstateAgent EstateAgent { get { return _estateAgent; } internal set { _estateAgent = value; } }
         public DateTime CreationDate { get { return _creationDate; } 
             internal set { _creationDate = value; } }
-        public string Status { get { return _status; } internal set { _status = value; } }
+        public CaseStatus Status { get { return _status; } internal set { _status = value; } }
         public DateTime? DateOfSale { get { return _dateOfSale; } 
             internal set { _dateOfSale = value; } }
         public DateTime? TransferDate { get { return _transferDate; } 
@@ -126,7 +126,7 @@ namespace LivingSmartBusinessLogic.Model
             Buyer = CustomerController.Instance.GetCustomer(buyerId);
             EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
             CreationDate = creationDate;
-            Status = status;
+            Status = (CaseStatus)Enum.Parse(typeof(CaseStatus), status);
             DateOfSale = dateOfSale;
             TransferDate = transferDate;
             DateOfCompletion = dateOfCompletion;
@@ -230,6 +230,26 @@ namespace LivingSmartBusinessLogic.Model
                 centerFactor = 0.1;
 
             return viewFactor + schoolFactor + shoppingFactor + centerFactor;
+        }
+
+        /// <summary>
+        /// Oversætter den engelske status fra databasen til dansk til brug i GUI
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        /// <author>Maja Olesen</author>
+        public static string TranslateStatus(CaseStatus status)
+        {
+            string danishStatus;
+
+            if (status == CaseStatus.Open)
+                danishStatus = "Åben";
+            else if (status == CaseStatus.Sold)
+                danishStatus = "Solgt";
+            else
+                danishStatus = "Lukket";
+
+            return danishStatus;
         }
 
         #endregion
