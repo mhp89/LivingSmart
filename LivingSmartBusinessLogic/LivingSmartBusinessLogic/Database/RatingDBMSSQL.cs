@@ -62,7 +62,42 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns a dictionary containing all the Ratings in the database, with CaseId as key and a list of Ratings containing that CaseId as value</returns>
         public Dictionary<int, List<Rating>> ReadRatings()
         {
-            throw new NotImplementedException();
+			var caseRatingList = new Dictionary<int, List<Rating>>();
+
+			SqlCommand cmd = new SqlCommand
+			{
+				CommandText = "SELECT * FROM Rating ORDER BY Date;",
+			};
+			
+			SqlDataReader reader = null;
+			try
+			{
+				reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
+				while (reader.Read())
+				{
+					int ratingId = (int)reader["RatingId"];
+					int caseId = (int)reader["CaseId"];
+					long systemValue = (long)reader["SystemValue"];
+					long estateAgentValue = (long)reader["EstateAgentValue"];
+					DateTime date = (DateTime)reader["Date"];
+					int estateAgentId = (int)reader["EstateAgentId"];
+
+					Rating rating = new Rating(ratingId, estateAgentValue, systemValue, date, estateAgentId);
+
+					caseRatingList[caseId].Add(rating);
+				}
+			}
+			catch (SqlException e)
+			{
+				Console.WriteLine(e.Message);
+			}
+			finally
+			{
+				if (reader != null)
+					reader.Close();
+			}
+
+			return caseRatingList;
         }
 
         /// <summary>
