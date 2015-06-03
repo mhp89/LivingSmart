@@ -19,17 +19,15 @@ namespace LivingSmartBusinessLogic.DB
         public Dictionary<int, List<DistanceTo>> ReadDistanceTos()
         {
             Dictionary<int, List<DistanceTo>> distanceToDictionary = new Dictionary<int, List<DistanceTo>>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM DistanceTo;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int distanceToId = (int)reader["DistanceToId"];
@@ -50,8 +48,9 @@ namespace LivingSmartBusinessLogic.DB
                 Console.WriteLine(e.Message);
             }
             finally
-            {
-                connection.Close();
+			{
+				if (reader != null)
+					reader.Close();
             }
 
             return distanceToDictionary;
@@ -65,17 +64,17 @@ namespace LivingSmartBusinessLogic.DB
         public List<DistanceTo> ReadDistanceTos(int caseId)
         {
             var distanceToList = new List<DistanceTo>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "SELECT * FROM DistanceTo WHERE CaseId = " + caseId + ";",
+				CommandText = "SELECT * FROM DistanceTo WHERE CaseId = (@CaseId);",
             };
 
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
+
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int distanceToId = (int)reader["DistanceToId"];
@@ -92,7 +91,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+				if(reader != null)
+					reader.Close();
             }
 
             return distanceToList;
@@ -107,30 +107,18 @@ namespace LivingSmartBusinessLogic.DB
         {
             int distanceToId = distanceTo.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), Distance = (@Distance) WHERE DistanceToId = " + distanceToId
+				CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), Distance = (@Distance) WHERE DistanceToId = (@DistanceToId)"
             };
+
+			cmd.Parameters.Add("@DistanceToId", SqlDbType.Int, 4, "DistanceToId").Value = distanceToId;
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = distanceTo.Type;
             cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -141,12 +129,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the DistanceTo created.</returns>
         public int CreateDistanceTo(DistanceTo distanceTo, int caseId)
         {
-            int appointmentId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO DistanceTo OUTPUT INSERTED.DistanceToId VALUES (@CaseId, @Type, @Distance); "
             };
 
@@ -154,21 +138,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = distanceTo.Type;
             cmd.Parameters.Add("@Distance", SqlDbType.Int, 4, "Distance").Value = distanceTo.Distance;
 
-            try
-            {
-                connection.Open();
-                appointmentId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return appointmentId;
+            return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

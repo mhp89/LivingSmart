@@ -19,17 +19,15 @@ namespace LivingSmartBusinessLogic.DB
         public List<City> ReadCities()
         {
             List<City> cityList = new List<City>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "SELECT * FROM ZipCode;"
             };
 
+	        SqlDataReader reader = null;
             try
             {
-				connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int zipCode = (int)reader["ZipCode"];
@@ -44,8 +42,9 @@ namespace LivingSmartBusinessLogic.DB
                 Console.WriteLine(e.Message);
             }
             finally
-            {
-                connection.Close();
+			{
+				if (reader != null)
+					reader.Close();
             }
 
             return cityList;

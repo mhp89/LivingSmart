@@ -342,7 +342,8 @@ namespace LivingSmartBusinessLogic.Controller
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
             return GetAskingPrices(activeCase.Id);
-        }
+		}
+		
 
         /// <summary>
         /// Henter prisudvikling på en given case. Prisudviklingen udregnes på 

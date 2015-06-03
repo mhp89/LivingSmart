@@ -103,6 +103,7 @@ namespace LivingSmartBusinessLogic.Model
 
         public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
+
         #endregion
 
         internal Case()

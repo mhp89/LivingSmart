@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -35,17 +35,15 @@ namespace LivingSmartBusinessLogic.DB
             sqlstring += "EstateAgent.Name";
             sqlstring += "Order by MONTH desc";
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = sqlstring,
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int year = (int)reader["Year"];
@@ -63,7 +61,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return list;
@@ -89,17 +88,15 @@ namespace LivingSmartBusinessLogic.DB
             sqlstring += "EstateAgent.Name";
             sqlstring += "Order by YEAR desc, Month desc";
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = sqlstring,
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int year = (int)reader["Year"];
@@ -118,7 +115,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return list;
@@ -140,17 +138,10 @@ namespace LivingSmartBusinessLogic.DB
             sqlstring += "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE())";
             sqlstring += "Group by DATEPART(YEAR, DateOfSale)";
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
-            SqlCommand cmd = new SqlCommand
-            {
-                Connection = connection,
-                CommandText = sqlstring,
-            };
-
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+				reader = DBConnectionMSSQL.Instance.ExecuteReader(sqlstring);
                 while (reader.Read())
                 {
                     stats.Year = (int)reader["Year"];
@@ -164,7 +155,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return stats;

@@ -19,17 +19,16 @@ namespace LivingSmartBusinessLogic.DB
         public Dictionary<int, List<Appointment>> ReadAppointments()
         {
             Dictionary<int, List<Appointment>> appointments = new Dictionary<int, List<Appointment>>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Appointment;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int appointmentId = (int)reader["AppointmentId"];
@@ -52,11 +51,12 @@ namespace LivingSmartBusinessLogic.DB
             catch (SqlException e)
             {
                 Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			}
+			finally
+			{
+				if (reader != null)
+					reader.Close();
+			}
 
             return appointments;
         }
@@ -70,12 +70,12 @@ namespace LivingSmartBusinessLogic.DB
         {
             int appointmentId = appointment.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
-            SqlCommand cmd = new SqlCommand
+			SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Ad SET EstateAgentId = (@estateAgentId), CustomerId = (@CustomerId), CaseId = (@CaseId), StartTimestamp = (@StartTimestamp), EndTimeStamp = (@EndTimeStamp), Description = (@Description), Place = (@Place)" + "WHERE AppointmentId = " + appointmentId
+				CommandText = "UPDATE Ad SET EstateAgentId = (@estateAgentId), CustomerId = (@CustomerId), CaseId = (@CaseId), StartTimestamp = (@StartTimestamp), EndTimeStamp = (@EndTimeStamp), Description = (@Description), Place = (@Place)" + "WHERE AppointmentId = (@AppointmentId)"
             };
+
+			cmd.Parameters.Add("@AppointmentId", SqlDbType.Int, 4, "AppointmentId").Value = appointmentId;
 
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
             cmd.Parameters.Add("@CustomerId", SqlDbType.Int, 4, "CustomerId").Value = appointment.Customer.Id;
@@ -85,19 +85,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500, "Description").Value = appointment.Description;
             cmd.Parameters.Add("@Place", SqlDbType.NVarChar, 500, "Place").Value = appointment.Place;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -108,12 +96,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Appointment created.</returns>
         public int CreateAppointment(Appointment appointment, int estateAgentId)
         {
-            int appointmentId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO Appointment OUTPUT INSERTED.AppointmentId VALUES (@EstateAgentId, @CustomerId, @CaseId, @StartTimestamp, @EndTimeStamp, @Description, @Place); "
             };
 
@@ -125,21 +109,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 500, "Description").Value = appointment.Description;
             cmd.Parameters.Add("@Place", SqlDbType.NVarChar, 500, "Place").Value = appointment.Place;
 
-            try
-            {
-                connection.Open();
-                appointmentId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return appointmentId;
+			return (int)DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

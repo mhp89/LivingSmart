@@ -15,17 +15,16 @@ namespace LivingSmartBusinessLogic.DB
         public Dictionary<int, List<Document>> ReadDocuments()
         {
             Dictionary<int, List<Document>> documentDictionary = new Dictionary<int, List<Document>>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Document;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int documentId = (int)reader["DocumentId"];
@@ -49,7 +48,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+				if(reader != null)
+					reader.Close();
             }
 
             return documentDictionary;
@@ -63,17 +63,17 @@ namespace LivingSmartBusinessLogic.DB
         public List<Document> ReadDocuments(int caseId)
         {
             List<Document> documentList = new List<Document>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "SELECT * FROM Document WHERE CaseID = " + caseId + ";",
-            };
+                CommandText = "SELECT * FROM Document WHERE CaseID = (@CaseId);",
+			};
 
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
+
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+                reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
                     int documentId = (int) reader["DocumentId"];
@@ -91,8 +91,9 @@ namespace LivingSmartBusinessLogic.DB
                 Console.WriteLine(e.Message);
             }
             finally
-            {
-                connection.Close();
+			{
+				if (reader != null)
+					reader.Close();
             }
 
             return documentList;
@@ -107,12 +108,12 @@ namespace LivingSmartBusinessLogic.DB
         {
             int documentId = document.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Document SET CaseId = (@CaseId), Type = (@Type), Price = (@Price), Location = (@Location), Status = (@Status)" + "WHERE DocumentId = " + documentId
+				CommandText = "UPDATE Document SET CaseId = (@CaseId), Type = (@Type), Price = (@Price), Location = (@Location), Status = (@Status) WHERE DocumentId = (@DocumentId)"
             };
+
+			cmd.Parameters.Add("@DocumentId", SqlDbType.Int, 4, "DocumentId").Value = documentId;
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
@@ -120,19 +121,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
             cmd.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status").Value = document.Status;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -143,12 +132,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Document created.</returns>
         public int CreateDocument(Document document, int caseId)
         {
-            int adId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO Document OUTPUT INSERTED.DocumentId VALUES (@CaseId, @Type, @Price, @Location, @Status); "
             };
 
@@ -158,21 +143,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
             cmd.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status").Value = document.Status;
 
-            try
-            {
-                connection.Open();
-                adId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return adId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

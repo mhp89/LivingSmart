@@ -20,66 +20,69 @@ namespace LivingSmartBusinessLogic.DB
         public List<Case> ReadCases(int estateAgentId)
         {
             List<Case> caseList = new List<Case>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "SELECT * FROM [Case] WHERE EstateAgentUId = " + estateAgentId + ";",
-            };
+				CommandText = "SELECT * FROM [Case] WHERE EstateAgentId = (@EstateAgentId);",
+			};
 
-            try
-            {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                {
-                    int caseId = (int)reader["CaseId"];
-                    int sellerId = (int)reader["SellerId"];
-                    int buyerId = (int)reader["BuyerId"];
-                    DateTime creationDate = (DateTime)reader["creationDate"];
-                    string status = (string)reader["Status"];
-                    DateTime dateOfSale = (DateTime)reader["DateOfSale"];
-                    DateTime transferDate = (DateTime)reader["TransferDate"];
-                    DateTime dateOfCompletion = (DateTime)reader["DateOfCompletion"];
-                    long sellingPrice = (long)reader["SellingPrice"];
-                    string description = (string)reader["Description"];
-                    int propertyTypeId = (int)reader["PropertyTypeId"];
-                    string landRegistryNumber = (string)reader["LandRegistryNumber"];
-                    string address = (string)reader["Address"];
-                    int zipCode = (int)reader["ZipCode"];
-                    int neighborhoodId = (int)reader["NeighborhoodId"];
-                    long publicRating = (long)reader["PublicRating"];
-                    long landValue = (long)reader["LandValue"];
-                    string type = (string)reader["Type"];
-                    int groundArea = (int)reader["GroundArea"];
-                    int livingArea = (int)reader["LivingArea"];
-                    int builtArea = (int)reader["BuiltArea"];
-                    int basementArea = (int)reader["BasementArea"];
-                    int garageArea = (int)reader["GarageArea"];
-                    int builtYear = (int)reader["BuiltYear"];
-                    string energyClassification = (string)reader["EnergyClassification"];
-                    int floors = (int)reader["Floors"];
-                    int rooms = (int)reader["Rooms"];
-                    int bedrooms = (int)reader["Bedrooms"];
-                    int bathrooms = (int)reader["Bathrooms"];
-                    int toilets = (int)reader["Toilets"];
-                    int view = (int)reader["View"];
+			cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
 
-                    Case ca = new Case(caseId, sellerId, buyerId, estateAgentId, creationDate, status, dateOfSale,
-                        transferDate, dateOfCompletion, sellingPrice, description, landRegistryNumber, address,
-                        zipCode, propertyTypeId, publicRating, landValue, groundArea, builtArea, livingArea,
-						basementArea, builtYear, energyClassification, floors, rooms, bedrooms, bathrooms, toilets, garageArea, view, neighborhoodId);
-                    caseList.Add(ca);
-                }
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+	        SqlDataReader reader = null;
+	        try
+	        {
+		        reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
+		        while (reader.Read())
+		        {
+			        int caseId = (int) reader["CaseId"];
+			        int sellerId = (int) reader["SellerId"];
+			        int buyerId = (int) reader["BuyerId"];
+			        DateTime creationDate = (DateTime) reader["creationDate"];
+			        string status = (string) reader["Status"];
+			        DateTime dateOfSale = (DateTime) reader["DateOfSale"];
+			        DateTime transferDate = (DateTime) reader["TransferDate"];
+			        DateTime dateOfCompletion = (DateTime) reader["DateOfCompletion"];
+			        long sellingPrice = (long) reader["SellingPrice"];
+			        string description = (string) reader["Description"];
+			        int propertyTypeId = (int) reader["PropertyTypeId"];
+			        string landRegistryNumber = (string) reader["LandRegistryNumber"];
+			        string address = (string) reader["Address"];
+			        int zipCode = (int) reader["ZipCode"];
+			        int neighborhoodId = (int) reader["NeighborhoodId"];
+			        long publicRating = (long) reader["PublicRating"];
+			        long landValue = (long) reader["LandValue"];
+			        string type = (string) reader["Type"];
+			        int groundArea = (int) reader["GroundArea"];
+			        int livingArea = (int) reader["LivingArea"];
+			        int builtArea = (int) reader["BuiltArea"];
+			        int basementArea = (int) reader["BasementArea"];
+			        int garageArea = (int) reader["GarageArea"];
+			        int builtYear = (int) reader["BuiltYear"];
+			        string energyClassification = (string) reader["EnergyClassification"];
+			        int floors = (int) reader["Floors"];
+			        int rooms = (int) reader["Rooms"];
+			        int bedrooms = (int) reader["Bedrooms"];
+			        int bathrooms = (int) reader["Bathrooms"];
+			        int toilets = (int) reader["Toilets"];
+			        int view = (int) reader["View"];
+
+			        Case ca = new Case(caseId, sellerId, buyerId, estateAgentId, creationDate, status, dateOfSale,
+				        transferDate, dateOfCompletion, sellingPrice, description, landRegistryNumber, address,
+				        zipCode, propertyTypeId, publicRating, landValue, groundArea, builtArea, livingArea,
+				        basementArea, builtYear, energyClassification, floors, rooms, bedrooms, bathrooms, toilets, garageArea, view,
+				        neighborhoodId);
+			        caseList.Add(ca);
+		        }
+	        }
+	        catch (SqlException e)
+	        {
+		        Console.WriteLine(e.Message);
+	        }
+	        finally
+	        {
+		        if (reader != null)
+			        reader.Close();
+	        }
 
             return caseList;
         }
@@ -87,17 +90,16 @@ namespace LivingSmartBusinessLogic.DB
 		public List<Case> ReadCases()
 		{
 			List<Case> caseList = new List<Case>();
-			SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
 			SqlCommand cmd = new SqlCommand
 			{
-				Connection = connection,
 				CommandText = "SELECT * FROM [Case];",
 			};
 
+			SqlDataReader reader = null;
 			try
 			{
-				connection.Open();
-				SqlDataReader reader = cmd.ExecuteReader();
+				reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
 				while (reader.Read())
 				{
 					int caseId = (int)reader["CaseId"];
@@ -146,7 +148,8 @@ namespace LivingSmartBusinessLogic.DB
 			}
 			finally
 			{
-				connection.Close();
+				if (reader != null)
+					reader.Close();
 			}
 
 			return caseList;
@@ -160,18 +163,18 @@ namespace LivingSmartBusinessLogic.DB
         {
             int caseId = ca.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "UPDATE [Case] SET SellerId = (@SellerId), BuyerId = (@BuyerId), EstateAgentId = (@EstateAgentId), CreationDate = (@CreationDate), Status = (@Status)" +
                 "DateOfSale = (@DateOfSale), TransferDate = (@TransferDate), DateOfCompletion = (@DateOfCompletion), SellingPrice = (@SellingPrice), Description = (@Description)" +
                 "PropertyTypeId = (@PropertyTypeId), LandRegistryNumber = (@LandRegistryNumber), Address = (@Address), ZipCode = (@ZipCode), Neighborhood = (@Neighborhood)" +
                 "PublicRating = (@PublicRating), LandValue = (@LandValue), GroundArea = (@GroundArea), LivingArea = (@LivingArea), BuiltArea = (@BuiltArea)" +
                 "BasementArea = (@BasementArea), GarageArea = (@GarageArea), BuiltYear = (@BuiltYear), EnergyClassification = (@EnergyClassification), Floors = (@Floors)" +
                 "Rooms = (@Rooms), Bedrooms = (@Bedrooms), Bathrooms = (@Bathrooms), Toilets = (@Toilets), View = (@View)" +
-                "WHERE CaseId = " + caseId
+				"WHERE CaseId = (@CaseId)"
             };
+
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
 
             cmd.Parameters.Add("@SellerId", SqlDbType.Int, 4, "SellerId").Value = ca.Seller.Id;
             cmd.Parameters.Add("@BuyerId", SqlDbType.Int, 4, "BuyerId").Value = ca.Buyer.Id;
@@ -206,19 +209,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Toilets", SqlDbType.Int, 4, "Toilets").Value = ca.Toilets;
             cmd.Parameters.Add("@View", SqlDbType.Int, 4, "View").Value = ca.View;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -228,12 +219,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Case created.</returns>
         public int CreateCase(Case ca)
         {
-            int caseId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "INSERT INTO [Case] OUTPUT INSERTED.CaseId VALUES (" +
                     "@SellerId, @BuyerId, @EstateAgentId, @CreationDate, @Status,@DateOfSale, @TransferDate, @DateOfCompletion, @SellingPrice, @Description" +
                     "@PropertyTypeId, @LandRegistryNumber, @Address, @ZipCode, @Neighborhood, @PublicRating, @LandValue, @GroundArea, @LivingArea, @BuiltArea" +
@@ -273,21 +260,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Toilets", SqlDbType.Int, 4, "Toilets").Value = ca.Toilets;
             cmd.Parameters.Add("@View", SqlDbType.Int, 4, "View").Value = ca.View;
 
-            try
-            {
-                connection.Open();
-                caseId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return caseId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }
