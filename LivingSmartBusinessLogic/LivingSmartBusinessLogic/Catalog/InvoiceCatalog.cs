@@ -6,7 +6,7 @@ namespace LivingSmartBusinessLogic.Catalog
     internal class InvoiceCatalog
     {
         private List<Invoice> invoices;
-
+        
         internal Invoice Check(int id)
         {
             throw new System.NotImplementedException();

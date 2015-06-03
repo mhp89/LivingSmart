@@ -19,7 +19,7 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
         
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public long EstateAgentValue { get { return _estateAgentValue; } 
             internal set { _estateAgentValue = value; } }
         public long SystemValue { get { return _systemValue; } 
@@ -29,11 +29,14 @@ namespace LivingSmartBusinessLogic.Model
 
         #endregion
 
-        internal Rating(Case cCase)
+        internal Rating(long systemValue)
 		{
 			Id = -1;
-            throw new NotImplementedException();
-        }
+            EstateAgentValue = systemValue;
+            SystemValue = systemValue;
+            Date = new DateTime();
+            EstateAgent = EstateAgentController.Instance.ActiveEstateAgent;
+		}
 
         internal Rating(int id, long estateAgentValue, long systemValue, DateTime date, 
             int estateAgentId)

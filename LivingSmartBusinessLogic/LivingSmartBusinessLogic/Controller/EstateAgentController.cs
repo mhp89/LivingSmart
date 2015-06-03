@@ -21,7 +21,7 @@ namespace LivingSmartBusinessLogic.Controller
         private EstateAgentCatalog estateAgentCatalog;
         private AppointmentCatalog appointmentCatalog;
 
-        private EstateAgent activeEstateAgent;
+        public EstateAgent ActiveEstateAgent { get; private set; }
 
         private EstateAgentController()
         {
@@ -34,19 +34,19 @@ namespace LivingSmartBusinessLogic.Controller
         #region AdminActiveEstateAgent
         public void SetActiveEstateAgent(EstateAgent activEstateAgent)
         {
-            this.activeEstateAgent = activEstateAgent;
+            this.ActiveEstateAgent = activEstateAgent;
         }
 
         public void CancelActiveEstateAgent()
         {
-            activeEstateAgent = null;
+            ActiveEstateAgent = null;
         }
 
 		public void SaveActiveEstateAgent()
 		{
-			estateAgentCatalog.Save(activeEstateAgent);
-			if (activeEstateAgent.Id != -1)
-				AddEstateAgent(activeEstateAgent);
+			estateAgentCatalog.Save(ActiveEstateAgent);
+			if (ActiveEstateAgent.Id != -1)
+				AddEstateAgent(ActiveEstateAgent);
         }
         #endregion
 
@@ -58,12 +58,12 @@ namespace LivingSmartBusinessLogic.Controller
 		public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate, string username, string password)
         {
             SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate, username, password));
-            return activeEstateAgent;
+            return ActiveEstateAgent;
         }
 
         public EstateAgent ReadEstateAgent(int id)
         {
-			return estateAgentCatalog.Check(id);
+			return estateAgentCatalog.Read(id);
         }
 
 		public ReadOnlyCollection<EstateAgent> GetEstateAgents()
@@ -79,32 +79,32 @@ namespace LivingSmartBusinessLogic.Controller
         #region PropertyMethods
         public void SetName(string name)
         {
-            if (activeEstateAgent.Name != name)
-				activeEstateAgent.Name = name;
+            if (ActiveEstateAgent.Name != name)
+				ActiveEstateAgent.Name = name;
         }
 
         public void SetTelephone(string telephone)
         {
-			if (activeEstateAgent.Telephone != telephone)
-				activeEstateAgent.Telephone = telephone;
+			if (ActiveEstateAgent.Telephone != telephone)
+				ActiveEstateAgent.Telephone = telephone;
         }
 
         public void SetEmail(string email)
         {
-			if (activeEstateAgent.Email != email)
-				activeEstateAgent.Email = email;
+			if (ActiveEstateAgent.Email != email)
+				ActiveEstateAgent.Email = email;
         }
 
         public void SetStartingDate(DateTime startingDate)
         {
-			if (activeEstateAgent.StartingDate != startingDate)
-				activeEstateAgent.StartingDate = startingDate;
+			if (ActiveEstateAgent.StartingDate != startingDate)
+				ActiveEstateAgent.StartingDate = startingDate;
         }
 
         public void SetTerminationDate(DateTime startingDate)
         {
-			if (activeEstateAgent.TerminationDate != startingDate)
-				activeEstateAgent.TerminationDate = startingDate;
+			if (ActiveEstateAgent.TerminationDate != startingDate)
+				ActiveEstateAgent.TerminationDate = startingDate;
         }
         #endregion
         
@@ -122,22 +122,22 @@ namespace LivingSmartBusinessLogic.Controller
 
         public void AddAppointment(Appointment appointment)
         {
-            appointmentCatalog.AddToCatalog(activeEstateAgent.Id, appointment);
+            appointmentCatalog.AddToCatalog(ActiveEstateAgent.Id, appointment);
         }
 
         public void RemoveAppointmentFromEstateAgent(Appointment appointment)
         {
-            appointmentCatalog.RemoveFromCatalog(activeEstateAgent.Id, appointment);
+            appointmentCatalog.RemoveFromCatalog(ActiveEstateAgent.Id, appointment);
         }
 
         public void GetAppointments(Appointment appointment)
         {
-            appointmentCatalog.GetAppointments(activeEstateAgent.Id);
+            appointmentCatalog.GetAppointments(ActiveEstateAgent.Id);
         }
 
-        public void UpdateAppointment(Appointment appointment)
+        public void UpdateAppointment(Appointment appointment, int estateAgentId)
         {
-            appointmentCatalog.Save(appointment);
+            appointmentCatalog.Save(appointment, estateAgentId);
         }
 
         public Appointment ReadAppointment(int id)

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
@@ -22,14 +21,14 @@ namespace LivingSmartBusinessLogic.Catalog
 
 		internal void LoadCatalog()
 		{
-			var estateAgentLst = db.ReadEstateAgents();
-			foreach (var estateAgent in estateAgentLst)
+			var estateAgentList = db.ReadEstateAgents();
+			foreach (var estateAgent in estateAgentList)
 				AddToCatalog(estateAgent);
 		}
 
-        internal EstateAgent Check(int id)
+        internal EstateAgent Read(int id)
         {
-	        return estateAgents.FirstOrDefault(a => a.Key == id).Value;
+            return GetEstateAgent(id);
         }
 
         internal void Save(EstateAgent estateAgent)
@@ -54,7 +53,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
 		internal ReadOnlyCollection<EstateAgent> GetEstateAgents()
 		{
-			var estateAgentList = estateAgents.Values.ToList();
+		    var estateAgentList = new List<EstateAgent>();
+            estateAgentList.AddRange(estateAgents.Values);
 			return estateAgentList.AsReadOnly();
 		}
 

@@ -22,9 +22,9 @@ namespace LivingSmartBusinessLogic.Model
         private EstateAgent _estateAgent;
         private DateTime _creationDate;
         private string _status;
-        private DateTime _dateOfSale;
-        private DateTime _transferDate;
-        private DateTime _dateOfCompletion;
+        private DateTime? _dateOfSale;
+        private DateTime? _transferDate;
+        private DateTime? _dateOfCompletion;
         private long? _sellingPrice;
         private string _description;
         private string _landRegistryNumber;
@@ -52,18 +52,18 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public Customer Seller { get { return _seller; } internal set { _seller = value; } }
         public Customer Buyer { get { return _buyer; } internal set { _buyer = value; } }
         public EstateAgent EstateAgent { get { return _estateAgent; } internal set { _estateAgent = value; } }
         public DateTime CreationDate { get { return _creationDate; } 
             internal set { _creationDate = value; } }
         public string Status { get { return _status; } internal set { _status = value; } }
-        public DateTime DateOfSale { get { return _dateOfSale; } 
+        public DateTime? DateOfSale { get { return _dateOfSale; } 
             internal set { _dateOfSale = value; } }
-        public DateTime TransferDate { get { return _transferDate; } 
+        public DateTime? TransferDate { get { return _transferDate; } 
             internal set { _transferDate = value; } }
-        public DateTime DateOfCompletion { get { return _dateOfCompletion; } 
+        public DateTime? DateOfCompletion { get { return _dateOfCompletion; } 
             internal set { _dateOfCompletion = value; } }
         public long? SellingPrice { get { return _sellingPrice; } 
             internal set { _sellingPrice = value; } }
@@ -110,8 +110,8 @@ namespace LivingSmartBusinessLogic.Model
             CreationDate = new DateTime().Date;
         }
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
-            DateTime creationDate, string status, DateTime dateOfSale, 
-            DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
+            DateTime creationDate, string status, DateTime? dateOfSale, 
+            DateTime? transferDate, DateTime? dateOfCompletion, long? sellingPrice, 
             string description, string landRegistryNumber, string address, int zipCode, 
             int propertyTypeId, long publicRating, long landValue, 
             int groundArea, int builtArea, int livingArea, int basementArea, 
@@ -121,7 +121,10 @@ namespace LivingSmartBusinessLogic.Model
         {
             Id = id;
             Seller = CustomerController.Instance.GetCustomer(sellerId);
-            Buyer = CustomerController.Instance.GetCustomer(buyerId);
+            if (buyerId != -1)
+            {
+                Buyer = CustomerController.Instance.GetCustomer(buyerId);
+            }
             EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
             CreationDate = creationDate;
             Status = status;

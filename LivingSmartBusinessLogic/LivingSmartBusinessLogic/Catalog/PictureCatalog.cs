@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
@@ -8,10 +9,24 @@ namespace LivingSmartBusinessLogic.Catalog
     internal class PictureCatalog
     {
         private Dictionary<int, List<Picture>> pictureDictionary;
+        private IPictureDB db;
 
         internal PictureCatalog()
         {
+            db = PictureDBFactory.GetDBL();
             pictureDictionary = new Dictionary<int, List<Picture>>();
+
+            LoadCatalog();
+        }
+
+        internal void LoadCatalog()
+        {
+            var pictureList = db.ReadPictures();
+            foreach (var pictures in pictureList)
+                foreach (var picture in pictures.Value)
+                {
+                    AddToCatalog(pictures.Key, picture);
+                }
         }
 
         internal Picture Check(int id)
@@ -19,12 +34,12 @@ namespace LivingSmartBusinessLogic.Catalog
             throw new NotImplementedException();
         }
 
-        internal void Save(Picture picture)
-		{
-			//if (picture.Id == -1)
-				//Create //TODO: Save picture to server
-			//else
-				//Update
+        internal void Save(Picture picture, int caseId)
+        {
+            if (picture.Id == -1)
+                picture.Id = db.CreatePicture(picture, caseId);
+            else
+                db.UpdatePicture(picture, caseId);
         }
 
         internal void AddToCatalog(int caseId, Picture picture)

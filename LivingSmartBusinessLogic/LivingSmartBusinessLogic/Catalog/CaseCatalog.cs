@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
@@ -17,10 +16,10 @@ namespace LivingSmartBusinessLogic.Catalog
 			db = CaseDBFactory.GetDBL();
             cases = new Dictionary<int, Case>();
 
-			Load();
+			LoadCatalog();
         }
 
-        internal void Load()
+        internal void LoadCatalog()
         {
 	        var caseList = db.ReadCases();
 			foreach (var cCase in caseList)
@@ -33,11 +32,11 @@ namespace LivingSmartBusinessLogic.Catalog
         }
 
         internal void Save(Case cCase)
-		{
-			//if (cCase.Id == -1)
-				//Create
-			//else
-				//Update
+        {
+            if (cCase.Id == -1)
+                cCase.Id = db.CreateCase(cCase);
+            else
+                db.UpdateCase(cCase);
         }
 
         internal void AddToCatalog(Case cCase)
@@ -61,7 +60,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
 	    public ReadOnlyCollection<Case> GetCases()
 	    {
-            var caseList = cases.Values.ToList();
+	        var caseList = new List<Case>();
+	        caseList.AddRange(cases.Values);
 			return caseList.AsReadOnly();
 	    }
 

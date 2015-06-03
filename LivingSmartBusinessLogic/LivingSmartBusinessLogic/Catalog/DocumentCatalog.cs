@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
@@ -8,10 +9,24 @@ namespace LivingSmartBusinessLogic.Catalog
     internal class DocumentCatalog
     {
         private Dictionary<int, List<Document>> documentDictionary;
+        private IDocumentDB db;
 
         internal DocumentCatalog()
         {
+            db = DocumentDBFactory.GetDBL();
             documentDictionary = new Dictionary<int, List<Document>>();
+
+            LoadCatalog();
+        }
+
+        internal void LoadCatalog()
+        {
+            var documentList = db.ReadDocuments();
+            foreach (var documents in documentList)
+                foreach (var document in documents.Value)
+                {
+                    AddToCatalog(documents.Key, document);
+                }
         }
 
         internal Document Check(int id)
@@ -19,12 +34,12 @@ namespace LivingSmartBusinessLogic.Catalog
             throw new NotImplementedException();
         }
 
-        internal void Save(Document document)
-		{
-			//if (document.Id == -1)
-				//Create
-			//else
-				//Update
+        internal void Save(Document document, int caseId)
+        {
+            if (document.Id == -1)
+                document.Id = db.CreateDocument(document, caseId);
+            else
+                db.UpdateDocument(document, caseId);
         }
 
         internal void AddToCatalog(int caseId, Document document)

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
@@ -90,7 +89,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal ReadOnlyCollection<Customer> GetCustomers()
         {
-            var customerList = customers.Values.ToList();
+            var customerList = new List<Customer>();
+            customerList.AddRange(customers.Values);
             return customerList.AsReadOnly();
         }
 

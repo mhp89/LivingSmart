@@ -242,7 +242,11 @@ namespace LivingSmartBusinessLogic.Controller
         /// <returns></returns>
         public Rating MakeNewRating()
         {
-            return new Rating(activeCase);
+            Rating newRating = new Rating(activeCase.CalculatePropertyRating());
+            ratingCatalog.Save(newRating, activeCase.Id);
+            if (newRating.Id != -1)
+                ratingCatalog.AddToCatalog(activeCase.Id,newRating);
+            return newRating;
         }
         /// <summary>
         /// Laver en ny vurdering ud fra en given case
@@ -250,7 +254,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <returns></returns>
         public Rating RateProperty()
         {
-            return new Rating(activeCase);
+            return new Rating(activeCase.CalculatePropertyRating());
         }
         /// <summary>
         /// Tilføjer en vurdering til casen
@@ -396,6 +400,14 @@ namespace LivingSmartBusinessLogic.Controller
         public ReadOnlyCollection<DistanceTo> GetDistanceTos()
         {
             return distanceToCatalog.GetDistanceTos(activeCase.Id);
+        }
+
+        public void SetDistance(DistanceTo distanceTo, int distance)
+        {
+            if (distanceTo.Distance != distance)
+            {
+                distanceTo.Distance = distance;
+            }
         }
         #endregion
 

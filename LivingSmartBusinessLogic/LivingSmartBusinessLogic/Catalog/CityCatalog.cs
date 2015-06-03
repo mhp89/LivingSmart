@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using LivingSmartBusinessLogic.DB;
 using LivingSmartBusinessLogic.Model;
 
@@ -18,10 +17,10 @@ namespace LivingSmartBusinessLogic.Catalog
 			db = CityDBFactory.GetDBL();
             cities = new Dictionary<int, City>();
 
-			Load();
+			LoadCatalog();
         }
 
-        internal void Load()
+        internal void LoadCatalog()
 		{
 			var cityList = db.ReadCities();
 			foreach (var city in cityList)
@@ -42,7 +41,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
 		internal ReadOnlyCollection<City> GetCities()
 		{
-			var cityList = cities.Values.ToList();
+		    var cityList = new List<City>();
+		    cityList.AddRange(cities.Values);
 			return cityList.AsReadOnly();
 		}
     }

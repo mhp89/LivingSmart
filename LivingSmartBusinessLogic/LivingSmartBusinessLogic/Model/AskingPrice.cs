@@ -17,7 +17,7 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int Id { get; private set; }
+        public int Id { get; internal set; }
         public long Value { get { return _value; } internal set { _value = value; } }
         public DateTime Date { get { return _date; } internal set { _date = value; } }
 

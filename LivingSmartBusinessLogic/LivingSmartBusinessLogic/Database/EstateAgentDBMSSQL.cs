@@ -37,7 +37,7 @@ namespace LivingSmartBusinessLogic.DB
                     string telephone = (string)reader["Telephone"];
                     string email = (string)reader["Email"];
                     DateTime startingDate = (DateTime)reader["StartingDate"];
-                    DateTime? terminationDate = (reader["TerminationDate"].GetType() == typeof(DBNull)) ? null : (DateTime?)reader["TerminationDate"];
+                    DateTime? terminationDate = reader["TerminationDate"] is DBNull ? null : (DateTime?)reader["TerminationDate"];
 					string username = (string)reader["Username"];
 					string password = (string)reader["Password"];
 
