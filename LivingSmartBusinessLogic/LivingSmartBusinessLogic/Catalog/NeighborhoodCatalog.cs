@@ -8,13 +8,13 @@ namespace LivingSmartBusinessLogic.Catalog
 {
     internal class NeighborhoodCatalog
     {
-        private Dictionary<int, Neighborhood> neighborhoods;
+        private Dictionary<int, List<Neighborhood>> neighborhoods;
         private INeighborhoodDB db;
 
         public NeighborhoodCatalog()
         {
             db = NeighborhoodDBFactory.GetDBL();
-            neighborhoods = new Dictionary<int, Neighborhood>();
+            neighborhoods = new Dictionary<int, List<Neighborhood>>();
 
             LoadCatalog();
         }
@@ -28,20 +28,25 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddHood(Neighborhood hood)
         {
-            neighborhoods.Add(hood.Id, hood);
+            neighborhoods[hood.ZipCode].Add(hood);
         }
 
-        internal Neighborhood GetHood(int hoodId)
+        internal Neighborhood GetHood(int zipCode, int hoodId)
         {
-            if (neighborhoods.ContainsKey(hoodId))
-                return neighborhoods[hoodId];
+            if (neighborhoods.ContainsKey(zipCode))
+                foreach (var hood in neighborhoods[zipCode])
+                {
+                    if (hood.Id == hoodId)
+                    {
+                        return hood;
+                    }
+                }
             return null;
         }
 
-        internal ReadOnlyCollection<Neighborhood> GetHoods()
+        internal ReadOnlyCollection<Neighborhood> GetHoods(int zipCode)
         {
-            var hoodList = new List<Neighborhood>();
-            hoodList.AddRange(neighborhoods.Values);
+            List<Neighborhood> hoodList = neighborhoods[zipCode];
             return hoodList.AsReadOnly();
         }
     }

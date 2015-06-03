@@ -149,7 +149,7 @@ namespace LivingSmartBusinessLogic.Model
             Toilets = toilets;
             GarageArea = garageArea;
             View = view;
-            Neighborhood = NeighborhoodController.Instance.GetHood(neighborhoodId);
+            Neighborhood = NeighborhoodController.Instance.GetHood(zipCode, neighborhoodId);
         }
 
 	    #region Methods
