@@ -22,7 +22,7 @@ namespace LivingSmartForms.DropIns
 		    if (customer != null)
 		    {
 		        btnSave.Text = "Gem";
-		        lblNewCustomer.Text = "Redig�r kunde";
+		        lblNewCustomer.Text = "Redigér kunde";
 		    }
 
 		    newCustomerForm = new NewCustomer(baseForm, customer);
