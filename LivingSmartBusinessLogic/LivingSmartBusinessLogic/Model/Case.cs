@@ -1,5 +1,6 @@
 using System;
 using LivingSmartBusinessLogic.Controller;
+using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -102,6 +103,7 @@ namespace LivingSmartBusinessLogic.Model
         public decimal NewestAskingPrice { get { return CaseController.Instance.GetNewestAskingPrice(Id).Value; } }
         public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
+
         #endregion
 
         internal Case()
@@ -189,8 +191,7 @@ namespace LivingSmartBusinessLogic.Model
 
 			
             //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
-			//TODO: Get distanceTos
-            /*foreach (DistanceTo dist in distanceTos)
+            foreach (DistanceTo dist in CaseController.Instance.GetDistanceTos(Id))
             {
 				if (dist.Type == DistanceToSystemType.School.ToString())
                     schoolDistance = dist.Distance;
@@ -198,7 +199,7 @@ namespace LivingSmartBusinessLogic.Model
                     shoppingDistance = dist.Distance;
 				else if (dist.Type == DistanceToSystemType.Center.ToString())
                     centerDistance = dist.Distance;
-            }*/
+            }
 
             if (_view == 1)
                 viewFactor = 0.7;

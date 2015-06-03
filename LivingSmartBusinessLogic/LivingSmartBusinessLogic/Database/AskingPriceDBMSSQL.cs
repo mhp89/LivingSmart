@@ -20,17 +20,18 @@ namespace LivingSmartBusinessLogic.DB
         public List<AskingPrice> ReadAskingPrices(int caseId)
         {
             List<AskingPrice> askingPriceList = new List<AskingPrice>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "SELECT * FROM AskingPrice WHERE caseId = " + caseId + ";",
+                CommandText = "SELECT * FROM AskingPrice WHERE caseId = (@CaseId) ORDER BY Date DESC;",
             };
 
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
+
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int askingPriceId = (int)reader["AskingPriceId"];
@@ -44,11 +45,12 @@ namespace LivingSmartBusinessLogic.DB
             catch (SqlException e)
             {
                 Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			}
+			finally
+			{
+				if (reader != null)
+					reader.Close();
+			}
 
             return askingPriceList;
         }
@@ -62,30 +64,18 @@ namespace LivingSmartBusinessLogic.DB
         {
             int askingPriceId = askingPrice.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE AskingPrice SET CaseId = (@CaseId), Value = (@Value), Date = (@Date)" + "WHERE AskingPriceId = " + askingPriceId
+				CommandText = "UPDATE AskingPrice SET CaseId = (@CaseId), Value = (@Value), Date = (@Date)" + "WHERE AskingPriceId = (@AskingPriceId)"
             };
+
+			cmd.Parameters.Add("@AskingPriceId", SqlDbType.Int, 4, "AskingPriceId").Value = askingPriceId;
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "caseId").Value = caseId;
             cmd.Parameters.Add("@Value", SqlDbType.BigInt, 8, "Value").Value = askingPrice.Value;
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = askingPrice.Date;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -96,12 +86,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the AskingPrice created.</returns>
         public int CreateAskingPrice(AskingPrice askingPrice, int caseId)
         {
-            int askingPriceId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO AskingPrice OUTPUT INSERTED.AskingPriceId VALUES (@CaseId, @Value, @Date); "
             };
 
@@ -109,21 +95,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Value", SqlDbType.BigInt, 8, "Value").Value = askingPrice.Value;
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = askingPrice.Date;
 
-            try
-            {
-                connection.Open();
-                askingPriceId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return askingPriceId;
+			return (int)DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

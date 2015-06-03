@@ -100,7 +100,7 @@ namespace LivingSmartBusinessLogic.Model
                     while (pq.Count > 0 && right.Count > 0)
                     {
                         c = pq.RemoveMax();
-                        estateAgent = left.Pop();
+                        estateAgent = right.Pop();
                         left.Push(estateAgent);
                         if (!openHouse.ContainsKey(estateAgent))
                         {

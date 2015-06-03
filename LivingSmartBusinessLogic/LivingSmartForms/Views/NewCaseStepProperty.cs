@@ -74,7 +74,7 @@ namespace LivingSmartForms.Views
 				if (disSchool == null)
 				{
 					disSchool = CaseController.Instance.MakeNewDistanceTo(
-						DistanceToSystemType.Shopping.ToString(),
+						DistanceToSystemType.School.ToString(),
 						schoolDistance
 					);
 					CaseController.Instance.AddDistanceToCase(disSchool);

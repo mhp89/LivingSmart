@@ -12,6 +12,10 @@ using LivingSmartForms.Pages;
 
 namespace LivingSmartForms.Views
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</Author>
     public partial class OpenHousePair : UserControl
     {
         public EstateAgent EstateAgent { get; private set; }
@@ -22,12 +26,15 @@ namespace LivingSmartForms.Views
             EstateAgent = agent;
             Properties = cases;
             InitializeComponent();
+
+            UpdateFields();
+            UpdateList();
         }
+
 
         private void UpdateFields()
         {
             lblEstateAgentTitle.Text = EstateAgent.Name;
-
         }
 
         private void UpdateList()

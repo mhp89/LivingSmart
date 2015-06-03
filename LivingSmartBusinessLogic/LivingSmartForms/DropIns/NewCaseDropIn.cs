@@ -19,8 +19,6 @@ namespace LivingSmartForms.DropIns
 {
 	public partial class NewCaseDropIn : BaseDropIn
 	{
-		private Case activeCase;
-
 		private CaseStep[] steps;
 		private CaseStep activeStep;
 		private int currentStepIndex;

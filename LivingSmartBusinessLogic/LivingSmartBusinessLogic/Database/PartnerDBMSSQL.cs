@@ -19,17 +19,15 @@ namespace LivingSmartBusinessLogic.DB
         public List<Partner> ReadPartners()
         {
             List<Partner> partnerList = new List<Partner>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Partner;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int partnerId = (int)reader["PartnerId"];
@@ -52,7 +50,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return partnerList;
@@ -66,12 +65,12 @@ namespace LivingSmartBusinessLogic.DB
         {
             int partnerId = partner.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Partner SET Name = (@Name), Telephone = (@Telephone), Email = (@Email), Country = (@Country), Region = (@Region), RegionShort = (@RegionShort), City = (@City), Timezone = (@Timezone)" + "WHERE PartnerId = " + partnerId
+				CommandText = "UPDATE Partner SET Name = (@Name), Telephone = (@Telephone), Email = (@Email), Country = (@Country), Region = (@Region), RegionShort = (@RegionShort), City = (@City), Timezone = (@Timezone) WHERE PartnerId = (@PartnerId)"
             };
+
+			cmd.Parameters.Add("@PartnerId", SqlDbType.Int, 4, "PartnerId").Value = partnerId;
 
 			cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = partner.Name;
 			cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = partner.Telephone;
@@ -82,19 +81,7 @@ namespace LivingSmartBusinessLogic.DB
 			cmd.Parameters.Add("@City", SqlDbType.NVarChar, 50, "City").Value = partner.City;
 			cmd.Parameters.Add("@Timezone", SqlDbType.NVarChar, 50, "Timezone").Value = partner.Timezone;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -104,12 +91,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Partner created.</returns>
         public int CreatePartner(Partner partner)
         {
-            int partnerId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO Partner OUTPUT INSERTED.PartnerId VALUES (@Name, @Telephone, @Email, @Country, @Region, @RegionShort, @City, @Timezone); "
             };
 
@@ -122,21 +105,7 @@ namespace LivingSmartBusinessLogic.DB
 			cmd.Parameters.Add("@City", SqlDbType.NVarChar, 50, "City").Value = partner.City;
 			cmd.Parameters.Add("@Timezone", SqlDbType.NVarChar, 50, "Timezone").Value = partner.Timezone;
 
-            try
-            {
-                connection.Open();
-                partnerId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return partnerId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

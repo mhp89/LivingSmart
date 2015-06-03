@@ -20,17 +20,15 @@ namespace LivingSmartBusinessLogic.DB
         public List<Ad> ReadAds(int caseId)
         {
             List<Ad> adList = new List<Ad>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Ad WHERE CaseID = " + caseId + ";",
             };
 
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            SqlDataReader reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int id = (int)reader["AdId"];
@@ -47,10 +45,6 @@ namespace LivingSmartBusinessLogic.DB
             {
                 Console.WriteLine(e.Message);
             }
-            finally
-            {
-                connection.Close();
-            }
 
             return adList;
         }
@@ -62,17 +56,16 @@ namespace LivingSmartBusinessLogic.DB
         public Dictionary<int, List<Ad>> ReadAds()
         {
             Dictionary<int, List<Ad>> adDictionary = new Dictionary<int, List<Ad>>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Ad;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int id = (int)reader["AdId"];
@@ -93,11 +86,12 @@ namespace LivingSmartBusinessLogic.DB
             catch (SqlException e)
             {
                 Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			}
+			finally
+			{
+				if (reader != null)
+					reader.Close();
+			}
 
             return adDictionary;
         }
@@ -111,32 +105,20 @@ namespace LivingSmartBusinessLogic.DB
         {
             int adId = ad.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), StartDate = (@StartDate), EndDate = (@EndDate), Price = (@Price)" + "WHERE AdId = " + adId
+				CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), StartDate = (@StartDate), EndDate = (@EndDate), Price = (@Price)" + "WHERE AdId = (@AdId)"
             };
 
-            cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "Name").Value = ad.Id;
-            cmd.Parameters.Add("@Type", SqlDbType.Date, 8, "Name").Value = ad.Type;
-            cmd.Parameters.Add("@StartDate", SqlDbType.Date, 8, "Name").Value = ad.StartDate;
-            cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "Name").Value = ad.EndDate;
-            cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Name").Value = ad.Price;
+			cmd.Parameters.Add("@AdId", SqlDbType.Int, 4, "AdId").Value = adId;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
+			cmd.Parameters.Add("@Type", SqlDbType.Date, 8, "Type").Value = ad.Type;
+			cmd.Parameters.Add("@StartDate", SqlDbType.Date, 8, "StartDate").Value = ad.StartDate;
+			cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "EndDate").Value = ad.EndDate;
+			cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = ad.Price;
+
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -147,12 +129,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Ad created.</returns>
         public int CreateAd(Ad ad, int caseId)
         {
-            int adId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "INSERT INTO Ad OUTPUT INSERTED.AdId VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
             };
 
@@ -162,21 +140,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@EndDate", SqlDbType.Date, 8, "EndDate").Value = ad.Price;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = ad.Id;
 
-            try
-            {
-                connection.Open();
-                adId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return adId;
+			return (int)DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

@@ -20,17 +20,16 @@ namespace LivingSmartBusinessLogic.DB
         public List<Customer> ReadCustomers()
         {
             List<Customer> customerList = new List<Customer>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
+
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Customer;",
             };
 
+	        SqlDataReader reader = null;
             try
-			{
-				connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+            {
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int id = (int) reader["CustomerId"];
@@ -43,16 +42,17 @@ namespace LivingSmartBusinessLogic.DB
 
                     Customer c = new Customer(id, name, dateOfBirth, address, zipCode, email, telephone);
                     customerList.Add(c);
-                }
+				}
             }
             catch (SqlException e)
             {
                 Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			}
+			finally
+			{
+				if (reader != null)
+					reader.Close();
+			}
 
             return customerList;
         }
@@ -65,33 +65,21 @@ namespace LivingSmartBusinessLogic.DB
         {
             int customerID = customer.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE CUSTOMER SET NAME = (@Name), DateOfBirth = (@DateOfBirth), Address = (@Address), ZipCode = (@ZipCode), Telephone = (@Telephone), Email = (@Email)" + "WHERE CustomerID = " + customerID
-            };
+				CommandText = "UPDATE Customer SET Name = (@Name), DateOfBirth = (@DateOfBirth), Address = (@Address), ZipCode = (@ZipCode), Telephone = (@Telephone), Email = (@Email) WHERE CustomerID = (@CustomerID)"
+			};
+
+			cmd.Parameters.Add("@CustomerID", SqlDbType.Int, 4, "CustomerID").Value = customerID;
 
             cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = customer.Name;
-            cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date, 8, "Name").Value = customer.DateOfBirth;
-            cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 50, "Name").Value = customer.Address;
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "Name").Value = customer.City.ZipCode;
-            cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Name").Value = customer.Telephone;
-            cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Name").Value = customer.Email;
+			cmd.Parameters.Add("@DateOfBirth", SqlDbType.Date, 8, "DateOfBirth").Value = customer.DateOfBirth;
+			cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 50, "Address").Value = customer.Address;
+			cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = customer.City.ZipCode;
+			cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = customer.Telephone;
+			cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = customer.Email;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -101,13 +89,9 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Customer created.</returns>
         public int CreateCustomer(Customer customer)
         {
-            int customerID = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-				CommandText = "INSERT INTO Customer OUTPUT INSERTED.CustomerId VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email); "
+				CommandText = "INSERT INTO Customer OUTPUT INSERTED.CustomerId VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email);"
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = customer.Name;
@@ -117,21 +101,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = customer.Telephone;
             cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = customer.Email;
 
-            try
-            {
-                connection.Open();
-                customerID = (int) cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return customerID;
+			return  (int)DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

@@ -12,20 +12,33 @@ using LivingSmartForms.Pages;
 
 namespace LivingSmartForms.Views
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</author>
     public partial class OpenHouseProperty : UserControl
     {
         public Case Property { get; private set; }
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="property"></param>
         public OpenHouseProperty(Case property)
         {
             Property = property;
             InitializeComponent();
+
+            UpdateFields();
         }
 
+        /// <summary>
+        /// Opdaterer felterne i controlen
+        /// </summary>
         private void UpdateFields()
         {
             lblAddress.Text = Property.Address;
-            lblZipCode.Text = Property.ZipCode + " " + Property.City;
+            lblZipCode.Text = Property.City.ZipCode + " " + Property.City.District;
         }
     }
 }

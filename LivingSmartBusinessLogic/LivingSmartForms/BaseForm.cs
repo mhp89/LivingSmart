@@ -18,7 +18,6 @@ namespace LivingSmartForms
 
 	    private List<BaseDropIn> DropIns = new List<BaseDropIn>(); 
 
-		
 	    private Control partnerView;
 
 		public EstateAgent DefaultEstateAgent { get; private set; }
@@ -35,7 +34,6 @@ namespace LivingSmartForms
 			Customers,
 			EstateAgents,
 			Partners,
-			Settings
 		}
 
 		#endregion
@@ -57,7 +55,6 @@ namespace LivingSmartForms
 			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mæglere",			Classes.Menu.MenuAnchor.Left);
 			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partnere",			Classes.Menu.MenuAnchor.Left);
             pages[GetPageIndex(PagesIndex.OpenHouse)]       = new Page(typeof(OpenHousePage),   "Åbent hus",        Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Settings)]		= new Page(typeof(Cases),			"Indstillinger",	Classes.Menu.MenuAnchor.Right);
 			
 			InitializePages();
 
@@ -104,7 +101,8 @@ namespace LivingSmartForms
 	    private void InitializeMenu()
 	    {
 		    //Lav andre knapper
-			AddMenuButton("Log af", Classes.Menu.MenuAnchor.Right, MenuLogoutButtonClick);
+			AddMenuButton("Indstillinger", Classes.Menu.MenuAnchor.Right, null);
+            AddMenuButton("Log af", Classes.Menu.MenuAnchor.Right, MenuLogoutButtonClick);
 			AddMenuButton("<", Classes.Menu.MenuAnchor.Right, MenuPartnersButtonClick, new Size(30, 30), Padding.Empty);
 	    }
 
@@ -124,7 +122,8 @@ namespace LivingSmartForms
 			}
 
 			button.Text = content;
-			button.MouseClick += clickEvent;
+            if (clickEvent != null)
+			    button.MouseClick += clickEvent;
 
 			if (anchor == Classes.Menu.MenuAnchor.Left)
 				flpMenuLeft.Controls.Add(button);
@@ -168,7 +167,7 @@ namespace LivingSmartForms
 				btn.Text = ">";
 				if(partnerView == null)
 					partnerView = new PartnersDropIn(this);
-				//F�r view'et til at fylde hele holderen
+				//Får view'et til at fylde hele holderen
 				partnerView.Dock = DockStyle.Fill;
 				pnlPartnersHolder.Controls.Add(partnerView);
 			}

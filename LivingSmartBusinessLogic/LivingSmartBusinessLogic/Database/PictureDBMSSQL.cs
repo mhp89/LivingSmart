@@ -20,17 +20,17 @@ namespace LivingSmartBusinessLogic.DB
         public List<Picture> ReadPictures(int caseId)
         {
             List<Picture> pictureList = new List<Picture>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "SELECT * FROM Picture WHERE CaseId = " + caseId + ";",
+				CommandText = "SELECT * FROM Picture WHERE CaseId = (@CaseId);",
             };
 
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
+
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int pictureId = (int)reader["PictureId"];
@@ -47,7 +47,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return pictureList;
@@ -60,17 +61,15 @@ namespace LivingSmartBusinessLogic.DB
         public Dictionary<int, List<Picture>> ReadPictures()
         {
             Dictionary<int, List<Picture>> pictureDictionary = new Dictionary<int, List<Picture>>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Picture;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int pictureId = (int)reader["PictureId"];
@@ -92,7 +91,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return pictureDictionary;
@@ -107,30 +107,18 @@ namespace LivingSmartBusinessLogic.DB
         {
             int pictureId = picture.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Picture SET CaseId = (@CaseId), Location = (@Location), Description = (@Description) WHERE PictureId = " + pictureId
+				CommandText = "UPDATE Picture SET CaseId = (@CaseId), Location = (@Location), Description = (@Description) WHERE PictureId = (@PictureId)"
             };
+
+			cmd.Parameters.Add("@PictureId", SqlDbType.Int, 4, "PictureId").Value = pictureId;
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 50, "Location").Value = picture.Location;
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = picture.Desription;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+	        DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -141,12 +129,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Picture created.</returns>
         public int CreatePicture(Picture picture, int caseId)
         {
-            int pictureId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO Picture OUTPUT INSERTED.PictureId VALUES (@CaseId, @Location, @Description); "
             };
 
@@ -154,21 +138,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 50, "Location").Value = picture.Location;
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = picture.Desription;
 
-            try
-            {
-                connection.Open();
-                pictureId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return pictureId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

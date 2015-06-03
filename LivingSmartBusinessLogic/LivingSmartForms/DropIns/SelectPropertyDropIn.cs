@@ -15,6 +15,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</author>
     public partial class SelectPropertyDropIn : BaseDropIn
     {
         private PropertySelectCallback callback;

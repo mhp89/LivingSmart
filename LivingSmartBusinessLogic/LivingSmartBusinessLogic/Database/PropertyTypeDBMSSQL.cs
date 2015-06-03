@@ -19,17 +19,15 @@ namespace LivingSmartBusinessLogic.DB
         public List<PropertyType> ReadPropertyTypes()
         {
             List<PropertyType> propertyTypeList = new List<PropertyType>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM PropertyType WHERE Deleted = 'FALSE';"
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int propertyTypeId = (int)reader["PropertyTypeId"];
@@ -45,7 +43,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return propertyTypeList;
@@ -59,28 +58,17 @@ namespace LivingSmartBusinessLogic.DB
         {
             int propertyTypeId = propertyType.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE PropertyType SET Description = (@Description) WHERE AppointmentId = " + propertyTypeId
+				CommandText = "UPDATE PropertyType SET Description = (@Description), Deleted = (@Deleted) WHERE AppointmentId = (@AppointmentId)"
             };
 
-            cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 50, "Description").Value = propertyType.Description;
+			cmd.Parameters.Add("@AppointmentId", SqlDbType.Int, 4, "AppointmentId").Value = propertyTypeId;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 50, "Description").Value = propertyType.Description;
+			//TODO: ENABLE cmd.Parameters.Add("@Deleted", SqlDbType.Bit, 1, "Deleted").Value = propertyType.Deleted;
+
+	        DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -90,32 +78,14 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the PropertyType created.</returns>
         public int CreatePropertyType(PropertyType propertyType)
         {
-            int propertyTypeId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-				CommandText = "INSERT INTO PropertyType OUTPUT INSERTED.PropertyTypeId VALUES (@CaseId, @Type, @StartDate, @EndDate, @Price); "
+				CommandText = "INSERT INTO PropertyType OUTPUT INSERTED.PropertyTypeId VALUES (@Description); "
             };
 
             cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 50, "Description").Value = propertyType.Description;
 
-            try
-            {
-                connection.Open();
-                propertyTypeId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return propertyTypeId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

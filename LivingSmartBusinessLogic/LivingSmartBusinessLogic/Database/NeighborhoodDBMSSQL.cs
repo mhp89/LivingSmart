@@ -19,17 +19,15 @@ namespace LivingSmartBusinessLogic.DB
         public List<Neighborhood> ReadNeighborhoods()
         {
             List<Neighborhood> neighborhoodList = new List<Neighborhood>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM Neighborhood;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int zipCode = (int)reader["ZipCoded"];
@@ -46,7 +44,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return neighborhoodList;
@@ -58,10 +57,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="neighborhood">Neighborhood to be updated.</param>
         public void UpdateNeighborhood(Neighborhood neighborhood)
         {
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "UPDATE Neighborhood SET Value = (@Value) WHERE ZipCode = (@ZipCode) AND Neighborhood  = (@Neighborhood)"
             };
 
@@ -69,19 +66,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
             cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -91,12 +76,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Neighborhood created.</returns>
         public int CreateNeighborhood(Neighborhood neighborhood)
         {
-            int neighborhoodId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "INSERT INTO Neighborhood OUTPUT INSERTED.Id VALUES (@ZipCode, @Neighborhood, @Value); "
             };
 
@@ -104,21 +85,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
             cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
 
-            try
-            {
-                connection.Open();
-                neighborhoodId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return neighborhoodId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

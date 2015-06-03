@@ -19,17 +19,15 @@ namespace LivingSmartBusinessLogic.DB
         public List<EstateAgent> ReadEstateAgents()
         {
             List<EstateAgent> estateAgentList = new List<EstateAgent>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM EstateAgent;",
             };
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int estateAgentId = (int)reader["EstateAgentId"];
@@ -51,7 +49,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+				if(reader != null)
+					reader.Close();
             }
 
             return estateAgentList;
@@ -65,12 +64,12 @@ namespace LivingSmartBusinessLogic.DB
         {
             int estateagentId = estateAgent.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE EstateAgent SET Name = (@Name), Telephone = (@Telephone), Email = (@Email), StartingDate = (@StartingDate), TerminationDate = (@TerminationDate)" + "WHERE EstateAgentId = " + estateagentId
+				CommandText = "UPDATE EstateAgent SET Name = (@Name), Telephone = (@Telephone), Email = (@Email), StartingDate = (@StartingDate), TerminationDate = (@TerminationDate) WHERE EstateAgentId = (@EstateAgentId)"
             };
+
+			cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateagentId;
 
             cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = estateAgent.Name;
             cmd.Parameters.Add("@Telephone", SqlDbType.NVarChar, 20, "Telephone").Value = estateAgent.Telephone;
@@ -78,19 +77,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
             cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+            DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -100,12 +87,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the EstateAgent created.</returns>
         public int CreateEstateAgent(EstateAgent estateAgent)
         {
-            int estateagentId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO EstateAgent OUTPUT INSERTED.EstateAgentId VALUES (@Name, @Telephone, @Email, @StartingDate, @TerminationDate, @Username, @Password); "
             };
 
@@ -114,24 +97,10 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Email", SqlDbType.NVarChar, 50, "Email").Value = estateAgent.Email;
             cmd.Parameters.Add("@StartingDate", SqlDbType.Date, 8, "StartingDate").Value = estateAgent.StartingDate;
 			cmd.Parameters.Add("@TerminationDate", SqlDbType.Date, 8, "TerminationDate").Value = (object)estateAgent.TerminationDate ?? DBNull.Value;
-			cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 50, "Username").Value = estateAgent.Username;
-			cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 50, "Password").Value = estateAgent.Password;
+			cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 15, "Username").Value = estateAgent.Username;
+			cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 25, "Password").Value = estateAgent.Password;
 
-            try
-            {
-                connection.Open();
-                estateagentId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return estateagentId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
 
         /// <summary>
@@ -143,20 +112,18 @@ namespace LivingSmartBusinessLogic.DB
         public EstateAgent LoginEstateAgent(string username, string password)
         {
             EstateAgent estateAgent = null;
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
                 CommandText = "SELECT * FROM EstateAgent WHERE Username = (@Username) AND Password = (@Password);",
             };
 
             cmd.Parameters.Add("@Username", SqlDbType.NVarChar, 15, "Username").Value = username;
             cmd.Parameters.Add("@Password", SqlDbType.NVarChar, 25, "Password").Value = password;
 
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int readEstateAgentId = (int)reader["EstateAgentId"];
@@ -177,7 +144,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+				if(reader != null)
+					reader.Close();
             }
 
             return estateAgent;

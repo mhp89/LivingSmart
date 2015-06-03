@@ -1,10 +1,21 @@
 using System;
 using LivingSmartBusinessLogic.Controller;
+using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartBusinessLogic.Model
 {
+    /// <summary>
+    /// Holds the information for a Case
+    /// </summary>
     public class Case
     {
+        public enum CaseStatus
+        {
+            Open,
+            Sold,
+            Closed,
+        }
+
         #region Private Fields
 
         private Customer _seller;
@@ -12,9 +23,9 @@ namespace LivingSmartBusinessLogic.Model
         private EstateAgent _estateAgent;
         private DateTime _creationDate;
         private string _status;
-        private DateTime _dateOfSale;
-        private DateTime _transferDate;
-        private DateTime _dateOfCompletion;
+        private DateTime? _transferDate;
+        private DateTime? _dateOfSale;
+        private DateTime? _dateOfCompletion;
         private long? _sellingPrice;
         private string _description;
         private string _landRegistryNumber;
@@ -49,11 +60,11 @@ namespace LivingSmartBusinessLogic.Model
         public DateTime CreationDate { get { return _creationDate; } 
             internal set { _creationDate = value; } }
         public string Status { get { return _status; } internal set { _status = value; } }
-        public DateTime DateOfSale { get { return _dateOfSale; } 
+        public DateTime? DateOfSale { get { return _dateOfSale; } 
             internal set { _dateOfSale = value; } }
-        public DateTime TransferDate { get { return _transferDate; } 
+        public DateTime? TransferDate { get { return _transferDate; } 
             internal set { _transferDate = value; } }
-        public DateTime DateOfCompletion { get { return _dateOfCompletion; } 
+        public DateTime? DateOfCompletion { get { return _dateOfCompletion; } 
             internal set { _dateOfCompletion = value; } }
         public long? SellingPrice { get { return _sellingPrice; } 
             internal set { _sellingPrice = value; } }
@@ -89,8 +100,9 @@ namespace LivingSmartBusinessLogic.Model
             internal set { City = CityController.Instance.GetCity(value); }
             get { return City.ZipCode; }
         }
-
+        public decimal NewestAskingPrice { get { return CaseController.Instance.GetNewestAskingPrice(Id).Value; } }
         public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
+
 
         #endregion
 
@@ -100,8 +112,8 @@ namespace LivingSmartBusinessLogic.Model
             CreationDate = new DateTime().Date;
         }
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
-            DateTime creationDate, string status, DateTime dateOfSale, 
-            DateTime transferDate, DateTime dateOfCompletion, long sellingPrice, 
+            DateTime creationDate, string status, DateTime? dateOfSale, 
+            DateTime? transferDate, DateTime? dateOfCompletion, long sellingPrice, 
             string description, string landRegistryNumber, string address, int zipCode, 
             int propertyTypeId, long publicRating, long landValue, 
             int groundArea, int builtArea, int livingArea, int basementArea, 
@@ -146,11 +158,9 @@ namespace LivingSmartBusinessLogic.Model
 
         internal void CloseCase()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
-<<<<<<< HEAD:LivingSmartBusinessLogic/LivingSmartBusinessLogic/Model/Case.cs
-=======
-
+        
         /// <summary>
         /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
         /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
@@ -175,18 +185,20 @@ namespace LivingSmartBusinessLogic.Model
             double schoolFactor;
             double shoppingFactor;
             double centerFactor;
-            int schoolDistance;
-            int shoppingDistance;
-            int centerDistance;
+            int schoolDistance = 0;
+			int shoppingDistance = 0;
+			int centerDistance = 0;
 
+			
             //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
-            foreach (DistanceTo dist in distanceTos)
+
+            foreach (DistanceTo dist in CaseController.Instance.GetDistanceTos(Id))
             {
-                if (dist.Type == "school")
+				if (dist.Type == DistanceToSystemType.School.ToString())
                     schoolDistance = dist.Distance;
-                else if (dist.Type == "shopping")
+				else if (dist.Type == DistanceToSystemType.Shopping.ToString())
                     shoppingDistance = dist.Distance;
-                else if (dist.Type == "center")
+				else if (dist.Type == DistanceToSystemType.Center.ToString())
                     centerDistance = dist.Distance;
             }
 
@@ -221,77 +233,6 @@ namespace LivingSmartBusinessLogic.Model
             return viewFactor + schoolFactor + shoppingFactor + centerFactor;
         }
 
-        internal void AddDocument(Document document)
-        {
-            documents.Add(document);
-        }
-
-        internal void AddPicture(Picture picture)
-        {
-            pictures.Add(picture);
-        }
-
-        internal void AddAd(Ad ad)
-        {
-            ads.Add(ad);
-        }
-
-        internal void AddRating(Rating rating)
-        {
-            ratings.Add(rating);
-        }
-
-        internal void AddAskingPrice(AskingPrice askingPrice)
-        {
-            askingPrices.Add(askingPrice);
-        }
-
-        internal void AddPotentialBuyer(PotentialBuyer potentialBuyer)
-        {
-            potentialBuyers.Add(potentialBuyer);
-        }
-
-        internal void AddDistanceTo(DistanceTo distanceTo)
-        {
-            distanceTos.Add(distanceTo);
-        }
-
-        internal ReadOnlyCollection<Ad> GetAds()
-        {
-            return ads.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<PotentialBuyer> GetPotentialBuyers()
-        {
-            return potentialBuyers.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<Document> GetDocuments()
-        {
-            return documents.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<Rating> GetRatings()
-        {
-            return ratings.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<AskingPrice> GetAskingPrices()
-        {
-            return askingPrices.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<DistanceTo> GetDistanceTos()
-        {
-            return distanceTos.AsReadOnly();
-        }
-
-        internal ReadOnlyCollection<Picture> GetPictures()
-        {
-            return pictures.AsReadOnly();
-        }
->>>>>>> origin/Beliggenhedsberegning#78:LivingSmartBusinessLogic/LivingSmartBusinessLogic/Case.cs
-        
         #endregion
     }
 }

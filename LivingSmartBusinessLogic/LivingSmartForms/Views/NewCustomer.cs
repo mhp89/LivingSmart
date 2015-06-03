@@ -43,21 +43,19 @@ namespace LivingSmartForms.Views
             {
                 if (currentCustomer == null)
                 {
-                    {
-                        CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
-                            (DateTime) dafCustomerBirthday.GetDateTime(),
-                            stbCustomerAddress.Text,
-                            Convert.ToInt32(stbCustomerZipCode.Text),
-                            stbCustomerEmail.Text,
-                            stbCustomerPhone.Text);
-                        CustomerController.Instance.SaveActiveCustomer();
+					CreatedUser = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
+		                (DateTime) dafCustomerBirthday.GetDateTime(),
+		                stbCustomerAddress.Text,
+		                Convert.ToInt32(stbCustomerZipCode.Text),
+		                stbCustomerEmail.Text,
+		                stbCustomerPhone.Text);
+	                CustomerController.Instance.SaveActiveCustomer();
 
-				if (CreatedUser.Id == -1)
-				{
-					MessageBox.Show("Tilykke, du fandt en fejl!");
-					fielddataOk = false;
-				}
-                    }
+	                if (CreatedUser.Id == -1)
+	                {
+		                MessageBox.Show("Der opstod en fejl");
+		                fielddataOk = false;
+	                }
                 }
                 else
                 {

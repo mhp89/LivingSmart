@@ -8,6 +8,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</author>
 	public partial class OpenHousePage : BasePage
 	{
         public List<EstateAgent> agents = new List<EstateAgent>();
@@ -39,7 +43,6 @@ namespace LivingSmartForms.Pages
         private void EstateAgentList(List<EstateAgent> agents)
         {
             this.agents = agents;
-            Console.WriteLine(agents.Count);
         }
         /// <summary>
         /// Får en liste med valgte ejendomme fra drop in menuen for valg af ejendomme
@@ -48,14 +51,19 @@ namespace LivingSmartForms.Pages
         private void PropertyList(List<Case> properties)
         {
             this.properties = properties;
-            Console.WriteLine(agents.Count);
         }
 
-
+        /// <summary>
+        /// Knappen opretter en instans af OpenHouse klassen og kalder metoden
+        /// ReturnOpenHouseEvenly. Information herfra indsættes i openHousePairs variablen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnMakeSelection_Click(object sender, EventArgs e)
         {
             foreach (Case cases in properties)
-                priceCasePair.Add(new KeyValuePair<decimal, Case>(cases.NewestAskingPrice, cases));        
+                priceCasePair.Add(new KeyValuePair<decimal, Case>(1200000, cases));
+                //priceCasePair.Add(new KeyValuePair<decimal, Case>(Convert.ToDecimal(cases.NewestAskingPrice), cases));        
 
             OpenHouse openHouse = new OpenHouse(agents, priceCasePair);
 
@@ -63,6 +71,9 @@ namespace LivingSmartForms.Pages
             UpdateList();
         }
 
+        /// <summary>
+        /// Opdaterer control OpenHousePair med information om mægler og ejendomme
+        /// </summary>
         private void UpdateList()
         {
             ctcOpenHouse.SuspendLayout();

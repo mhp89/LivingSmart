@@ -20,17 +20,17 @@ namespace LivingSmartBusinessLogic.DB
         public List<Rating> ReadRatings(int caseId)
         {
             List<Rating> ratingList = new List<Rating>();
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "SELECT * FROM Rating WHERE CaseID = " + caseId + ";",
+				CommandText = "SELECT * FROM Rating WHERE CaseId = (@CaseId) ORDER BY Date;",
             };
 
+			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
+
+	        SqlDataReader reader = null;
             try
             {
-                connection.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
                     int ratingId = (int)reader["RatingId"];
@@ -49,7 +49,8 @@ namespace LivingSmartBusinessLogic.DB
             }
             finally
             {
-                connection.Close();
+	            if (reader != null) 
+					reader.Close();
             }
 
             return ratingList;
@@ -74,12 +75,12 @@ namespace LivingSmartBusinessLogic.DB
         {
             int ratingId = rating.Id;
 
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
-                CommandText = "UPDATE Rating SET CaseId = (@CaseId), SystemValue = (@SystemValue), EstateAgentValue = (@EstateAgentValue), Date = (@Date), EstateAgentId = (@EstateAgentId)" + "WHERE RatingId = " + ratingId
+				CommandText = "UPDATE Rating SET CaseId = (@CaseId), SystemValue = (@SystemValue), EstateAgentValue = (@EstateAgentValue), Date = (@Date), EstateAgentId = (@EstateAgentId) WHERE RatingId = (@RatingId)"
             };
+
+			cmd.Parameters.Add("@RatingId", SqlDbType.Int, 4, "RatingId").Value = ratingId;
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@SystemValue", SqlDbType.BigInt, 8, "SystemValue").Value = rating.SystemValue;
@@ -87,19 +88,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = rating.Date;
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
 
-            try
-            {
-                connection.Open();
-                cmd.ExecuteNonQuery();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
 
         /// <summary>
@@ -111,12 +100,8 @@ namespace LivingSmartBusinessLogic.DB
         /// <returns>Returns the Id of the Rating created.</returns>
         public int CreateRating(Rating rating, int caseId, int estateAgentId)
         {
-            int ratingId = -1;
-
-            SqlConnection connection = DBConnectionMSSQL.Instance.GetDBConnection();
             SqlCommand cmd = new SqlCommand
             {
-                Connection = connection,
 				CommandText = "INSERT INTO Rating OUTPUT INSERTED.RatingId VALUES (@CaseId, @SystemValue, @EstateAgentValue, @Date, @EstateAgentId); "
             };
 
@@ -126,21 +111,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Date", SqlDbType.Date, 8, "Date").Value = rating.Date;
             cmd.Parameters.Add("@EstateAgentId", SqlDbType.Int, 4, "EstateAgentId").Value = estateAgentId;
 
-            try
-            {
-                connection.Open();
-                ratingId = (int)cmd.ExecuteScalar();
-            }
-            catch (SqlException e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            finally
-            {
-                connection.Close();
-            }
-
-            return ratingId;
+	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
     }
 }

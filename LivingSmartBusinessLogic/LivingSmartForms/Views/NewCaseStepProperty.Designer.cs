@@ -139,8 +139,8 @@ namespace LivingSmartForms.Views
 			this.stbDistanceToSchool.RegularExpression = null;
 			this.stbDistanceToSchool.Required = true;
 			this.stbDistanceToSchool.Size = new System.Drawing.Size(288, 30);
-			this.stbDistanceToSchool.Suffix = null;
-			this.stbDistanceToSchool.TabIndex = 26;
+			this.stbDistanceToSchool.Suffix = "m";
+			this.stbDistanceToSchool.TabIndex = 12;
 			this.stbDistanceToSchool.TabStop = false;
 			this.stbDistanceToSchool.UseSystemPasswordChar = false;
 			// 
@@ -166,8 +166,8 @@ namespace LivingSmartForms.Views
 			this.stbDistanceToShopping.RegularExpression = null;
 			this.stbDistanceToShopping.Required = true;
 			this.stbDistanceToShopping.Size = new System.Drawing.Size(288, 30);
-			this.stbDistanceToShopping.Suffix = null;
-			this.stbDistanceToShopping.TabIndex = 25;
+			this.stbDistanceToShopping.Suffix = "m";
+			this.stbDistanceToShopping.TabIndex = 10;
 			this.stbDistanceToShopping.TabStop = false;
 			this.stbDistanceToShopping.UseSystemPasswordChar = false;
 			// 
@@ -193,8 +193,8 @@ namespace LivingSmartForms.Views
 			this.stbDistanceToCenter.RegularExpression = null;
 			this.stbDistanceToCenter.Required = true;
 			this.stbDistanceToCenter.Size = new System.Drawing.Size(288, 30);
-			this.stbDistanceToCenter.Suffix = null;
-			this.stbDistanceToCenter.TabIndex = 24;
+			this.stbDistanceToCenter.Suffix = "m";
+			this.stbDistanceToCenter.TabIndex = 11;
 			this.stbDistanceToCenter.TabStop = false;
 			this.stbDistanceToCenter.UseSystemPasswordChar = false;
 			// 
@@ -628,10 +628,11 @@ namespace LivingSmartForms.Views
 			this.cboPropertyType.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.cboPropertyType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cboPropertyType.FormattingEnabled = true;
-			this.cboPropertyType.Location = new System.Drawing.Point(195, 3);
+			this.cboPropertyType.Location = new System.Drawing.Point(192, 0);
+			this.cboPropertyType.Margin = new System.Windows.Forms.Padding(0);
 			this.cboPropertyType.Name = "cboPropertyType";
-			this.cboPropertyType.Size = new System.Drawing.Size(282, 21);
-			this.cboPropertyType.TabIndex = 27;
+			this.cboPropertyType.Size = new System.Drawing.Size(288, 21);
+			this.cboPropertyType.TabIndex = 0;
 			// 
 			// header1
 			// 

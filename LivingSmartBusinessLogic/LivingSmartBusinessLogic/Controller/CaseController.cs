@@ -342,6 +342,7 @@ namespace LivingSmartBusinessLogic.Controller
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
             return GetAskingPrices(activeCase.Id);
+
         }
         /// <summary>
         /// Henter den nyeste udbudsprise på en given sag
@@ -411,9 +412,13 @@ namespace LivingSmartBusinessLogic.Controller
         {
             distanceToCatalog.RemoveFromCatalog(activeCase.Id, distanceTo);
         }
+		public ReadOnlyCollection<DistanceTo> GetDistanceTos(int id)
+		{
+			return distanceToCatalog.GetDistanceTos(id);
+		}
         public ReadOnlyCollection<DistanceTo> GetDistanceTos()
         {
-            return distanceToCatalog.GetDistanceTos(activeCase.Id);
+            return GetDistanceTos(activeCase.Id);
         }
         #endregion
 
