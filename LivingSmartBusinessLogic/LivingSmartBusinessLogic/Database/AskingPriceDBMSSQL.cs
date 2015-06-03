@@ -13,20 +13,17 @@ namespace LivingSmartBusinessLogic.DB
     internal class AskingPriceDBMSSQL : IAskingPriceDB
     {
         /// <summary>
-        /// Returns all the AskingPrices from the database, with a given CaseId.
+        /// Returns all the AskingPrices from the database.
         /// </summary>
-        /// <param name="caseId">Id of the case</param>
-        /// <returns>Returns a List of all the AskingPrices, having a CaseId given by the parameter</returns>
-        public List<AskingPrice> ReadAskingPrices(int caseId)
+        /// <returns>Returns a Dictioary of all the AskingPrices</returns>
+        public Dictionary<int, List<AskingPrice>> ReadAskingPrices()
         {
-            List<AskingPrice> askingPriceList = new List<AskingPrice>();
+            Dictionary<int, List<AskingPrice>> askingPriceList = new Dictionary<int, List<AskingPrice>>();
 
             SqlCommand cmd = new SqlCommand
             {
-                CommandText = "SELECT * FROM AskingPrice WHERE caseId = (@CaseId) ORDER BY Date DESC;",
+                CommandText = "SELECT * FROM AskingPrice ORDER BY Date DESC;",
             };
-
-			cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
 
 	        SqlDataReader reader = null;
             try
@@ -35,11 +32,17 @@ namespace LivingSmartBusinessLogic.DB
                 while (reader.Read())
                 {
                     int askingPriceId = (int)reader["AskingPriceId"];
+                    int caseId = (int) reader["CaseId"];
                     long value = (long)reader["Value"];
                     DateTime date = (DateTime)reader["Date"];
 
                     AskingPrice askingPrice = new AskingPrice(askingPriceId, value, date);
-                    askingPriceList.Add(askingPrice);
+                    if (!askingPriceList.ContainsKey(caseId))
+                    {
+                        askingPriceList.Add(caseId, new List<AskingPrice>());
+                    }
+
+                    askingPriceList[caseId].Add(askingPrice);
                 }
             }
             catch (SqlException e)

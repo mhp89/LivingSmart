@@ -16,18 +16,18 @@ namespace LivingSmartBusinessLogic.Catalog
             db = AskingPriceDBFactory.GetDBL();
             askingPriceDictionary = new Dictionary<int, List<AskingPrice>>();
 
-            //LoadCatalog();
+            LoadCatalog();
         }
 
-        //internal void LoadCatalog()
-        //{
-        //    var askingPriceList = db.ReadAskingPrices();
-        //    foreach (var askingPrices in askingPriceList)
-        //        foreach (var askingPrice in askingPrices.Value)
-        //        {
-        //            AddToCatalog(askingPrices.Key, askingPrice);
-        //        }
-        //}
+        internal void LoadCatalog()
+        {
+            var askingPriceList = db.ReadAskingPrices();
+            foreach (var askingPrices in askingPriceList)
+                foreach (var askingPrice in askingPrices.Value)
+                {
+                    AddToCatalog(askingPrices.Key, askingPrice);
+                }
+        }
 
         internal AskingPrice Check(int id)
         {
