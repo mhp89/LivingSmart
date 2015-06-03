@@ -1,5 +1,6 @@
 using System;
 using LivingSmartBusinessLogic.Controller;
+using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -166,7 +167,7 @@ namespace LivingSmartBusinessLogic.Model
         /// <returns></returns>
         internal long CalculatePropertyRating()
         {
-            int basementValue = _neighborhood.Value / 4;  //Estimeret v�rdi
+            int basementValue = _neighborhood.Value / 4;  //Estimeret værdi
             
             return Convert.ToInt64((_landValue + _livingArea * _neighborhood.Value 
                                     + _basementArea * basementValue) * RatingFactor()
@@ -174,8 +175,8 @@ namespace LivingSmartBusinessLogic.Model
         }
 
         /// <summary>
-        /// Finder beregningsfaktorer for udsigt, afstand til skole, indk�b og centrum
-        /// baseret p� deres faktiske v�rdier. 
+        /// Finder beregningsfaktorer for udsigt, afstand til skole, indkøb og centrum
+        /// baseret på deres faktiske værdier. 
         /// </summary>
         internal double RatingFactor()
         {
@@ -188,9 +189,8 @@ namespace LivingSmartBusinessLogic.Model
 			int centerDistance = 0;
 
 			
-            //Disse 3 afstandstyper er p�kr�vet af programmet og vil altid forefindes i databasen
-			//TODO: Get distanceTos
-            /*foreach (DistanceTo dist in distanceTos)
+            //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
+            foreach (DistanceTo dist in CaseController.Instance.GetDistanceTos(Id))
             {
 				if (dist.Type == DistanceToSystemType.School.ToString())
                     schoolDistance = dist.Distance;
@@ -198,7 +198,7 @@ namespace LivingSmartBusinessLogic.Model
                     shoppingDistance = dist.Distance;
 				else if (dist.Type == DistanceToSystemType.Center.ToString())
                     centerDistance = dist.Distance;
-            }*/
+            }
 
             if (_view == 1)
                 viewFactor = 0.7;
