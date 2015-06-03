@@ -13,7 +13,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns a dictionary containing all the appointments in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the appointments in the database, with estateAgentId as key and a list of appointments containing that estateAgentId</returns>
-        List<AskingPrice> ReadAskingPrices(int caseId);
+        Dictionary<int, List<AskingPrice>> ReadAskingPrices();
 
         /// <summary>
         /// Updates the information from and appointment, in the database.
