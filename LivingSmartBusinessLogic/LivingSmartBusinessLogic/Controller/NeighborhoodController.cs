@@ -4,7 +4,7 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
 {
-    class NeighborhoodController
+    public class NeighborhoodController
 	{
 		#region Singleton
 
