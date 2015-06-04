@@ -116,7 +116,7 @@ namespace LivingSmartBusinessLogic.DB
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 200, "Location").Value = picture.Location;
-			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Desription ?? DBNull.Value;
+			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Description ?? DBNull.Value;
 
 	        DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
@@ -136,7 +136,7 @@ namespace LivingSmartBusinessLogic.DB
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 200, "Location").Value = picture.Location;
-			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Desription ?? DBNull.Value;
+			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Description ?? DBNull.Value;
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
