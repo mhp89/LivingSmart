@@ -9,18 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Model;
+using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms
 {
     public partial class EstateAgentLine : UserControl
     {
+        private BaseForm baseForm;
 	    private EstateAgent estateAgent;
 
 		public EstateAgentLine(BaseForm baseForm, EstateAgent estateAgent)
 		{
 			this.estateAgent = estateAgent;
-			InitializeComponent();
+		    this.baseForm = baseForm;
 
+			InitializeComponent();
 			UpdateFields();
         }
 
@@ -33,5 +36,10 @@ namespace LivingSmartForms
 		    slbHireDate.Text = estateAgent.StartingDate.ToShortDateString() + " - " +
 				((estateAgent.TerminationDate.HasValue) ? estateAgent.TerminationDate.Value.ToShortDateString() : "Nu");
 	    }
+
+        private void btnSeeEstateAgent_Click(object sender, EventArgs e)
+        {
+            baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm, estateAgent, null));
+        }
     }
 }

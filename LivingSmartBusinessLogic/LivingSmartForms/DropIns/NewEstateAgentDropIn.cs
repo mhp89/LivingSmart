@@ -14,47 +14,57 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
-	public partial class NewEstateAgentDropIn : BaseDropIn
-	{
-		private NewEstateAgent newEstateAgentForm;
+    public partial class NewEstateAgentDropIn : BaseDropIn
+    {
+        private NewEstateAgent newEstateAgentForm;
+        private NewEstateAgentFinish callback;
+        private EstateAgent currentEstateAgent;
 
-		private NewEstateAgentFinish callback;
-		public delegate void NewEstateAgentFinish(EstateAgent customer);
+        public delegate void NewEstateAgentFinish(EstateAgent customer);
 
-		public NewEstateAgentDropIn(BaseForm baseForm, NewEstateAgentFinish callback) : base(baseForm)
-		{
-			InitializeComponent();
+        public NewEstateAgentDropIn(BaseForm baseForm, EstateAgent estateAgent, NewEstateAgentFinish callback)
+            : base(baseForm)
+        {
+            InitializeComponent();
 
-			this.callback = callback;
+            this.currentEstateAgent = estateAgent;
+            this.callback = callback;
 
-			newEstateAgentForm = new NewEstateAgent(baseForm);
-			newEstateAgentForm.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
-			newEstateAgentForm.Location = new Point(10, 10);
-			pnlContentHolder.Controls.Add(newEstateAgentForm);
-		}
-		public override string GetDropInId()
-		{
-			return "NewEstateAgent";
-		}
-		private void FinishCreating(EstateAgent estateAgent)
-		{
-			EstateAgentController.Instance.CancelActiveEstateAgent();
-			callback(estateAgent);
-			Close();
-		}
+            if (currentEstateAgent != null)
+            {
+                btnSave.Text = @"Gem";
+                lblNewEstateAgent.Text = @"Redigér ejendomsmægler";
+            }
 
-		private void btnCancel_Click(object sender, EventArgs e)
-		{
-			FinishCreating(null);
-		}
+            newEstateAgentForm = new NewEstateAgent(baseForm, estateAgent);
+            newEstateAgentForm.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+            newEstateAgentForm.Location = new Point(10, 10);
+            pnlContentHolder.Controls.Add(newEstateAgentForm);
+        }
+        public override string GetDropInId()
+        {
+            return "NewEstateAgent";
+        }
+        private void FinishCreating(EstateAgent estateAgent)
+        {
+            EstateAgentController.Instance.CancelActiveEstateAgent();
+            if (callback != null)
+                callback(estateAgent);
+            Close();
+        }
 
-		private void btnSave_Click(object sender, EventArgs e)
-		{
-			if (newEstateAgentForm.Save())
-			{
-				//Customer saved
-				FinishCreating(newEstateAgentForm.CreatedEstateAgent);
-			}
-		}
-	}
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            FinishCreating(null);
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (newEstateAgentForm.Save())
+            {
+                //Customer saved
+                FinishCreating(newEstateAgentForm.CreatedEstateAgent);
+            }
+        }
+    }
 }
