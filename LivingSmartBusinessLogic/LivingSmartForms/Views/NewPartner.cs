@@ -16,13 +16,21 @@ namespace LivingSmartForms.Views
             InitializeComponent();
 
             currentPartner = partner;
-
+            int timeIndex = 0;
             var timezones = TimeZoneInfo.GetSystemTimeZones();
 
+            int indexCount = 0;
             foreach (var timezone in timezones)
+            {
                 cboTimezone.Items.Add(timezone);
 
-            cboTimezone.DisplayMember = "DisplayName";
+                indexCount++;
+
+                if (partner.Timezone == ((TimeZoneInfo) timezone).StandardName)
+                    timeIndex = indexCount;
+            }
+
+            // cboTimezone.DisplayMember = "DisplayName";
 
             if (currentPartner != null)
             {
@@ -33,7 +41,7 @@ namespace LivingSmartForms.Views
                 stbCountry.Text = partner.Country;
                 stbPhone.Text = partner.Telephone;
                 stbEmail.Text = partner.Email;
-                cboTimezone.DisplayMember = "foo";
+                cboTimezone.SelectedIndex = timeIndex;
             }
         }
 
@@ -59,7 +67,7 @@ namespace LivingSmartForms.Views
                     PartnerController.Instance.SetCountry(currentPartner, stbCountry.Text);
                     PartnerController.Instance.SetTelephone(currentPartner, stbPhone.Text);
                     PartnerController.Instance.SetEmail(currentPartner, stbEmail.Text);
-                    // PartnerController.Instance.SetTimeZone(currentPartner, stbName.Text);
+                    PartnerController.Instance.SetTimeZone(currentPartner, ((TimeZoneInfo) cboTimezone.SelectedItem).StandardName);
                     PartnerController.Instance.SaveActivePartner();
                 }
             }
