@@ -58,14 +58,14 @@ namespace LivingSmartForms.Views
                 else
                 {
                     PartnerController.Instance.SetActivePartner(currentPartner);
-                    PartnerController.Instance.SetName(currentPartner, stbName.Text);
-                    PartnerController.Instance.SetCity(currentPartner, stbCity.Text);
-                    PartnerController.Instance.SetRegion(currentPartner, stbRegion.Text);
-                    PartnerController.Instance.SetRegionShort(currentPartner, stbRegionShort.Text);
-                    PartnerController.Instance.SetCountry(currentPartner, stbCountry.Text);
-                    PartnerController.Instance.SetTelephone(currentPartner, stbPhone.Text);
-                    PartnerController.Instance.SetEmail(currentPartner, stbEmail.Text);
-                    PartnerController.Instance.SetTimeZone(currentPartner, ((TimeZoneInfo)cboTimezone.SelectedItem).Id);
+                    PartnerController.Instance.SetName(stbName.Text);
+                    PartnerController.Instance.SetCity(stbCity.Text);
+                    PartnerController.Instance.SetRegion(stbRegion.Text);
+                    PartnerController.Instance.SetRegionShort(stbRegionShort.Text);
+                    PartnerController.Instance.SetCountry(stbCountry.Text);
+                    PartnerController.Instance.SetTelephone(stbPhone.Text);
+                    PartnerController.Instance.SetEmail(stbEmail.Text);
+                    PartnerController.Instance.SetTimeZone(((TimeZoneInfo)cboTimezone.SelectedItem).Id);
                     PartnerController.Instance.SaveActivePartner();
                 }
             }
