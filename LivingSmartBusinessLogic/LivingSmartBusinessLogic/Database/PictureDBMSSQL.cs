@@ -140,5 +140,16 @@ namespace LivingSmartBusinessLogic.DB
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
+		public void DeletePicture(Picture picture)
+		{
+			SqlCommand cmd = new SqlCommand
+			{
+				CommandText = "DELETE FROM Picture WHERE PictureId = (@PictureId)"
+			};
+
+			cmd.Parameters.Add("@PictureId", SqlDbType.Int, 4, "PictureId").Value = picture.Id;
+
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
+		}
     }
 }

@@ -80,21 +80,27 @@ namespace LivingSmartBusinessLogic.Controller
 	        {
 		        caseCatalog.AddToCatalog(activeCase);
 
-		        foreach (var document in tempDocuments)
+		        var documents = GetDocuments().ToList();
+				documents.AddRange(tempDocuments);
+				foreach (var document in documents)
 		        {
 					documentCatalog.Save(document, activeCase.Id);
 					if(document.Id != -1)
 						AddDocumentToCase(document);
 		        }
 
-		        foreach (var distanceTo in tempDistanceTos)
+				var distanceTos = GetDistanceTos().ToList();
+				distanceTos.AddRange(tempDistanceTos);
+				foreach (var distanceTo in distanceTos)
 		        {
 					distanceToCatalog.Save(distanceTo, activeCase.Id);
 					if (distanceTo.Id != -1)
 						AddDistanceToCase(distanceTo);
 		        }
 
-		        foreach (var picture in tempPictures)
+				var pictures = GetPictures().ToList();
+				pictures.AddRange(tempPictures);
+				foreach (var picture in pictures)
 		        {
 					pictureCatalog.Save(picture, activeCase.Id);
 					if (picture.Id != -1)
@@ -498,6 +504,15 @@ namespace LivingSmartBusinessLogic.Controller
 			tempDistanceTos.Add(distanceObj);
 			return distanceObj;
         }
+
+		/// <summary>
+		/// Sætter afstanden på DistanceTo
+		/// </summary>
+		public void SetDistanceTo(DistanceTo distanceTo, int distance)
+		{
+			distanceTo.Distance = distance;
+		}
+
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
@@ -584,7 +599,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgsdato
         /// </summary>
         /// <param name="dateOfSale"></param>
-        public void SetDateOfSale(DateTime dateOfSale)
+        public void SetDateOfSale(DateTime? dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
                 activeCase.DateOfSale = dateOfSale;
@@ -593,7 +608,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter overdragelsesdato
         /// </summary>
         /// <param name="transferDate"></param>
-        public void SetTransferDate(DateTime transferDate)
+        public void SetTransferDate(DateTime? transferDate)
         {
             if (activeCase.TransferDate != transferDate)
                 activeCase.TransferDate = transferDate;
@@ -611,7 +626,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgspris
         /// </summary>
         /// <param name="sellingPrice"></param>
-        public void SetSellingPrice(long sellingPrice)
+        public void SetSellingPrice(long? sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
                 activeCase.SellingPrice = sellingPrice;

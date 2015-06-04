@@ -46,13 +46,13 @@ namespace LivingSmartForms.Pages
 
 		private void NewCustomerAdded(Customer customer)
 		{
-			if (customer != null)
+            if (customer != null)
 			{
 				var control = new CustomerLine(baseForm, customer) {Margin = Padding.Empty};
 				clsCustomers.AddControl(control);
 				sblCustomers.Text = clsCustomers.Controls.Count.ToString();
 			}
-		}
+        }
 
 		private void btnNewCustomer_Click(object sender, EventArgs e)
 		{

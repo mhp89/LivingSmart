@@ -109,7 +109,7 @@ namespace LivingSmartBusinessLogic.DB
 
             SqlCommand cmd = new SqlCommand
             {
-				CommandText = "UPDATE Ad SET CaseId = (@CaseId), Type = (@Type), Distance = (@Distance) WHERE DistanceToId = (@DistanceToId)"
+				CommandText = "UPDATE DistanceTo SET CaseId = (@CaseId), Type = (@Type), Distance = (@Distance) WHERE DistanceToId = (@DistanceToId)"
             };
 
 			cmd.Parameters.Add("@DistanceToId", SqlDbType.Int, 4, "DistanceToId").Value = distanceToId;

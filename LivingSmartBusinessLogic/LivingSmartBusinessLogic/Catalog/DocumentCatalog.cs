@@ -51,6 +51,7 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void RemoveFromCatalog(int estateAgentId, Document document)
         {
+			db.DeleteDocument(document);
             documentDictionary[estateAgentId].Remove(document);
         }
 

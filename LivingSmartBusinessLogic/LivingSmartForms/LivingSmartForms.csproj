@@ -272,6 +272,12 @@
     <Compile Include="Views\NewCaseStepProperty.Designer.cs">
       <DependentUpon>NewCaseStepProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NewCaseStepEndCase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\NewCaseStepEndCase.Designer.cs">
+      <DependentUpon>NewCaseStepEndCase.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\NewCaseStepSeller.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -446,6 +452,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepProperty.resx">
       <DependentUpon>NewCaseStepProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\NewCaseStepEndCase.resx">
+      <DependentUpon>NewCaseStepEndCase.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\NewCaseStepSeller.resx">
       <DependentUpon>NewCaseStepSeller.cs</DependentUpon>

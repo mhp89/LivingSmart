@@ -88,5 +88,12 @@ namespace LivingSmartForms.UserControls
 			stbDateMonth.Text = date.Month.ToString();
 			stbDateYear.Text = date.Year.ToString();
 	    }
+
+	    public void ClearError()
+	    {
+			stbDateDay.ClearError();
+			stbDateMonth.ClearError();
+			stbDateYear.ClearError();
+	    }
     }
 }

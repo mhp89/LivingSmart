@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,5 +37,11 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="caseId">CaseId connected to the Document.</param>
         /// <returns>Returns the Id of the Document created.</returns>
         int CreateDocument(Document document, int caseId);
+
+		/// <summary>
+		/// Removes a document in the database.
+		/// </summary>
+		/// <param name="document">Document to be removed</param>
+	    void DeleteDocument(Document document);
     }
 }

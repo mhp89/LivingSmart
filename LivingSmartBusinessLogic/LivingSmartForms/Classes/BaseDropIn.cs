@@ -12,7 +12,7 @@ namespace LivingSmartForms.Classes
 {
 	public partial class BaseDropIn : UserControl
 	{
-		protected BaseForm baseForm;
+		public BaseForm baseForm;
 
 		public delegate void DropInClosed();
 
