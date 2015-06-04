@@ -198,12 +198,20 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="location"></param>
         /// <param name="status"></param>
         /// <returns></returns>
-        public Document MakeNewDocument(string type, int price, string location, string status)
+        public Document MakeNewDocument(string type, int price, string location)
         {
-			var documentObj = new Document(type, price, location, status);
+			var documentObj = new Document(type, price, location);
 			tempDocuments.Add(documentObj);
 			return documentObj;
         }
+		public void SetDocumentPrice(Document document, int price)
+		{
+			document.Price = price;
+		}
+		public void SetDocumentType(Document document, string type)
+		{
+			document.Type = type;
+		}
 
         /// <summary>
         /// Tilføjer et dokument til casen
@@ -798,5 +806,6 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #endregion
+
 	}
 }

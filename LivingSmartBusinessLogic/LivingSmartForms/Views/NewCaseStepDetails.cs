@@ -71,14 +71,41 @@ namespace LivingSmartForms.Views
 					var picture = CaseController.Instance.MakeNewPicture(filename, "");
 
 					Image image = Image.FromFile(filename);
-					clsImages.AddControl(new DetailImage(this, image, picture));
+					clsPictures.AddControl(new DetailImage(this, image, picture));
 				}
 			}
 		}
-		public void RemoveImage(DetailImage detailImage)
+		public void RemovePicture(DetailImage detailImage)
 		{
 			CaseController.Instance.RemovePictureFromCase(detailImage.Picture);
-			clsImages.RemoveControl(detailImage);
+			clsPictures.RemoveControl(detailImage);
+		}
+
+		#endregion
+
+
+		#region Documents
+
+		private void btnNewDocument_Click(object sender, EventArgs e)
+		{
+			OpenFileDialog ofd = new OpenFileDialog();
+			ofd.Multiselect = true;
+			var result = ofd.ShowDialog();
+
+			if (result == DialogResult.OK)
+			{
+				foreach (var filename in ofd.FileNames)
+				{
+					var document = CaseController.Instance.MakeNewDocument("", 0, filename);
+
+					clsDocuments.AddControl(new DetailDocument(this, document));
+				}
+			}
+		}
+		public void RemoveDocument(DetailDocument detailDocument)
+		{
+			CaseController.Instance.RemoveDocumentFromCase(detailDocument.Document);
+			clsDocuments.RemoveControl(detailDocument);
 		}
 
 		#endregion

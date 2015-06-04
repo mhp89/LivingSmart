@@ -32,9 +32,8 @@ namespace LivingSmartBusinessLogic.DB
                     string type = (string)reader["Type"];
                     int price = (int)reader["Price"];
                     string location = (string)reader["Location"];
-                    string status = (string)reader["Status"];
 
-                    Document document = new Document(documentId, type, price, location, status);
+                    Document document = new Document(documentId, type, price, location);
                     if (!documentDictionary.ContainsKey(caseId))
                     {
                         documentDictionary.Add(caseId, new List<Document>());
@@ -80,9 +79,8 @@ namespace LivingSmartBusinessLogic.DB
                     string type = (string) reader["Type"];
                     int price = (int) reader["Price"];
                     string location = (string) reader["Location"];
-                    string status = (string) reader["Status"];
 
-                    Document document = new Document(documentId, type, price, location, status);
+                    Document document = new Document(documentId, type, price, location);
                     documentList.Add(document);
                 }
             }
@@ -110,7 +108,7 @@ namespace LivingSmartBusinessLogic.DB
 
             SqlCommand cmd = new SqlCommand
             {
-				CommandText = "UPDATE Document SET CaseId = (@CaseId), Type = (@Type), Price = (@Price), Location = (@Location), Status = (@Status) WHERE DocumentId = (@DocumentId)"
+				CommandText = "UPDATE Document SET CaseId = (@CaseId), Type = (@Type), Price = (@Price), Location = (@Location) WHERE DocumentId = (@DocumentId)"
             };
 
 			cmd.Parameters.Add("@DocumentId", SqlDbType.Int, 4, "DocumentId").Value = documentId;
@@ -119,7 +117,6 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = document.Price;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
-            cmd.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status").Value = document.Status;
 
             DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
@@ -134,14 +131,13 @@ namespace LivingSmartBusinessLogic.DB
         {
             SqlCommand cmd = new SqlCommand
             {
-				CommandText = "INSERT INTO Document OUTPUT INSERTED.DocumentId VALUES (@CaseId, @Type, @Price, @Location, @Status); "
+				CommandText = "INSERT INTO Document OUTPUT INSERTED.DocumentId VALUES (@CaseId, @Type, @Price, @Location); "
             };
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = document.Price;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
-            cmd.Parameters.Add("@Status", SqlDbType.NVarChar, 50, "Status").Value = document.Status;
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }

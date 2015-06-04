@@ -200,10 +200,16 @@
     <Compile Include="UserControls\DateField.Designer.cs">
       <DependentUpon>DateField.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\DetailImage.cs">
+    <Compile Include="Views\DetailDocument.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\DetailImage.Designer.cs">
+    <Compile Include="Views\DetailDocument.Designer.cs">
+      <DependentUpon>DetailDocument.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\DetailImage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\DetailImage.Designer.cs">
       <DependentUpon>DetailImage.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DistanceField.cs">
@@ -405,7 +411,10 @@
     <EmbeddedResource Include="UserControls\DateField.resx">
       <DependentUpon>DateField.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\DetailImage.resx">
+    <EmbeddedResource Include="Views\DetailDocument.resx">
+      <DependentUpon>DetailDocument.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\DetailImage.resx">
       <DependentUpon>DetailImage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DistanceField.resx">

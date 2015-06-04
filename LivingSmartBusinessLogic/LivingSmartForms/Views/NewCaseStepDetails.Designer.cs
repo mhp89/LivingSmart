@@ -43,17 +43,24 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPublicEvaluation = new SmartControls.SmartTextBox();
 			this.stbDetailsRating = new SmartControls.SmartTextBox();
 			this.pnlDetailsPictures = new System.Windows.Forms.Panel();
-			this.clsImages = new SmartControls.ControlList();
-			this.panel1 = new System.Windows.Forms.Panel();
+			this.clsPictures = new SmartControls.ControlList();
+			this.pnlNewPicture = new System.Windows.Forms.Panel();
 			this.btnAddImage = new SmartControls.SmartButton();
 			this.pnlSystemRating = new System.Windows.Forms.Panel();
 			this.btnGetNewRating = new SmartControls.SmartButton();
 			this.stbSystemRating = new SmartControls.SmartTextBox();
 			this.hdrPropertyDetails = new SmartControls.Header();
+			this.lblDocuments = new System.Windows.Forms.Label();
+			this.pnlDocuments = new System.Windows.Forms.Panel();
+			this.clsDocuments = new SmartControls.ControlList();
+			this.pnlNewDocument = new System.Windows.Forms.Panel();
+			this.btnNewDocument = new SmartControls.SmartButton();
 			this.tlpPropertyDetails.SuspendLayout();
 			this.pnlDetailsPictures.SuspendLayout();
-			this.panel1.SuspendLayout();
+			this.pnlNewPicture.SuspendLayout();
 			this.pnlSystemRating.SuspendLayout();
+			this.pnlDocuments.SuspendLayout();
+			this.pnlNewDocument.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tlpPropertyDetails
@@ -64,6 +71,8 @@ namespace LivingSmartForms.Views
 			this.tlpPropertyDetails.ColumnCount = 2;
 			this.tlpPropertyDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.08333F));
 			this.tlpPropertyDetails.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 72.91667F));
+			this.tlpPropertyDetails.Controls.Add(this.pnlDocuments, 1, 6);
+			this.tlpPropertyDetails.Controls.Add(this.lblDocuments, 0, 6);
 			this.tlpPropertyDetails.Controls.Add(this.lblSystemRating, 0, 1);
 			this.tlpPropertyDetails.Controls.Add(this.lblDetailsPictures, 0, 5);
 			this.tlpPropertyDetails.Controls.Add(this.stbDetailsDescription, 1, 4);
@@ -79,14 +88,15 @@ namespace LivingSmartForms.Views
 			this.tlpPropertyDetails.Location = new System.Drawing.Point(0, 45);
 			this.tlpPropertyDetails.Margin = new System.Windows.Forms.Padding(0);
 			this.tlpPropertyDetails.Name = "tlpPropertyDetails";
-			this.tlpPropertyDetails.RowCount = 6;
+			this.tlpPropertyDetails.RowCount = 7;
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-			this.tlpPropertyDetails.Size = new System.Drawing.Size(480, 480);
+			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+			this.tlpPropertyDetails.Size = new System.Drawing.Size(480, 560);
 			this.tlpPropertyDetails.TabIndex = 5;
 			// 
 			// lblSystemRating
@@ -108,7 +118,7 @@ namespace LivingSmartForms.Views
 			this.lblDetailsPictures.Dock = System.Windows.Forms.DockStyle.Top;
 			this.lblDetailsPictures.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblDetailsPictures.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblDetailsPictures.Location = new System.Drawing.Point(0, 320);
+			this.lblDetailsPictures.Location = new System.Drawing.Point(0, 293);
 			this.lblDetailsPictures.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.lblDetailsPictures.Name = "lblDetailsPictures";
 			this.lblDetailsPictures.Size = new System.Drawing.Size(129, 30);
@@ -137,7 +147,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsDescription.Placeholder = null;
 			this.stbDetailsDescription.RegularExpression = null;
 			this.stbDetailsDescription.Required = true;
-			this.stbDetailsDescription.Size = new System.Drawing.Size(351, 150);
+			this.stbDetailsDescription.Size = new System.Drawing.Size(351, 123);
 			this.stbDetailsDescription.Suffix = null;
 			this.stbDetailsDescription.TabIndex = 3;
 			this.stbDetailsDescription.TabStop = false;
@@ -165,7 +175,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPrice.RegularExpression = null;
 			this.stbDetailsPrice.Required = true;
 			this.stbDetailsPrice.Size = new System.Drawing.Size(351, 30);
-			this.stbDetailsPrice.Suffix = null;
+			this.stbDetailsPrice.Suffix = "kr.";
 			this.stbDetailsPrice.TabIndex = 2;
 			this.stbDetailsPrice.TabStop = false;
 			this.stbDetailsPrice.UseSystemPasswordChar = false;
@@ -247,7 +257,7 @@ namespace LivingSmartForms.Views
 			this.stbDetailsPublicEvaluation.RegularExpression = null;
 			this.stbDetailsPublicEvaluation.Required = true;
 			this.stbDetailsPublicEvaluation.Size = new System.Drawing.Size(351, 30);
-			this.stbDetailsPublicEvaluation.Suffix = null;
+			this.stbDetailsPublicEvaluation.Suffix = "kr.";
 			this.stbDetailsPublicEvaluation.TabIndex = 0;
 			this.stbDetailsPublicEvaluation.TabStop = false;
 			this.stbDetailsPublicEvaluation.UseSystemPasswordChar = false;
@@ -274,43 +284,43 @@ namespace LivingSmartForms.Views
 			this.stbDetailsRating.RegularExpression = null;
 			this.stbDetailsRating.Required = false;
 			this.stbDetailsRating.Size = new System.Drawing.Size(351, 30);
-			this.stbDetailsRating.Suffix = null;
+			this.stbDetailsRating.Suffix = "kr.";
 			this.stbDetailsRating.TabIndex = 1;
 			this.stbDetailsRating.TabStop = false;
 			this.stbDetailsRating.UseSystemPasswordChar = false;
 			// 
 			// pnlDetailsPictures
 			// 
-			this.pnlDetailsPictures.Controls.Add(this.clsImages);
-			this.pnlDetailsPictures.Controls.Add(this.panel1);
+			this.pnlDetailsPictures.Controls.Add(this.clsPictures);
+			this.pnlDetailsPictures.Controls.Add(this.pnlNewPicture);
 			this.pnlDetailsPictures.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlDetailsPictures.Location = new System.Drawing.Point(129, 320);
+			this.pnlDetailsPictures.Location = new System.Drawing.Point(129, 293);
 			this.pnlDetailsPictures.Margin = new System.Windows.Forms.Padding(0);
 			this.pnlDetailsPictures.Name = "pnlDetailsPictures";
-			this.pnlDetailsPictures.Size = new System.Drawing.Size(351, 160);
+			this.pnlDetailsPictures.Size = new System.Drawing.Size(351, 133);
 			this.pnlDetailsPictures.TabIndex = 17;
 			// 
-			// clsImages
+			// clsPictures
 			// 
-			this.clsImages.AutoScroll = true;
-			this.clsImages.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.clsImages.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.clsImages.Location = new System.Drawing.Point(0, 40);
-			this.clsImages.Margin = new System.Windows.Forms.Padding(0);
-			this.clsImages.Name = "clsImages";
-			this.clsImages.Size = new System.Drawing.Size(351, 120);
-			this.clsImages.Spacing = 5;
-			this.clsImages.TabIndex = 0;
-			this.clsImages.WrapContents = false;
+			this.clsPictures.AutoScroll = true;
+			this.clsPictures.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.clsPictures.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+			this.clsPictures.Location = new System.Drawing.Point(0, 40);
+			this.clsPictures.Margin = new System.Windows.Forms.Padding(0);
+			this.clsPictures.Name = "clsPictures";
+			this.clsPictures.Size = new System.Drawing.Size(351, 93);
+			this.clsPictures.Spacing = 5;
+			this.clsPictures.TabIndex = 0;
+			this.clsPictures.WrapContents = false;
 			// 
-			// panel1
+			// pnlNewPicture
 			// 
-			this.panel1.Controls.Add(this.btnAddImage);
-			this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-			this.panel1.Location = new System.Drawing.Point(0, 0);
-			this.panel1.Name = "panel1";
-			this.panel1.Size = new System.Drawing.Size(351, 40);
-			this.panel1.TabIndex = 1;
+			this.pnlNewPicture.Controls.Add(this.btnAddImage);
+			this.pnlNewPicture.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlNewPicture.Location = new System.Drawing.Point(0, 0);
+			this.pnlNewPicture.Name = "pnlNewPicture";
+			this.pnlNewPicture.Size = new System.Drawing.Size(351, 40);
+			this.pnlNewPicture.TabIndex = 1;
 			// 
 			// btnAddImage
 			// 
@@ -388,7 +398,7 @@ namespace LivingSmartForms.Views
 			this.stbSystemRating.RegularExpression = null;
 			this.stbSystemRating.Required = true;
 			this.stbSystemRating.Size = new System.Drawing.Size(198, 30);
-			this.stbSystemRating.Suffix = null;
+			this.stbSystemRating.Suffix = "kr.";
 			this.stbSystemRating.TabIndex = 2;
 			this.stbSystemRating.TabStop = false;
 			this.stbSystemRating.UseSystemPasswordChar = false;
@@ -406,6 +416,72 @@ namespace LivingSmartForms.Views
 			this.hdrPropertyDetails.TabIndex = 4;
 			this.hdrPropertyDetails.Text = "Detaljer";
 			// 
+			// lblDocuments
+			// 
+			this.lblDocuments.Dock = System.Windows.Forms.DockStyle.Top;
+			this.lblDocuments.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDocuments.Location = new System.Drawing.Point(0, 426);
+			this.lblDocuments.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblDocuments.Name = "lblDocuments";
+			this.lblDocuments.Size = new System.Drawing.Size(129, 30);
+			this.lblDocuments.TabIndex = 20;
+			this.lblDocuments.Text = "Dokumenter";
+			this.lblDocuments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// pnlDocuments
+			// 
+			this.pnlDocuments.Controls.Add(this.clsDocuments);
+			this.pnlDocuments.Controls.Add(this.pnlNewDocument);
+			this.pnlDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlDocuments.Location = new System.Drawing.Point(129, 426);
+			this.pnlDocuments.Margin = new System.Windows.Forms.Padding(0);
+			this.pnlDocuments.Name = "pnlDocuments";
+			this.pnlDocuments.Size = new System.Drawing.Size(351, 134);
+			this.pnlDocuments.TabIndex = 21;
+			// 
+			// clsDocuments
+			// 
+			this.clsDocuments.AutoScroll = true;
+			this.clsDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.clsDocuments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+			this.clsDocuments.Location = new System.Drawing.Point(0, 40);
+			this.clsDocuments.Margin = new System.Windows.Forms.Padding(0);
+			this.clsDocuments.Name = "clsDocuments";
+			this.clsDocuments.Size = new System.Drawing.Size(351, 94);
+			this.clsDocuments.Spacing = 5;
+			this.clsDocuments.TabIndex = 0;
+			this.clsDocuments.WrapContents = false;
+			// 
+			// pnlNewDocument
+			// 
+			this.pnlNewDocument.Controls.Add(this.btnNewDocument);
+			this.pnlNewDocument.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlNewDocument.Location = new System.Drawing.Point(0, 0);
+			this.pnlNewDocument.Name = "pnlNewDocument";
+			this.pnlNewDocument.Size = new System.Drawing.Size(351, 40);
+			this.pnlNewDocument.TabIndex = 1;
+			// 
+			// btnNewDocument
+			// 
+			this.btnNewDocument.AutoSize = true;
+			this.btnNewDocument.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnNewDocument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewDocument.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.btnNewDocument.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnNewDocument.FlatAppearance.BorderSize = 0;
+			this.btnNewDocument.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewDocument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNewDocument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewDocument.Location = new System.Drawing.Point(0, 0);
+			this.btnNewDocument.Name = "btnNewDocument";
+			this.btnNewDocument.Size = new System.Drawing.Size(159, 30);
+			this.btnNewDocument.TabIndex = 1;
+			this.btnNewDocument.Text = "Tilføj nyt dokument";
+			this.btnNewDocument.UseVisualStyleBackColor = false;
+			this.btnNewDocument.Click += new System.EventHandler(this.btnNewDocument_Click);
+			// 
 			// NewCaseStepDetails
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -416,14 +492,17 @@ namespace LivingSmartForms.Views
 			this.Margin = new System.Windows.Forms.Padding(0);
 			this.MinimumSize = new System.Drawing.Size(480, 525);
 			this.Name = "NewCaseStepDetails";
-			this.Size = new System.Drawing.Size(480, 525);
+			this.Size = new System.Drawing.Size(480, 605);
 			this.tlpPropertyDetails.ResumeLayout(false);
 			this.tlpPropertyDetails.PerformLayout();
 			this.pnlDetailsPictures.ResumeLayout(false);
-			this.panel1.ResumeLayout(false);
-			this.panel1.PerformLayout();
+			this.pnlNewPicture.ResumeLayout(false);
+			this.pnlNewPicture.PerformLayout();
 			this.pnlSystemRating.ResumeLayout(false);
 			this.pnlSystemRating.PerformLayout();
+			this.pnlDocuments.ResumeLayout(false);
+			this.pnlNewDocument.ResumeLayout(false);
+			this.pnlNewDocument.PerformLayout();
 			this.ResumeLayout(false);
 
         }
@@ -442,13 +521,18 @@ namespace LivingSmartForms.Views
         private SmartControls.SmartTextBox stbDetailsPrice;
         private SmartControls.SmartTextBox stbDetailsRating;
 		private System.Windows.Forms.Panel pnlDetailsPictures;
-		private ControlList clsImages;
+		private ControlList clsPictures;
 		private SmartButton btnAddImage;
-		private System.Windows.Forms.Panel panel1;
+		private System.Windows.Forms.Panel pnlNewPicture;
 		private System.Windows.Forms.Label lblSystemRating;
 		private System.Windows.Forms.Panel pnlSystemRating;
 		private SmartButton btnGetNewRating;
 		private SmartTextBox stbSystemRating;
+		private System.Windows.Forms.Label lblDocuments;
+		private System.Windows.Forms.Panel pnlDocuments;
+		private ControlList clsDocuments;
+		private System.Windows.Forms.Panel pnlNewDocument;
+		private SmartButton btnNewDocument;
 
     }
 }

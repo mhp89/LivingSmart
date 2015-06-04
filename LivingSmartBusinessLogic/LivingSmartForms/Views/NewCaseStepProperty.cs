@@ -85,6 +85,7 @@ namespace LivingSmartForms.Views
         private bool VerifyFields()
         {
             bool fielddataOk = true;
+	        fielddataOk &= cboPropertyType.SelectedItem != null;
             fielddataOk &= stbPropertyArea.Validate();
             fielddataOk &= stbPropertyBasement.Validate();
             fielddataOk &= stbPropertyBuildYear.Validate();
