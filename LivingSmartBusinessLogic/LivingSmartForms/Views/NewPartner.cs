@@ -25,7 +25,9 @@ namespace LivingSmartForms.Views
 			bool fielddataOk = ValidateFields();
 			if (fielddataOk)
 			{
-				PartnerController.Instance.MakeNewPartner(stbName.Text, stbPhone.Text, stbEmail.Text, stbCountry.Text, stbCity.Text, stbRegion.Text, stbRegionShort.Text, ((TimeZoneInfo)cboTimezone.SelectedItem).StandardName);
+				PartnerController.Instance.MakeNewPartner(stbName.Text, stbPhone.Text, 
+                    stbEmail.Text, stbCountry.Text, stbCity.Text, stbRegion.Text, 
+                    stbRegionShort.Text, ((TimeZoneInfo)cboTimezone.SelectedItem).Id);
 				PartnerController.Instance.SaveActivePartner();
 			}
 			return fielddataOk;
