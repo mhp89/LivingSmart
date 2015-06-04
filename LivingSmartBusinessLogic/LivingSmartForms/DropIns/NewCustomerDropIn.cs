@@ -30,14 +30,16 @@ namespace LivingSmartForms.DropIns
 			newCustomerForm.Location = new Point(10, 10);
 			pnlContentHolder.Controls.Add(newCustomerForm);
 		}
-		public override string GetDropInId()
+		
+        public override string GetDropInId()
 		{
 			return "NewCustomer";
 		}
-		private void FinishCreating(Customer customer)
+
+        private void FinishCreating(Customer customer)
 		{
 			CustomerController.Instance.CancelActiveCustomer();
-			if(callback != null)
+			if(customer != null && callback != null)
 				callback(customer);
 			Close();
 		}

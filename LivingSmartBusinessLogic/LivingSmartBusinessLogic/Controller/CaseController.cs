@@ -816,5 +816,9 @@ namespace LivingSmartBusinessLogic.Controller
         
         #endregion
 
+        public void SetPictureDescription(Picture picture, string text)
+        {
+            throw new NotImplementedException();
+        }
 	}
 }

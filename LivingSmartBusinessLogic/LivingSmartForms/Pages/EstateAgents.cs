@@ -30,7 +30,7 @@ namespace LivingSmartForms.Pages
 			var estateAgents = EstateAgentController.Instance.GetEstateAgents();
 			foreach (var estateAgent in estateAgents)
 			{
-				var control = new EstateAgentLine(baseForm, estateAgent) {Margin = Padding.Empty};
+				var control = new EstateAgentLine(baseForm, estateAgent) { Margin = Padding.Empty };
 				clsEstateAgents.AddControl(control, true);
 			}
 			sblActiveCases.Text = estateAgents.Count.ToString();
@@ -55,7 +55,7 @@ namespace LivingSmartForms.Pages
 
 		private void btnNewEstateAgents_Click(object sender, EventArgs e)
 		{
-			baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm, NewEstateAgentAdded));
+			baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm, null, NewEstateAgentAdded));
 		}
 	}
 }

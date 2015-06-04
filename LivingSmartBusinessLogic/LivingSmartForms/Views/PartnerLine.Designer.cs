@@ -77,7 +77,7 @@ namespace LivingSmartForms.Views
             this.slbParterName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.slbParterName.Location = new System.Drawing.Point(0, 0);
             this.slbParterName.Name = "slbParterName";
-            this.slbParterName.Size = new System.Drawing.Size(236, 24);
+            this.slbParterName.Size = new System.Drawing.Size(243, 24);
             this.slbParterName.TabIndex = 1;
             this.slbParterName.Text = "Partner company name";
             this.slbParterName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -91,7 +91,7 @@ namespace LivingSmartForms.Views
             this.slbPartnerAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.slbPartnerAddress.Location = new System.Drawing.Point(0, 24);
             this.slbPartnerAddress.Name = "slbPartnerAddress";
-            this.slbPartnerAddress.Size = new System.Drawing.Size(236, 25);
+            this.slbPartnerAddress.Size = new System.Drawing.Size(243, 25);
             this.slbPartnerAddress.TabIndex = 2;
             this.slbPartnerAddress.Text = "Partner company address";
             this.slbPartnerAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -103,9 +103,9 @@ namespace LivingSmartForms.Views
             this.slbPartnerPhone.AutoSize = true;
             this.slbPartnerPhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slbPartnerPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbPartnerPhone.Location = new System.Drawing.Point(236, 0);
+            this.slbPartnerPhone.Location = new System.Drawing.Point(243, 0);
             this.slbPartnerPhone.Name = "slbPartnerPhone";
-            this.slbPartnerPhone.Size = new System.Drawing.Size(235, 24);
+            this.slbPartnerPhone.Size = new System.Drawing.Size(242, 24);
             this.slbPartnerPhone.TabIndex = 3;
             this.slbPartnerPhone.Text = "+1 xxx-xxx-xxx";
             this.slbPartnerPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -117,9 +117,9 @@ namespace LivingSmartForms.Views
             this.slbPartnerEmail.AutoSize = true;
             this.slbPartnerEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slbPartnerEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbPartnerEmail.Location = new System.Drawing.Point(236, 24);
+            this.slbPartnerEmail.Location = new System.Drawing.Point(243, 24);
             this.slbPartnerEmail.Name = "slbPartnerEmail";
-            this.slbPartnerEmail.Size = new System.Drawing.Size(235, 25);
+            this.slbPartnerEmail.Size = new System.Drawing.Size(242, 25);
             this.slbPartnerEmail.TabIndex = 4;
             this.slbPartnerEmail.Text = "contact@xxxxxxx.com";
             this.slbPartnerEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -139,14 +139,15 @@ namespace LivingSmartForms.Views
             this.btnEditPartner.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btnEditPartner.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditPartner.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnEditPartner.Location = new System.Drawing.Point(481, 10);
+            this.btnEditPartner.Location = new System.Drawing.Point(495, 10);
             this.btnEditPartner.Margin = new System.Windows.Forms.Padding(10);
             this.btnEditPartner.Name = "btnEditPartner";
             this.tlpPartner.SetRowSpan(this.btnEditPartner, 2);
-            this.btnEditPartner.Size = new System.Drawing.Size(109, 29);
+            this.btnEditPartner.Size = new System.Drawing.Size(95, 29);
             this.btnEditPartner.TabIndex = 5;
             this.btnEditPartner.Text = "Redigér";
             this.btnEditPartner.UseVisualStyleBackColor = false;
+            this.btnEditPartner.Click += new System.EventHandler(this.btnEditPartner_Click);
             // 
             // PartnerLine
             // 

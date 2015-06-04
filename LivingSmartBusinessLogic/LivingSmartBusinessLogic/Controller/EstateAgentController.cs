@@ -55,9 +55,9 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog.AddToCatalog(estateAgent);
         }
 
-		public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate, string username, string password)
+		public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime? terminationDate, string username, string password)
         {
-            SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate, username, password));
+            SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate, terminationDate, username, password));
             return ActiveEstateAgent;
         }
 
@@ -101,10 +101,10 @@ namespace LivingSmartBusinessLogic.Controller
 				ActiveEstateAgent.StartingDate = startingDate;
         }
 
-        public void SetTerminationDate(DateTime startingDate)
+        public void SetTerminationDate(DateTime? terminationDate)
         {
-			if (ActiveEstateAgent.TerminationDate != startingDate)
-				ActiveEstateAgent.TerminationDate = startingDate;
+			if (ActiveEstateAgent.TerminationDate != terminationDate)
+				ActiveEstateAgent.TerminationDate = terminationDate;
         }
         #endregion
         

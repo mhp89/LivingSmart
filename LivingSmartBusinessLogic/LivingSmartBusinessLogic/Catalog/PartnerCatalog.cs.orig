@@ -42,8 +42,13 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddToCatalog(Partner partner)
         {
+<<<<<<< HEAD
 			if(!partners.ContainsKey(partner.Id))
 				partners.Add(partner.Id, partner);
+=======
+            if (!partners.ContainsKey(partner.Id))
+                partners.Add(partner.Id, partner);
+>>>>>>> origin/RedigerStuff
         }
 
         internal void RemoveFromCatalog(Partner partner)
