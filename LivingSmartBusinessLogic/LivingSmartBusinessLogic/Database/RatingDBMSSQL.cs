@@ -35,7 +35,7 @@ namespace LivingSmartBusinessLogic.DB
                 {
                     int ratingId = (int)reader["RatingId"];
                     long systemValue = (long)reader["SystemValue"];
-                    long estateAgentValue = (long)reader["EstateAgentValue"];
+                    long? estateAgentValue = (long)reader["EstateAgentValue"];
                     DateTime date = (DateTime)reader["Date"];
                     int estateAgentId = (int)reader["EstateAgentId"];
 
