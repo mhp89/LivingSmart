@@ -78,13 +78,13 @@ namespace LivingSmartForms
             this.btnSeeEstateAgent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btnSeeEstateAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSeeEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btnSeeEstateAgent.Location = new System.Drawing.Point(943, 10);
+            this.btnSeeEstateAgent.Location = new System.Drawing.Point(958, 10);
             this.btnSeeEstateAgent.Margin = new System.Windows.Forms.Padding(10);
             this.btnSeeEstateAgent.Name = "btnSeeEstateAgent";
             this.tlpEmployee.SetRowSpan(this.btnSeeEstateAgent, 2);
-            this.btnSeeEstateAgent.Size = new System.Drawing.Size(111, 29);
+            this.btnSeeEstateAgent.Size = new System.Drawing.Size(96, 29);
             this.btnSeeEstateAgent.TabIndex = 10;
-            this.btnSeeEstateAgent.Text = "Se mægler";
+            this.btnSeeEstateAgent.Text = "Redigér";
             this.btnSeeEstateAgent.UseVisualStyleBackColor = false;
             this.btnSeeEstateAgent.Click += new System.EventHandler(this.btnSeeEstateAgent_Click);
             // 
@@ -93,9 +93,9 @@ namespace LivingSmartForms
             this.slbName.AutoSize = true;
             this.slbName.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slbName.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbName.Location = new System.Drawing.Point(311, 0);
+            this.slbName.Location = new System.Drawing.Point(316, 0);
             this.slbName.Name = "slbName";
-            this.slbName.Size = new System.Drawing.Size(311, 24);
+            this.slbName.Size = new System.Drawing.Size(316, 24);
             this.slbName.TabIndex = 2;
             this.slbName.Text = "Medarbejders navn";
             this.slbName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -107,9 +107,9 @@ namespace LivingSmartForms
             this.slbHireDate.AutoSize = true;
             this.slbHireDate.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slbHireDate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbHireDate.Location = new System.Drawing.Point(311, 24);
+            this.slbHireDate.Location = new System.Drawing.Point(316, 24);
             this.slbHireDate.Name = "slbHireDate";
-            this.slbHireDate.Size = new System.Drawing.Size(311, 25);
+            this.slbHireDate.Size = new System.Drawing.Size(316, 25);
             this.slbHireDate.TabIndex = 5;
             this.slbHireDate.Text = "xx yyy zzzz";
             this.slbHireDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -121,9 +121,9 @@ namespace LivingSmartForms
             this.slbPhone.AutoSize = true;
             this.slbPhone.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slbPhone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbPhone.Location = new System.Drawing.Point(622, 0);
+            this.slbPhone.Location = new System.Drawing.Point(632, 0);
             this.slbPhone.Name = "slbPhone";
-            this.slbPhone.Size = new System.Drawing.Size(311, 24);
+            this.slbPhone.Size = new System.Drawing.Size(316, 24);
             this.slbPhone.TabIndex = 6;
             this.slbPhone.Text = "xxxx xxxx";
             this.slbPhone.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -135,9 +135,9 @@ namespace LivingSmartForms
             this.slbEmail.AutoSize = true;
             this.slbEmail.Dock = System.Windows.Forms.DockStyle.Fill;
             this.slbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.slbEmail.Location = new System.Drawing.Point(622, 24);
+            this.slbEmail.Location = new System.Drawing.Point(632, 24);
             this.slbEmail.Name = "slbEmail";
-            this.slbEmail.Size = new System.Drawing.Size(311, 25);
+            this.slbEmail.Size = new System.Drawing.Size(316, 25);
             this.slbEmail.TabIndex = 7;
             this.slbEmail.Text = "employee@smartliving.dk";
             this.slbEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -152,7 +152,7 @@ namespace LivingSmartForms
             this.slbEmployeeNo.Location = new System.Drawing.Point(0, 0);
             this.slbEmployeeNo.Name = "slbEmployeeNo";
             this.tlpEmployee.SetRowSpan(this.slbEmployeeNo, 2);
-            this.slbEmployeeNo.Size = new System.Drawing.Size(311, 49);
+            this.slbEmployeeNo.Size = new System.Drawing.Size(316, 49);
             this.slbEmployeeNo.TabIndex = 8;
             this.slbEmployeeNo.Text = "xxx";
             this.slbEmployeeNo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

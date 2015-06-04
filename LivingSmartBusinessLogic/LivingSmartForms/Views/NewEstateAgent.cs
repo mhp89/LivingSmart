@@ -47,7 +47,7 @@ namespace LivingSmartForms.Views
                 if (currentEstateAgent == null)
                 {
                     CreatedEstateAgent = EstateAgentController.Instance.MakeNewEstateAgent(stbName.Text, stbPhone.Text,
-                        stbEmail.Text, (DateTime)dafStartDate.GetDateTime(), stbUsername.Text, stbPassword.Text);
+                        stbEmail.Text, (DateTime)dafStartDate.GetDateTime(), dafTerminationDate.GetDateTime(), stbUsername.Text, stbPassword.Text);
                     EstateAgentController.Instance.SaveActiveEstateAgent();
 
                     if (CreatedEstateAgent.Id == -1)
@@ -63,7 +63,7 @@ namespace LivingSmartForms.Views
                     EstateAgentController.Instance.SetTelephone(stbPhone.Text);
                     EstateAgentController.Instance.SetEmail(stbEmail.Text);
                     EstateAgentController.Instance.SetStartingDate((DateTime)dafStartDate.GetDateTime());
-                    EstateAgentController.Instance.SetTerminationDate((DateTime)dafTerminationDate.GetDateTime());
+                    EstateAgentController.Instance.SetTerminationDate(dafTerminationDate.GetDateTime());
                     EstateAgentController.Instance.SaveActiveEstateAgent();
                 }
             }

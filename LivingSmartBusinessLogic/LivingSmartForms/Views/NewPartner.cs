@@ -24,7 +24,7 @@ namespace LivingSmartForms.Views
             {
                 cboTimezone.Items.Add(timezone);
 
-                if (partner.Timezone == timezone.Id)
+                if (currentPartner != null && partner.Timezone == timezone.Id)
                     timeIndex = indexCount;
 
                 indexCount++;

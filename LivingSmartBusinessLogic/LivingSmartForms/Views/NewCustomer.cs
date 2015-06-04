@@ -16,7 +16,7 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCustomer : UserControl
     {
-		public Customer CreatedUser { get; private set; }
+        public Customer CreatedUser { get; private set; }
         private Customer currentCustomer;
 
         public NewCustomer(BaseForm baseForm, Customer customer)
@@ -43,19 +43,19 @@ namespace LivingSmartForms.Views
             {
                 if (currentCustomer == null)
                 {
-					CreatedUser = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
-		                (DateTime) dafCustomerBirthday.GetDateTime(),
-		                stbCustomerAddress.Text,
-		                Convert.ToInt32(stbCustomerZipCode.Text),
-		                stbCustomerEmail.Text,
-		                stbCustomerPhone.Text);
-	                CustomerController.Instance.SaveActiveCustomer();
+                    CreatedUser = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
+                        (DateTime)dafCustomerBirthday.GetDateTime(),
+                        stbCustomerAddress.Text,
+                        Convert.ToInt32(stbCustomerZipCode.Text),
+                        stbCustomerEmail.Text,
+                        stbCustomerPhone.Text);
+                    CustomerController.Instance.SaveActiveCustomer();
 
-	                if (CreatedUser.Id == -1)
-	                {
-		                MessageBox.Show("Der opstod en fejl");
-		                fielddataOk = false;
-	                }
+                    if (CreatedUser.Id == -1)
+                    {
+                        MessageBox.Show("Der opstod en fejl");
+                        fielddataOk = false;
+                    }
                 }
                 else
                 {
@@ -82,13 +82,13 @@ namespace LivingSmartForms.Views
             fielddataOk &= stbCustomerPhone.Validate();
             fielddataOk &= stbCustomerEmail.Validate();
             fielddataOk &= dafCustomerBirthday.Validate();
-
+            fielddataOk &= GeneralValidation.ZipCodeValidation(stbCustomerZipCode, lblCustomerCityCountry);
             return fielddataOk;
         }
 
         private void stbCustomerZipCode_TextChanged(object sender, EventArgs e)
         {
-			GeneralValidation.ZipCodeValidation(stbCustomerZipCode, lblCustomerCityCountry);
+            GeneralValidation.ZipCodeValidation(stbCustomerZipCode, lblCustomerCityCountry);
         }
     }
 }

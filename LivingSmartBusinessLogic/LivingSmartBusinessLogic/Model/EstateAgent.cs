@@ -37,15 +37,15 @@ namespace LivingSmartBusinessLogic.Model
         #endregion
 
         internal EstateAgent(string name, string telephone, string email,
-			DateTime startingDate, string username, string password)
+			DateTime startingDate, DateTime? terminationDate, string username, string password)
         {
 	        Id = -1;
             Name = name;
             Telephone = telephone;
             Email = email;
             StartingDate = startingDate;
-			TerminationDate = null;
-			Username = username;
+            TerminationDate = terminationDate;
+            Username = username;
 			Password = password;
         }
         internal EstateAgent(int id, string name, string telephone, string email, 
