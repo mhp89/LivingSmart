@@ -28,7 +28,8 @@ namespace LivingSmartForms.DropIns
 			Seller,
 			Lot,
 			Property,
-			Details
+			Details,
+			EndCase
 		}
 
 		private Case cCase;
@@ -45,18 +46,22 @@ namespace LivingSmartForms.DropIns
 			{
 				lblNewCase.Text = "Redigér sag";
 				CaseController.Instance.SetActiveCase(this.cCase);
+				steps = new CaseStep[Enum.GetNames(typeof(StepsIndex)).Length];
 			}
 			else
 			{
 				this.cCase = CaseController.Instance.MakeNewCase();
+				steps = new CaseStep[Enum.GetNames(typeof(StepsIndex)).Length-1];
 			}
+			
+			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(this, cCase);
+			steps[(int)StepsIndex.Lot] = new NewCaseStepLot(this, cCase);
+			steps[(int)StepsIndex.Property] = new NewCaseStepProperty(this, cCase);
+			steps[(int)StepsIndex.Details] = new NewCaseStepDetails(this, cCase);
 
-			steps = new CaseStep[Enum.GetNames(typeof(StepsIndex)).Length];
-
-			steps[(int)StepsIndex.Seller] = new NewCaseStepSeller(baseForm, cCase);
-			steps[(int)StepsIndex.Lot] = new NewCaseStepLot(baseForm, cCase);
-			steps[(int)StepsIndex.Property] = new NewCaseStepProperty(baseForm, cCase);
-			steps[(int)StepsIndex.Details] = new NewCaseStepDetails(baseForm, cCase);
+			if (cCase != null)
+				steps[(int)StepsIndex.EndCase] = new NewCaseStepEndCase(this, cCase);
+			
 
 			InitializeSteps();
 
@@ -93,7 +98,7 @@ namespace LivingSmartForms.DropIns
 			UpdateButtons();
 		}
 
-		private void NextStep()
+		internal void NextStep()
 		{
 			if (activeStep.Save())
 			{

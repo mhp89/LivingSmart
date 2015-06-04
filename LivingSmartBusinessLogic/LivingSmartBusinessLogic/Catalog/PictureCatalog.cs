@@ -51,6 +51,7 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void RemoveFromCatalog(int caseId, Picture picture)
         {
+			db.DeletePicture(picture);
             pictureDictionary[caseId].Remove(picture);
         }
 

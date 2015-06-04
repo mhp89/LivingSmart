@@ -11,14 +11,17 @@ using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
+using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepLot : CaseStep
     {
+	    private NewCaseDropIn baseView;
 
-		public NewCaseStepLot(BaseForm baseForm, Case cCase) : base(cCase)
-        {
+		public NewCaseStepLot(NewCaseDropIn baseView, Case cCase) : base(cCase)
+		{
+			this.baseView = baseView;
             InitializeComponent();
 
 			if (cCase != null)

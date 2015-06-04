@@ -17,14 +17,15 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepSeller : CaseStep
     {
-	    private BaseForm baseForm;
+		private NewCaseDropIn baseView;
 
 	    private bool newCustomer = true;
 	    private Customer createdCustomer;
 
-        public NewCaseStepSeller(BaseForm baseForm, Case cCase) : base(cCase)
+		public NewCaseStepSeller(NewCaseDropIn baseView, Case cCase)
+			: base(cCase)
         {
-	        this.baseForm = baseForm;
+			this.baseView = baseView;
 			
             InitializeComponent();
 
@@ -33,7 +34,7 @@ namespace LivingSmartForms.Views
 				SetSellerFields(cCase.Seller);
 	        }
 
-			UpdateEstateAgent(baseForm.DefaultEstateAgent);
+			UpdateEstateAgent(baseView.baseForm.DefaultEstateAgent);
         }
 
 	    public override bool Save()
@@ -90,7 +91,7 @@ namespace LivingSmartForms.Views
 		private void btnExistingCustomer_Click(object sender, EventArgs e)
 		{
 			if (newCustomer)
-				CustomerSearchDropIn.Show(baseForm, CustomerSearchFinish);
+				CustomerSearchDropIn.Show(baseView.baseForm, CustomerSearchFinish);
 			else
 				CustomerSearchFinish(null);
 		}
@@ -153,7 +154,7 @@ namespace LivingSmartForms.Views
 
 		private void stbFindEstateAgent_Click(object sender, EventArgs e)
 		{
-			EstateAgentSearchDropIn.Show(baseForm, UpdateEstateAgent);
+			EstateAgentSearchDropIn.Show(baseView.baseForm, UpdateEstateAgent);
 		}
 		
 		private void stbSellerZipCode_TextChanged(object sender, EventArgs e)

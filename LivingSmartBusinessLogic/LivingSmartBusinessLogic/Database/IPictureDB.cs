@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -37,5 +37,11 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="caseId">CaseId connected to the Picture</param>
         /// <returns>Returns the Id of the Picture created.</returns>
         int CreatePicture(Picture picture, int caseId);
+
+		/// <summary>
+		/// Removes a picture in the database.
+		/// </summary>
+		/// <param name="picture">Picture to be removed</param>
+		void DeletePicture(Picture picture);
     }
 }

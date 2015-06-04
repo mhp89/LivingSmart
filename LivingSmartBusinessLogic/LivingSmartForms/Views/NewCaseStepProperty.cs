@@ -2,6 +2,7 @@ using System;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
+using LivingSmartForms.DropIns;
 using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartForms.Views
@@ -12,7 +13,7 @@ namespace LivingSmartForms.Views
 		private DistanceTo disCenter;
 		private DistanceTo disSchool;
 
-		public NewCaseStepProperty(BaseForm baseForm, Case cCase) : base(cCase)
+		public NewCaseStepProperty(NewCaseDropIn baseView, Case cCase) : base(cCase)
         {
             InitializeComponent();
 

@@ -21,6 +21,11 @@ namespace LivingSmartForms.Classes
 			InitializeComponent();
 		}
 
+		public CaseStep()
+		{
+			InitializeComponent();
+		}
+
 		/// <summary>
 		/// Saving step to case.
 		/// </summary>

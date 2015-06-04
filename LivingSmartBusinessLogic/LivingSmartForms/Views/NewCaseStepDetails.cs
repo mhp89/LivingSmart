@@ -11,13 +11,15 @@ using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
+using LivingSmartForms.DropIns;
 using LivingSmartForms.UserControls;
 
 namespace LivingSmartForms.Views
 {
 	public partial class NewCaseStepDetails : CaseStep
     {
-		public NewCaseStepDetails(BaseForm baseForm, Case cCase) : base(cCase)
+		public NewCaseStepDetails(NewCaseDropIn baseView, Case cCase)
+			: base(cCase)
         {
             InitializeComponent();
 

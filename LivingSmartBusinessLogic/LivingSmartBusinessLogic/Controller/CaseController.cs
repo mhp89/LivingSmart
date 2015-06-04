@@ -599,7 +599,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgsdato
         /// </summary>
         /// <param name="dateOfSale"></param>
-        public void SetDateOfSale(DateTime dateOfSale)
+        public void SetDateOfSale(DateTime? dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
                 activeCase.DateOfSale = dateOfSale;
@@ -608,7 +608,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter overdragelsesdato
         /// </summary>
         /// <param name="transferDate"></param>
-        public void SetTransferDate(DateTime transferDate)
+        public void SetTransferDate(DateTime? transferDate)
         {
             if (activeCase.TransferDate != transferDate)
                 activeCase.TransferDate = transferDate;
@@ -626,7 +626,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgspris
         /// </summary>
         /// <param name="sellingPrice"></param>
-        public void SetSellingPrice(long sellingPrice)
+        public void SetSellingPrice(long? sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
                 activeCase.SellingPrice = sellingPrice;
