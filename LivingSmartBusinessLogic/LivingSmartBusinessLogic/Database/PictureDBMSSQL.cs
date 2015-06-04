@@ -75,8 +75,8 @@ namespace LivingSmartBusinessLogic.DB
                     int pictureId = (int)reader["PictureId"];
                     int caseId = (int)reader["CaseId"];
                     string location = (string)reader["Location"];
-                    string description = (string)reader["Description"];
-
+                    string description = reader["Description"] is DBNull ? null : (string)reader["Description"];
+                    
                     Picture picture = new Picture(pictureId, location, description);
                     if (!pictureDictionary.ContainsKey(caseId))
                     {

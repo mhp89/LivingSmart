@@ -106,7 +106,7 @@ namespace LivingSmartBusinessLogic.Model
         internal Case()
 		{
 			Id = -1;
-            CreationDate = new DateTime().Date;
+            CreationDate = DateTime.Now;
 	        Status = CaseStatus.Open;
 		}
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
