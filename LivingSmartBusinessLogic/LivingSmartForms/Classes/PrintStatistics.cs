@@ -72,10 +72,10 @@ namespace LivingSmartForms.Classes
 
             page += docGen.FixedMultiColumnstext(new[]
 			{
-				new docGen.Column("Årstal", 15),
-				new docGen.Column("Måned", 20),
+				new docGen.Column("Årstal", 14),
+				new docGen.Column("Måned", 18),
 				new docGen.Column("Mægler", 25),
-				new docGen.Column("Salgspris total", 22),
+				new docGen.Column("Salgspris total", 25),
 				new docGen.Column("Antal ejendomme", 18)
 			});
             page += docGen.FilledLine();
@@ -151,10 +151,10 @@ namespace LivingSmartForms.Classes
 
             line += docGen.FixedMultiColumnstext(new[]
 			{
-				new docGen.Column(statisticsLine.Year.ToString(), 15),
-				new docGen.Column(statisticsLine.Month.ToString(), 20),
+				new docGen.Column(statisticsLine.Year.ToString(), 14),
+				new docGen.Column(statisticsLine.Month.ToString(), 18),
 				new docGen.Column(statisticsLine.EstateAgentName, 25),
-				new docGen.Column(statisticsLine.SellingpriceTotal.ToString(), 22),
+				new docGen.Column(statisticsLine.SellingpriceTotal.ToString(), 25),
 				new docGen.Column(statisticsLine.PropertiesTotal.ToString(), 18)
 			});
             return line;
