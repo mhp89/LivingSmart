@@ -26,14 +26,14 @@ namespace LivingSmartBusinessLogic.DB
 
             SqlCommand cmd = new SqlCommand
             {
-                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year," +
-                "DATEPART(MONTH, DateOfSale) AS Month," +
-                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
+                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year, " +
+                "DATEPART(MONTH, DateOfSale) AS Month, " +
+                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count " +
                 "FROM [Case] inner join EstateAgent on " +
-                "[Case].EstateAgentId = EstateAgent.EstateAgentId" +
+                "[Case].EstateAgentId = EstateAgent.EstateAgentId " +
                 "WHERE Status = 'Sold' and DATEPART(YEAR, DateOfSale) = " + chosenYear +
                 "and [Case].EstateAgentId = " + estateAgentId +
-                "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), EstateAgent.Name" +
+                "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), EstateAgent.Name " +
                 "Order by MONTH desc"
             };
 
@@ -45,7 +45,7 @@ namespace LivingSmartBusinessLogic.DB
                 {
                     int year = (int)reader["Year"];
                     string month = MonthToString((int)reader["Month"]);
-                    int total = (int)reader["Total"];
+                    long total = (long)reader["Total"];
                     int count = (int)reader["Count"];
 
                     Statistics stats = new Statistics(year, month, total, count);
@@ -77,14 +77,14 @@ namespace LivingSmartBusinessLogic.DB
 
             SqlCommand cmd = new SqlCommand
             {
-                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year," +
-                "DATEPART(MONTH, DateOfSale) AS Month, EstateAgent.Name," +
-                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count" +
+                CommandText = "SELECT DATEPART(YEAR, DateOfSale) AS Year, " +
+                "DATEPART(MONTH, DateOfSale) AS Month, EstateAgent.Name, " +
+                "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count " +
                 "FROM [Case] inner join EstateAgent on " +
-                "[Case].EstateAgentId = EstateAgent.EstateAgentId" +
-                "WHERE Status = 'Sold'" +
+                "[Case].EstateAgentId = EstateAgent.EstateAgentId " +
+                "WHERE Status = 'Sold' " +
                 "Group by DATEPART(MONTH, DateOfSale), DATEPART(YEAR, DateOfSale), " +
-                "EstateAgent.Name" +
+                "EstateAgent.Name " +
                 "Order by YEAR desc, Month desc"
             };
 
@@ -97,7 +97,7 @@ namespace LivingSmartBusinessLogic.DB
                     int year = (int)reader["Year"];
                     string month = MonthToString((int)reader["Month"]);
                     string name = (string)reader["Name"];
-                    int total = (int)reader["Total"];
+                    long total = (long)reader["Total"];
                     int count = (int)reader["Count"];
 
                     Statistics stats = new Statistics(year, month, name, total, count);
@@ -138,7 +138,7 @@ namespace LivingSmartBusinessLogic.DB
                 while (reader.Read())
                 {
                     stats.Year = (int)reader["Year"];
-                    stats.SellingpriceTotal = (int)reader["Total"];
+                    stats.SellingpriceTotal = (long)reader["Total"];
                     stats.PropertiesTotal = (int)reader["Count"];
                 }
             }
