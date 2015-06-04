@@ -80,21 +80,27 @@ namespace LivingSmartBusinessLogic.Controller
 	        {
 		        caseCatalog.AddToCatalog(activeCase);
 
-		        foreach (var document in tempDocuments)
+		        var documents = GetDocuments().ToList();
+				documents.AddRange(tempDocuments);
+				foreach (var document in documents)
 		        {
 					documentCatalog.Save(document, activeCase.Id);
 					if(document.Id != -1)
 						AddDocumentToCase(document);
 		        }
 
-		        foreach (var distanceTo in tempDistanceTos)
+				var distanceTos = GetDistanceTos().ToList();
+				distanceTos.AddRange(tempDistanceTos);
+				foreach (var distanceTo in distanceTos)
 		        {
 					distanceToCatalog.Save(distanceTo, activeCase.Id);
 					if (distanceTo.Id != -1)
 						AddDistanceToCase(distanceTo);
 		        }
 
-		        foreach (var picture in tempPictures)
+				var pictures = GetPictures().ToList();
+				pictures.AddRange(tempPictures);
+				foreach (var picture in pictures)
 		        {
 					pictureCatalog.Save(picture, activeCase.Id);
 					if (picture.Id != -1)
@@ -498,6 +504,15 @@ namespace LivingSmartBusinessLogic.Controller
 			tempDistanceTos.Add(distanceObj);
 			return distanceObj;
         }
+
+		/// <summary>
+		/// Sætter afstanden på DistanceTo
+		/// </summary>
+		public void SetDistanceTo(DistanceTo distanceTo, int distance)
+		{
+			distanceTo.Distance = distance;
+		}
+
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
@@ -815,10 +830,5 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #endregion
-
-        public void SetPictureDescription(Picture picture, string text)
-        {
-            throw new NotImplementedException();
-        }
 	}
 }

@@ -84,8 +84,8 @@ namespace LivingSmartForms.Views
 			            shoppingDistance
 			        );
 	            }
-	            /*else
-		            disShopping.Distance = shoppingDistance;*/
+	            else
+					CaseController.Instance.SetDistance(disShopping, shoppingDistance);
 
 				if (disCenter == null)
 				{
@@ -94,8 +94,8 @@ namespace LivingSmartForms.Views
 						centerDistance
 					);
 				}
-				/*else
-					disShopping.Distance = centerDistance;*/
+				else
+					CaseController.Instance.SetDistance(disCenter, centerDistance);
 
 				if (disSchool == null)
 				{
@@ -104,8 +104,8 @@ namespace LivingSmartForms.Views
 						schoolDistance
 					);
 				}
-				/*else
-					disShopping.Distance = schoolDistance;*/
+				else
+					CaseController.Instance.SetDistance(disSchool, schoolDistance);
             }
             return fielddataOk;
         }
