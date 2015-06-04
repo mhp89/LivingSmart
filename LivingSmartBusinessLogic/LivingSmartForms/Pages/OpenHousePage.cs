@@ -63,8 +63,7 @@ namespace LivingSmartForms.Pages
         {
 			priceCasePair.Clear();
             foreach (Case cases in properties)
-                //priceCasePair.Add(new KeyValuePair<decimal, Case>(1200000, cases));
-                priceCasePair.Add(new KeyValuePair<decimal, Case>(Convert.ToDecimal(cases.NewestAskingPrice), cases));        
+                priceCasePair.Add(new KeyValuePair<decimal, Case>(cases.NewestAskingPrice, cases));        
 
             OpenHouse openHouse = new OpenHouse(agents, priceCasePair);
 
