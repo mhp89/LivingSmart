@@ -29,7 +29,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddToCatalog(City city)
         {
-            cities.Add(city.ZipCode, city);
+			if(!cities.ContainsKey(city.ZipCode))
+				cities.Add(city.ZipCode, city);
         }
         
         internal City GetCity(int zipCode)

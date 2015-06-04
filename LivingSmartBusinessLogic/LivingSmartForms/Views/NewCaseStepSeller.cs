@@ -22,11 +22,16 @@ namespace LivingSmartForms.Views
 	    private bool newCustomer = true;
 	    private Customer createdCustomer;
 
-        public NewCaseStepSeller(BaseForm baseForm)
+        public NewCaseStepSeller(BaseForm baseForm, Case cCase) : base(cCase)
         {
 	        this.baseForm = baseForm;
 			
             InitializeComponent();
+
+	        if (cCase != null)
+			{
+				SetSellerFields(cCase.Seller);
+	        }
 
 			UpdateEstateAgent(baseForm.DefaultEstateAgent);
         }
@@ -94,24 +99,30 @@ namespace LivingSmartForms.Views
 		{
 			CaseController.Instance.SetSeller(customer);
 
-		    if (customer != null)
-		    {
-			    stbSellerName.Text = customer.Name;
+		    SetSellerFields(customer);
+	    }
+
+	    private void SetSellerFields(Customer customer)
+	    {
+			if (customer != null)
+			{
+				lblSellerIdNo.Text = customer.Id.ToString();
+				stbSellerName.Text = customer.Name;
 				stbSellerAdress.Text = customer.Address;
 				stbSellerPhone.Text = customer.Telephone;
-			    stbSellerEmail.Text = customer.Email;
-			    stbSellerZipCode.Text = customer.City.ZipCode.ToString();
-			    dafBirthday.SetDate(customer.DateOfBirth);
-			    btnFindCustomer.Text = "Ryd kunde";
+				stbSellerEmail.Text = customer.Email;
+				stbSellerZipCode.Text = customer.City.ZipCode.ToString();
+				dafBirthday.SetDate(customer.DateOfBirth);
+				btnFindCustomer.Text = "Ryd kunde";
 
 				SetSellerFieldsEnabled(false);
 
-			    newCustomer = false;
-		    }
-		    else
+				newCustomer = false;
+			}
+			else
 			{
-				stbSellerName.Text = stbSellerAdress.Text = 
-				stbSellerPhone.Text = stbSellerEmail.Text = 
+				lblSellerIdNo.Text = stbSellerName.Text = stbSellerAdress.Text =
+				stbSellerPhone.Text = stbSellerEmail.Text =
 				stbSellerZipCode.Text = "";
 
 				btnFindCustomer.Text = "Find kunde";
@@ -120,7 +131,7 @@ namespace LivingSmartForms.Views
 				SetSellerFieldsEnabled(true);
 
 				newCustomer = true;
-		    }
+			}
 	    }
 
 	    private void SetSellerFieldsEnabled(bool newState)

@@ -55,7 +55,10 @@ namespace LivingSmartBusinessLogic.Catalog
         }
 
         internal ReadOnlyCollection<Document> GetDocuments(int caseId)
-        {
+		{
+			if (!documentDictionary.ContainsKey(caseId))
+				return new ReadOnlyCollection<Document>(new List<Document>());
+
             return documentDictionary[caseId].AsReadOnly();
         }
     }

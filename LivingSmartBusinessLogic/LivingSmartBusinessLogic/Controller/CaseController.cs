@@ -342,15 +342,14 @@ namespace LivingSmartBusinessLogic.Controller
         public Rating MakeNewRating(long systemValue, long? agentValue)
         {
 			tempRating = new Rating(systemValue, agentValue, activeCase.EstateAgent.Id);
-            /*ratingCatalog.Save(newRating, activeCase.Id);
-            if (newRating.Id != -1)
-                ratingCatalog.AddToCatalog(activeCase.Id,newRating);*/
 			return tempRating;
         }
 
 	    public long GetSystemRating()
 	    {
-		    return activeCase.CalculatePropertyRating();
+		    var list = GetDistanceTos().ToList();
+			list.AddRange(tempDistanceTos);
+			return activeCase.CalculatePropertyRating(list);
 	    }
         /// <summary>
         /// Tilføjer en vurdering til casen
@@ -470,7 +469,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="caseId"></param>
         /// <returns></returns>
-        public double GetPriceTrend(int caseId)
+        public decimal GetPriceTrend(int caseId)
         {
             ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(caseId);
             if (askingPrices.Count == 0)
@@ -480,7 +479,7 @@ namespace LivingSmartBusinessLogic.Controller
             long firstRating = askingPrices[0].Value;
             long lastRating = askingPrices[askingPrices.Count - 1].Value;
 
-            return (((lastRating / firstRating) - 1) * 100);
+            return ((((decimal)lastRating / firstRating) - 1) * 100);
         }
 
         #endregion

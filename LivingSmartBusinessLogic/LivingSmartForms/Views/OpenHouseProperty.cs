@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
@@ -38,7 +38,7 @@ namespace LivingSmartForms.Views
         private void UpdateFields()
         {
             lblAddress.Text = Property.Address;
-            lblZipCode.Text = Property.City.ZipCode + " " + Property.City.District;
+	        lblZipCode.Text = Property.City.DisplayName;
         }
     }
 }

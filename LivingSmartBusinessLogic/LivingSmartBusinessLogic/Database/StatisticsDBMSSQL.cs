@@ -132,7 +132,7 @@ namespace LivingSmartBusinessLogic.DB
 	                           "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE()) " +
             "Group by DATEPART(YEAR, DateOfSale)";
 		    
-	SqlDataReader reader = null;
+			SqlDataReader reader = null;
             try
             {
 				reader = DBConnectionMSSQL.Instance.ExecuteReader(sqlstring);

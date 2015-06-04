@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 using LivingSmartForms.Views;
@@ -43,14 +44,19 @@ namespace LivingSmartForms.Pages
 			UpdateList();
 		}
 
-		private void btnNewCase_Click(object sender, EventArgs e)
+		private void NewCaseAdded(Case cCase)
 		{
-			baseForm.ShowDropIn(new NewCaseDropIn(baseForm));
+			if (cCase != null)
+			{
+				var control = new CaseLineSimple(baseForm, cCase);
+				clsCases.AddControl(control);
+				sblActiveCases.Text = clsCases.Controls.Count.ToString();
+			}
 		}
 
-        private void btnArrangeOpenHouse_Click(object sender, EventArgs e)
-        {
-
-        }
+		private void btnNewCase_Click(object sender, EventArgs e)
+		{
+			baseForm.ShowDropIn(new NewCaseDropIn(baseForm, null, NewCaseAdded));
+		}
 	}
 }

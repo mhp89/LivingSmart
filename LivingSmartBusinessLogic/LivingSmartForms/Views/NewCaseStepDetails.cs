@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.UserControls;
 
@@ -16,16 +17,33 @@ namespace LivingSmartForms.Views
 {
 	public partial class NewCaseStepDetails : CaseStep
     {
-        public NewCaseStepDetails(BaseForm baseForm)
+		public NewCaseStepDetails(BaseForm baseForm, Case cCase) : base(cCase)
         {
             InitializeComponent();
+
+			if (cCase != null)
+			{
+				var lastRating = CaseController.Instance.GetLastRating();
+				stbSystemRating.Text = lastRating.SystemValue.ToString();
+				stbDetailsRating.Text = lastRating.EstateAgentValue.ToString();
+				stbDetailsPublicEvaluation.Text = cCase.PublicRating.ToString();
+				stbDetailsPrice.Text = cCase.NewestAskingPrice.ToString();
+
+				stbDetailsDescription.Text = cCase.Description;
+
+				foreach (var picture in CaseController.Instance.GetPictures())
+				{
+					Image image = Image.FromFile(picture.Location);
+					clsPictures.AddControl(new DetailImage(this, image, picture));
+				}
+
+				foreach (var document in CaseController.Instance.GetDocuments())
+				{
+					clsDocuments.AddControl(new DetailDocument(this, document));
+				}
+			}
         }
-
-		public NewCaseStepDetails()
-		{
-			InitializeComponent();
-		}
-
+		
 		public override bool Save()
 		{
 			bool fielddataOk = ValidateFields();
@@ -37,7 +55,9 @@ namespace LivingSmartForms.Views
 				if (lastRating == null || lastRating.SystemValue != systemValue || lastRating.EstateAgentValue != agentValue)
 					CaseController.Instance.MakeNewRating(systemValue, agentValue);
 
-				CaseController.Instance.MakeNewAskingPrice(Convert.ToInt64(stbDetailsPrice.Text));
+				if (cCase == null || stbDetailsPrice.Text != cCase.NewestAskingPrice.ToString())
+					CaseController.Instance.MakeNewAskingPrice(Convert.ToInt64(stbDetailsPrice.Text));
+
 				CaseController.Instance.SetPublicRating(Convert.ToInt64(stbDetailsPublicEvaluation.Text));
 				CaseController.Instance.SetDescription(stbDetailsDescription.Text);
 			}
@@ -52,6 +72,10 @@ namespace LivingSmartForms.Views
 			fielddataOk &= stbDetailsRating.Validate();
 			fielddataOk &= stbDetailsPrice.Validate();
 			fielddataOk &= stbDetailsDescription.Validate();
+
+			foreach (DetailDocument control in clsDocuments.Controls)
+				fielddataOk &= control.Validate();
+
 			return fielddataOk;
 		}
 
@@ -97,7 +121,6 @@ namespace LivingSmartForms.Views
 				foreach (var filename in ofd.FileNames)
 				{
 					var document = CaseController.Instance.MakeNewDocument("", 0, filename);
-
 					clsDocuments.AddControl(new DetailDocument(this, document));
 				}
 			}

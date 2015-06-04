@@ -30,11 +30,12 @@ namespace LivingSmartBusinessLogic.DB
 	            reader = DBConnectionMSSQL.Instance.ExecuteReader(cmd);
                 while (reader.Read())
                 {
+	                int Id = (int) reader["Id"];
                     int zipCode = (int)reader["ZipCode"];
                     string name = (string)reader["Neighborhood"];
                     int value = (int)reader["Value"];
 
-                    Neighborhood neighborhood = new Neighborhood(zipCode, name, value);
+                    Neighborhood neighborhood = new Neighborhood(Id, zipCode, name, value);
                     neighborhoodList.Add(neighborhood);
                 }
             }
@@ -59,12 +60,13 @@ namespace LivingSmartBusinessLogic.DB
         {
             SqlCommand cmd = new SqlCommand
             {
-                CommandText = "UPDATE Neighborhood SET Value = (@Value) WHERE ZipCode = (@ZipCode) AND Neighborhood  = (@Neighborhood)"
-            };
+                CommandText = "UPDATE Neighborhood SET Value = (@Value), @Neighborhood = (@Neighborhood) WHERE Id = (@Id)"
+			};
 
-            cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = neighborhood.City.ZipCode;
+			cmd.Parameters.Add("@Id", SqlDbType.Int, 4, "Id").Value = neighborhood.Value;
+
             cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
-            cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
+            cmd.Parameters.Add("@Value", SqlDbType.Int, 4, "Value").Value = neighborhood.Value;
 
             DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
@@ -83,7 +85,7 @@ namespace LivingSmartBusinessLogic.DB
 
             cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 50, "ZipCode").Value = neighborhood.City.ZipCode;
             cmd.Parameters.Add("@Neighborhood", SqlDbType.NVarChar, 15, "Neighborhood").Value = neighborhood.Name;
-            cmd.Parameters.Add("@Value", SqlDbType.Date, 8, "Value").Value = neighborhood.Value;
+			cmd.Parameters.Add("@Value", SqlDbType.Int, 8, "Value").Value = neighborhood.Value;
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }

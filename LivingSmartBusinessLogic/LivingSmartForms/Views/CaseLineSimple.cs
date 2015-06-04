@@ -9,14 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Model;
+using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms.Views
 {
     public partial class CaseLineSimple : UserControl
     {
+	    private BaseForm baseForm;
+
 	    private Case cCase;
+
 		public CaseLineSimple(BaseForm baseForm, Case cCase)
 		{
+			this.baseForm = baseForm;
 			this.cCase = cCase;
 
             InitializeComponent();
@@ -32,6 +37,11 @@ namespace LivingSmartForms.Views
 			slbPropertyType.Text = cCase.PropertyType.Description;
 			slbPrice.Text = cCase.NewestAskingPrice+" kr.";
 			slbPriceTrend.Text = cCase.PriceTrend+" %";
+		}
+
+		private void btnViewCase_Click(object sender, EventArgs e)
+		{
+			baseForm.ShowDropIn(new NewCaseDropIn(baseForm, cCase));
 		}
     }
 }

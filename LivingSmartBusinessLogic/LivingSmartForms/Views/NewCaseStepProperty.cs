@@ -8,12 +8,11 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepProperty : CaseStep
     {
-
 		private DistanceTo disShopping;
 		private DistanceTo disCenter;
 		private DistanceTo disSchool;
 
-        public NewCaseStepProperty(BaseForm baseForm)
+		public NewCaseStepProperty(BaseForm baseForm, Case cCase) : base(cCase)
         {
             InitializeComponent();
 
@@ -22,11 +21,40 @@ namespace LivingSmartForms.Views
 		        cboPropertyType.Items.Add(propertyType);
 				cboPropertyType.DisplayMember = "Description";
 	        }
-        }
 
-        private NewCaseStepProperty()
-        {
-            InitializeComponent();
+			if (cCase != null)
+			{
+				cboPropertyType.SelectedItem = cCase.PropertyType;
+				stbPropertyArea.Text = cCase.LivingArea.ToString();
+				stbPropertyBasement.Text = cCase.BasementArea.ToString();
+				stbPropertyBuildYear.Text = cCase.BuiltYear.ToString();
+				stbPropertyEnergyMark.Text = cCase.EnergyClassification;
+				stbPropertyFloors.Text = cCase.Floors.ToString();
+				stbPropertyRooms.Text = cCase.Rooms.ToString();
+				stbPropertyBedrooms.Text = cCase.Bedrooms.ToString();
+				stbPropertyBathrooms.Text = cCase.Bathrooms.ToString();
+				stbPropertyToilets.Text = cCase.Toilets.ToString();
+
+				var distances = CaseController.Instance.GetDistanceTos(cCase.Id);
+				foreach (var distance in distances)
+				{
+					if (distance.Type == DistanceToSystemType.Shopping.ToString())
+					{
+						disShopping = distance;
+						stbDistanceToShopping.Text = distance.Distance.ToString();
+					}
+					else if (distance.Type == DistanceToSystemType.School.ToString())
+					{
+						disSchool = distance;
+						stbDistanceToSchool.Text = distance.Distance.ToString();
+					}
+					else if (distance.Type == DistanceToSystemType.Center.ToString())
+					{
+						disCenter = distance;
+						stbDistanceToCenter.Text = distance.Distance.ToString();
+					}
+				}
+			}
         }
 		
         public override bool Save()

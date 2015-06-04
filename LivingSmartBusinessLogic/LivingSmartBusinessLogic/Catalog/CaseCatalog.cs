@@ -40,8 +40,9 @@ namespace LivingSmartBusinessLogic.Catalog
         }
 
         internal void AddToCatalog(Case cCase)
-        {
-            cases.Add(cCase.Id, cCase);
+		{
+			if (!cases.ContainsKey(cCase.Id))
+				cases.Add(cCase.Id, cCase);
         }
 
         internal void RemoveFromCatalog(int caseId)
@@ -72,10 +73,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
             foreach (Case cCase in caseList)
             {
-                if (cCase.Status == Case.CaseStatus.Open)
-                {
-                    openCases.Add(cCase);
-                }
+	            if (cCase.Status == Case.CaseStatus.Open)
+		            openCases.Add(cCase);
             }
 
             return openCases.AsReadOnly();
@@ -88,10 +87,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
             foreach (Case cCase in caseList)
             {
-                if (cCase.EstateAgent.Id == estateAgentId)
-                {
-                    estateAgentCases.Add(cCase);
-                }
+	            if (cCase.Status == Case.CaseStatus.Open && cCase.EstateAgent.Id == estateAgentId)
+		            estateAgentCases.Add(cCase);
             }
 
             return estateAgentCases.AsReadOnly();

@@ -55,7 +55,7 @@ namespace LivingSmartForms.Views
 			this.stbType.NumericOnly = false;
 			this.stbType.Placeholder = "Type";
 			this.stbType.RegularExpression = null;
-			this.stbType.Required = false;
+			this.stbType.Required = true;
 			this.stbType.Size = new System.Drawing.Size(260, 30);
 			this.stbType.Suffix = null;
 			this.stbType.TabIndex = 1;
@@ -87,7 +87,7 @@ namespace LivingSmartForms.Views
 			// 
 			// stbPrice
 			// 
-			this.stbPrice.AllowComma = false;
+			this.stbPrice.AllowComma = true;
 			this.stbPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
 			this.stbPrice.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
 			this.stbPrice.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
@@ -102,10 +102,10 @@ namespace LivingSmartForms.Views
 			this.stbPrice.MinLength = -1;
 			this.stbPrice.Multiline = false;
 			this.stbPrice.Name = "stbPrice";
-			this.stbPrice.NumericOnly = false;
+			this.stbPrice.NumericOnly = true;
 			this.stbPrice.Placeholder = "Pris";
 			this.stbPrice.RegularExpression = null;
-			this.stbPrice.Required = false;
+			this.stbPrice.Required = true;
 			this.stbPrice.Size = new System.Drawing.Size(110, 30);
 			this.stbPrice.Suffix = "kr.";
 			this.stbPrice.TabIndex = 3;
@@ -115,6 +115,8 @@ namespace LivingSmartForms.Views
 			// 
 			// lblFile
 			// 
+			this.lblFile.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.lblFile.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.lblFile.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.lblFile.Location = new System.Drawing.Point(0, 0);

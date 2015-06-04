@@ -22,7 +22,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddToCatalog(Invoice invoice)
         {
-            invoices.Add(invoice);
+			if(!invoices.Contains(invoice))
+				invoices.Add(invoice);
         }
 
         internal void RemoveFromCatalog(Invoice invoice)

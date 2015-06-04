@@ -56,6 +56,9 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal ReadOnlyCollection<Picture> GetPictures(int caseId)
         {
+	        if (!pictureDictionary.ContainsKey(caseId))
+		        return new ReadOnlyCollection<Picture>(new List<Picture>());
+
             return pictureDictionary[caseId].AsReadOnly();
         }
     }

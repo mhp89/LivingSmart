@@ -32,6 +32,11 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
 			this.tlpPropertyDetails = new System.Windows.Forms.TableLayoutPanel();
+			this.pnlDocuments = new System.Windows.Forms.Panel();
+			this.clsDocuments = new SmartControls.ControlList();
+			this.pnlNewDocument = new System.Windows.Forms.Panel();
+			this.btnNewDocument = new SmartControls.SmartButton();
+			this.lblDocuments = new System.Windows.Forms.Label();
 			this.lblSystemRating = new System.Windows.Forms.Label();
 			this.lblDetailsPictures = new System.Windows.Forms.Label();
 			this.stbDetailsDescription = new SmartControls.SmartTextBox();
@@ -50,17 +55,12 @@ namespace LivingSmartForms.Views
 			this.btnGetNewRating = new SmartControls.SmartButton();
 			this.stbSystemRating = new SmartControls.SmartTextBox();
 			this.hdrPropertyDetails = new SmartControls.Header();
-			this.lblDocuments = new System.Windows.Forms.Label();
-			this.pnlDocuments = new System.Windows.Forms.Panel();
-			this.clsDocuments = new SmartControls.ControlList();
-			this.pnlNewDocument = new System.Windows.Forms.Panel();
-			this.btnNewDocument = new SmartControls.SmartButton();
 			this.tlpPropertyDetails.SuspendLayout();
+			this.pnlDocuments.SuspendLayout();
+			this.pnlNewDocument.SuspendLayout();
 			this.pnlDetailsPictures.SuspendLayout();
 			this.pnlNewPicture.SuspendLayout();
 			this.pnlSystemRating.SuspendLayout();
-			this.pnlDocuments.SuspendLayout();
-			this.pnlNewDocument.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// tlpPropertyDetails
@@ -98,6 +98,72 @@ namespace LivingSmartForms.Views
 			this.tlpPropertyDetails.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
 			this.tlpPropertyDetails.Size = new System.Drawing.Size(480, 560);
 			this.tlpPropertyDetails.TabIndex = 5;
+			// 
+			// pnlDocuments
+			// 
+			this.pnlDocuments.Controls.Add(this.clsDocuments);
+			this.pnlDocuments.Controls.Add(this.pnlNewDocument);
+			this.pnlDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.pnlDocuments.Location = new System.Drawing.Point(129, 426);
+			this.pnlDocuments.Margin = new System.Windows.Forms.Padding(0);
+			this.pnlDocuments.Name = "pnlDocuments";
+			this.pnlDocuments.Size = new System.Drawing.Size(351, 134);
+			this.pnlDocuments.TabIndex = 21;
+			// 
+			// clsDocuments
+			// 
+			this.clsDocuments.AutoScroll = true;
+			this.clsDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.clsDocuments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+			this.clsDocuments.Location = new System.Drawing.Point(0, 40);
+			this.clsDocuments.Margin = new System.Windows.Forms.Padding(0);
+			this.clsDocuments.Name = "clsDocuments";
+			this.clsDocuments.Size = new System.Drawing.Size(351, 94);
+			this.clsDocuments.Spacing = 5;
+			this.clsDocuments.TabIndex = 0;
+			this.clsDocuments.WrapContents = false;
+			// 
+			// pnlNewDocument
+			// 
+			this.pnlNewDocument.Controls.Add(this.btnNewDocument);
+			this.pnlNewDocument.Dock = System.Windows.Forms.DockStyle.Top;
+			this.pnlNewDocument.Location = new System.Drawing.Point(0, 0);
+			this.pnlNewDocument.Name = "pnlNewDocument";
+			this.pnlNewDocument.Size = new System.Drawing.Size(351, 40);
+			this.pnlNewDocument.TabIndex = 1;
+			// 
+			// btnNewDocument
+			// 
+			this.btnNewDocument.AutoSize = true;
+			this.btnNewDocument.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnNewDocument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnNewDocument.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.btnNewDocument.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnNewDocument.FlatAppearance.BorderSize = 0;
+			this.btnNewDocument.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewDocument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnNewDocument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnNewDocument.Location = new System.Drawing.Point(0, 0);
+			this.btnNewDocument.Name = "btnNewDocument";
+			this.btnNewDocument.Size = new System.Drawing.Size(159, 30);
+			this.btnNewDocument.TabIndex = 1;
+			this.btnNewDocument.Text = "Tilføj nyt dokument";
+			this.btnNewDocument.UseVisualStyleBackColor = false;
+			this.btnNewDocument.Click += new System.EventHandler(this.btnNewDocument_Click);
+			// 
+			// lblDocuments
+			// 
+			this.lblDocuments.Dock = System.Windows.Forms.DockStyle.Top;
+			this.lblDocuments.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblDocuments.Location = new System.Drawing.Point(0, 426);
+			this.lblDocuments.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblDocuments.Name = "lblDocuments";
+			this.lblDocuments.Size = new System.Drawing.Size(129, 30);
+			this.lblDocuments.TabIndex = 20;
+			this.lblDocuments.Text = "Dokumenter";
+			this.lblDocuments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// lblSystemRating
 			// 
@@ -295,9 +361,9 @@ namespace LivingSmartForms.Views
 			this.pnlDetailsPictures.Controls.Add(this.pnlNewPicture);
 			this.pnlDetailsPictures.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.pnlDetailsPictures.Location = new System.Drawing.Point(129, 293);
-			this.pnlDetailsPictures.Margin = new System.Windows.Forms.Padding(0);
+			this.pnlDetailsPictures.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
 			this.pnlDetailsPictures.Name = "pnlDetailsPictures";
-			this.pnlDetailsPictures.Size = new System.Drawing.Size(351, 133);
+			this.pnlDetailsPictures.Size = new System.Drawing.Size(351, 123);
 			this.pnlDetailsPictures.TabIndex = 17;
 			// 
 			// clsPictures
@@ -308,7 +374,7 @@ namespace LivingSmartForms.Views
 			this.clsPictures.Location = new System.Drawing.Point(0, 40);
 			this.clsPictures.Margin = new System.Windows.Forms.Padding(0);
 			this.clsPictures.Name = "clsPictures";
-			this.clsPictures.Size = new System.Drawing.Size(351, 93);
+			this.clsPictures.Size = new System.Drawing.Size(351, 83);
 			this.clsPictures.Spacing = 5;
 			this.clsPictures.TabIndex = 0;
 			this.clsPictures.WrapContents = false;
@@ -416,72 +482,6 @@ namespace LivingSmartForms.Views
 			this.hdrPropertyDetails.TabIndex = 4;
 			this.hdrPropertyDetails.Text = "Detaljer";
 			// 
-			// lblDocuments
-			// 
-			this.lblDocuments.Dock = System.Windows.Forms.DockStyle.Top;
-			this.lblDocuments.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblDocuments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblDocuments.Location = new System.Drawing.Point(0, 426);
-			this.lblDocuments.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.lblDocuments.Name = "lblDocuments";
-			this.lblDocuments.Size = new System.Drawing.Size(129, 30);
-			this.lblDocuments.TabIndex = 20;
-			this.lblDocuments.Text = "Dokumenter";
-			this.lblDocuments.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// pnlDocuments
-			// 
-			this.pnlDocuments.Controls.Add(this.clsDocuments);
-			this.pnlDocuments.Controls.Add(this.pnlNewDocument);
-			this.pnlDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.pnlDocuments.Location = new System.Drawing.Point(129, 426);
-			this.pnlDocuments.Margin = new System.Windows.Forms.Padding(0);
-			this.pnlDocuments.Name = "pnlDocuments";
-			this.pnlDocuments.Size = new System.Drawing.Size(351, 134);
-			this.pnlDocuments.TabIndex = 21;
-			// 
-			// clsDocuments
-			// 
-			this.clsDocuments.AutoScroll = true;
-			this.clsDocuments.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.clsDocuments.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-			this.clsDocuments.Location = new System.Drawing.Point(0, 40);
-			this.clsDocuments.Margin = new System.Windows.Forms.Padding(0);
-			this.clsDocuments.Name = "clsDocuments";
-			this.clsDocuments.Size = new System.Drawing.Size(351, 94);
-			this.clsDocuments.Spacing = 5;
-			this.clsDocuments.TabIndex = 0;
-			this.clsDocuments.WrapContents = false;
-			// 
-			// pnlNewDocument
-			// 
-			this.pnlNewDocument.Controls.Add(this.btnNewDocument);
-			this.pnlNewDocument.Dock = System.Windows.Forms.DockStyle.Top;
-			this.pnlNewDocument.Location = new System.Drawing.Point(0, 0);
-			this.pnlNewDocument.Name = "pnlNewDocument";
-			this.pnlNewDocument.Size = new System.Drawing.Size(351, 40);
-			this.pnlNewDocument.TabIndex = 1;
-			// 
-			// btnNewDocument
-			// 
-			this.btnNewDocument.AutoSize = true;
-			this.btnNewDocument.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnNewDocument.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnNewDocument.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.btnNewDocument.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnNewDocument.FlatAppearance.BorderSize = 0;
-			this.btnNewDocument.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnNewDocument.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnNewDocument.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnNewDocument.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnNewDocument.Location = new System.Drawing.Point(0, 0);
-			this.btnNewDocument.Name = "btnNewDocument";
-			this.btnNewDocument.Size = new System.Drawing.Size(159, 30);
-			this.btnNewDocument.TabIndex = 1;
-			this.btnNewDocument.Text = "Tilføj nyt dokument";
-			this.btnNewDocument.UseVisualStyleBackColor = false;
-			this.btnNewDocument.Click += new System.EventHandler(this.btnNewDocument_Click);
-			// 
 			// NewCaseStepDetails
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -495,14 +495,14 @@ namespace LivingSmartForms.Views
 			this.Size = new System.Drawing.Size(480, 605);
 			this.tlpPropertyDetails.ResumeLayout(false);
 			this.tlpPropertyDetails.PerformLayout();
+			this.pnlDocuments.ResumeLayout(false);
+			this.pnlNewDocument.ResumeLayout(false);
+			this.pnlNewDocument.PerformLayout();
 			this.pnlDetailsPictures.ResumeLayout(false);
 			this.pnlNewPicture.ResumeLayout(false);
 			this.pnlNewPicture.PerformLayout();
 			this.pnlSystemRating.ResumeLayout(false);
 			this.pnlSystemRating.PerformLayout();
-			this.pnlDocuments.ResumeLayout(false);
-			this.pnlNewDocument.ResumeLayout(false);
-			this.pnlNewDocument.PerformLayout();
 			this.ResumeLayout(false);
 
         }

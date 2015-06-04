@@ -17,9 +17,22 @@ namespace LivingSmartForms.Views
     public partial class NewCaseStepLot : CaseStep
     {
 
-        public NewCaseStepLot(BaseForm baseForm)
+		public NewCaseStepLot(BaseForm baseForm, Case cCase) : base(cCase)
         {
             InitializeComponent();
+
+			if (cCase != null)
+			{
+				stbLotNumber.Text = cCase.LandRegistryNumber;
+				stbLotAddress.Text = cCase.Address;
+				stbLotZipCode.Text = cCase.City.ZipCode.ToString();
+				cboNeighborhood.SelectedItem = cCase.Neighborhood;
+				stbLotValue.Text = cCase.LandValue.ToString();
+				stbLotArea.Text = cCase.GroundArea.ToString();
+				stbLotBuildArea.Text = cCase.BuiltArea.ToString();
+				stbLotGarageArea.Text = cCase.GarageArea.ToString();
+				stbLotView.Text = cCase.View.ToString();
+			}
 
 	        cboNeighborhood.DisplayMember = "DisplayName";
         }
