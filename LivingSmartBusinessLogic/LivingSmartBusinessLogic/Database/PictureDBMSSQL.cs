@@ -35,7 +35,7 @@ namespace LivingSmartBusinessLogic.DB
                 {
                     int pictureId = (int)reader["PictureId"];
                     string location = (string)reader["Location"];
-                    string description = (string)reader["Description"];
+                    string description = reader["Description"] is DBNull ? null : (string)reader["Description"];
 
                     Picture picture = new Picture(pictureId, location, description);
                     pictureList.Add(picture);
