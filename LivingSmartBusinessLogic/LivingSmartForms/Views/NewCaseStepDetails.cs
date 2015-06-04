@@ -68,7 +68,7 @@ namespace LivingSmartForms.Views
 			{
 				foreach (var filename in ofd.FileNames)
 				{
-					var picture = CaseController.Instance.MakeNewPicture(filename, "");
+					var picture = CaseController.Instance.MakeNewPicture(filename);
 
 					Image image = Image.FromFile(filename);
 					clsImages.AddControl(new DetailImage(this, image, picture));

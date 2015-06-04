@@ -240,11 +240,21 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="location"></param>
         /// <param name="description"></param>
         /// <returns></returns>
-        public Picture MakeNewPicture(string location, string description)
+        public Picture MakeNewPicture(string location)
 		{
-			var pictureObj = new Picture(location, description);
+			var pictureObj = new Picture(location);
 			tempPictures.Add(pictureObj);
 			return pictureObj;
+        }
+
+        /// <summary>
+        /// Sætter billedbeskrivelse
+        /// </summary>
+        /// <param name="picture"></param>
+        /// <param name="description"></param>
+        public void SetPictureDescription(Picture picture, string description)
+        {
+            picture.Description = description;
         }
 
         /// <summary>
