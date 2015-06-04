@@ -34,7 +34,7 @@ namespace LivingSmartBusinessLogic.Model
 			Id = -1;
 			EstateAgentValue = estateAgentValue;
             SystemValue = systemValue;
-            Date = new DateTime();
+            Date = DateTime.Now;
 			EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
 		}
 
