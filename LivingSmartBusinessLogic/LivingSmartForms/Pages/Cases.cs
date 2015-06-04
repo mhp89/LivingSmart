@@ -26,7 +26,7 @@ namespace LivingSmartForms.Pages
 			clsCases.SuspendLayout();
 
 			clsCases.ClearList();
-			var cases = CaseController.Instance.GetOpenCases(baseForm.DefaultEstateAgent.Id);
+			var cases = CaseController.Instance.GetOpenCases();
 			foreach (var cCase in cases)
 			{
 				var control = new CaseLineSimple(baseForm, cCase);

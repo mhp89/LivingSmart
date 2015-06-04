@@ -130,8 +130,9 @@ namespace LivingSmartBusinessLogic.DB
 	                           "FROM [Case] " +
 	                           "WHERE Status = 'Sold' " +
 	                           "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE()) " +
-	                           "Group by DATEPART(YEAR, DateOfSale)";
-			SqlDataReader reader = null;
+            "Group by DATEPART(YEAR, DateOfSale)";
+		    
+	SqlDataReader reader = null;
             try
             {
 				reader = DBConnectionMSSQL.Instance.ExecuteReader(sqlstring);

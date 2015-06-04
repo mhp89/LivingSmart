@@ -22,14 +22,14 @@ namespace LivingSmartBusinessLogic.Model
         private Customer _buyer;
         private EstateAgent _estateAgent;
         private DateTime _creationDate;
-        private string _status;
 <<<<<<< HEAD
-        private DateTime? _dateOfSale;
-        private DateTime? _transferDate;
+        private string _status;
 =======
+        private CaseStatus _status;
         private DateTime? _transferDate;
-        private DateTime? _dateOfSale;
 >>>>>>> origin/GUI-OpenHouseControls
+        private DateTime? _dateOfSale;
+        private DateTime? _transferDate;
         private DateTime? _dateOfCompletion;
         private long? _sellingPrice;
         private string _description;
@@ -64,7 +64,7 @@ namespace LivingSmartBusinessLogic.Model
         public EstateAgent EstateAgent { get { return _estateAgent; } internal set { _estateAgent = value; } }
         public DateTime CreationDate { get { return _creationDate; } 
             internal set { _creationDate = value; } }
-        public string Status { get { return _status; } internal set { _status = value; } }
+        public CaseStatus Status { get { return _status; } internal set { _status = value; } }
         public DateTime? DateOfSale { get { return _dateOfSale; } 
             internal set { _dateOfSale = value; } }
         public DateTime? TransferDate { get { return _transferDate; } 
@@ -100,16 +100,8 @@ namespace LivingSmartBusinessLogic.Model
         public int View { get { return _view; } internal set { _view = value; } }
         public Neighborhood Neighborhood { get { return _neighborhood; } 
             internal set { _neighborhood = value; } }
-<<<<<<< HEAD
         
-=======
-        public int ZipCode
-        {
-            internal set { City = CityController.Instance.GetCity(value); }
-            get { return City.ZipCode; }
-        }
         public decimal NewestAskingPrice { get { return CaseController.Instance.GetNewestAskingPrice(Id).Value; } }
->>>>>>> origin/GUI-OpenHouseControls
         public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
 
@@ -123,11 +115,7 @@ namespace LivingSmartBusinessLogic.Model
 		}
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
             DateTime creationDate, string status, DateTime? dateOfSale, 
-<<<<<<< HEAD
             DateTime? transferDate, DateTime? dateOfCompletion, long? sellingPrice, 
-=======
-            DateTime? transferDate, DateTime? dateOfCompletion, long sellingPrice, 
->>>>>>> origin/GUI-OpenHouseControls
             string description, string landRegistryNumber, string address, int zipCode, 
             int propertyTypeId, long publicRating, long landValue, 
             int groundArea, int builtArea, int livingArea, int basementArea, 
@@ -143,7 +131,7 @@ namespace LivingSmartBusinessLogic.Model
             }
             EstateAgent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
             CreationDate = creationDate;
-            Status = status;
+            Status = (CaseStatus)Enum.Parse(typeof(CaseStatus), status);
             DateOfSale = dateOfSale;
             TransferDate = transferDate;
             DateOfCompletion = dateOfCompletion;
@@ -248,6 +236,26 @@ namespace LivingSmartBusinessLogic.Model
                 centerFactor = 0.1;
 
             return viewFactor + schoolFactor + shoppingFactor + centerFactor;
+        }
+
+        /// <summary>
+        /// Oversætter den engelske status fra databasen til dansk til brug i GUI
+        /// </summary>
+        /// <param name="status"></param>
+        /// <returns></returns>
+        /// <author>Maja Olesen</author>
+        public static string TranslateStatus(CaseStatus status)
+        {
+            string danishStatus;
+
+            if (status == CaseStatus.Open)
+                danishStatus = "Åben";
+            else if (status == CaseStatus.Sold)
+                danishStatus = "Solgt";
+            else
+                danishStatus = "Lukket";
+
+            return danishStatus;
         }
 
         #endregion

@@ -121,7 +121,7 @@ namespace LivingSmartForms.Views
 			this.cboNeighborhood.Margin = new System.Windows.Forms.Padding(0);
 			this.cboNeighborhood.Name = "cboNeighborhood";
 			this.cboNeighborhood.Size = new System.Drawing.Size(327, 21);
-			this.cboNeighborhood.TabIndex = 22;
+			this.cboNeighborhood.TabIndex = 3;
 			// 
 			// stbLotView
 			// 
@@ -146,7 +146,7 @@ namespace LivingSmartForms.Views
 			this.stbLotView.Required = false;
 			this.stbLotView.Size = new System.Drawing.Size(327, 30);
 			this.stbLotView.Suffix = null;
-			this.stbLotView.TabIndex = 7;
+			this.stbLotView.TabIndex = 8;
 			this.stbLotView.TabStop = false;
 			this.stbLotView.UseSystemPasswordChar = false;
 			// 
@@ -173,7 +173,7 @@ namespace LivingSmartForms.Views
 			this.stbLotGarageArea.Required = false;
 			this.stbLotGarageArea.Size = new System.Drawing.Size(327, 30);
 			this.stbLotGarageArea.Suffix = "m²";
-			this.stbLotGarageArea.TabIndex = 6;
+			this.stbLotGarageArea.TabIndex = 7;
 			this.stbLotGarageArea.TabStop = false;
 			this.stbLotGarageArea.UseSystemPasswordChar = false;
 			// 
@@ -200,7 +200,7 @@ namespace LivingSmartForms.Views
 			this.stbLotBuildArea.Required = true;
 			this.stbLotBuildArea.Size = new System.Drawing.Size(327, 30);
 			this.stbLotBuildArea.Suffix = "m²";
-			this.stbLotBuildArea.TabIndex = 5;
+			this.stbLotBuildArea.TabIndex = 6;
 			this.stbLotBuildArea.TabStop = false;
 			this.stbLotBuildArea.UseSystemPasswordChar = false;
 			// 
@@ -227,7 +227,7 @@ namespace LivingSmartForms.Views
 			this.stbLotArea.Required = true;
 			this.stbLotArea.Size = new System.Drawing.Size(327, 30);
 			this.stbLotArea.Suffix = "m²";
-			this.stbLotArea.TabIndex = 4;
+			this.stbLotArea.TabIndex = 5;
 			this.stbLotArea.TabStop = false;
 			this.stbLotArea.UseSystemPasswordChar = false;
 			// 
@@ -254,7 +254,7 @@ namespace LivingSmartForms.Views
 			this.stbLotValue.Required = true;
 			this.stbLotValue.Size = new System.Drawing.Size(327, 30);
 			this.stbLotValue.Suffix = null;
-			this.stbLotValue.TabIndex = 3;
+			this.stbLotValue.TabIndex = 4;
 			this.stbLotValue.TabStop = false;
 			this.stbLotValue.UseSystemPasswordChar = false;
 			// 
@@ -446,7 +446,6 @@ namespace LivingSmartForms.Views
 			this.lblLotCityCountry.Name = "lblLotCityCountry";
 			this.lblLotCityCountry.Size = new System.Drawing.Size(257, 30);
 			this.lblLotCityCountry.TabIndex = 5;
-			this.lblLotCityCountry.Text = "BY";
 			this.lblLotCityCountry.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
 			// stbLotZipCode

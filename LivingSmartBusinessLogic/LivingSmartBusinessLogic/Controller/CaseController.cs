@@ -181,6 +181,10 @@ namespace LivingSmartBusinessLogic.Controller
 	    {
 		    return caseCatalog.GetOpenCases(estateAgentId);
 	    }
+		public ReadOnlyCollection<Case> GetOpenCases()
+		{
+			return caseCatalog.GetOpenCases();
+		}
 
 		#endregion
 
@@ -554,7 +558,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter sagens status
         /// </summary>
         /// <param name="status"></param>
-        public void SetStatus(string status)
+        public void SetStatus(Case.CaseStatus status)
         {
             if (activeCase.Status != status)
                 activeCase.Status = status;
