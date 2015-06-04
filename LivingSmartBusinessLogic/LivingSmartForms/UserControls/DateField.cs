@@ -51,7 +51,7 @@ namespace LivingSmartForms.UserControls
 	    }
 
 		/// <summary>
-		/// Validere den indtastede dato
+		/// Validerer den indtastede dato
 		/// </summary>
 		/// <returns></returns>
 	    public bool Validate()
