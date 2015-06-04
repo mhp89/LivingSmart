@@ -10,28 +10,29 @@ namespace LivingSmartBusinessLogic.Catalog
     {
         private Dictionary<int, City> cities;
 
-		private ICityDB db;
+        private ICityDB db;
 
         internal CityCatalog()
-		{
-			db = CityDBFactory.GetDBL();
+        {
+            db = CityDBFactory.GetDBL();
             cities = new Dictionary<int, City>();
 
-			LoadCatalog();
+            LoadCatalog();
         }
 
         internal void LoadCatalog()
-		{
-			var cityList = db.ReadCities();
-			foreach (var city in cityList)
-				AddToCatalog(city);
+        {
+            var cityList = db.ReadCities();
+            foreach (var city in cityList)
+                AddToCatalog(city);
         }
 
         internal void AddToCatalog(City city)
         {
-            cities.Add(city.ZipCode, city);
+            if (!cities.ContainsKey(city.ZipCode))
+                cities.Add(city.ZipCode, city);
         }
-        
+
         internal City GetCity(int zipCode)
         {
             if (cities.ContainsKey(zipCode))
@@ -39,11 +40,11 @@ namespace LivingSmartBusinessLogic.Catalog
             return null;
         }
 
-		internal ReadOnlyCollection<City> GetCities()
-		{
-		    var cityList = new List<City>();
-		    cityList.AddRange(cities.Values);
-			return cityList.AsReadOnly();
-		}
+        internal ReadOnlyCollection<City> GetCities()
+        {
+            var cityList = new List<City>();
+            cityList.AddRange(cities.Values);
+            return cityList.AsReadOnly();
+        }
     }
 }

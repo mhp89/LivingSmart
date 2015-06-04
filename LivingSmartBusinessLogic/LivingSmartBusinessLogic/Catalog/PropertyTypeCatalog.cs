@@ -11,21 +11,21 @@ namespace LivingSmartBusinessLogic.Catalog
     {
         private Dictionary<int, PropertyType> propertyTypes;
 
-	    private IPropertyTypeDB db;
+        private IPropertyTypeDB db;
 
         internal PropertyTypeCatalog()
         {
-	        db = PropertyTypeDBFactory.GetDBL();
+            db = PropertyTypeDBFactory.GetDBL();
             propertyTypes = new Dictionary<int, PropertyType>();
 
-			LoadCatalog();
+            LoadCatalog();
         }
-		internal void LoadCatalog()
-		{
-			var propertyTypeList = db.ReadPropertyTypes();
-			foreach (var propertyType in propertyTypeList)
-				AddToCatalog(propertyType);
-		}
+        internal void LoadCatalog()
+        {
+            var propertyTypeList = db.ReadPropertyTypes();
+            foreach (var propertyType in propertyTypeList)
+                AddToCatalog(propertyType);
+        }
 
         internal PropertyType Check(int id)
         {
@@ -42,12 +42,14 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddToCatalog(PropertyType propertyType)
         {
-            propertyTypes.Add(propertyType.Id, propertyType);
+            if (!propertyTypes.ContainsKey(propertyType.Id))
+                propertyTypes.Add(propertyType.Id, propertyType);
         }
 
         internal void RemoveFromCatalog(PropertyType propertyType)
         {
-            propertyTypes.Remove(propertyType.Id);
+            if (propertyTypes.ContainsKey(propertyType.Id))
+                propertyTypes.Remove(propertyType.Id);
         }
 
         internal PropertyType GetPropertyType(int propertyTypeId)
@@ -57,11 +59,11 @@ namespace LivingSmartBusinessLogic.Catalog
             return null;
         }
 
-	    public ReadOnlyCollection<PropertyType> GetPropertyTypes()
-	    {
-	        var cityList = new List<PropertyType>();
+        public ReadOnlyCollection<PropertyType> GetPropertyTypes()
+        {
+            var cityList = new List<PropertyType>();
             cityList.AddRange(propertyTypes.Values);
-			return cityList.AsReadOnly();
-	    }
+            return cityList.AsReadOnly();
+        }
     }
 }

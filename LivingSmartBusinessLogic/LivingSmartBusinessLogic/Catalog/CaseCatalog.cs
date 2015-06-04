@@ -7,23 +7,23 @@ namespace LivingSmartBusinessLogic.Catalog
 {
     internal class CaseCatalog
     {
-		private Dictionary<int, Case> cases;
+        private Dictionary<int, Case> cases;
 
-		private ICaseDB db;
+        private ICaseDB db;
 
         internal CaseCatalog()
-		{
-			db = CaseDBFactory.GetDBL();
+        {
+            db = CaseDBFactory.GetDBL();
             cases = new Dictionary<int, Case>();
 
-			LoadCatalog();
+            LoadCatalog();
         }
 
         internal void LoadCatalog()
         {
-	        var caseList = db.ReadCases();
-			foreach (var cCase in caseList)
-				AddToCatalog(cCase);
+            var caseList = db.ReadCases();
+            foreach (var cCase in caseList)
+                AddToCatalog(cCase);
         }
 
         internal Case Check(int id)
@@ -41,12 +41,14 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddToCatalog(Case cCase)
         {
-            cases.Add(cCase.Id, cCase);
+            if (!cases.ContainsKey(cCase.Id))
+                cases.Add(cCase.Id, cCase);
         }
 
         internal void RemoveFromCatalog(int caseId)
         {
-            cases.Remove(caseId);
+            if (cases.ContainsKey(caseId))
+                cases.Remove(caseId);
         }
 
         internal Case GetCase(int caseId)
@@ -58,12 +60,12 @@ namespace LivingSmartBusinessLogic.Catalog
             return null;
         }
 
-	    public ReadOnlyCollection<Case> GetCases()
-	    {
-	        var caseList = new List<Case>();
-	        caseList.AddRange(cases.Values);
-			return caseList.AsReadOnly();
-	    }
+        public ReadOnlyCollection<Case> GetCases()
+        {
+            var caseList = new List<Case>();
+            caseList.AddRange(cases.Values);
+            return caseList.AsReadOnly();
+        }
 
         public ReadOnlyCollection<Case> GetOpenCases()
         {

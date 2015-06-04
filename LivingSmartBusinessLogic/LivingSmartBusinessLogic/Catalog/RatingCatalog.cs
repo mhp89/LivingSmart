@@ -52,7 +52,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void RemoveFromCatalog(int caseId, Rating rating)
         {
-            ratingDictionary[caseId].Remove(rating);
+            if (ratingDictionary.ContainsKey(caseId))
+                ratingDictionary[caseId].Remove(rating);
         }
 
         internal ReadOnlyCollection<Rating> GetRatings(int caseId)
@@ -62,10 +63,10 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal Rating GetLastRating(Case cCase)
         {
-			if(!ratingDictionary.ContainsKey(cCase.Id))
-				return null;
+            if (!ratingDictionary.ContainsKey(cCase.Id))
+                return null;
 
-			return ratingDictionary[cCase.Id][ratingDictionary[cCase.Id].Count - 1];
+            return ratingDictionary[cCase.Id][ratingDictionary[cCase.Id].Count - 1];
         }
     }
 }

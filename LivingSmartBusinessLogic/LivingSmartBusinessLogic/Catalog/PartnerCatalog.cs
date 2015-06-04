@@ -9,23 +9,23 @@ namespace LivingSmartBusinessLogic.Catalog
 {
     internal class PartnerCatalog
     {
-		private Dictionary<int, Partner> partners;
+        private Dictionary<int, Partner> partners;
 
-		private IPartnerDB db;
+        private IPartnerDB db;
 
         internal PartnerCatalog()
-		{
-			db = PartnerDBFactory.GetDBL();
+        {
+            db = PartnerDBFactory.GetDBL();
             partners = new Dictionary<int, Partner>();
 
-	        LoadCatalog();
-		}
-		internal void LoadCatalog()
-		{
-			var customerList = db.ReadPartners();
-			foreach (var customer in customerList)
-				AddToCatalog(customer);
-		}
+            LoadCatalog();
+        }
+        internal void LoadCatalog()
+        {
+            var customerList = db.ReadPartners();
+            foreach (var customer in customerList)
+                AddToCatalog(customer);
+        }
 
         internal Partner Check(int id)
         {
@@ -33,28 +33,30 @@ namespace LivingSmartBusinessLogic.Catalog
         }
 
         internal void Save(Partner partner)
-		{
-			if (partner.Id == -1)
-				partner.Id = partner.Id = db.CreatePartner(partner);
-			else
-				db.UpdatePartner(partner);
+        {
+            if (partner.Id == -1)
+                partner.Id = partner.Id = db.CreatePartner(partner);
+            else
+                db.UpdatePartner(partner);
         }
 
         internal void AddToCatalog(Partner partner)
         {
-            partners.Add(partner.Id, partner);
+            if (!partners.ContainsKey(partner.Id))
+                partners.Add(partner.Id, partner);
         }
 
         internal void RemoveFromCatalog(Partner partner)
         {
-            partners.Add(partner.Id, partner);
+            if (partners.ContainsKey(partner.Id))
+                partners.Remove(partner.Id);
         }
 
-		internal ReadOnlyCollection<Partner> GetPartners()
-		{
-		    var partnerList = new List<Partner>();
+        internal ReadOnlyCollection<Partner> GetPartners()
+        {
+            var partnerList = new List<Partner>();
             partnerList.AddRange(partners.Values);
-			return partnerList.AsReadOnly();
-		}
+            return partnerList.AsReadOnly();
+        }
     }
 }
