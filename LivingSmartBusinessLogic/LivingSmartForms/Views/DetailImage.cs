@@ -1,9 +1,9 @@
 using System.Drawing;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
-using LivingSmartForms.Views;
 
-namespace LivingSmartForms.UserControls
+namespace LivingSmartForms.Views
 {
 	public partial class DetailImage : UserControl
 	{
@@ -24,7 +24,12 @@ namespace LivingSmartForms.UserControls
 
 		private void btnRemove_Click(object sender, System.EventArgs e)
 		{
-			baseView.RemoveImage(this);
+			baseView.RemovePicture(this);
+		}
+
+		private void stbDescription_TextChanged(object sender, System.EventArgs e)
+		{
+			CaseController.Instance.SetPictureDescription(Picture, stbDescription.Text);
 		}
 	}
 }

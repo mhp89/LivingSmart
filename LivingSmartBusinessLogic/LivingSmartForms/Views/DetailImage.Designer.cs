@@ -1,4 +1,4 @@
-namespace LivingSmartForms.UserControls
+namespace LivingSmartForms.Views
 {
 	partial class DetailImage
 	{
@@ -29,11 +29,11 @@ namespace LivingSmartForms.UserControls
 		private void InitializeComponent()
 		{
 			this.stbDescription = new SmartControls.SmartTextBox();
-			this.pcbImage = new System.Windows.Forms.PictureBox();
-			this.pnlImage = new System.Windows.Forms.Panel();
 			this.btnRemove = new SmartControls.SmartButton();
-			((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
+			this.pnlImage = new System.Windows.Forms.Panel();
+			this.pcbImage = new System.Windows.Forms.PictureBox();
 			this.pnlImage.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.pcbImage)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// stbDescription
@@ -53,6 +53,7 @@ namespace LivingSmartForms.UserControls
 			this.stbDescription.Margin = new System.Windows.Forms.Padding(10, 0, 10, 0);
 			this.stbDescription.MaxLength = 32767;
 			this.stbDescription.MinLength = -1;
+			this.stbDescription.Multiline = true;
 			this.stbDescription.Name = "stbDescription";
 			this.stbDescription.NumericOnly = false;
 			this.stbDescription.Placeholder = null;
@@ -63,30 +64,12 @@ namespace LivingSmartForms.UserControls
 			this.stbDescription.TabIndex = 1;
 			this.stbDescription.TabStop = false;
 			this.stbDescription.UseSystemPasswordChar = false;
-			// 
-			// pcbImage
-			// 
-			this.pcbImage.BackColor = System.Drawing.SystemColors.Control;
-			this.pcbImage.Location = new System.Drawing.Point(1, 1);
-			this.pcbImage.Margin = new System.Windows.Forms.Padding(1);
-			this.pcbImage.Name = "pcbImage";
-			this.pcbImage.Size = new System.Drawing.Size(48, 48);
-			this.pcbImage.TabIndex = 0;
-			this.pcbImage.TabStop = false;
-			// 
-			// pnlImage
-			// 
-			this.pnlImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.pnlImage.Controls.Add(this.pcbImage);
-			this.pnlImage.Location = new System.Drawing.Point(0, 0);
-			this.pnlImage.Margin = new System.Windows.Forms.Padding(0);
-			this.pnlImage.Name = "pnlImage";
-			this.pnlImage.Size = new System.Drawing.Size(50, 50);
-			this.pnlImage.TabIndex = 2;
+			this.stbDescription.TextChanged += new System.EventHandler(this.stbDescription_TextChanged);
 			// 
 			// btnRemove
 			// 
-			this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.btnRemove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
 			this.btnRemove.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
 			this.btnRemove.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
 			this.btnRemove.Color = SmartControls.SmartColor.ColorStyle.Dark;
@@ -105,6 +88,26 @@ namespace LivingSmartForms.UserControls
 			this.btnRemove.UseVisualStyleBackColor = false;
 			this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
 			// 
+			// pnlImage
+			// 
+			this.pnlImage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.pnlImage.Controls.Add(this.pcbImage);
+			this.pnlImage.Location = new System.Drawing.Point(0, 0);
+			this.pnlImage.Margin = new System.Windows.Forms.Padding(0);
+			this.pnlImage.Name = "pnlImage";
+			this.pnlImage.Size = new System.Drawing.Size(50, 50);
+			this.pnlImage.TabIndex = 2;
+			// 
+			// pcbImage
+			// 
+			this.pcbImage.BackColor = System.Drawing.SystemColors.Control;
+			this.pcbImage.Location = new System.Drawing.Point(1, 1);
+			this.pcbImage.Margin = new System.Windows.Forms.Padding(1);
+			this.pcbImage.Name = "pcbImage";
+			this.pcbImage.Size = new System.Drawing.Size(48, 48);
+			this.pcbImage.TabIndex = 0;
+			this.pcbImage.TabStop = false;
+			// 
 			// DetailImage
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -113,17 +116,17 @@ namespace LivingSmartForms.UserControls
 			this.Controls.Add(this.stbDescription);
 			this.Name = "DetailImage";
 			this.Size = new System.Drawing.Size(300, 50);
-			((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
 			this.pnlImage.ResumeLayout(false);
+			((System.ComponentModel.ISupportInitialize)(this.pcbImage)).EndInit();
 			this.ResumeLayout(false);
 
 		}
 
 		#endregion
 
-		private System.Windows.Forms.PictureBox pcbImage;
 		private SmartControls.SmartTextBox stbDescription;
-		private System.Windows.Forms.Panel pnlImage;
 		private SmartControls.SmartButton btnRemove;
+		private System.Windows.Forms.Panel pnlImage;
+		private System.Windows.Forms.PictureBox pcbImage;
 	}
 }

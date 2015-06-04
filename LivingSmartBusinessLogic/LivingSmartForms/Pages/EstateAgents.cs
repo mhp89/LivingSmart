@@ -45,9 +45,12 @@ namespace LivingSmartForms.Pages
 
 		private void NewEstateAgentAdded(EstateAgent estateAgent)
 		{
-			var control = new EstateAgentLine(baseForm, estateAgent) { Margin = Padding.Empty };
-			clsEstateAgents.AddControl(control);
-			sblActiveCases.Text = clsEstateAgents.Controls.Count.ToString();
+			if (estateAgent != null)
+			{
+				var control = new EstateAgentLine(baseForm, estateAgent) {Margin = Padding.Empty};
+				clsEstateAgents.AddControl(control);
+				sblActiveCases.Text = clsEstateAgents.Controls.Count.ToString();
+			}
 		}
 
 		private void btnNewEstateAgents_Click(object sender, EventArgs e)

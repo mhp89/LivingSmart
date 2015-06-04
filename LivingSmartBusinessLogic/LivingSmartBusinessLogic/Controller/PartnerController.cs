@@ -58,51 +58,46 @@ namespace LivingSmartBusinessLogic.Controller
 			return partnerCatalog.GetPartners();
 		}
 
-        public void UpdatePartner(Partner partner)
-        {
-            partnerCatalog.Save(partner);
-        }
-
         #region PropertyMethods
-        public void SetName(Partner partner, string name)
+        public void SetName(string name)
         {
-            if (partner.Name != name)
-                partner.Name = name;
+            if (activePartner.Name != name)
+                activePartner.Name = name;
         }
-        public void SetTelephone(Partner partner, string telephone)
+        public void SetTelephone(string telephone)
         {
-            if (partner.Telephone != telephone)
-                partner.Telephone = telephone;
+            if (activePartner.Telephone != telephone)
+                activePartner.Telephone = telephone;
         }
-        public void SetCity(Partner partner, string city)
+        public void SetCity(string city)
         {
-            if (partner.City != city)
-                partner.City = city;
+            if (activePartner.City != city)
+                activePartner.City = city;
         }
-        public void SetCountry(Partner partner, string country)
+        public void SetCountry(string country)
         {
-            if (partner.Country != country)
-                partner.Country = country;
+            if (activePartner.Country != country)
+                activePartner.Country = country;
         }
-        public void SetRegion(Partner partner, string region)
+        public void SetRegion(string region)
         {
-            if (partner.Region != region)
-                partner.Region = region;
+            if (activePartner.Region != region)
+                activePartner.Region = region;
         }
-        public void SetRegionShort(Partner partner, string regionShort)
+        public void SetRegionShort(string regionShort)
         {
-            if (partner.RegionShort != regionShort)
-                partner.RegionShort = regionShort;
+            if (activePartner.RegionShort != regionShort)
+                activePartner.RegionShort = regionShort;
         }
-        public void SetEmail(Partner partner, string email)
+        public void SetEmail(string email)
         {
-            if (partner.Email != email)
-                partner.Email = email;
+            if (activePartner.Email != email)
+                activePartner.Email = email;
         }
-        public void SetTimeZone(Partner partner, string timeZone)
+        public void SetTimeZone(string timeZone)
         {
-            if (partner.Timezone != timeZone)
-                partner.Timezone = timeZone;
+            if (activePartner.Timezone != timeZone)
+                activePartner.Timezone = timeZone;
         }
         #endregion
         

@@ -74,7 +74,7 @@ namespace LivingSmartBusinessLogic.Catalog
 
             foreach (Case cCase in caseList)
             {
-                if (cCase.Status == Case.CaseStatus.Open.ToString())
+                if (cCase.Status == Case.CaseStatus.Open)
                 {
                     openCases.Add(cCase);
                 }

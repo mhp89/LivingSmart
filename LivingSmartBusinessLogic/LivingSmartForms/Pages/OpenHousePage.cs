@@ -37,7 +37,7 @@ namespace LivingSmartForms.Pages
         }
 
         /// <summary>
-        /// Får en liste med valgte mæglere fra drop in menuen for valg af mæglere
+        /// Fï¿½r en liste med valgte mï¿½glere fra drop in menuen for valg af mï¿½glere
         /// </summary>
         /// <param name="agents"></param>
         private void EstateAgentList(List<EstateAgent> agents)
@@ -45,7 +45,7 @@ namespace LivingSmartForms.Pages
             this.agents = agents;
         }
         /// <summary>
-        /// Får en liste med valgte ejendomme fra drop in menuen for valg af ejendomme
+        /// Fï¿½r en liste med valgte ejendomme fra drop in menuen for valg af ejendomme
         /// </summary>
         /// <param name="properties"></param>
         private void PropertyList(List<Case> properties)
@@ -55,15 +55,16 @@ namespace LivingSmartForms.Pages
 
         /// <summary>
         /// Knappen opretter en instans af OpenHouse klassen og kalder metoden
-        /// ReturnOpenHouseEvenly. Information herfra indsættes i openHousePairs variablen
+        /// ReturnOpenHouseEvenly. Information herfra indsï¿½ttes i openHousePairs variablen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void btnMakeSelection_Click(object sender, EventArgs e)
         {
+			priceCasePair.Clear();
             foreach (Case cases in properties)
-                priceCasePair.Add(new KeyValuePair<decimal, Case>(1200000, cases));
-                //priceCasePair.Add(new KeyValuePair<decimal, Case>(Convert.ToDecimal(cases.NewestAskingPrice), cases));        
+                //priceCasePair.Add(new KeyValuePair<decimal, Case>(1200000, cases));
+                priceCasePair.Add(new KeyValuePair<decimal, Case>(Convert.ToDecimal(cases.NewestAskingPrice), cases));        
 
             OpenHouse openHouse = new OpenHouse(agents, priceCasePair);
 
@@ -72,7 +73,7 @@ namespace LivingSmartForms.Pages
         }
 
         /// <summary>
-        /// Opdaterer control OpenHousePair med information om mægler og ejendomme
+        /// Opdaterer control OpenHousePair med information om mï¿½gler og ejendomme
         /// </summary>
         private void UpdateList()
         {

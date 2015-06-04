@@ -181,6 +181,10 @@ namespace LivingSmartBusinessLogic.Controller
 	    {
 		    return caseCatalog.GetOpenCases(estateAgentId);
 	    }
+		public ReadOnlyCollection<Case> GetOpenCases()
+		{
+			return caseCatalog.GetOpenCases();
+		}
 
 		#endregion
 
@@ -194,12 +198,20 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="location"></param>
         /// <param name="status"></param>
         /// <returns></returns>
-        public Document MakeNewDocument(string type, int price, string location, string status)
+        public Document MakeNewDocument(string type, int price, string location)
         {
-			var documentObj = new Document(type, price, location, status);
+			var documentObj = new Document(type, price, location);
 			tempDocuments.Add(documentObj);
 			return documentObj;
         }
+		public void SetDocumentPrice(Document document, int price)
+		{
+			document.Price = price;
+		}
+		public void SetDocumentType(Document document, string type)
+		{
+			document.Type = type;
+		}
 
         /// <summary>
         /// Tilføjer et dokument til casen
@@ -554,7 +566,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter sagens status
         /// </summary>
         /// <param name="status"></param>
-        public void SetStatus(string status)
+        public void SetStatus(Case.CaseStatus status)
         {
             if (activeCase.Status != status)
                 activeCase.Status = status;
@@ -794,5 +806,6 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #endregion
+
 	}
 }
