@@ -63,7 +63,7 @@ namespace LivingSmartForms.DropIns
             if (newEstateAgentForm.Save())
             {
                 //Customer saved
-                FinishCreating(newEstateAgentForm.CreatedEstateAgent);
+                FinishCreating(newEstateAgentForm.CurrentEstateAgent);
             }
         }
     }
