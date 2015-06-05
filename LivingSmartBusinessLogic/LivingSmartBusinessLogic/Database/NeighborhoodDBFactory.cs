@@ -12,6 +12,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns the database layer for the Neighborhoods. Type is chosen in the settings file and can be "MSSQL", "XML" or "MYSQL". 
         /// </summary>
         /// <returns>Returns the database layer for the Neighborhoods.</returns>
+        /// <author>René Sørensen</author>
         public static INeighborhoodDB GetDBL()
         {
             if (Properties.Settings.Default.DatabaseType == "MSSQL")

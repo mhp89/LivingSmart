@@ -15,12 +15,14 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the Pictures, having a CaseId given by the parameter</returns>
+        /// <author>René Sørensen</author>
         List<Picture> ReadPictures(int caseId);
 
         /// <summary>
         /// Returns a dictionary containing all the Pictures in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the Pictures in the database, with CaseId as key and a list of Pictures containing that CaseId as value</returns>
+        /// <author>René Sørensen</author>
         Dictionary<int, List<Picture>> ReadPictures();
 
         /// <summary>
@@ -28,6 +30,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="picture">Picture to be updated.</param>
         /// <param name="caseId">CaseId connected to the Picture</param>
+        /// <author>René Sørensen</author>
         void UpdatePicture(Picture picture, int caseId);
 
         /// <summary>
@@ -36,12 +39,14 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="picture">Picture to be created.</param>
         /// <param name="caseId">CaseId connected to the Picture</param>
         /// <returns>Returns the Id of the Picture created.</returns>
+        /// <author>René Sørensen</author>
         int CreatePicture(Picture picture, int caseId);
 
 		/// <summary>
-		/// Removes a picture in the database.
+		/// Removes a picture from the database.
 		/// </summary>
 		/// <param name="picture">Picture to be removed</param>
+        /// <author>René Sørensen</author>
 		void DeletePicture(Picture picture);
     }
 }

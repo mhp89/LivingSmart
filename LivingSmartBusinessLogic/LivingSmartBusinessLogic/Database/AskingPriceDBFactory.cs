@@ -12,6 +12,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns the database layer for the AskingPrices. Type is chosen in the settings file and can be "MSSQL", "XML" or "MYSQL". 
         /// </summary>
         /// <returns>Returns the database layer for the AskingPrices.</returns>
+        /// <author>René Sørensen</author>
         public static IAskingPriceDB GetDBL()
         {
             if (Properties.Settings.Default.DatabaseType == "MSSQL")

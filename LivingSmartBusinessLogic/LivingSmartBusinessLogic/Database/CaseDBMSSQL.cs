@@ -17,6 +17,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="estateAgentId">Id of the estate agent</param>
         /// <returns>Returns a List of all the Cases, having a EstateAgentId given by the parameter</returns>
+        /// <author>René Sørensen</author>
         public List<Case> ReadCases(int estateAgentId)
         {
             List<Case> caseList = new List<Case>();
@@ -157,6 +158,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Updates the information from a Case, in the database.
         /// </summary>
         /// <param name="ca">Case to be updated.</param>
+        /// <author>René Sørensen</author>
         public void UpdateCase(Case ca)
         {
             int caseId = ca.Id;
@@ -215,6 +217,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="ca">Case to be created.</param>
         /// <returns>Returns the Id of the Case created.</returns>
+        /// <author>René Sørensen</author>
         public int CreateCase(Case ca)
         {
             SqlCommand cmd = new SqlCommand

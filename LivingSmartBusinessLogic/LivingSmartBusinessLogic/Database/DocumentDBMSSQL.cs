@@ -59,6 +59,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the documents, having a CaseId given by the parameter</returns>
+        /// <author>René Sørensen</author>
         public List<Document> ReadDocuments(int caseId)
         {
             List<Document> documentList = new List<Document>();
@@ -102,6 +103,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="document">Document to be updated.</param>
         /// <param name="caseId">CaseId connected to the Document</param>
+        /// <author>René Sørensen</author>
         public void UpdateDocument(Document document, int caseId)
         {
             int documentId = document.Id;
@@ -127,6 +129,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="document">Document to be created.</param>
         /// <param name="caseId">CaseId connected to the Document.</param>
         /// <returns>Returns the Id of the Document created.</returns>
+        /// <author>René Sørensen</author>
         public int CreateDocument(Document document, int caseId)
         {
             SqlCommand cmd = new SqlCommand

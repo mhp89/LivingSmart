@@ -17,6 +17,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
+        /// <author>René Sørensen</author>
         public List<Ad> ReadAds(int caseId)
         {
             List<Ad> adList = new List<Ad>();

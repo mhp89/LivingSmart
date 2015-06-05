@@ -13,6 +13,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns all the customers from the database.
         /// </summary>
         /// <returns>Returns a List of all the customers from the database.</returns>
+        /// <author>René Sørensen</author>
         public List<Customer> ReadCustomers()
         {
             throw new NotImplementedException();

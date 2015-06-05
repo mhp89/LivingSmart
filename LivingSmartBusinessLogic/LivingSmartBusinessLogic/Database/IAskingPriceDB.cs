@@ -10,24 +10,27 @@ namespace LivingSmartBusinessLogic.DB
     internal interface IAskingPriceDB
     {
         /// <summary>
-        /// Returns a dictionary containing all the appointments in the database.
+        /// Returns a dictionary containing all the AskingPrices in the database.
         /// </summary>
-        /// <returns>Returns a dictionary containing all the appointments in the database, with estateAgentId as key and a list of appointments containing that estateAgentId</returns>
+        /// <returns>Returns a dictionary containing all the AskingPrices in the database, with CaseId as key and a list of AskingPrices containing that caseId</returns>
+        /// <author>René Sørensen</author>
         Dictionary<int, List<AskingPrice>> ReadAskingPrices();
 
         /// <summary>
-        /// Updates the information from and appointment, in the database.
+        /// Updates the information from an AskingPrice, in the database.
         /// </summary>
-        /// <param name="appointment">Appointment to be updated.</param>
-        /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
+        /// <param name="askingPrice">AskingPrice to be updated.</param>
+        /// <param name="caseId">CaseId connected to the appointment</param>
+        /// <author>René Sørensen</author>
         void UpdateAskingPrice(AskingPrice askingPrice, int caseId);
 
         /// <summary>
-        /// Creates an appointment in the database.
+        /// Creates an AskingPrice in the database.
         /// </summary>
-        /// <param name="appointment">Appointment to be created.</param>
-        /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
-        /// <returns>Returns the Id of the Appointment created.</returns>
+        /// <param name="askingPrice">AskingPrice to be created.</param>
+        /// <param name="caseId">CaseId connected to the AskingPrice</param>
+        /// <returns>Returns the Id of the AskingPrice created.</returns>
+        /// <author>René Sørensen</author>
         int CreateAskingPrice(AskingPrice askingPrice, int caseId);
     }
 }

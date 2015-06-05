@@ -16,6 +16,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns all the Neighborhoods from the database.
         /// </summary>
         /// <returns>Returns a List of all the Neighborhoods from the database.</returns>
+        /// <author>René Sørensen</author>
         public List<Neighborhood> ReadNeighborhoods()
         {
             List<Neighborhood> neighborhoodList = new List<Neighborhood>();
@@ -56,6 +57,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Updates the information from a Neighborhood, in the database.
         /// </summary>
         /// <param name="neighborhood">Neighborhood to be updated.</param>
+        /// <author>René Sørensen</author>
         public void UpdateNeighborhood(Neighborhood neighborhood)
         {
             SqlCommand cmd = new SqlCommand
@@ -76,6 +78,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="neighborhood">Neighborhood to be created.</param>
         /// <returns>Returns the Id of the Neighborhood created.</returns>
+        /// <author>René Sørensen</author>
         public int CreateNeighborhood(Neighborhood neighborhood)
         {
             SqlCommand cmd = new SqlCommand

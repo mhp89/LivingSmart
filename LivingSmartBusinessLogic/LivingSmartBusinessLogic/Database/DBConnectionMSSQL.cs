@@ -6,9 +6,13 @@ using LivingSmartForms.Classes;
 
 namespace LivingSmartBusinessLogic.DBLayer
 {
-    internal sealed class DBConnectionMSSQL
+    /// <summary>
+    /// Handles connections to the database
+    /// </summary>
+    /// <author>Rneé Sørensen & Mathias Petersen<author>
+    internal sealed class DBConnectionMSSQL // 1
     {
-        private static volatile DBConnectionMSSQL _instance;
+        private static volatile DBConnectionMSSQL instance;
         private static readonly object objectLock = new Object();
         private readonly SqlConnection conn = new SqlConnection(RegistryWrapper.RegKey.GetValue("DatabaseConnection", Settings.Default.ConnectionString) as string);
 
@@ -18,16 +22,16 @@ namespace LivingSmartBusinessLogic.DBLayer
         {
             get
             {
-                if (_instance == null)
+                if (instance == null)
                 {
                     lock (objectLock)
                     {
-                        if (_instance == null)
-                            _instance = new DBConnectionMSSQL();
+                        if (instance == null)
+                            instance = new DBConnectionMSSQL();
                     }
                 }
 
-                return _instance;
+                return instance;
             }
         }
 
@@ -36,19 +40,27 @@ namespace LivingSmartBusinessLogic.DBLayer
             return conn;
         }
 
-
-		public bool IsOpen
+        /// <summary>
+        /// Returns the state of the SqlConnection
+        /// </summary>
+        private bool IsOpen
 		{
 			get { return conn.State == ConnectionState.Open; }
 		}
 
-	    public void Open()
+        /// <summary>
+        /// Opens the SqlConnection to the database
+        /// </summary>
+        private void Open()
 		{
 		    if (!IsOpen)
 			    conn.Open();
 		}
 
-		public void Close()
+        /// <summary>
+        /// Closes the connection to the database.
+        /// </summary>
+        private void Close()
 		{
 			if (IsOpen)
 				conn.Close();
@@ -124,7 +136,6 @@ namespace LivingSmartBusinessLogic.DBLayer
 		{
 			return ExecuteScalar(new SqlCommand(commandString), defaultValue, autoCloseConnection);
 		}
-
 		#endregion
     }
 }

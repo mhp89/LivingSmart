@@ -17,6 +17,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the Ratings, having a CaseId given by the parameter</returns>
+        /// <author>René Sørensen</author>
         public List<Rating> ReadRatings(int caseId)
         {
             List<Rating> ratingList = new List<Rating>();
@@ -60,6 +61,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns a dictionary containing all the Ratings in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the Ratings in the database, with CaseId as key and a list of Ratings containing that CaseId as value</returns>
+        /// <author>René Sørensen</author>
         public Dictionary<int, List<Rating>> ReadRatings()
         {
 			var caseRatingList = new Dictionary<int, List<Rating>>();
@@ -108,6 +110,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="rating">Rating to be updated.</param>
         /// <param name="caseId">CaseId connected to the Rating</param>
         /// <param name="estateAgentId">EstateAgentId connected to the Rating</param>
+        /// <author>René Sørensen</author>
         public void UpdateRating(Rating rating, int caseId)
         {
             int ratingId = rating.Id;
@@ -135,6 +138,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="caseId">CaseId connected to the Rating</param>
         /// <param name="estateAgentId">EstateAgentId connected to the Rating</param>
         /// <returns>Returns the Id of the Rating created.</returns>
+        /// <author>René Sørensen</author>
         public int CreateRating(Rating rating, int caseId)
         {
             SqlCommand cmd = new SqlCommand
