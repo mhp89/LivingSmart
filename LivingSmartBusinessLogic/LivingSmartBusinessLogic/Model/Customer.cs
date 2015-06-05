@@ -23,15 +23,45 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int Id { get; internal set; }
-        public string Name { get { return _name; } internal set { _name = value; } }
-        public DateTime DateOfBirth { get { return _dateOfBirth; } 
-            internal set { _dateOfBirth = value; } }
-        public string Address { get { return _address; } internal set { _address = value; } }
-        public City City { get { return _city; } internal set { _city = value; } }
-        public string Email { get { return _email; } internal set { _email = value; } }
-        public string Telephone { get { return _telephone; } 
-            internal set { _telephone = value; } }
+        public int Id
+        {
+            get; 
+            internal set;
+        }
+
+        public string Name
+        {
+            get { return _name; } 
+            internal set { _name = value; }
+        }
+        public DateTime DateOfBirth 
+        { 
+            get { return _dateOfBirth; } 
+            internal set { _dateOfBirth = value; } 
+        }
+
+        public string Address
+        {
+            get { return _address; } 
+            internal set { _address = value; }
+        }
+
+        public City City
+        {
+            get { return _city; } 
+            internal set { _city = value; }
+        }
+
+        public string Email
+        {
+            get { return _email; } 
+            internal set { _email = value; }
+        }
+        public string Telephone 
+        { 
+            get { return _telephone; } 
+            internal set { _telephone = value; } 
+        }
 
 
         #endregion

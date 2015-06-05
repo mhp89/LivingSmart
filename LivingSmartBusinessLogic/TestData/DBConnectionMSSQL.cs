@@ -4,15 +4,11 @@ using System.Data.SqlClient;
 using LivingSmartBusinessLogic.Properties;
 using LivingSmartForms.Classes;
 
-namespace LivingSmartBusinessLogic.Database
+namespace LivingSmartBusinessLogic.DBLayer
 {
-    /// <summary>
-    /// Handles connections to the database
-    /// </summary>
-    /// <author>Rneé Sørensen & Mathias Petersen<author>
-    internal sealed class DBConnectionMSSQL // 1
+    internal sealed class DBConnectionMSSQL
     {
-        private static volatile DBConnectionMSSQL instance;
+        private static volatile DBConnectionMSSQL _instance;
         private static readonly object objectLock = new Object();
         private readonly SqlConnection conn = new SqlConnection(RegistryWrapper.RegKey.GetValue("DatabaseConnection", Settings.Default.ConnectionString) as string);
 
@@ -22,16 +18,16 @@ namespace LivingSmartBusinessLogic.Database
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
                     lock (objectLock)
                     {
-                        if (instance == null)
-                            instance = new DBConnectionMSSQL();
+                        if (_instance == null)
+                            _instance = new DBConnectionMSSQL();
                     }
                 }
 
-                return instance;
+                return _instance;
             }
         }
 
@@ -40,27 +36,19 @@ namespace LivingSmartBusinessLogic.Database
             return conn;
         }
 
-        /// <summary>
-        /// Returns the state of the SqlConnection
-        /// </summary>
-        private bool IsOpen
+
+		public bool IsOpen
 		{
 			get { return conn.State == ConnectionState.Open; }
 		}
 
-        /// <summary>
-        /// Opens the SqlConnection to the database
-        /// </summary>
-        private void Open()
+	    public void Open()
 		{
 		    if (!IsOpen)
 			    conn.Open();
 		}
 
-        /// <summary>
-        /// Closes the connection to the database.
-        /// </summary>
-        private void Close()
+		public void Close()
 		{
 			if (IsOpen)
 				conn.Close();
@@ -136,6 +124,7 @@ namespace LivingSmartBusinessLogic.Database
 		{
 			return ExecuteScalar(new SqlCommand(commandString), defaultValue, autoCloseConnection);
 		}
+
 		#endregion
     }
 }

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LivingSmartBusinessLogic;
+﻿using System.Collections.Generic;
 using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic.DB
+namespace LivingSmartBusinessLogic.Database
 {
     internal interface INeighborhoodDB
     {

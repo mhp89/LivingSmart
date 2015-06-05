@@ -1,5 +1,10 @@
+<<<<<<< HEAD
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+=======
 ﻿using System.Collections.Generic;
-using LivingSmartBusinessLogic.Model;
+>>>>>>> origin/Kommentarbranch
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Database

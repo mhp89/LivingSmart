@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using LivingSmartBusinessLogic.DB;
+using LivingSmartBusinessLogic.Database;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
@@ -10,12 +9,16 @@ namespace LivingSmartBusinessLogic.Catalog
     /// <summary>
     /// Ejendomstypekatalog
     /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class PropertyTypeCatalog
     {
         private Dictionary<int, PropertyType> propertyTypes;
 
         private IPropertyTypeDB db;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <author>Mathias Peterprisen</author>
         internal PropertyTypeCatalog()
         {
             db = PropertyTypeDBFactory.GetDBL();
@@ -23,6 +26,10 @@ namespace LivingSmartBusinessLogic.Catalog
 
             LoadCatalog();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <author>Mathias Petersen</author>
         internal void LoadCatalog()
         {
             var propertyTypeList = db.ReadPropertyTypes();
@@ -61,7 +68,11 @@ namespace LivingSmartBusinessLogic.Catalog
                 return propertyTypes[propertyTypeId];
             return null;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         public ReadOnlyCollection<PropertyType> GetPropertyTypes()
         {
             var cityList = new List<PropertyType>();

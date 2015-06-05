@@ -25,9 +25,24 @@ namespace LivingSmartBusinessLogic.Model
         #endregion
 
         #region Properties
-        public int Id { get; internal set; }
-        public string Type { get { return _type; } internal set { _type = value; } }
-        public int Distance { get { return _distance; } internal set { _distance = value; } }
+
+        public int Id
+        {
+            get; 
+            internal set;
+        }
+
+        public string Type
+        {
+            get { return _type; } 
+            internal set { _type = value; }
+        }
+
+        public int Distance
+        {
+            get { return _distance; } 
+            internal set { _distance = value; }
+        }
 
         #endregion
 

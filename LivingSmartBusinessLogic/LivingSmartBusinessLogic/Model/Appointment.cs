@@ -23,16 +23,44 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int Id { get; internal set; }
-        public DateTime StartTimestamp { get { return _startTimeStamp; } 
-            internal set { _startTimeStamp = value; } }
-        public DateTime EndTimeStamp { get { return _endTimeStamp; } 
-            internal set { _startTimeStamp = value; } }
-        public string Description { get { return _description; } 
-            internal set { _description = value; } }
-        public string Place { get { return _place; } internal set { _place = value; } }
-        public Customer Customer { get; private set; }
-        public Case Case { get; private set; }
+        public int Id
+        {
+            get; 
+            internal set;
+        }
+        public DateTime StartTimestamp 
+        { 
+            get { return _startTimeStamp; } 
+            internal set { _startTimeStamp = value; } 
+        }
+        public DateTime EndTimeStamp 
+        { 
+            get { return _endTimeStamp; } 
+            internal set { _startTimeStamp = value; } 
+        }
+        public string Description 
+        { 
+            get { return _description; } 
+            internal set { _description = value; } 
+        }
+
+        public string Place
+        {
+            get { return _place; } 
+            internal set { _place = value; }
+        }
+
+        public Customer Customer
+        {
+            get; 
+            private set;
+        }
+
+        public Case Case
+        {
+            get; 
+            private set;
+        }
 
 
         #endregion

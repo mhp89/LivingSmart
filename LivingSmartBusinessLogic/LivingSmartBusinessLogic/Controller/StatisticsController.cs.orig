@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+<<<<<<< HEAD
+using LivingSmartBusinessLogic.Model;
+using LivingSmartBusinessLogic.DB;
+=======
 using LivingSmartBusinessLogic.Database;
 using LivingSmartBusinessLogic.Model;
+>>>>>>> origin/Kommentarbranch
 
 namespace LivingSmartBusinessLogic.Controller
 {

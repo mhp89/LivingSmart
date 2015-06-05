@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Globalization;
 using LivingSmartBusinessLogic.Model;
+<<<<<<< HEAD
+using LivingSmartBusinessLogic.DBLayer;
+=======
+>>>>>>> origin/Kommentarbranch
 
 namespace LivingSmartBusinessLogic.Database
 {

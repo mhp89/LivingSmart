@@ -22,18 +22,51 @@ namespace LivingSmartBusinessLogic.Model
         #endregion
 
         #region Properties
-        public int Id { get; internal set; }
-        public string Name { get { return _name; } internal set { _name = value; } }
-        public string Telephone { get { return _telephone; } 
-            internal set { _telephone = value; } }
-        public string Email { get { return _email; } internal set { _email = value; } }
-        public DateTime StartingDate { get { return _startingDate; } 
-            internal set { _startingDate = value; } }
-        public DateTime? TerminationDate { get { return _terminationDate; }
+
+        public int Id
+        {
+            get; 
+            internal set;
+        }
+
+        public string Name
+        {
+            get { return _name; } 
+            internal set { _name = value; }
+        }
+        public string Telephone 
+        { 
+            get { return _telephone; } 
+            internal set { _telephone = value; } 
+        }
+
+        public string Email
+        {
+            get { return _email; } 
+            internal set { _email = value; }
+        }
+        public DateTime StartingDate 
+        { 
+            get { return _startingDate; } 
+            internal set { _startingDate = value; } 
+        }
+        public DateTime? TerminationDate 
+        { 
+            get { return _terminationDate; }
 			internal set { _terminationDate = value; }
 		}
-		public string Username { get { return _username; } internal set { _username = value; } }
-		public string Password { get { return _password; } internal set { _password = value; } }
+
+        public string Username
+        {
+            get { return _username; } 
+            internal set { _username = value; }
+        }
+
+        public string Password
+        {
+            get { return _password; } 
+            internal set { _password = value; }
+        }
 
         #endregion
 

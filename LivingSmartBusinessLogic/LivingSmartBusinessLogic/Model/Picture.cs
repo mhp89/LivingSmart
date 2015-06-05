@@ -1,4 +1,3 @@
-using System.Drawing;
 
 namespace LivingSmartBusinessLogic.Model
 {
@@ -18,11 +17,22 @@ namespace LivingSmartBusinessLogic.Model
         #endregion
 
         #region Properties
-        public int Id { get; internal set; }
-        public string Location { get { return _location; } 
-            internal set { _location = value; } }
-        public string Description { get { return _description; } 
-            internal set { _description = value; } }
+
+        public int Id
+        {
+            get; 
+            internal set;
+        }
+        public string Location 
+        { 
+            get { return _location; } 
+            internal set { _location = value; } 
+        }
+        public string Description 
+        { 
+            get { return _description; } 
+            internal set { _description = value; } 
+        }
 
         #endregion
 

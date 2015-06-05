@@ -15,7 +15,12 @@
         #endregion
 
         #region Properties
-        public int Id { get; internal set; }
+
+        public int Id
+        {
+            get; 
+            internal set;
+        }
         public string Description 
         { 
             get { return _description; } 

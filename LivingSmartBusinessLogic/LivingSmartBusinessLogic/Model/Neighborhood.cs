@@ -19,12 +19,34 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int Id { get; private set; }
-        public City City { get; private set; }
-        public string Name { get { return _name; } internal set { _name = value; } }
-        public int Value { get { return _value; } internal set { _value = value; } }
+        public int Id
+        {
+            get; 
+            private set;
+        }
 
-		public string DisplayName { get { return City.District + " " + Name; } }
+        public City City
+        {
+            get; 
+            private set;
+        }
+
+        public string Name
+        {
+            get { return _name; } 
+            internal set { _name = value; }
+        }
+
+        public int Value
+        {
+            get { return _value; } 
+            internal set { _value = value; }
+        }
+
+        public string DisplayName
+        {
+            get { return City.District + " " + Name; }
+        }
 
         #endregion
 

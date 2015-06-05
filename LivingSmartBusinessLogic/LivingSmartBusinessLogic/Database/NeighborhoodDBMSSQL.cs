@@ -2,13 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using LivingSmartBusinessLogic.DBLayer;
 using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic.DB
+namespace LivingSmartBusinessLogic.Database
 {
     internal class NeighborhoodDBMSSQL : INeighborhoodDB
     {

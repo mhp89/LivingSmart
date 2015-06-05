@@ -1,4 +1,11 @@
+<<<<<<< HEAD
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
+=======
+>>>>>>> origin/Kommentarbranch
 namespace LivingSmartBusinessLogic.Model
 {
     /// <summary>

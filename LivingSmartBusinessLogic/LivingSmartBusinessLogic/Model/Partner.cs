@@ -21,17 +21,58 @@ namespace LivingSmartBusinessLogic.Model
         #endregion
 
         #region Properties
-        public int Id { get; internal set; }
-        public string Name { get { return _name; } internal set { _name = value; } }
-        public string Telephone { get { return _telephone; } 
-            internal set { _telephone = value; } }
-        public string Email { get { return _email; } internal set { _email = value; } }
-        public string City { get { return _city; } internal set { _city = value; } }
-        public string Country { get { return _country; } internal set { _country = value; } }
-        public string Region { get { return _region; } internal set { _region = value; } }
-        public string RegionShort { get { return _regionShort; } 
-            internal set { _regionShort = value; } }
-        public string Timezone { get { return _timezone; } internal set { _timezone = value; } }
+
+        public int Id
+        {
+            get; 
+            internal set;
+        }
+
+        public string Name
+        {
+            get { return _name; } 
+            internal set { _name = value; }
+        }
+        public string Telephone 
+        { 
+            get { return _telephone; } 
+            internal set { _telephone = value; } 
+        }
+
+        public string Email
+        {
+            get { return _email; } 
+            internal set { _email = value; }
+        }
+
+        public string City
+        {
+            get { return _city; } 
+            internal set { _city = value; }
+        }
+
+        public string Country
+        {
+            get { return _country; } 
+            internal set { _country = value; }
+        }
+
+        public string Region
+        {
+            get { return _region; } 
+            internal set { _region = value; }
+        }
+        public string RegionShort 
+        { 
+            get { return _regionShort; } 
+            internal set { _regionShort = value; } 
+        }
+
+        public string Timezone
+        {
+            get { return _timezone; } 
+            internal set { _timezone = value; }
+        }
 
         #endregion
 
