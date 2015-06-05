@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,11 +11,7 @@ namespace LivingSmartBusinessLogic
     /// </summary>
     /// <typeparam name="TKey">Type of key - must implement IComparable.</typeparam>
     /// <typeparam name="TValue">Type of value to be saved in the priority queue.</typeparam>
-<<<<<<< HEAD
     /// <author>René Sørensen</author>
-=======
-    /// <author>René Sørensen</author>>
->>>>>>> origin/RedigerStuff
     public interface IPriorityQueue<TKey, TValue> where TKey : IComparable
     {
         /// <summary>

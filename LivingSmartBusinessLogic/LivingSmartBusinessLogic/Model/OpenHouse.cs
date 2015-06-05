@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace LivingSmartBusinessLogic.Model
@@ -7,11 +7,7 @@ namespace LivingSmartBusinessLogic.Model
     /// Given a list of cases and estate agents, this class is responsible for distributing
     /// cases to estate agents based on a given priority.
     /// </summary>
-<<<<<<< HEAD
-    /// <author></author>
-=======
-    /// <author>René Sørensen</author>>
->>>>>>> origin/RedigerStuff
+    /// <author>René Sørensen</author>
     public class OpenHouse
     {
         private readonly List<EstateAgent> brokers;
