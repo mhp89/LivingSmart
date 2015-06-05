@@ -31,6 +31,7 @@
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblZipCode = new System.Windows.Forms.Label();
             this.pnlLine = new System.Windows.Forms.Panel();
+            this.lblPrice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblAddress
@@ -40,7 +41,7 @@
             this.lblAddress.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.lblAddress.Location = new System.Drawing.Point(0, 0);
             this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(150, 25);
+            this.lblAddress.Size = new System.Drawing.Size(150, 22);
             this.lblAddress.TabIndex = 0;
             this.lblAddress.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -49,9 +50,9 @@
             this.lblZipCode.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblZipCode.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblZipCode.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.lblZipCode.Location = new System.Drawing.Point(0, 25);
+            this.lblZipCode.Location = new System.Drawing.Point(0, 22);
             this.lblZipCode.Name = "lblZipCode";
-            this.lblZipCode.Size = new System.Drawing.Size(150, 25);
+            this.lblZipCode.Size = new System.Drawing.Size(150, 22);
             this.lblZipCode.TabIndex = 1;
             this.lblZipCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -59,21 +60,33 @@
             // 
             this.pnlLine.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.pnlLine.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.pnlLine.Location = new System.Drawing.Point(0, 55);
+            this.pnlLine.Location = new System.Drawing.Point(0, 71);
             this.pnlLine.Margin = new System.Windows.Forms.Padding(0, 5, 0, 0);
             this.pnlLine.Name = "pnlLine";
             this.pnlLine.Size = new System.Drawing.Size(150, 1);
             this.pnlLine.TabIndex = 9;
             // 
+            // lblPrice
+            // 
+            this.lblPrice.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.lblPrice.Location = new System.Drawing.Point(0, 44);
+            this.lblPrice.Name = "lblPrice";
+            this.lblPrice.Size = new System.Drawing.Size(150, 22);
+            this.lblPrice.TabIndex = 10;
+            this.lblPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // OpenHouseProperty
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.Controls.Add(this.lblPrice);
             this.Controls.Add(this.pnlLine);
             this.Controls.Add(this.lblZipCode);
             this.Controls.Add(this.lblAddress);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "OpenHouseProperty";
-            this.Size = new System.Drawing.Size(150, 56);
+            this.Size = new System.Drawing.Size(150, 72);
             this.ResumeLayout(false);
 
         }
@@ -83,5 +96,6 @@
         private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblZipCode;
         private System.Windows.Forms.Panel pnlLine;
+        private System.Windows.Forms.Label lblPrice;
     }
 }
