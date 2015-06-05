@@ -13,6 +13,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns all the Cities from the database.
         /// </summary>
         /// <returns>Returns a List of all the Cities from the database</returns>
+        /// <author>René Sørensen</author>
         List<City> ReadCities();
     }
 }

@@ -16,6 +16,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="estateAgentId"></param>
         /// <param name="year"></param>
         /// <returns></returns>
+        /// 
         List<Statistics> ReadEstateAgentStatistics(int estateAgentId, int year);
 
         /// <summary>

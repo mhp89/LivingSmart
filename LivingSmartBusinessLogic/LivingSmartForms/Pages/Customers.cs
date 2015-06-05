@@ -16,47 +16,46 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
-	public partial class Customers : BasePage
-	{
-        public Customers(BaseForm baseForm) : base(baseForm)
-		{
-			InitializeComponent();
-		}
-
-		private void UpdateList()
-		{
-			clsCustomers.SuspendLayout();
-
-			clsCustomers.ClearList();
-			var customers = CustomerController.Instance.GetCustomers();
-			foreach (var customer in customers)
-			{
-				var control = new CustomerLine(baseForm, customer) {Margin = Padding.Empty};
-				clsCustomers.AddControl(control, true);
-			}
-			sblCustomers.Text = clsCustomers.Controls.Count.ToString();
-
-			clsCustomers.ResumeLayout();
-		}
-
-		public override void OnShow()
-		{
-			UpdateList();
-		}
-
-		private void NewCustomerAdded(Customer customer)
-		{
-            if (customer != null)
-			{
-				var control = new CustomerLine(baseForm, customer) {Margin = Padding.Empty};
-				clsCustomers.AddControl(control);
-				sblCustomers.Text = clsCustomers.Controls.Count.ToString();
-			}
+    public partial class Customers : BasePage
+    {
+        public Customers(BaseForm baseForm)
+            : base(baseForm)
+        {
+            InitializeComponent();
         }
 
-		private void btnNewCustomer_Click(object sender, EventArgs e)
-		{
-			baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, null, NewCustomerAdded));
-		}
-	}
+        private void UpdateList()
+        {
+            clsCustomers.SuspendLayout();
+
+            clsCustomers.ClearList();
+            var customers = CustomerController.Instance.GetCustomers();
+            foreach (var customer in customers)
+            {
+                var control = new CustomerLine(baseForm, customer) { Margin = Padding.Empty };
+                clsCustomers.AddControl(control, true);
+            }
+            sblCustomers.Text = clsCustomers.Controls.Count.ToString();
+
+            clsCustomers.ResumeLayout();
+        }
+
+        public override void OnShow()
+        {
+            UpdateList();
+        }
+
+        private void NewCustomerAdded(Customer customer)
+        {
+            if (customer == null) return;
+            var control = new CustomerLine(baseForm, customer) { Margin = Padding.Empty };
+            clsCustomers.AddControl(control);
+            sblCustomers.Text = clsCustomers.Controls.Count.ToString();
+        }
+
+        private void btnNewCustomer_Click(object sender, EventArgs e)
+        {
+            baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, null, NewCustomerAdded));
+        }
+    }
 }

@@ -16,16 +16,16 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCustomer : UserControl
     {
-        public Customer CreatedUser { get; private set; }
-        private Customer currentCustomer;
+        public Customer CurrentCustomer { get; private set; }
+        // private Customer CurrentCustomer;
 
         public NewCustomer(BaseForm baseForm, Customer customer)
         {
             InitializeComponent();
 
-            currentCustomer = customer;
+            CurrentCustomer = customer;
 
-            if (currentCustomer != null)
+            if (CurrentCustomer != null)
             {
                 stbCustomerName.Text = customer.Name;
                 stbCustomerAddress.Text = customer.Address;
@@ -41,9 +41,9 @@ namespace LivingSmartForms.Views
             bool fielddataOk = ValidateFields();
             if (fielddataOk)
             {
-                if (currentCustomer == null)
+                if (CurrentCustomer == null)
                 {
-                    CreatedUser = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
+                    CurrentCustomer = CustomerController.Instance.MakeNewCustomer(stbCustomerName.Text,
                         (DateTime)dafCustomerBirthday.GetDateTime(),
                         stbCustomerAddress.Text,
                         Convert.ToInt32(stbCustomerZipCode.Text),
@@ -51,7 +51,7 @@ namespace LivingSmartForms.Views
                         stbCustomerPhone.Text);
                     CustomerController.Instance.SaveActiveCustomer();
 
-                    if (CreatedUser.Id == -1)
+                    if (CurrentCustomer.Id == -1)
                     {
                         MessageBox.Show("Der opstod en fejl");
                         fielddataOk = false;
@@ -59,7 +59,7 @@ namespace LivingSmartForms.Views
                 }
                 else
                 {
-                    CustomerController.Instance.SetActiveCustomer(currentCustomer);
+                    CustomerController.Instance.SetActiveCustomer(CurrentCustomer);
                     CustomerController.Instance.SetName(stbCustomerName.Text);
                     CustomerController.Instance.SetAddress(stbCustomerAddress.Text);
                     CustomerController.Instance.SetCity(Convert.ToInt32(stbCustomerZipCode.Text));

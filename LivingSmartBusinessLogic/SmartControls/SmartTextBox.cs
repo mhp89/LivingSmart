@@ -1,21 +1,20 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartControls
 {
+	/// <summary>
+	/// Nyt TextBox control, med validering, suffix og placeholder 
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public class SmartTextBox : Control
 	{
 		private bool firstDraw = true;
 
-		private ExtendedTextBox textBox;
+		private readonly ExtendedTextBox textBox;
 		private ToolTip toolTip;
 
 		private Color BorderColor;

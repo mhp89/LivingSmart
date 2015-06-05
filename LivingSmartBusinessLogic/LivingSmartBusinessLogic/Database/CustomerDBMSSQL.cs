@@ -17,6 +17,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns all the Customers from the database.
         /// </summary>
         /// <returns>Returns a List of all the Customer from the database</returns>
+        /// <author>René Sørensen</author>
         public List<Customer> ReadCustomers()
         {
             List<Customer> customerList = new List<Customer>();
@@ -61,6 +62,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Updates the information from a Customer, in the database.
         /// </summary>
         /// <param name="customer">Customer to be updated.</param>
+        /// <author>René Sørensen</author>
         public void UpdateCustomer(Customer customer)
         {
             int customerID = customer.Id;
@@ -87,6 +89,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="customer">Customer to be created.</param>
         /// <returns>Returns the Id of the Customer created.</returns>
+        /// <author>René Sørensen</author>
         public int CreateCustomer(Customer customer)
         {
             SqlCommand cmd = new SqlCommand

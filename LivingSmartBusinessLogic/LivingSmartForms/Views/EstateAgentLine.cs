@@ -39,7 +39,12 @@ namespace LivingSmartForms
 
         private void btnSeeEstateAgent_Click(object sender, EventArgs e)
         {
-            baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm, estateAgent, null));
+            baseForm.ShowDropIn(new NewEstateAgentDropIn(baseForm, estateAgent, Callback));
+        }
+
+        private void Callback(EstateAgent estateAgent)
+        {
+            UpdateFields();
         }
     }
 }

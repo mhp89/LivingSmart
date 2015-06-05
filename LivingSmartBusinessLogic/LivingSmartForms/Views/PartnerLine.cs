@@ -38,7 +38,7 @@ namespace LivingSmartForms.Views
 
         private void btnEditPartner_Click(object sender, EventArgs e)
         {
-            baseForm.ShowDropIn(new NewPartnerDropIn(baseForm, partner, null));
+            baseForm.ShowDropIn(new NewPartnerDropIn(baseForm, partner, UpdateFields));
         }
     }
 }

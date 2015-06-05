@@ -16,6 +16,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns all the PropertyTypes from the database.
         /// </summary>
         /// <returns>Returns a List of all the PropertyTypes.</returns>
+        /// <author>René Sørensen</author>
         public List<PropertyType> ReadPropertyTypes()
         {
             List<PropertyType> propertyTypeList = new List<PropertyType>();
@@ -55,6 +56,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Updates the information from a PropertyType, in the database.
         /// </summary>
         /// <param name="propertyType">PropertyType to be updated.</param>
+        /// <author>René Sørensen</author>
         public void UpdatePropertyType(PropertyType propertyType)
         {
             int propertyTypeId = propertyType.Id;
@@ -77,6 +79,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="propertyType">PropertyType to be created.</param>
         /// <returns>Returns the Id of the PropertyType created.</returns>
+        /// <author>René Sørensen</author>
         public int CreatePropertyType(PropertyType propertyType)
         {
             SqlCommand cmd = new SqlCommand

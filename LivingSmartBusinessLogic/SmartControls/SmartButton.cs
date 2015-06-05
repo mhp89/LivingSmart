@@ -1,17 +1,19 @@
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartControls
 {
+	/// <summary>
+	/// Udvidet Button med kosmetiske ændring
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public class SmartButton : Button
 	{
-		private SmartColor.ColorStyle _color;
+		/// <summary>
+		/// Angiver om knappen er lys eller mørk
+		/// </summary>
 		[Category("Appearance")]
 		public SmartColor.ColorStyle Color
 		{
@@ -22,6 +24,7 @@ namespace SmartControls
 				UpdateColor();
 			}
 		}
+		private SmartColor.ColorStyle _color;
 		
 		protected override Size DefaultSize { get { return new Size(75, 30);} }
 		protected override Padding DefaultMargin { get { return Padding.Empty; } }
@@ -58,6 +61,9 @@ namespace SmartControls
 			return baseSize;
 		}
 
+		/// <summary>
+		/// Opdatere farveren ud fra den valgte ColorStyle
+		/// </summary>
 		private void UpdateColor()
 		{
 			ForeColor = (Color == SmartColor.ColorStyle.Light) ? SmartColor.Dark : SmartColor.Light;
@@ -93,6 +99,5 @@ namespace SmartControls
 		}
 
 		#endregion
-
 	}
 }

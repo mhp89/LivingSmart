@@ -55,7 +55,7 @@ namespace LivingSmartForms.DropIns
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            FinishCreating(null);
+            Close();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -63,7 +63,7 @@ namespace LivingSmartForms.DropIns
             if (newEstateAgentForm.Save())
             {
                 //Customer saved
-                FinishCreating(newEstateAgentForm.CreatedEstateAgent);
+                FinishCreating(newEstateAgentForm.CurrentEstateAgent);
             }
         }
     }

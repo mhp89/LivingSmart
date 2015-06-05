@@ -31,7 +31,7 @@ namespace LivingSmartForms.Views
         private void InitializeComponent()
         {
             this.tlpNewPartner = new System.Windows.Forms.TableLayoutPanel();
-			this.cboTimezone = new System.Windows.Forms.ComboBox();
+            this.cboTimezone = new System.Windows.Forms.ComboBox();
             this.stbRegion = new SmartControls.SmartTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblPartnerTimeZone = new System.Windows.Forms.Label();
@@ -90,17 +90,17 @@ namespace LivingSmartForms.Views
             this.tlpNewPartner.Size = new System.Drawing.Size(480, 320);
             this.tlpNewPartner.TabIndex = 5;
             // 
-			// cboTimezone
-			// 
-			this.cboTimezone.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.cboTimezone.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-			this.cboTimezone.FormattingEnabled = true;
-			this.cboTimezone.Location = new System.Drawing.Point(120, 280);
-			this.cboTimezone.Margin = new System.Windows.Forms.Padding(0);
-			this.cboTimezone.Name = "cboTimezone";
-			this.cboTimezone.Size = new System.Drawing.Size(360, 21);
-			this.cboTimezone.TabIndex = 21;
-			// 
+            // cboTimezone
+            // 
+            this.cboTimezone.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.cboTimezone.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboTimezone.FormattingEnabled = true;
+            this.cboTimezone.Location = new System.Drawing.Point(120, 280);
+            this.cboTimezone.Margin = new System.Windows.Forms.Padding(0);
+            this.cboTimezone.Name = "cboTimezone";
+            this.cboTimezone.Size = new System.Drawing.Size(360, 21);
+            this.cboTimezone.TabIndex = 21;
+            // 
             // stbRegion
             // 
             this.stbRegion.AllowComma = false;

@@ -15,12 +15,11 @@ namespace LivingSmartForms.Views
 {
     public partial class NewEstateAgent : UserControl
     {
-        public EstateAgent CreatedEstateAgent { get; private set; }
-        private EstateAgent currentEstateAgent;
+        public EstateAgent CurrentEstateAgent { get; private set; }
 
         public NewEstateAgent(BaseForm baseForm, EstateAgent estateAgent)
         {
-            currentEstateAgent = estateAgent;
+            CurrentEstateAgent = estateAgent;
 
             InitializeComponent();
 
@@ -44,13 +43,13 @@ namespace LivingSmartForms.Views
             bool fielddataOk = ValidateFields();
             if (fielddataOk)
             {
-                if (currentEstateAgent == null)
+                if (CurrentEstateAgent == null)
                 {
-                    CreatedEstateAgent = EstateAgentController.Instance.MakeNewEstateAgent(stbName.Text, stbPhone.Text,
+                    CurrentEstateAgent = EstateAgentController.Instance.MakeNewEstateAgent(stbName.Text, stbPhone.Text,
                         stbEmail.Text, (DateTime)dafStartDate.GetDateTime(), dafTerminationDate.GetDateTime(), stbUsername.Text, stbPassword.Text);
                     EstateAgentController.Instance.SaveActiveEstateAgent();
 
-                    if (CreatedEstateAgent.Id == -1)
+                    if (CurrentEstateAgent.Id == -1)
                     {
                         MessageBox.Show("Tilykke, du fandt en fejl!");
                         fielddataOk = false;
@@ -58,7 +57,7 @@ namespace LivingSmartForms.Views
                 }
                 else
                 {
-                    EstateAgentController.Instance.SetActiveEstateAgent(currentEstateAgent);
+                    EstateAgentController.Instance.SetActiveEstateAgent(CurrentEstateAgent);
                     EstateAgentController.Instance.SetName(stbName.Text);
                     EstateAgentController.Instance.SetTelephone(stbPhone.Text);
                     EstateAgentController.Instance.SetEmail(stbEmail.Text);
@@ -81,7 +80,7 @@ namespace LivingSmartForms.Views
             fielddataOk &= stbUsername.Validate();
             fielddataOk &= stbPassword.Validate();
 
-            if (fielddataOk && currentEstateAgent == null && !EstateAgentController.Instance.IsUsernameAvailable(stbUsername.Text))
+            if (fielddataOk && CurrentEstateAgent == null && !EstateAgentController.Instance.IsUsernameAvailable(stbUsername.Text))
             {
                 stbUsername.SetError("Brugernavn allerede i brug");
                 fielddataOk = false;

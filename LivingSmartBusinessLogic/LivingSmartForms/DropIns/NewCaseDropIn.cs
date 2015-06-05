@@ -131,7 +131,7 @@ namespace LivingSmartForms.DropIns
 		{
 			btnPrev.Enabled = currentStepIndex != 0;
 
-			btnNext.Text = (currentStepIndex == steps.Length - 1) ? "Færdig" : "Næste";
+			btnNext.Text = (currentStepIndex == steps.Length - 1) ? "Gem" : "Næste";
 		}
 
 

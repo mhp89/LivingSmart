@@ -41,7 +41,12 @@ namespace LivingSmartForms.Views
 
         private void btnEditCustomer_Click(object sender, EventArgs e)
         {
-            baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, customer));
+            baseForm.ShowDropIn(new NewCustomerDropIn(baseForm, customer, Callback));
+        }
+
+        private void Callback(Customer customer)
+        {
+            UpdateFields();
         }
     }
 }

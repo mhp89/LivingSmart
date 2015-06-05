@@ -5,19 +5,12 @@ using System.Windows.Forms;
 
 namespace SmartControls
 {
+	/// <summary>
+	/// Knap til topmenuen
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class MenuButton : Button
 	{
-		#region Style
-
-		/*private ColorStyle _color;
-		public ColorStyle Color
-		{
-			get { return _color; }
-			set { _color = value; Invalidate(); }
-		}*/
-
-		#endregion
-
 		#region States
 
 		private bool _hovering;
@@ -35,7 +28,10 @@ namespace SmartControls
 		#endregion
 
 		#region Selected
-		private bool _selected;
+
+		/// <summary>
+		/// Indicates if the button is selected
+		/// </summary>
 		[Browsable(true)]
 		[Category("Appearance")]
 		[Description("Indicates whether the button is selected")]
@@ -45,12 +41,13 @@ namespace SmartControls
 			get { return _selected; }
 			set { _selected = value; Invalidate(); }
 		}
+		private bool _selected;
+
 		#endregion
 
 		#region Text
-		//Keyword new gør at denne variabler overskrive en eksisterende variabel 
-		//af samme navn fra Control klassen 
-		public new String Text
+
+		public override String Text
 		{
 			get { return base.Text; }
 			set
@@ -62,8 +59,8 @@ namespace SmartControls
 		#endregion
 
 		#region Padding
-		//Keyword new g�r at denne variabler overskrive en eksiterende variabel 
-		//af samme navn fra Control klassen 
+		//Keyword new gør at denne variabel overskrive en eksisterende
+		//variabel af samme navn fra Control klassen
 		public new Padding Padding
 		{
 			get { return base.Padding; }
@@ -88,9 +85,11 @@ namespace SmartControls
 			UpdateAutosize();
 		}
 
+		/// <summary>
+		/// Retter størrelsen i forhold til teksten, hvis AutoSize er slået til
+		/// </summary>
 		private void UpdateAutosize()
 		{
-			//Tilpasser automatisk knappens størrelse efter hvor meget teksten fylder
 			if (AutoSize)
 			{
 				Size = GetPreferredSize(Size.Empty);

@@ -16,6 +16,7 @@ namespace LivingSmartBusinessLogic.DB
         /// Returns a dictionary containing all the appointments in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the appointments in the database, with estateAgentId as key and a list of appointments containing that estateAgentId</returns>
+        /// <author>René Sørensen</author>
         public Dictionary<int, List<Appointment>> ReadAppointments()
         {
             Dictionary<int, List<Appointment>> appointments = new Dictionary<int, List<Appointment>>();
@@ -66,6 +67,7 @@ namespace LivingSmartBusinessLogic.DB
         /// </summary>
         /// <param name="appointment">Appointment to be updated.</param>
         /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
+        /// <author>René Sørensen</author>
         public void UpdateAppointment(Appointment appointment, int estateAgentId)
         {
             int appointmentId = appointment.Id;
@@ -94,6 +96,7 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="appointment">Appointment to be created.</param>
         /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
         /// <returns>Returns the Id of the Appointment created.</returns>
+        /// <author>René Sørensen</author>
         public int CreateAppointment(Appointment appointment, int estateAgentId)
         {
             SqlCommand cmd = new SqlCommand

@@ -7,27 +7,41 @@ namespace LivingSmartBusinessLogic.Model
     /// Given a list of cases and estate agents, this class is responsible for distributing
     /// cases to estate agents based on a given priority.
     /// </summary>
+<<<<<<< HEAD
     /// <author></author>
+=======
+    /// <author>René Sørensen</author>>
+>>>>>>> origin/RedigerStuff
     public class OpenHouse
     {
         private readonly List<EstateAgent> brokers;
-        private readonly List<KeyValuePair<decimal, Case>> keyCasePair;
-        private readonly IPriorityQueue<decimal, Case> pq;
+        private readonly List<KeyValuePair<decimal, Case>> keyCasePairs;
+        private IPriorityQueue<decimal, Case> pq;
         private readonly Dictionary<EstateAgent, List<Case>> openHouse;
 
         /// <summary>
         /// Takes a list of brokers and a List of KeyValuesPairs of Decimals and Cases
         /// </summary>
         /// <param name="brokers"></param>
-        /// <param name="keyCasePair"></param>
-        public OpenHouse(List<EstateAgent> brokers, List<KeyValuePair<decimal, Case>> keyCasePair)
+        /// <param name="keyCasePairs"></param>
+        /// <author>René Sørensen</author>>
+        public OpenHouse(List<EstateAgent> brokers, List<KeyValuePair<decimal, Case>> keyCasePairs)
         {
-            this.keyCasePair = keyCasePair;
+            this.keyCasePairs = keyCasePairs;
             this.brokers = brokers;
-            pq = new PriorityQueue<decimal, Case>();
             openHouse = new Dictionary<EstateAgent, List<Case>>();
 
-            foreach (var caseAskingPricePair in this.keyCasePair)
+            pq = new PriorityQueue<decimal, Case>();
+            foreach (var caseAskingPricePair in this.keyCasePairs)
+            {
+                pq.Insert(caseAskingPricePair.Key, caseAskingPricePair.Value);
+            }
+        }
+
+        private void LoadPriorityQueue()
+        {
+            pq = new PriorityQueue<decimal, Case>();
+            foreach (var caseAskingPricePair in keyCasePairs)
             {
                 pq.Insert(caseAskingPricePair.Key, caseAskingPricePair.Value);
             }
@@ -38,8 +52,11 @@ namespace LivingSmartBusinessLogic.Model
         /// The key could be the price of the house 
         /// </summary>
         /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
+        /// <author>René Sørensen</author>>
         public Dictionary<EstateAgent, List<Case>> ReturnOpenHouseShuffle()
         {
+            LoadPriorityQueue();
+
             if (brokers.Count > 0)
             {
                 int brokerIndex = 0;
@@ -69,8 +86,11 @@ namespace LivingSmartBusinessLogic.Model
         /// The key could be the price of the house 
         /// </summary>
         /// <returns>Returns a dictionary containing Broker as key and a list of Cases as value.</returns>
+        /// <author>René Sørensen</author>>
         public Dictionary<EstateAgent, List<Case>> ReturnOpenHouseEvenly()
         {
+            LoadPriorityQueue();
+
             if (brokers.Count > 0)
             {
                 bool usingLeft = true;
@@ -119,6 +139,7 @@ namespace LivingSmartBusinessLogic.Model
         /// </summary>
         /// <typeparam name="T">Type of elements in the list.</typeparam>
         /// <param name="list">The list of elements to be shuffled.</param>
+        /// <author>René Sørensen</author>>
         private void Shuffle<T>(List<T> list)
         {
             if (list.Count >= 2)
