@@ -28,6 +28,12 @@ namespace LivingSmartBusinessLogic.DB
         /// Returnerer statistik for solgte ejendomme i indeværende år
         /// </summary>
         /// <returns></returns>
-        Statistics ReadDialStatistics();
+        Statistics ReadThisYearStatistics();
+
+        /// <summary>
+        /// Returnerer statistik for solgte ejendomme for det foregående år
+        /// </summary>
+        /// <returns></returns>
+        Statistics ReadLastYearStatistics();
     }
 }

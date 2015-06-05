@@ -10,6 +10,10 @@ using LivingSmartBusinessLogic.DBLayer;
 
 namespace LivingSmartBusinessLogic.DB
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <author>Maja Olesen</author>
     internal class StatisticsDBMSSQL : IStatisticsDB
     {
         /// <summary>
@@ -19,7 +23,6 @@ namespace LivingSmartBusinessLogic.DB
         /// <param name="estateAgentId"></param>
         /// <param name="chosenYear"></param>
         /// <returns></returns>
-        /// <author>Maja Olesen</author>
         public List<Statistics> ReadEstateAgentStatistics(int estateAgentId, int chosenYear)
         {
             List<Statistics> list = new List<Statistics>();
@@ -70,7 +73,6 @@ namespace LivingSmartBusinessLogic.DB
         /// og antallet af ejendomme per år per måned per mægler
         /// </summary>
         /// <returns></returns>
-        /// <author>Maja Olesen</author>
         public List<Statistics> ReadAllStatistics()
         {
             List<Statistics> list = new List<Statistics>();
@@ -121,16 +123,16 @@ namespace LivingSmartBusinessLogic.DB
         /// Returnerer antal solgte ejendomme for indeværende år og den total salgspris
         /// </summary>
         /// <returns></returns>
-        /// <author>Maja Olesen</author>
-        public Statistics ReadDialStatistics()
+        public Statistics ReadThisYearStatistics()
         {
             Statistics stats = new Statistics();
 
-	        string sqlstring = "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count " +
+            string sqlstring = "SELECT DATEPART(yyyy, DateOfSale) AS Year, " +
+                               "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count " +
 	                           "FROM [Case] " +
 	                           "WHERE Status = 'Sold' " +
 	                           "and DATEPART(YEAR, DateOfSale) = DATEPART(YEAR, GETDATE()) " +
-            "Group by DATEPART(YEAR, DateOfSale)";
+                               "Group by DATEPART(YEAR, DateOfSale)";
 		    
 			SqlDataReader reader = null;
             try
@@ -151,6 +153,45 @@ namespace LivingSmartBusinessLogic.DB
             {
 	            if (reader != null) 
 					reader.Close();
+            }
+
+            return stats;
+        }
+
+        /// <summary>
+        /// Returnerer antal solgte ejendomme for det foregående år og den total salgspris
+        /// </summary>
+        /// <returns></returns>
+        public Statistics ReadLastYearStatistics()
+        {
+            Statistics stats = new Statistics();
+
+            string sqlstring = "SELECT DATEPART(yyyy, DateOfSale) AS Year, " +
+                               "SUM(SellingPrice) as Total, COUNT(SellingPrice) as Count " +
+                               "FROM [Case] " +
+                               "WHERE Status = 'Sold' " +
+                               "and DATEPART(YEAR, DateOfSale) = YEAR(DATEADD(YEAR,-1, GETDATE())) " +
+                               "Group by DATEPART(YEAR, DateOfSale)";
+
+            SqlDataReader reader = null;
+            try
+            {
+                reader = DBConnectionMSSQL.Instance.ExecuteReader(sqlstring);
+                while (reader.Read())
+                {
+                    stats.Year = (int)reader["Year"];
+                    stats.SellingpriceTotal = (long)reader["Total"];
+                    stats.PropertiesTotal = (int)reader["Count"];
+                }
+            }
+            catch (SqlException e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            finally
+            {
+                if (reader != null)
+                    reader.Close();
             }
 
             return stats;

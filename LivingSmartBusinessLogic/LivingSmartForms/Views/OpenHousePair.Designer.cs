@@ -42,7 +42,7 @@
             this.lblEstateAgentTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.lblEstateAgentTitle.Location = new System.Drawing.Point(3, 34);
             this.lblEstateAgentTitle.Name = "lblEstateAgentTitle";
-            this.lblEstateAgentTitle.Size = new System.Drawing.Size(222, 30);
+            this.lblEstateAgentTitle.Size = new System.Drawing.Size(207, 30);
             this.lblEstateAgentTitle.TabIndex = 0;
             this.lblEstateAgentTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -52,9 +52,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.clsProperties.AutoScroll = true;
             this.clsProperties.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.clsProperties.Location = new System.Drawing.Point(0, 135);
+            this.clsProperties.Location = new System.Drawing.Point(0, 115);
             this.clsProperties.Name = "clsProperties";
-            this.clsProperties.Size = new System.Drawing.Size(225, 312);
+            this.clsProperties.Size = new System.Drawing.Size(210, 332);
             this.clsProperties.Spacing = 10;
             this.clsProperties.TabIndex = 3;
             this.clsProperties.WrapContents = false;
@@ -65,9 +65,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.hdrProperties.Color = SmartControls.SmartColor.ColorStyle.Light;
             this.hdrProperties.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.hdrProperties.Location = new System.Drawing.Point(0, 100);
+            this.hdrProperties.Location = new System.Drawing.Point(0, 80);
             this.hdrProperties.Name = "hdrProperties";
-            this.hdrProperties.Size = new System.Drawing.Size(225, 25);
+            this.hdrProperties.Size = new System.Drawing.Size(210, 25);
             this.hdrProperties.TabIndex = 2;
             this.hdrProperties.Text = "Ejendomme";
             // 
@@ -78,7 +78,7 @@
             this.hdrEstateAgent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
             this.hdrEstateAgent.Location = new System.Drawing.Point(0, 0);
             this.hdrEstateAgent.Name = "hdrEstateAgent";
-            this.hdrEstateAgent.Size = new System.Drawing.Size(225, 25);
+            this.hdrEstateAgent.Size = new System.Drawing.Size(210, 25);
             this.hdrEstateAgent.TabIndex = 1;
             this.hdrEstateAgent.Text = "Mægler";
             // 
@@ -91,7 +91,7 @@
             this.Controls.Add(this.lblEstateAgentTitle);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "OpenHousePair";
-            this.Size = new System.Drawing.Size(225, 450);
+            this.Size = new System.Drawing.Size(210, 450);
             this.ResumeLayout(false);
 
         }

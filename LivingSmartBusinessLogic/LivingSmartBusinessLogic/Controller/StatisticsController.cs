@@ -62,9 +62,18 @@ namespace LivingSmartBusinessLogic.Controller
         /// Returnerer statistik for solgte ejendomme i indeværende år
         /// </summary>
         /// <returns></returns>
-        public Statistics ReadDialStatistics()
+        public Statistics ReadThisYearStatistics()
         {
-            return db.ReadDialStatistics();
+            return db.ReadThisYearStatistics();
+        }
+
+        /// <summary>
+        /// Returnerer statistik for solgte ejendomme for det foregående år
+        /// </summary>
+        /// <returns></returns>
+        public Statistics ReadLastYearStatistics()
+        {
+            return db.ReadLastYearStatistics();
         }
     }
 }

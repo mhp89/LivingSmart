@@ -38,7 +38,8 @@ namespace LivingSmartForms.Views
         private void UpdateFields()
         {
             lblAddress.Text = Property.Address;
-	        lblZipCode.Text = Property.City.DisplayName;
+	        lblZipCode.Text = Property.City.NiceDisplay;
+            lblPrice.Text = Property.NewestAskingPrice.ToString("c0");
         }
     }
 }

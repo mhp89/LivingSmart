@@ -33,7 +33,7 @@ namespace LivingSmartForms.Views
 		    slbCustomerNo.Text = customer.Id.ToString();
 		    slbCustomer.Text = customer.Name;
 		    slbCustomerAddress.Text = customer.Address;
-		    slbCustomerZipcode.Text = customer.City.DisplayName;
+		    slbCustomerZipcode.Text = customer.City.NiceDisplay;
 		    slbCustomerPhone.Text = customer.Telephone;
 		    slbCustomerEmail.Text = customer.Email;
 		    slbCustomerBirthday.Text = customer.DateOfBirth.ToShortDateString();

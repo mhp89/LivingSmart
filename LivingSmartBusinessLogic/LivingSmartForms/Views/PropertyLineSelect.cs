@@ -41,7 +41,7 @@ namespace LivingSmartForms.Views
 
         private void UpdateFields()
         {
-	        slbPropertyAddress.Text = Property.Address + ", " + Property.City.DisplayName;
+	        slbPropertyAddress.Text = Property.Address + ", " + Property.City.NiceDisplay;
         }
 
         private void Select(object sender, EventArgs e)
