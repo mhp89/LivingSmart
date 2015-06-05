@@ -12,10 +12,10 @@ namespace LivingSmartForms.DropIns
 	{
 		private NewCustomer newCustomerForm;
 
-		private NewCustomerFinish callback;
-		public delegate void NewCustomerFinish(Customer customer);
+		private CustomerFinish callback;
+		public delegate void CustomerFinish(Customer customer);
 
-		public NewCustomerDropIn(BaseForm baseForm, Customer customer, NewCustomerFinish callback=null) : base(baseForm)
+		public NewCustomerDropIn(BaseForm baseForm, Customer customer, CustomerFinish callback=null) : base(baseForm)
 		{
 			InitializeComponent();
 			this.callback = callback;
@@ -36,25 +36,20 @@ namespace LivingSmartForms.DropIns
 			return "NewCustomer";
 		}
 
-        private void FinishCreating(Customer customer)
-		{
-			CustomerController.Instance.CancelActiveCustomer();
-			if(customer != null && callback != null)
-				callback(customer);
-			Close();
-		}
-
 		private void btnCancel_Click(object sender, EventArgs e)
 		{
-			FinishCreating(null);
+			Close();
 		}
 
 		private void btnSave_Click(object sender, EventArgs e)
 		{
             if (newCustomerForm.Save())
-			{
-				//Customer saved
-				FinishCreating(newCustomerForm.CreatedUser);
+            {
+                var customer = newCustomerForm.CurrentCustomer;
+                CustomerController.Instance.CancelActiveCustomer();
+                if (customer != null && callback != null)
+                    callback(customer);
+                Close();
 			}
 		}
 	}
