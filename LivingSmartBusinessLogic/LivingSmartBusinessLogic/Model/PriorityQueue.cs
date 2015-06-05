@@ -52,16 +52,23 @@ namespace LivingSmartBusinessLogic
             int index = Count;
             heap[index] = new KeyValuePair<TKey, TValue>(key, value);
 
-            while (index > 0 && heap[index].Key.CompareTo(heap[(index - 1) / 2].Key) > 0)
+            int parent = (index - 1) / 2;
+            while (index > 0 && heap[index].Key.CompareTo(heap[parent].Key) > 0)
             {
-                KeyValuePair<TKey, TValue> temp = heap[index];
-                heap[index] = heap[(index - 1) / 2];
-                heap[(index - 1) / 2] = temp;
+                Swap(index, parent);
 
-                index = (index - 1) / 2;
+                index = parent;
+                parent = (index - 1) / 2;
             }
 
             Count++;
+        }
+
+        private void Swap(int index1, int index2)
+        {
+            var temp = heap[index1];
+            heap[index1] = heap[index2];
+            heap[index2] = temp;
         }
 
         /// <summary>
@@ -76,7 +83,7 @@ namespace LivingSmartBusinessLogic
             {
                 maxElement = heap[0].Value;
                 heap[0] = heap[heap.Length - 1];
-                MaxHeapify(heap, 0);
+                MaxHeapify(0);
                 Count--;
             }
             return maxElement;
@@ -125,7 +132,7 @@ namespace LivingSmartBusinessLogic
         /// <param name="heap"></param>
         /// <param name="index"></param>
         /// <author>René Sørensen</author>>
-        private void MaxHeapify(KeyValuePair<TKey, TValue>[] heap, int index)
+        private void MaxHeapify(int index)
         {
             int left = 2 * index + 1;
             int right = 2 * index + 2;
@@ -143,7 +150,7 @@ namespace LivingSmartBusinessLogic
                 KeyValuePair<TKey, TValue> temp = heap[index];
                 heap[index] = heap[largestIndex];
                 heap[largestIndex] = temp;
-                MaxHeapify(heap, largestIndex);
+                MaxHeapify(largestIndex);
             }
         }
     }
