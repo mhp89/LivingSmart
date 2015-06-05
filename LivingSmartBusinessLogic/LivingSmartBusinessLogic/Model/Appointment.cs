@@ -6,6 +6,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for a Appointment.
     /// </summary>
+    /// <author>Mathias Poulsen</author>
     public class Appointment
     {
         

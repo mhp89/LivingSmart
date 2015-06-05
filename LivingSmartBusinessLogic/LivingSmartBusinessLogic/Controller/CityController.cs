@@ -9,6 +9,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
 {
+    /// <summary>
+    /// Citycontroller
+    /// </summary>
+    /// <author>Mathias Pousen</author>
 	public class CityController
 	{
 		#region Singleton
@@ -33,7 +37,11 @@ namespace LivingSmartBusinessLogic.Controller
         {
             return cityCatalog.GetCity(zipCode);
         }
-
+        /// <summary>
+        /// Henter alle byer
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
 		public ReadOnlyCollection<City> GetCities()
 		{
 			return cityCatalog.GetCities();

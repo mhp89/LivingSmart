@@ -8,6 +8,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for a Case
     /// </summary>
+    /// <author>Mathias Poulsen</author>
     public class Case
     {
         public enum CaseStatus
@@ -154,10 +155,13 @@ namespace LivingSmartBusinessLogic.Model
         }
 
 	    #region Methods
-
+        /// <summary>
+        /// Lukker sagen
+        /// </summary>
+        /// <author>Mathias Poulsen</author>
         internal void CloseCase()
         {
-            throw new NotImplementedException();
+            Status = CaseStatus.Closed;
         }
 
 	    /// <summary>
@@ -166,6 +170,7 @@ namespace LivingSmartBusinessLogic.Model
 	    /// </summary>
 	    /// <param name="tempDistanceTos"></param>
 	    /// <returns></returns>
+        /// <author>Maja Olesen</author>
 	    internal long CalculatePropertyRating(List<DistanceTo> distanceTos)
         {
             int basementValue = _neighborhood.Value / 4;  //Estimeret værdi
@@ -179,6 +184,7 @@ namespace LivingSmartBusinessLogic.Model
         /// Finder beregningsfaktorer for udsigt, afstand til skole, indkøb og centrum
         /// baseret på deres faktiske værdier. 
         /// </summary>
+        /// <author>Maja Olesen</author>
 		internal double RatingFactor(List<DistanceTo> distanceTos)
         {
             double viewFactor;

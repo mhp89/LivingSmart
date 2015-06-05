@@ -6,6 +6,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Afstandskatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class DistanceToCatalog
     {
         private Dictionary<int, List<DistanceTo>> distanceToDictionary;

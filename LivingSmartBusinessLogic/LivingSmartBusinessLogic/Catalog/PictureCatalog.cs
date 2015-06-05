@@ -6,6 +6,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Billedkatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class PictureCatalog
     {
         private Dictionary<int, List<Picture>> pictureDictionary;
@@ -48,13 +52,23 @@ namespace LivingSmartBusinessLogic.Catalog
                 pictureDictionary.Add(caseId, new List<Picture>());
             pictureDictionary[caseId].Add(picture);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <param name="picture"></param>
+        /// <author>Mathias Petersen</author>
         internal void RemoveFromCatalog(int caseId, Picture picture)
         {
 			db.DeletePicture(picture);
             pictureDictionary[caseId].Remove(picture);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         internal ReadOnlyCollection<Picture> GetPictures(int caseId)
         {
 	        if (!pictureDictionary.ContainsKey(caseId))

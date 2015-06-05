@@ -7,6 +7,9 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Ejendomstypekatalog
+    /// </summary>
     internal class PropertyTypeCatalog
     {
         private Dictionary<int, PropertyType> propertyTypes;

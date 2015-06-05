@@ -6,6 +6,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Hold the information for a Rating
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class Rating
     {
 

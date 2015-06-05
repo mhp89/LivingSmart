@@ -3,6 +3,7 @@
     /// <summary>
     /// Hold the information for a PropertyType
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class PropertyType
     {
         

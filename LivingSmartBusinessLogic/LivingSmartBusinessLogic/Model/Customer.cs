@@ -6,6 +6,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for a Customer.
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class Customer
     {
 

@@ -3,6 +3,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for a City
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class City
     {
         #region Private Fields

@@ -6,6 +6,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Udbudspriskatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class AskingPriceCatalog
     {
         private Dictionary<int, List<AskingPrice>> askingPriceDictionary;
@@ -57,6 +61,24 @@ namespace LivingSmartBusinessLogic.Catalog
         internal ReadOnlyCollection<AskingPrice> GetAskingPrices(int caseId)
         {
             return askingPriceDictionary[caseId].AsReadOnly();
+        }
+        /// <summary>
+        /// Henter prisudvikling på en given case. Prisudviklingen udregnes på 
+        /// baggrund af den første og den sidste udbudspris
+        /// </summary>
+        /// <param name="caseId"></param>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
+        internal decimal GetPriceTrend(int caseId)
+        {
+            var askingPrices = GetAskingPrices(caseId);
+            if (askingPrices.Count == 0)
+                return 0;
+
+            long firstRating = askingPrices[0].Value;
+            long lastRating = askingPrices[askingPrices.Count - 1].Value;
+
+            return ((((decimal)lastRating / firstRating) - 1) * 100);
         }
     }
 }

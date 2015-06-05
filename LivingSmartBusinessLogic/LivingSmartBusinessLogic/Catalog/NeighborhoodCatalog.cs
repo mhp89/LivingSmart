@@ -6,6 +6,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Nabolagskatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class NeighborhoodCatalog
     {
         private Dictionary<int, List<Neighborhood>> neighborhoods;

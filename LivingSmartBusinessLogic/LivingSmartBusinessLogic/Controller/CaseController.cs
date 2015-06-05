@@ -9,6 +9,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
 {
+    /// <summary>
+    /// Casecontroller
+    /// </summary>
+    /// <author>Mathias Pousen</author>
     public class CaseController
 	{
 		#region Singleton
@@ -54,16 +58,17 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Sætter den aktive sag
         /// </summary>
-        /// <param name="activeCase"></param>
-        public void SetActiveCase(Case activeCase)
+        /// <author>Mathias Poulsen</author>
+        public void SetActiveCase(Case newActiveCase)
         {
-            this.activeCase = activeCase;
+            activeCase = newActiveCase;
 	        ResetTempData();
         }
 
         /// <summary>
         /// Fortryder valg af aktiv sag
         /// </summary>
+        /// <author>Mathias Poulsen</author>
         public void CancelActiveCase()
         {
 			activeCase = null;
@@ -73,6 +78,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Gemmer aktiv sag
         /// </summary>
+        /// <author>Mathias Petersen</author>
         public void SaveActiveCase()
 		{
 			caseCatalog.Save(activeCase);
@@ -126,7 +132,19 @@ namespace LivingSmartBusinessLogic.Controller
 		        Console.WriteLine("Create case: Something went wrong");
 	        }
 		}
+        /// <summary>
+        /// Lukker den aktive sag
+        /// </summary>
+        /// <author>Mathias Pousen</author>
+        public void CloseCase()
+        {
+            activeCase.CloseCase();
+        }
 
+        /// <summary>
+        /// Nulstiller tempdata
+        /// </summary>
+        /// <author>Mathias Petersen</author>
 	    private void ResetTempData()
 	    {
 			tempDistanceTos = new List<DistanceTo>();
@@ -143,7 +161,7 @@ namespace LivingSmartBusinessLogic.Controller
 		/// <summary>
         /// Laver en ny case
         /// </summary>
-        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public Case MakeNewCase()
         {
             SetActiveCase(new Case());
@@ -153,7 +171,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Læser den aktive sag fra casecatalog
         /// </summary>
-        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public Case ReadCase()
         {
             return caseCatalog.Check(activeCase.Id);
@@ -163,30 +181,47 @@ namespace LivingSmartBusinessLogic.Controller
         /// Læser en given sag fra casecatalog
         /// </summary>
         /// <param name="caseId"></param>
-        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public Case GetCase(int caseId)
         {
             return caseCatalog.GetCase(caseId);
         }
 
 		/// <summary>
-		/// Retunere den aktive sag
+		/// Retunerer den aktive sag
 		/// </summary>
 		/// <returns></returns>
+        /// <author>Mathias Petersen</author>
 	    public Case GetActiveCase()
 	    {
 		    return activeCase;
 	    }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
 		public ReadOnlyCollection<Case> GetCases()
 		{
 			return caseCatalog.GetCases();
 		}
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="estateAgentId"></param>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
 	    public ReadOnlyCollection<Case> GetOpenCases(int estateAgentId)
 	    {
 		    return caseCatalog.GetOpenCases(estateAgentId);
 	    }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
 		public ReadOnlyCollection<Case> GetOpenCases()
 		{
 			return caseCatalog.GetOpenCases();
@@ -204,16 +239,29 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="location"></param>
         /// <param name="status"></param>
         /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         public Document MakeNewDocument(string type, int price, string location)
         {
 			var documentObj = new Document(type, price, location);
 			tempDocuments.Add(documentObj);
 			return documentObj;
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="price"></param>
+        /// <author>Mathias Petersen</author>
 		public void SetDocumentPrice(Document document, int price)
 		{
 			document.Price = price;
 		}
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="document"></param>
+        /// <param name="type"></param>
+        /// <author>Mathias Petersen</author>
 		public void SetDocumentType(Document document, string type)
 		{
 			document.Type = type;
@@ -223,6 +271,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer et dokument til casen
         /// </summary>
         /// <param name="document"></param>
+        /// <author>Mathias Poulsen</author>
         private void AddDocumentToCase(Document document)
         {
             documentCatalog.AddToCatalog(activeCase.Id, document);
@@ -231,6 +280,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Fjerner et dokument fra casen
         /// </summary>
+        /// <author>Mathias Poulsen</author>
         public void RemoveDocumentFromCase(Document document)
 		{
 			//Hvis den ikke findes i tempDocuments, fjern den fra kataloget
@@ -241,6 +291,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Returnerer den aktive sags billeder som en list
         /// </summary>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<Document> GetDocuments()
         {
             return documentCatalog.GetDocuments(activeCase.Id);
@@ -254,6 +305,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="location"></param>
         /// <param name="description"></param>
         /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         public Picture MakeNewPicture(string location)
 		{
 			var pictureObj = new Picture(location);
@@ -266,6 +318,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="picture"></param>
         /// <param name="description"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetPictureDescription(Picture picture, string description)
         {
             picture.Description = description;
@@ -275,6 +328,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer et billede til casen
         /// </summary>
         /// <param name="picture"></param>
+        /// <author>Mathias Poulsen</author>
 		private void AddPictureToCase(Picture picture)
         {
             pictureCatalog.AddToCatalog(activeCase.Id, picture);
@@ -283,6 +337,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Fjerner et billede fra casen
         /// </summary>
+        /// <author>Mathias Poulsen/Mathias Petersen</author>
         public void RemovePictureFromCase(Picture picture)
         {
 			//Hvis den ikke findes i tempPictures, fjern den fra kataloget
@@ -293,6 +348,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Returnerer den aktive sags billeder som en list
         /// </summary>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<Picture> GetPictures()
         {
             return pictureCatalog.GetPictures(activeCase.Id);
@@ -309,6 +365,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="endDate"></param>
         /// <param name="price"></param>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public Ad MakeNewAd(string type, DateTime startDate, DateTime endDate, int price)
         {
             return new Ad(type, startDate, endDate, price);
@@ -317,6 +374,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer en annonce til den aktive sag
         /// </summary>
         /// <param name="ad"></param>
+        /// <author>Mathias Poulsen</author>
 		private void AddAdToCase(Ad ad)
         {
             adCatalog.AddToCatalog(activeCase.Id, ad);
@@ -325,6 +383,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Fjerner en annonce fra den aktive sag
         /// </summary>
+        /// <author>Mathias Poulsen</author>
         public void RemoveAdFromCase(Ad ad)
         {
             adCatalog.RemoveFromCatalog(activeCase.Id, ad);
@@ -333,6 +392,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Henter den aktive sags annoncer som en list
         /// </summary>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<Ad> GetAds()
         {
             return adCatalog.GetAds(activeCase.Id);
@@ -345,12 +405,17 @@ namespace LivingSmartBusinessLogic.Controller
         /// Laver en ny vurdering baseret på den aktive sag
         /// </summary>
         /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         public Rating MakeNewRating(long systemValue, long? agentValue)
         {
 			tempRating = new Rating(systemValue, agentValue, activeCase.EstateAgent.Id);
 			return tempRating;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
 	    public long GetSystemRating()
 	    {
 		    var list = GetDistanceTos().ToList();
@@ -361,6 +426,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer en vurdering til casen
         /// </summary>
         /// <param name="rating"></param>
+        /// <author>Mathias Poulsen</author>
 		private void AddRatingToCase(Rating rating)
         {
             ratingCatalog.AddToCatalog(activeCase.Id, rating);
@@ -369,6 +435,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Fjerner en vurdering fra casen
         /// </summary>
+        /// <author>Mathias Poulsen</author>
         public void RemoveRatingFromCase(Rating rating)
         {
             ratingCatalog.RemoveFromCatalog(activeCase.Id, rating);
@@ -378,6 +445,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<Rating> GetRatings(int id)
         {
             return ratingCatalog.GetRatings(activeCase.Id);
@@ -387,6 +455,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Henter en specifik sags vurderinger som en list
         /// </summary>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public Rating GetLastRating(Case cCase)
         {
             return ratingCatalog.GetLastRating(cCase);
@@ -395,6 +464,7 @@ namespace LivingSmartBusinessLogic.Controller
 		/// Henter den aktive sags vurderinger som en list
 		/// </summary>
 		/// <returns></returns>
+        /// <author>Mathias Petersen</author>
 		public Rating GetLastRating()
 		{
 			return GetLastRating(activeCase);
@@ -410,6 +480,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="value"></param>
         /// <param name="date"></param>
         /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         public AskingPrice MakeNewAskingPrice(long value)
         {
 	        tempAskingPrice = new AskingPrice(value);
@@ -419,6 +490,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer en udbudspris til casen
         /// </summary>
         /// <param name="askingPrice"></param>
+        /// <author>Mathias Poulsen</author>
 		private void AddAskingPriceToCase(AskingPrice askingPrice)
         {
             askingPriceCatalog.AddToCatalog(activeCase.Id, askingPrice);
@@ -427,6 +499,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Fjerner en udbudspris fra casen
         /// </summary>
+        /// <author>Mathias Poulsen</author>
         public void RemoveAskingPriceFromCase(AskingPrice askingPrice)
         {
             askingPriceCatalog.RemoveFromCatalog(activeCase.Id, askingPrice);
@@ -436,6 +509,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="caseId"></param>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<AskingPrice> GetAskingPrices(int caseId)
         {
             return askingPriceCatalog.GetAskingPrices(caseId);
@@ -445,6 +519,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Henter den aktive sags udbudspriser som en list
         /// </summary>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<AskingPrice> GetAskingPrices()
         {
             return GetAskingPrices(activeCase.Id);
@@ -455,6 +530,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="caseId"></param>
         /// <returns></returns>
+        /// <author>Maja Olsesen</author>
         public AskingPrice GetNewestAskingPrice(int caseId)
         {
             var askingPrices = GetAskingPrices(caseId);
@@ -464,6 +540,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Henter den nyeste udbudsprise på den aktive sag
         /// </summary>
         /// <returns></returns>
+        /// <author>Maja Olesen</author>
         public AskingPrice GetNewestAskingPrice()
         {
             return GetNewestAskingPrice(activeCase.Id);
@@ -475,17 +552,10 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="caseId"></param>
         /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public decimal GetPriceTrend(int caseId)
         {
-            ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(caseId);
-            if (askingPrices.Count == 0)
-            {
-                return 0;
-            }
-            long firstRating = askingPrices[0].Value;
-            long lastRating = askingPrices[askingPrices.Count - 1].Value;
-
-            return ((((decimal)lastRating / firstRating) - 1) * 100);
+            return askingPriceCatalog.GetPriceTrend(caseId);
         }
 
         #endregion
@@ -498,6 +568,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="type"></param>
         /// <param name="distance"></param>
         /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         public DistanceTo MakeNewDistanceTo(string type, int distance)
         {
 	        var distanceObj = new DistanceTo(type, distance);
@@ -508,6 +579,7 @@ namespace LivingSmartBusinessLogic.Controller
 		/// <summary>
 		/// Sætter afstanden på DistanceTo
 		/// </summary>
+        /// <author>Mathias Petersen</author>
 		public void SetDistanceTo(DistanceTo distanceTo, int distance)
 		{
 			distanceTo.Distance = distance;
@@ -517,6 +589,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
         /// <param name="distanceTo"></param>
+        /// <author>Mathias Poulsen</author>
 		private void AddDistanceToCase(DistanceTo distanceTo)
         {
             distanceToCatalog.AddToCatalog(activeCase.Id, distanceTo);
@@ -525,27 +598,42 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Fjerner en "Afstand til" fra casen
         /// </summary>
+        /// <author>Mathias Poulsen/Mathias Petersen</author>
         public void RemoveDistanceToFromCase(DistanceTo distanceTo)
 		{
 			//Hvis den ikke findes i tempDistanceTos, fjern den fra kataloget
 			if (!tempDistanceTos.Remove(distanceTo))
 				distanceToCatalog.RemoveFromCatalog(activeCase.Id, distanceTo);
         }
+        /// <summary>
+        /// Henter alle afstande som er tilknyttet en given sag
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
 		public ReadOnlyCollection<DistanceTo> GetDistanceTos(int id)
 		{
 			return distanceToCatalog.GetDistanceTos(id);
 		}
+        /// <summary>
+        /// Henter alle afstande som er tilknyttet den aktive sag
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public ReadOnlyCollection<DistanceTo> GetDistanceTos()
         {
             return GetDistanceTos(activeCase.Id);
         }
-
+        /// <summary>
+        /// Sætter afstanden til en given "afstand til"
+        /// </summary>
+        /// <param name="distanceTo"></param>
+        /// <param name="distance"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetDistance(DistanceTo distanceTo, int distance)
         {
             if (distanceTo.Distance != distance)
-            {
                 distanceTo.Distance = distance;
-            }
         }
         #endregion
 
@@ -554,6 +642,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter sælger
         /// </summary>
         /// <param name="seller"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetSeller(Customer seller)
         {
 			if (activeCase.Seller != seller)
@@ -563,6 +652,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter køber
         /// </summary>
         /// <param name="buyer"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetBuyer(Customer buyer)
         {
 			if (activeCase.Buyer != buyer)
@@ -572,6 +662,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter mægler
         /// </summary>
         /// <param name="estateAgent"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetEstateAgent(EstateAgent estateAgent)
         {
 			if (activeCase.EstateAgent != estateAgent)
@@ -581,6 +672,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter oprettelsesdato
         /// </summary>
         /// <param name="creationDate"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetCreationDate(DateTime creationDate)
         {
             if (activeCase.CreationDate != creationDate)
@@ -590,6 +682,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter sagens status
         /// </summary>
         /// <param name="status"></param>
+        /// <author>Maja Olesen</author>
         public void SetStatus(Case.CaseStatus status)
         {
             if (activeCase.Status != status)
@@ -599,6 +692,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgsdato
         /// </summary>
         /// <param name="dateOfSale"></param>
+        /// <author>Mathias Petersen</author>
         public void SetDateOfSale(DateTime? dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
@@ -608,6 +702,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter overdragelsesdato
         /// </summary>
         /// <param name="transferDate"></param>
+        /// <author>Mathias Petersen</author>
         public void SetTransferDate(DateTime? transferDate)
         {
             if (activeCase.TransferDate != transferDate)
@@ -617,6 +712,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter dato for sagens afsluttelse
         /// </summary>
         /// <param name="dateOfCompletion"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetDateOfCompletion(DateTime dateOfCompletion)
         {
             if (activeCase.DateOfCompletion != dateOfCompletion)
@@ -626,6 +722,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgspris
         /// </summary>
         /// <param name="sellingPrice"></param>
+        /// <author>Mathias Petersen</author>
         public void SetSellingPrice(long? sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
@@ -635,6 +732,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter beskrivelse
         /// </summary>
         /// <param name="description"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetDescription(string description)
         {
             if (activeCase.Description != description)
@@ -644,6 +742,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter matrikelnummer
         /// </summary>
         /// <param name="landRegistryNumber"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetLandRegistryNumber(string landRegistryNumber)
         {
             if (activeCase.LandRegistryNumber != landRegistryNumber)
@@ -653,6 +752,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter adresse
         /// </summary>
         /// <param name="address"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetAddress(string address)
         {
             if (activeCase.Address != address)
@@ -662,6 +762,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter by baseret på postnummer
         /// </summary>
         /// <param name="zipcode"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetZipCode(int zipcode)
         {
 			if (activeCase.City == null || activeCase.City.ZipCode != zipcode)
@@ -671,6 +772,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter ejendomstype
         /// </summary>
         /// <param name="propertyType"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetPropertyType(PropertyType propertyType)
         {
 			if (activeCase.PropertyType != propertyType)
@@ -680,6 +782,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter den offentlige vurdering
         /// </summary>
         /// <param name="publicRating"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetPublicRating(long publicRating)
         {
             if (activeCase.PublicRating != publicRating)
@@ -689,6 +792,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter grundværdien
         /// </summary>
         /// <param name="landValue"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetLandValue(long landValue)
         {
             if (activeCase.LandValue != landValue)
@@ -698,6 +802,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter grundareal
         /// </summary>
         /// <param name="groundArea"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetGroundArea(int groundArea)
         {
             if (activeCase.GroundArea != groundArea)
@@ -707,6 +812,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter bebygget areal
         /// </summary>
         /// <param name="builtArea"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetBuiltArea(int builtArea)
         {
             if (activeCase.BuiltArea != builtArea)
@@ -716,6 +822,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter beboelsesareal
         /// </summary>
         /// <param name="livingArea"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetLivingArea(int livingArea)
         {
             if (activeCase.LivingArea != livingArea)
@@ -725,6 +832,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter kælderareal
         /// </summary>
         /// <param name="basementArea"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetBasementArea(int basementArea)
         {
             if (activeCase.BasementArea != basementArea)
@@ -734,6 +842,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter byggeår
         /// </summary>
         /// <param name="builtYear"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetBuiltYear(int builtYear)
         {
             if (activeCase.BuiltYear != builtYear)
@@ -743,6 +852,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter energimærke
         /// </summary>
         /// <param name="energyClassification"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetEnergyClassification(string energyClassification)
         {
             if (activeCase.EnergyClassification != energyClassification)
@@ -752,6 +862,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter antal etager
         /// </summary>
         /// <param name="floors"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetFloors(int floors)
         {
             if (activeCase.Floors != floors)
@@ -761,6 +872,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter antal rum
         /// </summary>
         /// <param name="rooms"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetRooms(int rooms)
         {
             if (activeCase.Rooms != rooms)
@@ -770,6 +882,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter antal soveværelser
         /// </summary>
         /// <param name="bedrooms"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetBedrooms(int bedrooms)
         {
             if (activeCase.Bedrooms != bedrooms)
@@ -779,6 +892,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter antal badeværelser
         /// </summary>
         /// <param name="bathrooms"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetBathrooms(int bathrooms)
         {
             if (activeCase.Bathrooms != bathrooms)
@@ -788,6 +902,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter antal toiletter
         /// </summary>
         /// <param name="toilets"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetToilets(int toilets)
         {
             if (activeCase.Toilets != toilets)
@@ -797,6 +912,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter garageareal
         /// </summary>
         /// <param name="garageArea"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetGarageArea(int garageArea)
         {
             if (activeCase.GarageArea != garageArea)
@@ -806,6 +922,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter "udsigtsfaktor"
         /// </summary>
         /// <param name="view"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetView(int view)
         {
             if (activeCase.View != view)
@@ -815,6 +932,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Bestemmer nabolag
         /// </summary>
         /// <param name="neighborhood"></param>
+        /// <author>Mathias Poulsen</author>
         public void SetNeighborhood(Neighborhood neighborhood)
         {
             if (activeCase.Neighborhood != neighborhood)
@@ -823,6 +941,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// <summary>
         /// Tilføjer salgsprisen til casen
         /// </summary>
+        /// <author>Mathias Poulsen</author>
         public void AddSellingPriceToCase(long sellingPrice)
         {
             activeCase.SellingPrice = sellingPrice;
@@ -830,5 +949,7 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #endregion
+
+
 	}
 }

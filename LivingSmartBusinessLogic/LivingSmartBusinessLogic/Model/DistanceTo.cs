@@ -3,8 +3,13 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for distances to Shopping, School, Center, etc.
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class DistanceTo
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <author>Mathias Petersen</author>
 	    public enum DistanceToSystemType
 	    {
 		    Shopping,

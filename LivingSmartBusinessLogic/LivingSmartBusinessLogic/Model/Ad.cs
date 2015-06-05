@@ -5,6 +5,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for an Ad
     /// </summary>
+    /// <author>Mathias Poulsen</author>
     public class Ad
     {
 

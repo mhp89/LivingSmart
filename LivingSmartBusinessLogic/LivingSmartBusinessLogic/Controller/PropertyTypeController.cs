@@ -9,6 +9,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
 {
+    /// <summary>
+    /// Ejendomstypecontroller
+    /// </summary>
+    /// <author>Mathias Pousen</author>
 	public class PropertyTypeController
     {
 
@@ -28,12 +32,21 @@ namespace LivingSmartBusinessLogic.Controller
         {
             propertyTypeCatalog = new PropertyTypeCatalog();
         }
-
+        /// <summary>
+        /// Henter en given ejendomstype udfra et idnummer
+        /// </summary>
+        /// <param name="propertyTypeId"></param>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         public PropertyType GetPropertyType(int propertyTypeId)
         {
             return propertyTypeCatalog.GetPropertyType(propertyTypeId);
         }
-
+        /// <summary>
+        /// Henter alle ejendomstyper
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
 		public ReadOnlyCollection<PropertyType> GetPropertyTypes()
 		{
 			return propertyTypeCatalog.GetPropertyTypes();

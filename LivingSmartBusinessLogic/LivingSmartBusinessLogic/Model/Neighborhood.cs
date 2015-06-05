@@ -5,6 +5,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Hold the information for a Neighborhood.
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class Neighborhood
     {
         

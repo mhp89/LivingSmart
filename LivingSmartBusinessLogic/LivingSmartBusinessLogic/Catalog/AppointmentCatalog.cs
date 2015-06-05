@@ -6,6 +6,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Aftalekatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class AppointmentCatalog
     {
 

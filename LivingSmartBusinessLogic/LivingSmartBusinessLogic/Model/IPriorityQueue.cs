@@ -11,6 +11,7 @@ namespace LivingSmartBusinessLogic
     /// </summary>
     /// <typeparam name="TKey">Type of key - must implement IComparable.</typeparam>
     /// <typeparam name="TValue">Type of value to be saved in the priority queue.</typeparam>
+    /// <author>René Sørensen</author>
     public interface IPriorityQueue<TKey, TValue> where TKey : IComparable
     {
         /// <summary>

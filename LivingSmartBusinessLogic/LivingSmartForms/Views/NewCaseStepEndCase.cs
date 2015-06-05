@@ -136,7 +136,7 @@ namespace LivingSmartForms.Views
 		private void stbCloseCase_Click(object sender, EventArgs e)
 		{
 			BuyerSearchFinish(null);
-			CaseController.Instance.SetStatus(Case.CaseStatus.Closed);
+			CaseController.Instance.CloseCase();
 			baseView.NextStep();
 		}
     }

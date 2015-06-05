@@ -5,6 +5,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for an AskingPrice
     /// </summary>
+    /// <author>Mathias Poulsen</author>
     public class AskingPrice
     {
 

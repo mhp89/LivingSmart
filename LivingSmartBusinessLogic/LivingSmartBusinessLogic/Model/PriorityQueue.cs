@@ -6,6 +6,12 @@ using System.Text;
 
 namespace LivingSmartBusinessLogic
 {
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <typeparam name="TKey"></typeparam>
+    /// <typeparam name="TValue"></typeparam>
+    /// <author>René Sørensen</author>
     public class PriorityQueue<TKey, TValue> : IPriorityQueue<TKey, TValue> where TKey : IComparable
     {
         /// <summary>

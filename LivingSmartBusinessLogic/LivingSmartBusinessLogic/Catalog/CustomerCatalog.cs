@@ -5,6 +5,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Kundekatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class CustomerCatalog
     {
         private Dictionary<int, Customer> customers;
@@ -25,7 +29,12 @@ namespace LivingSmartBusinessLogic.Catalog
 	        foreach (var customer in customerList)
 		        AddToCatalog(customer);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         internal Customer Read(int id)
 		{
 			if (customers.ContainsKey(id))
@@ -51,7 +60,17 @@ namespace LivingSmartBusinessLogic.Catalog
         {
             customers.Remove(customer.Id);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="address"></param>
+        /// <param name="zipcode"></param>
+        /// <param name="telephone"></param>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         internal List<Customer> SearchCustomers(int id, string name, string address, int zipcode,
 			string telephone, string email)
         {

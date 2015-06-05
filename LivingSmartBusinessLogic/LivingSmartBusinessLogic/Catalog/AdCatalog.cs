@@ -6,6 +6,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Annoncekatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class AdCatalog
     {
         private Dictionary<int, List<Ad>> adDictionary;

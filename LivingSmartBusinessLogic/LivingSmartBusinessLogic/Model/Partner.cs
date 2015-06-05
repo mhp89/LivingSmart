@@ -3,6 +3,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Hold the information for a Partner.
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class Partner
     {
 

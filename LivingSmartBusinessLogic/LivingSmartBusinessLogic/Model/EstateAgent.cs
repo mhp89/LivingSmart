@@ -5,6 +5,7 @@ namespace LivingSmartBusinessLogic.Model
     /// <summary>
     /// Holds the information for an EstateAgent
     /// </summary>
+    /// <author>Mathias Pousen</author>
     public class EstateAgent
     {
         

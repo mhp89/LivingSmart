@@ -7,6 +7,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Vurderingskatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class RatingCatalog
     {
         private Dictionary<int, List<Rating>> ratingDictionary;

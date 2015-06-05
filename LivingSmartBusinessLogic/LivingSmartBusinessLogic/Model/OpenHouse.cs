@@ -7,6 +7,7 @@ namespace LivingSmartBusinessLogic.Model
     /// Given a list of cases and estate agents, this class is responsible for distributing
     /// cases to estate agents based on a given priority.
     /// </summary>
+    /// <author></author>
     public class OpenHouse
     {
         private readonly List<EstateAgent> brokers;
