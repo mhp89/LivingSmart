@@ -106,7 +106,7 @@ namespace TestData
             this.id = id;
             this.zipcode = zipcode;
             this.name = neighborhood;
-            value = rnd.Next(10000, 50000);
+            value = rnd.Next(10000, 30000);
         }
     }
 }
