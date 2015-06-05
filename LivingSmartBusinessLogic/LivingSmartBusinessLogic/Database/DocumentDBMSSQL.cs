@@ -116,7 +116,7 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = document.Price;
-            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
+            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 200, "Location").Value = document.Location;
 
             DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
@@ -137,9 +137,21 @@ namespace LivingSmartBusinessLogic.DB
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Type", SqlDbType.NVarChar, 50, "Type").Value = document.Type;
             cmd.Parameters.Add("@Price", SqlDbType.Int, 4, "Price").Value = document.Price;
-            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 100, "Location").Value = document.Location;
+            cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 200, "Location").Value = document.Location;
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
+
+	    public void DeleteDocument(Document document)
+	    {
+		    SqlCommand cmd = new SqlCommand
+		    {
+			    CommandText = "DELETE FROM Document WHERE DocumentId = (@DocumentId)"
+			};
+
+			cmd.Parameters.Add("@DocumentId", SqlDbType.Int, 4, "DocumentId").Value = document.Id;
+
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
+	    }
     }
 }

@@ -11,11 +11,11 @@ namespace LivingSmartForms.Classes
     /// <author>Mathias Petersen</author>
     internal static class DocumentGenerator
     {
-        private const int PageWidth = 97;
+        private const int PageWidth = 90;
         private const char TopBorderChar = '−';
         private const char SideBorderChar = '|';
         private const char BottomBorderChar = '−';
-        private const int DefaultPadding = 3;
+        private const int DefaultPadding = 2;
 
         #region Document methods
 

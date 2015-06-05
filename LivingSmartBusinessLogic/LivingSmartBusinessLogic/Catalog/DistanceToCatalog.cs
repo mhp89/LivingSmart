@@ -56,6 +56,8 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal ReadOnlyCollection<DistanceTo> GetDistanceTos(int caseId)
         {
+			if(!distanceToDictionary.ContainsKey(caseId))
+				return new ReadOnlyCollection<DistanceTo>(new List<DistanceTo>());
             return distanceToDictionary[caseId].AsReadOnly();
         }
     }

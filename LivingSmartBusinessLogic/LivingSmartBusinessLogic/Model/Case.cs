@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using LivingSmartBusinessLogic.Controller;
 using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
 
@@ -97,7 +98,7 @@ namespace LivingSmartBusinessLogic.Model
             internal set { _neighborhood = value; } }
         
         public decimal NewestAskingPrice { get { return CaseController.Instance.GetNewestAskingPrice(Id).Value; } }
-        public double PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
+        public decimal PriceTrend { get { return CaseController.Instance.GetPriceTrend(Id); } }
 
 
         #endregion
@@ -105,7 +106,7 @@ namespace LivingSmartBusinessLogic.Model
         internal Case()
 		{
 			Id = -1;
-            CreationDate = new DateTime().Date;
+            CreationDate = DateTime.Now;
 	        Status = CaseStatus.Open;
 		}
         internal Case(int id, int sellerId, int buyerId, int estateAgentId, 
@@ -158,18 +159,19 @@ namespace LivingSmartBusinessLogic.Model
         {
             throw new NotImplementedException();
         }
-        
-        /// <summary>
-        /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
-        /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
-        /// </summary>
-        /// <returns></returns>
-        internal long CalculatePropertyRating()
+
+	    /// <summary>
+	    /// Beregner værdien af ejendommen baseret på grundpris, pris for bebygget areal,
+	    /// kælderareal, alder af ejendommen og faktor fra RatingFactor()
+	    /// </summary>
+	    /// <param name="tempDistanceTos"></param>
+	    /// <returns></returns>
+	    internal long CalculatePropertyRating(List<DistanceTo> distanceTos)
         {
             int basementValue = _neighborhood.Value / 4;  //Estimeret værdi
             
-            return Convert.ToInt64((_landValue + _livingArea * _neighborhood.Value 
-                                    + _basementArea * basementValue) * RatingFactor()
+            return Convert.ToInt64((_landValue + _livingArea * _neighborhood.Value
+									+ _basementArea * basementValue) * RatingFactor(distanceTos)
                                     * (1 - (DateTime.Today.Year -_builtYear) / 1000));
         }
 
@@ -177,20 +179,18 @@ namespace LivingSmartBusinessLogic.Model
         /// Finder beregningsfaktorer for udsigt, afstand til skole, indkøb og centrum
         /// baseret på deres faktiske værdier. 
         /// </summary>
-        internal double RatingFactor()
+		internal double RatingFactor(List<DistanceTo> distanceTos)
         {
             double viewFactor;
             double schoolFactor;
             double shoppingFactor;
             double centerFactor;
-            int schoolDistance = 0;
-			int shoppingDistance = 0;
-			int centerDistance = 0;
+            int schoolDistance = Int32.MaxValue;
+			int shoppingDistance = Int32.MaxValue;
+			int centerDistance = Int32.MaxValue;
 
-			
-			//TODO: Load temp distance
-            //Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
-            /*foreach (DistanceTo dist in CaseController.Instance.GetDistanceTos(Id))
+			//Disse 3 afstandstyper er påkrævet af programmet og vil altid forefindes i databasen
+			foreach (DistanceTo dist in distanceTos)
             {
 				if (dist.Type == DistanceToSystemType.School.ToString())
                     schoolDistance = dist.Distance;
@@ -198,9 +198,9 @@ namespace LivingSmartBusinessLogic.Model
                     shoppingDistance = dist.Distance;
 				else if (dist.Type == DistanceToSystemType.Center.ToString())
                     centerDistance = dist.Distance;
-            }*/
+            }
 
-            if (_view == 1)
+            if (_view == 3)
                 viewFactor = 0.7;
             else if (_view == 2)
                 viewFactor = 0.4;

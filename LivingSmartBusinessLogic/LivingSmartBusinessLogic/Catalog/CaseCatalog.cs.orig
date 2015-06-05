@@ -40,9 +40,15 @@ namespace LivingSmartBusinessLogic.Catalog
         }
 
         internal void AddToCatalog(Case cCase)
+<<<<<<< HEAD
 		{
 			if (!cases.ContainsKey(cCase.Id))
 				cases.Add(cCase.Id, cCase);
+=======
+        {
+            if (!cases.ContainsKey(cCase.Id))
+                cases.Add(cCase.Id, cCase);
+>>>>>>> origin/RedigerStuff
         }
 
         internal void RemoveFromCatalog(int caseId)

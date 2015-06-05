@@ -19,6 +19,8 @@ namespace LivingSmartForms.Views
 
 			pcbImage.Image = image;
 			pcbImage.SizeMode = PictureBoxSizeMode.Zoom;
+
+			stbDescription.Text = Picture.Description;
 		}
 
 

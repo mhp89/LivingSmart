@@ -35,7 +35,7 @@ namespace LivingSmartBusinessLogic.DB
                 {
                     int pictureId = (int)reader["PictureId"];
                     string location = (string)reader["Location"];
-                    string description = (string)reader["Description"];
+                    string description = reader["Description"] is DBNull ? null : (string)reader["Description"];
 
                     Picture picture = new Picture(pictureId, location, description);
                     pictureList.Add(picture);
@@ -75,8 +75,8 @@ namespace LivingSmartBusinessLogic.DB
                     int pictureId = (int)reader["PictureId"];
                     int caseId = (int)reader["CaseId"];
                     string location = (string)reader["Location"];
-                    string description = (string)reader["Description"];
-
+                    string description = reader["Description"] is DBNull ? null : (string)reader["Description"];
+                    
                     Picture picture = new Picture(pictureId, location, description);
                     if (!pictureDictionary.ContainsKey(caseId))
                     {
@@ -116,7 +116,7 @@ namespace LivingSmartBusinessLogic.DB
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 200, "Location").Value = picture.Location;
-			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Desription ?? DBNull.Value;
+			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Description ?? DBNull.Value;
 
 	        DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
         }
@@ -136,9 +136,20 @@ namespace LivingSmartBusinessLogic.DB
 
             cmd.Parameters.Add("@CaseId", SqlDbType.Int, 4, "CaseId").Value = caseId;
             cmd.Parameters.Add("@Location", SqlDbType.NVarChar, 200, "Location").Value = picture.Location;
-			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Desription ?? DBNull.Value;
+			cmd.Parameters.Add("@Description", SqlDbType.NVarChar, 255, "Description").Value = (object)picture.Description ?? DBNull.Value;
 
 	        return (int) DBConnectionMSSQL.Instance.ExecuteScalar(cmd, -1);
         }
+		public void DeletePicture(Picture picture)
+		{
+			SqlCommand cmd = new SqlCommand
+			{
+				CommandText = "DELETE FROM Picture WHERE PictureId = (@PictureId)"
+			};
+
+			cmd.Parameters.Add("@PictureId", SqlDbType.Int, 4, "PictureId").Value = picture.Id;
+
+			DBConnectionMSSQL.Instance.ExecuteNonQuery(cmd);
+		}
     }
 }

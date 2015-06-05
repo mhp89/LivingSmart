@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Model;
 using docGen = LivingSmartForms.Classes.DocumentGenerator;
 
 namespace LivingSmartForms.Classes
@@ -16,22 +17,26 @@ namespace LivingSmartForms.Classes
         /// Laver udskriftfil med statistik for solgte ejendomme for en bestemt mægler og et bestemt år
         /// </summary>
         /// <param name="fileStream"></param>
-        public static void CreatePrintEstateAgent(Stream fileStream, int estateAgentId, int year)
+        public static string CreatePrintEstateAgent(int estateAgentId, int year)
         {
             var list = StatisticsController.Instance.ReadEstateAgentStatistics(estateAgentId, year);
+            EstateAgent agent = EstateAgentController.Instance.GetEstateAgent(estateAgentId);
 
             string page = "";
-            string[] headerText = {"Statistik af solgte ejendomme i databasen for en udvalgt mægler og",
-                                  "et valgt år vist som summen af salgspriser og antal solgte ejendomme"};
+            string[] headerText = {"Statistik på mægler: " + agent.Name,
+                                   " ",
+                                   " ",
+                                   "Statistik af solgte ejendomme i databasen for en udvalgt mægler og",
+                                   "et valgt år vist som summen af salgspriser og antal solgte ejendomme"};
 
             page += CreateHeader(headerText);
 
             page += docGen.FixedMultiColumnstext(new[]
 			{
-				new docGen.Column("Årstal", 25),
-				new docGen.Column("Måned", 25),
+				new docGen.Column("Årstal", 15),
+				new docGen.Column("Måned", 20),
 				new docGen.Column("Salgspris total", 25),
-				new docGen.Column("Antal ejendomme", 25)
+				new docGen.Column("Antal ejendomme", 40)
 			});
             page += docGen.FilledLine();
 
@@ -46,31 +51,32 @@ namespace LivingSmartForms.Classes
 
             page += docGen.CreateFooterLine();
 
-            StreamWriter writer = new StreamWriter(fileStream);
-            writer.Write(page);
-            writer.Close();
+            return page;
         }
         /// <summary>
         /// Laver udskriftfil med statistik for alle solgte ejendomme i databasen
         /// </summary>
         /// <param name="fileStream"></param>
-        public static void CreatePrintAll(Stream fileStream)
+        public static string CreatePrintAll()
         {
             var list = StatisticsController.Instance.ReadAllStatistics();
 
             string page = "";
-            string[] headerText = {"Statistik af alle solgte ejendomme i databasen vist som summen",
+            string[] headerText = {"Alt statistik",
+                                   " ",
+                                   " ",
+                                   "Statistik af alle solgte ejendomme i databasen vist som summen",
                                   "af salgspriser og antal solgte ejendomme pr mægler pr måned"};
 
             page += CreateHeader(headerText);
 
             page += docGen.FixedMultiColumnstext(new[]
 			{
-				new docGen.Column("Årstal", 20),
-				new docGen.Column("Måned", 20),
-				new docGen.Column("Mægler", 20),
-				new docGen.Column("Salgspris total", 20),
-				new docGen.Column("Antal ejendomme", 20)
+				new docGen.Column("Årstal", 14),
+				new docGen.Column("Måned", 18),
+				new docGen.Column("Mægler", 25),
+				new docGen.Column("Salgspris total", 25),
+				new docGen.Column("Antal ejendomme", 18)
 			});
             page += docGen.FilledLine();
 
@@ -85,9 +91,7 @@ namespace LivingSmartForms.Classes
 
             page += docGen.CreateFooterLine();
 
-            StreamWriter writer = new StreamWriter(fileStream);
-            writer.Write(page);
-            writer.Close();
+            return page;
         }
 
         /// <summary>
@@ -103,8 +107,7 @@ namespace LivingSmartForms.Classes
 
             header +=
                 docGen.EmptyLine() +
-                docGen.RightSideText("Udskriftstidspunkt: " + DateTime.Now) +
-                docGen.CenteredText("Living Smart Ejendomsmæglere") +
+                docGen.BothSideText("Living Smart Ejendomsmæglere", "Udskriftstidspunkt: " + DateTime.Now) +
                 docGen.EmptyLine();
                 foreach (string line in textLine)
                     header += docGen.LeftSideText(line);
@@ -129,10 +132,10 @@ namespace LivingSmartForms.Classes
 
             line += docGen.FixedMultiColumnstext(new[]
 			{
-				new docGen.Column(statisticsLine.Year.ToString(), 25),
-				new docGen.Column(statisticsLine.Month.ToString(), 25),
+				new docGen.Column(statisticsLine.Year.ToString(), 15),
+				new docGen.Column(statisticsLine.Month.ToString(), 20),
 				new docGen.Column(statisticsLine.SellingpriceTotal.ToString(), 25),
-				new docGen.Column(statisticsLine.PropertiesTotal.ToString(), 25)
+				new docGen.Column(statisticsLine.PropertiesTotal.ToString(), 40)
 			});
             return line;
         }
@@ -148,11 +151,11 @@ namespace LivingSmartForms.Classes
 
             line += docGen.FixedMultiColumnstext(new[]
 			{
-				new docGen.Column(statisticsLine.Year.ToString(), 20),
-				new docGen.Column(statisticsLine.Month.ToString(), 20),
-				new docGen.Column(statisticsLine.EstateAgentName, 20),
-				new docGen.Column(statisticsLine.SellingpriceTotal.ToString(), 20),
-				new docGen.Column(statisticsLine.PropertiesTotal.ToString(), 20)
+				new docGen.Column(statisticsLine.Year.ToString(), 14),
+				new docGen.Column(statisticsLine.Month.ToString(), 18),
+				new docGen.Column(statisticsLine.EstateAgentName, 25),
+				new docGen.Column(statisticsLine.SellingpriceTotal.ToString(), 25),
+				new docGen.Column(statisticsLine.PropertiesTotal.ToString(), 18)
 			});
             return line;
         }

@@ -17,18 +17,24 @@ namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepSeller : CaseStep
     {
-	    private BaseForm baseForm;
+		private NewCaseDropIn baseView;
 
 	    private bool newCustomer = true;
 	    private Customer createdCustomer;
 
-        public NewCaseStepSeller(BaseForm baseForm)
+		public NewCaseStepSeller(NewCaseDropIn baseView, Case cCase)
+			: base(cCase)
         {
-	        this.baseForm = baseForm;
+			this.baseView = baseView;
 			
             InitializeComponent();
 
-			UpdateEstateAgent(baseForm.DefaultEstateAgent);
+	        if (cCase != null)
+			{
+				SetSellerFields(cCase.Seller);
+	        }
+
+			UpdateEstateAgent(baseView.baseForm.DefaultEstateAgent);
         }
 
 	    public override bool Save()
@@ -85,7 +91,7 @@ namespace LivingSmartForms.Views
 		private void btnExistingCustomer_Click(object sender, EventArgs e)
 		{
 			if (newCustomer)
-				CustomerSearchDropIn.Show(baseForm, CustomerSearchFinish);
+				CustomerSearchDropIn.Show(baseView.baseForm, CustomerSearchFinish);
 			else
 				CustomerSearchFinish(null);
 		}
@@ -94,24 +100,30 @@ namespace LivingSmartForms.Views
 		{
 			CaseController.Instance.SetSeller(customer);
 
-		    if (customer != null)
-		    {
-			    stbSellerName.Text = customer.Name;
+		    SetSellerFields(customer);
+	    }
+
+	    private void SetSellerFields(Customer customer)
+	    {
+			if (customer != null)
+			{
+				lblSellerIdNo.Text = customer.Id.ToString();
+				stbSellerName.Text = customer.Name;
 				stbSellerAdress.Text = customer.Address;
 				stbSellerPhone.Text = customer.Telephone;
-			    stbSellerEmail.Text = customer.Email;
-			    stbSellerZipCode.Text = customer.City.ZipCode.ToString();
-			    dafBirthday.SetDate(customer.DateOfBirth);
-			    btnFindCustomer.Text = "Ryd kunde";
+				stbSellerEmail.Text = customer.Email;
+				stbSellerZipCode.Text = customer.City.ZipCode.ToString();
+				dafBirthday.SetDate(customer.DateOfBirth);
+				btnFindCustomer.Text = "Ryd kunde";
 
 				SetSellerFieldsEnabled(false);
 
-			    newCustomer = false;
-		    }
-		    else
+				newCustomer = false;
+			}
+			else
 			{
-				stbSellerName.Text = stbSellerAdress.Text = 
-				stbSellerPhone.Text = stbSellerEmail.Text = 
+				lblSellerIdNo.Text = stbSellerName.Text = stbSellerAdress.Text =
+				stbSellerPhone.Text = stbSellerEmail.Text =
 				stbSellerZipCode.Text = "";
 
 				btnFindCustomer.Text = "Find kunde";
@@ -120,7 +132,7 @@ namespace LivingSmartForms.Views
 				SetSellerFieldsEnabled(true);
 
 				newCustomer = true;
-		    }
+			}
 	    }
 
 	    private void SetSellerFieldsEnabled(bool newState)
@@ -142,7 +154,7 @@ namespace LivingSmartForms.Views
 
 		private void stbFindEstateAgent_Click(object sender, EventArgs e)
 		{
-			EstateAgentSearchDropIn.Show(baseForm, UpdateEstateAgent);
+			EstateAgentSearchDropIn.Show(baseView.baseForm, UpdateEstateAgent);
 		}
 		
 		private void stbSellerZipCode_TextChanged(object sender, EventArgs e)

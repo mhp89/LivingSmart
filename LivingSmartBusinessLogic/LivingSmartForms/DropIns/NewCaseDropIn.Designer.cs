@@ -35,7 +35,7 @@ namespace LivingSmartForms.DropIns
             this.pnlSubmenuHolder = new System.Windows.Forms.Panel();
             this.pnlSubmenuBorder = new System.Windows.Forms.Panel();
             this.pnlSubmenu = new System.Windows.Forms.Panel();
-            this.lblNewCustomer = new System.Windows.Forms.Label();
+			this.lblNewCase = new System.Windows.Forms.Label();
             this.stepIndicator = new SmartControls.StepIndicator();
             this.pnlBottomControlsHolder = new System.Windows.Forms.Panel();
             this.pnlBottomControlsBorder = new System.Windows.Forms.Panel();
@@ -73,7 +73,7 @@ namespace LivingSmartForms.DropIns
             // 
             // pnlSubmenu
             // 
-            this.pnlSubmenu.Controls.Add(this.lblNewCustomer);
+			this.pnlSubmenu.Controls.Add(this.lblNewCase);
             this.pnlSubmenu.Controls.Add(this.stepIndicator);
             this.pnlSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlSubmenu.Location = new System.Drawing.Point(0, 0);
@@ -83,18 +83,18 @@ namespace LivingSmartForms.DropIns
             this.pnlSubmenu.Size = new System.Drawing.Size(498, 50);
             this.pnlSubmenu.TabIndex = 0;
             // 
-            // lblNewCustomer
+			// lblNewCase
             // 
-            this.lblNewCustomer.AutoSize = true;
-            this.lblNewCustomer.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblNewCustomer.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblNewCustomer.Location = new System.Drawing.Point(10, 15);
-            this.lblNewCustomer.Margin = new System.Windows.Forms.Padding(0);
-            this.lblNewCustomer.Name = "lblNewCustomer";
-            this.lblNewCustomer.Size = new System.Drawing.Size(57, 20);
-            this.lblNewCustomer.TabIndex = 1;
-            this.lblNewCustomer.Text = "Ny sag";
-            this.lblNewCustomer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			this.lblNewCase.AutoSize = true;
+			this.lblNewCase.Dock = System.Windows.Forms.DockStyle.Left;
+			this.lblNewCase.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+			this.lblNewCase.Location = new System.Drawing.Point(10, 15);
+			this.lblNewCase.Margin = new System.Windows.Forms.Padding(0);
+			this.lblNewCase.Name = "lblNewCase";
+			this.lblNewCase.Size = new System.Drawing.Size(57, 20);
+			this.lblNewCase.TabIndex = 1;
+			this.lblNewCase.Text = "Ny sag";
+			this.lblNewCase.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // stepIndicator
             // 
@@ -257,7 +257,7 @@ namespace LivingSmartForms.DropIns
 		private SmartControls.SmartButton btnNext;
 		private System.Windows.Forms.Panel pnlStepHolder;
 		private System.Windows.Forms.Panel pnlStepHolderInner;
-		private Label lblNewCustomer;
+		private Label lblNewCase;
 
 	}
 }

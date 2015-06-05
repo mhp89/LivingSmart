@@ -21,7 +21,7 @@ namespace LivingSmartBusinessLogic
         private int _year;
         private string _month;
         private string _estateAgentName;
-        private int _sellingpriceTotal;
+        private long _sellingpriceTotal;
         private int _propertiesTotal;
 
         #endregion
@@ -42,7 +42,7 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// 
         /// </summary>
-        public int SellingpriceTotal { get { return _sellingpriceTotal; } internal set { _sellingpriceTotal = value; } }
+        public long SellingpriceTotal { get { return _sellingpriceTotal; } internal set { _sellingpriceTotal = value; } }
         /// <summary>
         /// 
         /// </summary>
@@ -64,7 +64,7 @@ namespace LivingSmartBusinessLogic
         /// <param name="name"></param>
         /// <param name="total"></param>
         /// <param name="count"></param>
-        internal Statistics(int year, string month, string name, int total, int count)
+        internal Statistics(int year, string month, string name, long total, int count)
         {
             Year = year;
             Month = month;
@@ -79,7 +79,7 @@ namespace LivingSmartBusinessLogic
         /// <param name="month"></param>
         /// <param name="total"></param>
         /// <param name="count"></param>
-        internal Statistics(int year, string month, int total, int count)
+        internal Statistics(int year, string month, long total, int count)
         {
             Year = year;
             Month = month;

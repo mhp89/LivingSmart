@@ -51,11 +51,15 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void RemoveFromCatalog(int estateAgentId, Document document)
         {
+			db.DeleteDocument(document);
             documentDictionary[estateAgentId].Remove(document);
         }
 
         internal ReadOnlyCollection<Document> GetDocuments(int caseId)
-        {
+		{
+			if (!documentDictionary.ContainsKey(caseId))
+				return new ReadOnlyCollection<Document>(new List<Document>());
+
             return documentDictionary[caseId].AsReadOnly();
         }
     }

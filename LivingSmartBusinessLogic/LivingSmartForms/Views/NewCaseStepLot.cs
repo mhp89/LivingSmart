@@ -11,15 +11,31 @@ using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
+using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms.Views
 {
     public partial class NewCaseStepLot : CaseStep
     {
+	    private NewCaseDropIn baseView;
 
-        public NewCaseStepLot(BaseForm baseForm)
-        {
+		public NewCaseStepLot(NewCaseDropIn baseView, Case cCase) : base(cCase)
+		{
+			this.baseView = baseView;
             InitializeComponent();
+
+			if (cCase != null)
+			{
+				stbLotNumber.Text = cCase.LandRegistryNumber;
+				stbLotAddress.Text = cCase.Address;
+				stbLotZipCode.Text = cCase.City.ZipCode.ToString();
+				cboNeighborhood.SelectedItem = cCase.Neighborhood;
+				stbLotValue.Text = cCase.LandValue.ToString();
+				stbLotArea.Text = cCase.GroundArea.ToString();
+				stbLotBuildArea.Text = cCase.BuiltArea.ToString();
+				stbLotGarageArea.Text = cCase.GarageArea.ToString();
+				stbLotView.Text = cCase.View.ToString();
+			}
 
 	        cboNeighborhood.DisplayMember = "DisplayName";
         }

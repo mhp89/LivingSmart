@@ -42,8 +42,13 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void AddToCatalog(PropertyType propertyType)
         {
+<<<<<<< HEAD
 			if(!propertyTypes.ContainsKey(propertyType.Id))
 				propertyTypes.Add(propertyType.Id, propertyType);
+=======
+            if (!propertyTypes.ContainsKey(propertyType.Id))
+                propertyTypes.Add(propertyType.Id, propertyType);
+>>>>>>> origin/RedigerStuff
         }
 
         internal void RemoveFromCatalog(PropertyType propertyType)

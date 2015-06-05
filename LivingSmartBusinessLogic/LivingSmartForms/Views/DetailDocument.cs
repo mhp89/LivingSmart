@@ -23,6 +23,14 @@ namespace LivingSmartForms.Views
 			lblFile.Text = Document.Location;
 		}
 
+		public bool Validate()
+		{
+			bool fielddataOk = true;
+			fielddataOk &= stbPrice.Validate();
+			fielddataOk &= stbType.Validate();
+
+			return fielddataOk;
+		}
 
 		private void btnRemove_Click(object sender, System.EventArgs e)
 		{
@@ -31,7 +39,7 @@ namespace LivingSmartForms.Views
 
 		private void stbPrice_TextChanged(object sender, System.EventArgs e)
 		{
-			var price = Convert.ToInt32(stbPrice.Text);
+			var price = (string.IsNullOrEmpty(stbPrice.Text))?0:Convert.ToInt32(stbPrice.Text);
 			CaseController.Instance.SetDocumentPrice(Document, price);
 		}
 

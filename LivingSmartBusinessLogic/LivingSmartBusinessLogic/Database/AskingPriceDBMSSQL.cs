@@ -22,7 +22,7 @@ namespace LivingSmartBusinessLogic.DB
 
             SqlCommand cmd = new SqlCommand
             {
-                CommandText = "SELECT * FROM AskingPrice ORDER BY Date DESC;",
+                CommandText = "SELECT * FROM AskingPrice ORDER BY Date ASC;",
             };
 
 	        SqlDataReader reader = null;

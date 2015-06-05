@@ -7,11 +7,20 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartForms.Classes
 {
 	public partial class CaseStep : UserControl
 	{
+		protected Case cCase;
+
+		public CaseStep(Case cCase)
+		{
+			this.cCase = cCase;
+			InitializeComponent();
+		}
+
 		public CaseStep()
 		{
 			InitializeComponent();

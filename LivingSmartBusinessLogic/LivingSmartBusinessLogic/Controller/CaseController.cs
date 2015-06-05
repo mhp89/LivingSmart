@@ -80,21 +80,27 @@ namespace LivingSmartBusinessLogic.Controller
 	        {
 		        caseCatalog.AddToCatalog(activeCase);
 
-		        foreach (var document in tempDocuments)
+		        var documents = GetDocuments().ToList();
+				documents.AddRange(tempDocuments);
+				foreach (var document in documents)
 		        {
 					documentCatalog.Save(document, activeCase.Id);
 					if(document.Id != -1)
 						AddDocumentToCase(document);
 		        }
 
-		        foreach (var distanceTo in tempDistanceTos)
+				var distanceTos = GetDistanceTos().ToList();
+				distanceTos.AddRange(tempDistanceTos);
+				foreach (var distanceTo in distanceTos)
 		        {
 					distanceToCatalog.Save(distanceTo, activeCase.Id);
 					if (distanceTo.Id != -1)
 						AddDistanceToCase(distanceTo);
 		        }
 
-		        foreach (var picture in tempPictures)
+				var pictures = GetPictures().ToList();
+				pictures.AddRange(tempPictures);
+				foreach (var picture in pictures)
 		        {
 					pictureCatalog.Save(picture, activeCase.Id);
 					if (picture.Id != -1)
@@ -248,11 +254,21 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="location"></param>
         /// <param name="description"></param>
         /// <returns></returns>
-        public Picture MakeNewPicture(string location, string description)
+        public Picture MakeNewPicture(string location)
 		{
-			var pictureObj = new Picture(location, description);
+			var pictureObj = new Picture(location);
 			tempPictures.Add(pictureObj);
 			return pictureObj;
+        }
+
+        /// <summary>
+        /// Sætter billedbeskrivelse
+        /// </summary>
+        /// <param name="picture"></param>
+        /// <param name="description"></param>
+        public void SetPictureDescription(Picture picture, string description)
+        {
+            picture.Description = description;
         }
 
         /// <summary>
@@ -332,15 +348,14 @@ namespace LivingSmartBusinessLogic.Controller
         public Rating MakeNewRating(long systemValue, long? agentValue)
         {
 			tempRating = new Rating(systemValue, agentValue, activeCase.EstateAgent.Id);
-            /*ratingCatalog.Save(newRating, activeCase.Id);
-            if (newRating.Id != -1)
-                ratingCatalog.AddToCatalog(activeCase.Id,newRating);*/
 			return tempRating;
         }
 
 	    public long GetSystemRating()
 	    {
-		    return activeCase.CalculatePropertyRating();
+		    var list = GetDistanceTos().ToList();
+			list.AddRange(tempDistanceTos);
+			return activeCase.CalculatePropertyRating(list);
 	    }
         /// <summary>
         /// Tilføjer en vurdering til casen
@@ -460,7 +475,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// </summary>
         /// <param name="caseId"></param>
         /// <returns></returns>
-        public double GetPriceTrend(int caseId)
+        public decimal GetPriceTrend(int caseId)
         {
             ReadOnlyCollection<AskingPrice> askingPrices = GetAskingPrices(caseId);
             if (askingPrices.Count == 0)
@@ -470,7 +485,7 @@ namespace LivingSmartBusinessLogic.Controller
             long firstRating = askingPrices[0].Value;
             long lastRating = askingPrices[askingPrices.Count - 1].Value;
 
-            return (((lastRating / firstRating) - 1) * 100);
+            return ((((decimal)lastRating / firstRating) - 1) * 100);
         }
 
         #endregion
@@ -489,6 +504,15 @@ namespace LivingSmartBusinessLogic.Controller
 			tempDistanceTos.Add(distanceObj);
 			return distanceObj;
         }
+
+		/// <summary>
+		/// Sætter afstanden på DistanceTo
+		/// </summary>
+		public void SetDistanceTo(DistanceTo distanceTo, int distance)
+		{
+			distanceTo.Distance = distance;
+		}
+
         /// <summary>
         /// Tilføjer en "Afstand til" til casen
         /// </summary>
@@ -575,7 +599,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgsdato
         /// </summary>
         /// <param name="dateOfSale"></param>
-        public void SetDateOfSale(DateTime dateOfSale)
+        public void SetDateOfSale(DateTime? dateOfSale)
         {
             if (activeCase.DateOfSale != dateOfSale)
                 activeCase.DateOfSale = dateOfSale;
@@ -584,7 +608,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter overdragelsesdato
         /// </summary>
         /// <param name="transferDate"></param>
-        public void SetTransferDate(DateTime transferDate)
+        public void SetTransferDate(DateTime? transferDate)
         {
             if (activeCase.TransferDate != transferDate)
                 activeCase.TransferDate = transferDate;
@@ -602,7 +626,7 @@ namespace LivingSmartBusinessLogic.Controller
         /// Sætter salgspris
         /// </summary>
         /// <param name="sellingPrice"></param>
-        public void SetSellingPrice(long sellingPrice)
+        public void SetSellingPrice(long? sellingPrice)
         {
             if (activeCase.SellingPrice != sellingPrice)
                 activeCase.SellingPrice = sellingPrice;
@@ -806,10 +830,5 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         #endregion
-
-        public void SetPictureDescription(Picture picture, string text)
-        {
-            throw new NotImplementedException();
-        }
 	}
 }

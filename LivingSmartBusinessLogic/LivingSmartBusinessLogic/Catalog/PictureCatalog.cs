@@ -51,11 +51,15 @@ namespace LivingSmartBusinessLogic.Catalog
 
         internal void RemoveFromCatalog(int caseId, Picture picture)
         {
+			db.DeletePicture(picture);
             pictureDictionary[caseId].Remove(picture);
         }
 
         internal ReadOnlyCollection<Picture> GetPictures(int caseId)
         {
+	        if (!pictureDictionary.ContainsKey(caseId))
+		        return new ReadOnlyCollection<Picture>(new List<Picture>());
+
             return pictureDictionary[caseId].AsReadOnly();
         }
     }
