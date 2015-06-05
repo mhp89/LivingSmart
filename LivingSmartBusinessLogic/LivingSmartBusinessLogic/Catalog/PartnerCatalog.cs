@@ -7,12 +7,18 @@ using LivingSmartBusinessLogic.DB;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Partnerkatalog
+    /// </summary>
     internal class PartnerCatalog
     {
         private Dictionary<int, Partner> partners;
 
         private IPartnerDB db;
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <author>Mathias Petersen</author>
         internal PartnerCatalog()
         {
             db = PartnerDBFactory.GetDBL();
@@ -20,6 +26,10 @@ namespace LivingSmartBusinessLogic.Catalog
 
             LoadCatalog();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <author>Mathias Petersen</author>
         internal void LoadCatalog()
         {
             var customerList = db.ReadPartners();
@@ -31,7 +41,11 @@ namespace LivingSmartBusinessLogic.Catalog
         {
             throw new NotImplementedException();
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="partner"></param>
+        /// <author>Mathias Petersen</author>
         internal void Save(Partner partner)
         {
             if (partner.Id == -1)
@@ -51,7 +65,11 @@ namespace LivingSmartBusinessLogic.Catalog
             if (partners.ContainsKey(partner.Id))
                 partners.Remove(partner.Id);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         internal ReadOnlyCollection<Partner> GetPartners()
         {
             var partnerList = new List<Partner>();

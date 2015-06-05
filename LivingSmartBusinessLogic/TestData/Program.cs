@@ -14,7 +14,6 @@ namespace TestData
         {
             Random rnd = new Random();
             Dictionary<int, ZipCode> cityList = new Dictionary<int, ZipCode>();
-            List<Neighborhood> neighborhoods = new List<Neighborhood>();
             List<string> strings = new List<string>();
             
             SqlCommand cmd = new SqlCommand

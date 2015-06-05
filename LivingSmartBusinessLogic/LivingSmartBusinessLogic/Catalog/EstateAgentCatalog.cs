@@ -5,6 +5,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog
 {
+    /// <summary>
+    /// Mæglerkatalog
+    /// </summary>
+    /// <author>Mathias Poulsen</author>
     internal class EstateAgentCatalog
     {
         private Dictionary<int, EstateAgent> estateAgents;
@@ -30,7 +34,11 @@ namespace LivingSmartBusinessLogic.Catalog
         {
             return GetEstateAgent(id);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="estateAgent"></param>
+        /// <author>Mathias Petersen</author>
         internal void Save(EstateAgent estateAgent)
         {
             if (estateAgent.Id == -1)
@@ -67,7 +75,15 @@ namespace LivingSmartBusinessLogic.Catalog
             }
             return null;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="telephone"></param>
+        /// <param name="email"></param>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         internal List<EstateAgent> SearchEstateAgents(int id, string name, string telephone, string email)
         {
             List<EstateAgent> result = new List<EstateAgent>();
@@ -94,12 +110,23 @@ namespace LivingSmartBusinessLogic.Catalog
 
             return result;
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        /// <author>Mathias Petersen</author>
         internal EstateAgent LoginEstateAgent(string username, string password)
         {
             return db.LoginEstateAgent(username, password);
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="username"></param>
+        /// <returns></returns>
+        /// <author>Mathias Poulsen</author>
         internal bool IsUsernameAvailable(string username)
         {
             var estateAgentlist = GetEstateAgents();
