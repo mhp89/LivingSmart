@@ -11,6 +11,7 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Returns the number of elements in the priority queue.
         /// </summary>
+        /// <author>René Sørensen</author>>
         public int Count
         {
             get;
@@ -23,12 +24,14 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Creates an empty priority queue.
         /// </summary>
+        /// <author>René Sørensen</author>>
         public PriorityQueue() : this(InitialSize) { }
 
         /// <summary>
         /// Creates an empty priority queue with a specified initial capacity.
         /// </summary>
         /// <param name="initialSize">Initial capacity of the priority queue.</param>
+        /// <author>René Sørensen</author>>
         public PriorityQueue(int initialSize)
         {
             heap = new KeyValuePair<TKey, TValue>[initialSize];
@@ -40,6 +43,7 @@ namespace LivingSmartBusinessLogic
         /// </summary>
         /// <param name="key">Key used to specify priority - must implemet IComparable</param>
         /// <param name="element">The element associated with the key.</param>
+        /// <author>René Sørensen</author>>
         public void Insert(TKey key, TValue value)
         {
             if (Count >= heap.Length)
@@ -48,13 +52,13 @@ namespace LivingSmartBusinessLogic
             int index = Count;
             heap[index] = new KeyValuePair<TKey, TValue>(key, value);
 
-            while (index > 0 && heap[index].Key.CompareTo(heap[index / 2].Key) > 0)
+            while (index > 0 && heap[index].Key.CompareTo(heap[(index - 1) / 2].Key) > 0)
             {
                 KeyValuePair<TKey, TValue> temp = heap[index];
-                heap[index] = heap[index / 2];
-                heap[index / 2] = temp;
+                heap[index] = heap[(index - 1) / 2];
+                heap[(index - 1) / 2] = temp;
 
-                index = index / 2;
+                index = (index - 1) / 2;
             }
 
             Count++;
@@ -64,6 +68,7 @@ namespace LivingSmartBusinessLogic
         /// Removes the element from the priority queue having the higest priority.
         /// </summary>
         /// <returns>The element from the priority queue having the highest priority - default(TValue) if no elements exists.</returns>
+        /// <author>René Sørensen</author>>
         public TValue RemoveMax()
         {
             TValue maxElement = default(TValue);
@@ -80,6 +85,7 @@ namespace LivingSmartBusinessLogic
         /// <summary>
         /// Doubles the capacity of the priority queue.
         /// </summary>
+        /// <author>René Sørensen</author>>
         private void Expand()
         {
             KeyValuePair<TKey, TValue>[] temp = new KeyValuePair<TKey, TValue>[2 * heap.Length];
@@ -96,6 +102,7 @@ namespace LivingSmartBusinessLogic
         /// Returns a string representation of the elements in the priority queue.
         /// </summary>
         /// <returns>a string representation of the elements in the priority queue.</returns>
+        /// <author>René Sørensen</author>>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();
@@ -117,10 +124,11 @@ namespace LivingSmartBusinessLogic
         /// </summary>
         /// <param name="heap"></param>
         /// <param name="index"></param>
+        /// <author>René Sørensen</author>>
         private void MaxHeapify(KeyValuePair<TKey, TValue>[] heap, int index)
         {
-            int left = 2 * index;
-            int right = 2 * index + 1;
+            int left = 2 * index + 1;
+            int right = 2 * index + 2;
             int largestIndex = index;
             if (left <= heap.Length && heap[left].Key.CompareTo(heap[largestIndex].Key) > 0)
             {
