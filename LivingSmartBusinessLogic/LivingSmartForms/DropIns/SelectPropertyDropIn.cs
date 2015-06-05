@@ -43,7 +43,7 @@ namespace LivingSmartForms.DropIns
             clsAllProperties.SuspendLayout();
 
             clsAllProperties.ClearList();
-            var properties = CaseController.Instance.GetCases();
+            var properties = CaseController.Instance.GetOpenCases();
             foreach (var property in properties)
             {
                 var control = new PropertyLineSelect(this, property);

@@ -25,7 +25,7 @@ namespace GraphicalMeterLibrary
 
 		private int _maxValue = 10;
 		private int _minValue = 0;
-		private int _value = 5;
+		private int _value = 0;
 
 		[Category("Circle Properties")]
 		public Color CircleBackColor
@@ -56,13 +56,13 @@ namespace GraphicalMeterLibrary
 		public int MaxValue
 		{
 			get { return _maxValue; }
-			set { _maxValue = value; Invalidate(); }
+            set { _maxValue = value; _rotation = GetRotation(); Invalidate(); }
 		}
 		[Category("Circle Properties")]
 		public int MinValue
 		{
 			get { return _minValue; }
-			set { _minValue = value; Invalidate(); }
+            set { _minValue = value; _rotation = GetRotation(); Invalidate(); }
 		}
 		[Category("Circle Properties")]
 		public int Value
@@ -79,7 +79,7 @@ namespace GraphicalMeterLibrary
 		protected override Size DefaultSize { get { return new Size(100, 50); } }
 
 		private float _rotation = -90;
-		private float _currentRotation;
+		private float _currentRotation = -90;
 
 		private Thread t;
 
@@ -130,7 +130,6 @@ namespace GraphicalMeterLibrary
 		{
 			while (true)
 			{
-				Value = DateTime.Now.Second;
 				var step = (_rotation - _currentRotation)/(500/30);
 				if (_currentRotation != _rotation)
 				{

@@ -195,9 +195,19 @@ namespace LivingSmartForms.Classes
             int printedWidth = 0;
             foreach (Column column in columns)
             {
-                line += column.Text;
-                int width = (actualWidth * column.Width / 100);
-                line += Spacing(width - column.Text.Length);
+                int width;
+                if (column.Align == Column.Alignment.Left)
+                {
+                    line += column.Text;
+                    width = (actualWidth * column.Width / 100);
+                    line += Spacing(width - column.Text.Length);
+                }
+                else
+                {
+                    width = (actualWidth * column.Width / 100);
+                    line += Spacing(width - column.Text.Length);
+                    line += column.Text;
+                }
 
                 printedWidth += width;
             }
@@ -231,12 +241,28 @@ namespace LivingSmartForms.Classes
         {
             public string Text { get; private set; }
             public int Width { get; private set; }  //Kolonnebredde i %
+            public Alignment Align { get; private set; }
+
+            public enum Alignment { Left, Right}
 
             public Column(string text, int width)
             {
                 Text = text;
                 Width = width;
+                Align = Column.Alignment.Left;
             }
+
+            public Column(string text, int width, Alignment align)
+            {
+                Text = text;
+                Width = width;
+                Align = align;
+            }
+        }
+
+        public static string ToFirstUpper (this string str)
+        {
+            return str.Substring(0,1).ToUpper() + str.Substring(1, str.Length-1);
         }
     }
 }

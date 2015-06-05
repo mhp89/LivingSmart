@@ -42,6 +42,8 @@ namespace LivingSmartForms
 		public BaseForm(EstateAgent estateAgent)
         {
 			AutoScaleMode = AutoScaleMode.None;
+			
+            DefaultEstateAgent = estateAgent;
 
             InitializeComponent();
 
@@ -59,8 +61,6 @@ namespace LivingSmartForms
 			InitializePages();
 
 			InitializeMenu();
-
-			DefaultEstateAgent = estateAgent;
         }
 
 	    private void InitializeSystem()

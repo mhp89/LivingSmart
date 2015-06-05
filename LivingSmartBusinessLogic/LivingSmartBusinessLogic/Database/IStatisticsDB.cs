@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.DB
 {
