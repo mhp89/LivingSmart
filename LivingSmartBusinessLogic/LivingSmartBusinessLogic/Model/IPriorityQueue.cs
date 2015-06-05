@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace LivingSmartBusinessLogic
+namespace LivingSmartBusinessLogic.Model
 {
     /// <summary>
     /// Defines an interface to a priority queue.

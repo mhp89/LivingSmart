@@ -1,8 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
-using LivingSmartBusinessLogic.DB;
+using LivingSmartBusinessLogic.Database;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Catalog

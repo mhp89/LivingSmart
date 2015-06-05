@@ -4,7 +4,7 @@ using System.Data.SqlClient;
 using LivingSmartBusinessLogic.Properties;
 using LivingSmartForms.Classes;
 
-namespace LivingSmartBusinessLogic.DBLayer
+namespace LivingSmartBusinessLogic.Database
 {
     internal sealed class DBConnectionMSSQL
     {

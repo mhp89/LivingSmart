@@ -15,8 +15,29 @@ namespace LivingSmartBusinessLogic.Model
 
         #region Properties
 
-        public int ZipCode { get { return _zipcode; } internal set { _zipcode = value; } }
-		public string District { get { return _district; } internal set { _district = value; } }
+        public int ZipCode
+        {
+            get
+            {
+                return _zipcode;
+            }
+            internal set
+            {
+                _zipcode = value;
+            }
+        }
+
+        public string District
+        {
+            get
+            {
+                return _district;
+            }
+            internal set
+            {
+                _district = value;
+            }
+        }
 		public string NiceDisplay { get { return ZipCode + " " + District; } }
 
         #endregion

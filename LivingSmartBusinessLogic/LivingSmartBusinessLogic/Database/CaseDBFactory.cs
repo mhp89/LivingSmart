@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace LivingSmartBusinessLogic.DB
+﻿namespace LivingSmartBusinessLogic.Database
 {
     internal static class CaseDBFactory
     {

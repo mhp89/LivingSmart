@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
+using LivingSmartBusinessLogic.Model;
 
-namespace LivingSmartBusinessLogic.DB
+namespace LivingSmartBusinessLogic.Database
 {
     /// <summary>
     /// 
