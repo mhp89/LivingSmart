@@ -117,7 +117,7 @@ namespace SmartControls
 			var height = textSizeCache.Height > titleSizeCache.Height ? 
 				textSizeCache.Height : titleSizeCache.Height;
 
-			//Beregner den ønskede størrelsen til hele SmartLabel'en
+			//Beregner den ønskede størrelse til hele SmartLabel'en
 			Size preferredSize = new Size(titleSizeCache.Width + 
 				textSizeCache.Width, height);
 			

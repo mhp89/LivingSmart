@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Database
@@ -13,7 +14,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public List<Ad> ReadAds(int caseId)
         {
             List<Ad> adList = new List<Ad>();

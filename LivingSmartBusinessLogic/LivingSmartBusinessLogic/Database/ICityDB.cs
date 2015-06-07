@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Database

@@ -1,9 +1,10 @@
 using System;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
-using DistanceToSystemType = LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType;
+using DistanceToSystemType = LivingSmartBusinessLogic.Entity.DistanceTo.DistanceToSystemType;
 
 namespace LivingSmartForms.Views
 {

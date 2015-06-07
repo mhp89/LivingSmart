@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using LivingSmartBusinessLogic.Catalog;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
@@ -54,7 +54,7 @@ namespace LivingSmartBusinessLogic.Controller
         }
         #endregion
         /// <summary>
-        /// Tilføjer en mægler til kataloget
+        /// Tilfï¿½jer en mï¿½gler til kataloget
         /// </summary>
         /// <param name="estateAgent"></param>
         private void AddEstateAgent(EstateAgent estateAgent)
@@ -62,7 +62,7 @@ namespace LivingSmartBusinessLogic.Controller
             estateAgentCatalog.AddToCatalog(estateAgent);
         }
         /// <summary>
-        /// Laver en ny mægler samt sætter den nye mægler som aktiv mægler
+        /// Laver en ny mï¿½gler samt sï¿½tter den nye mï¿½gler som aktiv mï¿½gler
         /// </summary>
         /// <param name="name"></param>
         /// <param name="telephone"></param>
@@ -72,14 +72,14 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="username"></param>
         /// <param name="password"></param>
         /// <returns></returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
 		public EstateAgent MakeNewEstateAgent(string name, string telephone, string email, DateTime startingDate, DateTime? terminationDate, string username, string password)
         {
             SetActiveEstateAgent(new EstateAgent(name, telephone, email, startingDate, terminationDate, username, password));
             return ActiveEstateAgent;
         }
         /// <summary>
-        /// Henter en given mægler
+        /// Henter en given mï¿½gler
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>
@@ -89,7 +89,7 @@ namespace LivingSmartBusinessLogic.Controller
 			return estateAgentCatalog.Read(id);
         }
         /// <summary>
-        /// Henter alle mæglere fra kataloget
+        /// Henter alle mï¿½glere fra kataloget
         /// </summary>
         /// <returns></returns>
         /// <author>Mathias Poulsen</author>
@@ -98,7 +98,7 @@ namespace LivingSmartBusinessLogic.Controller
 			return estateAgentCatalog.GetEstateAgents();
 		}
         /// <summary>
-        /// Henter en given mægler
+        /// Henter en given mï¿½gler
         /// </summary>
         /// <param name="estateAgentId"></param>
         /// <returns></returns>
@@ -110,7 +110,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region PropertyMethods
         /// <summary>
-        /// Sætter navn på den aktive mægler
+        /// Sï¿½tter navn pï¿½ den aktive mï¿½gler
         /// </summary>
         /// <param name="name"></param>
         /// <author>Mathias Poulsen</author>
@@ -120,7 +120,7 @@ namespace LivingSmartBusinessLogic.Controller
 				ActiveEstateAgent.Name = name;
         }
         /// <summary>
-        /// Sætter telefonnummer på den aktive mægler
+        /// Sï¿½tter telefonnummer pï¿½ den aktive mï¿½gler
         /// </summary>
         /// <param name="telephone"></param>
         /// <author>Mathias Poulsen</author>
@@ -130,7 +130,7 @@ namespace LivingSmartBusinessLogic.Controller
 				ActiveEstateAgent.Telephone = telephone;
         }
         /// <summary>
-        /// Sætter email på den aktive mægler
+        /// Sï¿½tter email pï¿½ den aktive mï¿½gler
         /// </summary>
         /// <param name="email"></param>
         /// <author>Mathias Poulsen</author>
@@ -140,7 +140,7 @@ namespace LivingSmartBusinessLogic.Controller
 				ActiveEstateAgent.Email = email;
         }
         /// <summary>
-        /// Sætter startdato på den aktive mægler
+        /// Sï¿½tter startdato pï¿½ den aktive mï¿½gler
         /// </summary>
         /// <param name="startingDate"></param>
         /// <author>Mathias Poulsen</author>
@@ -150,7 +150,7 @@ namespace LivingSmartBusinessLogic.Controller
 				ActiveEstateAgent.StartingDate = startingDate;
         }
         /// <summary>
-        /// Sætter ophørsdato på den aktive mægler
+        /// Sï¿½tter ophï¿½rsdato pï¿½ den aktive mï¿½gler
         /// </summary>
         /// <param name="terminationDate"></param>
         /// <author>Mathias Poulsen</author>
@@ -184,7 +184,7 @@ namespace LivingSmartBusinessLogic.Controller
             return new Appointment(startTimeStamp, endTimeStamp, description, place, customer, cCase);
         }
         /// <summary>
-        /// Tilføjer aftale til aftalekataloget
+        /// Tilfï¿½jer aftale til aftalekataloget
         /// </summary>
         /// <param name="appointment"></param>
         /// <author>Mathias Poulsen</author>
@@ -221,7 +221,7 @@ namespace LivingSmartBusinessLogic.Controller
             appointmentCatalog.Save(appointment, estateAgentId);
         }
         /// <summary>
-        /// Læser en given aftale
+        /// Lï¿½ser en given aftale
         /// </summary>
         /// <param name="id"></param>
         /// <returns></returns>

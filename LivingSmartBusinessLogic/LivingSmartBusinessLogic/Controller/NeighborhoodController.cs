@@ -1,5 +1,5 @@
 using System.Collections.ObjectModel;
-using LivingSmartBusinessLogic.Catalog;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller

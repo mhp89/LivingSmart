@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
@@ -25,7 +26,7 @@ namespace LivingSmartForms.DropIns
             if (partner != null)
             {
                 btnSave.Text = "Gem";
-                lblNewPartner.Text = "Redigér partner";
+                lblNewPartner.Text = "Redigï¿½r partner";
             }
 
 			newPartnerForm = new NewPartner(baseForm, partner);

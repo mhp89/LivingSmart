@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Database
@@ -12,7 +13,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns a dictionary containing all the appointments in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the appointments in the database, with estateAgentId as key and a list of appointments containing that estateAgentId</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public Dictionary<int, List<Appointment>> ReadAppointments()
         {
             Dictionary<int, List<Appointment>> appointments = new Dictionary<int, List<Appointment>>();
@@ -63,7 +64,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="appointment">Appointment to be updated.</param>
         /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public void UpdateAppointment(Appointment appointment, int estateAgentId)
         {
             int appointmentId = appointment.Id;
@@ -92,7 +93,7 @@ namespace LivingSmartBusinessLogic.Database
         /// <param name="appointment">Appointment to be created.</param>
         /// <param name="estateAgentId">EstateAgentId connected to the appointment</param>
         /// <returns>Returns the Id of the Appointment created.</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public int CreateAppointment(Appointment appointment, int estateAgentId)
         {
             SqlCommand cmd = new SqlCommand

@@ -132,7 +132,7 @@ namespace SmartControls
 			{
 				UpdateTime();
 
-				//Beregner tiden til n�ste minutskift i millisekunder
+				//Beregner tiden til næste minutskift i millisekunder
 				var delay = (60 - time.Second)*1000;
 				Thread.Sleep(delay);
 			}

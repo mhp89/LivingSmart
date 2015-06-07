@@ -80,21 +80,23 @@ namespace SmartControls
 			if (Controls.Count == 0)
 				return;
 
+			//Pauser layout logikken midlertidigt, af hensyn til performance
 			SuspendLayout();
 
-			//Det f�rste element skal manuelt indstilles til at fylde bredden.
+			//Det første element skal manuelt indstilles til at fylde bredden.
 			Controls[0].Dock = DockStyle.None;
 			//ClientSize.Width er bredden uden scrollbar
 			Controls[0].Width = ClientSize.Width - Controls[0].Margin.Horizontal;
 			Controls[0].Margin = Padding.Empty;
 
-			//De andre f�r automatisk den rigtige bredde, n�r de dockes til toppen.
+			//De andre før automatisk den rigtige bredde, når de dockes til toppen.
 			for (int i = 1; i < Controls.Count; i++)
 			{
 				Controls[i].Dock = DockStyle.Top;
 				Controls[i].Margin = new Padding(0, Spacing, 0, 0);
 			}
 
+			//Genoptager layout logikken
 			ResumeLayout(true);
 		}
 

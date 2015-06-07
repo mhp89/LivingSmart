@@ -1,5 +1,5 @@
 using System.Collections.ObjectModel;
-using LivingSmartBusinessLogic.Catalog;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
@@ -33,7 +33,7 @@ namespace LivingSmartBusinessLogic.Controller
         #region Methods
         
         /// <summary>
-        /// Sætter aktiv partner
+        /// Sï¿½tter aktiv partner
         /// </summary>
         /// <param name="activePartner"></param>
         /// <author>Mathias Petersen</author>
@@ -94,7 +94,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region PropertyMethods
         /// <summary>
-        /// Sætter navn på den aktive partner
+        /// Sï¿½tter navn pï¿½ den aktive partner
         /// </summary>
         /// <param name="name"></param>
         /// <author>Mathias Poulsen</author>
@@ -104,7 +104,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.Name = name;
         }
         /// <summary>
-        /// Sætter telefonnummer på den aktive partner
+        /// Sï¿½tter telefonnummer pï¿½ den aktive partner
         /// </summary>
         /// <param name="telephone"></param>
         public void SetTelephone(string telephone)
@@ -113,7 +113,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.Telephone = telephone;
         }
         /// <summary>
-        /// Sætter by på den aktive partner
+        /// Sï¿½tter by pï¿½ den aktive partner
         /// </summary>
         /// <param name="city"></param>
         public void SetCity(string city)
@@ -122,7 +122,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.City = city;
         }
         /// <summary>
-        /// Sætter land på den aktive partner
+        /// Sï¿½tter land pï¿½ den aktive partner
         /// </summary>
         /// <param name="country"></param>
         /// <author>Mathias Poulsen</author>
@@ -132,7 +132,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.Country = country;
         }
         /// <summary>
-        /// Sætter region på den aktive partner
+        /// Sï¿½tter region pï¿½ den aktive partner
         /// </summary>
         /// <param name="region"></param>
         /// <author>Mathias Poulsen</author>
@@ -142,7 +142,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.Region = region;
         }
         /// <summary>
-        /// Sætter regionsforkortelse på den aktive region
+        /// Sï¿½tter regionsforkortelse pï¿½ den aktive region
         /// </summary>
         /// <param name="regionShort"></param>
         /// <author>Mathias Poulsen</author>
@@ -152,7 +152,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.RegionShort = regionShort;
         }
         /// <summary>
-        /// Sætter email på den aktive partner
+        /// Sï¿½tter email pï¿½ den aktive partner
         /// </summary>
         /// <param name="email"></param>
         public void SetEmail(string email)
@@ -161,7 +161,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activePartner.Email = email;
         }
         /// <summary>
-        /// Sætter tidszone på den aktive partner
+        /// Sï¿½tter tidszone pï¿½ den aktive partner
         /// </summary>
         /// <param name="timeZone"></param>
         /// <author>Mathias Poulsen</author>

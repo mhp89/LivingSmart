@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Database
@@ -12,7 +13,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns all the EstateAgents from the database.
         /// </summary>
         /// <returns>Returns a List of all the EstateAgents from the database.</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public List<EstateAgent> ReadEstateAgents()
         {
             List<EstateAgent> estateAgentList = new List<EstateAgent>();
@@ -57,7 +58,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Updates the information from an EstateAgent, in the database.
         /// </summary>
         /// <param name="estateAgent">EstateAgent to be updated.</param>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public void UpdateEstateAgent(EstateAgent estateAgent)
         {
             int estateagentId = estateAgent.Id;
@@ -83,7 +84,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="estateAgent">EstateAgent to be created.</param>
         /// <returns>Returns the Id of the EstateAgent created.</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public int CreateEstateAgent(EstateAgent estateAgent)
         {
             SqlCommand cmd = new SqlCommand
@@ -108,7 +109,7 @@ namespace LivingSmartBusinessLogic.Database
         /// <param name="username">username of the estate agent.</param>
         /// <param name="password">password of the estate agent.</param>
         /// <returns>The estate agent having the given username and password, null otherwise</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public EstateAgent LoginEstateAgent(string username, string password)
         {
             EstateAgent estateAgent = null;

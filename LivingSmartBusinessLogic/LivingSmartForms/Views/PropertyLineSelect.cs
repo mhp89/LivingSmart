@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using SmartControls;
 using LivingSmartBusinessLogic;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.DropIns;
 

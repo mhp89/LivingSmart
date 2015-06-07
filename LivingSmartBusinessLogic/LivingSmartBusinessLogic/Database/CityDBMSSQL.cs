@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Database
@@ -11,7 +12,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns all the Cities from the database.
         /// </summary>
         /// <returns>Returns a List of all the Cities from the database</returns>
-        /// <author>René Sørensen</author>
+        /// <author>Renï¿½ Sï¿½rensen</author>
         public List<City> ReadCities()
         {
             List<City> cityList = new List<City>();

@@ -149,14 +149,9 @@ namespace SmartControls
 
 				if (i < Steps - 1)
 				{
-					if (i < CurrentStep)
-						e.Graphics.DrawLine(new Pen(LineCompletedColor, LineThickness),
-							new Point(offset.X + x + StepSize, offset.Y + StepSize / 2),
-							new Point(offset.X + x + StepSize + LineWidth, offset.Y + StepSize / 2));
-					else
-						e.Graphics.DrawLine(new Pen(LineUncompletedColor, LineThickness),
-							new Point(offset.X + x + StepSize, offset.Y + StepSize / 2),
-							new Point(offset.X + x + StepSize + LineWidth, offset.Y + StepSize / 2));
+					e.Graphics.DrawLine(new Pen(i < CurrentStep ? LineCompletedColor : LineUncompletedColor, LineThickness),
+						new Point(offset.X + x + StepSize, offset.Y + StepSize / 2),
+						new Point(offset.X + x + StepSize + LineWidth, offset.Y + StepSize / 2));
 				}
 
 				if (i == CurrentStep)

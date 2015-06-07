@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.Views;
@@ -33,7 +34,7 @@ namespace LivingSmartForms.DropIns
             if (currentEstateAgent != null)
             {
                 btnSave.Text = @"Gem";
-                lblNewEstateAgent.Text = @"Redigér ejendomsmægler";
+                lblNewEstateAgent.Text = @"Redigï¿½r ejendomsmï¿½gler";
             }
 
             newEstateAgentForm = new NewEstateAgent(baseForm, estateAgent);

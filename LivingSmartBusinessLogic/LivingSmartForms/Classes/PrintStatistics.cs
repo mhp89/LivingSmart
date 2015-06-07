@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 using docGen = LivingSmartForms.Classes.DocumentGenerator;
 
