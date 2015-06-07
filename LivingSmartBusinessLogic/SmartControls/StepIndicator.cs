@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartControls
@@ -30,7 +25,7 @@ namespace SmartControls
 			get { return _currentStep; }
 			set { _currentStep = value; if (_currentStep > Steps) _currentStep = Steps; if (_currentStep < 0) _currentStep = 0; Invalidate(); }
 		}
-		private int _currentStep=0;
+		private int _currentStep;
 
 		[Category("Step Appearance")]
 		public int Steps

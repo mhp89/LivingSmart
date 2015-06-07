@@ -114,10 +114,12 @@ namespace SmartControls
 		{
 			SetTextSizes();
 
-			var height = textSizeCache.Height > titleSizeCache.Height ? textSizeCache.Height : titleSizeCache.Height;
+			var height = textSizeCache.Height > titleSizeCache.Height ? 
+				textSizeCache.Height : titleSizeCache.Height;
 
 			//Beregner den ønskede størrelsen til hele SmartLabel'en
-			Size preferredSize = new Size(titleSizeCache.Width + textSizeCache.Width, height);
+			Size preferredSize = new Size(titleSizeCache.Width + 
+				textSizeCache.Width, height);
 			
 			//Justere størrelsen i forhold til padding
 			Size requiredSize = preferredSize + Padding.Size;
@@ -134,10 +136,12 @@ namespace SmartControls
 
 				//Beregner størrelsen til teksterne
 				if (titleSizeCache == Size.Empty)
-					titleSizeCache = TextRenderer.MeasureText(Title, TitleFont, Size.Empty, flags);
+					titleSizeCache = TextRenderer.MeasureText(Title, TitleFont,
+						Size.Empty, flags);
 
 				if (textSizeCache == Size.Empty)
-					textSizeCache = TextRenderer.MeasureText(Text, Font, Size.Empty, flags);
+					textSizeCache = TextRenderer.MeasureText(Text, Font,
+						Size.Empty, flags);
 			}
 		}
 
@@ -160,13 +164,13 @@ namespace SmartControls
 
 			//Beregner firkanten teksterne skal tegnes i
 			Rectangle titleRectangle = AdjustedRect(
-				new Rectangle(ClientRectangle.X, ClientRectangle.Y, titleSizeCache.Width,
-					ClientRectangle.Height),
+				new Rectangle(ClientRectangle.X, ClientRectangle.Y, 
+					titleSizeCache.Width, ClientRectangle.Height),
 				Padding
 			);
 			Rectangle textRectangle = AdjustedRect(
-				new Rectangle(ClientRectangle.X + titleSizeCache.Width, ClientRectangle.Y,
-					textSizeCache.Width, ClientRectangle.Height),
+				new Rectangle(ClientRectangle.X + titleSizeCache.Width, 
+					ClientRectangle.Y, textSizeCache.Width, ClientRectangle.Height),
 				Padding
 			);
 			
