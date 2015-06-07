@@ -2,9 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Runtime.InteropServices;
-using System.Threading;
-using LivingSmartBusinessLogic.Catalog;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
@@ -238,7 +236,6 @@ namespace LivingSmartBusinessLogic.Controller
         /// <param name="type"></param>
         /// <param name="price"></param>
         /// <param name="location"></param>
-        /// <param name="status"></param>
         /// <returns></returns>
         /// <author>Mathias Petersen</author>
         public Document MakeNewDocument(string type, int price, string location)
@@ -304,7 +301,6 @@ namespace LivingSmartBusinessLogic.Controller
         /// Laver et nyt billede
         /// </summary>
         /// <param name="location"></param>
-        /// <param name="description"></param>
         /// <returns></returns>
         /// <author>Mathias Petersen</author>
         public Picture MakeNewPicture(string location)
@@ -479,7 +475,6 @@ namespace LivingSmartBusinessLogic.Controller
         /// Laver en ny udbudspris
         /// </summary>
         /// <param name="value"></param>
-        /// <param name="date"></param>
         /// <returns></returns>
         /// <author>Mathias Petersen</author>
         public AskingPrice MakeNewAskingPrice(long value)

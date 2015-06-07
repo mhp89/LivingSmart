@@ -232,7 +232,7 @@ namespace SmartControls
 			if (AutomaticValidation)
 				Validate();
 
-			//Efter egenvalidering sendes eventen videre til andre evt. lyttere
+			//Efter egenvalidering sendes eventen videre til andre evt. modtager
 			OnTextChanged(e);
 		}
 
@@ -274,12 +274,17 @@ namespace SmartControls
 
 			if (!string.IsNullOrEmpty(Suffix))
 			{
-				var suffixSize = TextRenderer.MeasureText(CreateGraphics(), Suffix, Font, Size.Empty);
+				var suffixSize = TextRenderer.MeasureText(CreateGraphics(), 
+					Suffix, Font, Size.Empty);
 				suffixSizeBuffer = suffixSize;
 				suffixSizeBuffer.Width += 10;
 
-				e.Graphics.FillRectangle(new SolidBrush(SmartColor.DarkA75), new Rectangle(Width - suffixSizeBuffer.Width, 0, suffixSizeBuffer.Width, Height));
-				TextRenderer.DrawText(e.Graphics, Suffix, Font, new Rectangle(Width - suffixSize.Width - 5, 0, suffixSize.Width, Height), SmartColor.Light);
+				e.Graphics.FillRectangle(new SolidBrush(SmartColor.DarkA75), 
+					new Rectangle(Width - suffixSizeBuffer.Width, 0, 
+						suffixSizeBuffer.Width, Height));
+				TextRenderer.DrawText(e.Graphics, Suffix, Font, 
+					new Rectangle(Width - suffixSize.Width - 5, 0, 
+						suffixSize.Width, Height), SmartColor.Light);
 			}
 
 			if (HasError)
@@ -348,6 +353,8 @@ namespace SmartControls
 		{
 			ClearError();
 			
+			//Hvis koden bliver kørt gennem Visual Studio Form Designer 
+			//skal metoden ikke fortsætte
 			if (DesignMode)
 				return false;
 
@@ -355,11 +362,12 @@ namespace SmartControls
 			{
 				SetError(ErrorType.Required);
 			}
-			if (MinLength > 0 && Text.Length < MinLength)
+			else if (MinLength > 0 && Text.Length < MinLength)
 			{
 				SetError(ErrorType.ToShort);
 			}
-			else if (!string.IsNullOrEmpty(RegularExpression) && !Regex.IsMatch(Text, RegularExpression))
+			else if (!string.IsNullOrEmpty(RegularExpression) &&
+				!Regex.IsMatch(Text, RegularExpression))
 			{
 				SetError(ErrorType.InvalidInput);
 			}

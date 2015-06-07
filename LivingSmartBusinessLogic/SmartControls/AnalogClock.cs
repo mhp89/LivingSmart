@@ -1,11 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SmartControls
@@ -27,7 +23,7 @@ namespace SmartControls
 			set { _points = value; }
 		}
 		private int _points = 12;
-		private Color FillColor;
+		private Color fillColor;
 
 		//Clock
 		private float minuteRotation;
@@ -70,34 +66,46 @@ namespace SmartControls
 
 			var center = new Point(Width / 2, Height / 2);
 
-			// Create rectangle to bound ellipse.
+			// Firkanten uret skal tegnes i
 			Rectangle rect = new Rectangle(0, 0, Width-1, Height-1);
-			// Draw arc to screen.
-			e.Graphics.FillEllipse(new SolidBrush(FillColor), rect);
+			
+			// Tegner urskiven.
+			e.Graphics.FillEllipse(new SolidBrush(fillColor), rect);
 			e.Graphics.DrawEllipse(new Pen(ForeColor, 1), rect);
-			e.Graphics.FillEllipse(new SolidBrush(ForeColor), new Rectangle(center.X - 3, center.Y - 3, 6, 6));
+			e.Graphics.FillEllipse(new SolidBrush(ForeColor), 
+				new Rectangle(center.X - 3, center.Y - 3, 6, 6));
 
-			//Draw minute pointer
+			//Tegner minutviseren
 			Matrix mx = new Matrix();
 			mx.RotateAt(minuteRotation, center);
 			e.Graphics.Transform = mx;
-			e.Graphics.DrawLine(new Pen(ForeColor) { Width = 3, EndCap = LineCap.Round }, center, new Point(center.X, (int) (center.Y - (Height / 2 * .80))));
+			e.Graphics.DrawLine(new Pen(ForeColor) {
+				Width = 3,
+				EndCap = LineCap.Round
+			}, 
+			center, new Point(center.X, (int) (center.Y - (Height / 2 * .80))));
 			e.Graphics.ResetTransform();
 
-			//Draw minute pointer
+			//Tegner timeviseren
 			mx = new Matrix();
 			mx.RotateAt(hourRotation, center);
 			e.Graphics.Transform = mx;
-			e.Graphics.DrawLine(new Pen(ForeColor) { Width = 3, EndCap = LineCap.Round }, center, new Point(center.X, (int) (center.Y - (Height / 2 * .55))));
+			e.Graphics.DrawLine(new Pen(ForeColor) {
+				Width = 3,
+				EndCap = LineCap.Round
+			}, center, new Point(center.X, (int) (center.Y - (Height / 2 * .55))));
 			e.Graphics.ResetTransform();
 
+			//Tegner punkterne i kanten af uret
 			for (int i = 0; i <= Points; i++)
 			{
 				var rot = i * 360 / (Points);
 				Matrix mx2 = new Matrix();
 				mx2.RotateAt(rot, center);
 				e.Graphics.Transform = mx2;
-				e.Graphics.DrawLine(new Pen(ForeColor, 1), new Point(center.X, 1), new Point(center.X, (int) (Height / 2 * .1)));
+				e.Graphics.DrawLine(new Pen(ForeColor, 1),
+					new Point(center.X, 1),
+					new Point(center.X, (int) (Height / 2 * .1)));
 				e.Graphics.ResetTransform();
 			}
 		}
@@ -124,6 +132,7 @@ namespace SmartControls
 			{
 				UpdateTime();
 
+				//Beregner tiden til næste minutskift i millisekunder
 				var delay = (60 - time.Second)*1000;
 				Thread.Sleep(delay);
 			}
@@ -148,12 +157,12 @@ namespace SmartControls
 			if (nightState)
 			{
 				ForeColor = SmartColor.Light;
-				FillColor = SmartColor.Dark;
+				fillColor = SmartColor.Dark;
 			}
 			else
 			{
 				ForeColor = SmartColor.Dark;
-				FillColor = SmartColor.Light;
+				fillColor = SmartColor.Light;
 			}
 		}
 	}

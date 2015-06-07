@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using SmartControls;
 using LivingSmartBusinessLogic.Model;
 using LivingSmartBusinessLogic.Controller;
+using LivingSmartBusinessLogic.Entity;
 
 namespace LivingSmartForms.Classes
 {

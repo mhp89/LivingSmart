@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using LivingSmartBusinessLogic.Catalog;
+using LivingSmartBusinessLogic.Entity;
 using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartBusinessLogic.Controller
@@ -36,7 +36,7 @@ namespace LivingSmartBusinessLogic.Controller
         #region AdminActiveCustomer
 
         /// <summary>
-        /// Sætter aktiv kunde
+        /// Sï¿½tter aktiv kunde
         /// </summary>
         /// <param name="newActiveCustomer"></param>
         /// <author>Mathias Poulsen</author>
@@ -45,7 +45,7 @@ namespace LivingSmartBusinessLogic.Controller
             activeCustomer = newActiveCustomer;
         }
         /// <summary>
-        /// Fortryder valg af aktiv kunde. / Sætter aktiv kunde lig null
+        /// Fortryder valg af aktiv kunde. / Sï¿½tter aktiv kunde lig null
         /// </summary>
         /// <author>Mathias Poulsen</author>
         public void CancelActiveCustomer()
@@ -66,7 +66,7 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
 
         /// <summary>
-        /// Laver en ny kunde, sætter denne kunde som ny aktiv kunde 
+        /// Laver en ny kunde, sï¿½tter denne kunde som ny aktiv kunde 
         /// og retunerer den aktive kunde
         /// </summary>
         /// <param name="name"></param>
@@ -116,7 +116,7 @@ namespace LivingSmartBusinessLogic.Controller
 
         #region PropertyMethods
         /// <summary>
-        /// Sætter navn på den aktive kunde
+        /// Sï¿½tter navn pï¿½ den aktive kunde
         /// </summary>
         /// <param name="name"></param>
         /// <author>Mathias Poulsen</author>
@@ -126,7 +126,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activeCustomer.Name = name;
         }
         /// <summary>
-        /// Sætter fødselsdag på den aktive kunde
+        /// Sï¿½tter fï¿½dselsdag pï¿½ den aktive kunde
         /// </summary>
         /// <param name="dateOfBirth"></param>
         /// <author>Mathias Poulsen</author>
@@ -136,7 +136,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activeCustomer.DateOfBirth = dateOfBirth;
         }
         /// <summary>
-        /// Sætter telefonnummer på den aktive kunde
+        /// Sï¿½tter telefonnummer pï¿½ den aktive kunde
         /// </summary>
         /// <param name="telephone"></param>
         /// <author>Mathias Poulsen</author>
@@ -146,7 +146,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activeCustomer.Telephone = telephone;
         }
         /// <summary>
-        /// Sætter adresse på den aktive kunde
+        /// Sï¿½tter adresse pï¿½ den aktive kunde
         /// </summary>
         /// <param name="address"></param>
         /// <author>Mathias Poulsen</author>
@@ -156,7 +156,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activeCustomer.Address = address;
         }
         /// <summary>
-        /// Sætter by på den aktive kunde
+        /// Sï¿½tter by pï¿½ den aktive kunde
         /// </summary>
         /// <param name="zipCode"></param>
         /// <author>Mathias Poulsen</author>
@@ -167,7 +167,7 @@ namespace LivingSmartBusinessLogic.Controller
                 activeCustomer.City = city;
         }
         /// <summary>
-        /// Sætter email på den aktive kunde
+        /// Sï¿½tter email pï¿½ den aktive kunde
         /// </summary>
         /// <param name="email"></param>
         /// <author>Mathias Poulsen</author>
@@ -179,7 +179,7 @@ namespace LivingSmartBusinessLogic.Controller
         #endregion
         
         /// <summary>
-        /// Søger efter kunder
+        /// Sï¿½ger efter kunder
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
