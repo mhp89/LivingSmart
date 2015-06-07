@@ -17,8 +17,9 @@ namespace LivingSmartBusinessLogic.Controller
 	{
 		#region Singleton
 
-		private static CaseController _instance;
-		public static CaseController Instance
+        private static CaseController _instance;
+
+        public static CaseController Instance
 		{
 			get { return _instance ?? (_instance = new CaseController()); }
 		}
@@ -937,14 +938,6 @@ namespace LivingSmartBusinessLogic.Controller
         {
             if (activeCase.Neighborhood != neighborhood)
                 activeCase.Neighborhood = neighborhood;
-        }
-        /// <summary>
-        /// Tilføjer salgsprisen til casen
-        /// </summary>
-        /// <author>Mathias Poulsen</author>
-        public void AddSellingPriceToCase(long sellingPrice)
-        {
-            activeCase.SellingPrice = sellingPrice;
         }
         #endregion
         

@@ -52,16 +52,15 @@ namespace LivingSmartBusinessLogic.Model
 
         public Customer Customer
         {
-            get; 
+            get;
             private set;
         }
 
         public Case Case
         {
-            get; 
+            get;
             private set;
         }
-
 
         #endregion
 

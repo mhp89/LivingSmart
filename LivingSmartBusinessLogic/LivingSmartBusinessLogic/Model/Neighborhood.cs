@@ -11,7 +11,6 @@ namespace LivingSmartBusinessLogic.Model
         
         #region Private Fields
 
-        private int _zipCode;
         private string _name;
         private int _value;
 
