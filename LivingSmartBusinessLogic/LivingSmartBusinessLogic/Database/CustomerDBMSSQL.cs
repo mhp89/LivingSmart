@@ -64,7 +64,10 @@ namespace LivingSmartBusinessLogic.Database
 
             SqlCommand cmd = new SqlCommand
             {
-				CommandText = "UPDATE Customer SET Name = (@Name), DateOfBirth = (@DateOfBirth), Address = (@Address), ZipCode = (@ZipCode), Telephone = (@Telephone), Email = (@Email) WHERE CustomerID = (@CustomerID)"
+				CommandText = "UPDATE Customer SET Name = (@Name), DateOfBirth = (@DateOfBirth), " +
+                              "Address = (@Address), ZipCode = (@ZipCode), " + 
+                              "Telephone = (@Telephone), Email = (@Email)" + 
+                              "WHERE CustomerID = (@CustomerID)"
 			};
 
 			cmd.Parameters.Add("@CustomerID", SqlDbType.Int, 4, "CustomerID").Value = customerID;
@@ -89,7 +92,8 @@ namespace LivingSmartBusinessLogic.Database
         {
             SqlCommand cmd = new SqlCommand
             {
-				CommandText = "INSERT INTO Customer OUTPUT INSERTED.CustomerId VALUES (@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email);"
+				CommandText = "INSERT INTO Customer OUTPUT INSERTED.CustomerId VALUES " + 
+                              "(@Name, @DateOfBirth, @Address, @ZipCode, @Telephone, @Email);"
             };
 
             cmd.Parameters.Add("@Name", SqlDbType.NVarChar, 50, "Name").Value = customer.Name;
