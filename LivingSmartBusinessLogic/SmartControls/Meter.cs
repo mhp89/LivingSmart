@@ -143,6 +143,9 @@ namespace GraphicalMeterLibrary
 		private float GetRotation()
 		{
 			float range = MaxValue - MinValue;
+			if (range == 0)
+				return -90;
+
 			float percent = (Value - MinValue)/range;
 
 			return -90 + (percent * 180);
