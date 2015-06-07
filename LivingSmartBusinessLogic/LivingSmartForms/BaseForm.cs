@@ -66,12 +66,30 @@ namespace LivingSmartForms
 			
 			pages = new Page[Enum.GetNames(typeof(PagesIndex)).Length];
 
-			pages[GetPageIndex(PagesIndex.Overview)]		= new Page(typeof(Overview),		"Oversigt",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Cases)]			= new Page(typeof(Cases),			"Sager",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Customers)]		= new Page(typeof(Customers),		"Kunder",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.EstateAgents)]	= new Page(typeof(EstateAgents),	"Mæglere",			Classes.Menu.MenuAnchor.Left);
-			pages[GetPageIndex(PagesIndex.Partners)]		= new Page(typeof(Partners),		"Partnere",			Classes.Menu.MenuAnchor.Left);
-            pages[GetPageIndex(PagesIndex.OpenHouse)]       = new Page(typeof(OpenHousePage),   "Åbent hus",        Classes.Menu.MenuAnchor.Left);
+			pages[GetPageIndex(PagesIndex.Overview)] = new Page(
+				typeof(Overview), "Oversigt",
+				Classes.Menu.MenuAnchor.Left
+			);
+			pages[GetPageIndex(PagesIndex.Cases)] = new Page(
+				typeof(Cases), "Sager",
+				Classes.Menu.MenuAnchor.Left
+			);
+			pages[GetPageIndex(PagesIndex.Customers)] = new Page(
+				typeof(Customers), "Kunder",
+				Classes.Menu.MenuAnchor.Left
+			);
+			pages[GetPageIndex(PagesIndex.EstateAgents)] = new Page(
+				typeof(EstateAgents), "Mæglere",
+				Classes.Menu.MenuAnchor.Left
+			);
+			pages[GetPageIndex(PagesIndex.Partners)] = new Page(
+				typeof(Partners), "Partnere",
+				Classes.Menu.MenuAnchor.Left
+			);
+            pages[GetPageIndex(PagesIndex.OpenHouse)] = new Page(
+				typeof(OpenHousePage), "Åbent hus",
+				Classes.Menu.MenuAnchor.Left
+			);
 			
 			InitializePages();
 
@@ -81,13 +99,15 @@ namespace LivingSmartForms
 	    private void InitializeSystem()
 	    {
 	    	if (RegistryWrapper.RegKey.GetValue("DatabaseConnection") == null)
-				RegistryWrapper.RegKey.SetValue("DatabaseConnection", "Data Source=(local); Initial Catalog=LivingSmart; Integrated Security=SSPI; MultipleActiveResultSets=true");
+				RegistryWrapper.RegKey.SetValue("DatabaseConnection", 
+					"Data Source=(local); Initial Catalog=LivingSmart; Integrated Security=SSPI; MultipleActiveResultSets=true");
 
 
 	        if (RegistryWrapper.RegKey.GetValue("WindowState") != null)
 	        {
 	            WindowState =
-					(FormWindowState)Enum.Parse(typeof(FormWindowState), RegistryWrapper.RegKey.GetValue("WindowState") as string);
+					(FormWindowState)Enum.Parse(typeof(FormWindowState),
+					RegistryWrapper.RegKey.GetValue("WindowState") as string);
 	            lastState = WindowState;
 	        }
 	    }
@@ -101,7 +121,8 @@ namespace LivingSmartForms
 	    {
 			foreach (Page page in pages)
 			{
-				page.PageView = Activator.CreateInstance(page.PageType, this) as BasePage;//Opretter en instance af en klasse ud fra en Type
+				//Opretter en instance af en klasse ud fra en Type
+				page.PageView = Activator.CreateInstance(page.PageType, this) as BasePage;
 
 				if (page.PageView == null) continue;
 				
@@ -276,14 +297,16 @@ namespace LivingSmartForms
 		{
 			var viewWidth = view.Width;
 
-		    foreach (var dropIn in DropIns)
-		    {
-			    if(dropIn.GetDropInId() == view.GetDropInId())
-					return;
-		    }
-
+			//Hvis der allerede er et DropIn af typen man 
+			//forsøger at vise skal det ignores
 			foreach (var dropIn in DropIns)
-				dropIn.Parent.Location = new Point(dropIn.Parent.Location.X - 50, dropIn.Parent.Location.Y);
+				if (dropIn.GetDropInId() == view.GetDropInId())
+					return;
+
+			//Flyt de eksisterende lidt ud, så man kan se dem under den øverste
+			foreach (var dropIn in DropIns)
+				dropIn.Parent.Location = new Point(
+					dropIn.Parent.Location.X - 50, dropIn.Parent.Location.Y);
 
 			var dropInHolder = new Panel
 			{
@@ -294,16 +317,17 @@ namespace LivingSmartForms
 
 			pnlMasterContent.Controls.Add(dropInHolder);
 
-			//Tilføjer dropin'et til stack'en
+			//Tilføjer dropin'et til listen
 			DropIns.Add(view);
 
-			//Tilføjet view'et til holderen
+			//Tilføjet dropin'et til holderen
 			dropInHolder.Controls.Add(view);
-			//Før view'et til at fylde hele holderen
+			//Får view'et til at fylde hele holderen
 			view.Dock = DockStyle.Fill;
 			
 			//Flytter holderen så den sidder i højre side
-			dropInHolder.Location = new Point(pnlMasterContent.Width - dropInHolder.Width, dropInHolder.Top);
+			dropInHolder.Location = new Point(
+				pnlMasterContent.Width - dropInHolder.Width, dropInHolder.Top);
 			dropInHolder.BringToFront();
 	    }
 

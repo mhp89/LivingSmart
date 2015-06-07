@@ -8,7 +8,7 @@ namespace SmartControls
 	/// Simple udvidelse af TextBox, der tilføjer mulighed for placeholder tekst
 	/// </summary>
 	/// <author>Mathias Petersen</author>
-	public partial class ExtendedTextBox : TextBox
+	internal partial class ExtendedTextBox : TextBox
 	{
 		/// <summary>
 		/// Angiver en placeholder til tekstfeltet

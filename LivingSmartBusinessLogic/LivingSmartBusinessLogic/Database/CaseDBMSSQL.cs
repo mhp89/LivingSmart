@@ -186,7 +186,7 @@ namespace LivingSmartBusinessLogic.Database
 
             cmd.Parameters.Add("@PropertyTypeId", SqlDbType.Int, 4, "PropertyTypeId").Value = ca.PropertyType.Id;
             cmd.Parameters.Add("@LandRegistryNumber", SqlDbType.NVarChar, 10, "LandRegistryNumber").Value = ca.LandRegistryNumber;
-            cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 10, "Address").Value = ca.Address;
+            cmd.Parameters.Add("@Address", SqlDbType.NVarChar, 50, "Address").Value = ca.Address;
             cmd.Parameters.Add("@ZipCode", SqlDbType.Int, 4, "ZipCode").Value = ca.City.ZipCode;
 			cmd.Parameters.Add("@NeighborhoodId", SqlDbType.Int, 4, "NeighborhoodId").Value = ca.Neighborhood.Id;
             cmd.Parameters.Add("@PublicRating", SqlDbType.BigInt, 8, "PublicRating").Value = ca.PublicRating;

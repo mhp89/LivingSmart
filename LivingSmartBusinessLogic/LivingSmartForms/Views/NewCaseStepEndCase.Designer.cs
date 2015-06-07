@@ -48,7 +48,6 @@ namespace LivingSmartForms.Views
 			this.label3 = new System.Windows.Forms.Label();
 			this.lblStatusTitle = new System.Windows.Forms.Label();
 			this.lblStatus = new System.Windows.Forms.Label();
-			this.hrdAds = new SmartControls.Header();
 			this.tlpSeller.SuspendLayout();
 			this.pnlSellerId.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
@@ -341,23 +340,9 @@ namespace LivingSmartForms.Views
 			this.lblStatus.Text = "Navn";
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
 			// 
-			// hrdAds
-			// 
-			this.hrdAds.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-			this.hrdAds.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.hrdAds.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.hrdAds.Location = new System.Drawing.Point(0, 358);
-			this.hrdAds.Margin = new System.Windows.Forms.Padding(0, 20, 0, 0);
-			this.hrdAds.Name = "hrdAds";
-			this.hrdAds.Size = new System.Drawing.Size(480, 25);
-			this.hrdAds.TabIndex = 12;
-			this.hrdAds.Text = "Reklamer";
-			// 
 			// NewCaseStepEndCase
 			// 
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-			this.Controls.Add(this.hrdAds);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Controls.Add(this.hdrCase);
 			this.Controls.Add(this.hdrBuyer);
@@ -395,6 +380,5 @@ namespace LivingSmartForms.Views
 		private System.Windows.Forms.Label label3;
 		private System.Windows.Forms.Label lblStatusTitle;
 		private System.Windows.Forms.Label lblStatus;
-		private Header hrdAds;
     }
 }
