@@ -7,6 +7,10 @@ using SmartControls;
 
 namespace LivingSmartForms.Classes
 {
+	/// <summary>
+	/// Indeholder referencer og oplysninger om en side
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public class Page
 	{
 		/// <summary>
@@ -18,7 +22,7 @@ namespace LivingSmartForms.Classes
 		/// </summary>
 		public BasePage PageView { get; set; }
 		/// <summary>
-		/// Titlen p� siden
+		/// Titlen på siden
 		/// </summary>
 		public String Title { get; private set; }
 		/// <summary>

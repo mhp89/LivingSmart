@@ -11,15 +11,29 @@ using Menu = LivingSmartForms.Classes.Menu;
 
 namespace LivingSmartForms
 {
+	/// <summary>
+	/// BaseForm der styre hele systemet
+	/// </summary>
+	/// <author>Mathias Petersen</author>
     public partial class BaseForm : Form
     {
+		/// <summary>
+		/// Indikerer om der skal ske et form skift, når vinduet lukkes
+		/// </summary>
 	    private bool formShift;
+
 	    private FormWindowState lastState;
 
+		/// <summary>
+		/// En liste af de aktive DropIns
+		/// </summary>
 	    private List<BaseDropIn> DropIns = new List<BaseDropIn>(); 
 
 	    private Control partnerView;
 
+		/// <summary>
+		/// Den mægler der er logget ind
+		/// </summary>
 		public EstateAgent DefaultEstateAgent { get; private set; }
 
 		#region Menu
@@ -79,6 +93,9 @@ namespace LivingSmartForms
 
 		#region Menu
 
+		/// <summary>
+		/// Tilføjer sider til formen, og tilføjer knapper til menuen
+		/// </summary>
 	    private void InitializePages()
 	    {
 			foreach (Page page in pages)
@@ -94,10 +111,17 @@ namespace LivingSmartForms
 			}
 	    }
 
+		/// <summary>
+		/// Finder indexet for en side ud fra enumen PagesIndex
+		/// </summary>
 	    private int GetPageIndex(PagesIndex page)
 	    {
 		    return (int) page;
 	    }
+
+		/// <summary>
+		/// Opsætter resten af menuen, der ikke er forbundet til en side
+		/// </summary>
 	    private void InitializeMenu()
 	    {
 		    //Lav andre knapper
@@ -106,11 +130,26 @@ namespace LivingSmartForms
 			AddMenuButton("<", Classes.Menu.MenuAnchor.Right, MenuPartnersButtonClick, new Size(30, 30), Padding.Empty);
 	    }
 
+		/// <summary>
+		/// Tilføjer en knap til menuen
+		/// </summary>
+		/// <param name="content">Knappens tekst</param>
+		/// <param name="anchor">Hvilken side knappen skal være i</param>
+		/// <param name="clickEvent">Eventhandleren der skal tilføjes til knappen</param>
 	    private MenuButton AddMenuButton(string content, Menu.MenuAnchor anchor, MouseEventHandler clickEvent)
 	    {
 		    return AddMenuButton(content, anchor, clickEvent, Size.Empty, Padding.Empty);
 	    }
-		private MenuButton AddMenuButton(string content, Menu.MenuAnchor anchor, MouseEventHandler clickEvent, Size fixedSize, Padding padding)
+
+	    /// <summary>
+	    /// Tilføjer en knap til menuen
+	    /// </summary>
+	    /// <param name="content">Knappens tekst</param>
+	    /// <param name="anchor">Hvilken side knappen skal være i</param>
+	    /// <param name="clickEvent">Eventhandleren der skal tilføjes til knappen</param>
+	    /// <param name="fixedSize">Angiver en bestemt størrelse for knappen</param>
+		/// <param name="padding">Angiver en bestemt padding for knappen</param>
+	    private MenuButton AddMenuButton(string content, Menu.MenuAnchor anchor, MouseEventHandler clickEvent, Size fixedSize, Padding padding)
 		{
 			MenuButton button = new MenuButton();
 			
@@ -133,6 +172,9 @@ namespace LivingSmartForms
 			return button;
 		}
 
+		/// <summary>
+		/// Eventhandler for knapper relateret til en side
+		/// </summary>
 		private void MenuPageButtonClick(object sender, EventArgs e)
 		{
 			MenuButton btn = (MenuButton)sender;
@@ -149,6 +191,9 @@ namespace LivingSmartForms
 			}
 		}
 
+		/// <summary>
+		/// Logger ud og åbner Log Ind formen
+		/// </summary>
 		private void MenuLogoutButtonClick(object sender, EventArgs e)
 		{
 			formShift = true;
@@ -156,6 +201,10 @@ namespace LivingSmartForms
 			FormHandler.ShowLoginForm();
 			Close();
 		}
+
+		/// <summary>
+		/// Åbner eller lukker partner dropin'et
+		/// </summary>
 		private void MenuPartnersButtonClick(object sender, EventArgs e)
 		{
 			MenuButton btn = (MenuButton)sender;
@@ -219,6 +268,9 @@ namespace LivingSmartForms
 
 		#region DropIn
 
+		/// <summary>
+		/// Tilføjer et DropIn til vinduet, og placerer det foran alt andet
+		/// </summary>
 	    public void ShowDropIn(BaseDropIn view)
 		{
 			var viewWidth = view.Width;
@@ -248,14 +300,15 @@ namespace LivingSmartForms
 			dropInHolder.Controls.Add(view);
 			//Før view'et til at fylde hele holderen
 			view.Dock = DockStyle.Fill;
-
-			//pnlDropInHolder.Width = viewWidth;
-
+			
 			//Flytter holderen så den sidder i højre side
 			dropInHolder.Location = new Point(pnlMasterContent.Width - dropInHolder.Width, dropInHolder.Top);
 			dropInHolder.BringToFront();
 	    }
 
+		/// <summary>
+		/// Lukker et bestemt DropIn
+		/// </summary>
 	    public void CloseDropIn(BaseDropIn baseDropIn)
 	    {
 		    var dropInX = baseDropIn.Parent.Location.X;
@@ -265,10 +318,7 @@ namespace LivingSmartForms
 		    foreach (var dropIn in DropIns)
 				if(dropIn.Parent.Location.X < dropInX)
 					dropIn.Parent.Location = new Point(dropIn.Parent.Location.X + 50, dropIn.Parent.Location.Y);
-
-		    //Nustiller st�rrelsen
-			//pnlDropInHolder.Size = new Size(0, pnlDropInHolder.Height);
-
+			
 			Refresh();
 	    }
 
@@ -281,7 +331,6 @@ namespace LivingSmartForms
 		{
 			SetSelectedPage(PagesIndex.Overview);
 
-			pnlDropInHolder.BringToFront();
             Activate();
 		}
 

@@ -36,10 +36,5 @@ namespace LivingSmartForms.Classes
 		/// Kaldes når siden bliver skjult
 		/// </summary>
 		public virtual void OnHide() { }
-
-		/// <summary>
-		/// Klades inden programmet lukkes
-		/// </summary>
-		public virtual void OnClose() { }
 	}
 }

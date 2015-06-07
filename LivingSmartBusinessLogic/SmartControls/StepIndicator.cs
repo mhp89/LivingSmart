@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace SmartControls
 {
+	/// <summary>
+	/// Control til at indikere hvor langt man er i en process
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public class StepIndicator : Control
 	{
 		#region Defaults
@@ -51,15 +55,6 @@ namespace SmartControls
 			set { _stepCompletedFillColor = value; Invalidate(); }
 		}
 		private Color _stepCompletedFillColor = SmartColor.Dark;
-
-		[Category("Step Appearance")]
-		public Color StepUncompletedFillColor
-		{
-			get { return _stepUncompletedFillColor; }
-			set { _stepUncompletedFillColor = value; Invalidate(); }
-		}
-		private Color _stepUncompletedFillColor = SmartColor.Light;
-
 		[Category("Step Appearance")]
 		public Color StepCompletedBorderColor
 		{
@@ -68,6 +63,14 @@ namespace SmartControls
 		}
 		private Color _stepCompletedBorderColor = SmartColor.Dark;
 
+
+		[Category("Step Appearance")]
+		public Color StepUncompletedFillColor
+		{
+			get { return _stepUncompletedFillColor; }
+			set { _stepUncompletedFillColor = value; Invalidate(); }
+		}
+		private Color _stepUncompletedFillColor = SmartColor.Light;
 		[Category("Step Appearance")]
 		public Color StepUncompletedBorderColor
 		{
