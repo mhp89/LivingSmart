@@ -11,6 +11,10 @@ using LivingSmartBusinessLogic.Entity;
 
 namespace LivingSmartForms.Classes
 {
+	/// <summary>
+	/// Klasse med diverse generelle valideringsmetoder
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public static class GeneralValidation
 	{
 		public static bool ZipCodeValidation(SmartTextBox textBox, Label label = null)

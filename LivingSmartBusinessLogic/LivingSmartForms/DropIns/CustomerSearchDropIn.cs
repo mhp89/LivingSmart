@@ -19,6 +19,10 @@ using SmartControls;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// DropIn til s�gning af kunder
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class CustomerSearchDropIn : BaseDropIn
 	{
 		private CustomerSearchCallback callback;

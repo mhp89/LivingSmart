@@ -18,6 +18,10 @@ using SmartControls;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// DropIn til oprettelse af ny sag. Håndterer de forskellige steps
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class NewCaseDropIn : BaseDropIn
 	{
 		private CaseStep[] steps;

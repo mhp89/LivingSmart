@@ -6,7 +6,7 @@ using docGen = LivingSmartForms.Classes.DocumentGenerator;
 namespace LivingSmartForms.Classes
 {
     /// <summary>
-    /// 
+    /// Udskrift af faktura som ren tekst
     /// </summary>
     /// <author>Mathias Petersen</author>
 	class PrintInvoice
@@ -81,6 +81,9 @@ namespace LivingSmartForms.Classes
             return header;
         }
 
+		/// <summary>
+		/// Generere en linje med type og pris
+		/// </summary>
 		private static String CreateItemLine(string type, double price)
 		{
 			String line = "";

@@ -12,6 +12,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartForms.Classes
 {
+	/// <summary>
+	/// Base klasse for steps til ny sag
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class CaseStep : UserControl
 	{
 		protected Case cCase;

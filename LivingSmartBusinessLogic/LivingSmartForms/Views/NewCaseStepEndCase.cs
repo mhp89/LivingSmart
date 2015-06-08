@@ -1,24 +1,18 @@
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Drawing;
-using System.Data;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using LivingSmartBusinessLogic;
 using LivingSmartBusinessLogic.Controller;
 using LivingSmartBusinessLogic.Entity;
-using LivingSmartBusinessLogic.Model;
 using LivingSmartForms.Classes;
 using LivingSmartForms.DropIns;
 
 namespace LivingSmartForms.Views
 {
+	/// <summary>
+	/// Step til f�rdigg�relse og afslutning af sag
+	/// </summary>
+	/// <author>Mathias Petersen</author>
     public partial class NewCaseStepEndCase : CaseStep
     {
 		private NewCaseDropIn baseView;

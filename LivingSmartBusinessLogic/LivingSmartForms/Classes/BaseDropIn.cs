@@ -10,6 +10,10 @@ using System.Windows.Forms;
 
 namespace LivingSmartForms.Classes
 {
+	/// <summary>
+	/// Base klasse til DropIns
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class BaseDropIn : UserControl
 	{
 		public BaseForm baseForm;

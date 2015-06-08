@@ -14,6 +14,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// DropIn til oprettelse af ny mægler. Håndterer form til indtastning
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class NewPartnerDropIn : BaseDropIn
 	{
 		private NewPartner newPartnerForm;
@@ -26,7 +30,7 @@ namespace LivingSmartForms.DropIns
             if (partner != null)
             {
                 btnSave.Text = "Gem";
-                lblNewPartner.Text = "Redig�r partner";
+                lblNewPartner.Text = "Redigér partner";
             }
 
 			newPartnerForm = new NewPartner(baseForm, partner);

@@ -17,6 +17,10 @@ using SmartControls;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// DropIn til s�gning af m�glere
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class EstateAgentSearchDropIn : BaseDropIn
 	{
 		public EstateAgentSearchDropIn() : base(null) { }

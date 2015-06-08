@@ -11,6 +11,10 @@ using LivingSmartBusinessLogic.Model;
 
 namespace LivingSmartForms.Classes
 {
+	/// <summary>
+	/// Handler til opstart af form som nyt program
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public static class FormHandler
 	{
 		public static void ShowLoginForm()

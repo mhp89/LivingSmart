@@ -16,6 +16,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
+	/// <summary>
+	/// Side med oversigt over aktive sager
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class Cases : BasePage
 	{
 		public Cases(BaseForm baseForm) : base(baseForm)

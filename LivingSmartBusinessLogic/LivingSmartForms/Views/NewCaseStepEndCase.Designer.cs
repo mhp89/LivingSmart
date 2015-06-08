@@ -44,14 +44,14 @@ namespace LivingSmartForms.Views
 			this.hdrBuyer = new SmartControls.Header();
 			this.hdrCase = new SmartControls.Header();
 			this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+			this.btnCreateInvoice = new SmartControls.SmartButton();
+			this.stbFeePercent = new SmartControls.SmartTextBox();
+			this.lblFeePercent = new System.Windows.Forms.Label();
+			this.label1 = new System.Windows.Forms.Label();
 			this.btnCloseCase = new SmartControls.SmartButton();
 			this.lblCreateInvoice = new System.Windows.Forms.Label();
 			this.lblStatusTitle = new System.Windows.Forms.Label();
 			this.lblStatus = new System.Windows.Forms.Label();
-			this.label1 = new System.Windows.Forms.Label();
-			this.lblFeePercent = new System.Windows.Forms.Label();
-			this.stbFeePercent = new SmartControls.SmartTextBox();
-			this.btnCreateInvoice = new SmartControls.SmartButton();
 			this.tlpSeller.SuspendLayout();
 			this.pnlSellerId.SuspendLayout();
 			this.tableLayoutPanel1.SuspendLayout();
@@ -286,6 +286,83 @@ namespace LivingSmartForms.Views
 			this.tableLayoutPanel1.Size = new System.Drawing.Size(480, 160);
 			this.tableLayoutPanel1.TabIndex = 11;
 			// 
+			// btnCreateInvoice
+			// 
+			this.btnCreateInvoice.AutoSize = true;
+			this.btnCreateInvoice.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+			this.btnCreateInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.btnCreateInvoice.Color = SmartControls.SmartColor.ColorStyle.Dark;
+			this.btnCreateInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
+			this.btnCreateInvoice.Dock = System.Windows.Forms.DockStyle.Left;
+			this.btnCreateInvoice.FlatAppearance.BorderSize = 0;
+			this.btnCreateInvoice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnCreateInvoice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnCreateInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btnCreateInvoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.btnCreateInvoice.Location = new System.Drawing.Point(135, 80);
+			this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.btnCreateInvoice.Name = "btnCreateInvoice";
+			this.btnCreateInvoice.Size = new System.Drawing.Size(111, 30);
+			this.btnCreateInvoice.TabIndex = 9;
+			this.btnCreateInvoice.Text = "Lav faktura";
+			this.btnCreateInvoice.UseVisualStyleBackColor = false;
+			this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
+			// 
+			// stbFeePercent
+			// 
+			this.stbFeePercent.AllowComma = true;
+			this.stbFeePercent.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+			this.stbFeePercent.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+			this.stbFeePercent.AutomaticValidation = true;
+			this.stbFeePercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+			this.stbFeePercent.Color = SmartControls.SmartColor.ColorStyle.Light;
+			this.stbFeePercent.Cursor = System.Windows.Forms.Cursors.IBeam;
+			this.stbFeePercent.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.stbFeePercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.stbFeePercent.Location = new System.Drawing.Point(135, 40);
+			this.stbFeePercent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.stbFeePercent.MaxLength = 8;
+			this.stbFeePercent.MinLength = -1;
+			this.stbFeePercent.Multiline = false;
+			this.stbFeePercent.Name = "stbFeePercent";
+			this.stbFeePercent.NumericOnly = true;
+			this.stbFeePercent.Placeholder = null;
+			this.stbFeePercent.RegularExpression = null;
+			this.stbFeePercent.Required = true;
+			this.stbFeePercent.Size = new System.Drawing.Size(345, 30);
+			this.stbFeePercent.Suffix = "%";
+			this.stbFeePercent.TabIndex = 8;
+			this.stbFeePercent.TabStop = false;
+			this.stbFeePercent.UseSystemPasswordChar = false;
+			// 
+			// lblFeePercent
+			// 
+			this.lblFeePercent.AutoSize = true;
+			this.lblFeePercent.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.lblFeePercent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.lblFeePercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.lblFeePercent.Location = new System.Drawing.Point(0, 40);
+			this.lblFeePercent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.lblFeePercent.Name = "lblFeePercent";
+			this.lblFeePercent.Size = new System.Drawing.Size(135, 30);
+			this.lblFeePercent.TabIndex = 7;
+			this.lblFeePercent.Text = "Salær procentsats";
+			this.lblFeePercent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
+			// label1
+			// 
+			this.label1.AutoSize = true;
+			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
+			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
+			this.label1.Location = new System.Drawing.Point(0, 120);
+			this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
+			this.label1.Name = "label1";
+			this.label1.Size = new System.Drawing.Size(135, 30);
+			this.label1.TabIndex = 6;
+			this.label1.Text = "Afslut";
+			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+			// 
 			// btnCloseCase
 			// 
 			this.btnCloseCase.AutoSize = true;
@@ -347,85 +424,7 @@ namespace LivingSmartForms.Views
 			this.lblStatus.Padding = new System.Windows.Forms.Padding(3, 0, 0, 0);
 			this.lblStatus.Size = new System.Drawing.Size(345, 30);
 			this.lblStatus.TabIndex = 0;
-			this.lblStatus.Text = "Navn";
 			this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// label1
-			// 
-			this.label1.AutoSize = true;
-			this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.label1.Location = new System.Drawing.Point(0, 120);
-			this.label1.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.label1.Name = "label1";
-			this.label1.Size = new System.Drawing.Size(135, 30);
-			this.label1.TabIndex = 6;
-			this.label1.Text = "Afslut";
-			this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// lblFeePercent
-			// 
-			this.lblFeePercent.AutoSize = true;
-			this.lblFeePercent.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.lblFeePercent.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.lblFeePercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.lblFeePercent.Location = new System.Drawing.Point(0, 40);
-			this.lblFeePercent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.lblFeePercent.Name = "lblFeePercent";
-			this.lblFeePercent.Size = new System.Drawing.Size(135, 30);
-			this.lblFeePercent.TabIndex = 7;
-			this.lblFeePercent.Text = "Salær procentsats";
-			this.lblFeePercent.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-			// 
-			// stbFeePercent
-			// 
-			this.stbFeePercent.AllowComma = true;
-			this.stbFeePercent.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-			this.stbFeePercent.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-			this.stbFeePercent.AutomaticValidation = true;
-			this.stbFeePercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.stbFeePercent.Color = SmartControls.SmartColor.ColorStyle.Light;
-			this.stbFeePercent.Cursor = System.Windows.Forms.Cursors.IBeam;
-			this.stbFeePercent.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.stbFeePercent.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.stbFeePercent.Location = new System.Drawing.Point(135, 40);
-			this.stbFeePercent.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.stbFeePercent.MaxLength = 8;
-			this.stbFeePercent.MinLength = -1;
-			this.stbFeePercent.Multiline = false;
-			this.stbFeePercent.Name = "stbFeePercent";
-			this.stbFeePercent.NumericOnly = true;
-			this.stbFeePercent.Placeholder = null;
-			this.stbFeePercent.RegularExpression = null;
-			this.stbFeePercent.Required = true;
-			this.stbFeePercent.Size = new System.Drawing.Size(345, 30);
-			this.stbFeePercent.Suffix = "%";
-			this.stbFeePercent.TabIndex = 8;
-			this.stbFeePercent.TabStop = false;
-			this.stbFeePercent.UseSystemPasswordChar = false;
-			// 
-			// btnCreateInvoice
-			// 
-			this.btnCreateInvoice.AutoSize = true;
-			this.btnCreateInvoice.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-			this.btnCreateInvoice.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-			this.btnCreateInvoice.Color = SmartControls.SmartColor.ColorStyle.Dark;
-			this.btnCreateInvoice.Cursor = System.Windows.Forms.Cursors.Hand;
-			this.btnCreateInvoice.Dock = System.Windows.Forms.DockStyle.Left;
-			this.btnCreateInvoice.FlatAppearance.BorderSize = 0;
-			this.btnCreateInvoice.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnCreateInvoice.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnCreateInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-			this.btnCreateInvoice.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-			this.btnCreateInvoice.Location = new System.Drawing.Point(135, 80);
-			this.btnCreateInvoice.Margin = new System.Windows.Forms.Padding(0, 0, 0, 10);
-			this.btnCreateInvoice.Name = "btnCreateInvoice";
-			this.btnCreateInvoice.Size = new System.Drawing.Size(111, 30);
-			this.btnCreateInvoice.TabIndex = 9;
-			this.btnCreateInvoice.Text = "Lav faktura";
-			this.btnCreateInvoice.UseVisualStyleBackColor = false;
-			this.btnCreateInvoice.Click += new System.EventHandler(this.btnCreateInvoice_Click);
 			// 
 			// NewCaseStepEndCase
 			// 

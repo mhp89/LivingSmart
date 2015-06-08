@@ -6,6 +6,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// Oversigt over samarbejdspartnere
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class PartnersDropIn : BaseDropIn
 	{
 		public PartnersDropIn(BaseForm baseForm) : base(baseForm)

@@ -9,9 +9,9 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.Pages
 {
-    /// <summary>
-    /// 
-    /// </summary>
+	/// <summary>
+	/// Side med generering af åbent hus
+	/// </summary>
     /// <author>Maja Olesen</author>
 	public partial class OpenHousePage : BasePage
 	{

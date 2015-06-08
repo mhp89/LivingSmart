@@ -15,6 +15,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// DropIn til udv�lgelse af m�glere
+	/// </summary>
+	/// <author>Maja Olesen</author>
     public partial class SelectEstateAgentDropIn : BaseDropIn
     {
         private EstateAgentSelectCallback callback;

@@ -9,6 +9,10 @@ using LivingSmartForms.Views;
 
 namespace LivingSmartForms.DropIns
 {
+	/// <summary>
+	/// DropIn til oprettelse af ny kunde. Håndterer form til indtastning
+	/// </summary>
+	/// <author>Mathias Petersen</author>
 	public partial class NewCustomerDropIn : BaseDropIn
 	{
 		private NewCustomer newCustomerForm;
