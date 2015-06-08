@@ -78,7 +78,6 @@
       <DependentUpon>CaseStep.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\DocumentGenerator.cs" />
-    <Compile Include="Classes\DrawUtils.cs" />
     <Compile Include="Classes\FormHandler.cs" />
     <Compile Include="Classes\GeneralValidation.cs" />
     <Compile Include="Classes\Menu.cs" />
