@@ -50,7 +50,8 @@ namespace LivingSmartBusinessLogic.Model
         {
             if (!documentDictionary.ContainsKey(caseId))
                 documentDictionary.Add(caseId, new List<Document>());
-            documentDictionary[caseId].Add(document);
+			if(!documentDictionary[caseId].Contains(document))
+				documentDictionary[caseId].Add(document);
         }
         /// <summary>
         /// 

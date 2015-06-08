@@ -49,8 +49,9 @@ namespace LivingSmartBusinessLogic.Model
         internal void AddToCatalog(int caseId, Picture picture)
         {
             if (!pictureDictionary.ContainsKey(caseId))
-                pictureDictionary.Add(caseId, new List<Picture>());
-            pictureDictionary[caseId].Add(picture);
+				pictureDictionary.Add(caseId, new List<Picture>());
+			if (!pictureDictionary[caseId].Contains(picture))
+				pictureDictionary[caseId].Add(picture);
         }
         /// <summary>
         /// 

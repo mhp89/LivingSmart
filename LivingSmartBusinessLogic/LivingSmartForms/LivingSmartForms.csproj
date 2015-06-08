@@ -83,6 +83,7 @@
     <Compile Include="Classes\GeneralValidation.cs" />
     <Compile Include="Classes\Menu.cs" />
     <Compile Include="Classes\Page.cs" />
+    <Compile Include="Classes\PrintInvoice.cs" />
     <Compile Include="Classes\PrintStatistics.cs" />
     <Compile Include="BaseForm.cs">
       <SubType>Form</SubType>

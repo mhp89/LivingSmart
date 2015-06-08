@@ -49,8 +49,9 @@ namespace LivingSmartBusinessLogic.Model
         internal void AddToCatalog(int caseId, Rating rating)
         {
             if (!ratingDictionary.ContainsKey(caseId))
-                ratingDictionary.Add(caseId, new List<Rating>());
-            ratingDictionary[caseId].Add(rating);
+				ratingDictionary.Add(caseId, new List<Rating>());
+			if (!ratingDictionary[caseId].Contains(rating))
+				ratingDictionary[caseId].Add(rating);
         }
 
         internal void RemoveFromCatalog(int caseId, Rating rating)

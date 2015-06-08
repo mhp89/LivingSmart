@@ -49,8 +49,9 @@ namespace LivingSmartBusinessLogic.Model
         internal void AddToCatalog(int caseId, DistanceTo distanceTo)
         {
             if (!distanceToDictionary.ContainsKey(caseId))
-                distanceToDictionary.Add(caseId, new List<DistanceTo>());
-            distanceToDictionary[caseId].Add(distanceTo);
+				distanceToDictionary.Add(caseId, new List<DistanceTo>());
+			if (!distanceToDictionary[caseId].Contains(distanceTo))
+				distanceToDictionary[caseId].Add(distanceTo);
         }
 
         internal void RemoveFromCatalog(int caseId, DistanceTo distanceTo)

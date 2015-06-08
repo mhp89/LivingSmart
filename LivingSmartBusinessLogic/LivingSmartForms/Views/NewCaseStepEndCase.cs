@@ -1,8 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Drawing;
 using System.Data;
+using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +25,7 @@ namespace LivingSmartForms.Views
 
 	    private Customer buyer;
 
-		public NewCaseStepEndCase(NewCaseDropIn baseView, Case cCase)
-			: base(cCase)
+		public NewCaseStepEndCase(NewCaseDropIn baseView, Case cCase) : base(cCase)
         {
 			this.baseView = baseView;
 			
@@ -80,8 +82,12 @@ namespace LivingSmartForms.Views
 		{
 			CaseController.Instance.SetBuyer(customer);
 
-		    SetSellerFields(customer);
-	    }
+			SetSellerFields(customer);
+
+			btnCloseCase.Enabled = customer == null;
+
+			stbFeePercent.Enabled = btnCreateInvoice.Enabled = customer != null;
+		}
 
 	    private void SetSellerFields(Customer customer)
 	    {
@@ -134,11 +140,36 @@ namespace LivingSmartForms.Views
 	    {
 			lblStatus.Text = Case.TranslateStatus(cCase.Status);
 	    }
-		private void stbCloseCase_Click(object sender, EventArgs e)
+		private void btnCloseCase_Click(object sender, EventArgs e)
 		{
 			BuyerSearchFinish(null);
 			CaseController.Instance.CloseCase();
 			baseView.NextStep();
+		}
+
+		private void btnCreateInvoice_Click(object sender, EventArgs e)
+		{
+			if(!ValidateFields() || !stbFeePercent.Validate())
+				return;
+
+			SaveFileDialog sfd = new SaveFileDialog();
+			sfd.FileName = "faktura-sag-"+cCase.Id+".txt";
+			sfd.Filter = "Text File | *.txt";
+			sfd.DefaultExt = "txt";
+			if (sfd.ShowDialog() == DialogResult.OK)
+			{
+				double feePercent = Convert.ToDouble(stbFeePercent.Text) / 100;
+				double fee = Convert.ToInt64(stbSellingPrice.Text) * feePercent;
+
+				CaseController.Instance.SaveActiveCase();
+
+				StreamWriter writer = new StreamWriter(sfd.OpenFile());
+				writer.Write(PrintInvoice.CreatePrintInvoice(cCase, CaseController.Instance.GetDocuments(), fee));
+				writer.Close();
+				Process.Start(sfd.FileName);
+
+				baseView.NextStep();
+			}
 		}
     }
 }

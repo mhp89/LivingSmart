@@ -49,8 +49,9 @@ namespace LivingSmartBusinessLogic.Model
         internal void AddToCatalog(int caseId, AskingPrice askingPrice)
         {
             if (!askingPriceDictionary.ContainsKey(caseId))
-                askingPriceDictionary.Add(caseId, new List<AskingPrice>());
-            askingPriceDictionary[caseId].Add(askingPrice);
+				askingPriceDictionary.Add(caseId, new List<AskingPrice>());
+			if (!askingPriceDictionary[caseId].Contains(askingPrice))
+				askingPriceDictionary[caseId].Add(askingPrice);
         }
 
         internal void RemoveFromCatalog(int caseId, AskingPrice askingPrice)
