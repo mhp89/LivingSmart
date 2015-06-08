@@ -1,292 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="LivingSmartBusinessLogic.Catalog.AdCatalog" Collapsed="true">
-    <Position X="10.25" Y="1" Width="1.5" />
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IAdDB" FixedToPoint="true">
-      <Path>
-        <Point X="10.938" Y="1.562" />
-        <Point X="10.938" Y="2" />
-      </Path>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAIkAAIAQAAAAQAAAAAAAAAAAAAAAAAAAAAACCAA=</HashCode>
-      <FileName>Catalog\AdCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.AppointmentCatalog" Collapsed="true">
-    <Position X="8" Y="11.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AABAAIgAAIAQAAAAQAAAAAAAAAAAAAAAAAIAAAAACAA=</HashCode>
-      <FileName>Catalog\AppointmentCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.AskingPriceCatalog" Collapsed="true">
-    <Position X="15.5" Y="1" Width="1.5" />
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IAskingPriceDB">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.087" Y="0.129" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAIgAAIAQAACAQAAAAAAAAAAAEAAAAAAgAAAACAA=</HashCode>
-      <FileName>Catalog\AskingPriceCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.CaseCatalog" Collapsed="true">
-    <Position X="10.25" Y="4.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <AssociationLine Name="cases" Type="LivingSmartBusinessLogic.Model.Case" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="11.75" Y="4.875" />
-        <Point X="13.375" Y="4.875" />
-        <Point X="13.375" Y="7.75" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.075" Y="2.603" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.ICaseDB">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.098" Y="0.118" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAQIgAAIAQAAAAQAQAAAAAgAAAAAAAAAAAAAAACEA=</HashCode>
-      <FileName>Catalog\CaseCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Field Name="cases" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.CityCatalog" Collapsed="true">
-    <Position X="15.5" Y="12" Width="1.5" />
-    <AssociationLine Name="cities" Type="LivingSmartBusinessLogic.Model.City">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.126" Y="0.107" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAQAAAIQAAAAAAAAAAAAAAAEAAAABAAAAA=</HashCode>
-      <FileName>Catalog\CityCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Field Name="cities" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.CustomerCatalog" Collapsed="true">
-    <Position X="10.25" Y="7.25" Width="1.5" />
-    <AssociationLine Name="customers" Type="LivingSmartBusinessLogic.Model.Customer" FixedFromPoint="true">
-      <Path>
-        <Point X="11.438" Y="7.25" />
-        <Point X="11.438" Y="6.812" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.071" Y="0.143" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAIAIABAIAQAAAAQAAAAAAgAAAAAAAAAAAAAAABCAA=</HashCode>
-      <FileName>Catalog\CustomerCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Field Name="customers" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.DistanceToCatalog" Collapsed="true">
-    <Position X="15.5" Y="6.25" Width="1.5" />
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IDistanceToDB">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.087" Y="0.118" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAIgAAIAQABAAQAAAAAAAAAAAAAQAAAAAAAAACAA=</HashCode>
-      <FileName>Catalog\DistanceToCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.DocumentCatalog" Collapsed="true">
-    <Position X="10.25" Y="2.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IDocumentDB" FixedFromPoint="true">
-      <Path>
-        <Point X="11.125" Y="3.312" />
-        <Point X="11.125" Y="3.75" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.11" Y="0.141" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAEIgAAIAQAAAAQAAAAAAAAAAAAAAAAAgAAAAACAA=</HashCode>
-      <FileName>Catalog\DocumentCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.EstateAgentCatalog" Collapsed="true">
-    <Position X="10.25" Y="10" Width="1.5" />
-    <AssociationLine Name="estateAgents" Type="LivingSmartBusinessLogic.Model.EstateAgent" FixedToPoint="true">
-      <Path>
-        <Point X="11.438" Y="10" />
-        <Point X="11.438" Y="9.562" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.06" Y="0.168" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IEstateAgentDB">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.014" Y="0.064" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>ACAAAIgAAIAQAAAQQAAAAAAgAAAAAAAAAAAAAAAAiEA=</HashCode>
-      <FileName>Catalog\EstateAgentCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Field Name="estateAgents" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.InvoiceCatalog" Collapsed="true">
-    <Position X="10.75" Y="17.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>IAAAAIgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Catalog\InvoiceCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Field Name="invoices" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.NeighborhoodCatalog" Collapsed="true">
-    <Position X="17" Y="10" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAABIAQAAAAAAAAAAAAAAAAAAAAQAEAAgAAAAA=</HashCode>
-      <FileName>Catalog\NeighborhoodCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.PartnerCatalog" Collapsed="true">
-    <Position X="16.5" Y="16" Width="1.5" />
-    <AssociationLine Name="partners" Type="LivingSmartBusinessLogic.Model.Partner" FixedToPoint="true">
-      <Path>
-        <Point X="17.562" Y="16" />
-        <Point X="17.562" Y="15.312" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.06" Y="0.207" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IPartnerDB" FixedFromPoint="true">
-      <Path>
-        <Point X="17.312" Y="16.562" />
-        <Point X="17.312" Y="17" />
-      </Path>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAIgAAIAQAAAAQAAAAAAAAAABAAAAAAABAAAACAA=</HashCode>
-      <FileName>Catalog\PartnerCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Field Name="partners" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.PictureCatalog" Collapsed="true">
-    <Position X="15.5" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAIgAAIAQAAAAQAAAAAAAAQAAAAAAAAAAAAAADAA=</HashCode>
-      <FileName>Catalog\PictureCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.PropertyTypeCatalog" Collapsed="true">
-    <Position X="18.25" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAIgAAIAQAAQAQAAAAAAAAAAAAAAIBAAAAAAACAA=</HashCode>
-      <FileName>Catalog\PropertyTypeCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Field Name="propertyTypes" />
-    </ShowAsCollectionAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Catalog.RatingCatalog" Collapsed="true">
-    <Position X="15.5" Y="2.75" Width="1.5" />
-    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IRatingDB">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.098" Y="0.141" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAAAAIgAAYAQAAAAQAAAAAAIAAAACAAAAAAAAAAACAA=</HashCode>
-      <FileName>Catalog\RatingCatalog.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="db" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="LivingSmartBusinessLogic.Controller.CaseController" Collapsed="true">
     <Position X="12.75" Y="2.25" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="adCatalog" Type="LivingSmartBusinessLogic.Catalog.AdCatalog" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="Instance" Type="LivingSmartBusinessLogic.Controller.CaseController" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.188" Y="2.25" />
-        <Point X="13.188" Y="1.375" />
-        <Point X="11.75" Y="1.375" />
+        <Point X="12.75" Y="2.312" />
+        <Point X="12.5" Y="2.312" />
+        <Point X="12.5" Y="2.688" />
+        <Point X="12.75" Y="2.688" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.493" Y="-0.297" />
-      </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="activeCase" Type="LivingSmartBusinessLogic.Model.Case" FixedToPoint="true">
-      <Path>
-        <Point X="13.562" Y="2.812" />
-        <Point X="13.562" Y="7.75" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.927" Y="0.391" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="askingPriceCatalog" Type="LivingSmartBusinessLogic.Catalog.AskingPriceCatalog" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="askingPriceCatalog" Type="LivingSmartBusinessLogic.Model.AskingPriceCatalog" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.719" Y="2.25" />
         <Point X="13.719" Y="1.438" />
@@ -296,38 +23,17 @@
         <Position X="0.102" Y="0.047" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="caseCatalog" Type="LivingSmartBusinessLogic.Catalog.CaseCatalog" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="adCatalog" Type="LivingSmartBusinessLogic.Model.AdCatalog" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.375" Y="2.812" />
-        <Point X="13.375" Y="4.688" />
-        <Point X="11.75" Y="4.688" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="distanceToCatalog" Type="LivingSmartBusinessLogic.Catalog.DistanceToCatalog" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.812" Y="2.812" />
-        <Point X="13.812" Y="6.531" />
-        <Point X="15.5" Y="6.531" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="documentCatalog" Type="LivingSmartBusinessLogic.Catalog.DocumentCatalog" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.25" Y="2.812" />
-        <Point X="13.25" Y="3.062" />
-        <Point X="11.75" Y="3.062" />
+        <Point X="13.188" Y="2.25" />
+        <Point X="13.188" Y="1.375" />
+        <Point X="11.75" Y="1.375" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.136" Y="-0.304" />
+        <Position X="0.493" Y="-0.297" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="pictureCatalog" Type="LivingSmartBusinessLogic.Catalog.PictureCatalog" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="14" Y="2.812" />
-        <Point X="14" Y="4.75" />
-        <Point X="15.5" Y="4.75" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="ratingCatalog" Type="LivingSmartBusinessLogic.Catalog.RatingCatalog" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="ratingCatalog" Type="LivingSmartBusinessLogic.Model.RatingCatalog" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="14.25" Y="2.625" />
         <Point X="14.625" Y="2.625" />
@@ -338,32 +44,64 @@
         <Position X="0.054" Y="-0.232" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="Instance" Type="LivingSmartBusinessLogic.Controller.CaseController" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="pictureCatalog" Type="LivingSmartBusinessLogic.Model.PictureCatalog" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="12.75" Y="2.312" />
-        <Point X="12.5" Y="2.312" />
-        <Point X="12.5" Y="2.688" />
-        <Point X="12.75" Y="2.688" />
+        <Point X="14" Y="2.812" />
+        <Point X="14" Y="4.781" />
+        <Point X="15.5" Y="4.781" />
       </Path>
+    </AssociationLine>
+    <AssociationLine Name="distanceToCatalog" Type="LivingSmartBusinessLogic.Model.DistanceToCatalog" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.812" Y="2.812" />
+        <Point X="13.812" Y="6.531" />
+        <Point X="15.5" Y="6.531" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="documentCatalog" Type="LivingSmartBusinessLogic.Model.DocumentCatalog">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.136" Y="-0.304" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="caseCatalog" Type="LivingSmartBusinessLogic.Model.CaseCatalog" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.312" Y="2.812" />
+        <Point X="13.312" Y="4.688" />
+        <Point X="11.75" Y="4.688" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="activeCase" Type="LivingSmartBusinessLogic.Entity.Case" FixedFromPoint="true">
+      <Path>
+        <Point X="13.562" Y="2.812" />
+        <Point X="13.562" Y="7.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.927" Y="0.391" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>EBAUcaLIAhIQWBHIDwBCIBZb4QWEiqJWRJgiIqACBHE=</HashCode>
       <FileName>Controller\CaseController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="adCatalog" />
-      <Field Name="activeCase" />
       <Field Name="askingPriceCatalog" />
-      <Field Name="caseCatalog" />
+      <Field Name="adCatalog" />
+      <Field Name="ratingCatalog" />
+      <Field Name="pictureCatalog" />
       <Field Name="distanceToCatalog" />
       <Field Name="documentCatalog" />
-      <Field Name="pictureCatalog" />
-      <Field Name="ratingCatalog" />
+      <Field Name="caseCatalog" />
+      <Field Name="activeCase" />
       <Property Name="Instance" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Controller.CityController" Collapsed="true">
     <Position X="15.5" Y="13" Width="1.5" />
+    <AssociationLine Name="cityCatalog" Type="LivingSmartBusinessLogic.Model.CityCatalog">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.037" Y="0.133" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAIAIAAAAAAAAAAAAAAUAAAAAAAAAA=</HashCode>
       <FileName>Controller\CityController.cs</FileName>
@@ -374,7 +112,7 @@
   </Class>
   <Class Name="LivingSmartBusinessLogic.Controller.CustomerController" Collapsed="true">
     <Position X="8" Y="6.75" Width="1.5" />
-    <AssociationLine Name="activeCustomer" Type="LivingSmartBusinessLogic.Model.Customer" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="activeCustomer" Type="LivingSmartBusinessLogic.Entity.Customer" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="8.25" Y="6.75" />
         <Point X="8.25" Y="6.375" />
@@ -384,16 +122,16 @@
         <Position X="0.763" Y="0.046" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="customerCatalog" Type="LivingSmartBusinessLogic.Catalog.CustomerCatalog" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="customerCatalog" Type="LivingSmartBusinessLogic.Model.CustomerCatalog" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8.25" Y="7.312" />
-        <Point X="8.25" Y="7.688" />
-        <Point X="9.792" Y="7.687" Type="JumpStart" />
+        <Point X="8.188" Y="7.312" />
+        <Point X="8.188" Y="7.688" />
+        <Point X="9.792" Y="7.688" Type="JumpStart" />
         <Point X="9.958" Y="7.688" Type="JumpEnd" />
         <Point X="10.25" Y="7.688" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.666" Y="0.088" />
+        <Position X="0.729" Y="0.078" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -407,37 +145,37 @@
   </Class>
   <Class Name="LivingSmartBusinessLogic.Controller.EstateAgentController" Collapsed="true">
     <Position X="7.75" Y="9.5" Width="1.5" />
-    <AssociationLine Name="appointmentCatalog" Type="LivingSmartBusinessLogic.Catalog.AppointmentCatalog" FixedToPoint="true">
+    <AssociationLine Name="estateAgentCatalog" Type="LivingSmartBusinessLogic.Model.EstateAgentCatalog" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="8.188" Y="10.062" />
-        <Point X="8.188" Y="11.5" />
+        <Point X="8.625" Y="10.062" />
+        <Point X="8.625" Y="10.437" />
+        <Point X="10.25" Y="10.437" />
       </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.518" Y="0.11" />
-      </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="ActiveEstateAgent" Type="LivingSmartBusinessLogic.Model.EstateAgent" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="ActiveEstateAgent" Type="LivingSmartBusinessLogic.Entity.EstateAgent" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="9.25" Y="9.812" />
-        <Point X="9.625" Y="9.812" />
+        <Point X="9.25" Y="9.875" />
+        <Point X="9.625" Y="9.875" />
         <Point X="9.625" Y="9.438" />
         <Point X="10.25" Y="9.438" />
       </Path>
     </AssociationLine>
-    <AssociationLine Name="estateAgentCatalog" Type="LivingSmartBusinessLogic.Catalog.EstateAgentCatalog" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="appointmentCatalog" Type="LivingSmartBusinessLogic.Model.AppointmentCatalog" FixedToPoint="true">
       <Path>
-        <Point X="8.625" Y="10.062" />
-        <Point X="8.625" Y="10.438" />
-        <Point X="10.25" Y="10.438" />
+        <Point X="8.25" Y="10.062" />
+        <Point X="8.25" Y="11.5" />
       </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.505" Y="0.117" />
+      </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
       <HashCode>QCLEAAAAAIAAAAAQBAAAAUAAAACABHAAQCgAQAAAgkA=</HashCode>
       <FileName>Controller\EstateAgentController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="appointmentCatalog" />
       <Field Name="estateAgentCatalog" />
+      <Field Name="appointmentCatalog" />
       <Property Name="ActiveEstateAgent" />
     </ShowAsAssociation>
   </Class>
@@ -463,35 +201,35 @@
   </Class>
   <Class Name="LivingSmartBusinessLogic.Controller.PartnerController" Collapsed="true">
     <Position X="18" Y="15.25" Width="1.5" />
-    <AssociationLine Name="partnerCatalog" Type="LivingSmartBusinessLogic.Catalog.PartnerCatalog" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="18.938" Y="15.812" />
-        <Point X="18.938" Y="16.188" />
-        <Point X="18" Y="16.188" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.068" Y="-0.301" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="activePartner" Type="LivingSmartBusinessLogic.Model.Partner" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="activePartner" Type="LivingSmartBusinessLogic.Entity.Partner" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="18.75" Y="15.25" />
         <Point X="18.75" Y="15.062" />
         <Point X="17.75" Y="15.062" />
       </Path>
     </AssociationLine>
+    <AssociationLine Name="partnerCatalog" Type="LivingSmartBusinessLogic.Model.PartnerCatalog" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="19" Y="15.812" />
+        <Point X="19" Y="16.281" />
+        <Point X="18" Y="16.281" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.095" Y="-0.265" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>ACBEBgAAAIAAAIAAggCAAAAARAABAAAAQACAQAAAAgA=</HashCode>
       <FileName>Controller\PartnerController.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="partnerCatalog" />
       <Field Name="activePartner" />
+      <Field Name="partnerCatalog" />
     </ShowAsAssociation>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Controller.PropertyTypeController" Collapsed="true">
     <Position X="20.25" Y="8" Width="1.5" />
-    <AssociationLine Name="propertyTypeCatalog" Type="LivingSmartBusinessLogic.Catalog.PropertyTypeCatalog" FixedToPoint="true">
+    <AssociationLine Name="propertyTypeCatalog" Type="LivingSmartBusinessLogic.Model.PropertyTypeCatalog" FixedToPoint="true">
       <Path>
         <Point X="20.25" Y="8.438" />
         <Point X="19.75" Y="8.438" />
@@ -766,207 +504,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Ad" Collapsed="true">
-    <Position X="8.75" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgACAAAAAQAAIAYAAAAAAAAgAAAAAAAAAQAAAEAAAAA=</HashCode>
-      <FileName>Model\Ad.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Appointment" Collapsed="true">
-    <Position X="6.5" Y="11.5" Width="1.5" />
-    <AssociationLine Name="Case" Type="LivingSmartBusinessLogic.Model.Case" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7.125" Y="11.5" />
-        <Point X="7.125" Y="8.031" />
-        <Point X="9.792" Y="8.031" Type="JumpStart" />
-        <Point X="9.958" Y="8.031" Type="JumpEnd" />
-        <Point X="10.917" Y="8.031" Type="JumpStart" />
-        <Point X="11.083" Y="8.031" Type="JumpEnd" />
-        <Point X="12.75" Y="8.031" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Customer" Type="LivingSmartBusinessLogic.Model.Customer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="7.375" Y="11.5" />
-        <Point X="7.375" Y="8.319" />
-        <Point X="9.875" Y="8.319" />
-        <Point X="9.875" Y="6.75" />
-        <Point X="10.25" Y="6.75" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.047" Y="0.06" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>AAOCAAAAQAAgAAAGAAAAAACQABAAAAAAAEAAAAAAAAA=</HashCode>
-      <FileName>Model\Appointment.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Case" />
-      <Property Name="Customer" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.AskingPrice" Collapsed="true">
-    <Position X="17" Y="1" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>ABACAAAAAAAAAAAABAAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
-      <FileName>Model\AskingPrice.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Case" Collapsed="true">
-    <Position X="12.75" Y="7.75" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Fields" Collapsed="true" />
-    </Compartments>
-    <NestedTypes>
-      <Enum Name="LivingSmartBusinessLogic.Model.Case.CaseStatus" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Model\Case.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <AssociationLine Name="Neighborhood" Type="LivingSmartBusinessLogic.Model.Neighborhood" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="14.062" Y="8.312" />
-        <Point X="14.062" Y="10.312" />
-        <Point X="15.5" Y="10.312" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="City" Type="LivingSmartBusinessLogic.Model.City" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.938" Y="8.312" />
-        <Point X="13.938" Y="11.281" />
-        <Point X="15.5" Y="11.281" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Seller" Type="LivingSmartBusinessLogic.Model.Customer" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.188" Y="7.75" />
-        <Point X="13.188" Y="6.437" />
-        <Point X="11.75" Y="6.437" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.226" Y="0.048" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="Buyer" Type="LivingSmartBusinessLogic.Model.Customer" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13" Y="7.75" />
-        <Point X="13" Y="6.625" />
-        <Point X="11.75" Y="6.625" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.218" Y="-0.234" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="EstateAgent" Type="LivingSmartBusinessLogic.Model.EstateAgent" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.25" Y="8.312" />
-        <Point X="13.25" Y="9.25" />
-        <Point X="11.75" Y="9.25" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.11" Y="-0.284" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="PropertyType" Type="LivingSmartBusinessLogic.Model.PropertyType" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="14.25" Y="8.187" />
-        <Point X="15.5" Y="8.187" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.073" Y="-0.283" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>wELCQADEABIkAAgeAAAYIgQOHUgNQwQSCCAjAFVmyAA=</HashCode>
-      <FileName>Model\Case.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Neighborhood" />
-      <Property Name="City" />
-      <Property Name="Seller" />
-      <Property Name="Buyer" />
-      <Property Name="EstateAgent" />
-      <Property Name="PropertyType" />
-    </ShowAsAssociation>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.City" Collapsed="true">
-    <Position X="15.5" Y="11" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAIAAAAAABAgAAAABAAAA=</HashCode>
-      <FileName>Model\City.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Customer" Collapsed="true">
-    <Position X="10.25" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACIAAAACAAAAAIAAAAAAQAAAAQAAACAIAAAEQSAAE=</HashCode>
-      <FileName>Model\Customer.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.DistanceTo" Collapsed="true">
-    <Position X="17" Y="6.25" Width="1.5" />
-    <NestedTypes>
-      <Enum Name="LivingSmartBusinessLogic.Model.DistanceTo.DistanceToSystemType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Model\DistanceTo.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAAAAQAAAAAAAAAAAAAAABAAQAAAAAAIAA=</HashCode>
-      <FileName>Model\DistanceTo.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Document" Collapsed="true">
-    <Position X="8.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AgACAAAAAQAAAAQAAAIAAAAAAAAAAAAAASAAAAAAAAA=</HashCode>
-      <FileName>Model\Document.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.EstateAgent" Collapsed="true">
-    <Position X="10.25" Y="9" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQCIAAAACAAAAAAAQQAAAQAAAAAAAACAIIIAIQEAAE=</HashCode>
-      <FileName>Model\EstateAgent.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Invoice" Collapsed="true">
-    <Position X="8.25" Y="17.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Invoice.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Neighborhood" Collapsed="true">
-    <Position X="15.5" Y="10" Width="1.5" />
-    <AssociationLine Name="City" Type="LivingSmartBusinessLogic.Model.City" FixedToPoint="true">
-      <Path>
-        <Point X="16.375" Y="10.562" />
-        <Point X="16.375" Y="11" />
-      </Path>
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="0.109" Y="0.13" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <TypeIdentifier>
-      <HashCode>ABACMAAAAAAAAAAIAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
-      <FileName>Model\Neighborhood.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="City" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="LivingSmartBusinessLogic.Model.OpenHouse" Collapsed="true">
     <Position X="5" Y="8.5" Width="1.5" />
-    <AssociationLine Name="brokers" Type="LivingSmartBusinessLogic.Model.EstateAgent" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="brokers" Type="LivingSmartBusinessLogic.Entity.EstateAgent" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="6.5" Y="8.812" />
-        <Point X="7.042" Y="8.812" Type="JumpStart" />
-        <Point X="7.208" Y="8.812" Type="JumpEnd" />
+        <Point X="6.979" Y="8.812" Type="JumpStart" />
+        <Point X="7.146" Y="8.812" Type="JumpEnd" />
         <Point X="7.292" Y="8.812" Type="JumpStart" />
         <Point X="7.458" Y="8.812" Type="JumpEnd" />
         <Point X="9.837" Y="8.812" />
@@ -988,20 +532,6 @@
       <Field Name="brokers" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Partner" Collapsed="true">
-    <Position X="16.25" Y="14.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACIAACgCAAAABIgEAABAQAAAIAAAAAAIAAAAQCAAE=</HashCode>
-      <FileName>Model\Partner.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Picture" Collapsed="true">
-    <Position X="17" Y="4.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAAEAAIAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
-      <FileName>Model\Picture.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="LivingSmartBusinessLogic.Model.PriorityQueue&lt;TKey, TValue&gt;" Collapsed="true" BaseTypeListCollapsed="true">
     <Position X="5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
@@ -1009,20 +539,6 @@
       <FileName>Model\PriorityQueue.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.PropertyType" Collapsed="true">
-    <Position X="15.5" Y="8" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAAAAgAAgEAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\PropertyType.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LivingSmartBusinessLogic.Model.Rating" Collapsed="true">
-    <Position X="17" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAACAAAAAAAJAAAAAAAAAAAQAABCAAAAAAAAIA=</HashCode>
-      <FileName>Model\Rating.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Class Name="LivingSmartBusinessLogic.Model.Statistics" Collapsed="true">
     <Position X="10" Y="14" Width="1.5" />
@@ -1037,6 +553,433 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
       <FileName>RegistryWrapper.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Ad" Collapsed="true">
+    <Position X="8.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAQAAIAYAAAAAAAAgAAAAAAAAAQAAAEAAAAA=</HashCode>
+      <FileName>Entity\Ad.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Appointment" Collapsed="true">
+    <Position X="6.5" Y="11.5" Width="1.5" />
+    <AssociationLine Name="Case" Type="LivingSmartBusinessLogic.Entity.Case" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.375" Y="11.5" />
+        <Point X="7.375" Y="8.031" />
+        <Point X="10.917" Y="8.031" Type="JumpStart" />
+        <Point X="11.083" Y="8.031" Type="JumpEnd" />
+        <Point X="12.75" Y="8.031" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Customer" Type="LivingSmartBusinessLogic.Entity.Customer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.062" Y="11.5" />
+        <Point X="7.062" Y="7.937" />
+        <Point X="9.875" Y="7.937" />
+        <Point X="9.875" Y="6.75" />
+        <Point X="10.25" Y="6.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.018" Y="0.058" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAOCAAAAQAAgAAAGAAAAAACQABAAAAAAAEAAAAAAAAA=</HashCode>
+      <FileName>Entity\Appointment.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Case" />
+      <Property Name="Customer" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.AskingPrice" Collapsed="true">
+    <Position X="17" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACAAAAAAAAAAAABAAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Entity\AskingPrice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Case" Collapsed="true">
+    <Position X="12.75" Y="7.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Enum Name="LivingSmartBusinessLogic.Entity.Case.CaseStatus" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Entity\Case.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="Seller" Type="LivingSmartBusinessLogic.Entity.Customer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.188" Y="7.75" />
+        <Point X="13.188" Y="6.438" />
+        <Point X="11.75" Y="6.438" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="Buyer" Type="LivingSmartBusinessLogic.Entity.Customer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13" Y="7.75" />
+        <Point X="13" Y="6.625" />
+        <Point X="11.75" Y="6.625" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.172" Y="-0.232" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="PropertyType" Type="LivingSmartBusinessLogic.Entity.PropertyType">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="-0.284" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Neighborhood" Type="LivingSmartBusinessLogic.Entity.Neighborhood" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="14.125" Y="8.312" />
+        <Point X="14.125" Y="10.281" />
+        <Point X="15.5" Y="10.281" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="City" Type="LivingSmartBusinessLogic.Entity.City" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.938" Y="8.312" />
+        <Point X="13.938" Y="11.219" />
+        <Point X="15.5" Y="11.219" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="EstateAgent" Type="LivingSmartBusinessLogic.Entity.EstateAgent" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="13.359" Y="8.312" />
+        <Point X="13.359" Y="9.188" />
+        <Point X="11.75" Y="9.188" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.152" Y="-0.232" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>wELCQADEABIkAAgeAAAYIgQOHUgNQwQSCCAjAFVmyAA=</HashCode>
+      <FileName>Entity\Case.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Seller" />
+      <Property Name="Buyer" />
+      <Property Name="PropertyType" />
+      <Property Name="Neighborhood" />
+      <Property Name="City" />
+      <Property Name="EstateAgent" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.City" Collapsed="true">
+    <Position X="15.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAIAAAAAABAgAAAABAAAA=</HashCode>
+      <FileName>Entity\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Customer" Collapsed="true">
+    <Position X="10.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAAACAAAAAIAAAAAAQAAAAQAAACAIAAAEQSAAE=</HashCode>
+      <FileName>Entity\Customer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.DistanceTo" Collapsed="true">
+    <Position X="17" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAQAAAAAAAAAAAAAAABAAQAAAAAAIAA=</HashCode>
+      <FileName>Entity\DistanceTo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Document" Collapsed="true">
+    <Position X="8.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgACAAAAAQAAAAQAAAIAAAAAAAAAAAAAASAAAAAAAAA=</HashCode>
+      <FileName>Entity\Document.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.EstateAgent" Collapsed="true">
+    <Position X="10.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCIAAAACAAAAAAAQQAAAQAAAAAAAACAIIIAIQEAAE=</HashCode>
+      <FileName>Entity\EstateAgent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Invoice" Collapsed="true">
+    <Position X="8.25" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\Invoice.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Neighborhood" Collapsed="true">
+    <Position X="15.5" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABACMAAAAAAAAAAIAAAAAAQAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Entity\Neighborhood.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="City" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Partner" Collapsed="true">
+    <Position X="16.25" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAACgCAAAABIgEAABAQAAAIAAAAAAIAAAAQCAAE=</HashCode>
+      <FileName>Entity\Partner.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Picture" Collapsed="true">
+    <Position X="17" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAEAAIAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>Entity\Picture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.PropertyType" Collapsed="true">
+    <Position X="15.5" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAgEAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Entity\PropertyType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Entity.Rating" Collapsed="true">
+    <Position X="17" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAACAAAAAAAJAAAAAAAAAAAQAABCAAAAAAAAIA=</HashCode>
+      <FileName>Entity\Rating.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.AdCatalog" Collapsed="true">
+    <Position X="10.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIkAAIAQAAAAQAAAAAAAAAAAAAAAAAAAAAACCAA=</HashCode>
+      <FileName>Model\AdCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.AppointmentCatalog" Collapsed="true">
+    <Position X="8" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAIgAAIAQAAAAQAAAAAAAAAAAAAAAAAIAAAAACAA=</HashCode>
+      <FileName>Model\AppointmentCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.AskingPriceCatalog" Collapsed="true">
+    <Position X="15.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAIAQAACAQAAAAAAAAAAAEAAAAAAgAAAACAA=</HashCode>
+      <FileName>Model\AskingPriceCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.CaseCatalog" Collapsed="true">
+    <Position X="10.25" Y="4.5" Width="1.5" />
+    <AssociationLine Name="cases" Type="LivingSmartBusinessLogic.Entity.Case" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11.75" Y="4.921" />
+        <Point X="13.375" Y="4.921" />
+        <Point X="13.375" Y="7.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="2.539" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQIgAAIAQAAAAQAQAAAAAgAAAAAAAAAAAAAAACEA=</HashCode>
+      <FileName>Model\CaseCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="cases" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.CityCatalog" Collapsed="true">
+    <Position X="15.5" Y="12" Width="1.5" />
+    <AssociationLine Name="cities" Type="LivingSmartBusinessLogic.Entity.City">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.143" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.ICityDB" FixedToPoint="true">
+      <Path>
+        <Point X="15.5" Y="12.312" />
+        <Point X="15" Y="12.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.058" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAQAAAIQAAAAAAAAAAAAAAAEAAAABAAAAA=</HashCode>
+      <FileName>Model\CityCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="cities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.CustomerCatalog" Collapsed="true">
+    <Position X="10.25" Y="7.25" Width="1.5" />
+    <AssociationLine Name="customers" Type="LivingSmartBusinessLogic.Entity.Customer" FixedFromPoint="true">
+      <Path>
+        <Point X="11.438" Y="7.25" />
+        <Point X="11.438" Y="6.812" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.1" Y="0.112" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAIAIABAIAQAAAAQAAAAAAgAAAAAAAAAAAAAAABCAA=</HashCode>
+      <FileName>Model\CustomerCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="customers" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.DistanceToCatalog" Collapsed="true">
+    <Position X="15.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAIAQABAAQAAAAAAAAAAAAAQAAAAAAAAACAA=</HashCode>
+      <FileName>Model\DistanceToCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.DocumentCatalog" Collapsed="true">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEIgAAIAQAAAAQAAAAAAAAAAAAAAAAAgAAAAACAA=</HashCode>
+      <FileName>Model\DocumentCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.EstateAgentCatalog" Collapsed="true">
+    <Position X="10.25" Y="10" Width="1.5" />
+    <AssociationLine Name="db" Type="LivingSmartBusinessLogic.Database.IEstateAgentDB">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.016" Y="0.05" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="estateAgents" Type="LivingSmartBusinessLogic.Entity.EstateAgent" FixedToPoint="true">
+      <Path>
+        <Point X="11.438" Y="10" />
+        <Point X="11.438" Y="9.562" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.047" Y="0.164" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>ACAAAIgAAIAQAAAQQAAAAAAgAAAAAAAAAAAAAAAAiEA=</HashCode>
+      <FileName>Model\EstateAgentCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="estateAgents" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.InvoiceCatalog" Collapsed="true">
+    <Position X="10.75" Y="17.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAIgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\InvoiceCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="invoices" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.NeighborhoodCatalog" Collapsed="true">
+    <Position X="17" Y="10" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABIAQAAAAAAAAAAAAAAAAAAAAQAEAAgAAAAA=</HashCode>
+      <FileName>Model\NeighborhoodCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.PartnerCatalog" Collapsed="true">
+    <Position X="16.5" Y="16" Width="1.5" />
+    <AssociationLine Name="partners" Type="LivingSmartBusinessLogic.Entity.Partner" FixedFromPoint="true">
+      <Path>
+        <Point X="17.562" Y="16" />
+        <Point X="17.562" Y="15.312" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.068" Y="0.279" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAIAQAAAAQAAAAAAAAAABAAAAAAABAAAACAA=</HashCode>
+      <FileName>Model\PartnerCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="partners" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.PictureCatalog" Collapsed="true">
+    <Position X="15.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAIAQAAAAQAAAAAAAAQAAAAAAAAAAAAAADAA=</HashCode>
+      <FileName>Model\PictureCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.PropertyTypeCatalog" Collapsed="true">
+    <Position X="18.25" Y="8" Width="1.5" />
+    <AssociationLine Name="propertyTypes" Type="LivingSmartBusinessLogic.Entity.PropertyType" FixedToPoint="true">
+      <Path>
+        <Point X="18.25" Y="8.25" />
+        <Point X="17" Y="8.25" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAIAQAAQAQAAAAAAAAAAAAAAIBAAAAAAACAA=</HashCode>
+      <FileName>Model\PropertyTypeCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="propertyTypes" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="LivingSmartBusinessLogic.Model.RatingCatalog" Collapsed="true">
+    <Position X="15.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIgAAYAQAAAAQAAAAAAIAAAACAAAAAAAAAAACAA=</HashCode>
+      <FileName>Model\RatingCatalog.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="db" />
+    </ShowAsAssociation>
   </Class>
   <Interface Name="LivingSmartBusinessLogic.Database.IAdDB" Collapsed="true">
     <Position X="10.25" Y="2" Width="1.5" />
