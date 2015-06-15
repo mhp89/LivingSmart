@@ -12,7 +12,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns all the Cities from the database.
         /// </summary>
         /// <returns>Returns a List of all the Cities from the database</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public List<City> ReadCities()
         {
             List<City> cityList = new List<City>();

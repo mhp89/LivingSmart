@@ -13,7 +13,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns all the Partners from the database.
         /// </summary>
         /// <returns>Returns a List of all the Partners from the database.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public List<Partner> ReadPartners()
         {
             List<Partner> partnerList = new List<Partner>();
@@ -59,7 +59,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Updates the information from a Partner, in the database.
         /// </summary>
         /// <param name="partner">Partner to be updated.</param>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public void UpdatePartner(Partner partner)
         {
             int partnerId = partner.Id;
@@ -88,7 +88,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="partner">Partner to be created.</param>
         /// <returns>Returns the Id of the Partner created.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public int CreatePartner(Partner partner)
         {
             SqlCommand cmd = new SqlCommand

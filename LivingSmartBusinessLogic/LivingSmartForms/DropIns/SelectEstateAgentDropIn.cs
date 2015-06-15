@@ -16,7 +16,7 @@ using LivingSmartForms.Views;
 namespace LivingSmartForms.DropIns
 {
 	/// <summary>
-	/// DropIn til udv�lgelse af m�glere
+	/// DropIn til udvælgelse af mæglere
 	/// </summary>
 	/// <author>Maja Olesen</author>
     public partial class SelectEstateAgentDropIn : BaseDropIn

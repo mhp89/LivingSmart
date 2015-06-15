@@ -34,7 +34,7 @@ namespace LivingSmartForms.DropIns
             if (currentEstateAgent != null)
             {
                 btnSave.Text = @"Gem";
-                lblNewEstateAgent.Text = @"Redig�r ejendomsm�gler";
+                lblNewEstateAgent.Text = @"Redigér ejendomsmægler";
             }
 
             newEstateAgentForm = new NewEstateAgent(baseForm, estateAgent);

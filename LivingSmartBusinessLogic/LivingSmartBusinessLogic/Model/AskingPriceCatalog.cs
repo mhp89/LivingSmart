@@ -64,8 +64,8 @@ namespace LivingSmartBusinessLogic.Model
             return askingPriceDictionary[caseId].AsReadOnly();
         }
         /// <summary>
-        /// Henter prisudvikling p� en given case. Prisudviklingen udregnes p� 
-        /// baggrund af den f�rste og den sidste udbudspris
+        /// Henter prisudvikling på en given case. Prisudviklingen udregnes på 
+        /// baggrund af den første og den sidste udbudspris
         /// </summary>
         /// <param name="caseId"></param>
         /// <returns></returns>

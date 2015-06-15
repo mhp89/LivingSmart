@@ -18,7 +18,7 @@ using SmartControls;
 namespace LivingSmartForms.DropIns
 {
 	/// <summary>
-	/// DropIn til s�gning af m�glere
+	/// DropIn til søgning af mæglere
 	/// </summary>
 	/// <author>Mathias Petersen</author>
 	public partial class EstateAgentSearchDropIn : BaseDropIn

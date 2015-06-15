@@ -10,7 +10,7 @@ using LivingSmartForms.DropIns;
 namespace LivingSmartForms.Views
 {
 	/// <summary>
-	/// Step til f�rdigg�relse og afslutning af sag
+	/// Step til færdiggørelse og afslutning af sag
 	/// </summary>
 	/// <author>Mathias Petersen</author>
     public partial class NewCaseStepEndCase : CaseStep

@@ -6,7 +6,7 @@ using LivingSmartBusinessLogic.Entity;
 namespace LivingSmartBusinessLogic.Model
 {
     /// <summary>
-    /// M�glerkatalog
+    /// mæglerkatalog
     /// </summary>
     /// <author>Mathias Poulsen</author>
     internal class EstateAgentCatalog

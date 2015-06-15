@@ -79,7 +79,7 @@ namespace LivingSmartForms.UserControls
 	    }
 
 		/// <summary>
-		/// S�tter tekstfelterne til en specific dato
+		/// Sætter tekstfelterne til en specific dato
 		/// </summary>
 		/// <param name="date"></param>
 	    public void SetDate(DateTime date)

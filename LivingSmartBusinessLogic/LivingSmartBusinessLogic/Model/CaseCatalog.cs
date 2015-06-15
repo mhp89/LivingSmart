@@ -23,7 +23,7 @@ namespace LivingSmartBusinessLogic.Model
             LoadCatalog();
         }
         /// <summary>
-        /// Indl�ser sager
+        /// Indlæser sager
         /// </summary>
         /// <author>Mathias Petersen</author>
         internal void LoadCatalog()
@@ -113,7 +113,7 @@ namespace LivingSmartBusinessLogic.Model
             return openCases.AsReadOnly();
         }
         /// <summary>
-        /// Henter �bne sager tilknyttet til et givent m�gler id
+        /// Henter �bne sager tilknyttet til et givent mægler id
         /// </summary>
         /// <param name="estateAgentId"></param>
         /// <returns></returns>

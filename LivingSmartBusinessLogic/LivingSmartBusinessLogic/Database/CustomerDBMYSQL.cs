@@ -11,7 +11,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns all the Customers from the database.
         /// </summary>
         /// <returns>Returns a List of all the Customer from the database</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public List<Customer> ReadCustomers()
         {
             throw new NotImplementedException();
@@ -21,7 +21,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Updates the information from a Customer, in the database.
         /// </summary>
         /// <param name="customer">Customer to be updated.</param>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public void UpdateCustomer(Customer customer)
         {
             throw new NotImplementedException();
@@ -32,7 +32,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="customer">Customer to be created.</param>
         /// <returns>Returns the Id of the Customer created.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public int CreateCustomer(Customer customer)
         {
             throw new NotImplementedException();

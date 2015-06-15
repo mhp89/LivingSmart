@@ -38,7 +38,7 @@ namespace LivingSmartForms.Pages
         }
 
         /// <summary>
-        /// F�r en liste med valgte m�glere fra drop in menuen for valg af m�glere
+        /// Før en liste med valgte mæglere fra drop in menuen for valg af mæglere
         /// </summary>
         /// <param name="agents"></param>
         private void EstateAgentList(List<EstateAgent> agents)
@@ -73,7 +73,7 @@ namespace LivingSmartForms.Pages
         }
 
         /// <summary>
-        /// Opdaterer control OpenHousePair med information om m�gler og ejendomme
+        /// Opdaterer control OpenHousePair med information om mægler og ejendomme
         /// </summary>
         private void UpdateList()
         {

@@ -13,7 +13,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns a dictionary containing all the DistanceTos in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the DistanceTos in the database, with CaseId as key and a list of DistanceTos containing that CaseId</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public Dictionary<int, List<DistanceTo>> ReadDistanceTos()
         {
             Dictionary<int, List<DistanceTo>> distanceToDictionary = new Dictionary<int, List<DistanceTo>>();
@@ -59,7 +59,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the ads, having a CaseId given by the parameter</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public List<DistanceTo> ReadDistanceTos(int caseId)
         {
             var distanceToList = new List<DistanceTo>();
@@ -102,7 +102,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="distanceTo">DistanceTo to be updated.</param>
         /// <param name="caseId">CaseId connected to the DistanceTo.</param>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public void UpdateDistanceTo(DistanceTo distanceTo, int caseId)
         {
             int distanceToId = distanceTo.Id;
@@ -127,7 +127,7 @@ namespace LivingSmartBusinessLogic.Database
         /// <param name="distanceTo">DistanceTo to be created.</param>
         /// <param name="caseId">CaseId connected to the DistanceTo.</param>
         /// <returns>Returns the Id of the DistanceTo created.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public int CreateDistanceTo(DistanceTo distanceTo, int caseId)
         {
             SqlCommand cmd = new SqlCommand

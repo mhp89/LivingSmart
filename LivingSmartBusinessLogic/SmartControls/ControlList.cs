@@ -60,7 +60,7 @@ namespace SmartControls
 		}
 		void ControlList_MouseEnter(object sender, EventArgs e)
 		{
-			//S�tter focus p� control'et s� den kan kalde mousewheel event
+			//Sætter focus på control'et så den kan kalde mousewheel event
 			Focus();
 		}
 

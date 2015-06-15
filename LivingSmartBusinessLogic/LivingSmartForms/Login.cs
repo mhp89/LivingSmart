@@ -16,13 +16,13 @@ using LivingSmartForms.Classes;
 namespace LivingSmartForms
 {
 	/// <summary>
-	/// Form til h�ndtering af log ind
+	/// Form til håndtering af log ind
 	/// </summary>
 	/// <auther>Mathias Petersen</auther>
 	public partial class Login : Form
 	{
 		/// <summary>
-		/// Indikere om der bliver skiftet form, eller brugeren �nsker at lukke programmet.
+		/// Indikere om der bliver skiftet form, eller brugeren ønsker at lukke programmet.
 		/// </summary>
 		private bool formShift;
 
@@ -68,7 +68,7 @@ namespace LivingSmartForms
 
 		private void PerformLogin()
 		{
-			//Hvis input er gyldig, pr�v at logge ind
+			//Hvis input er gyldig, prøv at logge ind
 			if (stbUsername.Validate() && stbPassword.Validate())
 			{
 				string username = stbUsername.Text;
@@ -110,10 +110,10 @@ namespace LivingSmartForms
 		}
 
 		/// <summary>
-		/// Gemmer login oplysninger for m�gleren
+		/// Gemmer login oplysninger for mægleren
 		/// </summary>
-		/// <param name="estateAgentId">Id'et p� m�gleren</param>
-		/// <param name="password">Adgangskoden for m�gleren</param>
+		/// <param name="estateAgentId">Id'et på mægleren</param>
+		/// <param name="password">Adgangskoden for mægleren</param>
 		private void SaveAutomaticLogin(string username, string password)
 		{
 			RegistryWrapper.RegKey.SetValue("AutomaticLoginActive", true);

@@ -13,7 +13,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns a dictionary containing all the AskingPrices in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the AskingPrices in the database, with CaseId as key and a list of AskingPrices containing that caseId</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public Dictionary<int, List<AskingPrice>> ReadAskingPrices()
         {
             Dictionary<int, List<AskingPrice>> askingPriceList = new Dictionary<int, List<AskingPrice>>();
@@ -61,7 +61,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="askingPrice">AskingPrice to be updated.</param>
         /// <param name="caseId">CaseId connected to the appointment</param>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public void UpdateAskingPrice(AskingPrice askingPrice, int caseId)
         {
             int askingPriceId = askingPrice.Id;
@@ -86,7 +86,7 @@ namespace LivingSmartBusinessLogic.Database
         /// <param name="askingPrice">AskingPrice to be created.</param>
         /// <param name="caseId">CaseId connected to the AskingPrice</param>
         /// <returns>Returns the Id of the AskingPrice created.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public int CreateAskingPrice(AskingPrice askingPrice, int caseId)
         {
             SqlCommand cmd = new SqlCommand

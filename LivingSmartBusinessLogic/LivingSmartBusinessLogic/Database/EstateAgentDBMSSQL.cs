@@ -13,7 +13,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns all the EstateAgents from the database.
         /// </summary>
         /// <returns>Returns a List of all the EstateAgents from the database.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public List<EstateAgent> ReadEstateAgents()
         {
             List<EstateAgent> estateAgentList = new List<EstateAgent>();
@@ -58,7 +58,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Updates the information from an EstateAgent, in the database.
         /// </summary>
         /// <param name="estateAgent">EstateAgent to be updated.</param>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public void UpdateEstateAgent(EstateAgent estateAgent)
         {
             int estateagentId = estateAgent.Id;
@@ -84,7 +84,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="estateAgent">EstateAgent to be created.</param>
         /// <returns>Returns the Id of the EstateAgent created.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public int CreateEstateAgent(EstateAgent estateAgent)
         {
             SqlCommand cmd = new SqlCommand
@@ -109,7 +109,7 @@ namespace LivingSmartBusinessLogic.Database
         /// <param name="username">username of the estate agent.</param>
         /// <param name="password">password of the estate agent.</param>
         /// <returns>The estate agent having the given username and password, null otherwise</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public EstateAgent LoginEstateAgent(string username, string password)
         {
             EstateAgent estateAgent = null;

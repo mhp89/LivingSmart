@@ -14,7 +14,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="caseId">Id of the case</param>
         /// <returns>Returns a List of all the Pictures, having a CaseId given by the parameter</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public List<Picture> ReadPictures(int caseId)
         {
             List<Picture> pictureList = new List<Picture>();
@@ -56,7 +56,7 @@ namespace LivingSmartBusinessLogic.Database
         /// Returns a dictionary containing all the Pictures in the database.
         /// </summary>
         /// <returns>Returns a dictionary containing all the Pictures in the database, with CaseId as key and a list of Pictures containing that CaseId as value</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public Dictionary<int, List<Picture>> ReadPictures()
         {
             Dictionary<int, List<Picture>> pictureDictionary = new Dictionary<int, List<Picture>>();
@@ -102,7 +102,7 @@ namespace LivingSmartBusinessLogic.Database
         /// </summary>
         /// <param name="picture">Picture to be updated.</param>
         /// <param name="caseId">CaseId connected to the Picture</param>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public void UpdatePicture(Picture picture, int caseId)
         {
             int pictureId = picture.Id;
@@ -127,7 +127,7 @@ namespace LivingSmartBusinessLogic.Database
         /// <param name="picture">Picture to be created.</param>
         /// <param name="caseId">CaseId connected to the Picture</param>
         /// <returns>Returns the Id of the Picture created.</returns>
-        /// <author>Ren� S�rensen</author>
+        /// <author>René Sørensen</author>
         public int CreatePicture(Picture picture, int caseId)
         {
             SqlCommand cmd = new SqlCommand

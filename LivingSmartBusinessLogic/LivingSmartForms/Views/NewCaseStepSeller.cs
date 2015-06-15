@@ -33,9 +33,10 @@ namespace LivingSmartForms.Views
 	        if (cCase != null)
 			{
 				SetSellerFields(cCase.Seller);
+                UpdateEstateAgent(cCase.EstateAgent);
 	        }
-
-			UpdateEstateAgent(baseView.baseForm.DefaultEstateAgent);
+            else
+			    UpdateEstateAgent(baseView.baseForm.DefaultEstateAgent);
         }
 
 	    public override bool Save()
