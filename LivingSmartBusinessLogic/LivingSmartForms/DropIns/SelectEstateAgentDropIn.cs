@@ -46,9 +46,12 @@ namespace LivingSmartForms.DropIns
             var estateAgents = EstateAgentController.Instance.GetEstateAgents();
             foreach (var estateAgent in estateAgents)
             {
-                var control = new EstateAgentLineSelect(this, estateAgent);
-                control.Margin = Padding.Empty;
-                clsAllEstateAgents.AddControl(control, true);
+                if (estateAgent.TerminationDate == null)
+                {
+                    var control = new EstateAgentLineSelect(this, estateAgent);
+                    control.Margin = Padding.Empty;
+                    clsAllEstateAgents.AddControl(control, true);
+                }
             }
 
             clsAllEstateAgents.ResumeLayout();
