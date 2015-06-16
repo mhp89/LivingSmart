@@ -113,9 +113,10 @@ namespace LivingSmartForms.DropIns
 			var result = EstateAgentController.Instance.SearchEstateAgents(id, name, phone, email);
 
 			clsResult.SuspendLayout();
-			
-			foreach (var estateAgent in result)
-				clsResult.AddControl(new EstateAgentLineSearch(this, estateAgent));
+
+            foreach (var estateAgent in result)
+                if (estateAgent.TerminationDate == null)
+                    clsResult.AddControl(new EstateAgentLineSearch(this, estateAgent));
 
 			clsResult.ResumeLayout();
 		}
