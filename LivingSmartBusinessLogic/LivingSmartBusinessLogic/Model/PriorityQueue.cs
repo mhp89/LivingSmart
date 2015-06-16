@@ -86,7 +86,7 @@ namespace LivingSmartBusinessLogic.Model
             if (Count > 0)
             {
                 maxElement = heap[0].Value;
-                heap[0] = heap[heap.Length - 1];
+                heap[0] = heap[Count - 1];
                 MaxHeapify(0);
                 Count--;
             }
@@ -122,7 +122,7 @@ namespace LivingSmartBusinessLogic.Model
             for (int i = 0; i < Count; i++)
             {
                 KeyValuePair<TKey, TValue> pair = heap[i];
-                sb.Append(pair.Value.ToString());
+                sb.Append(pair.Value);
                 if (i < Count - 1)
                     sb.Append(",");
             }
@@ -141,11 +141,11 @@ namespace LivingSmartBusinessLogic.Model
             int left = 2 * index + 1;
             int right = 2 * index + 2;
             int largestIndex = index;
-            if (left <= heap.Length && heap[left].Key.CompareTo(heap[largestIndex].Key) > 0)
+            if (left < Count && heap[left].Key.CompareTo(heap[largestIndex].Key) > 0)
             {
                 largestIndex = left;
             }
-            if (right <= heap.Length && heap[right].Key.CompareTo(heap[largestIndex].Key) > 0)
+            if (right < Count && heap[right].Key.CompareTo(heap[largestIndex].Key) > 0)
             {
                 largestIndex = right;
             }
