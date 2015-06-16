@@ -151,9 +151,7 @@ namespace LivingSmartBusinessLogic.Model
             }
             if (largestIndex != index)
             {
-                KeyValuePair<TKey, TValue> temp = heap[index];
-                heap[index] = heap[largestIndex];
-                heap[largestIndex] = temp;
+                Swap(index, largestIndex);
                 MaxHeapify(largestIndex);
             }
         }
